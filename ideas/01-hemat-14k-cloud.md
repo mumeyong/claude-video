@@ -1,6 +1,6 @@
 # Gimana aku hemat $14.000/bulan biaya cloud
 
-- **Status:** ⭐ dipilih (rekomendasi pertama)
+- **Status:** 🎬 produksi → [`videos/hemat-14k-cloud/`](../videos/hemat-14k-cloud/) · fase 5 (review)
 - **Slug:** hemat-14k-cloud
 - **Seri:** — (bisa jadi pilot "Bongkar Arsitektur")
 - **Durasi target:** 90–120 s

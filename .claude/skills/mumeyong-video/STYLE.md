@@ -65,6 +65,13 @@ muted `#7C8494`, cards `#161925`, accent `#4F8BFF`.
 Headline rules: ≤ 4 words per line, ≤ 2 lines, ends with a period. Exactly one accent (`*…*`) per
 headline. The headline is the **punchline**, not the narration ("Habis itu minta storyboard, detail banget" → `Tulis _tiap_ detiknya.`).
 
+## 4b. Language — tech terms stay English
+
+Narration and on-screen text are casual Indonesian, but **every technical term stays English** — node, pod,
+load balancer, auto-scaling, request, idle, right-sizing, reserved instance, on-demand, serverless, monolith…
+Indonesian affixes on them are natural (*di-scale, pod-nya*). Metaphors may introduce a term, never replace it.
+Full list + do/don't: `GLOSSARY.md`.
+
 ## 5. Components (engine/components)
 
 - **Window card** — white, r 22, hairline border, soft shadow (blur 34, y 14, 7.5%). Header 66px: three grey dots, title, mono meta right. Kinds: markdown (`CLAUDE.md`), code (`film.py`, line numbers + light syntax), terminal (`›` prompt, typing, progress bar).
@@ -92,6 +99,48 @@ headline. The headline is the **punchline**, not the narration ("Habis itu minta
 - Resting elements may idle-float 2–4 px (`wobble`). Never bounce big things; `out_back` only for small pops (chips, check marks).
 - One visual change per spoken sentence (~every 2.5 s). If a line is > 4 s, add a second beat inside it (highlight, count-up, cursor).
 
+## 6b. Composition — NOT a template
+
+The skeleton (HUD, kicker, headline, chapter dots) stays constant; **what's under it must change every chapter.**
+
+- **Hero object per chapter**, filling ≥ 50% of the content area (y 520–1450). A small card floating in empty
+  space is a bug. Hero vocabulary: giant odometer number · 24h clock ring · receipt · terminal with pop-out
+  cards · seat grid + drag-resize · shattering block · staircase chart · typographic battle (10% vs 100%).
+- **No two consecutive chapters share a layout.** Rotate between: full-width card · centered hero (no card) ·
+  stacked/tilted cards · pure typography · object + hand note.
+- **At least one camera move per chapter** (`v.camera`): push-in on the detail being spoken, punch-out (zoom
+  0.97, 0.35 s) on a big number, pull-out (1.2 → 1.0) on a reveal. Never more than ±22% zoom.
+- **Vary transitions inside and between chapters** — `appear(enter=, exit=)`: whip left/right, drop down,
+  pop, blur. Mid-chapter scene changes use a whip; chapter changes keep the blur/HUD crossfade.
+- **One "punch" moment every ~15–20 s**: giant number or word (`mega`/`giga` tokens) or a stamp slam.
+- **Headline may change mid-chapter** when the visual changes (`Cari yang *bocor*.` → `Nyala jam _dua_ pagi?`).
+- **Hand notes** (`note()`, Instrument Serif italic blue + arrow) are allowed as annotations — max 2 on screen.
+- **Bookends**: the hook's hero object returns in the recap (same number, new meaning).
+- Slight tilt (±2–3°) is allowed for stacked cards, receipts and stamps — never for terminals, charts or text.
+
+## 6c. Brand DNA vs identity — unique, never generic
+
+**Brand DNA (fixed in every video, ~40%)** — HUD, fonts, accent blue `#1F5EFF`, chapter dots, motion feel
+(blur-in, easing, transition rhythm), outro/logo/CTA, SFX palette. Never changes per video.
+
+**Identity (chosen per video, ~60%)** — written in `videos/<slug>/IDENTITY.md` (phase 1.5) from
+`IDENTITY_TEMPLATE.md`, checked against `ideas/REGISTRY.md`:
+1. **Central metaphor** — one "world" used in ≥ 3 chapters, not only the hook.
+2. **Signature move** — one motion the video owns (rolling digits, lights switching off, snapping grid…).
+3. **Signature color** — one chapter-palette color that owns the hero objects. Accent blue stays for words/UI.
+4. **Hook format** — rotate: number first · viewer comment (only if real) · myth struck out · relatable
+   question · cold open mid-action · before/after.
+5. **Structure** — rotate: N steps · countdown · problem → turn → result · myth vs fact · before/after · story.
+6. **≥ 1 new component** — the engine grows with every video.
+
+**No repeats:** choices 1–5 must differ from the previous video (ideally the previous two). **Series exception:**
+episodes of one series share the series structure, HUD series label, bumper and signature series component;
+metaphor, signature move, color and hook still rotate. A component may
+not be the *hero* of two consecutive videos.
+
+**Human touch (at least 3 of 4):** a real artefact (anonymised screenshot/output/number) · an opinion only
+you would say · one surprise moment · deliberate imperfection (hand note, tilted stamp, hesitant cursor).
+
 ## 7. Sound
 
 - Voice on top (recorded by the user, one take). Music bed −19 dB, side-chain ducked under voice.
@@ -110,5 +159,7 @@ headline. The headline is the **punchline**, not the narration ("Habis itu minta
 - ✗ Words on screen that duplicate the narration verbatim (headline = punchline, cards = evidence).
 - ✗ Subtitles/captions burned in (TikTok auto-captions exist; the headline does that job).
 - ✗ Text smaller than 17px, more than ~12 lines of code visible, more than 3 cards at once.
+- ✗ The same headline-top + one-card layout two chapters in a row; a chapter with no camera move; > 40% empty content area.
 - ✗ Hard-coded seconds in scenes, unseeded randomness, content outside the safe column.
-- ✗ English UI copy where Indonesian is natural ("Setuju", not "Approve") — except real tool names (`git commit`, `CLAUDE.md`).
+- ✗ Translating tech terms into Indonesian ("mesin" for node, "langganan" for reserved instance, "nganggur" for idle) —
+  see `GLOSSARY.md`. Everyday UI words may be Indonesian ("Setuju"), tech terms never.

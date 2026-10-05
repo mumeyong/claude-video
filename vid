@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# MUMEYONG — one entry point, works from any folder (installed as `claude-video`).
+#   claude-video                       list videos + status
+#   claude-video "Judul video baru"    create a new video from a title (asks to confirm)
+#   claude-video new "Judul video"     same, no question
+#   claude-video <slug>                review round: naskah → timing → check → sheet → stills → preview
+#   claude-video <slug> final          final render → hasil/<slug>/
+#   claude-video open <slug>           open the video folder
+#   claude-video <command> ...         any engine command — see `claude-video help`
+REPO="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
+cd "$REPO" || exit 1
+PY="$REPO/.venv/bin/python"
+[ -x "$PY" ] || { echo "venv missing: python3 -m venv --system-site-packages $REPO/.venv && $REPO/.venv/bin/pip install faster-whisper"; exit 1; }
+
+COMMANDS=" go new estimate naskah align check still sheet preview render mix sfx help ls list open "
+
+case "${1:-ls}" in
+  ls|list)    exec "$PY" -m engine ls ;;
+  help|-h|--help) exec "$PY" -m engine --help ;;
+  open)       shift; xdg-open "$REPO/videos/${1:-}" >/dev/null 2>&1 & echo "$REPO/videos/${1:-}"; exit 0 ;;
+esac
+
+if [ -d "videos/$1" ]; then slug=$1; shift; exec "$PY" -m engine go "$slug" "$@"; fi
+
+if [[ "$COMMANDS" != *" $1 "* ]]; then
+  # not a command, not an existing video → offer to create a new one from this title
+  read -r -p "Belum ada video \"$1\". Bikin video baru dengan judul ini? [y/N] " ans
+  [[ "$ans" =~ ^[yY] ]] || exit 1
+  exec "$PY" -m engine new "$@"
+fi
+
+exec "$PY" -m engine "$@"

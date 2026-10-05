@@ -49,6 +49,8 @@ class Project:
     def build(self):
         """Import scenes.py and call build(project) → Video."""
         path = self.dir / "scenes.py"
+        if not path.exists():
+            sys.exit(f"videos/{self.slug}/scenes.py belum ada — lanjutkan di Claude Code: \"kerjain video {self.slug}\"")
         spec = importlib.util.spec_from_file_location(f"video_{self.slug}", path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)

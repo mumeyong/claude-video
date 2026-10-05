@@ -9,6 +9,7 @@ from dataclasses import dataclass, field
 from . import tokens as tk
 from .ease import mix, prog, in_out_cubic, out_expo
 from .timing import Beat
+from .camera import Camera
 
 
 @dataclass
@@ -56,6 +57,7 @@ class Video:
     cues: list = field(default_factory=list)   # (sfx name, t, gain)
     chat: object = None                         # ChatTrack or None
     hud: bool = True
+    camera: object = field(default_factory=Camera)   # applies to layers with z < 80
 
     def __post_init__(self):
         self.beat = Beat(self.bpm, self.beat_offset)
@@ -133,9 +135,10 @@ class Video:
             if ly.z >= 100:
                 self._run(c, ly, t)
 
-    @staticmethod
-    def _run(c, ly, t):
+    def _run(self, c, ly, t):
         c.ctx.save()
+        if ly.z < 80:  # content moves with the camera; z >= 80 = screen-fixed UI (chips row, overlays)
+            self.camera.apply(c.ctx, t)
         ly.fn(c, t)
         c.ctx.restore()
 

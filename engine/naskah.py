@@ -49,7 +49,7 @@ def build_naskah(script_path, out_path, title=None):
         text = re.sub(r"\*([^*]+)\*", r"**\1**", text)
         out.append(f"<sub>{ln['id']}</sub> {text}{'  ·  *(napas)*' if breath else ''}  ")
         out.append("")
-    out += ["---", "", "Selesai. Simpan sebagai `audio/voice.wav` → `python -m engine align <slug>`", ""]
+    out += ["---", "", "Selesai. Simpan sebagai `audio/voice.wav` → jalanin `claude-video <slug>` (align otomatis)", ""]
     open(out_path, "w", encoding="utf-8").write("\n".join(out))
     print(f"✓ {out_path}  ({len(lines)} kalimat, {words} kata, ± {secs:.0f} s)")
     return out_path

@@ -1,6 +1,6 @@
 # Seri: Bongkar Arsitektur (7 episode)
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — EP01 → [`videos/bongkar-ep01-kubernetes-10k/`](../videos/bongkar-ep01-kubernetes-10k/) · fase 5 (review)
 - **Slug:** bongkar-<nama-episode>
 - **Seri:** Bongkar Arsitektur
 - **Durasi target:** 60–90 s per episode
@@ -28,3 +28,27 @@ Hook (masalah) → **Kondisi awal** → **Keputusan** → **Diagram** → **Hasi
 ## Catatan
 - Cek NDA tiap project — nama klien disamarkan.
 - Komponen dari ide #01 (cost chart) dipakai ulang di sini.
+
+## Identitas SERI (tetap di semua episode)
+- HUD: `MUMEYONG · BONGKAR ARSITEKTUR` + `EP 01` di kanan atas (gantiin "TUTORIAL")
+- **Bumper** 1,5 s di awal setelah hook: kartu judul "BONGKAR ARSITEKTUR · EP 01" + nama project (disamarkan)
+- **Struktur tetap:** Masalah → Kondisi awal → Keputusan → Diagram → Hasil (angka) → recap → outro
+- **Komponen andalan seri:** `arch_diagram` (node + garis + paket data mengalir) — muncul di tiap episode
+- Outro: teaser "Episode berikutnya: …"
+
+## Identitas EP 01 (draft — fase 1.5): "Kubernetes yang nahan 10.000 request barengan"
+
+| # | Pilihan | Untuk episode ini | Kenapa cocok |
+|---|---|---|---|
+| 1 | **Metafora sentral** | **gerbang tol waktu mudik** — request = mobil, pod = gardu tol, auto-scaling = gardu tambahan dibuka | relate banget buat orang Indonesia; beda dari klise "pelabuhan kontainer" |
+| 2 | **Signature move** | gardu/pod **membelah jadi dua** (kayak sel) waktu antrean naik, nutup lagi waktu sepi | auto-scaling jadi kelihatan |
+| 3 | **Signature color** | ungu `#7558F0` | beda dari coral (#01) |
+| 4 | **Format hook** | **cold open di tengah aksi**: "Jam delapan malam. Sepuluh ribu orang buka aplikasi yang sama. Barengan." + banjir titik request | beda dari "angka dulu" (#01) |
+| 5 | **Struktur** | format seri (masalah → keputusan → hasil) | beda dari "4 langkah" (#01) |
+| 6 | **Komponen baru** | `particle_flow` (aliran titik request) · `toll_lanes` (gardu + antrean + membelah) · `arch_diagram` · `load_graph` (lonjakan traffic + pita auto-scale) | belum ada |
+
+Sentuhan manusia:
+- **Artefak asli:** bentuk arsitektur/angka asli yang disamarkan — puncak request, jumlah node/pod, region (tanya user)
+- **Opini:** "Kubernetes di sini bukan buat gaya-gayaan — beban kayak gini emang butuh" (nyambung ke ide #05)
+- **Kejutan:** jam 2 pagi gardunya nutup sendiri satu-satu → biayanya ikut turun (nyambung ke #01)
+- **Ketidaksempurnaan:** hand note di diagram, satu mobil "nyelonong" pindah jalur

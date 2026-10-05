@@ -13,7 +13,8 @@ Each phase ends with a **gate**: stop, show the result, wait for the user's "ok/
 ## Phase 0 — Brief
 Ask (only what's missing): topic, audience, the ONE takeaway, target length (default 60–150 s),
 CTA/contact for the outro, any visuals/footage the user owns (PNG screenshots go in `videos/<slug>/assets/`).
-Then `python -m engine new <slug>` (user runs it, or Claude creates the files by hand).
+The user may already have run `claude-video "Judul"` (creates videos/<slug>/ with SCRIPT/TREATMENT skeletons);
+otherwise Claude runs `python -m engine new "Judul"` itself (it only writes text files). Also add/update the idea in `ideas/`.
 
 ## Phase 1 — SCRIPT.md (naskah)  → gate
 - Format: `## CHAPTER` headings, one sentence per `[Lxx]` line. Chapters: `INTRO`, `00 · LABEL` … `06 · LABEL`, `RECAP`, `OUTRO`.
@@ -23,11 +24,21 @@ Then `python -m engine new <slug>` (user runs it, or Claude creates the files by
   **2.7 words per second of runtime**. 150 s ≈ 300 words, ~45 lines.
 - Every line must "earn" a visual. Mark the key word you'll animate on with `{curly}` in a comment if needed.
 - Offer 2–3 hook options as A/B/C (like the reference's option cards) and let the user pick.
+- **Tech terms stay English** (GLOSSARY.md): node, pod, load balancer, auto-scaling, idle, reserved instance…
+  Run the glossary check on every line and every on-screen label before the gate.
 - Read-aloud marks: `*kata*` = vocal stress (put it on the same words the visuals land on), ` //` at line
   end = breath. Write it to be SPOKEN: short clauses, no parentheses, numbers as words where they're said
   ("empat belas ribu dolar"), English terms only if you'd say them out loud.
 - **After every SCRIPT.md write/change: run `python -m engine naskah <slug>` → NASKAH.md** and tell the
   user it's ready to read. Rerun it after every revision so it always matches.
+
+## Phase 1.5 — IDENTITY.md (identitas)  → gate
+- Read `ideas/REGISTRY.md`. Fill `videos/<slug>/IDENTITY.md` from `IDENTITY_TEMPLATE.md`: metaphor, signature
+  move, signature color, hook format, structure, new component(s), human touch, anti-generic checklist.
+- Choices 1–5 must differ from the previous video (STYLE §6c). If the script's hook/structure collides, propose
+  the script change now — before the storyboard.
+- Ask the user for one real artefact (anonymised number/screenshot) if the video has none.
+- On approval: add/update the video's row in `ideas/REGISTRY.md`.
 
 ## Phase 2 — TREATMENT.md (storyboard)  → gate
 One row per line. Columns: `id · headline (punchline, with *accent*) · visual · motion · SFX · anchor word`.
@@ -36,6 +47,9 @@ Example:
 L22 | Naskah dulu.   | 3 option cards A/B/C, cursor clicks "Setuju" on B | cards rise stagger .1s, click | pop×3, click | "naskahnya"
 ```
 Check against STYLE.md: one change per sentence, ≤ 3 cards, one accent per headline, banned list.
+Build every chapter from IDENTITY.md (metaphor in ≥ 3 chapters, signature move recurring, signature color on
+hero objects). Also the **composition check** (STYLE §6b): name each chapter's hero object, layout type, camera move and
+transition in a short table at the top of TREATMENT.md — no two consecutive chapters with the same layout.
 
 ## Phase 3 — Voice + timing
 - Before the voice exists: `python -m engine estimate <slug>` (161 wpm estimate) so scenes can be built and previewed.
@@ -57,23 +71,27 @@ Check against STYLE.md: one change per sentence, ≤ 3 cards, one accent per hea
 - Then hand the user the commands (see below). **Do not run them.**
 
 ## Phase 5 — Review loop (cek)  → gate per round
-1. User runs `sheet` (one thumb per line) and/or `still` for specific lines, sends screenshots/notes.
-2. User runs `preview` (half-res, with audio) for timing feel; `--from/--to` for one chapter.
+1. User runs `claude-video <slug>` → sheet + REVIEW stills + preview in one go, sends screenshots/notes.
+2. To iterate on one chapter: `claude-video <slug> --from 20 --to 45`.
 3. Feedback must be specific: line id or timecode + what's wrong. If vague, ask which line.
 4. Fix → new commands → repeat. Expect ~3 rounds (the reference took 3 versions).
 
 ## Phase 6 — Final render + commit
-Hand over `python -m engine render <slug>`. When the user confirms it's good, suggest
+Hand over `claude-video <slug> final`. It auto-copies `<slug>.mp4` + `cover.png` to `hasil/<slug>/`
+(set `v.cover_t` in scenes.py to the best cover frame — usually the hook headline fully on screen).
+Then write `hasil/<slug>/POST.md` from `POST_TEMPLATE.md` (caption ≤150 chars, 3–5 hashtags, pinned comment
+with the CTA) and update `hasil/README.md` (📦 final) and the idea file. When the user confirms it's good, suggest
 `git add videos/<slug> && git commit -m "feat(<slug>): …"` — commit only if the user says so.
 
-## Command block to hand over (fill in the slug and lines)
+## Command to hand over — ONE per round
+1. Write the line ids / seconds worth a close look into `videos/<slug>/REVIEW` (space-separated, `#` comments).
+2. Hand over exactly:
 ```bash
-source .venv/bin/activate
-python -m engine sheet <slug>                    # → videos/<slug>/out/sheet.png
-python -m engine still <slug> L05 L12            # → videos/<slug>/out/stills/
-python -m engine preview <slug> --from 20 --to 45
-python -m engine render <slug>                   # final → videos/<slug>/out/final.mp4
+claude-video <slug>              # review round (auto: naskah, estimate/align, check, sheet, stills, preview)
+claude-video <slug> final        # only after the user approves the preview
 ```
+`claude-video` needs no venv activation and only redoes what's out of date (e.g. align runs by itself once
+audio/voice.wav appears or changes).
 
 ## Engine cheat-sheet
 ```python

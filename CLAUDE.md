@@ -30,6 +30,15 @@ User-facing workflow guide: `START.md` — keep it in sync when commands or phas
     `videos/<slug>/scenes.py`. Don't fork a component for a one-time tweak — add a parameter.
 11. **Ideas live in `ideas/`.** "Simpan ide" → new `NN-slug.md` from `_TEMPLATE.md` + a row in
     `ideas/README.md`. Starting production → status 🎬 and link `videos/<slug>/`. Keep the index in sync.
+12. **Finished videos go to `hasil/`.** A full `render` auto-copies mp4 + cover.png there. When the user
+    approves the final, write `hasil/<slug>/POST.md` from `.claude/skills/mumeyong-video/POST_TEMPLATE.md`
+    (caption, hashtags, pinned comment) and update `hasil/README.md` + the idea's status.
+13. **Unique, never generic.** Every video gets `IDENTITY.md` (phase 1.5) — metaphor, signature move/color,
+    hook format, structure, new component — different from the previous video per `ideas/REGISTRY.md`
+    (STYLE §6c). Brand DNA (HUD, type, accent blue, motion feel, outro) never changes.
+14. **Tech terms stay English.** Never translate technical terms into Indonesian — in scripts, NASKAH, headlines,
+    labels, tags. Indonesian is the glue; affixes are fine (di-scale, pod-nya). Check every script against
+    `.claude/skills/mumeyong-video/GLOSSARY.md` before showing it.
 
 ## Layout
 
@@ -38,23 +47,24 @@ engine/            reusable engine (tokens, draw, video, timing, components/, au
 assets/fonts/      Inter, Inter Display, Instrument Serif Italic, JetBrains Mono
 assets/sfx/        optional real SFX samples (<name>.wav overrides the synth)
 videos/<slug>/     SCRIPT.md, TREATMENT.md, timing.json, scenes.py, audio/, assets/, out/
+hasil/             finished videos: <slug>/<slug>.mp4 (git-ignored) + cover.png + POST.md; README.md index
 ideas/             video idea backlog: README.md (index + status) + one NN-slug.md per idea
 .claude/skills/mumeyong-video/   SKILL.md (workflow), STYLE.md (design system), templates/
 ```
 
 ## Commands (the user runs these — Claude only hands them over)
 
+**Hand over ONE command per round:** `claude-video <slug>` (global command = `vid` symlinked into
+~/.local/bin; works from any folder; `./vid` inside the repo is identical) (review) or `claude-video <slug> final`. Before handing it over,
+update `videos/<slug>/REVIEW` with the line ids/seconds the user should look at as stills this round.
+
 ```bash
-source .venv/bin/activate                          # venv uses system Pango/cairo (--system-site-packages)
-python -m engine new <slug>                        # scaffold
-python -m engine estimate <slug>                   # timing from script, before voice exists (Claude may run)
-python -m engine naskah <slug>                     # NASKAH.md read-aloud script (Claude may run)
-python -m engine align <slug>                      # timing from audio/voice.wav (whisper)
-python -m engine check <slug>                      # structure check, no drawing (Claude may run)
-python -m engine still <slug> L05 L12 33.5         # PNG stills → out/stills/
-python -m engine sheet <slug>                      # contact sheet → out/sheet.png
-python -m engine preview <slug> [--from 20 --to 40]  # 540x960 30fps + audio → out/preview.mp4
-python -m engine render <slug>                     # 1080x1920 60fps final → out/final.mp4
+claude-video <slug>                      # review round: naskah → estimate/align (auto) → check → sheet → stills(REVIEW) → preview
+claude-video <slug> final                # final 1080x1920 60fps → out/final.mp4 + hasil/<slug>/
+claude-video <slug> --from 20 --to 45    # same, preview only that range
+claude-video "Judul video"             # new video from a title (slug auto); `claude-video` alone = list
+claude-video check <slug>                # structure check, no drawing (Claude may run; also estimate, naskah)
+claude-video help                        # all low-level commands (still, sheet, preview, render, align, mix, sfx)
 ```
 
 ## Gotchas

@@ -45,4 +45,4 @@
 
 ---
 
-Selesai. Simpan sebagai `audio/voice.wav` → `python -m engine align <slug>`
+Selesai. Simpan sebagai `audio/voice.wav` → jalanin `claude-video <slug>` (align otomatis)

@@ -38,8 +38,12 @@ def _parse(text):
 
 
 class Headline:
-    def __init__(self, text, x=None, y=None, style="headline", width=None, ink="ink", accent="accent"):
+    def __init__(self, text, x=None, y=None, style="headline", width=None, ink="ink", accent="accent", align="l"):
+        """align='c' centers each line on x (default x = canvas center)."""
         self.text = text
+        self.align = align
+        if align == "c" and x is None:
+            x = tk.W / 2
         self.x = tk.L["col_x"] if x is None else x
         self.y = tk.L["headline_y"] if y is None else y
         self.size, self.ls, self.lh = tk.T[style]
@@ -60,16 +64,17 @@ class Headline:
         lh = self.size * self.lh
         space = c.measure("a a", tk.F["display"], self.size, self.ls)[0] - c.measure("aa", tk.F["display"], self.size, self.ls)[0]
         line_i = 0
+        x0 = self.x - self.width / 2 if self.align == "c" else self.x
         for line in _parse(self.text):
-            x = self.x
+            x = x0
             for (w, kind, strike) in line:
                 # split trailing punctuation from a marked word so "." stays ink
                 m = re.match(r"^(.*?)([.,:;!?]+)$", w) if kind != "plain" else None
                 parts = [(m.group(1), kind), (m.group(2), "plain")] if m and m.group(1) else [(w, kind)]
                 ww = sum(c.measure(p, *self._font(k))[0] for p, k in parts)
-                if x > self.x and x + ww > self.x + self.width:
+                if x > x0 and x + ww > x0 + self.width:
                     line_i += 1
-                    x = self.x
+                    x = x0
                 for p, k in parts:
                     f, s, ls = self._font(k)
                     pw = c.measure(p, f, s, ls)[0]
@@ -77,6 +82,13 @@ class Headline:
                     x += pw + (2 if k == "serif" else 0)
                 x += space
             line_i += 1
+        if self.align == "c":  # re-center each line on self.x
+            lines = {}
+            for w in out:
+                lo, hi = lines.get(w[4], (1e9, -1e9))
+                lines[w[4]] = (min(lo, w[3]), max(hi, w[3] + w[5]))
+            out = [(w, k, s_, x_ + self.x - (lines[b][0] + lines[b][1]) / 2, b, pw)
+                   for (w, k, s_, x_, b, pw) in out]
         self._words = out
         return out
 

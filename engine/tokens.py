@@ -104,6 +104,9 @@ T = {  # (size px, letter-spacing em, line-height x size)
     "stat": (60, -0.04, 1.0),
     "label": (17, 0.06, 1.0),            # size-label pills, tiny mono
     "comment": (40, -0.02, 1.15),
+    "mega": (210, -0.06, 0.9),           # hero numbers ("$14.000"), centered punch moments
+    "giga": (300, -0.065, 0.9),          # one-word slams ("100%")
+    "note": (40, 0.0, 1.05),             # serif italic hand-note annotations
 }
 SERIF_SCALE = 1.10  # serif italic sits optically smaller than Inter, scale it up
 

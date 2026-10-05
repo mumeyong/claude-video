@@ -5,26 +5,54 @@ from .. import tokens as tk
 from ..ease import inout, out_expo, in_cubic, prog
 
 
-def appear(c, t, t_in, t_out, bbox, draw, rise=None, scale=None, blur=None,
-           d_in=None, d_out=None, pad=70):
-    """Standard element entrance/exit: rise + scale-up + blur-in, blur-out + fade.
+WHIP = 260  # px travelled by left/right whips
 
-    bbox = (x, y, w, h) of the element (pad adds room for its shadow).
-    draw(c) draws the element at rest.
+
+def appear(c, t, t_in, t_out, bbox, draw, rise=None, scale=None, blur=None,
+           d_in=None, d_out=None, pad=70, enter="up", exit="up", rot=0.0):
+    """Element entrance/exit with blur.
+
+    enter: "up" (rise, default) · "down" · "left"/"right" (whip in from that side) · "pop" (scale .6→1 overshoot)
+    exit:  "up" (drift up, default) · "down" (drop) · "left"/"right" (whip out) · "pop" (shrink)
+    rot: resting tilt in radians (e.g. 0.04 for a casual stacked card).
+    bbox = (x, y, w, h) of the element (pad adds room for its shadow). draw(c) draws it at rest.
     """
     M = tk.M
     rise = M["card_rise"] if rise is None else rise
     scale = M["card_scale"] if scale is None else scale
     blur = M["card_blur"] if blur is None else blur
-    a, b = inout(t, t_in, t_out, d_in or M["card_in"], d_out or M["out"], out_expo, in_cubic)
+    d_in = d_in or M["card_in"]
+    a, b = inout(t, t_in, t_out, d_in, d_out or M["out"], out_expo, in_cubic)
     vis = a * (1 - b)
     if vis <= 0.002:
         return 0.0
     bl = blur * (1 - a) + M["out_blur"] * b
-    dy = rise * (1 - a) - 18 * b
+    dx, dy = 0.0, 0.0
     sc = scale + (1 - scale) * a
+    if enter == "up":
+        dy += rise * (1 - a)
+    elif enter == "down":
+        dy -= rise * (1 - a)
+    elif enter == "right":
+        dx += WHIP * (1 - a)
+    elif enter == "left":
+        dx -= WHIP * (1 - a)
+    elif enter == "pop":
+        from ..ease import out_back
+        sc = 0.6 + 0.4 * out_back(prog(t, t_in, d_in), 1.8)
+        bl *= 0.5
+    if exit == "up":
+        dy -= 18 * b
+    elif exit == "down":
+        dy += 220 * b
+    elif exit == "left":
+        dx -= WHIP * 1.4 * b
+    elif exit == "right":
+        dx += WHIP * 1.4 * b
+    elif exit == "pop":
+        sc *= 1 - 0.4 * b
     x, y, w, h = bbox
-    with c.at(0, dy, sc, origin=(x + w / 2, y + h / 2)):
+    with c.at(dx, dy, sc, origin=(x + w / 2, y + h / 2), rot=rot):
         with c.layer((x - pad, y - pad, w + 2 * pad, h + 2 * pad), vis, bl):
             draw(c)
     return vis

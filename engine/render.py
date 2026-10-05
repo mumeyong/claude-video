@@ -105,7 +105,25 @@ def render_video(slug, mode="preview", workers=None, t_from=0.0, t_to=None, audi
         shutil.move(silent, out)
     shutil.rmtree(tmp, ignore_errors=True)
     print(f"✓ {out}  ({time.time() - t0:.0f}s)")
+    if mode == "final" and not suffix:
+        publish(project, video, out)
     return out
+
+
+def publish(project, video, final_mp4):
+    """Copy a full final render to hasil/<slug>/ with a cover frame. POST.md is written by Claude."""
+    from .project import ROOT
+    d = ROOT / "hasil" / project.slug
+    d.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(final_mp4, d / f"{project.slug}.mp4")
+    cover_t = getattr(video, "cover_t", None)
+    if cover_t is None:
+        cover_t = project.timing.lines[0].end if project.timing.lines else 1.5
+    surf, _ = frame_bytes(video, cover_t, 1.0)
+    surf.write_to_png(str(d / "cover.png"))
+    print(f"✓ {d}/  ({project.slug}.mp4 + cover.png @ {cover_t:.2f}s)")
+    if not (d / "POST.md").exists():
+        print("  → minta Claude: \"bikinin POST.md buat " + project.slug + "\"")
 
 
 def render_stills(slug, times, scale=1.0):
