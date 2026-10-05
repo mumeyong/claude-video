@@ -1,0 +1,145 @@
+"""Headline + kicker — the signature element.
+
+Headline syntax:
+    "Kasih *aturan* main."        *word*  → accent blue
+    "Tulis _tiap_ detiknya."      _word_  → italic serif, accent blue
+    "Bukan ~satu prompt~."        ~words~ → strike-through target (animate with strike_at)
+    "Lalu buku\\npanduan *gaya*."  \\n     → forced line break (else wraps to column width)
+"""
+import re
+
+from .. import tokens as tk
+from ..ease import out_expo, in_cubic, prog
+from .motion import appear  # noqa: F401  (re-export convenience)
+
+_TOKEN = re.compile(r"([*_~])[^*_~]+?\1[.,:;!?]*|\S+")
+_MARKED = re.compile(r"^([*_~])(.+?)\1([.,:;!?]*)$")
+_KIND = {"*": "accent", "_": "serif", "~": "plain"}
+
+
+def _parse(text):
+    """→ list of lines; each line = list of (word, kind, strike)."""
+    lines = []
+    for raw in text.split("\n"):
+        words = []
+        for m in _TOKEN.finditer(raw):
+            tok = m.group(0)
+            mm = _MARKED.match(tok)
+            if not mm:
+                words.append((tok, "plain", False))
+                continue
+            mark, inner, punct = mm.groups()
+            parts = inner.split()  # a marker may span several words: "*dua kata*"
+            for i, w in enumerate(parts):
+                # punctuation right after the marker sticks to the last word; words() splits it back to ink
+                words.append((w + (punct if i == len(parts) - 1 else ""), _KIND[mark], mark == "~"))
+        lines.append(words)
+    return lines
+
+
+class Headline:
+    def __init__(self, text, x=None, y=None, style="headline", width=None, ink="ink", accent="accent"):
+        self.text = text
+        self.x = tk.L["col_x"] if x is None else x
+        self.y = tk.L["headline_y"] if y is None else y
+        self.size, self.ls, self.lh = tk.T[style]
+        self.width = width or tk.L["col_w"] + 60
+        self.ink, self.accent = ink, accent
+        self._words = None  # [(word, kind, strike, x, baseline, w)]
+
+    def _font(self, kind):
+        if kind == "serif":
+            return tk.F["serif"], self.size * tk.SERIF_SCALE, 0.0
+        return tk.F["display"], self.size, self.ls
+
+    def words(self, c):
+        if self._words is not None:
+            return self._words
+        out = []
+        base = self.y + self.size * 0.75
+        lh = self.size * self.lh
+        space = c.measure("a a", tk.F["display"], self.size, self.ls)[0] - c.measure("aa", tk.F["display"], self.size, self.ls)[0]
+        line_i = 0
+        for line in _parse(self.text):
+            x = self.x
+            for (w, kind, strike) in line:
+                # split trailing punctuation from a marked word so "." stays ink
+                m = re.match(r"^(.*?)([.,:;!?]+)$", w) if kind != "plain" else None
+                parts = [(m.group(1), kind), (m.group(2), "plain")] if m and m.group(1) else [(w, kind)]
+                ww = sum(c.measure(p, *self._font(k))[0] for p, k in parts)
+                if x > self.x and x + ww > self.x + self.width:
+                    line_i += 1
+                    x = self.x
+                for p, k in parts:
+                    f, s, ls = self._font(k)
+                    pw = c.measure(p, f, s, ls)[0]
+                    out.append((p, k, strike, x, base + line_i * lh, pw))
+                    x += pw + (2 if k == "serif" else 0)
+                x += space
+            line_i += 1
+        self._words = out
+        return out
+
+    def bottom(self, c):
+        ws = self.words(c)
+        return (ws[-1][4] if ws else self.y) + self.size * 0.28
+
+    def draw(self, c, t, t_in, t_out=None, strike_at=None, stagger=None):
+        """Words blur+rise in one by one from t_in; all blur out from t_out."""
+        M = tk.M
+        stg = M["word_stagger"] if stagger is None else stagger
+        ink = c.theme(self.ink, "d_ink")
+        acc = c.theme(self.accent, "d_accent")
+        ws = self.words(c)
+        # group punctuation with its word for staggering
+        idx, k = [], -1
+        for (w, kind, *_r) in ws:
+            if not (kind == "plain" and re.fullmatch(r"[.,:;!?]+", w) and k >= 0):
+                k += 1
+            idx.append(k)
+        for (w, kind, strike, x, base, pw), i in zip(ws, idx):
+            a = out_expo(prog(t, t_in + i * stg, M["word_in"]))
+            b = 0.0 if t_out is None else in_cubic(prog(t, t_out, M["out"]))
+            vis = a * (1 - b)
+            if vis <= 0.002:
+                continue
+            blur = M["word_blur"] * (1 - a) + M["out_blur"] * b
+            dy = M["word_rise"] * (1 - a) - 14 * b
+            f, s, ls = self._font(kind)
+            col = acc if kind != "plain" else ink
+            bbox = (x - 8, base - s, pw + 16, s * 1.35)
+            with c.layer(bbox, vis, blur):
+                c.text(x, base + dy, w, f, s, col, 1.0, ls)
+        if strike_at is not None:
+            self._strike(c, t, strike_at, t_out)
+
+    def _strike(self, c, t, t0, t_out):
+        segs = {}
+        for (w, kind, strike, x, base, pw) in self.words(c):
+            if strike:
+                s = segs.setdefault(base, [x, x + pw])
+                s[1] = x + pw
+        p = out_expo(prog(t, t0, 0.5))
+        b = 0.0 if t_out is None else in_cubic(prog(t, t_out, tk.M["out"]))
+        if p <= 0 or b >= 1:
+            return
+        for base, (x1, x2) in segs.items():
+            y = base - self.size * 0.30
+            c.line(x1 - 6, y, x1 - 6 + (x2 - x1 + 12) * p, y, c.theme("accent", "d_accent"),
+                   self.size * 0.075, 1 - b)
+
+
+def kicker(c, t, t_in, t_out, label, color, x=None, y=None):
+    """'● 02 · NASKAH' — mono label with a chapter-colored dot."""
+    x = tk.L["col_x"] if x is None else x
+    y = tk.L["kicker_y"] if y is None else y
+    a = out_expo(prog(t, t_in, 0.5))
+    b = 0.0 if t_out is None else in_cubic(prog(t, t_out, tk.M["out"]))
+    vis = a * (1 - b)
+    if vis <= 0.002:
+        return
+    dx = -14 * (1 - a)
+    size, ls, _ = tk.T["kicker"]
+    with c.layer((x - 20, y - 30, 700, 50), vis, 6 * (1 - a) + 8 * b):
+        c.circle(x + 5 + dx, y - 1, 5, color)
+        c.text(x + 24 + dx, y + 8, label, tk.F["mono_med"], size, c.theme("ink2", "d_muted"), 1, ls)
