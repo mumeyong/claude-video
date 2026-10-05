@@ -2,6 +2,7 @@
 
   new      <slug>                 scaffold videos/<slug> from the skill templates
   estimate <slug>                 timing.json from SCRIPT.md (no audio yet, 161 wpm)      (Claude may run)
+  naskah   <slug>                 NASKAH.md — clean read-aloud script for recording      (Claude may run)
   align    <slug> [--model small] timing.json from audio/voice.wav via faster-whisper
   check    <slug>                 build only, draws nothing — validates structure      (Claude may run)
   still    <slug> <t> [<t>...]    PNG frames at times (seconds) or line ids (L05)     (user runs)
@@ -54,6 +55,9 @@ def main(argv=None):
     if a.cmd == "estimate":
         from .audio.align import estimate
         estimate(p.dir / "SCRIPT.md", p.timing_path)
+    elif a.cmd == "naskah":
+        from .naskah import build_naskah
+        build_naskah(p.dir / "SCRIPT.md", p.dir / "NASKAH.md")
     elif a.cmd == "align":
         from .audio.align import align
         if not p.voice():

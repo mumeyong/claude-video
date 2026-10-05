@@ -23,6 +23,11 @@ Then `python -m engine new <slug>` (user runs it, or Claude creates the files by
   **2.7 words per second of runtime**. 150 s ≈ 300 words, ~45 lines.
 - Every line must "earn" a visual. Mark the key word you'll animate on with `{curly}` in a comment if needed.
 - Offer 2–3 hook options as A/B/C (like the reference's option cards) and let the user pick.
+- Read-aloud marks: `*kata*` = vocal stress (put it on the same words the visuals land on), ` //` at line
+  end = breath. Write it to be SPOKEN: short clauses, no parentheses, numbers as words where they're said
+  ("empat belas ribu dolar"), English terms only if you'd say them out loud.
+- **After every SCRIPT.md write/change: run `python -m engine naskah <slug>` → NASKAH.md** and tell the
+  user it's ready to read. Rerun it after every revision so it always matches.
 
 ## Phase 2 — TREATMENT.md (storyboard)  → gate
 One row per line. Columns: `id · headline (punchline, with *accent*) · visual · motion · SFX · anchor word`.
@@ -34,7 +39,7 @@ Check against STYLE.md: one change per sentence, ≤ 3 cards, one accent per hea
 
 ## Phase 3 — Voice + timing
 - Before the voice exists: `python -m engine estimate <slug>` (161 wpm estimate) so scenes can be built and previewed.
-- User records `videos/<slug>/audio/voice.wav` (48 kHz, quiet room, ONE take start→finish; on a mistake just
+- User records `videos/<slug>/audio/voice.wav` reading **NASKAH.md** (48 kHz, quiet room, ONE take start→finish; on a mistake just
   repeat the sentence — the aligner keeps the last good take). Then `python -m engine align <slug>`.
   Lines scoring < 0.75 are flagged — check them in timing.json.
 - Music: `videos/<slug>/audio/music.(mp3|wav)`, ~128 BPM. Set `beat_offset` in scenes.py to the first downbeat.

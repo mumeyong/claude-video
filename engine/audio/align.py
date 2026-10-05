@@ -24,7 +24,8 @@ GAP_CHAPTER = 1.3   # pause at chapter change (transition breathing room)
 LEAD_IN = 0.4
 
 
-def parse_script(path):
+def parse_script(path, keep_marks=False):
+    """keep_marks=False strips read-aloud marks (*stress*, trailing //) — timing never sees them."""
     lines, chapter = [], ""
     for raw in open(path, encoding="utf-8"):
         raw = raw.strip()
@@ -34,7 +35,10 @@ def parse_script(path):
             continue
         m = re.match(r"^\[(L\d+[a-z]?)\]\s+(.+)$", raw)
         if m:
-            lines.append({"id": m.group(1), "chapter": chapter, "text": m.group(2).strip()})
+            text = m.group(2).strip()
+            if not keep_marks:
+                text = re.sub(r"\s*//\s*$", "", text).replace("*", "").strip()
+            lines.append({"id": m.group(1), "chapter": chapter, "text": text})
     ids = [ln["id"] for ln in lines]
     dup = {i for i in ids if ids.count(i) > 1}
     if dup:

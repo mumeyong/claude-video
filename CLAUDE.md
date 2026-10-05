@@ -10,10 +10,13 @@ User-facing workflow guide: `START.md` — keep it in sync when commands or phas
    ffmpeg encode — not even "just one frame to check". Finish the code, then give the user the exact
    command(s) in a copy-paste block. The user renders on their own machine and reports back
    (screenshots, timecodes, errors). The only engine commands Claude may run are
-   `python -m engine check <slug>` and `python -m engine estimate <slug>` (no image/audio output).
+   `check`, `estimate` and `naskah` (text/JSON only, no image/audio output).
 2. **Review dulu, kerjakan kemudian.** For every new video or big change: propose a plan, wait for "ok".
 3. **Urutan wajib:** SCRIPT.md → (approved) → TREATMENT.md → (approved) → scenes.py → user renders
    stills/preview → feedback → final. Never write scenes.py before the treatment is approved.
+3b. **Every video ships a read-aloud script.** Whenever SCRIPT.md is written or changed, regenerate
+   `NASKAH.md` with `python -m engine naskah <slug>` and tell the user. Never hand-edit NASKAH.md and
+   never let it drift from SCRIPT.md — the user records voice.wav from it.
 4. **Jangan pernah `git commit` / `git push` tanpa nanya.** Suggest a commit message; the user decides.
 5. **Every new video uses the skill** `mumeyong-video` (`.claude/skills/mumeyong-video/SKILL.md`).
 6. **frame = f(t).** Draw functions are pure: no state carried between frames, no unseeded randomness,
@@ -25,6 +28,8 @@ User-facing workflow guide: `START.md` — keep it in sync when commands or phas
 9. **Banned list in STYLE.md is law.** If a request conflicts with it, say so before doing it.
 10. **Engine vs video.** Reusable things go in `engine/components/`; one-off scene code stays in
     `videos/<slug>/scenes.py`. Don't fork a component for a one-time tweak — add a parameter.
+11. **Ideas live in `ideas/`.** "Simpan ide" → new `NN-slug.md` from `_TEMPLATE.md` + a row in
+    `ideas/README.md`. Starting production → status 🎬 and link `videos/<slug>/`. Keep the index in sync.
 
 ## Layout
 
@@ -33,6 +38,7 @@ engine/            reusable engine (tokens, draw, video, timing, components/, au
 assets/fonts/      Inter, Inter Display, Instrument Serif Italic, JetBrains Mono
 assets/sfx/        optional real SFX samples (<name>.wav overrides the synth)
 videos/<slug>/     SCRIPT.md, TREATMENT.md, timing.json, scenes.py, audio/, assets/, out/
+ideas/             video idea backlog: README.md (index + status) + one NN-slug.md per idea
 .claude/skills/mumeyong-video/   SKILL.md (workflow), STYLE.md (design system), templates/
 ```
 
@@ -42,6 +48,7 @@ videos/<slug>/     SCRIPT.md, TREATMENT.md, timing.json, scenes.py, audio/, asse
 source .venv/bin/activate                          # venv uses system Pango/cairo (--system-site-packages)
 python -m engine new <slug>                        # scaffold
 python -m engine estimate <slug>                   # timing from script, before voice exists (Claude may run)
+python -m engine naskah <slug>                     # NASKAH.md read-aloud script (Claude may run)
 python -m engine align <slug>                      # timing from audio/voice.wav (whisper)
 python -m engine check <slug>                      # structure check, no drawing (Claude may run)
 python -m engine still <slug> L05 L12 33.5         # PNG stills → out/stills/
