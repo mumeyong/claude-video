@@ -11,7 +11,7 @@ Satu file per ide (`NN-slug.md`, salin dari `_TEMPLATE.md`). Tabel ini indeksnya
 | 03 | [Cloud Architect itu ngapain sih?](03-cloud-architect-ngapain.md) → **video intro** | 🎬 produksi — [`videos/kenalan-mumeyong`](../videos/kenalan-mumeyong/) fase 5: review visual | 65–70 s | blueprint (bp_grid, bp_house, outline_text, city_map) | **C** · tayang PERTAMA, pin di profil |
 | 04 | [5 tanda biaya cloud kamu bocor](04-tanda-biaya-cloud-bocor.md) | 💡 ide | 45–60 s | checklist | teaser sebelum #01 |
 | 05 | [Kubernetes bukan jawaban buat semua hal](05-kubernetes-bukan-jawaban.md) | 💡 ide | 60–90 s | — | opini, mancing komentar |
-| 06 | [Kenapa app bank down pas tanggal gajian?](06-bank-down-tanggal-gajian.md) | 💡 ide | 60–70 s | tear_calendar, suspect_board | **B** · QUICK · detektif 3 tersangka |
+| 06 | [Kenapa app bank down pas tanggal gajian?](06-bank-down-tanggal-gajian.md) | 🎬 produksi — [`videos/kenapa-bank-down-gajian`](../videos/kenapa-bank-down-gajian/) fase 5: review visual | 65–75 s | tear_calendar, suspect_card, cashier, ledger, queue_dots | **B** · QUICK · detektif 3 tersangka |
 | 07 | [Kenapa war tiket konser selalu crash?](07-war-tiket-konser-crash.md) | 💡 ide | 60–75 s | queue_dispenser, big_clock, refresh_storm | **B** · QUICK · timeline per detik |
 | 08 | [QRIS: 2 detik setelah kamu scan](08-qris-dua-detik.md) | 💡 ide | 60–70 s | relay_track, slowmo_clock | **B** · QUICK · ⚠️ cek fakta alur |
 | 09 | [Slot berita: Bongkar Kejadian](09-slot-bongkar-kejadian.md) | 💡 format | 60–75 s | pakai ulang | **B** · reaktif ≤ 48 jam |

@@ -1,6 +1,6 @@
 # Kenapa app bank down pas tanggal gajian?
 
-- **Status:** 💡 ide · **Pilar:** B (broad) · **Format:** QUICK
+- **Status:** 🎬 produksi — [`videos/kenapa-bank-down-gajian`](../videos/kenapa-bank-down-gajian/) · **Pilar:** B (broad) · **Format:** QUICK
 - **Slug:** kenapa-bank-down-gajian
 - **Seri:** —
 - **Durasi target:** 60–70 s

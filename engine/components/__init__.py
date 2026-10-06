@@ -18,4 +18,6 @@ from .migrate import (keycap, bookshelf, shelf_books, sync_pipe, twin_table, cut
 from .kitchen import (flame, burner, oven, order_ticket, ticket_rail, dag_flow, dag_state, lake_pantry,
                       server_rack, ORANGE)
 from .blueprint import (bp_grid, bp_house, house_rooms, outline_text, dimension, phone_wire, city_map, TEAL)
+from .payday import (tear_calendar, suspect_card, red_string, pin, cashier, queue_dots, ledger, paper_sheet,
+                     torn_flight, RED)
 from .cover import cover

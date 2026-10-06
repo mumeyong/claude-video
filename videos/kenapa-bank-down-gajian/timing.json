@@ -1,0 +1,977 @@
+{
+ "source": "estimate",
+ "duration": 72.521,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Tanggal dua puluh lima, jam sembilan lewat satu.",
+   "start": 0.4,
+   "end": 3.385,
+   "words": [
+    {
+     "w": "Tanggal",
+     "start": 0.4,
+     "end": 0.848
+    },
+    {
+     "w": "dua",
+     "start": 0.887,
+     "end": 1.112
+    },
+    {
+     "w": "puluh",
+     "start": 1.131,
+     "end": 1.467
+    },
+    {
+     "w": "lima,",
+     "start": 1.497,
+     "end": 1.833
+    },
+    {
+     "w": "jam",
+     "start": 1.862,
+     "end": 2.086
+    },
+    {
+     "w": "sembilan",
+     "start": 2.106,
+     "end": 2.61
+    },
+    {
+     "w": "lewat",
+     "start": 2.654,
+     "end": 2.99
+    },
+    {
+     "w": "satu.",
+     "start": 3.02,
+     "end": 3.356
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Gaji udah masuk, kamu buka app bank, dan dia muter terus.",
+   "start": 3.765,
+   "end": 7.87,
+   "words": [
+    {
+     "w": "Gaji",
+     "start": 3.765,
+     "end": 4.091
+    },
+    {
+     "w": "udah",
+     "start": 4.119,
+     "end": 4.444
+    },
+    {
+     "w": "masuk,",
+     "start": 4.473,
+     "end": 4.928
+    },
+    {
+     "w": "kamu",
+     "start": 4.968,
+     "end": 5.294
+    },
+    {
+     "w": "buka",
+     "start": 5.322,
+     "end": 5.647
+    },
+    {
+     "w": "app",
+     "start": 5.676,
+     "end": 5.936
+    },
+    {
+     "w": "bank,",
+     "start": 5.959,
+     "end": 6.349
+    },
+    {
+     "w": "dan",
+     "start": 6.383,
+     "end": 6.644
+    },
+    {
+     "w": "dia",
+     "start": 6.667,
+     "end": 6.927
+    },
+    {
+     "w": "muter",
+     "start": 6.95,
+     "end": 7.34
+    },
+    {
+     "w": "terus.",
+     "start": 7.374,
+     "end": 7.83
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Ada tiga tersangka. Cuma satu pelakunya.",
+   "start": 8.25,
+   "end": 10.488,
+   "words": [
+    {
+     "w": "Ada",
+     "start": 8.25,
+     "end": 8.45
+    },
+    {
+     "w": "tiga",
+     "start": 8.468,
+     "end": 8.719
+    },
+    {
+     "w": "tersangka.",
+     "start": 8.741,
+     "end": 9.294
+    },
+    {
+     "w": "Cuma",
+     "start": 9.342,
+     "end": 9.593
+    },
+    {
+     "w": "satu",
+     "start": 9.615,
+     "end": 9.866
+    },
+    {
+     "w": "pelakunya.",
+     "start": 9.888,
+     "end": 10.44
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · TERSANGKA",
+   "text": "Tersangka pertama: server-nya kurang.",
+   "start": 11.788,
+   "end": 13.281,
+   "words": [
+    {
+     "w": "Tersangka",
+     "start": 11.788,
+     "end": 12.15
+    },
+    {
+     "w": "pertama:",
+     "start": 12.181,
+     "end": 12.506
+    },
+    {
+     "w": "server-nya",
+     "start": 12.535,
+     "end": 12.932
+    },
+    {
+     "w": "kurang.",
+     "start": 12.967,
+     "end": 13.256
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · TERSANGKA",
+   "text": "Setengah benar. Server-nya disiapin buat hari biasa, bukan buat tanggal muda.",
+   "start": 13.661,
+   "end": 17.765,
+   "words": [
+    {
+     "w": "Setengah",
+     "start": 13.661,
+     "end": 14.097
+    },
+    {
+     "w": "benar.",
+     "start": 14.134,
+     "end": 14.473
+    },
+    {
+     "w": "Server-nya",
+     "start": 14.503,
+     "end": 15.035
+    },
+    {
+     "w": "disiapin",
+     "start": 15.082,
+     "end": 15.517
+    },
+    {
+     "w": "buat",
+     "start": 15.555,
+     "end": 15.797
+    },
+    {
+     "w": "hari",
+     "start": 15.818,
+     "end": 16.06
+    },
+    {
+     "w": "biasa,",
+     "start": 16.081,
+     "end": 16.42
+    },
+    {
+     "w": "bukan",
+     "start": 16.45,
+     "end": 16.74
+    },
+    {
+     "w": "buat",
+     "start": 16.766,
+     "end": 17.008
+    },
+    {
+     "w": "tanggal",
+     "start": 17.029,
+     "end": 17.416
+    },
+    {
+     "w": "muda.",
+     "start": 17.45,
+     "end": 17.74
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · TERSANGKA",
+   "text": "Tersangka kedua: app-nya jelek.",
+   "start": 18.145,
+   "end": 19.638,
+   "words": [
+    {
+     "w": "Tersangka",
+     "start": 18.145,
+     "end": 18.574
+    },
+    {
+     "w": "kedua:",
+     "start": 18.612,
+     "end": 18.912
+    },
+    {
+     "w": "app-nya",
+     "start": 18.938,
+     "end": 19.282
+    },
+    {
+     "w": "jelek.",
+     "start": 19.311,
+     "end": 19.612
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "00 · TERSANGKA",
+   "text": "Bukan. App-nya sama persis tiap hari. Yang beda cuma traffic-nya.",
+   "start": 20.018,
+   "end": 23.749,
+   "words": [
+    {
+     "w": "Bukan.",
+     "start": 20.018,
+     "end": 20.382
+    },
+    {
+     "w": "App-nya",
+     "start": 20.414,
+     "end": 20.83
+    },
+    {
+     "w": "sama",
+     "start": 20.866,
+     "end": 21.126
+    },
+    {
+     "w": "persis",
+     "start": 21.149,
+     "end": 21.513
+    },
+    {
+     "w": "tiap",
+     "start": 21.544,
+     "end": 21.804
+    },
+    {
+     "w": "hari.",
+     "start": 21.827,
+     "end": 22.139
+    },
+    {
+     "w": "Yang",
+     "start": 22.166,
+     "end": 22.426
+    },
+    {
+     "w": "beda",
+     "start": 22.449,
+     "end": 22.709
+    },
+    {
+     "w": "cuma",
+     "start": 22.732,
+     "end": 22.992
+    },
+    {
+     "w": "traffic-nya.",
+     "start": 23.014,
+     "end": 23.69
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · PELAKU",
+   "text": "Bayangin kasir supermarket pas tanggal muda.",
+   "start": 25.049,
+   "end": 27.288,
+   "words": [
+    {
+     "w": "Bayangin",
+     "start": 25.049,
+     "end": 25.461
+    },
+    {
+     "w": "kasir",
+     "start": 25.497,
+     "end": 25.772
+    },
+    {
+     "w": "supermarket",
+     "start": 25.796,
+     "end": 26.345
+    },
+    {
+     "w": "pas",
+     "start": 26.393,
+     "end": 26.576
+    },
+    {
+     "w": "tanggal",
+     "start": 26.592,
+     "end": 26.958
+    },
+    {
+     "w": "muda.",
+     "start": 26.99,
+     "end": 27.264
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · PELAKU",
+   "text": "Kasirnya bisa ditambah jadi dua puluh. Itu auto-scaling.",
+   "start": 27.668,
+   "end": 30.653,
+   "words": [
+    {
+     "w": "Kasirnya",
+     "start": 27.668,
+     "end": 28.102
+    },
+    {
+     "w": "bisa",
+     "start": 28.139,
+     "end": 28.38
+    },
+    {
+     "w": "ditambah",
+     "start": 28.401,
+     "end": 28.835
+    },
+    {
+     "w": "jadi",
+     "start": 28.873,
+     "end": 29.113
+    },
+    {
+     "w": "dua",
+     "start": 29.134,
+     "end": 29.327
+    },
+    {
+     "w": "puluh.",
+     "start": 29.344,
+     "end": 29.681
+    },
+    {
+     "w": "Itu",
+     "start": 29.71,
+     "end": 29.903
+    },
+    {
+     "w": "auto-scaling.",
+     "start": 29.92,
+     "end": 30.594
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · PELAKU",
+   "text": "Tapi semua transaksi harus dicatat di satu buku kas yang sama.",
+   "start": 31.033,
+   "end": 35.138,
+   "words": [
+    {
+     "w": "Tapi",
+     "start": 31.033,
+     "end": 31.333
+    },
+    {
+     "w": "semua",
+     "start": 31.359,
+     "end": 31.719
+    },
+    {
+     "w": "transaksi",
+     "start": 31.75,
+     "end": 32.349
+    },
+    {
+     "w": "harus",
+     "start": 32.401,
+     "end": 32.761
+    },
+    {
+     "w": "dicatat",
+     "start": 32.792,
+     "end": 33.272
+    },
+    {
+     "w": "di",
+     "start": 33.313,
+     "end": 33.493
+    },
+    {
+     "w": "satu",
+     "start": 33.509,
+     "end": 33.809
+    },
+    {
+     "w": "buku",
+     "start": 33.835,
+     "end": 34.134
+    },
+    {
+     "w": "kas",
+     "start": 34.16,
+     "end": 34.4
+    },
+    {
+     "w": "yang",
+     "start": 34.421,
+     "end": 34.721
+    },
+    {
+     "w": "sama.",
+     "start": 34.747,
+     "end": 35.106
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "01 · PELAKU",
+   "text": "Itu database-nya. Semua antre di satu pintu.",
+   "start": 35.518,
+   "end": 38.13,
+   "words": [
+    {
+     "w": "Itu",
+     "start": 35.518,
+     "end": 35.731
+    },
+    {
+     "w": "database-nya.",
+     "start": 35.75,
+     "end": 36.497
+    },
+    {
+     "w": "Semua",
+     "start": 36.562,
+     "end": 36.883
+    },
+    {
+     "w": "antre",
+     "start": 36.911,
+     "end": 37.231
+    },
+    {
+     "w": "di",
+     "start": 37.259,
+     "end": 37.419
+    },
+    {
+     "w": "satu",
+     "start": 37.433,
+     "end": 37.7
+    },
+    {
+     "w": "pintu.",
+     "start": 37.723,
+     "end": 38.097
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "01 · PELAKU",
+   "text": "Dan tanggal dua puluh lima, gaji ribuan kantor juga masuk ke buku yang sama.",
+   "start": 38.51,
+   "end": 43.733,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 38.51,
+     "end": 38.759
+    },
+    {
+     "w": "tanggal",
+     "start": 38.781,
+     "end": 39.28
+    },
+    {
+     "w": "dua",
+     "start": 39.324,
+     "end": 39.573
+    },
+    {
+     "w": "puluh",
+     "start": 39.595,
+     "end": 39.97
+    },
+    {
+     "w": "lima,",
+     "start": 40.002,
+     "end": 40.377
+    },
+    {
+     "w": "gaji",
+     "start": 40.409,
+     "end": 40.721
+    },
+    {
+     "w": "ribuan",
+     "start": 40.748,
+     "end": 41.185
+    },
+    {
+     "w": "kantor",
+     "start": 41.223,
+     "end": 41.66
+    },
+    {
+     "w": "juga",
+     "start": 41.698,
+     "end": 42.01
+    },
+    {
+     "w": "masuk",
+     "start": 42.037,
+     "end": 42.412
+    },
+    {
+     "w": "ke",
+     "start": 42.444,
+     "end": 42.632
+    },
+    {
+     "w": "buku",
+     "start": 42.648,
+     "end": 42.96
+    },
+    {
+     "w": "yang",
+     "start": 42.987,
+     "end": 43.299
+    },
+    {
+     "w": "sama.",
+     "start": 43.326,
+     "end": 43.701
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "02 · OBATNYA",
+   "text": "Sistem yang tahan biasanya misahin dua hal: baca sama tulis.",
+   "start": 45.033,
+   "end": 48.765,
+   "words": [
+    {
+     "w": "Sistem",
+     "start": 45.033,
+     "end": 45.427
+    },
+    {
+     "w": "yang",
+     "start": 45.462,
+     "end": 45.743
+    },
+    {
+     "w": "tahan",
+     "start": 45.767,
+     "end": 46.105
+    },
+    {
+     "w": "biasanya",
+     "start": 46.134,
+     "end": 46.641
+    },
+    {
+     "w": "misahin",
+     "start": 46.685,
+     "end": 47.135
+    },
+    {
+     "w": "dua",
+     "start": 47.174,
+     "end": 47.399
+    },
+    {
+     "w": "hal:",
+     "start": 47.419,
+     "end": 47.7
+    },
+    {
+     "w": "baca",
+     "start": 47.725,
+     "end": 48.006
+    },
+    {
+     "w": "sama",
+     "start": 48.031,
+     "end": 48.312
+    },
+    {
+     "w": "tulis.",
+     "start": 48.337,
+     "end": 48.731
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "02 · OBATNYA",
+   "text": "Yang cuma mau cek saldo, baca dari read replica. Fotokopian buku kasnya.",
+   "start": 49.145,
+   "end": 53.622,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 49.145,
+     "end": 49.427
+    },
+    {
+     "w": "cuma",
+     "start": 49.451,
+     "end": 49.734
+    },
+    {
+     "w": "mau",
+     "start": 49.758,
+     "end": 49.984
+    },
+    {
+     "w": "cek",
+     "start": 50.003,
+     "end": 50.229
+    },
+    {
+     "w": "saldo,",
+     "start": 50.249,
+     "end": 50.644
+    },
+    {
+     "w": "baca",
+     "start": 50.678,
+     "end": 50.96
+    },
+    {
+     "w": "dari",
+     "start": 50.985,
+     "end": 51.267
+    },
+    {
+     "w": "read",
+     "start": 51.292,
+     "end": 51.574
+    },
+    {
+     "w": "replica.",
+     "start": 51.598,
+     "end": 52.106
+    },
+    {
+     "w": "Fotokopian",
+     "start": 52.15,
+     "end": 52.771
+    },
+    {
+     "w": "buku",
+     "start": 52.825,
+     "end": 53.107
+    },
+    {
+     "w": "kasnya.",
+     "start": 53.132,
+     "end": 53.583
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "02 · OBATNYA",
+   "text": "Buku aslinya cuma buat yang nulis: transfer, bayar, gaji masuk.",
+   "start": 54.002,
+   "end": 57.734,
+   "words": [
+    {
+     "w": "Buku",
+     "start": 54.002,
+     "end": 54.271
+    },
+    {
+     "w": "aslinya",
+     "start": 54.294,
+     "end": 54.723
+    },
+    {
+     "w": "cuma",
+     "start": 54.76,
+     "end": 55.029
+    },
+    {
+     "w": "buat",
+     "start": 55.052,
+     "end": 55.32
+    },
+    {
+     "w": "yang",
+     "start": 55.343,
+     "end": 55.612
+    },
+    {
+     "w": "nulis:",
+     "start": 55.635,
+     "end": 56.01
+    },
+    {
+     "w": "transfer,",
+     "start": 56.043,
+     "end": 56.579
+    },
+    {
+     "w": "bayar,",
+     "start": 56.626,
+     "end": 57.001
+    },
+    {
+     "w": "gaji",
+     "start": 57.034,
+     "end": 57.302
+    },
+    {
+     "w": "masuk.",
+     "start": 57.326,
+     "end": 57.701
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "RECAP",
+   "text": "Aku pernah nahan sepuluh ribu request barengan.",
+   "start": 59.034,
+   "end": 61.646,
+   "words": [
+    {
+     "w": "Aku",
+     "start": 59.034,
+     "end": 59.234
+    },
+    {
+     "w": "pernah",
+     "start": 59.251,
+     "end": 59.602
+    },
+    {
+     "w": "nahan",
+     "start": 59.632,
+     "end": 59.933
+    },
+    {
+     "w": "sepuluh",
+     "start": 59.959,
+     "end": 60.359
+    },
+    {
+     "w": "ribu",
+     "start": 60.394,
+     "end": 60.644
+    },
+    {
+     "w": "request",
+     "start": 60.666,
+     "end": 61.067
+    },
+    {
+     "w": "barengan.",
+     "start": 61.102,
+     "end": 61.602
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "RECAP",
+   "text": "Auto-scaling nggak nolong, kalau database-nya cuma satu pintu.",
+   "start": 62.026,
+   "end": 65.011,
+   "words": [
+    {
+     "w": "Auto-scaling",
+     "start": 62.026,
+     "end": 62.592
+    },
+    {
+     "w": "nggak",
+     "start": 62.642,
+     "end": 62.903
+    },
+    {
+     "w": "nolong,",
+     "start": 62.926,
+     "end": 63.275
+    },
+    {
+     "w": "kalau",
+     "start": 63.305,
+     "end": 63.567
+    },
+    {
+     "w": "database-nya",
+     "start": 63.589,
+     "end": 64.156
+    },
+    {
+     "w": "cuma",
+     "start": 64.205,
+     "end": 64.423
+    },
+    {
+     "w": "satu",
+     "start": 64.442,
+     "end": 64.66
+    },
+    {
+     "w": "pintu.",
+     "start": 64.679,
+     "end": 64.984
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "OUTRO",
+   "text": "Video berikutnya: gimana sepuluh ribu request itu tetap jalan.",
+   "start": 66.311,
+   "end": 69.669,
+   "words": [
+    {
+     "w": "Video",
+     "start": 66.311,
+     "end": 66.605
+    },
+    {
+     "w": "berikutnya:",
+     "start": 66.631,
+     "end": 67.219
+    },
+    {
+     "w": "gimana",
+     "start": 67.27,
+     "end": 67.614
+    },
+    {
+     "w": "sepuluh",
+     "start": 67.643,
+     "end": 68.036
+    },
+    {
+     "w": "ribu",
+     "start": 68.07,
+     "end": 68.315
+    },
+    {
+     "w": "request",
+     "start": 68.336,
+     "end": 68.729
+    },
+    {
+     "w": "itu",
+     "start": 68.763,
+     "end": 68.959
+    },
+    {
+     "w": "tetap",
+     "start": 68.976,
+     "end": 69.27
+    },
+    {
+     "w": "jalan.",
+     "start": 69.296,
+     "end": 69.639
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 70.049,
+   "end": 71.541,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 70.049,
+     "end": 70.392
+    },
+    {
+     "w": "biar",
+     "start": 70.422,
+     "end": 70.637
+    },
+    {
+     "w": "nggak",
+     "start": 70.655,
+     "end": 70.913
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 70.935,
+     "end": 71.493
+    }
+   ]
+  }
+ ]
+}
