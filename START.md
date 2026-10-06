@@ -146,6 +146,19 @@ tiap video** — itu yang paling bikin nggak generik.
 - Mau ganti kata-kata? Bilang ke Claude → SCRIPT.md diubah → NASKAH.md ikut ke-generate. Jangan edit NASKAH.md langsung.
 - Nggak perlu nunggu suara buat mulai: visual bisa dibangun & direview pakai timing estimasi dulu.
 
+### Eksperimen: suara sintetis (tanpa rekam)
+```bash
+claude-video tts <video>                  # suara cowok Indonesia (ardi) → audio/voice_tts.wav + timing pas
+claude-video tts <video> --voice gadis    # cewek Indonesia · andrew / ava = multilingual (istilah English lebih pas)
+claude-video <video>                      # review seperti biasa — SCRIPT.md berubah? suara dibikin ulang otomatis
+```
+- Pakai **edge-tts** (suara neural Microsoft, gratis, **butuh internet — teks naskah dikirim ke Microsoft**).
+- Timing per kata langsung dari TTS → nggak perlu aligner. Tanda *tekanan* nggak kebaca, napas `//` = jeda lebih panjang.
+- Istilah English dibaca pakai ejaan Indonesia (`serverless` → "serverles"). Ada yang salah ucap? Tambahin di
+  `audio/tts_lexicon.txt`: `airflow = erflo` (satu per baris).
+- **Rekaman asli selalu menang:** begitu ada `audio/voice.wav`, itu yang dipakai (align otomatis).
+- Tayang pakai suara sintetis? Nyalain label **"AI-generated content"** di TikTok/YouTube — dan jujur ke penonton.
+
 ## Musik
 
 - **Kamu cukup rekam suara.** Kalau `audio/music.*` kosong, musik **digenerate otomatis** waktu render
@@ -185,7 +198,7 @@ komentar pin — ditulis Claude setelah kamu bilang final ok). File mp4 **nggak 
 ```bash
 git clone git@github.com:mumeyong/claude-video.git ~/aschente/claude-video
 cd ~/aschente/claude-video
-python3 -m venv --system-site-packages .venv && .venv/bin/pip install faster-whisper
+python3 -m venv --system-site-packages .venv && .venv/bin/pip install faster-whisper edge-tts
 ln -s ~/aschente/claude-video/vid ~/.local/bin/claude-video   # ~/.local/bin harus ada di PATH
 ```
 Butuh: Python 3.13, ffmpeg, Pango + PyGObject (`gir1.2-pango-1.0`, `python3-gi`, `python3-cairo`).

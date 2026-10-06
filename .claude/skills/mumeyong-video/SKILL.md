@@ -56,6 +56,8 @@ transition in a short table at the top of TREATMENT.md — no two consecutive ch
 
 ## Phase 3 — Voice + timing
 - Before the voice exists: `python -m engine estimate <slug>` (161 wpm estimate) so scenes can be built and previewed.
+- Experimental alternative: `claude-video tts <slug> [--voice ardi|gadis|andrew|ava]` → `audio/voice_tts.wav` + exact
+  timing (edge-tts, online). Mispronounced terms → `audio/tts_lexicon.txt`. A real `voice.wav` always wins.
 - User records `videos/<slug>/audio/voice.wav` reading **NASKAH.md** (48 kHz, quiet room, ONE take start→finish; on a mistake just
   repeat the sentence — the aligner keeps the last good take). Then `python -m engine align <slug>`.
   Lines scoring < 0.75 are flagged — check them in timing.json.

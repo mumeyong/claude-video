@@ -4,6 +4,8 @@
 - **Durasi:** — · **Final:** YYYY-MM-DD
 - **Tayang:** — · **Link:** —
 
+- **Suara:** rekaman asli / sintetis (TTS) — kalau sintetis: nyalain label "AI-generated content" waktu upload
+
 ## Caption (TikTok, ≤ 150 karakter biar nggak kepotong)
 …
 

@@ -12,6 +12,8 @@
   sheet    <slug>                 contact sheet, one thumbnail per script line          (user runs)
   preview  <slug> [--from s --to s]  540x960 30fps quick render with audio           (user runs)
   render   <slug> [--from s --to s]  1080x1920 60fps final                           (user runs)
+  tts      <slug> [--voice ardi]  EXPERIMENT: synthetic voice → audio/voice_tts.wav + exact timing.json
+                                  (edge-tts, online; voices ardi · gadis · andrew · ava; voice.wav wins) (user runs)
   mix      <slug>                 audio only → out/mix.wav                              (user runs)
   music    <slug>                 generated score only → out/music_gen.wav (if no audio/music.*) (user runs)
   sfx                             export synth SFX to .cache/sfx_preview to audition
@@ -36,6 +38,7 @@ def main(argv=None):
     ap.add_argument("--workers", type=int, default=None)
     ap.add_argument("--scale", type=float, default=1.0)
     ap.add_argument("--no-audio", action="store_true")
+    ap.add_argument("--voice", default="ardi", help="tts voice: ardi · gadis · andrew · ava (or a full edge-tts id)")
     a = ap.parse_args(argv)
 
     if a.cmd in ("ls", "list"):
@@ -80,6 +83,9 @@ def main(argv=None):
         from .render import render_video
         render_video(a.slug, "preview" if a.cmd == "preview" else "final", a.workers, a.t_from, a.t_to,
                      audio=not a.no_audio)
+    elif a.cmd == "tts":
+        from .audio.tts import synthesize
+        synthesize(p, a.voice)
     elif a.cmd == "music":
         from .audio.music import write_music
         out = write_music(p.build(), a.slug, p.out / "music_gen.wav")
@@ -193,12 +199,19 @@ def go(p, a):
         done.append(f"NASKAH.md   {naskah}")
 
     src = json.load(open(timing)).get("source") if timing.exists() else None
-    voice = p.voice()
-    if voice and (src != "whisper" or _newer(voice, timing) or _newer(script, timing)):
-        step("align (voice.wav baru / berubah)")
-        from .audio.align import align
-        align(script, voice, timing, model=a.model)
-    elif not voice and (src is None or _newer(script, timing)):
+    real, synth = p.audio / "voice.wav", p.audio / "voice_tts.wav"
+    if real.exists():
+        if src != "whisper" or _newer(real, timing) or _newer(script, timing):
+            step("align (voice.wav baru / berubah)")
+            from .audio.align import align
+            align(script, real, timing, model=a.model)
+    elif synth.exists():
+        if src != "tts" or _newer(script, timing):
+            step("tts (EKSPERIMEN — SCRIPT.md berubah, suara sintetis dibikin ulang)")
+            from .audio.tts import synthesize
+            synthesize(p, a.voice)
+            done.append(f"voice_tts   {synth}")
+    elif src is None or _newer(script, timing):
         step("estimate (belum ada voice.wav)")
         from .audio.align import estimate
         estimate(script, timing)

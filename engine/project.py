@@ -36,8 +36,12 @@ class Project:
         return p
 
     def voice(self):
-        p = self.audio / "voice.wav"
-        return p if p.exists() else None
+        """Real recording first; else the experimental synthetic voice (engine/audio/tts.py)."""
+        for name in ("voice.wav", "voice_tts.wav"):
+            p = self.audio / name
+            if p.exists():
+                return p
+        return None
 
     def music(self):
         for ext in ("wav", "mp3", "m4a", "flac", "ogg", "aac"):
