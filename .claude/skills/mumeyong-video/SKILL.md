@@ -8,7 +8,10 @@ description: Make a MUMEYONG vertical (9:16) animated explainer video in Python 
 Read `STYLE.md` (same folder) before writing a script or a scene. Read `CLAUDE.md` rules — especially
 **rule 1: never render; hand the user the command.**
 
-Each phase ends with a **gate**: stop, show the result, wait for the user's "ok/setuju". Don't skip ahead.
+Each phase ends with a **gate** — but the user runs in **autopilot** (CLAUDE.md rule 2): every gate is
+auto-approved. Don't stop and wait; make the best choice (pick hook A, sensible identity), write the file, continue.
+Do the phases in order through Phase 4 (`check` passes), then stop with ONE summary + the render command.
+Never skip a phase's file and never render (rule 1). Open questions (real numbers, screenshots) go in the summary.
 
 ## Phase 0 — Brief
 Ask (only what's missing): topic, audience, the ONE takeaway, target length (default 60–150 s),
@@ -69,6 +72,19 @@ transition in a short table at the top of TREATMENT.md — no two consecutive ch
 - Use `wobble` for idle life, `select_box` / dim-and-outline for focus, `fmt_id` for numbers.
 - After writing: Claude runs `python -m engine check <slug>` (no drawing) and fixes errors.
 - Then hand the user the commands (see below). **Do not run them.**
+
+## Format QUICK (pilar B/C — lihat `ideas/STRATEGY.md`)
+Less work, **not** less creative. Same phases and files (SCRIPT → NASKAH → IDENTITY → TREATMENT → scenes → check), smaller scope:
+- **60–75 s** (stay over 1 minute for platform payouts), ~14–20 lines, INTRO + 2–3 chapters + 1-line punch + short outro
+  (the dark recap may be a single line or skipped; outro logo + follow stays — brand DNA).
+- **One hero object** that carries the whole video (the metaphor's object), changing state each chapter — instead of a
+  new layout per chapter. Composition rule §6b still applies inside it: camera move per chapter, punch every ~15 s.
+- **≥ 1 new component**, OR an existing component used in a clearly new way (new role in a new metaphor) — never
+  the same component as hero in two videos in a row.
+- Identity rules unchanged: metaphor, signature move, color, hook, structure differ from the previous video (REGISTRY).
+- **Anti-slop gate** (STYLE §8b + STRATEGY §4) checked on the script before IDENTITY: one thing only Mumeyong could say,
+  no cliché openers, hero = metaphor object (never a glowing server / robot / globe).
+- Template: `templates/SCRIPT_QUICK.md`.
 
 ## Phase 5 — Review loop (cek)  → gate per round
 1. User runs `claude-video <slug>` → sheet + REVIEW stills + preview in one go, sends screenshots/notes.

@@ -11,9 +11,13 @@ User-facing workflow guide: `START.md` — keep it in sync when commands or phas
    command(s) in a copy-paste block. The user renders on their own machine and reports back
    (screenshots, timecodes, errors). The only engine commands Claude may run are
    `check`, `estimate` and `naskah` (text/JSON only, no image/audio output).
-2. **Review dulu, kerjakan kemudian.** For every new video or big change: propose a plan, wait for "ok".
-3. **Urutan wajib:** SCRIPT.md → (approved) → TREATMENT.md → (approved) → scenes.py → user renders
-   stills/preview → feedback → final. Never write scenes.py before the treatment is approved.
+2. **Autopilot — jangan berhenti di gate.** The user approves every gate by default ("oke" to everything).
+   Don't stop to ask for ok between phases: make the best call yourself, write each phase's file, then move on.
+   Run straight through to scenes.py + `check`, then stop and hand over the render command (rule 1).
+   Only stop early if blocked on a fact only the user knows (real numbers, NDA, what actually happened) — and
+   even then prefer a safe default (no number shown) and list the open question in the final message.
+3. **Urutan wajib:** SCRIPT.md (+ NASKAH.md) → IDENTITY.md → TREATMENT.md → scenes.py → `check` → user renders
+   stills/preview → feedback → final. The order stays; the waiting between steps doesn't (rule 2).
 3b. **Every video ships a read-aloud script.** Whenever SCRIPT.md is written or changed, regenerate
    `NASKAH.md` with `python -m engine naskah <slug>` and tell the user. Never hand-edit NASKAH.md and
    never let it drift from SCRIPT.md — the user records voice.wav from it.
@@ -28,7 +32,7 @@ User-facing workflow guide: `START.md` — keep it in sync when commands or phas
 9. **Banned list in STYLE.md is law.** If a request conflicts with it, say so before doing it.
 10. **Engine vs video.** Reusable things go in `engine/components/`; one-off scene code stays in
     `videos/<slug>/scenes.py`. Don't fork a component for a one-time tweak — add a parameter.
-11. **Ideas live in `ideas/`.** "Simpan ide" → new `NN-slug.md` from `_TEMPLATE.md` + a row in
+11. **Ideas live in `ideas/`** (strategy: `ideas/STRATEGY.md` — creator income, 3 broad : 1 career : 1 deep, QUICK vs FULL format). "Simpan ide" → new `NN-slug.md` from `_TEMPLATE.md` + a row in
     `ideas/README.md`. Starting production → status 🎬 and link `videos/<slug>/`. Keep the index in sync.
 12. **Finished videos go to `hasil/`.** A full `render` auto-copies mp4 + cover.png there. When the user
     approves the final, write `hasil/<slug>/POST.md` from `.claude/skills/mumeyong-video/POST_TEMPLATE.md`

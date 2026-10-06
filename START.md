@@ -35,15 +35,17 @@ claude
 
 **2. Bilang satu kalimat** — mis. *"kerjain EP02 seri Bongkar Arsitektur"* atau *"kerjain ide #03"*.
 (Opsional: bikin foldernya dulu pakai `claude-video "Bongkar EP02 Big Data Migration"`.)
+Mau cepat? Bilang *"kerjain ide #06 format quick"* → 60–75 s, satu hero object, tetap unik (aturan anti-slop di `ideas/STRATEGY.md`).
 
 **3. Jawab brief** — Claude cuma nanya yang kurang: nama samaran klien, angka asli, apa yang sebenarnya terjadi.
 💡 Siapin 1–2 fakta/angka asli atau screenshot yang disamarkan — itu yang paling bikin videonya unik.
 
-**4. Gerbang persetujuan** — kamu cukup bilang "ok" atau kasih koreksi:
+**4. Autopilot** — Claude jalan terus tanpa nanya "ok" tiap tahap (naskah → identitas → storyboard → kode),
+lalu berhenti dengan satu ringkasan + perintah render. Mau koreksi? Bilang aja kapan pun, Claude revisi:
 
 | Tahap | Kamu dapat | Kamu ngapain |
 |---|---|---|
-| Naskah | `SCRIPT.md` + 2–3 opsi hook + `NASKAH.md` | pilih hook, cek fakta, "ok" |
+| Naskah | `SCRIPT.md` + 2–3 opsi hook + `NASKAH.md` | cek fakta, ganti hook kalau mau |
 | Identitas | `IDENTITY.md` — metafora, gerakan, warna, hook baru (beda dari video sebelumnya) | "ok" |
 | Storyboard | `TREATMENT.md` — komposisi beda tiap bab | "ok" |
 | Kode | `scenes.py` + komponen baru + `REVIEW` terisi | tunggu aja |

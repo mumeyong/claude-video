@@ -163,3 +163,16 @@ you would say · one surprise moment · deliberate imperfection (hand note, tilt
 - ✗ Hard-coded seconds in scenes, unseeded randomness, content outside the safe column.
 - ✗ Translating tech terms into Indonesian ("mesin" for node, "langganan" for reserved instance, "nganggur" for idle) —
   see `GLOSSARY.md`. Everyday UI words may be Indonesian ("Setuju"), tech terms never.
+
+## 8b. Anti-slop (biar nggak kelihatan kayak AI generik)
+
+- ✗ Script clichés: "Di era digital ini", "Tahukah kamu", "Yuk simak", "game changer", "rahasia yang jarang orang tahu",
+  vague "Pernah nggak sih…" (a question is fine only if it's specific: a date, a time, a real moment).
+- ✗ A video with nothing only Mumeyong could say — every video needs one real experience, number (anonymised), mistake
+  or opinion.
+- ✗ Stock tech imagery as hero: glowing blue servers, robot/brain, globe with neon lines, padlock+shield, matrix code,
+  cloud/gear/rocket icons. The hero is the object of the video's own metaphor.
+- ✓ Metaphors from Indonesian daily life; a signature move reused across chapters; one surprise; one deliberate
+  imperfection (hand note, tilted stamp, stuck ticket).
+- Final test: hide the title, look at 3 random frames — can you tell it's Mumeyong, and *which* video? If not, it's generic.
+

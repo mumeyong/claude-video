@@ -13,3 +13,7 @@ from .charts import (bill_counter, cost_chart, usage_meter, seat_grid, price_bar
                      odometer, clock24, moon, receipt, stamp, note, chart_point)
 from .infra import (particle_flow, toll_plaza, booth, car, arch_diagram, arch_node, load_graph, stack_layers,
                     slab_y, PURPLE)
+from .migrate import (keycap, bookshelf, shelf_books, sync_pipe, twin_table, cutover_switch, padlock,
+                      series_bumper, GREEN)
+from .kitchen import (flame, burner, oven, order_ticket, ticket_rail, dag_flow, dag_state, lake_pantry,
+                      server_rack, ORANGE)
