@@ -1,7 +1,7 @@
 """CLI.  python -m engine <command> <slug> [options]
 
-  go       <slug> [final]         ONE command per review round: naskah → estimate/align → check →
-                                  sheet → stills (from REVIEW file) → preview  ('final' = final render)
+  go       <slug> [final]         ONE command per review round: naskah → voice (align voice.wav, else TTS) →
+                                  check → cover → sheet → stills (REVIEW) → preview+music  ('final' = final render)
   new      "Judul video"          scaffold videos/<slug> from a title (slug auto)
   ls                              list videos with stage + duration
   estimate <slug>                 timing.json from SCRIPT.md (no audio yet, 161 wpm)      (Claude may run)
@@ -9,11 +9,12 @@
   align    <slug> [--model small] timing.json from audio/voice.wav via faster-whisper
   check    <slug>                 build only, draws nothing — validates structure      (Claude may run)
   still    <slug> <t> [<t>...]    PNG frames at times (seconds) or line ids (L05)     (user runs)
+  cover    <slug>                 TikTok cover → out/cover.png (v.cover, else frame at v.cover_t) (user runs)
   sheet    <slug>                 contact sheet, one thumbnail per script line          (user runs)
   preview  <slug> [--from s --to s]  540x960 30fps quick render with audio           (user runs)
   render   <slug> [--from s --to s]  1080x1920 60fps final                           (user runs)
-  tts      <slug> [--voice ardi]  EXPERIMENT: synthetic voice → audio/voice_tts.wav + exact timing.json
-                                  (edge-tts, online; voices ardi · gadis · andrew · ava; voice.wav wins) (user runs)
+  tts      <slug>                 Ardi voice → audio/voice_tts.wav + exact timing.json (edge-tts, online;
+                                  automatic in go when there is no voice.wav; voice.wav always wins) (user runs)
   mix      <slug>                 audio only → out/mix.wav                              (user runs)
   music    <slug>                 generated score only → out/music_gen.wav (if no audio/music.*) (user runs)
   sfx                             export synth SFX to .cache/sfx_preview to audition
@@ -38,7 +39,6 @@ def main(argv=None):
     ap.add_argument("--workers", type=int, default=None)
     ap.add_argument("--scale", type=float, default=1.0)
     ap.add_argument("--no-audio", action="store_true")
-    ap.add_argument("--voice", default="ardi", help="tts voice: ardi · gadis · andrew · ava (or a full edge-tts id)")
     a = ap.parse_args(argv)
 
     if a.cmd in ("ls", "list"):
@@ -76,6 +76,9 @@ def main(argv=None):
         for x in a.rest:
             times.append(p.timing.line(x).frac(0.6) if x.upper().startswith("L") else float(x))
         render_stills(a.slug, times, a.scale)
+    elif a.cmd == "cover":
+        from .render import render_cover, _video
+        render_cover(*_video(a.slug), p.out / "cover.png")
     elif a.cmd == "sheet":
         from .render import render_sheet
         render_sheet(a.slug)
@@ -85,7 +88,7 @@ def main(argv=None):
                      audio=not a.no_audio)
     elif a.cmd == "tts":
         from .audio.tts import synthesize
-        synthesize(p, a.voice)
+        synthesize(p)
     elif a.cmd == "music":
         from .audio.music import write_music
         out = write_music(p.build(), a.slug, p.out / "music_gen.wav")
@@ -177,7 +180,8 @@ def _newer(a, b):
 
 
 def go(p, a):
-    """One command for a review round: naskah → timing → check → sheet → stills → preview (or final).
+    """One command for a review round: naskah → voice (recording → align · none → TTS) → check → cover → sheet →
+    stills → preview with music (or final → hasil/).
 
     Only redoes what is out of date. Stills: line ids / seconds listed in videos/<slug>/REVIEW (one per line
     or space-separated; '#' comments) — Claude keeps that file updated with what to look at this round.
@@ -205,16 +209,20 @@ def go(p, a):
             step("align (voice.wav baru / berubah)")
             from .audio.align import align
             align(script, real, timing, model=a.model)
-    elif synth.exists():
-        if src != "tts" or _newer(script, timing):
-            step("tts (EKSPERIMEN — SCRIPT.md berubah, suara sintetis dibikin ulang)")
-            from .audio.tts import synthesize
-            synthesize(p, a.voice)
-            done.append(f"voice_tts   {synth}")
-    elif src is None or _newer(script, timing):
-        step("estimate (belum ada voice.wav)")
-        from .audio.align import estimate
-        estimate(script, timing)
+    else:
+        # no recording → Ardi TTS voice. Redone only when the script changes (or an older TTS version is found).
+        from .audio.tts import synthesize, VERSION
+        prev = json.load(open(timing)) if timing.exists() else {}
+        if src != "tts" or not synth.exists() or _newer(script, timing) or prev.get("tts") != VERSION:
+            step("suara TTS (Ardi) — belum ada rekaman voice.wav")
+            try:
+                synthesize(p)
+                done.append(f"voice_tts   {synth}")
+            except (SystemExit, Exception) as e:   # offline / edge-tts missing → keep going without a voice
+                print(f"  ! TTS gagal ({e}) — lanjut pakai timing estimasi (tanpa suara)")
+                if src is None or _newer(script, timing):
+                    from .audio.align import estimate
+                    estimate(script, timing)
 
     step("check")
     from . import render
@@ -222,6 +230,9 @@ def go(p, a):
         sys.exit("check gagal — kirim output ini ke Claude")
 
     if not final:
+        step("cover")
+        pr, vd = render._video(p.slug)
+        done.append(f"cover       {render.render_cover(pr, vd, p.out / 'cover.png')}")
         step("sheet")
         done.append(f"sheet       {render.render_sheet(p.slug)}")
         rv = p.dir / "REVIEW"
@@ -242,6 +253,13 @@ def go(p, a):
     print(f"\n✓ selesai dalam {time.time() - t0:.0f}s — kirim ke Claude:")
     for d in done:
         print(f"  {d}")
+    if final:
+        from .project import ROOT
+        up = ROOT / "hasil" / p.slug
+        print(f"\n▶ UPLOAD FILE INI (1080×1920 60fps): {up / (p.slug + '.mp4')}")
+        print(f"  cover: {up / 'cover.png'} · caption: {up / 'POST.md'}")
+    else:
+        print(f"\n  ⚠ preview = 540p, JANGAN di-upload. Buat upload: claude-video {p.slug} final")
     return 0
 
 

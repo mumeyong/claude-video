@@ -36,11 +36,15 @@ class Project:
         return p
 
     def voice(self):
-        """Real recording first; else the experimental synthetic voice (engine/audio/tts.py)."""
-        for name in ("voice.wav", "voice_tts.wav"):
-            p = self.audio / name
-            if p.exists():
-                return p
+        """Real recording first; else the synthetic voice — but only while timing.json came from it (source tts)."""
+        real = self.audio / "voice.wav"
+        if real.exists():
+            return real
+        synth = self.audio / "voice_tts.wav"
+        if synth.exists() and self.timing_path.exists():
+            import json
+            if json.load(open(self.timing_path)).get("source") == "tts":
+                return synth
         return None
 
     def music(self):

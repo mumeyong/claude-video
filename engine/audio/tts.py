@@ -7,10 +7,8 @@ longest at a chapter change.
 
 A real recording always wins: as soon as audio/voice.wav exists, the pipeline aligns that instead.
 
-Voices (--voice):  ardi (id-ID male, default) · gadis (id-ID female)
-                   andrew · ava (multilingual en-US voices that also speak Indonesian; better English terms,
-                   foreign accent — try both)
-Indonesian voices mispronounce English tech terms, so a respelling lexicon is applied for id-ID voices only:
+Voice: Ardi (id-ID-ArdiNeural), one steady pace. Nothing to configure.
+Ardi mispronounces English tech terms, so a respelling lexicon is applied:
 LEXICON below + optional videos/<slug>/audio/tts_lexicon.txt ("word = respelling", one per line).
 """
 import asyncio
@@ -23,9 +21,9 @@ import numpy as np
 from .align import parse_script, _spread_words
 
 SR = 48000
-VOICES = {"ardi": "id-ID-ArdiNeural", "gadis": "id-ID-GadisNeural",
-          "andrew": "en-US-AndrewMultilingualNeural", "ava": "en-US-AvaMultilingualNeural"}
-RATE = "+6%"            # casual pace, close to the 161 wpm reference
+VOICE = "id-ID-ArdiNeural"
+RATE = "+6%"           # casual pace, close to the 161 wpm reference
+VERSION = "ardi"       # stored in timing.json; a different value → the voice is regenerated
 LEAD_IN = 0.4
 GAP_LINE = 0.32
 GAP_BREATH = 0.6        # after a line ending in ' //'
@@ -72,11 +70,11 @@ def _respell(text, lex):
     return " ".join(out)
 
 
-async def _speak(text, voice, rate):
+async def _speak(text):
     import edge_tts
     for attempt in range(3):
         try:
-            com = edge_tts.Communicate(text, voice, rate=rate, boundary="WordBoundary")
+            com = edge_tts.Communicate(text, VOICE, rate=RATE, boundary="WordBoundary")
             audio, words = bytearray(), []
             async for ch in com.stream():
                 if ch["type"] == "audio":
@@ -90,12 +88,12 @@ async def _speak(text, voice, rate):
             await asyncio.sleep(1.5 * (attempt + 1))
 
 
-async def _speak_all(texts, voice, rate, conc=4):
+async def _speak_all(texts, conc=4):
     sem = asyncio.Semaphore(conc)
 
     async def one(t):
         async with sem:
-            return await _speak(t, voice, rate)
+            return await _speak(t)
     return await asyncio.gather(*(one(t) for t in texts))
 
 
@@ -113,16 +111,15 @@ def _trim(y, thr=0.008):
     return max(0, idx[0] - int(0.03 * SR)), min(len(y), idx[-1] + int(0.08 * SR))
 
 
-def synthesize(project, voice="ardi", rate=RATE):
-    """Write audio/voice_tts.wav + timing.json. Returns the timing dict."""
-    voice_id = VOICES.get(voice, voice)
-    lex = _lexicon(project) if voice_id.startswith("id-ID") else {}
+def synthesize(project):
+    """Write audio/voice_tts.wav + timing.json (Ardi). Returns the timing dict."""
+    lex = _lexicon(project)
     script = project.dir / "SCRIPT.md"
     marked = parse_script(script, keep_marks=True)
     lines = parse_script(script)
     spoken = [_respell(ln["text"], lex) for ln in lines]
-    print(f"tts: {len(lines)} lines · {voice_id} · rate {rate} (online, edge-tts)")
-    results = asyncio.run(_speak_all(spoken, voice_id, rate))
+    print(f"tts: {len(lines)} lines · Ardi (online, edge-tts)")
+    results = asyncio.run(_speak_all(spoken))
 
     parts, t, prev_ch = [np.zeros(int(LEAD_IN * SR))], LEAD_IN, None
     for i, (ln, (mp3, bounds)) in enumerate(zip(lines, results)):
@@ -151,18 +148,13 @@ def synthesize(project, voice="ardi", rate=RATE):
     parts.append(np.zeros(int(TAIL * SR)))
     voice_wav = project.audio / "voice_tts.wav"
     voice_wav.parent.mkdir(parents=True, exist_ok=True)
-    from .sfx import write_wav
     y = np.concatenate(parts)
     y *= 0.89 / (np.max(np.abs(y)) or 1.0)
+    from .sfx import write_wav
     write_wav(voice_wav, y)
-    data = {"source": "tts", "voice": voice_id, "duration": round(len(y) / SR, 3), "lines": lines}
+    data = {"source": "tts", "voice": VOICE, "tts": VERSION, "duration": round(len(y) / SR, 3), "lines": lines}
     json.dump(data, open(project.timing_path, "w"), ensure_ascii=False, indent=1)
     mism = sum(1 for ln, (_, bd) in zip(lines, results) if len(bd) != len(ln["text"].split()))
     print(f"✓ {voice_wav}  ({data['duration']:.1f}s)")
     print(f"✓ {project.timing_path}  (source tts{f', {mism} lines spread by length' if mism else ''})")
     return data
-
-
-def is_tts(project):
-    return (project.audio / "voice_tts.wav").exists() and not (project.audio / "voice.wav").exists()
-

@@ -1,0 +1,909 @@
+{
+ "source": "tts",
+ "voice": "id-ID-ArdiNeural",
+ "tts": "ardi",
+ "duration": 64.178,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Aplikasi bank, war tiket, bayar pakai QRIS.",
+   "start": 0.4,
+   "end": 3.439,
+   "words": [
+    {
+     "w": "Aplikasi",
+     "start": 0.4,
+     "end": 0.835
+    },
+    {
+     "w": "bank,",
+     "start": 0.835,
+     "end": 1.212
+    },
+    {
+     "w": "war",
+     "start": 1.448,
+     "end": 1.648
+    },
+    {
+     "w": "tiket,",
+     "start": 1.648,
+     "end": 2.096
+    },
+    {
+     "w": "bayar",
+     "start": 2.297,
+     "end": 2.651
+    },
+    {
+     "w": "pakai",
+     "start": 2.651,
+     "end": 2.946
+    },
+    {
+     "w": "QRIS.",
+     "start": 2.946,
+     "end": 3.382
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Siapa yang mutusin semua itu jalan di mana?",
+   "start": 3.759,
+   "end": 5.774,
+   "words": [
+    {
+     "w": "Siapa",
+     "start": 3.759,
+     "end": 4.066
+    },
+    {
+     "w": "yang",
+     "start": 4.066,
+     "end": 4.184
+    },
+    {
+     "w": "mutusin",
+     "start": 4.184,
+     "end": 4.514
+    },
+    {
+     "w": "semua",
+     "start": 4.514,
+     "end": 4.761
+    },
+    {
+     "w": "itu",
+     "start": 4.762,
+     "end": 4.986
+    },
+    {
+     "w": "jalan",
+     "start": 4.986,
+     "end": 5.245
+    },
+    {
+     "w": "di",
+     "start": 5.245,
+     "end": 5.316
+    },
+    {
+     "w": "mana?",
+     "start": 5.316,
+     "end": 5.752
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Itu kerjaan cloud engineer. Dan itu kerjaanku.",
+   "start": 6.374,
+   "end": 9.98,
+   "words": [
+    {
+     "w": "Itu",
+     "start": 6.374,
+     "end": 6.561
+    },
+    {
+     "w": "kerjaan",
+     "start": 6.561,
+     "end": 6.998
+    },
+    {
+     "w": "cloud",
+     "start": 6.998,
+     "end": 7.304
+    },
+    {
+     "w": "engineer.",
+     "start": 7.304,
+     "end": 7.917
+    },
+    {
+     "w": "Dan",
+     "start": 8.706,
+     "end": 8.954
+    },
+    {
+     "w": "itu",
+     "start": 8.954,
+     "end": 9.178
+    },
+    {
+     "w": "kerjaanku.",
+     "start": 9.178,
+     "end": 9.933
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · KENALAN",
+   "text": "Aku Mumeyong.",
+   "start": 10.98,
+   "end": 11.863,
+   "words": [
+    {
+     "w": "Aku",
+     "start": 10.98,
+     "end": 11.191
+    },
+    {
+     "w": "Mumeyong.",
+     "start": 11.191,
+     "end": 11.816
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · KENALAN",
+   "text": "Kalau developer bikin rumah, aku yang gambar denahnya.",
+   "start": 12.183,
+   "end": 14.908,
+   "words": [
+    {
+     "w": "Kalau",
+     "start": 12.183,
+     "end": 12.34
+    },
+    {
+     "w": "developer",
+     "start": 12.34,
+     "end": 12.705
+    },
+    {
+     "w": "bikin",
+     "start": 12.705,
+     "end": 12.953
+    },
+    {
+     "w": "rumah,",
+     "start": 12.953,
+     "end": 13.437
+    },
+    {
+     "w": "aku",
+     "start": 13.649,
+     "end": 13.885
+    },
+    {
+     "w": "yang",
+     "start": 13.885,
+     "end": 14.014
+    },
+    {
+     "w": "gambar",
+     "start": 14.014,
+     "end": 14.262
+    },
+    {
+     "w": "denahnya.",
+     "start": 14.262,
+     "end": 14.863
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · KENALAN",
+   "text": "Server-nya di mana, jalannya lewat mana, dan berapa tagihan listriknya.",
+   "start": 15.228,
+   "end": 19.311,
+   "words": [
+    {
+     "w": "Server-nya",
+     "start": 15.228,
+     "end": 15.63
+    },
+    {
+     "w": "di",
+     "start": 15.63,
+     "end": 15.712
+    },
+    {
+     "w": "mana,",
+     "start": 15.712,
+     "end": 16.184
+    },
+    {
+     "w": "jalannya",
+     "start": 16.455,
+     "end": 16.915
+    },
+    {
+     "w": "lewat",
+     "start": 16.915,
+     "end": 17.151
+    },
+    {
+     "w": "mana,",
+     "start": 17.151,
+     "end": 17.599
+    },
+    {
+     "w": "dan",
+     "start": 17.858,
+     "end": 18.071
+    },
+    {
+     "w": "berapa",
+     "start": 18.071,
+     "end": 18.307
+    },
+    {
+     "w": "tagihan",
+     "start": 18.307,
+     "end": 18.625
+    },
+    {
+     "w": "listriknya.",
+     "start": 18.625,
+     "end": 19.274
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "00 · KENALAN",
+   "text": "Dulu aku yang jagain server. Sekarang aku yang mutusin, server-nya perlu ada atau nggak.",
+   "start": 19.911,
+   "end": 24.987,
+   "words": [
+    {
+     "w": "Dulu",
+     "start": 19.911,
+     "end": 20.118
+    },
+    {
+     "w": "aku",
+     "start": 20.118,
+     "end": 20.342
+    },
+    {
+     "w": "yang",
+     "start": 20.342,
+     "end": 20.484
+    },
+    {
+     "w": "jagain",
+     "start": 20.484,
+     "end": 20.814
+    },
+    {
+     "w": "server.",
+     "start": 20.814,
+     "end": 21.368
+    },
+    {
+     "w": "Sekarang",
+     "start": 22.155,
+     "end": 22.508
+    },
+    {
+     "w": "aku",
+     "start": 22.508,
+     "end": 22.685
+    },
+    {
+     "w": "yang",
+     "start": 22.685,
+     "end": 22.791
+    },
+    {
+     "w": "mutusin,",
+     "start": 22.791,
+     "end": 23.334
+    },
+    {
+     "w": "server-nya",
+     "start": 23.593,
+     "end": 24.041
+    },
+    {
+     "w": "perlu",
+     "start": 24.041,
+     "end": 24.289
+    },
+    {
+     "w": "ada",
+     "start": 24.289,
+     "end": 24.466
+    },
+    {
+     "w": "atau",
+     "start": 24.466,
+     "end": 24.643
+    },
+    {
+     "w": "nggak.",
+     "start": 24.643,
+     "end": 24.997
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · TIGA ANGKA",
+   "text": "Biar nggak cuma ngomong, ini tiga angka dari kerjaanku.",
+   "start": 25.987,
+   "end": 28.703,
+   "words": [
+    {
+     "w": "Biar",
+     "start": 25.987,
+     "end": 26.16
+    },
+    {
+     "w": "nggak",
+     "start": 26.16,
+     "end": 26.302
+    },
+    {
+     "w": "cuma",
+     "start": 26.302,
+     "end": 26.479
+    },
+    {
+     "w": "ngomong,",
+     "start": 26.479,
+     "end": 26.938
+    },
+    {
+     "w": "ini",
+     "start": 27.198,
+     "end": 27.398
+    },
+    {
+     "w": "tiga",
+     "start": 27.398,
+     "end": 27.611
+    },
+    {
+     "w": "angka",
+     "start": 27.611,
+     "end": 27.835
+    },
+    {
+     "w": "dari",
+     "start": 27.835,
+     "end": 27.964
+    },
+    {
+     "w": "kerjaanku.",
+     "start": 27.964,
+     "end": 28.66
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · TIGA ANGKA",
+   "text": "Empat cloud: AWS, Azure, Google Cloud, sama Alibaba.",
+   "start": 29.023,
+   "end": 33.642,
+   "words": [
+    {
+     "w": "Empat",
+     "start": 29.023,
+     "end": 29.269
+    },
+    {
+     "w": "cloud:",
+     "start": 29.269,
+     "end": 29.765
+    },
+    {
+     "w": "AWS,",
+     "start": 29.965,
+     "end": 30.637
+    },
+    {
+     "w": "Azure,",
+     "start": 30.85,
+     "end": 31.404
+    },
+    {
+     "w": "Google",
+     "start": 31.651,
+     "end": 31.982
+    },
+    {
+     "w": "Cloud,",
+     "start": 31.982,
+     "end": 32.418
+    },
+    {
+     "w": "sama",
+     "start": 32.595,
+     "end": 32.937
+    },
+    {
+     "w": "Alibaba.",
+     "start": 32.937,
+     "end": 33.585
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · TIGA ANGKA",
+   "text": "Sepuluh ribu request barengan, dan aplikasinya tetap jalan.",
+   "start": 33.962,
+   "end": 37.127,
+   "words": [
+    {
+     "w": "Sepuluh",
+     "start": 33.962,
+     "end": 34.255
+    },
+    {
+     "w": "ribu",
+     "start": 34.255,
+     "end": 34.444
+    },
+    {
+     "w": "request",
+     "start": 34.444,
+     "end": 34.739
+    },
+    {
+     "w": "barengan,",
+     "start": 34.739,
+     "end": 35.269
+    },
+    {
+     "w": "dan",
+     "start": 35.54,
+     "end": 35.764
+    },
+    {
+     "w": "aplikasinya",
+     "start": 35.764,
+     "end": 36.331
+    },
+    {
+     "w": "tetap",
+     "start": 36.331,
+     "end": 36.578
+    },
+    {
+     "w": "jalan.",
+     "start": 36.578,
+     "end": 37.097
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "01 · TIGA ANGKA",
+   "text": "Biaya cloud turun empat belas ribu dolar.",
+   "start": 37.447,
+   "end": 39.447,
+   "words": [
+    {
+     "w": "Biaya",
+     "start": 37.447,
+     "end": 37.769
+    },
+    {
+     "w": "cloud",
+     "start": 37.769,
+     "end": 38.064
+    },
+    {
+     "w": "turun",
+     "start": 38.064,
+     "end": 38.3
+    },
+    {
+     "w": "empat",
+     "start": 38.3,
+     "end": 38.512
+    },
+    {
+     "w": "belas",
+     "start": 38.512,
+     "end": 38.748
+    },
+    {
+     "w": "ribu",
+     "start": 38.748,
+     "end": 38.937
+    },
+    {
+     "w": "dolar.",
+     "start": 38.937,
+     "end": 39.409
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "01 · TIGA ANGKA",
+   "text": "Per bulan.",
+   "start": 39.767,
+   "end": 40.458,
+   "words": [
+    {
+     "w": "Per",
+     "start": 39.767,
+     "end": 39.848
+    },
+    {
+     "w": "bulan.",
+     "start": 39.848,
+     "end": 40.414
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "02 · DI SINI",
+   "text": "Di sini, aku bongkar sistem yang kamu pakai tiap hari.",
+   "start": 41.458,
+   "end": 44.355,
+   "words": [
+    {
+     "w": "Di",
+     "start": 41.458,
+     "end": 41.537
+    },
+    {
+     "w": "sini,",
+     "start": 41.537,
+     "end": 42.021
+    },
+    {
+     "w": "aku",
+     "start": 42.292,
+     "end": 42.516
+    },
+    {
+     "w": "bongkar",
+     "start": 42.516,
+     "end": 42.776
+    },
+    {
+     "w": "sistem",
+     "start": 42.776,
+     "end": 43.106
+    },
+    {
+     "w": "yang",
+     "start": 43.106,
+     "end": 43.236
+    },
+    {
+     "w": "kamu",
+     "start": 43.236,
+     "end": 43.46
+    },
+    {
+     "w": "pakai",
+     "start": 43.46,
+     "end": 43.695
+    },
+    {
+     "w": "tiap",
+     "start": 43.695,
+     "end": 43.896
+    },
+    {
+     "w": "hari.",
+     "start": 43.896,
+     "end": 44.32
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "02 · DI SINI",
+   "text": "Kenapa app bank down pas tanggal gajian. Kenapa war tiket selalu crash.",
+   "start": 44.675,
+   "end": 49.132,
+   "words": [
+    {
+     "w": "Kenapa",
+     "start": 44.675,
+     "end": 44.945
+    },
+    {
+     "w": "app",
+     "start": 44.945,
+     "end": 45.11
+    },
+    {
+     "w": "bank",
+     "start": 45.11,
+     "end": 45.311
+    },
+    {
+     "w": "down",
+     "start": 45.311,
+     "end": 45.535
+    },
+    {
+     "w": "pas",
+     "start": 45.535,
+     "end": 45.771
+    },
+    {
+     "w": "tanggal",
+     "start": 45.771,
+     "end": 46.054
+    },
+    {
+     "w": "gajian.",
+     "start": 46.054,
+     "end": 46.655
+    },
+    {
+     "w": "Kenapa",
+     "start": 47.442,
+     "end": 47.808
+    },
+    {
+     "w": "war",
+     "start": 47.808,
+     "end": 47.973
+    },
+    {
+     "w": "tiket",
+     "start": 47.973,
+     "end": 48.303
+    },
+    {
+     "w": "selalu",
+     "start": 48.303,
+     "end": 48.61
+    },
+    {
+     "w": "crash.",
+     "start": 48.61,
+     "end": 49.081
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "02 · DI SINI",
+   "text": "Plus jalur karier cloud, yang beneran aku jalanin.",
+   "start": 49.452,
+   "end": 52.085,
+   "words": [
+    {
+     "w": "Plus",
+     "start": 49.452,
+     "end": 49.631
+    },
+    {
+     "w": "jalur",
+     "start": 49.631,
+     "end": 49.891
+    },
+    {
+     "w": "karier",
+     "start": 49.891,
+     "end": 50.115
+    },
+    {
+     "w": "cloud,",
+     "start": 50.115,
+     "end": 50.598
+    },
+    {
+     "w": "yang",
+     "start": 50.846,
+     "end": 51.023
+    },
+    {
+     "w": "beneran",
+     "start": 51.023,
+     "end": 51.318
+    },
+    {
+     "w": "aku",
+     "start": 51.318,
+     "end": 51.471
+    },
+    {
+     "w": "jalanin.",
+     "start": 51.471,
+     "end": 52.049
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "RECAP",
+   "text": "Karena arsitektur yang bagus itu bukan yang paling canggih.",
+   "start": 53.085,
+   "end": 55.654,
+   "words": [
+    {
+     "w": "Karena",
+     "start": 53.085,
+     "end": 53.301
+    },
+    {
+     "w": "arsitektur",
+     "start": 53.301,
+     "end": 53.855
+    },
+    {
+     "w": "yang",
+     "start": 53.855,
+     "end": 53.985
+    },
+    {
+     "w": "bagus",
+     "start": 53.985,
+     "end": 54.232
+    },
+    {
+     "w": "itu",
+     "start": 54.232,
+     "end": 54.492
+    },
+    {
+     "w": "bukan",
+     "start": 54.492,
+     "end": 54.775
+    },
+    {
+     "w": "yang",
+     "start": 54.775,
+     "end": 54.904
+    },
+    {
+     "w": "paling",
+     "start": 54.904,
+     "end": 55.117
+    },
+    {
+     "w": "canggih.",
+     "start": 55.117,
+     "end": 55.659
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "RECAP",
+   "text": "Tapi yang paling pas.",
+   "start": 55.974,
+   "end": 57.086,
+   "words": [
+    {
+     "w": "Tapi",
+     "start": 55.974,
+     "end": 56.176
+    },
+    {
+     "w": "yang",
+     "start": 56.176,
+     "end": 56.305
+    },
+    {
+     "w": "paling",
+     "start": 56.306,
+     "end": 56.553
+    },
+    {
+     "w": "pas.",
+     "start": 56.553,
+     "end": 57.013
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "OUTRO",
+   "text": "Video berikutnya: kenapa app bank down pas tanggal gajian.",
+   "start": 58.086,
+   "end": 61.229,
+   "words": [
+    {
+     "w": "Video",
+     "start": 58.086,
+     "end": 58.318
+    },
+    {
+     "w": "berikutnya:",
+     "start": 58.318,
+     "end": 58.978
+    },
+    {
+     "w": "kenapa",
+     "start": 59.238,
+     "end": 59.556
+    },
+    {
+     "w": "app",
+     "start": 59.556,
+     "end": 59.71
+    },
+    {
+     "w": "bank",
+     "start": 59.71,
+     "end": 59.91
+    },
+    {
+     "w": "down",
+     "start": 59.91,
+     "end": 60.11
+    },
+    {
+     "w": "pas",
+     "start": 60.11,
+     "end": 60.311
+    },
+    {
+     "w": "tanggal",
+     "start": 60.311,
+     "end": 60.582
+    },
+    {
+     "w": "gajian.",
+     "start": 60.582,
+     "end": 61.172
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 61.549,
+   "end": 63.378,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 61.549,
+     "end": 62.015
+    },
+    {
+     "w": "biar",
+     "start": 62.251,
+     "end": 62.522
+    },
+    {
+     "w": "nggak",
+     "start": 62.522,
+     "end": 62.663
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 62.663,
+     "end": 63.324
+    }
+   ]
+  }
+ ]
+}

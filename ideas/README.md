@@ -8,7 +8,7 @@ Satu file per ide (`NN-slug.md`, salin dari `_TEMPLATE.md`). Tabel ini indeksnya
 |---|---|---|---|---|---|
 | 01 | [Gimana aku hemat $14.000/bulan biaya cloud](01-hemat-14k-cloud.md) | 🎬 produksi | 90–120 s | cost chart, bar before/after | fase 5: review visual |
 | 02 | [Seri: Bongkar Arsitektur (7 ep)](02-seri-bongkar-arsitektur.md) | 🎬 produksi — EP01 [`videos/bongkar-ep01-kubernetes-10k`](../videos/bongkar-ep01-kubernetes-10k/) fase 5 · EP02 [`videos/bongkar-ep02-big-data-migration`](../videos/bongkar-ep02-big-data-migration/) fase 5: review visual · EP03 [`videos/bongkar-ep03-serverless-big-data`](../videos/bongkar-ep03-serverless-big-data/) fase 5: review visual | 60–90 s/ep | architecture diagram | cek NDA tiap project |
-| 03 | [Cloud Architect itu ngapain sih?](03-cloud-architect-ngapain.md) | 💡 ide | 60–90 s | — | audiens luas, klien & recruiter |
+| 03 | [Cloud Architect itu ngapain sih?](03-cloud-architect-ngapain.md) → **video intro** | 🎬 produksi — [`videos/kenalan-mumeyong`](../videos/kenalan-mumeyong/) fase 5: review visual | 65–70 s | blueprint (bp_grid, bp_house, outline_text, city_map) | **C** · tayang PERTAMA, pin di profil |
 | 04 | [5 tanda biaya cloud kamu bocor](04-tanda-biaya-cloud-bocor.md) | 💡 ide | 45–60 s | checklist | teaser sebelum #01 |
 | 05 | [Kubernetes bukan jawaban buat semua hal](05-kubernetes-bukan-jawaban.md) | 💡 ide | 60–90 s | — | opini, mancing komentar |
 | 06 | [Kenapa app bank down pas tanggal gajian?](06-bank-down-tanggal-gajian.md) | 💡 ide | 60–70 s | tear_calendar, suspect_board | **B** · QUICK · detektif 3 tersangka |

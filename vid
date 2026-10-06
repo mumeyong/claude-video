@@ -3,8 +3,8 @@
 #   claude-video                       list videos + status
 #   claude-video "Judul video baru"    create a new video from a title (asks to confirm)
 #   claude-video new "Judul video"     same, no question
-#   claude-video <slug>                review round: naskah → timing → check → sheet → stills → preview
-#   claude-video <slug> final          final render → hasil/<slug>/
+#   claude-video <slug>                review round: naskah → voice (recording, else TTS) → check → cover → sheet → stills → preview+music
+#   claude-video <slug> final          same voice/music, final render → hasil/<slug>/ (mp4 + cover.png)
 #   claude-video open <slug>           open the video folder
 #   claude-video <command> ...         any engine command — see `claude-video help`
 REPO="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
@@ -12,7 +12,7 @@ cd "$REPO" || exit 1
 PY="$REPO/.venv/bin/python"
 [ -x "$PY" ] || { echo "venv missing: python3 -m venv --system-site-packages $REPO/.venv && $REPO/.venv/bin/pip install faster-whisper edge-tts"; exit 1; }
 
-COMMANDS=" go new estimate naskah align tts check still sheet preview render mix music sfx help ls list open "
+COMMANDS=" go new estimate naskah align tts check still cover sheet preview render mix music sfx help ls list open "
 
 case "${1:-ls}" in
   ls|list)    exec "$PY" -m engine ls ;;

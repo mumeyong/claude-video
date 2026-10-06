@@ -56,8 +56,8 @@ transition in a short table at the top of TREATMENT.md — no two consecutive ch
 
 ## Phase 3 — Voice + timing
 - Before the voice exists: `python -m engine estimate <slug>` (161 wpm estimate) so scenes can be built and previewed.
-- Experimental alternative: `claude-video tts <slug> [--voice ardi|gadis|andrew|ava]` → `audio/voice_tts.wav` + exact
-  timing (edge-tts, online). Mispronounced terms → `audio/tts_lexicon.txt`. A real `voice.wav` always wins.
+- No recording yet → `claude-video <slug>` makes the **Ardi** TTS voice automatically (`audio/voice_tts.wav` + exact
+  timing, edge-tts, online; one voice, no options). Mispronounced terms → `audio/tts_lexicon.txt`. A real `voice.wav` always wins.
 - User records `videos/<slug>/audio/voice.wav` reading **NASKAH.md** (48 kHz, quiet room, ONE take start→finish; on a mistake just
   repeat the sentence — the aligner keeps the last good take). Then `python -m engine align <slug>`.
   Lines scoring < 0.75 are flagged — check them in timing.json.
@@ -74,6 +74,10 @@ transition in a short table at the top of TREATMENT.md — no two consecutive ch
   content via `appear(...)` → chat events → `v.sfx(...)` for each visible event.
 - Each chapter's elements exit at the next chapter's start − 0.35 s (`out`).
 - Use `wobble` for idle life, `select_box` / dim-and-outline for focus, `fmt_id` for numbers.
+- **Cover + post (every video):** `v.cover = lambda c: cover(c, "<title with one *accent*>", kicker=.., color=<signature>,
+  tags=[<2–3 short proof pills>], badge=.., hero=<fn(c, box) drawing the video's hero object>)`. The title is a
+  curiosity hook, not the video title verbatim; ≤ 2 lines at 128 px. Then write `hasil/<slug>/POST.md` from
+  `POST_TEMPLATE.md` (caption ≤ 150 chars, no clichés — STYLE §8b) and add the row to `hasil/README.md`.
 - After writing: Claude runs `python -m engine check <slug>` (no drawing) and fixes errors.
 - Then hand the user the commands (see below). **Do not run them.**
 
@@ -97,17 +101,15 @@ Less work, **not** less creative. Same phases and files (SCRIPT → NASKAH → I
 4. Fix → new commands → repeat. Expect ~3 rounds (the reference took 3 versions).
 
 ## Phase 6 — Final render + commit
-Hand over `claude-video <slug> final`. It auto-copies `<slug>.mp4` + `cover.png` to `hasil/<slug>/`
-(set `v.cover_t` in scenes.py to the best cover frame — usually the hook headline fully on screen).
-Then write `hasil/<slug>/POST.md` from `POST_TEMPLATE.md` (caption ≤150 chars, 3–5 hashtags, pinned comment
-with the CTA) and update `hasil/README.md` (📦 final) and the idea file. When the user confirms it's good, suggest
+Hand over `claude-video <slug> final`. It auto-copies `<slug>.mp4` + the designed `cover.png` to `hasil/<slug>/`
+(POST.md already exists from phase 4 — refresh it if the script changed). Update `hasil/README.md` (📦 final) and the idea file. When the user confirms it's good, suggest
 `git add videos/<slug> && git commit -m "feat(<slug>): …"` — commit only if the user says so.
 
 ## Command to hand over — ONE per round
 1. Write the line ids / seconds worth a close look into `videos/<slug>/REVIEW` (space-separated, `#` comments).
 2. Hand over exactly:
 ```bash
-claude-video <slug>              # review round (auto: naskah, estimate/align, check, sheet, stills, preview)
+claude-video <slug>              # review round (auto: naskah, voice: align or TTS, check, cover, sheet, stills, preview+music)
 claude-video <slug> final        # only after the user approves the preview
 ```
 `claude-video` needs no venv activation and only redoes what's out of date (e.g. align runs by itself once

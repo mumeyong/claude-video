@@ -67,6 +67,7 @@ nggak, berarti generik.
 
 ## 7. Urutan tayang yang disarankan (sementara)
 
+0. **Intro `kenalan-mumeyong` (pin di profil)** — tayang bareng / dalam minggu yang sama dengan 1 & 2
 1. #06 bank down pas gajian (B) · 2. EP01 (D) · 3. #07 war tiket (B) · 4. #12 roadmap cloud (C) · 5. #08 QRIS (B)
 6. EP02 (D) · 7. #04 biaya bocor (B) · 8. #11 jenjang karier (C) · 9. #10 foto WhatsApp (B) · 10. EP03 (D)
 Slot berita (#09) nyelip kapan aja ada kejadian.

@@ -16,11 +16,15 @@ claude-video <video> final                # render final → hasil/<video>/
 `claude-video <video>` otomatis ngerjain yang perlu aja, berurutan, lalu nge-print file apa yang dikirim ke Claude:
 
 1. **naskah** — generate ulang `NASKAH.md` kalau `SCRIPT.md` berubah
-2. **timing** — estimasi dari naskah, atau **align otomatis** begitu ada `audio/voice.wav` baru
+2. **suara + timing** — ada rekamanmu (`audio/voice.wav`)? → **align otomatis**. Belum ada? → **suara TTS otomatis**
+   (Ardi; butuh internet). Dibikin ulang cuma kalau naskah berubah. Offline → timing estimasi tanpa suara.
 3. **check** — cek struktur; kalau gagal dia berhenti
-4. **sheet** — satu thumbnail per kalimat
-5. **stills** — frame penuh untuk baris di file `REVIEW` (diisi Claude tiap putaran)
-6. **preview** — 540×960 30fps + suara
+4. **cover** — `out/cover.png` (cover TikTok yang didesain)
+5. **sheet** — satu thumbnail per kalimat
+6. **stills** — frame penuh untuk baris di file `REVIEW` (diisi Claude tiap putaran)
+7. **preview** — 540×960 30fps + suara + musik otomatis
+
+`claude-video <video> final` = sama, tapi render final → `hasil/<video>/` (mp4 + cover.png; POST.md udah ada).
 
 ## Mulai video baru (contoh: EP02) — langkah demi langkah
 
@@ -146,13 +150,13 @@ tiap video** — itu yang paling bikin nggak generik.
 - Mau ganti kata-kata? Bilang ke Claude → SCRIPT.md diubah → NASKAH.md ikut ke-generate. Jangan edit NASKAH.md langsung.
 - Nggak perlu nunggu suara buat mulai: visual bisa dibangun & direview pakai timing estimasi dulu.
 
-### Eksperimen: suara sintetis (tanpa rekam)
+### Suara sintetis (otomatis kalau belum ada rekaman)
 ```bash
-claude-video tts <video>                  # suara cowok Indonesia (ardi) → audio/voice_tts.wav + timing pas
-claude-video tts <video> --voice gadis    # cewek Indonesia · andrew / ava = multilingual (istilah English lebih pas)
-claude-video <video>                      # review seperti biasa — SCRIPT.md berubah? suara dibikin ulang otomatis
+claude-video <video>                      # belum ada voice.wav → suara Ardi dibikin otomatis
+claude-video tts <video>                  # cuma bikin suaranya aja
 ```
 - Pakai **edge-tts** (suara neural Microsoft, gratis, **butuh internet — teks naskah dikirim ke Microsoft**).
+- Satu suara aja: **Ardi**, tempo santai. Nggak ada opsi yang perlu diatur.
 - Timing per kata langsung dari TTS → nggak perlu aligner. Tanda *tekanan* nggak kebaca, napas `//` = jeda lebih panjang.
 - Istilah English dibaca pakai ejaan Indonesia (`serverless` → "serverles"). Ada yang salah ucap? Tambahin di
   `audio/tts_lexicon.txt`: `airflow = erflo` (satu per baris).
@@ -172,10 +176,13 @@ claude-video <video>                      # review seperti biasa — SCRIPT.md b
 
 ## Hasil final
 
+> **Yang di-upload selalu `hasil/<video>/<video>.mp4`** (1080×1920 60fps). `out/preview.mp4` cuma 540p buat review.
+
 `claude-video <video> final` nyalin hasil ke `hasil/<video>/`:
-`<video>.mp4` (1080×1920 60fps), `cover.png` (frame buat cover TikTok), dan `POST.md` (caption, hashtag,
-komentar pin — ditulis Claude setelah kamu bilang final ok). File mp4 **nggak masuk git** — backup sendiri
-(mis. Google Drive).
+`<video>.mp4` (1080×1920 60fps) dan `cover.png` (cover TikTok yang didesain). `POST.md` (caption, deskripsi buat
+search, hashtag, komentar pin, checklist upload) udah ditulis Claude dari waktu produksi — tinggal copy-paste.
+Cover juga muncul tiap putaran review di `out/cover.png` (atau `claude-video cover <video>`).
+File mp4 **nggak masuk git** — backup sendiri (mis. Google Drive).
 
 ## Kasih feedback yang spesifik
 

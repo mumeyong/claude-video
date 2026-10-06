@@ -18,6 +18,27 @@ PRESETS = {
     "preview": (0.5, 30, "veryfast", 24),
     "final": (1.0, 60, "slow", 14),
 }
+# Rough peak RAM per worker (python + its x264 encoder), GB. Full-res "slow" x264 keeps a deep
+# lookahead + ref frames; 20 of those at once got the desktop OOM-killed.
+_WORKER_GB = {"preview": 0.5, "final": 1.5}
+
+
+def _mem_available_gb():
+    try:
+        for line in open("/proc/meminfo"):
+            if line.startswith("MemAvailable:"):
+                return int(line.split()[1]) / 1024 / 1024
+    except OSError:
+        pass
+    return None
+
+
+def _auto_workers(mode):
+    n = max(1, (os.cpu_count() or 4) - 2)
+    gb = _mem_available_gb()
+    if gb is not None:
+        n = min(n, max(1, int(gb * 0.7 / _WORKER_GB[mode])))  # keep 30% for the desktop
+    return n
 
 _W = {}  # per-process cache: slug → (project, video)
 
@@ -36,19 +57,20 @@ def frame_bytes(video, t, scale):
     return surf, bytes(surf.get_data())
 
 
-def _ffmpeg_cmd(out, w, h, fps, preset, crf):
-    return ["ffmpeg", "-v", "error", "-y",
+def _ffmpeg_cmd(out, w, h, fps, preset, crf, threads):
+    return ["ffmpeg", "-v", "error", "-y", "-threads", str(threads),
             "-f", "rawvideo", "-pix_fmt", "bgra", "-s", f"{w}x{h}", "-r", str(fps), "-i", "-",
-            "-c:v", "libx264", "-preset", preset, "-crf", str(crf), "-pix_fmt", "yuv420p",
+            "-c:v", "libx264", "-preset", preset, "-crf", str(crf), "-threads", str(threads),
+            "-pix_fmt", "yuv420p",
             "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
             "-x264-params", "keyint=120", str(out)]
 
 
 def _render_chunk(args):
-    slug, f0, f1, fps, scale, preset, crf, out = args
+    slug, f0, f1, fps, scale, preset, crf, threads, out = args
     _, video = _video(slug)
     w, h = int(round(tk.W * scale)), int(round(tk.H * scale))
-    proc = subprocess.Popen(_ffmpeg_cmd(out, w, h, fps, preset, crf), stdin=subprocess.PIPE)
+    proc = subprocess.Popen(_ffmpeg_cmd(out, w, h, fps, preset, crf, threads), stdin=subprocess.PIPE)
     for f in range(f0, f1):
         _, data = frame_bytes(video, f / fps, scale)
         proc.stdin.write(data)
@@ -64,7 +86,8 @@ def render_video(slug, mode="preview", workers=None, t_from=0.0, t_to=None, audi
     t_to = min(video.duration, t_to if t_to is not None else video.duration)
     f_start, f_end = int(t_from * fps), int(round(t_to * fps))
     total = f_end - f_start
-    workers = workers or max(1, (os.cpu_count() or 4) - 2)
+    workers = workers or _auto_workers(mode)
+    threads = max(1, (os.cpu_count() or 4) // workers)  # x264 default = 1.5×cores per encoder
     chunk = max(fps, -(-total // workers))  # ceil
     tmp = project.out / f".{mode}_chunks"
     shutil.rmtree(tmp, ignore_errors=True)
@@ -72,7 +95,7 @@ def render_video(slug, mode="preview", workers=None, t_from=0.0, t_to=None, audi
     jobs, f = [], f_start
     while f < f_end:
         g = min(f_end, f + chunk)
-        jobs.append((slug, f, g, fps, scale, preset, crf, tmp / f"c{len(jobs):04d}.mp4"))
+        jobs.append((slug, f, g, fps, scale, preset, crf, threads, tmp / f"c{len(jobs):04d}.mp4"))
         f = g
     print(f"[{mode}] {slug}: {total} frames @ {fps}fps, scale {scale}, {len(jobs)} chunks, {workers} workers")
     t0 = time.time()
@@ -116,14 +139,28 @@ def publish(project, video, final_mp4):
     d = ROOT / "hasil" / project.slug
     d.mkdir(parents=True, exist_ok=True)
     shutil.copy2(final_mp4, d / f"{project.slug}.mp4")
-    cover_t = getattr(video, "cover_t", None)
-    if cover_t is None:
-        cover_t = project.timing.lines[0].end if project.timing.lines else 1.5
-    surf, _ = frame_bytes(video, cover_t, 1.0)
-    surf.write_to_png(str(d / "cover.png"))
-    print(f"✓ {d}/  ({project.slug}.mp4 + cover.png @ {cover_t:.2f}s)")
+    render_cover(project, video, d / "cover.png")
+    print(f"✓ {d}/  ({project.slug}.mp4 + cover.png)")
     if not (d / "POST.md").exists():
         print("  → minta Claude: \"bikinin POST.md buat " + project.slug + "\"")
+
+
+def render_cover(project, video, path):
+    """Designed cover (v.cover = fn(c)) if the video has one, else the frame at v.cover_t."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fn = getattr(video, "cover", None)
+    if fn is not None:
+        surf, c = new_frame(1.0)
+        fn(c)
+        surf.write_to_png(str(path))
+    else:
+        cover_t = getattr(video, "cover_t", None)
+        if cover_t is None:
+            cover_t = project.timing.lines[0].end if project.timing.lines else 1.5
+        surf, _ = frame_bytes(video, cover_t, 1.0)
+        surf.write_to_png(str(path))
+    print(f"✓ {path}")
+    return path
 
 
 def render_stills(slug, times, scale=1.0):

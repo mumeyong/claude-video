@@ -34,9 +34,12 @@ User-facing workflow guide: `START.md` — keep it in sync when commands or phas
     `videos/<slug>/scenes.py`. Don't fork a component for a one-time tweak — add a parameter.
 11. **Ideas live in `ideas/`** (strategy: `ideas/STRATEGY.md` — creator income, 3 broad : 1 career : 1 deep, QUICK vs FULL format). "Simpan ide" → new `NN-slug.md` from `_TEMPLATE.md` + a row in
     `ideas/README.md`. Starting production → status 🎬 and link `videos/<slug>/`. Keep the index in sync.
-12. **Finished videos go to `hasil/`.** A full `render` auto-copies mp4 + cover.png there. When the user
-    approves the final, write `hasil/<slug>/POST.md` from `.claude/skills/mumeyong-video/POST_TEMPLATE.md`
-    (caption, hashtags, pinned comment) and update `hasil/README.md` + the idea's status.
+12. **Every video ships a cover + TikTok post.** During production (phase 4, with scenes.py): design the cover with
+   `v.cover = lambda c: cover(c, ...)` (engine/components/cover.py — fixed layout, the video's own hero/color/title,
+   title in the 3:4 grid-safe zone) and write `hasil/<slug>/POST.md` from `.claude/skills/mumeyong-video/POST_TEMPLATE.md`
+   (caption ≤ 150 chars, search description, 3–5 hashtags, pinned comment, upload checklist) + a row in `hasil/README.md`.
+   A full `render` copies mp4 + cover.png to `hasil/<slug>/`. After the user posts: link + numbers into POST.md, update
+   `hasil/README.md` + the idea's status.
 13. **Unique, never generic.** Every video gets `IDENTITY.md` (phase 1.5) — metaphor, signature move/color,
     hook format, structure, new component — different from the previous video per `ideas/REGISTRY.md`
     (STYLE §6c). Brand DNA (HUD, type, accent blue, motion feel, outro) never changes.
@@ -63,7 +66,7 @@ ideas/             video idea backlog: README.md (index + status) + one NN-slug.
 update `videos/<slug>/REVIEW` with the line ids/seconds the user should look at as stills this round.
 
 ```bash
-claude-video <slug>                      # review round: naskah → estimate/align (auto) → check → sheet → stills(REVIEW) → preview
+claude-video <slug>                      # review round: naskah → voice (align recording, else TTS) → check → cover → sheet → stills(REVIEW) → preview+music
 claude-video <slug> final                # final 1080x1920 60fps → out/final.mp4 + hasil/<slug>/
 claude-video <slug> --from 20 --to 45    # same, preview only that range
 claude-video "Judul video"             # new video from a title (slug auto); `claude-video` alone = list
