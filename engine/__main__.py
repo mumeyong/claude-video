@@ -13,6 +13,7 @@
   preview  <slug> [--from s --to s]  540x960 30fps quick render with audio           (user runs)
   render   <slug> [--from s --to s]  1080x1920 60fps final                           (user runs)
   mix      <slug>                 audio only → out/mix.wav                              (user runs)
+  music    <slug>                 generated score only → out/music_gen.wav (if no audio/music.*) (user runs)
   sfx                             export synth SFX to .cache/sfx_preview to audition
 """
 import argparse
@@ -79,6 +80,10 @@ def main(argv=None):
         from .render import render_video
         render_video(a.slug, "preview" if a.cmd == "preview" else "final", a.workers, a.t_from, a.t_to,
                      audio=not a.no_audio)
+    elif a.cmd == "music":
+        from .audio.music import write_music
+        out = write_music(p.build(), a.slug, p.out / "music_gen.wav")
+        print(f"✓ {out}" if out else "music off (v.music = False)")
     elif a.cmd == "mix":
         from .audio.mix import build_mix
         build_mix(p, p.build(), p.out / "mix.wav")

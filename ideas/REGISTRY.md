@@ -16,6 +16,9 @@ dan sebisa mungkin juga beda dari 2 video sebelum itu. Update baris ini tiap ide
 | [bongkar-ep02-big-data-migration](../videos/bongkar-ep02-big-data-migration/IDENTITY.md) | pindahan perpustakaan yang masih buka | pasangan lama/baru mengunci (hash match) | hijau `#10A060` | mitos dicoret | format seri | twin_table, sync_pipe, cutover_switch, bookshelf | — |
 | [bongkar-ep03-serverless-big-data](../videos/bongkar-ep03-serverless-big-data/IDENTITY.md) | dapur sendiri vs cloud kitchen | kompor nyala-padam ikut pesanan | oranye `#E8861A` | before/after | format seri | flame, burner, oven, order_ticket/ticket_rail, dag_flow, lake_pantry, server_rack | — |
 
+## Musik (generated score — key + mood juga dirotasi)
+hemat-14k-cloud C bright · EP01 A tense · EP02 F dreamy · EP03 D warm. Video berikutnya: mood beda dari yang sebelumnya.
+
 ## Komponen yang sudah ada (jangan jadi hero dua video berturut-turut)
 odometer · receipt · clock24 · stamp · note · seat_grid · block_split · cost_chart · bill_counter · usage_meter ·
 price_bars · day_timeline · window (md/code/terminal) · chat · filmstrip · waveform · rec_bar · phone · comment ·

@@ -30,6 +30,7 @@ def build(project):
     T = project.timing
     v = Video(duration=T["L32"].end + TAIL, bpm=128, beat_offset=0.0)
     v.cover_t = T["L02"].end + 0.3
+    v.music = dict(key="C", mood="bright")           # generated score: money saved, upbeat
     b = {name: T.chapter_span(name)[0] - LEAD for name in CHAPTERS + ["RECAP", "OUTRO"]}
     intro(v, T, 0.0, b["00 · BOCOR"])
     bocor(v, T, b["00 · BOCOR"], b["01 · RIGHT-SIZING"])

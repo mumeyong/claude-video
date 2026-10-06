@@ -26,6 +26,7 @@ def build(project):
     T = project.timing
     v = Video(duration=T["L26"].end + TAIL, bpm=128, beat_offset=0.0, series=SERIES)
     v.cover_t = T["L02"].end
+    v.music = dict(key="A", mood="tense")            # generated score: rush-hour pressure
     b = {name: T.chapter_span(name)[0] - LEAD for name in CH}
     b["00 · MASALAH"] = T["L04"].end + 0.1           # chapter (and bumper) starts right after L04
     intro(v, T, 0.0, b["00 · MASALAH"])

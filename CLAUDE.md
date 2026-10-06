@@ -47,7 +47,7 @@ User-facing workflow guide: `START.md` — keep it in sync when commands or phas
 ## Layout
 
 ```
-engine/            reusable engine (tokens, draw, video, timing, components/, audio/, render, CLI)
+engine/            reusable engine (tokens, draw, video, timing, components/, audio/ (sfx, generated music, mix), render, CLI)
 assets/fonts/      Inter, Inter Display, Instrument Serif Italic, JetBrains Mono
 assets/sfx/        optional real SFX samples (<name>.wav overrides the synth)
 videos/<slug>/     SCRIPT.md, TREATMENT.md, timing.json, scenes.py, audio/, assets/, out/

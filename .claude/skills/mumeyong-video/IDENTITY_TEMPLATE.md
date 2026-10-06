@@ -11,6 +11,7 @@
 | 4 | **Format hook** | | |
 | 5 | **Struktur** | | |
 | 6 | **Komponen baru** (≥ 1) | | |
+| 7 | **Musik** (key + mood: warm · tense · bright · dreamy) | | |
 
 ## Sentuhan manusia
 - **Artefak asli:** (screenshot / output / grafik asli — dianonimkan)

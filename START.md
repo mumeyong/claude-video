@@ -53,7 +53,7 @@ lalu berhenti dengan satu ringkasan + perintah render. Mau koreksi? Bilang aja k
 **5. Putaran review (± 3×)** — `claude-video <video>` → kirim sheet/stills/preview + catatan per baris → Claude
 revisi → jalanin lagi.
 
-**6. Rekam suara** — baca `NASKAH.md`, simpan `videos/<video>/audio/voice.wav` (+ `music.mp3` kalau ada) →
+**6. Rekam suara** — baca `NASKAH.md`, simpan `videos/<video>/audio/voice.wav` (musik dibikin otomatis) →
 jalanin `claude-video <video>` lagi (align otomatis).
 
 **7. Final** — `claude-video <video> final` → bilang "final ok" → Claude bikin `POST.md` (caption + hashtag) dan
@@ -81,7 +81,6 @@ ke git.
     (± 3 putaran)                  ◄──    revisi → "jalanin claude-video <video> lagi"
 
  5. baca NASKAH.md, rekam voice.wav
-    taruh music.mp3
     claude-video <video>           ──►    align otomatis → kirim hasil skor
                                    ◄──    benerin baris yang ditandai, tweak timing
 
@@ -117,7 +116,7 @@ videos/<video>/
 ├── REVIEW           baris yang dicek sebagai still putaran ini (diisi Claude)
 ├── timing.json      waktu tiap kalimat & kata (estimasi → align dari suaramu)
 ├── scenes.py        kode animasinya
-├── audio/           voice.wav (kamu), music.mp3 (kamu)
+├── audio/           voice.wav (kamu) · music.mp3 opsional (kalau kosong → musik digenerate)
 ├── assets/          screenshot / gambar PNG yang mau dipakai
 └── out/             hasil render sementara (nggak di-commit)
 ```
@@ -149,7 +148,13 @@ tiap video** — itu yang paling bikin nggak generik.
 
 ## Musik
 
-- Royalty-free, ± 128 BPM (Pixabay, Uppbeat, YouTube Audio Library) → `audio/music.mp3`.
+- **Kamu cukup rekam suara.** Kalau `audio/music.*` kosong, musik **digenerate otomatis** waktu render
+  (`engine/audio/music.py`): disusun dari bab-bab videonya sendiri — intro ringan, tiap bab groove penuh dengan pola
+  arp sendiri, recap gelap tanpa drum, outro resolve. Pergantian bab jatuh pas di beat, ada riser + impact.
+- Tiap video punya karakter sendiri (key + mood: warm · tense · bright · dreamy), diatur di IDENTITY.md /
+  `v.music = dict(key="D", mood="warm")`. `claude-video check <video>` nampilin rencana musiknya.
+- Dengerin musiknya aja: `claude-video music <video>` → `out/music_gen.wav`.
+- Mau pakai lagu sendiri? Taruh royalty-free ± 128 BPM di `audio/music.mp3` — itu yang dipakai.
 - Otomatis turun (ducking) waktu kamu ngomong, naik lagi di jeda antar bab.
 
 ## Hasil final

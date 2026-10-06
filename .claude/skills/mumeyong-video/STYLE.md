@@ -143,7 +143,12 @@ you would say · one surprise moment · deliberate imperfection (hand note, tilt
 
 ## 7. Sound
 
-- Voice on top (recorded by the user, one take). Music bed −19 dB, side-chain ducked under voice.
+- Voice on top (recorded by the user, one take). Music bed side-chain ducked under voice (own track −19 dB,
+  generated score −13 dB).
+- **Generated score** (`engine/audio/music.py`) when no track is given: tempo = `v.bpm`, arrangement follows the chapters
+  (intro light · chapters full groove, own arp pattern each · dark recap no drums + bells · outro resolves),
+  section changes on the beat with riser + impact. Key + mood (warm · tense · bright · dreamy) are part of the
+  video's identity — not the same as the previous video.
 - SFX (synth, `engine/audio/sfx.py`): `key` typing · `pop` chip/card/tag in · `click` cursor/button ·
   `send` chat send · `whoosh` chapter change · `whoosh_dark` into dark section · `chime` success/✓ ·
   `tick` count-up · `rec` recording starts · `thud` big punch word.

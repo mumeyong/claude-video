@@ -15,6 +15,7 @@ recap · komponen andalan `arch_diagram` · outro teaser episode berikutnya (EP0
 | 4 | **Format hook** | **before/after**: layar terbelah — kiri `Dulu` node + kunci pas + jam berdetak, kanan `Sekarang` kosong bersih → "Sama sekali." | ✓ (mitos dicoret / cold open) |
 | 5 | **Struktur** | format seri | (pengecualian seri) |
 | 6 | **Komponen baru** | `flame` + `burner` (kompor + api dengan intensitas 0–1, nyala/padam) · `oven` (batch) · `server_rack` (LED kedip, pensiun = abu-abu) · `order_ticket` + `ticket_rail` (tiket pesanan = job, digantung di rel, bisa tulisan tangan) · `dag_flow` (Airflow DAG: kotak task nyala berurutan + panah) · `lake_pantry` (rak/tabel Paimon di tengah, diambil dua jalur: streaming & batch) | ✓ |
+| 7 | **Musik** | D · warm (`v.music`) — hangat kayak dapur; beda dari EP02 (generated: seed default) | ✓ |
 
 Metafora dipakai di: INTRO (before/after: dapur berantakan vs kosong), MASALAH (dapur sendiri, api nyala terus, tiket
 numpuk pas membludak), KEPUTUSAN (lepas dapur → cloud kitchen, kompor nyala pas ada tiket), DIAGRAM (Flink = kompor

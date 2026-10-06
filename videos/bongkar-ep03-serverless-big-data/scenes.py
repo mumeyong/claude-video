@@ -25,6 +25,7 @@ def build(project):
     T = project.timing
     v = Video(duration=T["L24"].end + TAIL, bpm=128, beat_offset=0.0, series="BONGKAR ARSITEKTUR · EP 03")
     v.cover_t = T.word("L04", "serverless") + 0.6
+    v.music = dict(key="D", mood="warm")             # generated score: warm kitchen, not tense
     b = {name: T.chapter_span(name)[0] - LEAD for name in CH}
     b["00 · MASALAH"] = T["L04"].end + 0.1           # chapter + bumper start right after L04
     intro(v, T, 0.0, b["00 · MASALAH"])

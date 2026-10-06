@@ -180,6 +180,12 @@ def check(slug):
     for ch in video.chapters:
         print(f"  {ch.start:7.2f}–{ch.end:7.2f}  {'■' if ch.dark else '□'} {ch.hud}")
     print(f"  layers={len(video.layers)}  sfx cues={len(video.all_cues())}")
+    if project.music():
+        print(f"  music: {project.music().name} (own track)")
+    else:
+        from .audio.music import plan
+        for ln in plan(video, project.slug):
+            print("  " + ln)
     bad = [ly for ly in video.layers if ly.end <= ly.start]
     if bad:
         print(f"  ! {len(bad)} layers with end <= start")
