@@ -1,0 +1,939 @@
+{
+ "source": "tts",
+ "voice": "id-ID-ArdiNeural",
+ "tts": "ardi",
+ "duration": 73.644,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Kamu bayar es teh lima ribu pakai QRIS.",
+   "start": 0.4,
+   "end": 2.36,
+   "words": [
+    {
+     "w": "Kamu",
+     "start": 0.4,
+     "end": 0.568
+    },
+    {
+     "w": "bayar",
+     "start": 0.568,
+     "end": 0.827
+    },
+    {
+     "w": "es",
+     "start": 0.827,
+     "end": 1.004
+    },
+    {
+     "w": "teh",
+     "start": 1.004,
+     "end": 1.169
+    },
+    {
+     "w": "lima",
+     "start": 1.169,
+     "end": 1.358
+    },
+    {
+     "w": "ribu",
+     "start": 1.358,
+     "end": 1.582
+    },
+    {
+     "w": "pakai",
+     "start": 1.582,
+     "end": 1.865
+    },
+    {
+     "w": "QRIS.",
+     "start": 1.865,
+     "end": 2.301
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Scan, masukin PIN, beep. Kelar.",
+   "start": 2.68,
+   "end": 6.454,
+   "words": [
+    {
+     "w": "Scan,",
+     "start": 2.68,
+     "end": 3.14
+    },
+    {
+     "w": "masukin",
+     "start": 3.4,
+     "end": 3.848
+    },
+    {
+     "w": "PIN,",
+     "start": 3.848,
+     "end": 4.202
+    },
+    {
+     "w": "beep.",
+     "start": 4.426,
+     "end": 5.004
+    },
+    {
+     "w": "Kelar.",
+     "start": 5.792,
+     "end": 6.429
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Tahan. Kita ulang pelan-pelan.",
+   "start": 6.774,
+   "end": 9.343,
+   "words": [
+    {
+     "w": "Tahan.",
+     "start": 6.774,
+     "end": 7.323
+    },
+    {
+     "w": "Kita",
+     "start": 8.11,
+     "end": 8.393
+    },
+    {
+     "w": "ulang",
+     "start": 8.393,
+     "end": 8.664
+    },
+    {
+     "w": "pelan-pelan.",
+     "start": 8.664,
+     "end": 9.312
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "INTRO",
+   "text": "Di detik itu, ada estafet empat pelari.",
+   "start": 9.943,
+   "end": 12.414,
+   "words": [
+    {
+     "w": "Di",
+     "start": 9.943,
+     "end": 10.024
+    },
+    {
+     "w": "detik",
+     "start": 10.024,
+     "end": 10.237
+    },
+    {
+     "w": "itu,",
+     "start": 10.237,
+     "end": 10.696
+    },
+    {
+     "w": "ada",
+     "start": 10.991,
+     "end": 11.204
+    },
+    {
+     "w": "estafet",
+     "start": 11.204,
+     "end": 11.628
+    },
+    {
+     "w": "empat",
+     "start": 11.628,
+     "end": 11.876
+    },
+    {
+     "w": "pelari.",
+     "start": 11.876,
+     "end": 12.383
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · APP KAMU",
+   "text": "Pelari pertama: app-mu. Dia baca kode QR-nya.",
+   "start": 13.414,
+   "end": 17.352,
+   "words": [
+    {
+     "w": "Pelari",
+     "start": 13.414,
+     "end": 13.62
+    },
+    {
+     "w": "pertama:",
+     "start": 13.62,
+     "end": 14.257
+    },
+    {
+     "w": "app-mu.",
+     "start": 14.481,
+     "end": 15.176
+    },
+    {
+     "w": "Dia",
+     "start": 15.965,
+     "end": 16.236
+    },
+    {
+     "w": "baca",
+     "start": 16.236,
+     "end": 16.484
+    },
+    {
+     "w": "kode",
+     "start": 16.484,
+     "end": 16.684
+    },
+    {
+     "w": "QR-nya.",
+     "start": 16.684,
+     "end": 17.321
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · APP KAMU",
+   "text": "Isinya bukan uang. Cuma data: warung ini siapa, bank-nya mana.",
+   "start": 17.672,
+   "end": 22.543,
+   "words": [
+    {
+     "w": "Isinya",
+     "start": 17.672,
+     "end": 18.033
+    },
+    {
+     "w": "bukan",
+     "start": 18.033,
+     "end": 18.281
+    },
+    {
+     "w": "uang.",
+     "start": 18.281,
+     "end": 18.741
+    },
+    {
+     "w": "Cuma",
+     "start": 19.527,
+     "end": 19.763
+    },
+    {
+     "w": "data:",
+     "start": 19.763,
+     "end": 20.247
+    },
+    {
+     "w": "warung",
+     "start": 20.506,
+     "end": 20.754
+    },
+    {
+     "w": "ini",
+     "start": 20.754,
+     "end": 20.907
+    },
+    {
+     "w": "siapa,",
+     "start": 20.907,
+     "end": 21.497
+    },
+    {
+     "w": "bank-nya",
+     "start": 21.709,
+     "end": 22.063
+    },
+    {
+     "w": "mana.",
+     "start": 22.063,
+     "end": 22.487
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "01 · ISSUER",
+   "text": "Tongkatnya dioper ke bank atau e-wallet kamu. Namanya issuer.",
+   "start": 23.543,
+   "end": 27.47,
+   "words": [
+    {
+     "w": "Tongkatnya",
+     "start": 23.543,
+     "end": 23.936
+    },
+    {
+     "w": "dioper",
+     "start": 23.936,
+     "end": 24.219
+    },
+    {
+     "w": "ke",
+     "start": 24.219,
+     "end": 24.302
+    },
+    {
+     "w": "bank",
+     "start": 24.302,
+     "end": 24.55
+    },
+    {
+     "w": "atau",
+     "start": 24.55,
+     "end": 24.844
+    },
+    {
+     "w": "e-wallet",
+     "start": 24.844,
+     "end": 25.127
+    },
+    {
+     "w": "kamu.",
+     "start": 25.128,
+     "end": 25.564
+    },
+    {
+     "w": "Namanya",
+     "start": 26.353,
+     "end": 26.824
+    },
+    {
+     "w": "issuer.",
+     "start": 26.824,
+     "end": 27.426
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · ISSUER",
+   "text": "Dia cek PIN, cek saldo, terus nahan lima ribunya.",
+   "start": 27.79,
+   "end": 30.884,
+   "words": [
+    {
+     "w": "Dia",
+     "start": 27.79,
+     "end": 27.943
+    },
+    {
+     "w": "cek",
+     "start": 27.943,
+     "end": 28.143
+    },
+    {
+     "w": "PIN,",
+     "start": 28.143,
+     "end": 28.485
+    },
+    {
+     "w": "cek",
+     "start": 28.721,
+     "end": 28.91
+    },
+    {
+     "w": "saldo,",
+     "start": 28.91,
+     "end": 29.452
+    },
+    {
+     "w": "terus",
+     "start": 29.676,
+     "end": 29.912
+    },
+    {
+     "w": "nahan",
+     "start": 29.912,
+     "end": 30.113
+    },
+    {
+     "w": "lima",
+     "start": 30.113,
+     "end": 30.29
+    },
+    {
+     "w": "ribunya.",
+     "start": 30.29,
+     "end": 30.844
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "02 · SWITCHING",
+   "text": "Lanjut ke switching. Ini jalan tol antar bank.",
+   "start": 31.884,
+   "end": 35.253,
+   "words": [
+    {
+     "w": "Lanjut",
+     "start": 31.884,
+     "end": 32.228
+    },
+    {
+     "w": "ke",
+     "start": 32.228,
+     "end": 32.299
+    },
+    {
+     "w": "switching.",
+     "start": 32.299,
+     "end": 32.912
+    },
+    {
+     "w": "Ini",
+     "start": 33.698,
+     "end": 33.969
+    },
+    {
+     "w": "jalan",
+     "start": 33.969,
+     "end": 34.264
+    },
+    {
+     "w": "tol",
+     "start": 34.264,
+     "end": 34.488
+    },
+    {
+     "w": "antar",
+     "start": 34.488,
+     "end": 34.795
+    },
+    {
+     "w": "bank.",
+     "start": 34.795,
+     "end": 35.196
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "02 · SWITCHING",
+   "text": "Tanpa dia, tiap bank harus nyambung satu-satu ke semua bank lain.",
+   "start": 35.573,
+   "end": 38.886,
+   "words": [
+    {
+     "w": "Tanpa",
+     "start": 35.573,
+     "end": 35.762
+    },
+    {
+     "w": "dia,",
+     "start": 35.762,
+     "end": 36.198
+    },
+    {
+     "w": "tiap",
+     "start": 36.458,
+     "end": 36.682
+    },
+    {
+     "w": "bank",
+     "start": 36.682,
+     "end": 36.859
+    },
+    {
+     "w": "harus",
+     "start": 36.859,
+     "end": 37.083
+    },
+    {
+     "w": "nyambung",
+     "start": 37.083,
+     "end": 37.342
+    },
+    {
+     "w": "satu-satu",
+     "start": 37.342,
+     "end": 37.873
+    },
+    {
+     "w": "ke",
+     "start": 37.873,
+     "end": 37.944
+    },
+    {
+     "w": "semua",
+     "start": 37.944,
+     "end": 38.227
+    },
+    {
+     "w": "bank",
+     "start": 38.227,
+     "end": 38.404
+    },
+    {
+     "w": "lain.",
+     "start": 38.404,
+     "end": 38.84
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "02 · SWITCHING",
+   "text": "Dengan dia, cukup satu sambungan, ke satu jalan tol.",
+   "start": 39.206,
+   "end": 42.567,
+   "words": [
+    {
+     "w": "Dengan",
+     "start": 39.206,
+     "end": 39.43
+    },
+    {
+     "w": "dia,",
+     "start": 39.43,
+     "end": 39.878
+    },
+    {
+     "w": "cukup",
+     "start": 40.161,
+     "end": 40.432
+    },
+    {
+     "w": "satu",
+     "start": 40.432,
+     "end": 40.633
+    },
+    {
+     "w": "sambungan,",
+     "start": 40.633,
+     "end": 41.258
+    },
+    {
+     "w": "ke",
+     "start": 41.494,
+     "end": 41.576
+    },
+    {
+     "w": "satu",
+     "start": 41.576,
+     "end": 41.835
+    },
+    {
+     "w": "jalan",
+     "start": 41.835,
+     "end": 42.142
+    },
+    {
+     "w": "tol.",
+     "start": 42.142,
+     "end": 42.519
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "03 · ACQUIRER",
+   "text": "Pelari terakhir: bank-nya warung. Namanya acquirer.",
+   "start": 43.567,
+   "end": 47.421,
+   "words": [
+    {
+     "w": "Pelari",
+     "start": 43.567,
+     "end": 43.761
+    },
+    {
+     "w": "terakhir:",
+     "start": 43.761,
+     "end": 44.338
+    },
+    {
+     "w": "bank-nya",
+     "start": 44.562,
+     "end": 44.952
+    },
+    {
+     "w": "warung.",
+     "start": 44.952,
+     "end": 45.447
+    },
+    {
+     "w": "Namanya",
+     "start": 46.236,
+     "end": 46.719
+    },
+    {
+     "w": "acquirer.",
+     "start": 46.719,
+     "end": 47.391
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "03 · ACQUIRER",
+   "text": "Dia bilang oke, dan HP penjualnya bunyi.",
+   "start": 47.741,
+   "end": 50.188,
+   "words": [
+    {
+     "w": "Dia",
+     "start": 47.741,
+     "end": 47.9
+    },
+    {
+     "w": "bilang",
+     "start": 47.9,
+     "end": 48.112
+    },
+    {
+     "w": "oke,",
+     "start": 48.112,
+     "end": 48.561
+    },
+    {
+     "w": "dan",
+     "start": 48.808,
+     "end": 49.02
+    },
+    {
+     "w": "HP",
+     "start": 49.02,
+     "end": 49.256
+    },
+    {
+     "w": "penjualnya",
+     "start": 49.256,
+     "end": 49.693
+    },
+    {
+     "w": "bunyi.",
+     "start": 49.693,
+     "end": 50.153
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "03 · ACQUIRER",
+   "text": "Jawaban \"berhasil\" balik lewat jalur yang sama, ke HP-mu.",
+   "start": 50.508,
+   "end": 54.277,
+   "words": [
+    {
+     "w": "Jawaban",
+     "start": 50.508,
+     "end": 51.106
+    },
+    {
+     "w": "\"berhasil\"",
+     "start": 51.188,
+     "end": 51.801
+    },
+    {
+     "w": "balik",
+     "start": 51.884,
+     "end": 52.179
+    },
+    {
+     "w": "lewat",
+     "start": 52.179,
+     "end": 52.367
+    },
+    {
+     "w": "jalur",
+     "start": 52.367,
+     "end": 52.615
+    },
+    {
+     "w": "yang",
+     "start": 52.615,
+     "end": 52.745
+    },
+    {
+     "w": "sama,",
+     "start": 52.745,
+     "end": 53.24
+    },
+    {
+     "w": "ke",
+     "start": 53.452,
+     "end": 53.535
+    },
+    {
+     "w": "HP-mu.",
+     "start": 53.535,
+     "end": 54.231
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "RECAP",
+   "text": "Plot twist-nya: yang dioper tadi cuma pesan.",
+   "start": 55.277,
+   "end": 57.665,
+   "words": [
+    {
+     "w": "Plot",
+     "start": 55.277,
+     "end": 55.411
+    },
+    {
+     "w": "twist-nya:",
+     "start": 55.411,
+     "end": 55.989
+    },
+    {
+     "w": "yang",
+     "start": 56.236,
+     "end": 56.425
+    },
+    {
+     "w": "dioper",
+     "start": 56.425,
+     "end": 56.708
+    },
+    {
+     "w": "tadi",
+     "start": 56.708,
+     "end": 56.944
+    },
+    {
+     "w": "cuma",
+     "start": 56.944,
+     "end": 57.144
+    },
+    {
+     "w": "pesan.",
+     "start": 57.144,
+     "end": 57.616
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "RECAP",
+   "text": "Uang antar bank-nya beneran pindah belakangan. Namanya settlement.",
+   "start": 57.985,
+   "end": 61.92,
+   "words": [
+    {
+     "w": "Uang",
+     "start": 57.985,
+     "end": 58.13
+    },
+    {
+     "w": "antar",
+     "start": 58.13,
+     "end": 58.366
+    },
+    {
+     "w": "bank-nya",
+     "start": 58.366,
+     "end": 58.743
+    },
+    {
+     "w": "beneran",
+     "start": 58.743,
+     "end": 59.085
+    },
+    {
+     "w": "pindah",
+     "start": 59.085,
+     "end": 59.345
+    },
+    {
+     "w": "belakangan.",
+     "start": 59.345,
+     "end": 59.982
+    },
+    {
+     "w": "Namanya",
+     "start": 60.77,
+     "end": 61.266
+    },
+    {
+     "w": "settlement.",
+     "start": 61.266,
+     "end": 61.961
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "RECAP",
+   "text": "Dan kalau satu pelari aja lemot, kamu yang berdiri kelamaan di depan kasir.",
+   "start": 62.24,
+   "end": 65.745,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 62.24,
+     "end": 62.407
+    },
+    {
+     "w": "kalau",
+     "start": 62.407,
+     "end": 62.584
+    },
+    {
+     "w": "satu",
+     "start": 62.584,
+     "end": 62.808
+    },
+    {
+     "w": "pelari",
+     "start": 62.808,
+     "end": 63.032
+    },
+    {
+     "w": "aja",
+     "start": 63.032,
+     "end": 63.256
+    },
+    {
+     "w": "lemot,",
+     "start": 63.256,
+     "end": 63.728
+    },
+    {
+     "w": "kamu",
+     "start": 63.964,
+     "end": 64.164
+    },
+    {
+     "w": "yang",
+     "start": 64.164,
+     "end": 64.27
+    },
+    {
+     "w": "berdiri",
+     "start": 64.27,
+     "end": 64.542
+    },
+    {
+     "w": "kelamaan",
+     "start": 64.542,
+     "end": 64.931
+    },
+    {
+     "w": "di",
+     "start": 64.931,
+     "end": 65.001
+    },
+    {
+     "w": "depan",
+     "start": 65.001,
+     "end": 65.226
+    },
+    {
+     "w": "kasir.",
+     "start": 65.226,
+     "end": 65.721
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "OUTRO",
+   "text": "Video berikutnya: mindahin big data ke cloud, tanpa satu byte hilang.",
+   "start": 66.745,
+   "end": 70.694,
+   "words": [
+    {
+     "w": "Video",
+     "start": 66.745,
+     "end": 66.978
+    },
+    {
+     "w": "berikutnya:",
+     "start": 66.978,
+     "end": 67.65
+    },
+    {
+     "w": "mindahin",
+     "start": 67.91,
+     "end": 68.323
+    },
+    {
+     "w": "big",
+     "start": 68.323,
+     "end": 68.452
+    },
+    {
+     "w": "data",
+     "start": 68.452,
+     "end": 68.676
+    },
+    {
+     "w": "ke",
+     "start": 68.676,
+     "end": 68.759
+    },
+    {
+     "w": "cloud,",
+     "start": 68.759,
+     "end": 69.195
+    },
+    {
+     "w": "tanpa",
+     "start": 69.419,
+     "end": 69.714
+    },
+    {
+     "w": "satu",
+     "start": 69.714,
+     "end": 69.95
+    },
+    {
+     "w": "byte",
+     "start": 69.95,
+     "end": 70.174
+    },
+    {
+     "w": "hilang.",
+     "start": 70.174,
+     "end": 70.646
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 71.014,
+   "end": 72.844,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 71.014,
+     "end": 71.48
+    },
+    {
+     "w": "biar",
+     "start": 71.716,
+     "end": 71.987
+    },
+    {
+     "w": "nggak",
+     "start": 71.987,
+     "end": 72.129
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 72.129,
+     "end": 72.789
+    }
+   ]
+  }
+ ]
+}

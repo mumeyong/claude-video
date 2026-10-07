@@ -1,53 +1,55 @@
 {
- "source": "estimate",
- "duration": 72.521,
+ "source": "tts",
+ "voice": "id-ID-ArdiNeural",
+ "tts": "ardi",
+ "duration": 73.775,
  "lines": [
   {
    "id": "L01",
    "chapter": "INTRO",
    "text": "Tanggal dua puluh lima, jam sembilan lewat satu.",
    "start": 0.4,
-   "end": 3.385,
+   "end": 3.207,
    "words": [
     {
      "w": "Tanggal",
      "start": 0.4,
-     "end": 0.848
+     "end": 0.677
     },
     {
      "w": "dua",
-     "start": 0.887,
-     "end": 1.112
+     "start": 0.677,
+     "end": 0.818
     },
     {
      "w": "puluh",
-     "start": 1.131,
-     "end": 1.467
+     "start": 0.818,
+     "end": 1.007
     },
     {
      "w": "lima,",
-     "start": 1.497,
-     "end": 1.833
+     "start": 1.007,
+     "end": 1.467
     },
     {
      "w": "jam",
-     "start": 1.862,
-     "end": 2.086
+     "start": 1.773,
+     "end": 2.045
     },
     {
      "w": "sembilan",
-     "start": 2.106,
-     "end": 2.61
+     "start": 2.045,
+     "end": 2.434
     },
     {
      "w": "lewat",
-     "start": 2.654,
-     "end": 2.99
+     "start": 2.434,
+     "end": 2.658
     },
     {
      "w": "satu.",
-     "start": 3.02,
-     "end": 3.356
+     "start": 2.658,
+     "end": 3.153
     }
    ]
   },
@@ -55,63 +57,63 @@
    "id": "L02",
    "chapter": "INTRO",
    "text": "Gaji udah masuk, kamu buka app bank, dan dia muter terus.",
-   "start": 3.765,
-   "end": 7.87,
+   "start": 3.527,
+   "end": 6.85,
    "words": [
     {
      "w": "Gaji",
-     "start": 3.765,
-     "end": 4.091
+     "start": 3.527,
+     "end": 3.789
     },
     {
      "w": "udah",
-     "start": 4.119,
-     "end": 4.444
+     "start": 3.789,
+     "end": 3.966
     },
     {
      "w": "masuk,",
-     "start": 4.473,
-     "end": 4.928
+     "start": 3.966,
+     "end": 4.414
     },
     {
      "w": "kamu",
-     "start": 4.968,
-     "end": 5.294
+     "start": 4.65,
+     "end": 4.862
     },
     {
      "w": "buka",
-     "start": 5.322,
-     "end": 5.647
+     "start": 4.862,
+     "end": 5.051
     },
     {
      "w": "app",
-     "start": 5.676,
-     "end": 5.936
+     "start": 5.051,
+     "end": 5.181
     },
     {
      "w": "bank,",
-     "start": 5.959,
-     "end": 6.349
+     "start": 5.181,
+     "end": 5.546
     },
     {
      "w": "dan",
-     "start": 6.383,
-     "end": 6.644
+     "start": 5.782,
+     "end": 5.994
     },
     {
      "w": "dia",
-     "start": 6.667,
-     "end": 6.927
+     "start": 5.994,
+     "end": 6.124
     },
     {
      "w": "muter",
-     "start": 6.95,
-     "end": 7.34
+     "start": 6.124,
+     "end": 6.336
     },
     {
      "w": "terus.",
-     "start": 7.374,
-     "end": 7.83
+     "start": 6.336,
+     "end": 6.796
     }
    ]
   },
@@ -119,38 +121,38 @@
    "id": "L03",
    "chapter": "INTRO",
    "text": "Ada tiga tersangka. Cuma satu pelakunya.",
-   "start": 8.25,
-   "end": 10.488,
+   "start": 7.45,
+   "end": 10.616,
    "words": [
     {
      "w": "Ada",
-     "start": 8.25,
-     "end": 8.45
+     "start": 7.45,
+     "end": 7.664
     },
     {
      "w": "tiga",
-     "start": 8.468,
-     "end": 8.719
+     "start": 7.664,
+     "end": 7.924
     },
     {
      "w": "tersangka.",
-     "start": 8.741,
-     "end": 9.294
+     "start": 7.924,
+     "end": 8.631
     },
     {
      "w": "Cuma",
-     "start": 9.342,
-     "end": 9.593
+     "start": 9.419,
+     "end": 9.702
     },
     {
      "w": "satu",
-     "start": 9.615,
-     "end": 9.866
+     "start": 9.702,
+     "end": 9.95
     },
     {
      "w": "pelakunya.",
-     "start": 9.888,
-     "end": 10.44
+     "start": 9.95,
+     "end": 10.587
     }
    ]
   },
@@ -158,28 +160,28 @@
    "id": "L04",
    "chapter": "00 · TERSANGKA",
    "text": "Tersangka pertama: server-nya kurang.",
-   "start": 11.788,
-   "end": 13.281,
+   "start": 11.616,
+   "end": 13.828,
    "words": [
     {
      "w": "Tersangka",
-     "start": 11.788,
-     "end": 12.15
+     "start": 11.616,
+     "end": 11.933
     },
     {
      "w": "pertama:",
-     "start": 12.181,
-     "end": 12.506
+     "start": 11.933,
+     "end": 12.547
     },
     {
      "w": "server-nya",
-     "start": 12.535,
-     "end": 12.932
+     "start": 12.782,
+     "end": 13.301
     },
     {
      "w": "kurang.",
-     "start": 12.967,
-     "end": 13.256
+     "start": 13.301,
+     "end": 13.773
     }
    ]
   },
@@ -187,63 +189,63 @@
    "id": "L05",
    "chapter": "00 · TERSANGKA",
    "text": "Setengah benar. Server-nya disiapin buat hari biasa, bukan buat tanggal muda.",
-   "start": 13.661,
-   "end": 17.765,
+   "start": 14.148,
+   "end": 19.042,
    "words": [
     {
      "w": "Setengah",
-     "start": 13.661,
-     "end": 14.097
+     "start": 14.148,
+     "end": 14.506
     },
     {
      "w": "benar.",
-     "start": 14.134,
-     "end": 14.473
+     "start": 14.506,
+     "end": 15.001
     },
     {
      "w": "Server-nya",
-     "start": 14.503,
-     "end": 15.035
+     "start": 15.787,
+     "end": 16.271
     },
     {
      "w": "disiapin",
-     "start": 15.082,
-     "end": 15.517
+     "start": 16.271,
+     "end": 16.672
     },
     {
      "w": "buat",
-     "start": 15.555,
-     "end": 15.797
+     "start": 16.672,
+     "end": 16.849
     },
     {
      "w": "hari",
-     "start": 15.818,
-     "end": 16.06
+     "start": 16.849,
+     "end": 17.002
     },
     {
      "w": "biasa,",
-     "start": 16.081,
-     "end": 16.42
+     "start": 17.002,
+     "end": 17.591
     },
     {
      "w": "bukan",
-     "start": 16.45,
-     "end": 16.74
+     "start": 17.839,
+     "end": 18.134
     },
     {
      "w": "buat",
-     "start": 16.766,
-     "end": 17.008
+     "start": 18.134,
+     "end": 18.311
     },
     {
      "w": "tanggal",
-     "start": 17.029,
-     "end": 17.416
+     "start": 18.311,
+     "end": 18.547
     },
     {
      "w": "muda.",
-     "start": 17.45,
-     "end": 17.74
+     "start": 18.547,
+     "end": 18.995
     }
    ]
   },
@@ -251,28 +253,28 @@
    "id": "L06",
    "chapter": "00 · TERSANGKA",
    "text": "Tersangka kedua: app-nya jelek.",
-   "start": 18.145,
-   "end": 19.638,
+   "start": 19.642,
+   "end": 21.499,
    "words": [
     {
      "w": "Tersangka",
-     "start": 18.145,
-     "end": 18.574
+     "start": 19.642,
+     "end": 19.971
     },
     {
      "w": "kedua:",
-     "start": 18.612,
-     "end": 18.912
+     "start": 19.971,
+     "end": 20.514
     },
     {
      "w": "app-nya",
-     "start": 18.938,
-     "end": 19.282
+     "start": 20.726,
+     "end": 21.068
     },
     {
      "w": "jelek.",
-     "start": 19.311,
-     "end": 19.612
+     "start": 21.068,
+     "end": 21.481
     }
    ]
   },
@@ -280,58 +282,58 @@
    "id": "L07",
    "chapter": "00 · TERSANGKA",
    "text": "Bukan. App-nya sama persis tiap hari. Yang beda cuma traffic-nya.",
-   "start": 20.018,
-   "end": 23.749,
+   "start": 21.819,
+   "end": 26.926,
    "words": [
     {
      "w": "Bukan.",
-     "start": 20.018,
-     "end": 20.382
+     "start": 21.819,
+     "end": 22.399
     },
     {
      "w": "App-nya",
-     "start": 20.414,
-     "end": 20.83
+     "start": 23.185,
+     "end": 23.539
     },
     {
      "w": "sama",
-     "start": 20.866,
-     "end": 21.126
+     "start": 23.539,
+     "end": 23.751
     },
     {
      "w": "persis",
-     "start": 21.149,
-     "end": 21.513
+     "start": 23.751,
+     "end": 24.07
     },
     {
      "w": "tiap",
-     "start": 21.544,
-     "end": 21.804
+     "start": 24.07,
+     "end": 24.27
     },
     {
      "w": "hari.",
-     "start": 21.827,
-     "end": 22.139
+     "start": 24.27,
+     "end": 24.695
     },
     {
      "w": "Yang",
-     "start": 22.166,
-     "end": 22.426
+     "start": 25.486,
+     "end": 25.722
     },
     {
      "w": "beda",
-     "start": 22.449,
-     "end": 22.709
+     "start": 25.722,
+     "end": 25.993
     },
     {
      "w": "cuma",
-     "start": 22.732,
-     "end": 22.992
+     "start": 25.993,
+     "end": 26.206
     },
     {
      "w": "traffic-nya.",
-     "start": 23.014,
-     "end": 23.69
+     "start": 26.206,
+     "end": 26.89
     }
    ]
   },
@@ -339,38 +341,38 @@
    "id": "L08",
    "chapter": "01 · PELAKU",
    "text": "Bayangin kasir supermarket pas tanggal muda.",
-   "start": 25.049,
-   "end": 27.288,
+   "start": 27.926,
+   "end": 30.134,
    "words": [
     {
      "w": "Bayangin",
-     "start": 25.049,
-     "end": 25.461
+     "start": 27.926,
+     "end": 28.288
     },
     {
      "w": "kasir",
-     "start": 25.497,
-     "end": 25.772
+     "start": 28.288,
+     "end": 28.582
     },
     {
      "w": "supermarket",
-     "start": 25.796,
-     "end": 26.345
+     "start": 28.582,
+     "end": 29.137
     },
     {
      "w": "pas",
-     "start": 26.393,
-     "end": 26.576
+     "start": 29.137,
+     "end": 29.361
     },
     {
      "w": "tanggal",
-     "start": 26.592,
-     "end": 26.958
+     "start": 29.361,
+     "end": 29.632
     },
     {
      "w": "muda.",
-     "start": 26.99,
-     "end": 27.264
+     "start": 29.632,
+     "end": 30.092
     }
    ]
   },
@@ -378,48 +380,48 @@
    "id": "L09",
    "chapter": "01 · PELAKU",
    "text": "Kasirnya bisa ditambah jadi dua puluh. Itu auto-scaling.",
-   "start": 27.668,
-   "end": 30.653,
+   "start": 30.454,
+   "end": 34.428,
    "words": [
     {
      "w": "Kasirnya",
-     "start": 27.668,
-     "end": 28.102
+     "start": 30.454,
+     "end": 30.881
     },
     {
      "w": "bisa",
-     "start": 28.139,
-     "end": 28.38
+     "start": 30.881,
+     "end": 31.094
     },
     {
      "w": "ditambah",
-     "start": 28.401,
-     "end": 28.835
+     "start": 31.094,
+     "end": 31.53
     },
     {
      "w": "jadi",
-     "start": 28.873,
-     "end": 29.113
+     "start": 31.53,
+     "end": 31.801
     },
     {
      "w": "dua",
-     "start": 29.134,
-     "end": 29.327
+     "start": 31.801,
+     "end": 31.966
     },
     {
      "w": "puluh.",
-     "start": 29.344,
-     "end": 29.681
+     "start": 31.966,
+     "end": 32.426
     },
     {
      "w": "Itu",
-     "start": 29.71,
-     "end": 29.903
+     "start": 33.213,
+     "end": 33.579
     },
     {
      "w": "auto-scaling.",
-     "start": 29.92,
-     "end": 30.594
+     "start": 33.579,
+     "end": 34.381
     }
    ]
   },
@@ -427,63 +429,63 @@
    "id": "L10",
    "chapter": "01 · PELAKU",
    "text": "Tapi semua transaksi harus dicatat di satu buku kas yang sama.",
-   "start": 31.033,
-   "end": 35.138,
+   "start": 34.748,
+   "end": 37.733,
    "words": [
     {
      "w": "Tapi",
-     "start": 31.033,
-     "end": 31.333
+     "start": 34.748,
+     "end": 34.924
     },
     {
      "w": "semua",
-     "start": 31.359,
-     "end": 31.719
+     "start": 34.924,
+     "end": 35.16
     },
     {
      "w": "transaksi",
-     "start": 31.75,
-     "end": 32.349
+     "start": 35.16,
+     "end": 35.702
     },
     {
      "w": "harus",
-     "start": 32.401,
-     "end": 32.761
+     "start": 35.702,
+     "end": 35.903
     },
     {
      "w": "dicatat",
-     "start": 32.792,
-     "end": 33.272
+     "start": 35.903,
+     "end": 36.315
     },
     {
      "w": "di",
-     "start": 33.313,
-     "end": 33.493
+     "start": 36.315,
+     "end": 36.398
     },
     {
      "w": "satu",
-     "start": 33.509,
-     "end": 33.809
+     "start": 36.398,
+     "end": 36.634
     },
     {
      "w": "buku",
-     "start": 33.835,
-     "end": 34.134
+     "start": 36.634,
+     "end": 36.858
     },
     {
      "w": "kas",
-     "start": 34.16,
-     "end": 34.4
+     "start": 36.858,
+     "end": 37.082
     },
     {
      "w": "yang",
-     "start": 34.421,
-     "end": 34.721
+     "start": 37.082,
+     "end": 37.2
     },
     {
      "w": "sama.",
-     "start": 34.747,
-     "end": 35.106
+     "start": 37.2,
+     "end": 37.683
     }
    ]
   },
@@ -491,43 +493,43 @@
    "id": "L11",
    "chapter": "01 · PELAKU",
    "text": "Itu database-nya. Semua antre di satu pintu.",
-   "start": 35.518,
-   "end": 38.13,
+   "start": 38.053,
+   "end": 41.385,
    "words": [
     {
      "w": "Itu",
-     "start": 35.518,
-     "end": 35.731
+     "start": 38.053,
+     "end": 38.268
     },
     {
      "w": "database-nya.",
-     "start": 35.75,
-     "end": 36.497
+     "start": 38.268,
+     "end": 39.082
     },
     {
      "w": "Semua",
-     "start": 36.562,
-     "end": 36.883
+     "start": 39.87,
+     "end": 40.212
     },
     {
      "w": "antre",
-     "start": 36.911,
-     "end": 37.231
+     "start": 40.212,
+     "end": 40.518
     },
     {
      "w": "di",
-     "start": 37.259,
-     "end": 37.419
+     "start": 40.518,
+     "end": 40.601
     },
     {
      "w": "satu",
-     "start": 37.433,
-     "end": 37.7
+     "start": 40.601,
+     "end": 40.825
     },
     {
      "w": "pintu.",
-     "start": 37.723,
-     "end": 38.097
+     "start": 40.825,
+     "end": 41.344
     }
    ]
   },
@@ -535,78 +537,78 @@
    "id": "L12",
    "chapter": "01 · PELAKU",
    "text": "Dan tanggal dua puluh lima, gaji ribuan kantor juga masuk ke buku yang sama.",
-   "start": 38.51,
-   "end": 43.733,
+   "start": 41.985,
+   "end": 45.854,
    "words": [
     {
      "w": "Dan",
-     "start": 38.51,
-     "end": 38.759
+     "start": 41.985,
+     "end": 42.147
     },
     {
      "w": "tanggal",
-     "start": 38.781,
-     "end": 39.28
+     "start": 42.147,
+     "end": 42.419
     },
     {
      "w": "dua",
-     "start": 39.324,
-     "end": 39.573
+     "start": 42.419,
+     "end": 42.548
     },
     {
      "w": "puluh",
-     "start": 39.595,
-     "end": 39.97
+     "start": 42.548,
+     "end": 42.725
     },
     {
      "w": "lima,",
-     "start": 40.002,
-     "end": 40.377
+     "start": 42.725,
+     "end": 43.185
     },
     {
      "w": "gaji",
-     "start": 40.409,
-     "end": 40.721
+     "start": 43.492,
+     "end": 43.81
     },
     {
      "w": "ribuan",
-     "start": 40.748,
-     "end": 41.185
+     "start": 43.81,
+     "end": 44.081
     },
     {
      "w": "kantor",
-     "start": 41.223,
-     "end": 41.66
+     "start": 44.081,
+     "end": 44.412
     },
     {
      "w": "juga",
-     "start": 41.698,
-     "end": 42.01
+     "start": 44.412,
+     "end": 44.624
     },
     {
      "w": "masuk",
-     "start": 42.037,
-     "end": 42.412
+     "start": 44.624,
+     "end": 44.883
     },
     {
      "w": "ke",
-     "start": 42.444,
-     "end": 42.632
+     "start": 44.883,
+     "end": 44.942
     },
     {
      "w": "buku",
-     "start": 42.648,
-     "end": 42.96
+     "start": 44.942,
+     "end": 45.202
     },
     {
      "w": "yang",
-     "start": 42.987,
-     "end": 43.299
+     "start": 45.202,
+     "end": 45.331
     },
     {
      "w": "sama.",
-     "start": 43.326,
-     "end": 43.701
+     "start": 45.331,
+     "end": 45.803
     }
    ]
   },
@@ -614,58 +616,58 @@
    "id": "L13",
    "chapter": "02 · OBATNYA",
    "text": "Sistem yang tahan biasanya misahin dua hal: baca sama tulis.",
-   "start": 45.033,
-   "end": 48.765,
+   "start": 46.854,
+   "end": 50.16,
    "words": [
     {
      "w": "Sistem",
-     "start": 45.033,
-     "end": 45.427
+     "start": 46.854,
+     "end": 47.134
     },
     {
      "w": "yang",
-     "start": 45.462,
-     "end": 45.743
+     "start": 47.134,
+     "end": 47.251
     },
     {
      "w": "tahan",
-     "start": 45.767,
-     "end": 46.105
+     "start": 47.251,
+     "end": 47.57
     },
     {
      "w": "biasanya",
-     "start": 46.134,
-     "end": 46.641
+     "start": 47.57,
+     "end": 47.971
     },
     {
      "w": "misahin",
-     "start": 46.685,
-     "end": 47.135
+     "start": 47.971,
+     "end": 48.313
     },
     {
      "w": "dua",
-     "start": 47.174,
-     "end": 47.399
+     "start": 48.313,
+     "end": 48.454
     },
     {
      "w": "hal:",
-     "start": 47.419,
-     "end": 47.7
+     "start": 48.454,
+     "end": 48.832
     },
     {
      "w": "baca",
-     "start": 47.725,
-     "end": 48.006
+     "start": 49.068,
+     "end": 49.386
     },
     {
      "w": "sama",
-     "start": 48.031,
-     "end": 48.312
+     "start": 49.386,
+     "end": 49.598
     },
     {
      "w": "tulis.",
-     "start": 48.337,
-     "end": 48.731
+     "start": 49.598,
+     "end": 50.105
     }
    ]
   },
@@ -673,68 +675,68 @@
    "id": "L14",
    "chapter": "02 · OBATNYA",
    "text": "Yang cuma mau cek saldo, baca dari read replica. Fotokopian buku kasnya.",
-   "start": 49.145,
-   "end": 53.622,
+   "start": 50.48,
+   "end": 55.45,
    "words": [
     {
      "w": "Yang",
-     "start": 49.145,
-     "end": 49.427
+     "start": 50.48,
+     "end": 50.61
     },
     {
      "w": "cuma",
-     "start": 49.451,
-     "end": 49.734
+     "start": 50.61,
+     "end": 50.798
     },
     {
      "w": "mau",
-     "start": 49.758,
-     "end": 49.984
+     "start": 50.798,
+     "end": 50.94
     },
     {
      "w": "cek",
-     "start": 50.003,
-     "end": 50.229
+     "start": 50.94,
+     "end": 51.117
     },
     {
      "w": "saldo,",
-     "start": 50.249,
-     "end": 50.644
+     "start": 51.117,
+     "end": 51.659
     },
     {
      "w": "baca",
-     "start": 50.678,
-     "end": 50.96
+     "start": 51.895,
+     "end": 52.213
     },
     {
      "w": "dari",
-     "start": 50.985,
-     "end": 51.267
+     "start": 52.213,
+     "end": 52.402
     },
     {
      "w": "read",
-     "start": 51.292,
-     "end": 51.574
+     "start": 52.402,
+     "end": 52.591
     },
     {
      "w": "replica.",
-     "start": 51.598,
-     "end": 52.106
+     "start": 52.591,
+     "end": 53.192
     },
     {
      "w": "Fotokopian",
-     "start": 52.15,
-     "end": 52.771
+     "start": 53.981,
+     "end": 54.665
     },
     {
      "w": "buku",
-     "start": 52.825,
-     "end": 53.107
+     "start": 54.665,
+     "end": 54.865
     },
     {
      "w": "kasnya.",
-     "start": 53.132,
-     "end": 53.583
+     "start": 54.865,
+     "end": 55.42
     }
    ]
   },
@@ -742,58 +744,58 @@
    "id": "L15",
    "chapter": "02 · OBATNYA",
    "text": "Buku aslinya cuma buat yang nulis: transfer, bayar, gaji masuk.",
-   "start": 54.002,
-   "end": 57.734,
+   "start": 56.05,
+   "end": 60.172,
    "words": [
     {
      "w": "Buku",
-     "start": 54.002,
-     "end": 54.271
+     "start": 56.05,
+     "end": 56.27
     },
     {
      "w": "aslinya",
-     "start": 54.294,
-     "end": 54.723
+     "start": 56.27,
+     "end": 56.624
     },
     {
      "w": "cuma",
-     "start": 54.76,
-     "end": 55.029
+     "start": 56.624,
+     "end": 56.836
     },
     {
      "w": "buat",
-     "start": 55.052,
-     "end": 55.32
+     "start": 56.836,
+     "end": 57.048
     },
     {
      "w": "yang",
-     "start": 55.343,
-     "end": 55.612
+     "start": 57.048,
+     "end": 57.154
     },
     {
      "w": "nulis:",
-     "start": 55.635,
-     "end": 56.01
+     "start": 57.154,
+     "end": 57.626
     },
     {
      "w": "transfer,",
-     "start": 56.043,
-     "end": 56.579
+     "start": 57.85,
+     "end": 58.428
     },
     {
      "w": "bayar,",
-     "start": 56.626,
-     "end": 57.001
+     "start": 58.664,
+     "end": 59.242
     },
     {
      "w": "gaji",
-     "start": 57.034,
-     "end": 57.302
+     "start": 59.407,
+     "end": 59.749
     },
     {
      "w": "masuk.",
-     "start": 57.326,
-     "end": 57.701
+     "start": 59.749,
+     "end": 60.185
     }
    ]
   },
@@ -801,43 +803,43 @@
    "id": "L16",
    "chapter": "RECAP",
    "text": "Aku pernah nahan sepuluh ribu request barengan.",
-   "start": 59.034,
-   "end": 61.646,
+   "start": 61.172,
+   "end": 63.253,
    "words": [
     {
      "w": "Aku",
-     "start": 59.034,
-     "end": 59.234
+     "start": 61.172,
+     "end": 61.347
     },
     {
      "w": "pernah",
-     "start": 59.251,
-     "end": 59.602
+     "start": 61.347,
+     "end": 61.594
     },
     {
      "w": "nahan",
-     "start": 59.632,
-     "end": 59.933
+     "start": 61.594,
+     "end": 61.889
     },
     {
      "w": "sepuluh",
-     "start": 59.959,
-     "end": 60.359
+     "start": 61.889,
+     "end": 62.184
     },
     {
      "w": "ribu",
-     "start": 60.394,
-     "end": 60.644
+     "start": 62.184,
+     "end": 62.361
     },
     {
      "w": "request",
-     "start": 60.666,
-     "end": 61.067
+     "start": 62.361,
+     "end": 62.679
     },
     {
      "w": "barengan.",
-     "start": 61.102,
-     "end": 61.602
+     "start": 62.679,
+     "end": 63.234
     }
    ]
   },
@@ -845,48 +847,48 @@
    "id": "L17",
    "chapter": "RECAP",
    "text": "Auto-scaling nggak nolong, kalau database-nya cuma satu pintu.",
-   "start": 62.026,
-   "end": 65.011,
+   "start": 63.573,
+   "end": 66.558,
    "words": [
     {
      "w": "Auto-scaling",
-     "start": 62.026,
-     "end": 62.592
+     "start": 63.573,
+     "end": 64.025
     },
     {
      "w": "nggak",
-     "start": 62.642,
-     "end": 62.903
+     "start": 64.025,
+     "end": 64.155
     },
     {
      "w": "nolong,",
-     "start": 62.926,
-     "end": 63.275
+     "start": 64.155,
+     "end": 64.615
     },
     {
      "w": "kalau",
-     "start": 63.305,
-     "end": 63.567
+     "start": 64.851,
+     "end": 65.051
     },
     {
      "w": "database-nya",
-     "start": 63.589,
-     "end": 64.156
+     "start": 65.051,
+     "end": 65.605
     },
     {
      "w": "cuma",
-     "start": 64.205,
-     "end": 64.423
+     "start": 65.605,
+     "end": 65.806
     },
     {
      "w": "satu",
-     "start": 64.442,
-     "end": 64.66
+     "start": 65.806,
+     "end": 66.018
     },
     {
      "w": "pintu.",
-     "start": 64.679,
-     "end": 64.984
+     "start": 66.018,
+     "end": 66.513
     }
    ]
   },
@@ -894,53 +896,53 @@
    "id": "L18",
    "chapter": "OUTRO",
    "text": "Video berikutnya: gimana sepuluh ribu request itu tetap jalan.",
-   "start": 66.311,
-   "end": 69.669,
+   "start": 67.558,
+   "end": 70.826,
    "words": [
     {
      "w": "Video",
-     "start": 66.311,
-     "end": 66.605
+     "start": 67.558,
+     "end": 67.791
     },
     {
      "w": "berikutnya:",
-     "start": 66.631,
-     "end": 67.219
+     "start": 67.791,
+     "end": 68.464
     },
     {
      "w": "gimana",
-     "start": 67.27,
-     "end": 67.614
+     "start": 68.723,
+     "end": 69.077
     },
     {
      "w": "sepuluh",
-     "start": 67.643,
-     "end": 68.036
+     "start": 69.077,
+     "end": 69.36
     },
     {
      "w": "ribu",
-     "start": 68.07,
-     "end": 68.315
+     "start": 69.36,
+     "end": 69.513
     },
     {
      "w": "request",
-     "start": 68.336,
-     "end": 68.729
+     "start": 69.513,
+     "end": 69.796
     },
     {
      "w": "itu",
-     "start": 68.763,
-     "end": 68.959
+     "start": 69.796,
+     "end": 70.032
     },
     {
      "w": "tetap",
-     "start": 68.976,
-     "end": 69.27
+     "start": 70.032,
+     "end": 70.28
     },
     {
      "w": "jalan.",
-     "start": 69.296,
-     "end": 69.639
+     "start": 70.28,
+     "end": 70.775
     }
    ]
   },
@@ -948,28 +950,28 @@
    "id": "L19",
    "chapter": "OUTRO",
    "text": "Follow, biar nggak ketinggalan.",
-   "start": 70.049,
-   "end": 71.541,
+   "start": 71.146,
+   "end": 72.975,
    "words": [
     {
      "w": "Follow,",
-     "start": 70.049,
-     "end": 70.392
+     "start": 71.146,
+     "end": 71.612
     },
     {
      "w": "biar",
-     "start": 70.422,
-     "end": 70.637
+     "start": 71.848,
+     "end": 72.119
     },
     {
      "w": "nggak",
-     "start": 70.655,
-     "end": 70.913
+     "start": 72.119,
+     "end": 72.26
     },
     {
      "w": "ketinggalan.",
-     "start": 70.935,
-     "end": 71.493
+     "start": 72.26,
+     "end": 72.921
     }
    ]
   }

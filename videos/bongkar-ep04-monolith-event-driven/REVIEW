@@ -1,0 +1,14 @@
+# Stills putaran 1 — komponen kampung.py baru, belum pernah dilihat
+L02   # hook: kentongan dipukul, rings, satu jendela nyala
+L03   # rumah gede nyala semua (monolith)
+L04   # punch "event-driven." (cover)
+L07   # rumah gede: 4 kamar, cuma laporan kerja, "idle"
+L08   # korslet → MCB turun → gelap semua
+L09   # papan TUTUP · RENOVASI
+L11   # rumah dipecah → 4 rumah kecil + papan nama function
+L14   # signature move: 3 rumah nyala, order() tetap tidur
+L16   # diagram: API → event → 3 function
+L19   # private network + portal NAT gateway
+L21   # satu function error, yang lain jalan
+L24   # recap: peronda mukul, terus pergi (fire-and-forget)
+L25   # monolith sehat → biarin

@@ -1,0 +1,13 @@
+# Stills putaran 1 — komponen relay.py baru, belum pernah dilihat
+L01   # meja warung: standee QRIS + es teh
+L02   # HP: scan → PIN → berhasil
+L03   # freeze "TAHAN" + badge
+L04   # lintasan estafet 4 pelari + REPLAY 0,1×
+L06   # QR + isi kode QR + "bukan uang"
+L08   # kartu issuer: ✓ PIN, ✓ saldo, Rp5.000 ditahan
+L10   # mesh: semua bank nyambung satu-satu
+L11   # hub switching (cover)
+L13   # HP penjual bunyi
+L14   # pulsa balasan lari balik → "berhasil"
+L16   # settlement: uang merayap antar bank
+L17   # pelari 3 merah, timer kasir

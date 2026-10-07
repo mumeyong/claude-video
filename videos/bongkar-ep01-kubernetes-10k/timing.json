@@ -1,1163 +1,1137 @@
 {
  "source": "tts",
  "voice": "id-ID-ArdiNeural",
- "tone": "deep",
- "duration": 87.341,
+ "tts": "ardi",
+ "duration": 86.138,
  "lines": [
   {
    "id": "L01",
    "chapter": "INTRO",
    "text": "Tiap hari, pas peak hour.",
    "start": 0.4,
-   "end": 2.077,
+   "end": 2.114,
    "words": [
     {
      "w": "Tiap",
      "start": 0.4,
-     "end": 0.542
+     "end": 0.544
     },
     {
      "w": "hari,",
-     "start": 0.542,
-     "end": 0.997
+     "start": 0.544,
+     "end": 1.016
     },
     {
      "w": "pas",
-     "start": 1.235,
-     "end": 1.463
+     "start": 1.263,
+     "end": 1.499
     },
     {
      "w": "peak",
-     "start": 1.463,
-     "end": 1.61
+     "start": 1.499,
+     "end": 1.652
     },
     {
      "w": "hour.",
-     "start": 1.61,
-     "end": 2.019
+     "start": 1.652,
+     "end": 2.077
     }
-   ],
-   "prosody": "+10% +1Hz +10%"
+   ]
   },
   {
    "id": "L02",
    "chapter": "INTRO",
    "text": "Lebih dari sepuluh ribu request masuk, barengan.",
-   "start": 2.677,
-   "end": 5.087,
+   "start": 2.714,
+   "end": 5.206,
    "words": [
     {
      "w": "Lebih",
-     "start": 2.677,
-     "end": 2.891
+     "start": 2.714,
+     "end": 2.93
     },
     {
      "w": "dari",
-     "start": 2.892,
-     "end": 3.051
+     "start": 2.93,
+     "end": 3.095
     },
     {
      "w": "sepuluh",
-     "start": 3.051,
-     "end": 3.323
+     "start": 3.095,
+     "end": 3.378
     },
     {
      "w": "ribu",
-     "start": 3.323,
-     "end": 3.494
+     "start": 3.378,
+     "end": 3.555
     },
     {
      "w": "request",
-     "start": 3.494,
-     "end": 3.778
+     "start": 3.555,
+     "end": 3.849
     },
     {
      "w": "masuk,",
-     "start": 3.778,
-     "end": 4.244
+     "start": 3.849,
+     "end": 4.333
     },
     {
      "w": "barengan.",
-     "start": 4.403,
-     "end": 5.051
+     "start": 4.498,
+     "end": 5.17
     }
-   ],
-   "prosody": "+10% +3Hz +5%"
+   ]
   },
   {
    "id": "L03",
    "chapter": "INTRO",
    "text": "Ke satu aplikasi layanan keuangan.",
-   "start": 5.407,
-   "end": 7.152,
+   "start": 5.526,
+   "end": 7.33,
    "words": [
     {
      "w": "Ke",
-     "start": 5.407,
-     "end": 5.435
+     "start": 5.526,
+     "end": 5.549
     },
     {
      "w": "satu",
-     "start": 5.435,
-     "end": 5.708
+     "start": 5.549,
+     "end": 5.832
     },
     {
      "w": "aplikasi",
-     "start": 5.708,
-     "end": 6.14
+     "start": 5.832,
+     "end": 6.28
     },
     {
      "w": "layanan",
-     "start": 6.14,
-     "end": 6.503
+     "start": 6.28,
+     "end": 6.657
     },
     {
      "w": "keuangan.",
-     "start": 6.503,
-     "end": 7.117
+     "start": 6.657,
+     "end": 7.294
     }
-   ],
-   "prosody": "+10% +0Hz +5%"
+   ]
   },
   {
    "id": "L04",
    "chapter": "INTRO",
    "text": "Dulu, di jam segini, app-nya lemot, terus down.",
-   "start": 7.472,
-   "end": 10.858,
+   "start": 7.65,
+   "end": 11.159,
    "words": [
     {
      "w": "Dulu,",
-     "start": 7.472,
-     "end": 7.937
+     "start": 7.65,
+     "end": 8.13
     },
     {
      "w": "di",
-     "start": 8.187,
-     "end": 8.335
+     "start": 8.389,
+     "end": 8.542
     },
     {
      "w": "jam",
-     "start": 8.335,
-     "end": 8.517
+     "start": 8.542,
+     "end": 8.731
     },
     {
      "w": "segini,",
-     "start": 8.517,
-     "end": 9.074
+     "start": 8.731,
+     "end": 9.309
     },
     {
      "w": "app-nya",
-     "start": 9.301,
-     "end": 9.562
+     "start": 9.545,
+     "end": 9.816
     },
     {
      "w": "lemot,",
-     "start": 9.562,
-     "end": 10.005
+     "start": 9.816,
+     "end": 10.276
     },
     {
      "w": "terus",
-     "start": 10.153,
-     "end": 10.403
+     "start": 10.429,
+     "end": 10.689
     },
     {
      "w": "down.",
-     "start": 10.403,
-     "end": 10.801
+     "start": 10.689,
+     "end": 11.101
     }
-   ],
-   "prosody": "+10% +2Hz +5%"
+   ]
   },
   {
    "id": "L05",
    "chapter": "00 · MASALAH",
    "text": "Bayangin gerbang tol, waktu mudik.",
-   "start": 11.858,
-   "end": 13.903,
+   "start": 12.159,
+   "end": 14.201,
    "words": [
     {
      "w": "Bayangin",
-     "start": 11.858,
-     "end": 12.221
+     "start": 12.159,
+     "end": 12.522
     },
     {
      "w": "gerbang",
-     "start": 12.221,
-     "end": 12.551
+     "start": 12.522,
+     "end": 12.852
     },
     {
      "w": "tol,",
-     "start": 12.551,
-     "end": 12.905
+     "start": 12.852,
+     "end": 13.206
     },
     {
      "w": "waktu",
-     "start": 13.129,
-     "end": 13.459
+     "start": 13.43,
+     "end": 13.76
     },
     {
      "w": "mudik.",
-     "start": 13.459,
-     "end": 13.931
+     "start": 13.76,
+     "end": 14.232
     }
-   ],
-   "prosody": "+6% -2Hz +5%"
+   ]
   },
   {
    "id": "L06",
    "chapter": "00 · MASALAH",
    "text": "Mobilnya ribuan, tapi gardunya segitu-segitu aja.",
-   "start": 14.223,
-   "end": 17.145,
+   "start": 14.521,
+   "end": 17.443,
    "words": [
     {
      "w": "Mobilnya",
-     "start": 14.223,
-     "end": 14.569
+     "start": 14.521,
+     "end": 14.868
     },
     {
      "w": "ribuan,",
-     "start": 14.57,
-     "end": 15.1
+     "start": 14.868,
+     "end": 15.399
     },
     {
      "w": "tapi",
-     "start": 15.36,
-     "end": 15.607
+     "start": 15.658,
+     "end": 15.906
     },
     {
      "w": "gardunya",
-     "start": 15.607,
-     "end": 16.044
+     "start": 15.906,
+     "end": 16.342
     },
     {
      "w": "segitu-segitu",
-     "start": 16.044,
-     "end": 16.621
+     "start": 16.342,
+     "end": 16.92
     },
     {
      "w": "aja.",
-     "start": 16.621,
-     "end": 17.093
+     "start": 16.92,
+     "end": 17.392
     }
-   ],
-   "prosody": "+6% +0Hz +0%"
+   ]
   },
   {
    "id": "L07",
    "chapter": "00 · MASALAH",
    "text": "Antrean numpuk, ada yang nyerah, putar balik.",
-   "start": 17.465,
-   "end": 20.074,
+   "start": 17.763,
+   "end": 20.371,
    "words": [
     {
      "w": "Antrean",
-     "start": 17.465,
-     "end": 17.751
+     "start": 17.763,
+     "end": 18.046
     },
     {
      "w": "numpuk,",
-     "start": 17.751,
-     "end": 18.211
+     "start": 18.046,
+     "end": 18.506
     },
     {
      "w": "ada",
-     "start": 18.447,
-     "end": 18.659
+     "start": 18.741,
+     "end": 18.954
     },
     {
      "w": "yang",
-     "start": 18.659,
-     "end": 18.789
+     "start": 18.954,
+     "end": 19.083
     },
     {
      "w": "nyerah,",
-     "start": 18.789,
-     "end": 19.237
+     "start": 19.083,
+     "end": 19.531
     },
     {
      "w": "putar",
-     "start": 19.402,
-     "end": 19.661
+     "start": 19.697,
+     "end": 19.956
     },
     {
      "w": "balik.",
-     "start": 19.661,
-     "end": 20.098
+     "start": 19.956,
+     "end": 20.392
     }
-   ],
-   "prosody": "+6% +2Hz +0%"
+   ]
   },
   {
    "id": "L08",
    "chapter": "00 · MASALAH",
    "text": "Di aplikasi, itu artinya transaksi gagal.",
-   "start": 20.394,
-   "end": 23.124,
+   "start": 20.691,
+   "end": 23.428,
    "words": [
     {
      "w": "Di",
-     "start": 20.394,
-     "end": 20.485
+     "start": 20.691,
+     "end": 20.782
     },
     {
      "w": "aplikasi,",
-     "start": 20.485,
-     "end": 21.192
+     "start": 20.782,
+     "end": 21.49
     },
     {
      "w": "itu",
-     "start": 21.475,
-     "end": 21.699
+     "start": 21.773,
+     "end": 21.997
     },
     {
      "w": "artinya",
-     "start": 21.699,
-     "end": 22.053
+     "start": 21.997,
+     "end": 22.35
     },
     {
      "w": "transaksi",
-     "start": 22.053,
-     "end": 22.548
+     "start": 22.35,
+     "end": 22.846
     },
     {
      "w": "gagal.",
-     "start": 22.548,
-     "end": 23.079
+     "start": 22.846,
+     "end": 23.376
     }
-   ],
-   "prosody": "+6% -1Hz +0%"
+   ]
   },
   {
    "id": "L09",
    "chapter": "01 · KEPUTUSAN",
    "text": "Solusinya bukan bikin gardu sebanyak-banyaknya.",
-   "start": 24.124,
-   "end": 26.406,
+   "start": 24.428,
+   "end": 26.716,
    "words": [
     {
      "w": "Solusinya",
-     "start": 24.124,
-     "end": 24.596
+     "start": 24.428,
+     "end": 24.901
     },
     {
      "w": "bukan",
-     "start": 24.596,
-     "end": 24.82
+     "start": 24.901,
+     "end": 25.125
     },
     {
      "w": "bikin",
-     "start": 24.82,
-     "end": 25.044
+     "start": 25.125,
+     "end": 25.349
     },
     {
      "w": "gardu",
-     "start": 25.044,
-     "end": 25.363
+     "start": 25.349,
+     "end": 25.667
     },
     {
      "w": "sebanyak-banyaknya.",
-     "start": 25.363,
-     "end": 26.365
+     "start": 25.667,
+     "end": 26.669
     }
-   ],
-   "prosody": "+6% +1Hz +5%"
+   ]
   },
   {
    "id": "L10",
    "chapter": "01 · KEPUTUSAN",
    "text": "Itu mahal, dan malam-malam idle.",
-   "start": 26.726,
-   "end": 28.865,
+   "start": 27.036,
+   "end": 29.174,
    "words": [
     {
      "w": "Itu",
-     "start": 26.726,
-     "end": 26.863
+     "start": 27.036,
+     "end": 27.168
     },
     {
      "w": "mahal,",
-     "start": 26.863,
-     "end": 27.37
+     "start": 27.168,
+     "end": 27.675
     },
     {
      "w": "dan",
-     "start": 27.641,
-     "end": 27.865
+     "start": 27.946,
+     "end": 28.171
     },
     {
      "w": "malam-malam",
-     "start": 27.865,
-     "end": 28.278
+     "start": 28.171,
+     "end": 28.583
     },
     {
      "w": "idle.",
-     "start": 28.278,
-     "end": 28.832
+     "start": 28.583,
+     "end": 29.138
     }
-   ],
-   "prosody": "+6% -2Hz +0%"
+   ]
   },
   {
    "id": "L11",
    "chapter": "01 · KEPUTUSAN",
    "text": "Solusinya: gardu yang bisa nambah sendiri.",
-   "start": 29.185,
-   "end": 31.783,
+   "start": 29.494,
+   "end": 31.995,
    "words": [
     {
      "w": "Solusinya:",
-     "start": 29.185,
-     "end": 29.929
+     "start": 29.494,
+     "end": 30.209
     },
     {
      "w": "gardu",
-     "start": 30.199,
-     "end": 30.591
+     "start": 30.469,
+     "end": 30.846
     },
     {
      "w": "yang",
-     "start": 30.591,
-     "end": 30.726
+     "start": 30.846,
+     "end": 30.976
     },
     {
      "w": "bisa",
-     "start": 30.726,
-     "end": 30.934
+     "start": 30.976,
+     "end": 31.176
     },
     {
      "w": "nambah",
-     "start": 30.934,
-     "end": 31.179
+     "start": 31.176,
+     "end": 31.412
     },
     {
      "w": "sendiri.",
-     "start": 31.179,
-     "end": 31.743
+     "start": 31.412,
+     "end": 31.955
     }
-   ],
-   "prosody": "+2% +0Hz +0%"
+   ]
   },
   {
    "id": "L12",
    "chapter": "01 · KEPUTUSAN",
    "text": "Aplikasinya jalan di container, di atas Kubernetes, di Alibaba Cloud.",
-   "start": 32.103,
-   "end": 36.186,
+   "start": 32.315,
+   "end": 36.41,
    "words": [
     {
      "w": "Aplikasinya",
-     "start": 32.103,
-     "end": 32.66
+     "start": 32.315,
+     "end": 32.872
     },
     {
      "w": "jalan",
-     "start": 32.66,
-     "end": 32.931
+     "start": 32.872,
+     "end": 33.143
     },
     {
      "w": "di",
-     "start": 32.931,
-     "end": 33.002
+     "start": 33.143,
+     "end": 33.214
     },
     {
      "w": "container,",
-     "start": 33.002,
-     "end": 33.592
+     "start": 33.214,
+     "end": 33.803
     },
     {
      "w": "di",
-     "start": 33.851,
-     "end": 33.981
+     "start": 34.063,
+     "end": 34.192
     },
     {
      "w": "atas",
-     "start": 33.981,
-     "end": 34.193
+     "start": 34.192,
+     "end": 34.405
     },
     {
      "w": "Kubernetes,",
-     "start": 34.193,
-     "end": 34.913
+     "start": 34.405,
+     "end": 35.124
     },
     {
      "w": "di",
-     "start": 35.125,
-     "end": 35.278
+     "start": 35.336,
+     "end": 35.49
     },
     {
      "w": "Alibaba",
-     "start": 35.278,
-     "end": 35.691
+     "start": 35.49,
+     "end": 35.902
     },
     {
      "w": "Cloud.",
-     "start": 35.691,
-     "end": 36.163
+     "start": 35.902,
+     "end": 36.374
     }
-   ],
-   "prosody": "+6% +2Hz +0%"
+   ]
   },
   {
    "id": "L13",
    "chapter": "01 · KEPUTUSAN",
    "text": "Kubernetes ini kayak petugas tol-nya.",
-   "start": 36.786,
-   "end": 38.619,
+   "start": 37.01,
+   "end": 38.836,
    "words": [
     {
      "w": "Kubernetes",
-     "start": 36.786,
-     "end": 37.208
+     "start": 37.01,
+     "end": 37.433
     },
     {
      "w": "ini",
-     "start": 37.208,
-     "end": 37.491
+     "start": 37.433,
+     "end": 37.716
     },
     {
      "w": "kayak",
-     "start": 37.491,
-     "end": 37.727
+     "start": 37.716,
+     "end": 37.952
     },
     {
      "w": "petugas",
-     "start": 37.727,
-     "end": 38.057
+     "start": 37.952,
+     "end": 38.282
     },
     {
      "w": "tol-nya.",
-     "start": 38.057,
-     "end": 38.576
+     "start": 38.282,
+     "end": 38.801
     }
-   ],
-   "prosody": "+6% -1Hz +0%"
+   ]
   },
   {
    "id": "L14",
    "chapter": "02 · DIAGRAM",
    "text": "Request masuk lewat load balancer, dibagi rata.",
-   "start": 39.619,
-   "end": 42.289,
+   "start": 39.836,
+   "end": 42.499,
    "words": [
     {
      "w": "Request",
-     "start": 39.619,
-     "end": 39.956
+     "start": 39.836,
+     "end": 40.171
     },
     {
      "w": "masuk",
-     "start": 39.956,
-     "end": 40.227
+     "start": 40.171,
+     "end": 40.442
     },
     {
      "w": "lewat",
-     "start": 40.227,
-     "end": 40.439
+     "start": 40.442,
+     "end": 40.655
     },
     {
      "w": "load",
-     "start": 40.439,
-     "end": 40.569
+     "start": 40.655,
+     "end": 40.784
     },
     {
      "w": "balancer,",
-     "start": 40.569,
-     "end": 41.147
+     "start": 40.784,
+     "end": 41.362
     },
     {
      "w": "dibagi",
-     "start": 41.359,
-     "end": 41.748
+     "start": 41.574,
+     "end": 41.964
     },
     {
      "w": "rata.",
-     "start": 41.748,
-     "end": 42.22
+     "start": 41.964,
+     "end": 42.435
     }
-   ],
-   "prosody": "+6% +1Hz +5%"
+   ]
   },
   {
    "id": "L15",
    "chapter": "02 · DIAGRAM",
    "text": "Begitu traffic naik, auto-scaling nambah pod baru, otomatis.",
-   "start": 42.609,
-   "end": 46.504,
+   "start": 42.819,
+   "end": 46.707,
    "words": [
     {
      "w": "Begitu",
-     "start": 42.609,
-     "end": 42.891
+     "start": 42.819,
+     "end": 43.099
     },
     {
      "w": "traffic",
-     "start": 42.891,
-     "end": 43.186
+     "start": 43.099,
+     "end": 43.394
     },
     {
      "w": "naik,",
-     "start": 43.186,
-     "end": 43.611
+     "start": 43.394,
+     "end": 43.819
     },
     {
      "w": "auto-scaling",
-     "start": 43.858,
-     "end": 44.389
+     "start": 44.066,
+     "end": 44.597
     },
     {
      "w": "nambah",
-     "start": 44.389,
-     "end": 44.66
+     "start": 44.597,
+     "end": 44.868
     },
     {
      "w": "pod",
-     "start": 44.66,
-     "end": 44.955
+     "start": 44.868,
+     "end": 45.163
     },
     {
      "w": "baru,",
-     "start": 44.955,
-     "end": 45.438
+     "start": 45.163,
+     "end": 45.646
     },
     {
      "w": "otomatis.",
-     "start": 45.662,
-     "end": 46.453
+     "start": 45.871,
+     "end": 46.661
     }
-   ],
-   "prosody": "+6% -2Hz +0%"
+   ]
   },
   {
    "id": "L16",
    "chapter": "02 · DIAGRAM",
    "text": "Kalau node-nya penuh, node baru juga ikut ditambah.",
-   "start": 46.824,
-   "end": 49.504,
+   "start": 47.027,
+   "end": 49.707,
    "words": [
     {
      "w": "Kalau",
-     "start": 46.824,
-     "end": 46.988
+     "start": 47.027,
+     "end": 47.191
     },
     {
      "w": "node-nya",
-     "start": 46.988,
-     "end": 47.283
+     "start": 47.191,
+     "end": 47.486
     },
     {
      "w": "penuh,",
-     "start": 47.283,
-     "end": 47.731
+     "start": 47.486,
+     "end": 47.934
     },
     {
      "w": "node",
-     "start": 47.978,
-     "end": 48.191
+     "start": 48.182,
+     "end": 48.394
     },
     {
      "w": "baru",
-     "start": 48.191,
-     "end": 48.438
+     "start": 48.394,
+     "end": 48.641
     },
     {
      "w": "juga",
-     "start": 48.438,
-     "end": 48.662
+     "start": 48.641,
+     "end": 48.865
     },
     {
      "w": "ikut",
-     "start": 48.662,
-     "end": 48.875
+     "start": 48.865,
+     "end": 49.078
     },
     {
      "w": "ditambah.",
-     "start": 48.875,
-     "end": 49.488
+     "start": 49.078,
+     "end": 49.691
     }
-   ],
-   "prosody": "+6% +0Hz +0%"
+   ]
   },
   {
    "id": "L17",
    "chapter": "02 · DIAGRAM",
    "text": "Satu pod crash? Langsung diganti, traffic-nya dialihin.",
-   "start": 49.824,
-   "end": 54.155,
+   "start": 50.027,
+   "end": 54.355,
    "words": [
     {
      "w": "Satu",
-     "start": 49.824,
-     "end": 50.089
+     "start": 50.027,
+     "end": 50.29
     },
     {
      "w": "pod",
-     "start": 50.089,
-     "end": 50.396
+     "start": 50.29,
+     "end": 50.597
     },
     {
      "w": "crash?",
-     "start": 50.396,
-     "end": 50.867
+     "start": 50.597,
+     "end": 51.068
     },
     {
      "w": "Langsung",
-     "start": 51.654,
-     "end": 52.008
+     "start": 51.855,
+     "end": 52.209
     },
     {
      "w": "diganti,",
-     "start": 52.008,
-     "end": 52.633
+     "start": 52.209,
+     "end": 52.834
     },
     {
      "w": "traffic-nya",
-     "start": 52.904,
-     "end": 53.411
+     "start": 53.105,
+     "end": 53.612
     },
     {
      "w": "dialihin.",
-     "start": 53.411,
-     "end": 54.107
+     "start": 53.612,
+     "end": 54.308
     }
-   ],
-   "prosody": "+6% +2Hz +0%"
+   ]
   },
   {
    "id": "L18",
    "chapter": "03 · HASIL",
    "text": "Sekarang, peak hour lewat tanpa down.",
-   "start": 55.155,
-   "end": 57.343,
+   "start": 55.355,
+   "end": 57.545,
    "words": [
     {
      "w": "Sekarang,",
-     "start": 55.155,
-     "end": 55.682
+     "start": 55.355,
+     "end": 55.881
     },
     {
      "w": "peak",
-     "start": 55.941,
-     "end": 56.106
+     "start": 56.141,
+     "end": 56.306
     },
     {
      "w": "hour",
-     "start": 56.106,
-     "end": 56.354
+     "start": 56.306,
+     "end": 56.554
     },
     {
      "w": "lewat",
-     "start": 56.354,
-     "end": 56.59
+     "start": 56.554,
+     "end": 56.789
     },
     {
      "w": "tanpa",
-     "start": 56.59,
-     "end": 56.873
+     "start": 56.789,
+     "end": 57.072
     },
     {
      "w": "down.",
-     "start": 56.873,
-     "end": 57.285
+     "start": 57.072,
+     "end": 57.485
     }
-   ],
-   "prosody": "+6% -1Hz +5%"
+   ]
   },
   {
    "id": "L19",
    "chapter": "03 · HASIL",
    "text": "Lebih dari sepuluh ribu request barengan, aman.",
-   "start": 57.663,
-   "end": 60.181,
+   "start": 57.865,
+   "end": 60.386,
    "words": [
     {
      "w": "Lebih",
-     "start": 57.663,
-     "end": 57.907
+     "start": 57.865,
+     "end": 58.106
     },
     {
      "w": "dari",
-     "start": 57.907,
-     "end": 58.072
+     "start": 58.106,
+     "end": 58.271
     },
     {
      "w": "sepuluh",
-     "start": 58.072,
-     "end": 58.367
+     "start": 58.271,
+     "end": 58.566
     },
     {
      "w": "ribu",
-     "start": 58.367,
-     "end": 58.544
+     "start": 58.566,
+     "end": 58.742
     },
     {
      "w": "request",
-     "start": 58.544,
-     "end": 58.839
+     "start": 58.743,
+     "end": 59.037
     },
     {
      "w": "barengan,",
-     "start": 58.839,
-     "end": 59.381
+     "start": 59.037,
+     "end": 59.58
     },
     {
      "w": "aman.",
-     "start": 59.617,
-     "end": 60.136
+     "start": 59.816,
+     "end": 60.334
     }
-   ],
-   "prosody": "+6% +1Hz +0%"
+   ]
   },
   {
    "id": "L20",
    "chapter": "03 · HASIL",
    "text": "Dan jam dua pagi, pod-nya scale down sendiri, satu-satu.",
-   "start": 60.501,
-   "end": 64.259,
+   "start": 60.706,
+   "end": 64.453,
    "words": [
     {
      "w": "Dan",
-     "start": 60.501,
-     "end": 60.679
+     "start": 60.706,
+     "end": 60.88
     },
     {
      "w": "jam",
-     "start": 60.679,
-     "end": 60.868
+     "start": 60.88,
+     "end": 61.068
     },
     {
      "w": "dua",
-     "start": 60.868,
-     "end": 60.998
+     "start": 61.068,
+     "end": 61.198
     },
     {
      "w": "pagi,",
-     "start": 60.998,
-     "end": 61.493
+     "start": 61.198,
+     "end": 61.693
     },
     {
      "w": "pod-nya",
-     "start": 61.788,
-     "end": 62.259
+     "start": 61.988,
+     "end": 62.46
     },
     {
      "w": "scale",
-     "start": 62.259,
-     "end": 62.519
+     "start": 62.46,
+     "end": 62.719
     },
     {
      "w": "down",
-     "start": 62.519,
-     "end": 62.684
+     "start": 62.719,
+     "end": 62.884
     },
     {
      "w": "sendiri,",
-     "start": 62.684,
-     "end": 63.238
+     "start": 62.884,
+     "end": 63.439
     },
     {
      "w": "satu-satu.",
-     "start": 63.403,
-     "end": 64.205
+     "start": 63.604,
+     "end": 64.406
     }
-   ],
-   "prosody": "+6% -2Hz +0%"
+   ]
   },
   {
    "id": "L21",
    "chapter": "03 · HASIL",
    "text": "Jadi bayarnya cuma pas rame.",
-   "start": 64.579,
-   "end": 66.158,
+   "start": 64.773,
+   "end": 66.352,
    "words": [
     {
      "w": "Jadi",
-     "start": 64.579,
-     "end": 64.823
+     "start": 64.773,
+     "end": 65.017
     },
     {
      "w": "bayarnya",
-     "start": 64.823,
-     "end": 65.247
+     "start": 65.017,
+     "end": 65.441
     },
     {
      "w": "cuma",
-     "start": 65.247,
-     "end": 65.483
+     "start": 65.441,
+     "end": 65.677
     },
     {
      "w": "pas",
-     "start": 65.483,
-     "end": 65.672
+     "start": 65.677,
+     "end": 65.866
     },
     {
      "w": "rame.",
-     "start": 65.672,
-     "end": 66.12
+     "start": 65.866,
+     "end": 66.314
     }
-   ],
-   "prosody": "+6% +0Hz +0%"
+   ]
   },
   {
    "id": "L22",
    "chapter": "RECAP",
    "text": "Jadi, jangan siapin server buat hari paling rame.",
-   "start": 67.158,
-   "end": 70.236,
+   "start": 67.352,
+   "end": 70.168,
    "words": [
     {
      "w": "Jadi,",
-     "start": 67.158,
-     "end": 67.709
+     "start": 67.352,
+     "end": 67.863
     },
     {
      "w": "jangan",
-     "start": 68.005,
-     "end": 68.353
+     "start": 68.134,
+     "end": 68.452
     },
     {
      "w": "siapin",
-     "start": 68.353,
-     "end": 68.675
+     "start": 68.452,
+     "end": 68.747
     },
     {
      "w": "server",
-     "start": 68.675,
-     "end": 69.036
+     "start": 68.747,
+     "end": 69.077
     },
     {
      "w": "buat",
-     "start": 69.036,
-     "end": 69.255
+     "start": 69.077,
+     "end": 69.278
     },
     {
      "w": "hari",
-     "start": 69.255,
-     "end": 69.487
+     "start": 69.278,
+     "end": 69.49
     },
     {
      "w": "paling",
-     "start": 69.487,
-     "end": 69.719
+     "start": 69.49,
+     "end": 69.702
     },
     {
      "w": "rame.",
-     "start": 69.719,
-     "end": 70.183
+     "start": 69.702,
+     "end": 70.127
     }
-   ],
-   "prosody": "-3% -3Hz +0%"
+   ]
   },
   {
    "id": "L23",
    "chapter": "RECAP",
    "text": "Siapin sistem yang bisa scale up dan scale down sendiri.",
-   "start": 70.556,
-   "end": 73.456,
+   "start": 70.488,
+   "end": 73.15,
    "words": [
     {
      "w": "Siapin",
-     "start": 70.556,
-     "end": 70.869
+     "start": 70.488,
+     "end": 70.779
     },
     {
      "w": "sistem",
-     "start": 70.869,
-     "end": 71.242
+     "start": 70.779,
+     "end": 71.121
     },
     {
      "w": "yang",
-     "start": 71.242,
-     "end": 71.384
+     "start": 71.121,
+     "end": 71.251
     },
     {
      "w": "bisa",
-     "start": 71.384,
-     "end": 71.603
+     "start": 71.251,
+     "end": 71.452
     },
     {
      "w": "scale",
-     "start": 71.603,
-     "end": 71.874
+     "start": 71.452,
+     "end": 71.699
     },
     {
      "w": "up",
-     "start": 71.874,
-     "end": 72.119
+     "start": 71.699,
+     "end": 71.923
     },
     {
      "w": "dan",
-     "start": 72.119,
-     "end": 72.312
+     "start": 71.923,
+     "end": 72.1
     },
     {
      "w": "scale",
-     "start": 72.312,
-     "end": 72.608
+     "start": 72.1,
+     "end": 72.371
     },
     {
      "w": "down",
-     "start": 72.608,
-     "end": 72.815
+     "start": 72.371,
+     "end": 72.56
     },
     {
      "w": "sendiri.",
-     "start": 72.815,
-     "end": 73.42
+     "start": 72.56,
+     "end": 73.114
     }
-   ],
-   "prosody": "-3% -6Hz +0%"
+   ]
   },
   {
    "id": "L24",
    "chapter": "RECAP",
    "text": "Buat beban kayak gini, Kubernetes bukan gaya-gayaan. Emang butuh.",
-   "start": 73.776,
-   "end": 78.85,
+   "start": 73.47,
+   "end": 78.108,
    "words": [
     {
      "w": "Buat",
-     "start": 73.776,
-     "end": 73.949
+     "start": 73.47,
+     "end": 73.636
     },
     {
      "w": "beban",
-     "start": 73.949,
-     "end": 74.207
+     "start": 73.636,
+     "end": 73.872
     },
     {
      "w": "kayak",
-     "start": 74.207,
-     "end": 74.439
+     "start": 73.872,
+     "end": 74.084
     },
     {
      "w": "gini,",
-     "start": 74.439,
-     "end": 74.941
+     "start": 74.084,
+     "end": 74.544
     },
     {
      "w": "Kubernetes",
-     "start": 75.251,
-     "end": 75.843
+     "start": 74.827,
+     "end": 75.37
     },
     {
      "w": "bukan",
-     "start": 75.843,
-     "end": 76.14
+     "start": 75.37,
+     "end": 75.641
     },
     {
      "w": "gaya-gayaan.",
-     "start": 76.14,
-     "end": 77.016
+     "start": 75.641,
+     "end": 76.443
     },
     {
      "w": "Emang",
-     "start": 77.88,
-     "end": 78.254
+     "start": 77.231,
+     "end": 77.573
     },
     {
      "w": "butuh.",
-     "start": 78.254,
-     "end": 78.847
+     "start": 77.573,
+     "end": 78.116
     }
-   ],
-   "prosody": "-3% -4Hz +0%"
+   ]
   },
   {
    "id": "L25",
    "chapter": "OUTRO",
    "text": "Episode depan: big data migration ke cloud, dengan zero data loss.",
-   "start": 79.85,
-   "end": 84.165,
+   "start": 79.108,
+   "end": 83.189,
    "words": [
     {
      "w": "Episode",
-     "start": 79.85,
-     "end": 80.221
+     "start": 79.108,
+     "end": 79.462
     },
     {
      "w": "depan:",
-     "start": 80.221,
-     "end": 80.746
+     "start": 79.462,
+     "end": 79.957
     },
     {
      "w": "big",
-     "start": 81.021,
-     "end": 81.283
+     "start": 80.216,
+     "end": 80.464
     },
     {
      "w": "data",
-     "start": 81.283,
-     "end": 81.533
+     "start": 80.464,
+     "end": 80.7
     },
     {
      "w": "migration",
-     "start": 81.533,
-     "end": 82.021
+     "start": 80.7,
+     "end": 81.16
     },
     {
      "w": "ke",
-     "start": 82.021,
-     "end": 82.108
+     "start": 81.16,
+     "end": 81.242
     },
     {
      "w": "cloud,",
-     "start": 82.108,
-     "end": 82.571
+     "start": 81.242,
+     "end": 81.679
     },
     {
      "w": "dengan",
-     "start": 82.783,
-     "end": 83.058
+     "start": 81.879,
+     "end": 82.139
     },
     {
      "w": "zero",
-     "start": 83.058,
-     "end": 83.396
+     "start": 82.139,
+     "end": 82.457
     },
     {
      "w": "data",
-     "start": 83.396,
-     "end": 83.646
+     "start": 82.457,
+     "end": 82.693
     },
     {
      "w": "loss.",
-     "start": 83.646,
-     "end": 84.108
+     "start": 82.693,
+     "end": 83.129
     }
-   ],
-   "prosody": "+0% +0Hz +0%"
+   ]
   },
   {
    "id": "L26",
    "chapter": "OUTRO",
    "text": "Follow, biar nggak ketinggalan.",
-   "start": 84.485,
-   "end": 86.541,
+   "start": 83.509,
+   "end": 85.338,
    "words": [
     {
      "w": "Follow,",
-     "start": 84.485,
-     "end": 85.002
+     "start": 83.509,
+     "end": 83.975
     },
     {
      "w": "biar",
-     "start": 85.268,
-     "end": 85.573
+     "start": 84.211,
+     "end": 84.482
     },
     {
      "w": "nggak",
-     "start": 85.573,
-     "end": 85.733
+     "start": 84.482,
+     "end": 84.623
     },
     {
      "w": "ketinggalan.",
-     "start": 85.733,
-     "end": 86.478
+     "start": 84.623,
+     "end": 85.284
     }
-   ],
-   "prosody": "-6% -1Hz +0%"
+   ]
   }
  ]
 }

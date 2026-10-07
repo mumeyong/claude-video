@@ -1,6 +1,6 @@
 # QRIS: apa yang terjadi dalam 2 detik setelah kamu scan?
 
-- **Status:** 💡 ide · **Pilar:** B (broad) · **Format:** QUICK
+- **Status:** 🎬 produksi — [`videos/qris-dua-detik`](../videos/qris-dua-detik/) · **Pilar:** B (broad) · **Format:** QUICK
 - **Slug:** qris-dua-detik
 - **Seri:** —
 - **Durasi target:** 60–70 s

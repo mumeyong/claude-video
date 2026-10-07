@@ -1,0 +1,1371 @@
+{
+ "source": "tts",
+ "voice": "id-ID-ArdiNeural",
+ "tts": "ardi",
+ "duration": 115.47,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Bagian terbaik dari aplikasi ini? Sebagian besar waktunya, dia tidur.",
+   "start": 0.4,
+   "end": 5.177,
+   "words": [
+    {
+     "w": "Bagian",
+     "start": 0.4,
+     "end": 0.725
+    },
+    {
+     "w": "terbaik",
+     "start": 0.725,
+     "end": 1.079
+    },
+    {
+     "w": "dari",
+     "start": 1.079,
+     "end": 1.244
+    },
+    {
+     "w": "aplikasi",
+     "start": 1.244,
+     "end": 1.657
+    },
+    {
+     "w": "ini?",
+     "start": 1.657,
+     "end": 2.069
+    },
+    {
+     "w": "Sebagian",
+     "start": 2.856,
+     "end": 3.316
+    },
+    {
+     "w": "besar",
+     "start": 3.316,
+     "end": 3.552
+    },
+    {
+     "w": "waktunya,",
+     "start": 3.552,
+     "end": 4.177
+    },
+    {
+     "w": "dia",
+     "start": 4.389,
+     "end": 4.625
+    },
+    {
+     "w": "tidur.",
+     "start": 4.625,
+     "end": 5.12
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Baru bangun pas ada kejadian. Selesai, tidur lagi.",
+   "start": 5.497,
+   "end": 9.669,
+   "words": [
+    {
+     "w": "Baru",
+     "start": 5.497,
+     "end": 5.679
+    },
+    {
+     "w": "bangun",
+     "start": 5.679,
+     "end": 5.986
+    },
+    {
+     "w": "pas",
+     "start": 5.986,
+     "end": 6.221
+    },
+    {
+     "w": "ada",
+     "start": 6.221,
+     "end": 6.41
+    },
+    {
+     "w": "kejadian.",
+     "start": 6.41,
+     "end": 7.106
+    },
+    {
+     "w": "Selesai,",
+     "start": 7.893,
+     "end": 8.601
+    },
+    {
+     "w": "tidur",
+     "start": 8.813,
+     "end": 9.12
+    },
+    {
+     "w": "lagi.",
+     "start": 9.12,
+     "end": 9.615
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Dulu nggak gitu. Satu aplikasi gede, nyala terus, ngerjain semuanya.",
+   "start": 10.269,
+   "end": 15.306,
+   "words": [
+    {
+     "w": "Dulu",
+     "start": 10.269,
+     "end": 10.485
+    },
+    {
+     "w": "nggak",
+     "start": 10.485,
+     "end": 10.638
+    },
+    {
+     "w": "gitu.",
+     "start": 10.638,
+     "end": 11.122
+    },
+    {
+     "w": "Satu",
+     "start": 11.908,
+     "end": 12.238
+    },
+    {
+     "w": "aplikasi",
+     "start": 12.238,
+     "end": 12.651
+    },
+    {
+     "w": "gede,",
+     "start": 12.651,
+     "end": 13.087
+    },
+    {
+     "w": "nyala",
+     "start": 13.346,
+     "end": 13.57
+    },
+    {
+     "w": "terus,",
+     "start": 13.57,
+     "end": 14.007
+    },
+    {
+     "w": "ngerjain",
+     "start": 14.207,
+     "end": 14.608
+    },
+    {
+     "w": "semuanya.",
+     "start": 14.608,
+     "end": 15.257
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "INTRO",
+   "text": "Project ini: monolith lama, dipecah jadi event-driven.",
+   "start": 15.626,
+   "end": 19.249,
+   "words": [
+    {
+     "w": "Project",
+     "start": 15.626,
+     "end": 15.935
+    },
+    {
+     "w": "ini:",
+     "start": 15.935,
+     "end": 16.371
+    },
+    {
+     "w": "monolith",
+     "start": 16.642,
+     "end": 17.02
+    },
+    {
+     "w": "lama,",
+     "start": 17.02,
+     "end": 17.503
+    },
+    {
+     "w": "dipecah",
+     "start": 17.739,
+     "end": 18.175
+    },
+    {
+     "w": "jadi",
+     "start": 18.175,
+     "end": 18.423
+    },
+    {
+     "w": "event-driven.",
+     "start": 18.423,
+     "end": 19.201
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · MASALAH",
+   "text": "Bayangin satu rumah gede, semua kerjaan ada di dalamnya.",
+   "start": 20.249,
+   "end": 23.346,
+   "words": [
+    {
+     "w": "Bayangin",
+     "start": 20.249,
+     "end": 20.614
+    },
+    {
+     "w": "satu",
+     "start": 20.614,
+     "end": 20.838
+    },
+    {
+     "w": "rumah",
+     "start": 20.838,
+     "end": 21.027
+    },
+    {
+     "w": "gede,",
+     "start": 21.027,
+     "end": 21.451
+    },
+    {
+     "w": "semua",
+     "start": 21.711,
+     "end": 22.029
+    },
+    {
+     "w": "kerjaan",
+     "start": 22.029,
+     "end": 22.43
+    },
+    {
+     "w": "ada",
+     "start": 22.43,
+     "end": 22.642
+    },
+    {
+     "w": "di",
+     "start": 22.642,
+     "end": 22.725
+    },
+    {
+     "w": "dalamnya.",
+     "start": 22.725,
+     "end": 23.303
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · MASALAH",
+   "text": "Terima order, proses bayar, kirim notifikasi, bikin laporan. Satu atap.",
+   "start": 23.666,
+   "end": 29.462,
+   "words": [
+    {
+     "w": "Terima",
+     "start": 23.666,
+     "end": 23.844
+    },
+    {
+     "w": "order,",
+     "start": 23.844,
+     "end": 24.328
+    },
+    {
+     "w": "proses",
+     "start": 24.576,
+     "end": 24.917
+    },
+    {
+     "w": "bayar,",
+     "start": 24.917,
+     "end": 25.413
+    },
+    {
+     "w": "kirim",
+     "start": 25.672,
+     "end": 25.896
+    },
+    {
+     "w": "notifikasi,",
+     "start": 25.896,
+     "end": 26.71
+    },
+    {
+     "w": "bikin",
+     "start": 26.91,
+     "end": 27.276
+    },
+    {
+     "w": "laporan.",
+     "start": 27.276,
+     "end": 27.854
+    },
+    {
+     "w": "Satu",
+     "start": 28.642,
+     "end": 29.02
+    },
+    {
+     "w": "atap.",
+     "start": 29.02,
+     "end": 29.515
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "00 · MASALAH",
+   "text": "Lampunya nyala dua puluh empat jam, walau yang kerja cuma satu kamar.",
+   "start": 29.782,
+   "end": 33.211,
+   "words": [
+    {
+     "w": "Lampunya",
+     "start": 29.782,
+     "end": 30.168
+    },
+    {
+     "w": "nyala",
+     "start": 30.168,
+     "end": 30.392
+    },
+    {
+     "w": "dua",
+     "start": 30.392,
+     "end": 30.545
+    },
+    {
+     "w": "puluh",
+     "start": 30.545,
+     "end": 30.698
+    },
+    {
+     "w": "empat",
+     "start": 30.698,
+     "end": 30.922
+    },
+    {
+     "w": "jam,",
+     "start": 30.922,
+     "end": 31.3
+    },
+    {
+     "w": "walau",
+     "start": 31.571,
+     "end": 31.83
+    },
+    {
+     "w": "yang",
+     "start": 31.83,
+     "end": 31.96
+    },
+    {
+     "w": "kerja",
+     "start": 31.96,
+     "end": 32.255
+    },
+    {
+     "w": "cuma",
+     "start": 32.255,
+     "end": 32.467
+    },
+    {
+     "w": "satu",
+     "start": 32.467,
+     "end": 32.691
+    },
+    {
+     "w": "kamar.",
+     "start": 32.691,
+     "end": 33.151
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "00 · MASALAH",
+   "text": "Satu kamar korslet? Seluruh rumah ikut gelap.",
+   "start": 33.531,
+   "end": 36.713,
+   "words": [
+    {
+     "w": "Satu",
+     "start": 33.531,
+     "end": 33.766
+    },
+    {
+     "w": "kamar",
+     "start": 33.766,
+     "end": 33.99
+    },
+    {
+     "w": "korslet?",
+     "start": 33.99,
+     "end": 34.615
+    },
+    {
+     "w": "Seluruh",
+     "start": 35.403,
+     "end": 35.828
+    },
+    {
+     "w": "rumah",
+     "start": 35.828,
+     "end": 36.087
+    },
+    {
+     "w": "ikut",
+     "start": 36.087,
+     "end": 36.335
+    },
+    {
+     "w": "gelap.",
+     "start": 36.335,
+     "end": 36.795
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "00 · MASALAH",
+   "text": "Mau benerin dapur doang? Satu aplikasi harus di-deploy ulang.",
+   "start": 37.033,
+   "end": 40.922,
+   "words": [
+    {
+     "w": "Mau",
+     "start": 37.033,
+     "end": 37.2
+    },
+    {
+     "w": "benerin",
+     "start": 37.2,
+     "end": 37.495
+    },
+    {
+     "w": "dapur",
+     "start": 37.495,
+     "end": 37.742
+    },
+    {
+     "w": "doang?",
+     "start": 37.742,
+     "end": 38.214
+    },
+    {
+     "w": "Satu",
+     "start": 39.0,
+     "end": 39.33
+    },
+    {
+     "w": "aplikasi",
+     "start": 39.33,
+     "end": 39.814
+    },
+    {
+     "w": "harus",
+     "start": 39.814,
+     "end": 40.05
+    },
+    {
+     "w": "di-deploy",
+     "start": 40.05,
+     "end": 40.415
+    },
+    {
+     "w": "ulang.",
+     "start": 40.415,
+     "end": 40.875
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · KEPUTUSAN",
+   "text": "Jadi rumahnya dipecah.",
+   "start": 41.922,
+   "end": 43.188,
+   "words": [
+    {
+     "w": "Jadi",
+     "start": 41.922,
+     "end": 42.182
+    },
+    {
+     "w": "rumahnya",
+     "start": 42.182,
+     "end": 42.571
+    },
+    {
+     "w": "dipecah.",
+     "start": 42.571,
+     "end": 43.16
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "01 · KEPUTUSAN",
+   "text": "Tiap kerjaan dapet rumah kecil sendiri. Satu function, satu tugas.",
+   "start": 43.508,
+   "end": 48.078,
+   "words": [
+    {
+     "w": "Tiap",
+     "start": 43.508,
+     "end": 43.654
+    },
+    {
+     "w": "kerjaan",
+     "start": 43.654,
+     "end": 44.079
+    },
+    {
+     "w": "dapet",
+     "start": 44.079,
+     "end": 44.291
+    },
+    {
+     "w": "rumah",
+     "start": 44.291,
+     "end": 44.492
+    },
+    {
+     "w": "kecil",
+     "start": 44.492,
+     "end": 44.716
+    },
+    {
+     "w": "sendiri.",
+     "start": 44.716,
+     "end": 45.27
+    },
+    {
+     "w": "Satu",
+     "start": 46.057,
+     "end": 46.364
+    },
+    {
+     "w": "function,",
+     "start": 46.364,
+     "end": 46.93
+    },
+    {
+     "w": "satu",
+     "start": 47.142,
+     "end": 47.461
+    },
+    {
+     "w": "tugas.",
+     "start": 47.461,
+     "end": 48.027
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "01 · KEPUTUSAN",
+   "text": "Dan mereka nggak saling panggil. Mereka dengerin kentongan.",
+   "start": 48.398,
+   "end": 51.971,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 48.398,
+     "end": 48.544
+    },
+    {
+     "w": "mereka",
+     "start": 48.544,
+     "end": 48.827
+    },
+    {
+     "w": "nggak",
+     "start": 48.827,
+     "end": 48.969
+    },
+    {
+     "w": "saling",
+     "start": 48.969,
+     "end": 49.204
+    },
+    {
+     "w": "panggil.",
+     "start": 49.204,
+     "end": 49.747
+    },
+    {
+     "w": "Mereka",
+     "start": 50.535,
+     "end": 50.948
+    },
+    {
+     "w": "dengerin",
+     "start": 50.948,
+     "end": 51.278
+    },
+    {
+     "w": "kentongan.",
+     "start": 51.278,
+     "end": 51.938
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "01 · KEPUTUSAN",
+   "text": "Ada order masuk? Kentongan dipukul. Itu namanya event.",
+   "start": 52.291,
+   "end": 57.086,
+   "words": [
+    {
+     "w": "Ada",
+     "start": 52.291,
+     "end": 52.456
+    },
+    {
+     "w": "order",
+     "start": 52.456,
+     "end": 52.727
+    },
+    {
+     "w": "masuk?",
+     "start": 52.727,
+     "end": 53.258
+    },
+    {
+     "w": "Kentongan",
+     "start": 54.045,
+     "end": 54.552
+    },
+    {
+     "w": "dipukul.",
+     "start": 54.552,
+     "end": 55.165
+    },
+    {
+     "w": "Itu",
+     "start": 55.954,
+     "end": 56.225
+    },
+    {
+     "w": "namanya",
+     "start": 56.225,
+     "end": 56.556
+    },
+    {
+     "w": "event.",
+     "start": 56.556,
+     "end": 57.11
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "01 · KEPUTUSAN",
+   "text": "Rumah yang berkepentingan nyala, kerja, terus gelap lagi.",
+   "start": 57.406,
+   "end": 60.744,
+   "words": [
+    {
+     "w": "Rumah",
+     "start": 57.406,
+     "end": 57.643
+    },
+    {
+     "w": "yang",
+     "start": 57.643,
+     "end": 57.749
+    },
+    {
+     "w": "berkepentingan",
+     "start": 57.749,
+     "end": 58.244
+    },
+    {
+     "w": "nyala,",
+     "start": 58.244,
+     "end": 58.74
+    },
+    {
+     "w": "kerja,",
+     "start": 58.999,
+     "end": 59.553
+    },
+    {
+     "w": "terus",
+     "start": 59.766,
+     "end": 60.013
+    },
+    {
+     "w": "gelap",
+     "start": 60.013,
+     "end": 60.237
+    },
+    {
+     "w": "lagi.",
+     "start": 60.237,
+     "end": 60.709
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "02 · DIAGRAM",
+   "text": "Order masuk lewat API, jadi satu event.",
+   "start": 61.744,
+   "end": 64.22,
+   "words": [
+    {
+     "w": "Order",
+     "start": 61.744,
+     "end": 61.985
+    },
+    {
+     "w": "masuk",
+     "start": 61.985,
+     "end": 62.268
+    },
+    {
+     "w": "lewat",
+     "start": 62.268,
+     "end": 62.48
+    },
+    {
+     "w": "API,",
+     "start": 62.48,
+     "end": 62.952
+    },
+    {
+     "w": "jadi",
+     "start": 63.2,
+     "end": 63.506
+    },
+    {
+     "w": "satu",
+     "start": 63.506,
+     "end": 63.73
+    },
+    {
+     "w": "event.",
+     "start": 63.73,
+     "end": 64.237
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "02 · DIAGRAM",
+   "text": "Event itu didengar tiga function sekaligus: bayar, notifikasi, laporan. Jalan barengan.",
+   "start": 64.54,
+   "end": 71.19,
+   "words": [
+    {
+     "w": "Event",
+     "start": 64.54,
+     "end": 64.751
+    },
+    {
+     "w": "itu",
+     "start": 64.751,
+     "end": 64.964
+    },
+    {
+     "w": "didengar",
+     "start": 64.964,
+     "end": 65.282
+    },
+    {
+     "w": "tiga",
+     "start": 65.282,
+     "end": 65.518
+    },
+    {
+     "w": "function",
+     "start": 65.518,
+     "end": 65.848
+    },
+    {
+     "w": "sekaligus:",
+     "start": 65.848,
+     "end": 66.544
+    },
+    {
+     "w": "bayar,",
+     "start": 66.803,
+     "end": 67.346
+    },
+    {
+     "w": "notifikasi,",
+     "start": 67.593,
+     "end": 68.466
+    },
+    {
+     "w": "laporan.",
+     "start": 68.69,
+     "end": 69.339
+    },
+    {
+     "w": "Jalan",
+     "start": 70.129,
+     "end": 70.565
+    },
+    {
+     "w": "barengan.",
+     "start": 70.565,
+     "end": 71.166
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "02 · DIAGRAM",
+   "text": "Function-nya jalan di AWS Lambda dan Alibaba Function Compute.",
+   "start": 71.51,
+   "end": 74.701,
+   "words": [
+    {
+     "w": "Function-nya",
+     "start": 71.51,
+     "end": 71.928
+    },
+    {
+     "w": "jalan",
+     "start": 71.928,
+     "end": 72.234
+    },
+    {
+     "w": "di",
+     "start": 72.234,
+     "end": 72.317
+    },
+    {
+     "w": "AWS",
+     "start": 72.317,
+     "end": 72.635
+    },
+    {
+     "w": "Lambda",
+     "start": 72.635,
+     "end": 73.048
+    },
+    {
+     "w": "dan",
+     "start": 73.048,
+     "end": 73.225
+    },
+    {
+     "w": "Alibaba",
+     "start": 73.225,
+     "end": 73.673
+    },
+    {
+     "w": "Function",
+     "start": 73.673,
+     "end": 74.05
+    },
+    {
+     "w": "Compute.",
+     "start": 74.05,
+     "end": 74.64
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "02 · DIAGRAM",
+   "text": "Semuanya di dalam private network. Orang luar nggak bisa masuk.",
+   "start": 75.021,
+   "end": 78.772,
+   "words": [
+    {
+     "w": "Semuanya",
+     "start": 75.021,
+     "end": 75.484
+    },
+    {
+     "w": "di",
+     "start": 75.484,
+     "end": 75.59
+    },
+    {
+     "w": "dalam",
+     "start": 75.59,
+     "end": 75.826
+    },
+    {
+     "w": "private",
+     "start": 75.826,
+     "end": 76.18
+    },
+    {
+     "w": "network.",
+     "start": 76.18,
+     "end": 76.687
+    },
+    {
+     "w": "Orang",
+     "start": 77.474,
+     "end": 77.757
+    },
+    {
+     "w": "luar",
+     "start": 77.757,
+     "end": 77.981
+    },
+    {
+     "w": "nggak",
+     "start": 77.981,
+     "end": 78.146
+    },
+    {
+     "w": "bisa",
+     "start": 78.146,
+     "end": 78.335
+    },
+    {
+     "w": "masuk.",
+     "start": 78.335,
+     "end": 78.818
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "02 · DIAGRAM",
+   "text": "Mau keluar? Cuma lewat satu pintu: NAT gateway.",
+   "start": 79.092,
+   "end": 83.161,
+   "words": [
+    {
+     "w": "Mau",
+     "start": 79.092,
+     "end": 79.286
+    },
+    {
+     "w": "keluar?",
+     "start": 79.286,
+     "end": 79.875
+    },
+    {
+     "w": "Cuma",
+     "start": 80.661,
+     "end": 80.909
+    },
+    {
+     "w": "lewat",
+     "start": 80.909,
+     "end": 81.121
+    },
+    {
+     "w": "satu",
+     "start": 81.121,
+     "end": 81.333
+    },
+    {
+     "w": "pintu:",
+     "start": 81.333,
+     "end": 81.852
+    },
+    {
+     "w": "NAT",
+     "start": 82.1,
+     "end": 82.513
+    },
+    {
+     "w": "gateway.",
+     "start": 82.513,
+     "end": 83.126
+    }
+   ]
+  },
+  {
+   "id": "L20",
+   "chapter": "03 · HASIL",
+   "text": "Hasilnya: compute overhead turun drastis.",
+   "start": 84.161,
+   "end": 86.776,
+   "words": [
+    {
+     "w": "Hasilnya:",
+     "start": 84.161,
+     "end": 84.802
+    },
+    {
+     "w": "compute",
+     "start": 85.061,
+     "end": 85.415
+    },
+    {
+     "w": "overhead",
+     "start": 85.415,
+     "end": 85.84
+    },
+    {
+     "w": "turun",
+     "start": 85.84,
+     "end": 86.087
+    },
+    {
+     "w": "drastis.",
+     "start": 86.087,
+     "end": 86.724
+    }
+   ]
+  },
+  {
+   "id": "L21",
+   "chapter": "03 · HASIL",
+   "text": "Satu function error? Yang lain tetap jalan.",
+   "start": 87.096,
+   "end": 90.204,
+   "words": [
+    {
+     "w": "Satu",
+     "start": 87.096,
+     "end": 87.336
+    },
+    {
+     "w": "function",
+     "start": 87.336,
+     "end": 87.678
+    },
+    {
+     "w": "error?",
+     "start": 87.678,
+     "end": 88.149
+    },
+    {
+     "w": "Yang",
+     "start": 88.937,
+     "end": 89.149
+    },
+    {
+     "w": "lain",
+     "start": 89.149,
+     "end": 89.397
+    },
+    {
+     "w": "tetap",
+     "start": 89.397,
+     "end": 89.632
+    },
+    {
+     "w": "jalan.",
+     "start": 89.632,
+     "end": 90.163
+    }
+   ]
+  },
+  {
+   "id": "L22",
+   "chapter": "03 · HASIL",
+   "text": "Mau update satu fitur? Deploy satu function aja.",
+   "start": 90.524,
+   "end": 94.048,
+   "words": [
+    {
+     "w": "Mau",
+     "start": 90.524,
+     "end": 90.711
+    },
+    {
+     "w": "update",
+     "start": 90.711,
+     "end": 91.018
+    },
+    {
+     "w": "satu",
+     "start": 91.018,
+     "end": 91.23
+    },
+    {
+     "w": "fitur?",
+     "start": 91.23,
+     "end": 91.713
+    },
+    {
+     "w": "Deploy",
+     "start": 92.501,
+     "end": 92.961
+    },
+    {
+     "w": "satu",
+     "start": 92.961,
+     "end": 93.208
+    },
+    {
+     "w": "function",
+     "start": 93.208,
+     "end": 93.515
+    },
+    {
+     "w": "aja.",
+     "start": 93.515,
+     "end": 94.01
+    }
+   ]
+  },
+  {
+   "id": "L23",
+   "chapter": "RECAP",
+   "text": "Jadi event-driven itu bukan soal kodenya dipecah.",
+   "start": 95.048,
+   "end": 97.452,
+   "words": [
+    {
+     "w": "Jadi",
+     "start": 95.048,
+     "end": 95.306
+    },
+    {
+     "w": "event-driven",
+     "start": 95.306,
+     "end": 95.789
+    },
+    {
+     "w": "itu",
+     "start": 95.789,
+     "end": 96.06
+    },
+    {
+     "w": "bukan",
+     "start": 96.06,
+     "end": 96.32
+    },
+    {
+     "w": "soal",
+     "start": 96.32,
+     "end": 96.532
+    },
+    {
+     "w": "kodenya",
+     "start": 96.532,
+     "end": 96.85
+    },
+    {
+     "w": "dipecah.",
+     "start": 96.85,
+     "end": 97.428
+    }
+   ]
+  },
+  {
+   "id": "L24",
+   "chapter": "RECAP",
+   "text": "Tapi soal yang mukul kentongan nggak nunggu siapa-siapa. Pukul, terus pergi.",
+   "start": 97.772,
+   "end": 102.539,
+   "words": [
+    {
+     "w": "Tapi",
+     "start": 97.772,
+     "end": 97.975
+    },
+    {
+     "w": "soal",
+     "start": 97.975,
+     "end": 98.235
+    },
+    {
+     "w": "yang",
+     "start": 98.235,
+     "end": 98.353
+    },
+    {
+     "w": "mukul",
+     "start": 98.353,
+     "end": 98.577
+    },
+    {
+     "w": "kentongan",
+     "start": 98.577,
+     "end": 99.025
+    },
+    {
+     "w": "nggak",
+     "start": 99.025,
+     "end": 99.178
+    },
+    {
+     "w": "nunggu",
+     "start": 99.178,
+     "end": 99.39
+    },
+    {
+     "w": "siapa-siapa.",
+     "start": 99.39,
+     "end": 100.216
+    },
+    {
+     "w": "Pukul,",
+     "start": 101.003,
+     "end": 101.534
+    },
+    {
+     "w": "terus",
+     "start": 101.77,
+     "end": 102.006
+    },
+    {
+     "w": "pergi.",
+     "start": 102.006,
+     "end": 102.501
+    }
+   ]
+  },
+  {
+   "id": "L25",
+   "chapter": "RECAP",
+   "text": "Dan jujur: nggak semua monolith harus dipecah. Kalau dia sehat, biarin.",
+   "start": 102.859,
+   "end": 107.915,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 102.859,
+     "end": 103.032
+    },
+    {
+     "w": "jujur:",
+     "start": 103.032,
+     "end": 103.539
+    },
+    {
+     "w": "nggak",
+     "start": 103.799,
+     "end": 103.999
+    },
+    {
+     "w": "semua",
+     "start": 103.999,
+     "end": 104.235
+    },
+    {
+     "w": "monolith",
+     "start": 104.235,
+     "end": 104.612
+    },
+    {
+     "w": "harus",
+     "start": 104.612,
+     "end": 104.848
+    },
+    {
+     "w": "dipecah.",
+     "start": 104.848,
+     "end": 105.402
+    },
+    {
+     "w": "Kalau",
+     "start": 106.19,
+     "end": 106.449
+    },
+    {
+     "w": "dia",
+     "start": 106.449,
+     "end": 106.591
+    },
+    {
+     "w": "sehat,",
+     "start": 106.591,
+     "end": 107.074
+    },
+    {
+     "w": "biarin.",
+     "start": 107.239,
+     "end": 107.864
+    }
+   ]
+  },
+  {
+   "id": "L26",
+   "chapter": "OUTRO",
+   "text": "Episode depan: legacy dan container, hidup berdampingan.",
+   "start": 108.915,
+   "end": 112.521,
+   "words": [
+    {
+     "w": "Episode",
+     "start": 108.915,
+     "end": 109.261
+    },
+    {
+     "w": "depan:",
+     "start": 109.261,
+     "end": 109.756
+    },
+    {
+     "w": "legacy",
+     "start": 110.027,
+     "end": 110.464
+    },
+    {
+     "w": "dan",
+     "start": 110.464,
+     "end": 110.64
+    },
+    {
+     "w": "container,",
+     "start": 110.64,
+     "end": 111.206
+    },
+    {
+     "w": "hidup",
+     "start": 111.395,
+     "end": 111.69
+    },
+    {
+     "w": "berdampingan.",
+     "start": 111.69,
+     "end": 112.468
+    }
+   ]
+  },
+  {
+   "id": "L27",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 112.841,
+   "end": 114.67,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 112.841,
+     "end": 113.307
+    },
+    {
+     "w": "biar",
+     "start": 113.543,
+     "end": 113.814
+    },
+    {
+     "w": "nggak",
+     "start": 113.814,
+     "end": 113.955
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 113.955,
+     "end": 114.616
+    }
+   ]
+  }
+ ]
+}

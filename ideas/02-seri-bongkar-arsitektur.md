@@ -1,6 +1,6 @@
 # Seri: Bongkar Arsitektur (7 episode)
 
-- **Status:** 🎬 produksi — EP01 → [`videos/bongkar-ep01-kubernetes-10k/`](../videos/bongkar-ep01-kubernetes-10k/) · fase 5 (review) · EP02 → [`videos/bongkar-ep02-big-data-migration/`](../videos/bongkar-ep02-big-data-migration/) · fase 5 (review) · EP03 → [`videos/bongkar-ep03-serverless-big-data/`](../videos/bongkar-ep03-serverless-big-data/) · fase 5 (review)
+- **Status:** 🎬 produksi — EP01 → [`videos/bongkar-ep01-kubernetes-10k/`](../videos/bongkar-ep01-kubernetes-10k/) · fase 5 (review) · EP02 → [`videos/bongkar-ep02-big-data-migration/`](../videos/bongkar-ep02-big-data-migration/) · fase 5 (review) · EP03 → [`videos/bongkar-ep03-serverless-big-data/`](../videos/bongkar-ep03-serverless-big-data/) · fase 5 (review) · EP04 → [`videos/bongkar-ep04-monolith-event-driven/`](../videos/bongkar-ep04-monolith-event-driven/) · fase 5 (review) · EP05 → [`videos/bongkar-ep05-legacy-container-hybrid/`](../videos/bongkar-ep05-legacy-container-hybrid/) · fase 5 (review)
 - **Slug:** bongkar-<nama-episode>
 - **Seri:** Bongkar Arsitektur
 - **Durasi target:** 60–90 s per episode

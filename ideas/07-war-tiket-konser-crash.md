@@ -1,6 +1,6 @@
 # Kenapa war tiket konser selalu crash?
 
-- **Status:** 💡 ide · **Pilar:** B (broad) · **Format:** QUICK
+- **Status:** 🎬 produksi — [`videos/war-tiket-crash`](../videos/war-tiket-crash/) · **Pilar:** B (broad) · **Format:** QUICK
 - **Slug:** war-tiket-crash
 - **Seri:** —
 - **Durasi target:** 60–75 s

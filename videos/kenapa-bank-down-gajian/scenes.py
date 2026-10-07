@@ -206,7 +206,7 @@ def _traffic(c, x, y, w, h, p):
     c.ctx.set_dash([10, 8])
     c.line(x, cap_y, x + w, cap_y, C["ink2"], 2, 0.6 * clamp(p * 3))
     c.ctx.set_dash([])
-    c.text(x + w, cap_y - 12, "kapasitas hari biasa", F["mono_med"], 17, C["ink2"], clamp(p * 3), 0.04, align="r")
+    c.text(x, cap_y - 12, "kapasitas hari biasa", F["mono_med"], 17, C["ink2"], clamp(p * 3), 0.04)
     _draw_poly(c, pts, in_out_cubic(p), RED, 4)
     mp = clamp((p - 0.8) * 5)
     if mp > 0:
@@ -467,7 +467,7 @@ def obatnya(v, T, s, e):
                     paper_sheet(c, fx, fy, sw, sh, rows=4, filled=1.0)
             qa = prog(t, t_rep, 0.6)
             for k in range(3):
-                queue_dots(c, [(sx + sw + 70, sy[k] + sh / 2 + 40), (sx + sw + 6, sy[k] + sh / 2)], t, n=3, speed=0.35,
+                queue_dots(c, [(sx + sw + 48, sy[k] + sh / 2 + 36), (sx + sw + 6, sy[k] + sh / 2)], t, n=3, speed=0.35,
                            r=8, seed=10 + k, alpha=qa)
             _ptag(c, t, t_rep, sx, 1180, "read replica", C["accent"])
             fade(c, t, t_rep + 0.3, e - OUT,
