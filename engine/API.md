@@ -88,7 +88,7 @@ One line per public function: `name(signature)` — first docstring line. Import
 ## components/headline.py — Headline + kicker — the signature element.
 - `Headline(text, x=None, y=None, style="headline", width=None, ink="ink", accent="accent", align="l")` — 
   - `.bottom(self, c)` — 
-  - `.draw(self, c, t, t_in, t_out=None, strike_at=None, stagger=None)` — Words blur+rise in one by one from t_in; all blur out from t_out.
+  - `.draw(self, c, t, t_in, t_out=None, strike_at=None, stagger=None, reveal="blur", exit="blur")` — Words blur+rise in one by one from t_in; all blur out from t_out.
   - `.words(self, c)` — 
 - `kicker(c, t, t_in, t_out, label, color, x=None, y=None)` — '● 02 · NASKAH' — mono label with a chapter-colored dot.
 
@@ -111,6 +111,28 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `rumah(c, cx, base_y, s, t, light=0.0, busy=0.0, sleep=0.0, broken=0.0, label=None, label_rot=0.0, label_color=None, color=None, alpha=1.0, seed=0)` — Small house (one function), width s, standing on base_y. light/busy/sleep/broken 0..1. Label = signboard.
 - `rumah_gede(c, x, base_y, w, h, rooms, t, trip=0.0, closed=0.0, p_labels=1.0, color=None, alpha=1.0, mcb=True)` — The monolith: one wide house, rooms in a row under one roof, one MCB box on the left wall.
 - `sound_rings(c, cx, cy, p, color=None, n=3, r0=20, r_max=420, width=5, alpha=1.0, squash=1.0, arc=None)` — n expanding rings after a strike; p 0..1 over the whole spread. squash scales them vertically (< 1 = street
+
+## components/kinetic.py — Kinetic motion (opt-in, 2026-10-08): springs with personality, a persistent hero, mask / tracking text,
+- `Rig(x=540.0, y=960.0, s=1.0, rot=0.0, a=1.0)` — Position / scale / rotation / alpha of ONE object over the whole video. Instead of exiting and
+  - `.place(self, c, t, bbox=None, blur_k=None)` — Draw the hero around (0, 0) at its current state. bbox (around 0,0) enables speed blur.
+  - `.speed(self, t, dt=0.008333333333333333)` — Screen speed (px/s) at t — feed motion_blur() for fast moves.
+  - `.state(self, t)` — 
+  - `.to(self, t, dur=None, preset="snappy", anticip=0.0, **state)` — From t, move the given keys to new values (others keep their value).
+- `anticipate(p, k=0.06, preset="snappy", wind=0.22)` — Wind-up then spring: dips to −k during the first `wind` of the window, then springs to 1.
+- `curtain(c, t, t0, dur=None, color=None, reverse=False)` — Full-screen fade from (or, reverse=True, to) a color — cold opens out of darkness. Draw at z >= 100.
+- `dim_alpha(b)` — 
+- `dim_color(c, color, b)` — Exit tint: color drains toward muted over the first part of the exit (b 0..1).
+- `drift(t, t0, t1, zoom=None, rot=None, seed=0)` — Slow continuous push over a whole scene: (scale, rot, dx, dy). Nothing ever sits perfectly still.
+- `drifting(c, t, t0, t1, origin, **kw)` — 
+- `lockup(c, t, t_in, t_out, cx, base, left, right, sep="×", style="headline", colors=None, gap=None)` — 'A × B' lockup: the two words fly in from opposite edges on a heavy spring (speed-blurred), the
+- `mask_word(c, t, t_in, t_out, x, base, word, font, size, color, ls=0.0, d_in=None, exit="mask")` — One word that rises from behind its own baseline mask (and leaves up through it, or dims).
+- `motion_blur(speed, k=None)` — Blur (px) for something moving at `speed` px/s — 0 at rest, capped (tk.M['mblur_*']).
+- `parallax(c, v, t, depth)` — Re-apply v.camera at a different depth for the body: 1 = normal, 0.5 = moves half (far), 1.4 = near.
+- `sheen(c, t, t0, bbox, r=None, dur=None, width=None, angle=0.35)` — A soft light band sweeps across bbox (clipped to its rounded rect). Swap content at its middle
+- `spring_at(t, t0, preset="snappy", dur=None)` — Spring progress at t for a move starting at t0 (0 before t0, settles to exactly 1).
+- `spring_p(p, preset="snappy")` — Spring curve 0→1 (may overshoot) for p 0..1 of the preset's window. Presets: tk.SPRING.
+- `swap(t, t0, dur=None)` — (old_alpha, new_alpha) for content swapped under a sheen starting at t0.
+- `track_line(c, t, t_in, t_out, x, y, text, font, size, color, ls=None, align="l", spread=None, flash=None, d_in=None, d_out=None)` — One line of type whose letters arrive left→right while the extra tracking collapses to rest.
 
 ## components/kitchen.py — Serverless / kitchen explainer components (first used in Bongkar Arsitektur EP03).
 - `burner(c, cx, cy, s, fire, t, seed=0, hot=0.0, label=None, label_a=1.0, cold=0.0)` — Stove whose top surface is at y=cy; flame rises from it. fire 0..1 = flame size; the knob turns with it.
@@ -242,8 +264,8 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `out_back(p, s=1.5)` — 
 - `spring(p, damping=0.55, freq=2.2)` — Underdamped spring 0→1 (overshoots once, settles). p is 0..1 of the window.
 - `out_spring(p)` — Gentle settle 0→1: one small overshoot (~6%), then rest. For small pops and camera stops (opt-in, fx.py).
-- `ease(t, start, dur, fn=<function out_expo at 0x7fb99ffb56c0>)` — 
-- `inout(t, t_in, t_out, d_in=0.55, d_out=0.35, fn_in=<function out_expo at 0x7fb99ffb56c0>, fn_out=<function in_cubic at 0x7fb99ffb54e0>)` — Presence of an element that enters at t_in and leaves at t_out.
+- `ease(t, start, dur, fn=<function out_expo at 0x7fe88915d6c0>)` — 
+- `inout(t, t_in, t_out, d_in=0.55, d_out=0.35, fn_in=<function out_expo at 0x7fe88915d6c0>, fn_out=<function in_cubic at 0x7fe88915d4e0>)` — Presence of an element that enters at t_in and leaves at t_out.
 - `pulse(t, start, dur)` — 0→1→0 bump over the window (sin).
 - `blink(t, hz=1.0)` — Caret blink: 1 for the first half of each period.
 
@@ -292,7 +314,7 @@ One line per public function: `name(signature)` — first docstring line. Import
 
 ## camera `v.camera` (engine.camera)
 - `.apply(self, ctx, t)` — 
-- `.focus(self, t, box, zoom=1.06, dur=0.8, ease=<function in_out_cubic at 0x7fb99ffb5580>)` — 
-- `.key(self, t, zoom=1.0, x=None, y=None, dur=0.8, ease=<function in_out_cubic at 0x7fb99ffb5580>)` — 
-- `.reset(self, t, dur=0.8, ease=<function in_out_cubic at 0x7fb99ffb5580>)` — 
+- `.focus(self, t, box, zoom=1.06, dur=0.8, ease=<function in_out_cubic at 0x7fe88915d580>)` — 
+- `.key(self, t, zoom=1.0, x=None, y=None, dur=0.8, ease=<function in_out_cubic at 0x7fe88915d580>)` — 
+- `.reset(self, t, dur=0.8, ease=<function in_out_cubic at 0x7fe88915d580>)` — 
 - `.state(self, t)` — 

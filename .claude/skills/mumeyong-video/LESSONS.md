@@ -26,6 +26,10 @@ Finished videos (final in `hasil/`) are frozen — lessons apply to the NEXT vid
 - Fast small movers strobe at 60 fps → `ghost_trail`. Drops feel weightless → `contact_shadow` + `land`/`squash`.
 - Small pops & camera stops → `settle` (spring ~6 %). Never on big cards or headline text.
 
+## Motion signature (2026-10-08 — `components/kinetic.py`, STYLE §6d)
+- All 14 videos moved identically (out_expo + blur-rise headlines + blur-out exits, ~6 camera keys) → the user
+  found them generic. Motion is now chosen per video in PLAN.md: spring · reveal · glue · exit. Proof: videos/motion-lab.
+
 ## Process
 - Token budget (user asked 2026-10-08): one fresh session per video; read `engine/API.md` (not sources / old
   scenes.py); PLAN.md instead of IDENTITY + TREATMENT; `register` for index tables; beats helpers; 1–2 new components.

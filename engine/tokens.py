@@ -143,6 +143,24 @@ M = {
     "land_squash": 0.12,       # max squash (12% wider / shorter)
     "trail_n": 4,              # ghost-trail samples behind fast movers
     "trail_span": 0.05,        # seconds the trail reaches back
+    # kinetic.py (opt-in, 2026-10-08 — motion signature per video, STYLE §6d)
+    "mask_in": 0.75,           # word rises from behind its baseline mask
+    "track_in": 0.9,           # tracking-collapse line: letters arrive + spacing closes
+    "track_spread": 0.32,      # extra tracking at the start (em)
+    "dim_out": 0.6,            # exit: drain to grey, then fade
+    "sheen_dur": 0.7,          # light band sweeping across a card (content swaps at its middle)
+    "drift_zoom": 0.035,       # slow push over a whole scene (+3.5%)
+    "drift_rot": 0.012,        # ± rotation over that push (radians, ~0.7°)
+    "mblur_k": 0.006,          # px of blur per px/s above 300 px/s
+    "mblur_max": 16,
+    "curtain": 0.9,            # cold-open fade out of darkness
+}
+
+# Spring personalities: (damping, frequency, settle seconds). PLAN.md picks one as the video's default.
+SPRING = {
+    "snappy": (0.62, 2.0, 0.55),   # UI, tags, words — quick, one small overshoot
+    "heavy":  (0.80, 1.05, 0.95),  # big hero objects, lockups — slow, weighty, barely overshoots
+    "floaty": (0.55, 1.8, 1.25),   # soft / playful worlds — ~12% overshoot, small objects only
 }
 
 # ── shadow ──────────────────────────────────────────────────────────────

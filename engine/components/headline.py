@@ -96,9 +96,13 @@ class Headline:
         ws = self.words(c)
         return (ws[-1][4] if ws else self.y) + self.size * 0.28
 
-    def draw(self, c, t, t_in, t_out=None, strike_at=None, stagger=None):
-        """Words blur+rise in one by one from t_in; all blur out from t_out."""
+    def draw(self, c, t, t_in, t_out=None, strike_at=None, stagger=None, reveal="blur", exit="blur"):
+        """Words blur+rise in one by one from t_in; all blur out from t_out.
+        reveal: "blur" (default) · "mask" (each word springs up from behind its baseline, kinetic.py)
+        exit:   "blur" (default) · "mask" (words leave up through the mask) · "dim" (drain to grey, then fade)"""
         M = tk.M
+        if reveal != "blur" or exit != "blur":
+            return self._draw_kinetic(c, t, t_in, t_out, strike_at, stagger, reveal, exit)
         stg = M["word_stagger"] if stagger is None else stagger
         ink = c.theme(self.ink, "d_ink")
         acc = c.theme(self.accent, "d_accent")
@@ -122,6 +126,47 @@ class Headline:
             bbox = (x - 8, base - s, pw + 16, s * 1.35)
             with c.layer(bbox, vis, blur):
                 c.text(x, base + dy, w, f, s, col, 1.0, ls)
+        if strike_at is not None:
+            self._strike(c, t, strike_at, t_out)
+
+    def _groups(self, ws):
+        idx, k = [], -1
+        for (w, kind, *_r) in ws:
+            if not (kind == "plain" and re.fullmatch(r"[.,:;!?]+", w) and k >= 0):
+                k += 1
+            idx.append(k)
+        return idx
+
+    def _draw_kinetic(self, c, t, t_in, t_out, strike_at, stagger, reveal, exit):
+        from .kinetic import mask_word, dim_color, dim_alpha
+        M = tk.M
+        stg = (M["word_stagger"] * 1.4) if stagger is None else stagger
+        ink = c.theme(self.ink, "d_ink")
+        acc = c.theme(self.accent, "d_accent")
+        ws = self.words(c)
+        for (w, kind, strike, x, base, pw), i in zip(ws, self._groups(ws)):
+            f, s, ls = self._font(kind)
+            col = acc if kind != "plain" else ink
+            ti = t_in + i * stg
+            if reveal == "mask":
+                mask_word(c, t, ti, t_out, x, base, w, f, s, col, ls, exit="mask" if exit == "mask" else "dim")
+                continue
+            # blur reveal with a kinetic exit
+            a = out_expo(prog(t, ti, M["word_in"]))
+            if a <= 0.002:
+                continue
+            b = 0.0 if t_out is None else prog(t, t_out, M["out"] if exit == "mask" else M["dim_out"])
+            if b >= 1:
+                continue
+            dy = M["word_rise"] * (1 - a)
+            if exit == "mask":
+                b = in_cubic(b)
+                with c.clip(x - 10, base - s * 1.02, pw + 20, s * 1.30):
+                    with c.layer((x - 8, base - s, pw + 16, s * 1.35), a, M["word_blur"] * (1 - a)):
+                        c.text(x, base + dy - b * s * 1.05, w, f, s, col, 1.0, ls)
+            else:
+                with c.layer((x - 8, base - s, pw + 16, s * 1.35), a * dim_alpha(b), M["word_blur"] * (1 - a)):
+                    c.text(x, base + dy, w, f, s, dim_color(c, col, b), 1.0, ls)
         if strike_at is not None:
             self._strike(c, t, strike_at, t_out)
 

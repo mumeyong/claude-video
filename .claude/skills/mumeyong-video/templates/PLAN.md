@@ -18,6 +18,7 @@ durasi: <detik>
 ## Identitas
 | | |
 |---|---|
+| Motion (STYLE §6d) | spring … · reveal … · glue … · exit … (beda set dari video sebelumnya) |
 | Metafora | … (≥ 3 bab) |
 | Signature move | … (dipakai ulang di bab berbeda) |
 | Color · hook · struktur · musik | … |

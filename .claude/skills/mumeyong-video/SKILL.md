@@ -40,6 +40,7 @@ otherwise Claude runs `python -m engine new "Judul"` itself (it only writes text
 - Read `ideas/REGISTRY.md` (only the last ~5 rows matter). Fill `videos/<slug>/PLAN.md` from `templates/PLAN.md`:
   the `<!-- registry -->` block, identity table, one composition row per chapter, line notes only where the code
   won't make it obvious. **No per-line storyboard table** — the headlines/visuals live in scenes.py.
+- Motion signature (STYLE §6d: spring · reveal · glue · exit) picked in PLAN.md, different set from the last video.
 - Choices 1–5 differ from the previous two videos (STYLE §6c); metaphor in ≥ 3 chapters; no two consecutive
   chapters with the same layout (STYLE §6b); ≤ 3 cards; one accent per headline.
 - Then `python -m engine register <slug>` — it writes the REGISTRY row, music, new components and the hasil/README

@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 videos/*/out/
 hasil/**/*.mp4
+
+# reference videos for motion study (not ours to publish)
+refs/

@@ -96,7 +96,8 @@ Full list + do/don't: `GLOSSARY.md`.
 ## 6. Motion
 
 - **Everything eases out**: entrances `out_expo`, exits `in_cubic`. Never linear (except progress bars/timers).
-- Headline: words enter one by one — blur 18→0, rise 26→0, opacity 0→1, 0.55 s, stagger 0.06 s.
+- Headline: words enter one by one — blur 18→0, rise 26→0, opacity 0→1, 0.55 s, stagger 0.06 s. (= the classic
+  `blur` reveal — one of several motion signatures, §6d).
 - Cards: rise 48, scale .965→1, blur 12→0, 0.6 s. Stagger sibling cards 0.08–0.12 s.
 - Exit (scene change): blur → 14, fade, drift up 14–18 px, 0.35 s. Everything leaves together.
 - Chapter change: headline/cards exit, HUD label crossfades, dot fills with chapter color, bg tint crossfades 0.6 s, kicker slides in from −14 px. A `whoosh` SFX lands on it.
@@ -130,11 +131,14 @@ The skeleton (HUD, kicker, headline, chapter dots) stays constant; **what's unde
 
 ## 6c. Brand DNA vs identity — unique, never generic
 
-**Brand DNA (fixed in every video, ~40%)** — HUD, fonts, accent blue `#1F5EFF`, chapter dots, motion feel
-(blur-in, easing, transition rhythm), outro/logo/CTA, SFX palette. Never changes per video.
+**Brand DNA (fixed in every video, ~40%)** — HUD, fonts, accent blue `#1F5EFF`, chapter dots, "everything eases
+out / nothing linear", outro/logo/CTA, SFX palette. Never changes per video.
+*(Until 2026-10-08 the whole motion feel — blur-in headlines, `out_expo`, blur-out exits — was DNA too. That made
+every video move identically; it is now the per-video **motion signature**, §6d.)*
 
 **Identity (chosen per video, ~60%)** — written in `videos/<slug>/PLAN.md` (phase 1.5) from
 `templates/PLAN.md`, checked against `ideas/REGISTRY.md`:
+0. **Motion signature** (§6d) — spring preset · headline reveal · scene-to-scene glue · exit. Differs from the previous video.
 1. **Central metaphor** — one "world" used in ≥ 3 chapters, not only the hook.
 2. **Signature move** — one motion the video owns (rolling digits, lights switching off, snapping grid…).
 3. **Signature color** — one chapter-palette color that owns the hero objects. Accent blue stays for words/UI.
@@ -150,6 +154,26 @@ not be the *hero* of two consecutive videos.
 
 **Human touch (at least 3 of 4):** a real artefact (anonymised screenshot/output/number) · an opinion only
 you would say · one surprise moment · deliberate imperfection (hand note, tilted stamp, hesitant cursor).
+
+## 6d. Motion signature — kinetic layer (`components/kinetic.py`, new videos from 2026-10-08)
+
+Studied from @davianmotion: one hero that never leaves, type that *arrives*, swaps hidden by light, a camera
+that never sits still, exits that fade to grey instead of blurring away. Each video picks **one choice per row** in
+PLAN.md (“Motion”) and keeps it for the whole video; the previous video's choices may not be repeated as a set.
+
+| | Options |
+|---|---|
+| Spring (`tk.SPRING`) | `snappy` (UI, quick ~11%) · `heavy` (weighty, ~3%) · `floaty` (soft, ~15%, small objects only) |
+| Headline reveal | `blur` (classic) · `mask` (words spring up from behind the baseline) · `track_line` (letters arrive, tracking collapses — 1–3 words, punch lines) |
+| Scene glue | **persistent hero** `Rig` (the hero moves/scales to its next spot instead of exit+enter, `anticip=` wind-up) · `sheen` + `swap` (light band hides a content change) · `lockup` (A × B fly in from both edges) |
+| Exit | `blur` (classic) · `dim` (drain to grey, then fade) · `mask` (leave up through the baseline) |
+| Always alive | `drifting` on the hero for the whole scene (+3.5% push, ±0.7°) · `parallax` for background props (depth 0.4–0.7) |
+
+Rules: a persistent hero = **max one** `Rig` hero per chapter, and it moves at most once per spoken line.
+Big objects use `heavy`, never `floaty`. `anticip` ≤ 0.08. `track_line` only for ≤ 3 words in `headline`/`headline_lg`/`mega`.
+`sheen` is a soft highlight on a card, not a lens flare — never on text alone, max once per ~10 s.
+`curtain` (fade from darkness) is allowed for a cold-open hook only. Neon glow / bloom stays banned (§8).
+Proof sheet for every move: `videos/motion-lab`.
 
 ## 7. Sound
 
