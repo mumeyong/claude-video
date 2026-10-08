@@ -9,7 +9,7 @@ Headline syntax:
 import re
 
 from .. import tokens as tk
-from ..ease import out_expo, in_cubic, prog
+from ..ease import out_expo, in_cubic, in_out_cubic, mix, prog
 from .motion import appear  # noqa: F401  (re-export convenience)
 
 _TOKEN = re.compile(r"([*_~])[^*_~]+?\1[.,:;!?]*|\S+")
@@ -99,6 +99,7 @@ class Headline:
     def draw(self, c, t, t_in, t_out=None, strike_at=None, stagger=None, reveal="blur", exit="blur"):
         """Words blur+rise in one by one from t_in; all blur out from t_out.
         reveal: "blur" (default) · "mask" (each word springs up from behind its baseline, kinetic.py)
+                · "ink" (Apple: whole line fades in faint, then words ink in one by one)
         exit:   "blur" (default) · "mask" (words leave up through the mask) · "dim" (drain to grey, then fade)"""
         M = tk.M
         if reveal != "blur" or exit != "blur":
@@ -148,6 +149,15 @@ class Headline:
             f, s, ls = self._font(kind)
             col = acc if kind != "plain" else ink
             ti = t_in + i * stg
+            if reveal == "ink":
+                a0 = out_expo(prog(t, t_in, M["word_in"]))
+                k = in_out_cubic(prog(t, t_in + 0.25 + i * M["ink_stagger"], M["ink_in"]))
+                b = 0.0 if t_out is None else prog(t, t_out, M["dim_out"])
+                if a0 <= 0.002 or b >= 1:
+                    continue
+                col = mix(c.theme("faint", "d_line"), col, k)
+                c.text(x, base, w, f, s, dim_color(c, col, b) if exit == "dim" else col, a0 * dim_alpha(b), ls)
+                continue
             if reveal == "mask":
                 mask_word(c, t, ti, t_out, x, base, w, f, s, col, ls, exit="mask" if exit == "mask" else "dim")
                 continue

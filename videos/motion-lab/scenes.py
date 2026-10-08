@@ -4,9 +4,10 @@ Each chapter shows the old move first (LAMA tag), then the new one (BARU tag), s
 side by side in time. Reference: @davianmotion (persistent hero, type that arrives, light swaps, dim exits).
 """
 from engine import Video, tokens as tk
-from engine.ease import prog, in_out_cubic
+from engine.ease import prog, in_out_cubic, out_expo
 from engine.components import (Headline, kicker, appear, fade, phone, pop_tag, wobble, brand_intro, check_badge,
-                               Rig, drifting, parallax, track_line, sheen, swap, lockup, curtain, spring_at)
+                               Rig, drifting, parallax, track_line, sheen, swap, lockup, curtain, spring_at,
+                               Morph, bento, turn_at, yaw, press, fmt_id)
 
 L, M, C, F = tk.L, tk.M, tk.C, tk.F
 OUT = M["out"]
@@ -21,14 +22,15 @@ NOTIF = (-118, -40, 236, 120)  # notification card on the phone screen, local co
 
 def build(project):
     T = project.timing
-    v = Video(duration=T.line("L12").end + OUTRO_TAIL, bpm=128, beat_offset=0.0)
+    v = Video(duration=T.line("L16").end + OUTRO_TAIL, bpm=128, beat_offset=0.0)
     brand_intro(v)
     v.music = dict(key="D", mood="dreamy")
-    b = {n: T.chapter_span(n)[0] - LEAD for n in ("00 · TEKS", "01 · HERO", "02 · KAMERA", "OUTRO")}
+    b = {n: T.chapter_span(n)[0] - LEAD for n in ("00 · TEKS", "01 · HERO", "02 · KAMERA", "03 · KEYNOTE", "OUTRO")}
     intro(v, T, 0.0, b["00 · TEKS"])
     teks(v, T, b["00 · TEKS"], b["01 · HERO"])
     hero(v, T, b["01 · HERO"], b["02 · KAMERA"])
-    kamera(v, T, b["02 · KAMERA"], b["OUTRO"])
+    kamera(v, T, b["02 · KAMERA"], b["03 · KEYNOTE"])
+    keynote(v, T, b["03 · KEYNOTE"], b["OUTRO"])
     outro(v, T, b["OUTRO"], v.duration)
     v.cover_t = T.word("L07", "pindah") + 1.2
     return v
@@ -180,15 +182,85 @@ def kamera(v, T, s, e):
     v.sfx("whoosh", L11.start - 0.2)
 
 
+# ── 03 · KEYNOTE: Apple feel — silk spring, ink-in text, bento, morphing pill ─
+BENTO = [("UPTIME", "99,9", "%"), ("ZONA", "3", " AZ"), ("POD", "48", ""), ("P95", "120", " ms")]
+
+
+def _tile(label, value, unit, big=False):
+    def draw(c, x, y, w, h, p):
+        c.text(x + 32, y + 52, label, F["mono_med"], 19, C["muted"], 1, 0.18)
+        size = 150 if big else 96
+        c.text(x + 30, y + h - 40, value, F["display"], size, C["ink"], 1, -0.055)
+        vw = c.measure(value, F["display"], size, -0.055)[0]
+        c.text(x + 30 + vw + 6, y + h - 40, unit, F["display_semi"], size * 0.4, C["accent"], p)
+    return draw
+
+
+def keynote(v, T, s, e):
+    ch = v.chapter(3, "KEYNOTE", s, e)
+    L12, L13, L14, L15 = T["L12"], T["L13"], T["L14"], T["L15"]
+    t_melar = T.word("L15", "melar")
+    head = Headline("Teks yang *nyala*\nkata demi kata.")
+
+    hero = Rig(tk.W / 2, 1080, s=2.6, a=0.0)
+    hero.to(L12.start, a=1.0, s=1.0, preset="silk", dur=1.6)
+    hero.to(L14.start - 0.2, a=0.0, s=0.92, preset="silk")
+
+    pill = Morph((tk.W / 2 - 110, 640, 220, 60), r=30)
+    pill.to(t_melar, (X, 600, CW, 560), r=44)
+
+    def draw(c, t):
+        kicker(c, t, s + 0.2, e - OUT, "03 · KEYNOTE", ch.color)
+        head.draw(c, t, L13.start, L14.start - 0.3, reveal="ink", exit="dim")
+        if t < L14.start + 0.6:
+            with hero.place(c, t):
+                with yaw(c, 0, 0, turn_at(t, L12.start, dur=1.8)):
+                    phone(c, -PW / 2, -PH / 2, PW, PH, draw_screen=_screen(t, None))
+        tiles = [(0, 0, 2, 1, _tile(*BENTO[0], big=True)), (0, 1, 1, 1, _tile(*BENTO[1])),
+                 (1, 1, 1, 2, _tile(*BENTO[2], big=True)), (0, 2, 1, 1, _tile(*BENTO[3]))]
+        bento(c, t, L14.start, (X, 600, CW, 800), tiles, cols=2, rows=3, t_out=L15.start - 0.3)
+        if t >= L15.start - 0.1:
+            a = out_expo(prog(t, L15.start - 0.1, 0.4)) * (1 - in_out_cubic(prog(t, e - OUT, OUT)))
+            pill.draw(c, t, C["ink"], content=_pill_content, alpha=a)
+            bx, by, bw, bh = X + CW / 2 - 140, 1260, 280, 84
+            sc = press(t, L15.start + 0.35)
+            with c.at(0, 0, sc, origin=(bx + bw / 2, by + bh / 2)):
+                c.fill_rrect(bx, by, bw, bh, bh / 2, C["accent"], a)
+                c.text(bx + bw / 2, by + 54, "Bayar", F["ui_semi"], 32, C["card"], a, align="c")
+        _label(c, t, L12.start + 0.3, L13.start - 0.2, "BARU · silk spring + yaw turn", NEW)
+        _label(c, t, L13.start + 0.3, L14.start - 0.3, "BARU · Headline reveal=ink", NEW)
+        _label(c, t, L14.start + 0.3, L15.start - 0.3, "BARU · bento", NEW)
+        _label(c, t, L15.start + 0.3, e - OUT, "BARU · press + Morph", NEW)
+    v.add(s, e, draw)
+    v.sfx("whoosh", L12.start)
+    v.sfx("pop", L14.start)
+    v.sfx("key", L15.start + 0.35)
+    v.sfx("whoosh", t_melar)
+    v.camera.key(L12.start, zoom=1.0, y=960, dur=0.01).key(L12.start + 0.05, zoom=1.03, y=1000, dur=2.6)
+    v.camera.reset(L14.start - 0.2, dur=0.8)
+
+
+def _pill_content(c, box, k):
+    x, y, w, h = box
+    if k == 0:
+        c.circle(x + 30, y + h / 2, 8, C["ok"])
+        c.text(x + 52, y + h / 2 + 9, "Live", F["ui_semi"], 26, C["d_ink"])
+        return
+    c.text(x + 48, y + 90, "PESANAN", F["mono_bold"], 22, C["d_muted"], 1, 0.18)
+    c.text(x + 46, y + 230, "Order #2951", F["display"], 96, C["d_ink"], 1, -0.055)
+    c.circle(x + 70, y + 330, 22, C["ok"])
+    c.text(x + 108, y + 342, "Terkonfirmasi · Rp" + fmt_id(5000), F["ui_semi"], 32, C["d_ink"])
+
+
 # ── OUTRO: dark, mask headline + bookend lockup ─────────────────────────
 def outro(v, T, s, e):
     v.chapter(None, "OUTRO", s, e, dark=True)
-    L12 = T["L12"]
+    L16 = T["L16"]
     head = Headline("Mana yang\npaling *kerasa*?", y=620, style="headline_dark")
 
     def draw(c, t):
-        head.draw(c, t, L12.start, e - M["dim_out"], reveal="mask", exit="dim")
-        lockup(c, t, T.word("L12", "kabarin"), e - M["dim_out"], tk.W / 2, 1150, "LAMA", "BARU",
+        head.draw(c, t, L16.start, e - M["dim_out"], reveal="mask", exit="dim")
+        lockup(c, t, T.word("L16", "kabarin"), e - M["dim_out"], tk.W / 2, 1150, "LAMA", "BARU",
                style="headline_lg")
     v.add(s, e, draw)
-    v.sfx("thud", T.word("L12", "kabarin") + 0.45)
+    v.sfx("thud", T.word("L16", "kabarin") + 0.45)

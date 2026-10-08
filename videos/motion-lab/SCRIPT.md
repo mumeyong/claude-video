@@ -1,8 +1,8 @@
 # Motion lab — gerakan lama vs gerakan baru
 
-> Bukan video untuk diposting: proof sheet untuk `engine/components/kinetic.py` (STYLE §6d), referensi @davianmotion.
+> Bukan video untuk diposting: proof sheet untuk `kinetic.py` + `keynote.py` (STYLE §6d), referensi @davianmotion + Apple keynote.
 > Tiap baris = satu teknik. Lama dulu, terus baru, biar kelihatan bedanya.
-> Tech terms English (GLOSSARY.md): spring, mask, tracking, hero, scene, parallax. Marks: *kata* = tekanan, ' //' = napas.
+> Tech terms English (GLOSSARY.md): spring, mask, tracking, hero, scene, parallax, bento grid, pill. Marks: *kata* = tekanan, ' //' = napas.
 
 ## INTRO
 [L01] Ini motion lab. Gerakan *lama*, lawan gerakan *baru*.
@@ -23,5 +23,11 @@
 [L10] Kamera lama: zoom rata, semua ikut gerak bareng.
 [L11] Kamera baru: tiga lapis, beda kecepatan. Ada *kedalaman*.
 
+## 03 · KEYNOTE
+[L12] Gaya Apple: semuanya halus, tanpa mantul.
+[L13] Teksnya nyala kata demi kata.
+[L14] Kartunya nyusun jadi bento grid.
+[L15] Dan satu pill kecil bisa *melar* jadi kartu penuh. //
+
 ## OUTRO
-[L12] Mana yang paling kerasa? Kabarin aku. //
+[L16] Mana yang paling kerasa? Kabarin aku. //

@@ -170,7 +170,7 @@ def track_line(c, t, t_in, t_out, x, y, text, font, size, color, ls=None, align=
     font = tk.F key ('display', 'ui_bold', 'mono_bold' …). y = baseline. Returns the resting width."""
     M = tk.M
     f = tk.F[font]
-    ls = tk.T["headline"][1] if ls is None else ls
+    ls = (0.0 if text.isupper() else tk.T["headline"][1]) if ls is None else ls  # caps need air
     spread = M["track_spread"] if spread is None else spread
     d_in = d_in or M["track_in"]
     d_out = d_out or M["dim_out"]

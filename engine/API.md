@@ -112,6 +112,17 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `rumah_gede(c, x, base_y, w, h, rooms, t, trip=0.0, closed=0.0, p_labels=1.0, color=None, alpha=1.0, mcb=True)` — The monolith: one wide house, rooms in a row under one roof, one MCB box on the left wall.
 - `sound_rings(c, cx, cy, p, color=None, n=3, r0=20, r_max=420, width=5, alpha=1.0, squash=1.0, arc=None)` — n expanding rings after a strike; p 0..1 over the whole spread. squash scales them vertically (< 1 = street
 
+## components/keynote.py — Keynote motion (opt-in, 2026-10-08): the Apple product-film / iOS feel — silk springs with no visible bounce,
+- `Morph(box, r=None, preset="silk")` — A rounded rect whose box + radius spring between keys. Content cross-fades between keys.
+  - `.draw(self, c, t, color, content=None, shadow="card", alpha=1.0)` — Fill the shape; content(c, box, k) draws inside it (clipped), old key fading out as the new fades in.
+  - `.state(self, t)` — (box, r, k, blend): k = index of the last key started (0 = base), blend 0..1 into it.
+  - `.to(self, t, box, r=None, dur=None, preset=None)` — 
+- `bento(c, t, t0, area, tiles, cols=2, rows=2, gap=None, t_out=None, card=True)` — Tiles assemble into a grid: each rises + scales from .94 + fades, staggered outward from the first tile.
+- `press(t, t0)` — Button press scale: 1 → .94 in 0.12 s, then springs back (snappy). Use as c.at(scale=press(t, t_tap)).
+- `sheet(c, t, t_in, t_out, box, draw, dim=None, r=None)` — Floating sheet that slides up from below the frame on a silk spring and dims what's behind it.
+- `turn_at(t, t0, from_angle=None, dur=None)` — Yaw angle (radians) easing from from_angle to 0 (facing the camera) on a silk spring.
+- `yaw(c, cx, cy, angle)` — Fake 3D turn around the vertical axis through (cx, cy): horizontal squash by cos + slight shear.
+
 ## components/kinetic.py — Kinetic motion (opt-in, 2026-10-08): springs with personality, a persistent hero, mask / tracking text,
 - `Rig(x=540.0, y=960.0, s=1.0, rot=0.0, a=1.0)` — Position / scale / rotation / alpha of ONE object over the whole video. Instead of exiting and
   - `.place(self, c, t, bbox=None, blur_k=None)` — Draw the hero around (0, 0) at its current state. bbox (around 0,0) enables speed blur.
@@ -264,8 +275,8 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `out_back(p, s=1.5)` — 
 - `spring(p, damping=0.55, freq=2.2)` — Underdamped spring 0→1 (overshoots once, settles). p is 0..1 of the window.
 - `out_spring(p)` — Gentle settle 0→1: one small overshoot (~6%), then rest. For small pops and camera stops (opt-in, fx.py).
-- `ease(t, start, dur, fn=<function out_expo at 0x7fe88915d6c0>)` — 
-- `inout(t, t_in, t_out, d_in=0.55, d_out=0.35, fn_in=<function out_expo at 0x7fe88915d6c0>, fn_out=<function in_cubic at 0x7fe88915d4e0>)` — Presence of an element that enters at t_in and leaves at t_out.
+- `ease(t, start, dur, fn=<function out_expo at 0x7f46b52156c0>)` — 
+- `inout(t, t_in, t_out, d_in=0.55, d_out=0.35, fn_in=<function out_expo at 0x7f46b52156c0>, fn_out=<function in_cubic at 0x7f46b52154e0>)` — Presence of an element that enters at t_in and leaves at t_out.
 - `pulse(t, start, dur)` — 0→1→0 bump over the window (sin).
 - `blink(t, hz=1.0)` — Caret blink: 1 for the first half of each period.
 
@@ -314,7 +325,7 @@ One line per public function: `name(signature)` — first docstring line. Import
 
 ## camera `v.camera` (engine.camera)
 - `.apply(self, ctx, t)` — 
-- `.focus(self, t, box, zoom=1.06, dur=0.8, ease=<function in_out_cubic at 0x7fe88915d580>)` — 
-- `.key(self, t, zoom=1.0, x=None, y=None, dur=0.8, ease=<function in_out_cubic at 0x7fe88915d580>)` — 
-- `.reset(self, t, dur=0.8, ease=<function in_out_cubic at 0x7fe88915d580>)` — 
+- `.focus(self, t, box, zoom=1.06, dur=0.8, ease=<function in_out_cubic at 0x7f46b5215580>)` — 
+- `.key(self, t, zoom=1.0, x=None, y=None, dur=0.8, ease=<function in_out_cubic at 0x7f46b5215580>)` — 
+- `.reset(self, t, dur=0.8, ease=<function in_out_cubic at 0x7f46b5215580>)` — 
 - `.state(self, t)` — 

@@ -1,6 +1,6 @@
 # NASKAH — Motion lab — gerakan lama vs gerakan baru
 
-> 12 kalimat · 91 kata · ± 0:33 kalau dibaca ± 160 kata/menit
+> 16 kalimat · 116 kata · ± 0:43 kalau dibaca ± 160 kata/menit
 > **Cara rekam:** baca dari atas sampai bawah **sekali jalan**. Salah? Diam 1 detik, ulangi kalimat itu aja.
 > **Tebal** = kasih tekanan. ⏸ = jeda ganti bab. Nomor kecil [Lxx] cuma buat referensi, nggak dibaca.
 > Generated dari SCRIPT.md — jangan edit file ini, edit SCRIPT.md lalu generate ulang.
@@ -47,9 +47,22 @@
 
 *⏸ jeda ± 1 detik*
 
+## 03 · KEYNOTE
+
+<sub>L12</sub> Gaya Apple: semuanya halus, tanpa mantul.  
+
+<sub>L13</sub> Teksnya nyala kata demi kata.  
+
+<sub>L14</sub> Kartunya nyusun jadi bento grid.  
+
+<sub>L15</sub> Dan satu pill kecil bisa **melar** jadi kartu penuh.  ·  *(napas)*  
+
+
+*⏸ jeda ± 1 detik*
+
 ## OUTRO
 
-<sub>L12</sub> Mana yang paling kerasa? Kabarin aku.  ·  *(napas)*  
+<sub>L16</sub> Mana yang paling kerasa? Kabarin aku.  ·  *(napas)*  
 
 ---
 

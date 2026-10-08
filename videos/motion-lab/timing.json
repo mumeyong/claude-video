@@ -2,7 +2,7 @@
  "source": "tts",
  "voice": "id-ID-ArdiNeural",
  "tts": "ardi",
- "duration": 45.204,
+ "duration": 55.38,
  "lines": [
   {
    "id": "L01",
@@ -530,40 +530,201 @@
   },
   {
    "id": "L12",
+   "chapter": "03 · KEYNOTE",
+   "text": "Gaya Apple: semuanya halus, tanpa mantul.",
+   "start": 41.607,
+   "end": 44.513,
+   "words": [
+    {
+     "w": "Gaya",
+     "start": 41.607,
+     "end": 41.837
+    },
+    {
+     "w": "Apple:",
+     "start": 41.837,
+     "end": 42.332
+    },
+    {
+     "w": "semuanya",
+     "start": 42.556,
+     "end": 42.98
+    },
+    {
+     "w": "halus,",
+     "start": 42.98,
+     "end": 43.464
+    },
+    {
+     "w": "tanpa",
+     "start": 43.629,
+     "end": 43.936
+    },
+    {
+     "w": "mantul.",
+     "start": 43.936,
+     "end": 44.478
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "03 · KEYNOTE",
+   "text": "Teksnya nyala kata demi kata.",
+   "start": 44.833,
+   "end": 46.269,
+   "words": [
+    {
+     "w": "Teksnya",
+     "start": 44.833,
+     "end": 45.163
+    },
+    {
+     "w": "nyala",
+     "start": 45.163,
+     "end": 45.364
+    },
+    {
+     "w": "kata",
+     "start": 45.364,
+     "end": 45.576
+    },
+    {
+     "w": "demi",
+     "start": 45.576,
+     "end": 45.753
+    },
+    {
+     "w": "kata.",
+     "start": 45.753,
+     "end": 46.225
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "03 · KEYNOTE",
+   "text": "Kartunya nyusun jadi bento grid.",
+   "start": 46.589,
+   "end": 48.226,
+   "words": [
+    {
+     "w": "Kartunya",
+     "start": 46.589,
+     "end": 46.957
+    },
+    {
+     "w": "nyusun",
+     "start": 46.957,
+     "end": 47.288
+    },
+    {
+     "w": "jadi",
+     "start": 47.288,
+     "end": 47.523
+    },
+    {
+     "w": "bento",
+     "start": 47.523,
+     "end": 47.854
+    },
+    {
+     "w": "grid.",
+     "start": 47.854,
+     "end": 48.231
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "03 · KEYNOTE",
+   "text": "Dan satu pill kecil bisa melar jadi kartu penuh.",
+   "start": 48.546,
+   "end": 50.783,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 48.546,
+     "end": 48.701
+    },
+    {
+     "w": "satu",
+     "start": 48.701,
+     "end": 48.937
+    },
+    {
+     "w": "pill",
+     "start": 48.937,
+     "end": 49.079
+    },
+    {
+     "w": "kecil",
+     "start": 49.079,
+     "end": 49.409
+    },
+    {
+     "w": "bisa",
+     "start": 49.409,
+     "end": 49.609
+    },
+    {
+     "w": "melar",
+     "start": 49.609,
+     "end": 49.869
+    },
+    {
+     "w": "jadi",
+     "start": 49.869,
+     "end": 50.104
+    },
+    {
+     "w": "kartu",
+     "start": 50.104,
+     "end": 50.352
+    },
+    {
+     "w": "penuh.",
+     "start": 50.352,
+     "end": 50.777
+    }
+   ]
+  },
+  {
+   "id": "L16",
    "chapter": "OUTRO",
    "text": "Mana yang paling kerasa? Kabarin aku.",
-   "start": 41.607,
-   "end": 44.404,
+   "start": 51.783,
+   "end": 54.58,
    "words": [
     {
      "w": "Mana",
-     "start": 41.607,
-     "end": 41.808
+     "start": 51.783,
+     "end": 51.984
     },
     {
      "w": "yang",
-     "start": 41.808,
-     "end": 41.938
+     "start": 51.984,
+     "end": 52.114
     },
     {
      "w": "paling",
-     "start": 41.938,
-     "end": 42.139
+     "start": 52.114,
+     "end": 52.314
     },
     {
      "w": "kerasa?",
-     "start": 42.139,
-     "end": 42.681
+     "start": 52.314,
+     "end": 52.857
     },
     {
      "w": "Kabarin",
-     "start": 43.468,
-     "end": 43.88
+     "start": 53.643,
+     "end": 54.056
     },
     {
      "w": "aku.",
-     "start": 43.88,
-     "end": 44.364
+     "start": 54.056,
+     "end": 54.54
     }
    ]
   }

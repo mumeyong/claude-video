@@ -155,24 +155,26 @@ not be the *hero* of two consecutive videos.
 **Human touch (at least 3 of 4):** a real artefact (anonymised screenshot/output/number) · an opinion only
 you would say · one surprise moment · deliberate imperfection (hand note, tilted stamp, hesitant cursor).
 
-## 6d. Motion signature — kinetic layer (`components/kinetic.py`, new videos from 2026-10-08)
+## 6d. Motion signature — kinetic + keynote layers (`components/kinetic.py`, `keynote.py`, new videos from 2026-10-08)
 
-Studied from @davianmotion: one hero that never leaves, type that *arrives*, swaps hidden by light, a camera
+Studied from @davianmotion + Apple keynotes / iOS: one hero that never leaves, type that *arrives*, swaps hidden by light, a camera
 that never sits still, exits that fade to grey instead of blurring away. Each video picks **one choice per row** in
 PLAN.md (“Motion”) and keeps it for the whole video; the previous video's choices may not be repeated as a set.
 
 | | Options |
 |---|---|
-| Spring (`tk.SPRING`) | `snappy` (UI, quick ~11%) · `heavy` (weighty, ~3%) · `floaty` (soft, ~15%, small objects only) |
-| Headline reveal | `blur` (classic) · `mask` (words spring up from behind the baseline) · `track_line` (letters arrive, tracking collapses — 1–3 words, punch lines) |
-| Scene glue | **persistent hero** `Rig` (the hero moves/scales to its next spot instead of exit+enter, `anticip=` wind-up) · `sheen` + `swap` (light band hides a content change) · `lockup` (A × B fly in from both edges) |
+| Spring (`tk.SPRING`) | `snappy` (UI, quick ~11%) · `heavy` (weighty, ~3%) · `floaty` (soft, ~15%, small objects only) · `silk` (Apple keynote, no visible overshoot) |
+| Headline reveal | `blur` (classic) · `ink` (Apple: line fades in faint, words ink in one by one) · `mask` (words spring up from behind the baseline) · `track_line` (letters arrive, tracking collapses — 1–3 words, punch lines) |
+| Scene glue | **persistent hero** `Rig` (the hero moves/scales to its next spot instead of exit+enter, `anticip=` wind-up) · `sheen` + `swap` (light band hides a content change) · `lockup` (A × B fly in from both edges) · `Morph` (pill grows into a card — Dynamic Island / App Store expand) · `bento` (tiles assemble) · `sheet` (floating sheet slides up) |
 | Exit | `blur` (classic) · `dim` (drain to grey, then fade) · `mask` (leave up through the baseline) |
+| Hero entrance | full-bleed shrink into place (`Rig` s 2–2,6 → 1, `silk`) · `yaw` + `turn_at` (product turns to face camera) · `press` on any button that gets tapped |
 | Always alive | `drifting` on the hero for the whole scene (+3.5% push, ±0.7°) · `parallax` for background props (depth 0.4–0.7) |
 
 Rules: a persistent hero = **max one** `Rig` hero per chapter, and it moves at most once per spoken line.
 Big objects use `heavy`, never `floaty`. `anticip` ≤ 0.08. `track_line` only for ≤ 3 words in `headline`/`headline_lg`/`mega`.
 `sheen` is a soft highlight on a card, not a lens flare — never on text alone, max once per ~10 s.
-`curtain` (fade from darkness) is allowed for a cold-open hook only. Neon glow / bloom stays banned (§8).
+`curtain` (fade from darkness) is allowed for a cold-open hook only. Neon glow / bloom and frosted-glass blur stay banned (§8).
+A keynote-style video (`silk` + `ink` + `bento`/`Morph`) keeps the left-aligned column — no centered statement text.
 Proof sheet for every move: `videos/motion-lab`.
 
 ## 7. Sound

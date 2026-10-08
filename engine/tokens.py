@@ -126,6 +126,7 @@ L = {
     "content_bottom": 1330,
     "chips_y": 1338,      # chip row top
     "chat_y": 1400, "chat_h": 152,
+    "radius_bento": 36,   # keynote bento tiles / floating sheets
     "radius_card": 22, "radius_chat": 32, "radius_pill": 999,
 }
 
@@ -154,6 +155,13 @@ M = {
     "mblur_k": 0.006,          # px of blur per px/s above 300 px/s
     "mblur_max": 16,
     "curtain": 0.9,            # cold-open fade out of darkness
+    # keynote.py (opt-in, 2026-10-08 — Apple / iOS feel)
+    "bento_gap": 18, "bento_in": 0.9, "bento_stagger": 0.09,
+    "turn_from": 0.9,          # product yaw before it turns to face the camera (radians, ~52°)
+    "press_dip": 0.06,         # button press scale dip
+    "sheet_dim": 0.18,         # backdrop dim behind a floating sheet
+    "ink_stagger": 0.11,       # Headline reveal="ink": per-word ink-in
+    "ink_in": 0.55,
 }
 
 # Spring personalities: (damping, frequency, settle seconds). PLAN.md picks one as the video's default.
@@ -161,6 +169,7 @@ SPRING = {
     "snappy": (0.62, 2.0, 0.55),   # UI, tags, words — quick, one small overshoot
     "heavy":  (0.80, 1.05, 0.95),  # big hero objects, lockups — slow, weighty, barely overshoots
     "floaty": (0.55, 1.8, 1.25),   # soft / playful worlds — ~12% overshoot, small objects only
+    "silk":   (0.93, 0.9, 1.15),   # Apple keynote — long, smooth, no visible overshoot (morphs, sheets, heroes)
 }
 
 # ── shadow ──────────────────────────────────────────────────────────────

@@ -34,5 +34,6 @@ from .brand import mumei_mark, brand_sting, brand_intro, STING as BRAND_STING
 from .fx import settle, land, squash, contact_shadow, ghost_trail
 from .kinetic import (spring_p, spring_at, anticipate, Rig, motion_blur, drift, drifting, parallax, track_line,
                       mask_word, dim_color, dim_alpha, sheen, swap, lockup, curtain)
+from .keynote import Morph, bento, turn_at, yaw, press, sheet
 from .beats import (pop_tag, tag_center, check_badge, series_outro, heads, draw_heads, punch_word,
                     standard_outro)
