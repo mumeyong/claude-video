@@ -10,13 +10,15 @@ User-facing workflow guide: `START.md` — keep it in sync when commands or phas
    ffmpeg encode — not even "just one frame to check". Finish the code, then give the user the exact
    command(s) in a copy-paste block. The user renders on their own machine and reports back
    (screenshots, timecodes, errors). The only engine commands Claude may run are
-   `check`, `estimate` and `naskah` (text/JSON only, no image/audio output).
+   `check`, `check --dry`, `estimate`, `naskah`, `api` and `register` (text/JSON only, no image/audio output). `check --dry` runs the
+   draw functions on throw-away in-memory surfaces to catch exceptions / safe-zone / tiny-text problems — approved
+   by the user 2026-10-08; it writes nothing. Run it on every scenes.py before handing over a render command.
 2. **Autopilot — jangan berhenti di gate.** The user approves every gate by default ("oke" to everything).
    Don't stop to ask for ok between phases: make the best call yourself, write each phase's file, then move on.
    Run straight through to scenes.py + `check`, then stop and hand over the render command (rule 1).
    Only stop early if blocked on a fact only the user knows (real numbers, NDA, what actually happened) — and
    even then prefer a safe default (no number shown) and list the open question in the final message.
-3. **Urutan wajib:** SCRIPT.md (+ NASKAH.md) → IDENTITY.md → TREATMENT.md → scenes.py → `check` → user renders
+3. **Urutan wajib:** SCRIPT.md (+ NASKAH.md) → PLAN.md (+ `register`) → scenes.py → `check --dry` → user renders
    stills/preview → feedback → final. The order stays; the waiting between steps doesn't (rule 2).
 3b. **Every video ships a read-aloud script.** Whenever SCRIPT.md is written or changed, regenerate
    `NASKAH.md` with `python -m engine naskah <slug>` and tell the user. Never hand-edit NASKAH.md and
@@ -40,7 +42,7 @@ User-facing workflow guide: `START.md` — keep it in sync when commands or phas
    (caption ≤ 150 chars, search description, 3–5 hashtags, pinned comment, upload checklist) + a row in `hasil/README.md`.
    A full `render` copies mp4 + cover.png to `hasil/<slug>/`. After the user posts: link + numbers into POST.md, update
    `hasil/README.md` + the idea's status.
-13. **Unique, never generic.** Every video gets `IDENTITY.md` (phase 1.5) — metaphor, signature move/color,
+13. **Unique, never generic.** Every video gets `PLAN.md` (phase 1.5; older videos: IDENTITY.md) — metaphor, signature move/color,
     hook format, structure, new component — different from the previous video per `ideas/REGISTRY.md`
     (STYLE §6c). Brand DNA (HUD, type, accent blue, motion feel, outro) never changes.
 14. **Tech terms stay English.** Never translate technical terms into Indonesian — in scripts, NASKAH, headlines,
@@ -53,7 +55,8 @@ User-facing workflow guide: `START.md` — keep it in sync when commands or phas
 engine/            reusable engine (tokens, draw, video, timing, components/, audio/ (sfx, generated music, mix), render, CLI)
 assets/fonts/      Inter, Inter Display, Instrument Serif Italic, JetBrains Mono
 assets/sfx/        optional real SFX samples (<name>.wav overrides the synth)
-videos/<slug>/     SCRIPT.md, TREATMENT.md, timing.json, scenes.py, audio/, assets/, out/
+videos/<slug>/     SCRIPT.md, NASKAH.md, PLAN.md, timing.json, scenes.py, REVIEW, audio/, assets/, out/
+engine/API.md      one line per component — read this instead of the sources (`python -m engine api`)
 hasil/             finished videos: <slug>/<slug>.mp4 (git-ignored) + cover.png + POST.md; README.md index
 ideas/             video idea backlog: README.md (index + status) + one NN-slug.md per idea
 .claude/skills/mumeyong-video/   SKILL.md (workflow), STYLE.md (design system), templates/
@@ -70,7 +73,7 @@ claude-video <slug>                      # review round: naskah → voice (align
 claude-video <slug> final                # final 1080x1920 60fps → out/final.mp4 + hasil/<slug>/
 claude-video <slug> --from 20 --to 45    # same, preview only that range
 claude-video "Judul video"             # new video from a title (slug auto); `claude-video` alone = list
-claude-video check <slug>                # structure check, no drawing (Claude may run; also estimate, naskah)
+claude-video check <slug> [--dry]        # structure check; --dry also runs draw code off-screen (Claude may run)
 claude-video help                        # all low-level commands (still, sheet, preview, render, align, mix, sfx)
 ```
 

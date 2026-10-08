@@ -610,8 +610,8 @@ def outro(v, T, s, e):
             c.card(X, 830, CW, 220, r=28)
             c.fill_rrect(X, 830, 14, 220, 7, GREEN)
             c.text(X + 50, 892, "EPISODE BERIKUTNYA · EP 06", F["mono_bold"], 20, GREEN, 1, 0.16)
-            c.text(X + 50, 962, "Customer 360", F["display_semi"], 50, C["d_ink"], 1, -0.03)
-            c.text(X + 50, 1016, "Data pelanggan dalam milidetik", F["ui"], 34, C["d_muted"], 1, -0.01)
+            c.text(X + 50, 962, "Project 360", F["display_semi"], 50, C["d_ink"], 1, -0.03)
+            c.text(X + 50, 1016, "Data nasabah, satu layar, real-time", F["ui"], 34, C["d_muted"], 1, -0.01)
         appear(c, t, L26.start, None, (X, 830, CW, 220), teaser)
         fade(c, t, L27.start, None, lambda c: follow_button(c, MID, 1120, t, t_click))
         fade(c, t, t_click + 0.5, None, lambda c: c.text(MID, 1260, "Seri Bongkar Arsitektur", F["ui"], 28,

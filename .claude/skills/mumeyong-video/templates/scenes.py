@@ -7,18 +7,21 @@ from engine import Video, tokens as tk
 from engine.ease import prog, out_expo, out_cubic, in_out_cubic, in_cubic
 from engine.components import (Headline, kicker, appear, fade, ChatTrack, Cursor, window, tag, word_pill,
                                select_box, big_number, filmstrip, comment, step_row, rule_box, connector,
-                               segments, follow_button, contact_pill, icons, type_end, fmt_id)
+                               segments, follow_button, contact_pill, icons, type_end, fmt_id, mumei_mark,
+                               brand_intro)
 
 L, M, C, F = tk.L, tk.M, tk.C, tk.F
 OUT = M["out"]
 X, CW = L["col_x"], L["col_w"]
 LEAD = 0.6          # chapter starts this long before its first line
 OUTRO_TAIL = 3.5    # seconds after the last line
+PRE_ROLL = 1.2      # brand sting first: the engine starts the voice + every T time this much later
 
 
 def build(project):
     T = project.timing
     v = Video(duration=T.line("L08").end + OUTRO_TAIL, bpm=128, beat_offset=0.0)
+    brand_intro(v)  # opening sting: mumei mark (ensō + seal) on paper → into the HUD corner
     v.chat = ChatTrack()
     b = {name: T.chapter_span(name)[0] - LEAD for name in ("00 · ATURAN", "01 · KODE", "RECAP", "OUTRO")}
     intro(v, T, 0.0, b["00 · ATURAN"])
@@ -220,7 +223,8 @@ def outro(v, T, s, e):
     cx = tk.W / 2
 
     def draw(c, t):
-        icons.play_logo(c, cx, 700, 120, C["d_ink"], p=out_cubic(prog(t, s + 0.1, 1.1)))
+        mumei_mark(c, cx - 20, 700, 110, p_enso=out_cubic(prog(t, s + 0.1, 1.0)), p_seal=prog(t, s + 1.0, 0.25),
+                   flecks=prog(t, s + 0.9, 0.2), ink=C["d_ink"], paper=C["d_bg"])
         fade(c, t, s + 0.7, None,
              lambda c: c.text(cx, 950, tk.BRAND_NAME, F["display"], 92, C["d_ink"], 1, -0.05, align="c"))
         fade(c, t, s + 0.9, None,

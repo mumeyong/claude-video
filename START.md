@@ -18,7 +18,8 @@ claude-video <video> final                # render final → hasil/<video>/
 1. **naskah** — generate ulang `NASKAH.md` kalau `SCRIPT.md` berubah
 2. **suara + timing** — ada rekamanmu (`audio/voice.wav`)? → **align otomatis**. Belum ada? → **suara TTS otomatis**
    (Ardi; butuh internet). Dibikin ulang cuma kalau naskah berubah. Offline → timing estimasi tanpa suara.
-3. **check** — cek struktur; kalau gagal dia berhenti
+3. **check** — cek struktur + jalanin semua kode gambar tanpa nulis apa-apa (`--dry`: error, keluar kolom aman,
+   teks kekecilan); kalau ada error dia berhenti
 4. **cover** — `out/cover.png` (cover TikTok yang didesain)
 5. **sheet** — satu thumbnail per kalimat
 6. **stills** — frame penuh untuk baris di file `REVIEW` (diisi Claude tiap putaran)
@@ -50,8 +51,7 @@ lalu berhenti dengan satu ringkasan + perintah render. Mau koreksi? Bilang aja k
 | Tahap | Kamu dapat | Kamu ngapain |
 |---|---|---|
 | Naskah | `SCRIPT.md` + 2–3 opsi hook + `NASKAH.md` | cek fakta, ganti hook kalau mau |
-| Identitas | `IDENTITY.md` — metafora, gerakan, warna, hook baru (beda dari video sebelumnya) | "ok" |
-| Storyboard | `TREATMENT.md` — komposisi beda tiap bab | "ok" |
+| Rencana | `PLAN.md` — metafora, gerakan, warna, hook baru (beda dari video sebelumnya) + komposisi tiap bab | "ok" |
 | Kode | `scenes.py` + komponen baru + `REVIEW` terisi | tunggu aja |
 
 **5. Putaran review (± 3×)** — `claude-video <video>` → kirim sheet/stills/preview + catatan per baris → Claude
@@ -75,11 +75,8 @@ ke git.
  2. pilih hook, bilang "ok"        ◄──    SCRIPT.md (2–3 opsi hook + naskah)
                                           + NASKAH.md (versi bersih buat dibaca)
 
- 2b. bilang "ok"                   ◄──    IDENTITY.md: metafora, gerakan khas, warna, format hook,
-                                          struktur, komponen baru — beda dari video sebelumnya
-
- 3. bilang "ok"                    ◄──    TREATMENT.md: komposisi tiap bab + storyboard per kalimat
-                                          → tulis scenes.py → check → isi REVIEW
+ 3. bilang "ok"                    ◄──    PLAN.md: metafora, gerakan khas, warna, format hook, struktur,
+                                          komponen baru + komposisi tiap bab → tulis scenes.py → check → isi REVIEW
 
  4. claude-video <video>           ──►    kirim sheet / stills / preview + catatan
     (± 3 putaran)                  ◄──    revisi → "jalanin claude-video <video> lagi"
@@ -115,8 +112,7 @@ claude-video/
 videos/<video>/
 ├── SCRIPT.md        naskah, 1 kalimat per [Lxx], per ## BAB (sumber utama — yang diubah cuma ini)
 ├── NASKAH.md        versi baca dari SCRIPT.md, buat rekam (auto-generate, jangan diedit)
-├── IDENTITY.md      identitas unik video ini (metafora, gerakan khas, warna, hook, struktur)
-├── TREATMENT.md     storyboard: komposisi tiap bab + visual per kalimat
+├── PLAN.md          identitas unik + komposisi tiap bab (video lama: IDENTITY.md + TREATMENT.md)
 ├── REVIEW           baris yang dicek sebagai still putaran ini (diisi Claude)
 ├── timing.json      waktu tiap kalimat & kata (estimasi → align dari suaramu)
 ├── scenes.py        kode animasinya
@@ -136,7 +132,7 @@ Daftar di `ideas/README.md`. Status: 💡 ide → ⭐ dipilih → 🎬 produksi 
 ## Biar tiap video unik
 
 Yang **selalu sama** (biar orang langsung kenal "ini Mumeyong"): HUD, font, biru aksen, rasa geraknya, outro.
-Yang **beda tiap video** (dicatat di `IDENTITY.md`, dicek ke `ideas/REGISTRY.md`): metafora, gerakan khas,
+Yang **beda tiap video** (dicatat di `PLAN.md`, dicek ke `ideas/REGISTRY.md`): metafora, gerakan khas,
 warna khas, format hook, struktur, dan minimal satu komponen visual baru. Plus sentuhan manusia: artefak asli
 (screenshot/angka yang disamarkan), opinimu, satu kejutan. **Bantu Claude dengan satu angka/screenshot asli
 tiap video** — itu yang paling bikin nggak generik.
@@ -168,7 +164,7 @@ claude-video tts <video>                  # cuma bikin suaranya aja
 - **Kamu cukup rekam suara.** Kalau `audio/music.*` kosong, musik **digenerate otomatis** waktu render
   (`engine/audio/music.py`): disusun dari bab-bab videonya sendiri — intro ringan, tiap bab groove penuh dengan pola
   arp sendiri, recap gelap tanpa drum, outro resolve. Pergantian bab jatuh pas di beat, ada riser + impact.
-- Tiap video punya karakter sendiri (key + mood: warm · tense · bright · dreamy), diatur di IDENTITY.md /
+- Tiap video punya karakter sendiri (key + mood: warm · tense · bright · dreamy), diatur di PLAN.md /
   `v.music = dict(key="D", mood="warm")`. `claude-video check <video>` nampilin rencana musiknya.
 - Dengerin musiknya aja: `claude-video music <video>` → `out/music_gen.wav`.
 - Mau pakai lagu sendiri? Taruh royalty-free ± 128 BPM di `audio/music.mp3` — itu yang dipakai.

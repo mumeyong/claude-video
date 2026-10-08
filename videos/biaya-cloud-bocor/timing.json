@@ -1,0 +1,1040 @@
+{
+ "source": "tts",
+ "voice": "id-ID-ArdiNeural",
+ "tts": "ardi",
+ "duration": 77.568,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Lima ribu dolar. Sebulan. Itu yang pernah aku potong dari tagihan cloud.",
+   "start": 0.4,
+   "end": 5.769,
+   "words": [
+    {
+     "w": "Lima",
+     "start": 0.4,
+     "end": 0.626
+    },
+    {
+     "w": "ribu",
+     "start": 0.626,
+     "end": 0.838
+    },
+    {
+     "w": "dolar.",
+     "start": 0.838,
+     "end": 1.357
+    },
+    {
+     "w": "Sebulan.",
+     "start": 2.145,
+     "end": 2.911
+    },
+    {
+     "w": "Itu",
+     "start": 3.7,
+     "end": 3.936
+    },
+    {
+     "w": "yang",
+     "start": 3.936,
+     "end": 4.054
+    },
+    {
+     "w": "pernah",
+     "start": 4.054,
+     "end": 4.254
+    },
+    {
+     "w": "aku",
+     "start": 4.254,
+     "end": 4.407
+    },
+    {
+     "w": "potong",
+     "start": 4.407,
+     "end": 4.738
+    },
+    {
+     "w": "dari",
+     "start": 4.738,
+     "end": 4.891
+    },
+    {
+     "w": "tagihan",
+     "start": 4.891,
+     "end": 5.28
+    },
+    {
+     "w": "cloud.",
+     "start": 5.28,
+     "end": 5.763
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Banyak yang ketemu dari kebocoran kecil, yang dibiarin.",
+   "start": 6.089,
+   "end": 9.014,
+   "words": [
+    {
+     "w": "Banyak",
+     "start": 6.089,
+     "end": 6.384
+    },
+    {
+     "w": "yang",
+     "start": 6.384,
+     "end": 6.49
+    },
+    {
+     "w": "ketemu",
+     "start": 6.49,
+     "end": 6.773
+    },
+    {
+     "w": "dari",
+     "start": 6.773,
+     "end": 6.926
+    },
+    {
+     "w": "kebocoran",
+     "start": 6.926,
+     "end": 7.351
+    },
+    {
+     "w": "kecil,",
+     "start": 7.351,
+     "end": 7.846
+    },
+    {
+     "w": "yang",
+     "start": 8.105,
+     "end": 8.318
+    },
+    {
+     "w": "dibiarin.",
+     "start": 8.318,
+     "end": 8.978
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Ini lima tandanya, dari yang paling jarang. Hitung mundur: yang paling sering ada di nomor satu.",
+   "start": 9.614,
+   "end": 15.513,
+   "words": [
+    {
+     "w": "Ini",
+     "start": 9.614,
+     "end": 9.778
+    },
+    {
+     "w": "lima",
+     "start": 9.778,
+     "end": 9.967
+    },
+    {
+     "w": "tandanya,",
+     "start": 9.967,
+     "end": 10.616
+    },
+    {
+     "w": "dari",
+     "start": 10.875,
+     "end": 11.134
+    },
+    {
+     "w": "yang",
+     "start": 11.135,
+     "end": 11.252
+    },
+    {
+     "w": "paling",
+     "start": 11.252,
+     "end": 11.476
+    },
+    {
+     "w": "jarang.",
+     "start": 11.476,
+     "end": 11.984
+    },
+    {
+     "w": "Hitung",
+     "start": 12.771,
+     "end": 13.077
+    },
+    {
+     "w": "mundur:",
+     "start": 13.077,
+     "end": 13.561
+    },
+    {
+     "w": "yang",
+     "start": 13.797,
+     "end": 14.009
+    },
+    {
+     "w": "paling",
+     "start": 14.009,
+     "end": 14.198
+    },
+    {
+     "w": "sering",
+     "start": 14.198,
+     "end": 14.434
+    },
+    {
+     "w": "ada",
+     "start": 14.434,
+     "end": 14.681
+    },
+    {
+     "w": "di",
+     "start": 14.681,
+     "end": 14.764
+    },
+    {
+     "w": "nomor",
+     "start": 14.764,
+     "end": 14.964
+    },
+    {
+     "w": "satu.",
+     "start": 14.964,
+     "end": 15.471
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · TANDA 5 & 4",
+   "text": "Nomor lima: resource tanpa tag.",
+   "start": 16.513,
+   "end": 18.603,
+   "words": [
+    {
+     "w": "Nomor",
+     "start": 16.513,
+     "end": 16.731
+    },
+    {
+     "w": "lima:",
+     "start": 16.731,
+     "end": 17.226
+    },
+    {
+     "w": "resource",
+     "start": 17.462,
+     "end": 17.91
+    },
+    {
+     "w": "tanpa",
+     "start": 17.91,
+     "end": 18.193
+    },
+    {
+     "w": "tag.",
+     "start": 18.193,
+     "end": 18.547
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · TANDA 5 & 4",
+   "text": "Kayak colokan T beranak. Tagihan datang, nggak ada yang tahu ini punya siapa.",
+   "start": 18.923,
+   "end": 23.685,
+   "words": [
+    {
+     "w": "Kayak",
+     "start": 18.923,
+     "end": 19.122
+    },
+    {
+     "w": "colokan",
+     "start": 19.122,
+     "end": 19.523
+    },
+    {
+     "w": "T",
+     "start": 19.523,
+     "end": 19.606
+    },
+    {
+     "w": "beranak.",
+     "start": 19.606,
+     "end": 20.16
+    },
+    {
+     "w": "Tagihan",
+     "start": 20.947,
+     "end": 21.336
+    },
+    {
+     "w": "datang,",
+     "start": 21.336,
+     "end": 21.82
+    },
+    {
+     "w": "nggak",
+     "start": 22.103,
+     "end": 22.244
+    },
+    {
+     "w": "ada",
+     "start": 22.244,
+     "end": 22.374
+    },
+    {
+     "w": "yang",
+     "start": 22.374,
+     "end": 22.492
+    },
+    {
+     "w": "tahu",
+     "start": 22.492,
+     "end": 22.669
+    },
+    {
+     "w": "ini",
+     "start": 22.669,
+     "end": 22.881
+    },
+    {
+     "w": "punya",
+     "start": 22.881,
+     "end": 23.082
+    },
+    {
+     "w": "siapa.",
+     "start": 23.082,
+     "end": 23.636
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · TANDA 5 & 4",
+   "text": "Nomor empat: snapshot yang numpuk.",
+   "start": 24.005,
+   "end": 26.047,
+   "words": [
+    {
+     "w": "Nomor",
+     "start": 24.005,
+     "end": 24.225
+    },
+    {
+     "w": "empat:",
+     "start": 24.225,
+     "end": 24.732
+    },
+    {
+     "w": "snapshot",
+     "start": 24.956,
+     "end": 25.463
+    },
+    {
+     "w": "yang",
+     "start": 25.463,
+     "end": 25.604
+    },
+    {
+     "w": "numpuk.",
+     "start": 25.604,
+     "end": 26.053
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "00 · TANDA 5 & 4",
+   "text": "Backup tahun lalu, tetap dibayar tiap bulan. Kayak kulkas penuh makanan basi.",
+   "start": 26.367,
+   "end": 31.341,
+   "words": [
+    {
+     "w": "Backup",
+     "start": 26.367,
+     "end": 26.62
+    },
+    {
+     "w": "tahun",
+     "start": 26.62,
+     "end": 26.82
+    },
+    {
+     "w": "lalu,",
+     "start": 26.82,
+     "end": 27.268
+    },
+    {
+     "w": "tetap",
+     "start": 27.528,
+     "end": 27.775
+    },
+    {
+     "w": "dibayar",
+     "start": 27.775,
+     "end": 28.164
+    },
+    {
+     "w": "tiap",
+     "start": 28.164,
+     "end": 28.388
+    },
+    {
+     "w": "bulan.",
+     "start": 28.388,
+     "end": 28.872
+    },
+    {
+     "w": "Kayak",
+     "start": 29.659,
+     "end": 29.93
+    },
+    {
+     "w": "kulkas",
+     "start": 29.93,
+     "end": 30.284
+    },
+    {
+     "w": "penuh",
+     "start": 30.284,
+     "end": 30.485
+    },
+    {
+     "w": "makanan",
+     "start": 30.485,
+     "end": 30.815
+    },
+    {
+     "w": "basi.",
+     "start": 30.815,
+     "end": 31.298
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · TANDA 3 & 2",
+   "text": "Nomor tiga: instance kegedean.",
+   "start": 32.341,
+   "end": 34.524,
+   "words": [
+    {
+     "w": "Nomor",
+     "start": 32.341,
+     "end": 32.56
+    },
+    {
+     "w": "tiga:",
+     "start": 32.56,
+     "end": 33.079
+    },
+    {
+     "w": "instance",
+     "start": 33.326,
+     "end": 33.857
+    },
+    {
+     "w": "kegedean.",
+     "start": 33.857,
+     "end": 34.494
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · TANDA 3 & 2",
+   "text": "AC dua PK buat kamar kos. CPU-nya cuma kepakai sedikit.",
+   "start": 34.844,
+   "end": 38.745,
+   "words": [
+    {
+     "w": "AC",
+     "start": 34.844,
+     "end": 35.055
+    },
+    {
+     "w": "dua",
+     "start": 35.055,
+     "end": 35.22
+    },
+    {
+     "w": "PK",
+     "start": 35.22,
+     "end": 35.479
+    },
+    {
+     "w": "buat",
+     "start": 35.479,
+     "end": 35.692
+    },
+    {
+     "w": "kamar",
+     "start": 35.692,
+     "end": 35.928
+    },
+    {
+     "w": "kos.",
+     "start": 35.928,
+     "end": 36.352
+    },
+    {
+     "w": "CPU-nya",
+     "start": 37.139,
+     "end": 37.705
+    },
+    {
+     "w": "cuma",
+     "start": 37.705,
+     "end": 37.918
+    },
+    {
+     "w": "kepakai",
+     "start": 37.918,
+     "end": 38.212
+    },
+    {
+     "w": "sedikit.",
+     "start": 38.213,
+     "end": 38.814
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · TANDA 3 & 2",
+   "text": "Obatnya right-sizing: turunin ukurannya, sesuai beban asli.",
+   "start": 39.065,
+   "end": 42.787,
+   "words": [
+    {
+     "w": "Obatnya",
+     "start": 39.065,
+     "end": 39.433
+    },
+    {
+     "w": "right-sizing:",
+     "start": 39.433,
+     "end": 40.164
+    },
+    {
+     "w": "turunin",
+     "start": 40.424,
+     "end": 40.742
+    },
+    {
+     "w": "ukurannya,",
+     "start": 40.742,
+     "end": 41.414
+    },
+    {
+     "w": "sesuai",
+     "start": 41.603,
+     "end": 41.98
+    },
+    {
+     "w": "beban",
+     "start": 41.98,
+     "end": 42.252
+    },
+    {
+     "w": "asli.",
+     "start": 42.252,
+     "end": 42.747
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "01 · TANDA 3 & 2",
+   "text": "Nomor dua: disk yang nggak nempel ke apa-apa.",
+   "start": 43.107,
+   "end": 45.482,
+   "words": [
+    {
+     "w": "Nomor",
+     "start": 43.107,
+     "end": 43.313
+    },
+    {
+     "w": "dua:",
+     "start": 43.313,
+     "end": 43.761
+    },
+    {
+     "w": "disk",
+     "start": 43.997,
+     "end": 44.268
+    },
+    {
+     "w": "yang",
+     "start": 44.268,
+     "end": 44.374
+    },
+    {
+     "w": "nggak",
+     "start": 44.374,
+     "end": 44.492
+    },
+    {
+     "w": "nempel",
+     "start": 44.492,
+     "end": 44.787
+    },
+    {
+     "w": "ke",
+     "start": 44.787,
+     "end": 44.858
+    },
+    {
+     "w": "apa-apa.",
+     "start": 44.858,
+     "end": 45.436
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "01 · TANDA 3 & 2",
+   "text": "Kayak charger yang dicolok, tapi HP-nya nggak ada. Tetap nyedot.",
+   "start": 45.802,
+   "end": 49.955,
+   "words": [
+    {
+     "w": "Kayak",
+     "start": 45.802,
+     "end": 45.995
+    },
+    {
+     "w": "charger",
+     "start": 45.995,
+     "end": 46.325
+    },
+    {
+     "w": "yang",
+     "start": 46.325,
+     "end": 46.455
+    },
+    {
+     "w": "dicolok,",
+     "start": 46.455,
+     "end": 47.009
+    },
+    {
+     "w": "tapi",
+     "start": 47.245,
+     "end": 47.48
+    },
+    {
+     "w": "HP-nya",
+     "start": 47.481,
+     "end": 47.811
+    },
+    {
+     "w": "nggak",
+     "start": 47.811,
+     "end": 47.929
+    },
+    {
+     "w": "ada.",
+     "start": 47.929,
+     "end": 48.353
+    },
+    {
+     "w": "Tetap",
+     "start": 49.142,
+     "end": 49.507
+    },
+    {
+     "w": "nyedot.",
+     "start": 49.507,
+     "end": 50.026
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "02 · NOMOR 1",
+   "text": "Dan nomor satu: server nyala dua puluh empat jam, padahal dipakai cuma jam kerja.",
+   "start": 50.955,
+   "end": 55.46,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 50.955,
+     "end": 51.091
+    },
+    {
+     "w": "nomor",
+     "start": 51.091,
+     "end": 51.28
+    },
+    {
+     "w": "satu:",
+     "start": 51.28,
+     "end": 51.799
+    },
+    {
+     "w": "server",
+     "start": 52.047,
+     "end": 52.436
+    },
+    {
+     "w": "nyala",
+     "start": 52.436,
+     "end": 52.672
+    },
+    {
+     "w": "dua",
+     "start": 52.672,
+     "end": 52.825
+    },
+    {
+     "w": "puluh",
+     "start": 52.825,
+     "end": 52.978
+    },
+    {
+     "w": "empat",
+     "start": 52.978,
+     "end": 53.179
+    },
+    {
+     "w": "jam,",
+     "start": 53.179,
+     "end": 53.568
+    },
+    {
+     "w": "padahal",
+     "start": 53.827,
+     "end": 54.169
+    },
+    {
+     "w": "dipakai",
+     "start": 54.169,
+     "end": 54.499
+    },
+    {
+     "w": "cuma",
+     "start": 54.499,
+     "end": 54.723
+    },
+    {
+     "w": "jam",
+     "start": 54.723,
+     "end": 54.912
+    },
+    {
+     "w": "kerja.",
+     "start": 54.912,
+     "end": 55.419
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "02 · NOMOR 1",
+   "text": "Kayak lampu teras yang nyala siang bolong. Malam dan weekend, matiin pakai schedule.",
+   "start": 55.78,
+   "end": 60.79,
+   "words": [
+    {
+     "w": "Kayak",
+     "start": 55.78,
+     "end": 55.976
+    },
+    {
+     "w": "lampu",
+     "start": 55.976,
+     "end": 56.177
+    },
+    {
+     "w": "teras",
+     "start": 56.177,
+     "end": 56.519
+    },
+    {
+     "w": "yang",
+     "start": 56.519,
+     "end": 56.649
+    },
+    {
+     "w": "nyala",
+     "start": 56.649,
+     "end": 56.849
+    },
+    {
+     "w": "siang",
+     "start": 56.849,
+     "end": 57.097
+    },
+    {
+     "w": "bolong.",
+     "start": 57.097,
+     "end": 57.568
+    },
+    {
+     "w": "Malam",
+     "start": 58.356,
+     "end": 58.662
+    },
+    {
+     "w": "dan",
+     "start": 58.662,
+     "end": 58.804
+    },
+    {
+     "w": "weekend,",
+     "start": 58.804,
+     "end": 59.334
+    },
+    {
+     "w": "matiin",
+     "start": 59.559,
+     "end": 59.912
+    },
+    {
+     "w": "pakai",
+     "start": 59.912,
+     "end": 60.125
+    },
+    {
+     "w": "schedule.",
+     "start": 60.125,
+     "end": 60.738
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "RECAP",
+   "text": "Kebocoran cloud itu jarang yang gede. Yang bikin mahal: yang kecil, tapi dibiarin.",
+   "start": 61.79,
+   "end": 67.39,
+   "words": [
+    {
+     "w": "Kebocoran",
+     "start": 61.79,
+     "end": 62.212
+    },
+    {
+     "w": "cloud",
+     "start": 62.212,
+     "end": 62.471
+    },
+    {
+     "w": "itu",
+     "start": 62.471,
+     "end": 62.719
+    },
+    {
+     "w": "jarang",
+     "start": 62.719,
+     "end": 63.014
+    },
+    {
+     "w": "yang",
+     "start": 63.014,
+     "end": 63.167
+    },
+    {
+     "w": "gede.",
+     "start": 63.167,
+     "end": 63.58
+    },
+    {
+     "w": "Yang",
+     "start": 64.367,
+     "end": 64.579
+    },
+    {
+     "w": "bikin",
+     "start": 64.579,
+     "end": 64.792
+    },
+    {
+     "w": "mahal:",
+     "start": 64.792,
+     "end": 65.299
+    },
+    {
+     "w": "yang",
+     "start": 65.534,
+     "end": 65.723
+    },
+    {
+     "w": "kecil,",
+     "start": 65.723,
+     "end": 66.218
+    },
+    {
+     "w": "tapi",
+     "start": 66.443,
+     "end": 66.714
+    },
+    {
+     "w": "dibiarin.",
+     "start": 66.714,
+     "end": 67.339
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "RECAP",
+   "text": "Satu tanda aja yang kamu temuin, tagihan bulan depan udah beda.",
+   "start": 67.71,
+   "end": 70.963,
+   "words": [
+    {
+     "w": "Satu",
+     "start": 67.71,
+     "end": 67.942
+    },
+    {
+     "w": "tanda",
+     "start": 67.942,
+     "end": 68.154
+    },
+    {
+     "w": "aja",
+     "start": 68.154,
+     "end": 68.414
+    },
+    {
+     "w": "yang",
+     "start": 68.414,
+     "end": 68.532
+    },
+    {
+     "w": "kamu",
+     "start": 68.532,
+     "end": 68.697
+    },
+    {
+     "w": "temuin,",
+     "start": 68.697,
+     "end": 69.204
+    },
+    {
+     "w": "tagihan",
+     "start": 69.475,
+     "end": 69.841
+    },
+    {
+     "w": "bulan",
+     "start": 69.841,
+     "end": 70.029
+    },
+    {
+     "w": "depan",
+     "start": 70.029,
+     "end": 70.253
+    },
+    {
+     "w": "udah",
+     "start": 70.253,
+     "end": 70.454
+    },
+    {
+     "w": "beda.",
+     "start": 70.454,
+     "end": 70.914
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "OUTRO",
+   "text": "Save video ini, terus cek akun kamu minggu ini.",
+   "start": 71.963,
+   "end": 74.619,
+   "words": [
+    {
+     "w": "Save",
+     "start": 71.963,
+     "end": 72.225
+    },
+    {
+     "w": "video",
+     "start": 72.225,
+     "end": 72.496
+    },
+    {
+     "w": "ini,",
+     "start": 72.496,
+     "end": 72.921
+    },
+    {
+     "w": "terus",
+     "start": 73.192,
+     "end": 73.404
+    },
+    {
+     "w": "cek",
+     "start": 73.404,
+     "end": 73.569
+    },
+    {
+     "w": "akun",
+     "start": 73.569,
+     "end": 73.794
+    },
+    {
+     "w": "kamu",
+     "start": 73.794,
+     "end": 73.982
+    },
+    {
+     "w": "minggu",
+     "start": 73.982,
+     "end": 74.183
+    },
+    {
+     "w": "ini.",
+     "start": 74.183,
+     "end": 74.584
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 74.939,
+   "end": 76.768,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 74.939,
+     "end": 75.405
+    },
+    {
+     "w": "biar",
+     "start": 75.641,
+     "end": 75.912
+    },
+    {
+     "w": "nggak",
+     "start": 75.912,
+     "end": 76.054
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 76.054,
+     "end": 76.714
+    }
+   ]
+  }
+ ]
+}

@@ -49,6 +49,10 @@ C = {
     "d_card": hexc("#161925"),
     "d_line": hexc("#FFFFFF", 0.08),
     "d_accent": hexc("#4F8BFF"),
+    # brand mark (mumeyong.dev "mumei" emblem: ensō + blank vermilion hanko) — brand sting & outro mark only
+    "brand_paper": hexc("#FAF9F5"),
+    "brand_ink": hexc("#2B2C29"),
+    "brand_seal": hexc("#C44834"),
     # code syntax
     "code_kw": hexc("#7C3AED"),
     "code_str": hexc("#0E9F6E"),
@@ -133,6 +137,12 @@ M = {
     "type_cps": 34,            # typing speed, chars per second
     "chapter_fade": 0.6,       # background tint crossfade
     "beat_bpm": 128,
+    # fx.py (opt-in upgrades, 2026-10-08)
+    "settle": 0.7,             # spring settle duration (pops, camera stops)
+    "land_dur": 0.35,          # squash-and-stretch after a landing
+    "land_squash": 0.12,       # max squash (12% wider / shorter)
+    "trail_n": 4,              # ghost-trail samples behind fast movers
+    "trail_span": 0.05,        # seconds the trail reaches back
 }
 
 # ── shadow ──────────────────────────────────────────────────────────────

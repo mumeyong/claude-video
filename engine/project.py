@@ -26,8 +26,19 @@ class Project:
             if not self.timing_path.exists():
                 sys.exit(f"{self.timing_path} missing — run: python -m engine estimate {self.slug}  "
                          f"(or align, once audio/voice.wav exists)")
-            self._timing = Timing(self.timing_path)
+            self._timing = Timing(self.timing_path, self.pre_roll)
         return self._timing
+
+    @property
+    def pre_roll(self):
+        """Seconds before the voice starts (brand sting). Opt-in: `PRE_ROLL = 1.2` at the top level of scenes.py.
+        Read from the file text (no import) so stills/sheet/mix agree with the scenes. Default 0 = old behavior."""
+        if not hasattr(self, "_pre_roll"):
+            import re
+            path = self.dir / "scenes.py"
+            m = re.search(r"^PRE_ROLL\s*=\s*([0-9.]+)", path.read_text(), re.M) if path.exists() else None
+            self._pre_roll = float(m.group(1)) if m else 0.0
+        return self._pre_roll
 
     def asset(self, name):
         p = self.assets / name

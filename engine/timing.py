@@ -47,9 +47,16 @@ class Line:
 
 
 class Timing:
-    def __init__(self, path):
+    def __init__(self, path, offset=0.0):
+        """offset (s): pre-roll before the voice (brand sting) — every line/word time and the duration shift by it."""
         with open(path) as fh:
             d = json.load(fh)
+        if offset:
+            d["duration"] = float(d["duration"]) + offset
+            for ln in d["lines"]:
+                ln["start"], ln["end"] = float(ln["start"]) + offset, float(ln["end"]) + offset
+                for w in ln.get("words", []):
+                    w["start"], w["end"] = float(w["start"]) + offset, float(w["end"]) + offset
         self.source = d.get("source", "?")
         self.duration = float(d["duration"])
         self.lines = [Line(x) for x in d["lines"]]

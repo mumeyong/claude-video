@@ -137,12 +137,12 @@ def _bookmark(c, x, y, s, color, fill=0.0, alpha=1.0):
     cx_.stroke()
 
 
-def save_button(c, cx, y, t, t_click, w=300, h=72):
-    """'Save' (outlined bookmark) → pressed at t_click → 'Tersimpan' with a filled bookmark."""
+def save_button(c, cx, y, t, t_click, w=300, h=72, color=None):
+    """'Save' (outlined bookmark) → pressed at t_click → 'Tersimpan' with a filled bookmark. color: fill when saved."""
     p = in_out_cubic(prog(t, t_click + 0.08, 0.3))
     press = pulse(t, t_click, 0.22)
     with c.at(0, 0, 1 - 0.07 * press, origin=(cx, y + h / 2)):
-        col = mix(c.theme("card", "d_card"), ORANGE, p)
+        col = mix(c.theme("card", "d_card"), color or ORANGE, p)
         c.fill_rrect(cx - w / 2, y, w, h, h / 2, col)
         c.stroke_rrect(cx - w / 2, y, w, h, h / 2, c.theme("line", "d_line"), 1.5, 1 - p)
         ink = mix(c.theme("ink", "d_ink"), WHITE, p)

@@ -10,7 +10,8 @@ Code mirror: `engine/tokens.py`. If you change a value here, change it there too
 | Canvas | 1080×1920, 60 fps, H.264 yuv420p, AAC 192k, −14 LUFS |
 | Language | Bahasa Indonesia, casual "aku/kamu", short punchy sentences |
 | Brand | HUD top-left `MUMEYONG · TUTORIAL` (series word can change per video) |
-| Ending | dark recap → logo + "Follow" click → contact pills |
+| Opening | (new videos, from 2026-10-08) **brand sting** 1,5 s: the mumei mark (ensō brushed in + seal stamp) on paper → shrinks into the HUD corner; `PRE_ROLL = 1.2` + `brand_intro(v)` |
+| Ending | dark recap → logo (new videos: `mumei_mark`) + "Follow" click → contact pills |
 | Safe zone | content column x 81→929 (keeps clear of TikTok's right rail), nothing important below y 1560 except HUD |
 
 ## 2. Frame anatomy (top → bottom)
@@ -44,6 +45,11 @@ Chapter identity (dot color / bg tint):
 | 01 | `#10A060` | `#ECF3F2` | | 05 | `#F03B4F` | `#F6ECEF` |
 | 02 | `#E8861A` | `#F8F1EA` | | 06 | `#2364FF` | `#EAEDFA` |
 | 03 | `#7558F0` | `#EFEBFA` | | intro | — | `#EEEBF8` |
+
+Brand mark (from mumeyong.dev — the "mumei" 無名 emblem: an ensō left open at the upper right + a blank vermilion
+hanko seal, tilted 4°): paper `#FAF9F5`, ink `#2B2C29`, seal `#C44834`. Used ONLY by the brand sting at the very
+start (`components/brand.py`, opt-in `PRE_ROLL` in scenes.py, from 2026-10-08 on) and the outro mark — never as a
+content accent.
 
 Dark section (recap + outro): bg `#0C0C12`, navy glow `#13265A` rising from bottom, ink `#F5F6F8`,
 muted `#7C8494`, cards `#161925`, accent `#4F8BFF`.
@@ -98,6 +104,10 @@ Full list + do/don't: `GLOSSARY.md`.
 - Typing: 34 cps (chat), ~120 cps (code). Every typed char = `key` SFX.
 - Resting elements may idle-float 2–4 px (`wobble`). Never bounce big things; `out_back` only for small pops (chips, check marks).
 - One visual change per spoken sentence (~every 2.5 s). If a line is > 4 s, add a second beat inside it (highlight, count-up, cursor).
+- **Physical layer (`components/fx.py`, from 2026-10-08 on — new videos only):** small pops and camera stops may
+  `settle` (spring, ~6% overshoot, 0.7 s — never on big cards/text); objects that drop onto a floor get a
+  `contact_shadow` and a `land` squash (12%, 0.35 s); fast small movers (shuttle, flying sheet, dot) get a
+  `ghost_trail` (4 samples over 0.05 s) instead of strobing at 60 fps. Tokens: `M["settle"]`, `M["land_*"]`, `M["trail_*"]`.
 
 ## 6b. Composition — NOT a template
 
@@ -123,8 +133,8 @@ The skeleton (HUD, kicker, headline, chapter dots) stays constant; **what's unde
 **Brand DNA (fixed in every video, ~40%)** — HUD, fonts, accent blue `#1F5EFF`, chapter dots, motion feel
 (blur-in, easing, transition rhythm), outro/logo/CTA, SFX palette. Never changes per video.
 
-**Identity (chosen per video, ~60%)** — written in `videos/<slug>/IDENTITY.md` (phase 1.5) from
-`IDENTITY_TEMPLATE.md`, checked against `ideas/REGISTRY.md`:
+**Identity (chosen per video, ~60%)** — written in `videos/<slug>/PLAN.md` (phase 1.5) from
+`templates/PLAN.md`, checked against `ideas/REGISTRY.md`:
 1. **Central metaphor** — one "world" used in ≥ 3 chapters, not only the hook.
 2. **Signature move** — one motion the video owns (rolling digits, lights switching off, snapping grid…).
 3. **Signature color** — one chapter-palette color that owns the hero objects. Accent blue stays for words/UI.

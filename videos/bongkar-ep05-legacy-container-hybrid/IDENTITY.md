@@ -5,7 +5,7 @@
 
 ## Identitas seri (tetap tiap episode)
 HUD `MUMEYONG · BONGKAR ARSITEKTUR · EP 05` · bumper judul · struktur Masalah → Keputusan → Diagram → Hasil →
-recap · komponen andalan `arch_node` · outro teaser episode berikutnya (EP06 Customer 360, milidetik).
+recap · komponen andalan `arch_node` · outro teaser episode berikutnya (EP06 Project 360, real-time).
 
 | # | Pilihan | Untuk episode ini | Beda dari video sebelumnya? |
 |---|---|---|---|

@@ -1,9 +1,9 @@
 # 5 tanda biaya cloud kamu bocor
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi → [`videos/biaya-cloud-bocor/`](../videos/biaya-cloud-bocor/) · fase 5 (review)
 - **Slug:** biaya-cloud-bocor
 - **Seri:** — (teaser buat #01)
-- **Durasi target:** 45–60 s
+- **Durasi target:** 60–75 s (lewat 1 menit buat payout)
 - **Ditambahkan:** 2026-10-05
 
 ## Takeaway (1 kalimat)
@@ -25,7 +25,7 @@ Checklist yang dicentang satu-satu (chime), counter "bocor" naik
 ## Catatan
 Format "save-able" → minta penonton save. Tayang sebelum #01.
 
-## Identitas (draft — fase 1.5)
+## Identitas (draft lama — DIGANTI, lihat videos/biaya-cloud-bocor/IDENTITY.md: meteran token listrik)
 
 | # | Pilihan | Untuk video ini | Kenapa cocok |
 |---|---|---|---|

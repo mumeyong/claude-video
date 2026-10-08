@@ -52,5 +52,5 @@
 [L25] Pengunjung nggak peduli ruko atau kontainer. Yang penting, pesanannya *sampai*.
 
 ## OUTRO
-[L26] Episode depan: data pelanggan, ditarik dalam *milidetik*.
+[L26] Episode depan: data nasabah, satu layar, *real-time*.
 [L27] Follow, biar nggak ketinggalan.

@@ -87,7 +87,7 @@
 
 ## OUTRO
 
-<sub>L26</sub> Episode depan: data pelanggan, ditarik dalam **milidetik**.  
+<sub>L26</sub> Episode depan: data nasabah, satu layar, **real-time**.  
 
 <sub>L27</sub> Follow, biar nggak ketinggalan.  
 

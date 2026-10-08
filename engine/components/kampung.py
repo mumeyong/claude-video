@@ -105,8 +105,9 @@ def kentongan(c, cx, top_y, s, hit=0.0, color=None, alpha=1.0, label=None):
                    align="c")
 
 
-def sound_rings(c, cx, cy, p, color=None, n=3, r0=20, r_max=420, width=5, alpha=1.0, squash=1.0):
-    """n expanding rings after a strike; p 0..1 over the whole spread. squash < 1 flattens them (street view)."""
+def sound_rings(c, cx, cy, p, color=None, n=3, r0=20, r_max=420, width=5, alpha=1.0, squash=1.0, arc=None):
+    """n expanding rings after a strike; p 0..1 over the whole spread. squash scales them vertically (< 1 = street
+    view); arc=(a0, a1) radians draws only that part (e.g. (-1.4, 1.4) = rightward half, keeps the left edge clean)."""
     if p <= 0 or p >= 1.2:
         return
     color = color or TEAL
@@ -120,7 +121,7 @@ def sound_rings(c, cx, cy, p, color=None, n=3, r0=20, r_max=420, width=5, alpha=
         cx_.translate(cx, cy)
         cx_.scale(1, squash)
         cx_.new_path()
-        cx_.arc(0, 0, r, 0, 2 * math.pi)
+        cx_.arc(0, 0, r, *(arc or (0, 2 * math.pi)))
         cx_.restore()
         c.src(color, alpha * (1 - pk) * 0.9)
         cx_.set_line_width(width * (1 - 0.5 * pk))

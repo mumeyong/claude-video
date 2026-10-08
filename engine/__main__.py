@@ -7,7 +7,8 @@
   estimate <slug>                 timing.json from SCRIPT.md (no audio yet, 161 wpm)      (Claude may run)
   naskah   <slug>                 NASKAH.md — clean read-aloud script for recording      (Claude may run)
   align    <slug> [--model small] timing.json from audio/voice.wav via faster-whisper
-  check    <slug>                 build only, draws nothing — validates structure      (Claude may run)
+  check    <slug> [--dry]         build only — validates structure; --dry also runs every draw fn off-screen
+                                  (errors, safe column, tiny text; writes nothing)        (Claude may run)
   still    <slug> <t> [<t>...]    PNG frames at times (seconds) or line ids (L05)     (user runs)
   cover    <slug>                 TikTok cover → out/cover.png (v.cover, else frame at v.cover_t) (user runs)
   sheet    <slug>                 contact sheet, one thumbnail per script line          (user runs)
@@ -17,6 +18,8 @@
                                   automatic in go when there is no voice.wav; voice.wav always wins) (user runs)
   mix      <slug>                 audio only → out/mix.wav                              (user runs)
   music    <slug>                 generated score only → out/music_gen.wav (if no audio/music.*) (user runs)
+  register <slug>                 index rows (ideas/REGISTRY.md, hasil/README.md) from PLAN.md   (Claude may run)
+  api                             engine/API.md — one line per component (Claude reads this, not the sources)
   sfx                             export synth SFX to .cache/sfx_preview to audition
 """
 import argparse
@@ -39,10 +42,15 @@ def main(argv=None):
     ap.add_argument("--workers", type=int, default=None)
     ap.add_argument("--scale", type=float, default=1.0)
     ap.add_argument("--no-audio", action="store_true")
+    ap.add_argument("--dry", action="store_true", help="check: also run every draw fn off-screen (nothing written)")
     a = ap.parse_args(argv)
 
     if a.cmd in ("ls", "list"):
         return list_videos()
+    if a.cmd == "api":
+        from .apidoc import build_api
+        build_api()
+        return 0
     if a.cmd == "sfx":
         from .audio.sfx import export_library
         export_library(ROOT / ".cache" / "sfx_preview")
@@ -59,6 +67,9 @@ def main(argv=None):
     if a.cmd == "estimate":
         from .audio.align import estimate
         estimate(p.dir / "SCRIPT.md", p.timing_path)
+    elif a.cmd == "register":
+        from .registry import register
+        register(a.slug)
     elif a.cmd == "naskah":
         from .naskah import build_naskah
         build_naskah(p.dir / "SCRIPT.md", p.dir / "NASKAH.md")
@@ -69,7 +80,11 @@ def main(argv=None):
         align(p.dir / "SCRIPT.md", p.voice(), p.timing_path, model=a.model)
     elif a.cmd == "check":
         from .render import check
-        return check(a.slug)
+        rc = check(a.slug)
+        if a.dry:
+            from .lint import dry_check
+            rc = max(rc, dry_check(a.slug))
+        return rc
     elif a.cmd == "still":
         from .render import render_stills
         times = []
@@ -110,7 +125,7 @@ def slugify(title):
 
 
 def new_video(title):
-    """Scaffold videos/<slug>/ from a title: SCRIPT.md + TREATMENT.md skeletons (Claude fills them)."""
+    """Scaffold videos/<slug>/ from a title: SCRIPT.md skeleton (Claude fills it, then PLAN.md)."""
     import datetime
     title = title.strip().strip('"')
     slug = slugify(title)
@@ -136,7 +151,6 @@ def new_video(title):
 ## OUTRO
 [L04] Follow, …
 """)
-    (dst / "TREATMENT.md").write_text(f"# TREATMENT — {title}\n\n> Diisi setelah SCRIPT.md di-approve (fase 2).\n")
     (dst / "REVIEW").write_text("# Stills untuk putaran review (diisi Claude)\n")
     print(f"✓ videos/{slug}/  —  \"{title}\"")
     print(f"  lanjut di Claude Code (folder {ROOT}):")
@@ -162,7 +176,7 @@ def list_videos():
             stage = "🔁 review"
         elif (d / "scenes.py").exists():
             stage = "🎬 kode siap"
-        elif (d / "TREATMENT.md").exists() and (d / "TREATMENT.md").stat().st_size > 200:
+        elif (d / "PLAN.md").exists() or ((d / "TREATMENT.md").exists() and (d / "TREATMENT.md").stat().st_size > 200):
             stage = "🗒 storyboard"
         elif (d / "SCRIPT.md").exists() and "[L05]" in (d / "SCRIPT.md").read_text():
             stage = "✍️ naskah"
@@ -228,6 +242,9 @@ def go(p, a):
     from . import render
     if render.check(p.slug):
         sys.exit("check gagal — kirim output ini ke Claude")
+    from .lint import dry_check
+    if dry_check(p.slug):
+        sys.exit("dry check: ada error di kode gambar — kirim output ini ke Claude")
 
     if not final:
         step("cover")

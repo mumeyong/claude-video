@@ -32,7 +32,9 @@ def build_mix(project, video, out_wav):
     idx = 0
     if voice:
         args += ["-i", str(voice)]
-        filt.append(f"[{idx}:a]aresample=48000,aformat=channel_layouts=stereo,apad,atrim=0:{dur}[vo0]")
+        ms = int(round(project.pre_roll * 1000))         # opt-in pre-roll (brand sting): voice starts later
+        delay = f"adelay={ms}:all=1," if ms else ""
+        filt.append(f"[{idx}:a]aresample=48000,aformat=channel_layouts=stereo,{delay}apad,atrim=0:{dur}[vo0]")
         filt.append("[vo0]asplit=2[vo][vsc]")
         mixin.append("[vo]")
         idx += 1

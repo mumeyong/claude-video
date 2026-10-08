@@ -48,6 +48,11 @@ def spring(p, damping=0.55, freq=2.2):
     return 1 - math.exp(-damping * w * p) * math.cos(w * math.sqrt(1 - damping ** 2) * p)
 
 
+def out_spring(p):
+    """Gentle settle 0→1: one small overshoot (~6%), then rest. For small pops and camera stops (opt-in, fx.py)."""
+    return spring(p, damping=0.72, freq=1.3)
+
+
 def ease(t, start, dur, fn=out_expo):
     return fn(prog(t, start, dur))
 

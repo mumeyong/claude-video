@@ -15,7 +15,7 @@
 | 02 DIAGRAM | series **arch** stack: `users` → `SLB` → `nginx-1..3` → `legacy · monolith` box (ruko) + `Kubernetes` box (3 kios) with colored request dots → red request stopped at nginx (`access rule · ditolak`) → **flip_sign** row `/promo → LEGACY` flips to `KUBERNETES`, dots re-route | stacked diagram | focus SLB → nginx row → pull back → push on the board | nodes pop row by row; board rises |
 | 03 HASIL | **door queues card**: 3 queue bars uneven (one red) → equal (green), `rata.` → a jittery red line goes calm green, `stabil.` stamp → **gapura** whips in with padlock tag `semua lewat sini` | full-width card → centered object | punch on "rata"; push on the line; reset | card rises; gate whips in from right |
 | RECAP (dark) | ruko + kios under a big **flip_sign**: rows flip one at a time, not all (`nggak sekaligus`) → pull-out reveals one gapura framing everything → a visitor walks; the board flips mid-stride; she turns without stopping → ✓ `pesanannya sampai` | centered object | pull-out 1.15 → 1.0 across "pintunya satu" | board flips; gate draws on |
-| OUTRO | logo + **EP06 teaser** (Customer 360, milidetik) + follow | centered | — | — |
+| OUTRO | logo + **EP06 teaser** (Project 360, real-time) + follow | centered | — | — |
 
 Bookend: the hook's "tanpa user sadar" returns in RECAP — the board changes under the visitor's feet and she never notices.
 
@@ -59,5 +59,5 @@ Bookend: the hook's "tanpa user sadar" returns in RECAP — the board changes un
 | L23 | `Nggak harus *sekaligus*.` | dark: ruko + kios under a 3-row board; row 1 flips, rows 2–3 stay | whoosh_dark, tick | "sekaligus" |
 | L24 | `Pintunya *satu*.` | pull-out: one gapura frames everything | whoosh | "satu" |
 | L25 | `Pesanannya *sampai*.` | visitor walks; board flips mid-stride; she turns, no stop; ✓ | tick, chime | "sampai" |
-| L26 | — | logo + EP06 teaser card | pop | "milidetik" |
+| L26 | — | logo + EP06 teaser card | pop | "real-time" |
 | L27 | — | `+ Follow` click | click, chime | "follow" |
