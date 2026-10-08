@@ -2,7 +2,7 @@
 
 - **File:** `kenalan-mumeyong.mp4` · **cover:** `cover.png` (didesain: "Kenalan: aku Mumeyong." + denah)
 - **Durasi:** ± 70 s · **Final:** — · **Pilar:** C (kenalan / brand)
-- **Tayang:** — · **Link:** —
+- **Tayang:** ≤ 2026-10-08 ✅ · **Link:** —
 - **Suara:** rekaman asli (disarankan buat video ini) / sintetis — kalau sintetis: nyalain label "AI-generated content"
 
 ## Caption (≤ 150 karakter)

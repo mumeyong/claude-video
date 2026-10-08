@@ -13,13 +13,13 @@ hasil/<slug>/
 
 | Tanggal tayang | Video | Durasi | TikTok | Status |
 |---|---|---|---|---|
-| — (tayang PERTAMA, pin) | [kenalan-mumeyong](kenalan-mumeyong/) | ± 70 s | — | 📦 final — mp4 + cover + POST.md |
+| ≤ 2026-10-08 (PERTAMA, pin) | [kenalan-mumeyong](kenalan-mumeyong/) | ± 70 s | — | ✅ tayang |
 
 ## B · Broad
 
 | Tanggal tayang | Video | Durasi | TikTok | Status |
 |---|---|---|---|---|
-| — (#1 setelah intro) | [kenapa-bank-down-gajian](kenapa-bank-down-gajian/) | ± 72 s | — | 📦 final — mp4 + cover + POST.md |
+| ≤ 2026-10-08 | [kenapa-bank-down-gajian](kenapa-bank-down-gajian/) | ± 72 s | — | ✅ tayang |
 | — (#3) | [war-tiket-crash](war-tiket-crash/) | ± 70 s | — | 📦 final — mp4 + cover + POST.md |
 | — (#5) | [qris-dua-detik](qris-dua-detik/) | ± 72 s | — | 📦 final — mp4 + cover + POST.md |
 | — | [biaya-cloud-bocor](biaya-cloud-bocor/) | ± 70 s | — | 🎬 produksi — POST.md siap |
@@ -34,13 +34,13 @@ hasil/<slug>/
 
 | Tanggal tayang | Video | Durasi | TikTok | Status |
 |---|---|---|---|---|
-| — (#2) | [bongkar-ep01-kubernetes-10k](bongkar-ep01-kubernetes-10k/) | — | — | 📦 final — mp4 + cover · ⚠️ POST.md belum ada |
-| — | bongkar-ep02-big-data-migration | — | — | 🎬 produksi (belum final) |
-| — | bongkar-ep03-serverless-big-data | — | — | 🎬 produksi (belum final) |
-| — | [bongkar-ep04-monolith-event-driven](bongkar-ep04-monolith-event-driven/) | ± 85 s | — | 📦 final — mp4 + cover + POST.md |
+| ≤ 2026-10-08 | [bongkar-ep01-kubernetes-10k](bongkar-ep01-kubernetes-10k/) | — | — | ✅ tayang · POST.md nggak ada |
+| ≤ 2026-10-08 | [bongkar-ep02-big-data-migration](bongkar-ep02-big-data-migration/) | — | — | ✅ tayang · POST.md nggak ada |
+| ≤ 2026-10-08 | [bongkar-ep03-serverless-big-data](bongkar-ep03-serverless-big-data/) | — | — | ✅ tayang · POST.md nggak ada |
+| ≤ 2026-10-08 | [bongkar-ep04-monolith-event-driven](bongkar-ep04-monolith-event-driven/) | ± 85 s | — | ✅ tayang |
 | — | [bongkar-ep05-legacy-container-hybrid](bongkar-ep05-legacy-container-hybrid/) | ± 80 s | — | 📦 final — mp4 + cover + POST.md |
 | — | [bongkar-ep06-project-360](bongkar-ep06-project-360/) | ± 80 s | — | 📦 final — mp4 + cover + POST.md |
-| — | [bongkar-ep07-azure-ai-infra](bongkar-ep07-azure-ai-infra/) | ± 80 s | — | 🎬 produksi — POST.md siap |
+| — | [bongkar-ep07-azure-ai-infra](bongkar-ep07-azure-ai-infra/) | ± 80 s | — | 📦 final — mp4 + cover + POST.md |
 
 ## Lainnya
 

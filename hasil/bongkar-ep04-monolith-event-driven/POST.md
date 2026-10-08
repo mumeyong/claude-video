@@ -2,7 +2,7 @@
 
 - **File:** `bongkar-ep04-monolith-event-driven.mp4` · **cover:** `cover.png` (didesain: "Aplikasinya kebanyakan tidur." + kentongan + gang dengan satu jendela nyala)
 - **Durasi:** ± 85 s · **Final:** — · **Pilar:** D (deep, seri Bongkar Arsitektur)
-- **Tayang:** — · **Link:** —
+- **Tayang:** ≤ 2026-10-08 ✅ · **Link:** —
 - **Suara:** rekaman asli / sintetis (TTS) — kalau sintetis: nyalain label "AI-generated content" waktu upload
 
 ## Caption (≤ 150 karakter)

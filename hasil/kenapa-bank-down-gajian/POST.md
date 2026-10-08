@@ -2,7 +2,7 @@
 
 - **File:** `kenapa-bank-down-gajian.mp4` · **cover:** `cover.png` (didesain: "Kenapa down tanggal 25?" + kalender 25 + buku kas PELAKU)
 - **Durasi:** ± 72 s · **Final:** — · **Pilar:** B (broad)
-- **Tayang:** — · **Link:** —
+- **Tayang:** ≤ 2026-10-08 ✅ · **Link:** —
 - **Suara:** rekaman asli / sintetis (TTS) — kalau sintetis: nyalain label "AI-generated content" waktu upload
 
 ## Caption (≤ 150 karakter)

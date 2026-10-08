@@ -1,6 +1,6 @@
 # Cloud Architect itu sebenernya ngapain sih?
 
-- **Status:** 🎬 produksi — jadi video intro channel → [`videos/kenalan-mumeyong/`](../videos/kenalan-mumeyong/) · fase 5 (review)
+- **Status:** 🎬 produksi — jadi video intro channel → [`videos/kenalan-mumeyong/`](../videos/kenalan-mumeyong/) · ✅ tayang
 - **Slug:** cloud-architect-ngapain
 - **Seri:** —
 - **Durasi target:** 60–90 s

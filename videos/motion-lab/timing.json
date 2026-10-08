@@ -1,53 +1,55 @@
 {
- "source": "estimate",
- "duration": 43.195,
+ "source": "tts",
+ "voice": "id-ID-ArdiNeural",
+ "tts": "ardi",
+ "duration": 45.204,
  "lines": [
   {
    "id": "L01",
    "chapter": "INTRO",
    "text": "Ini motion lab. Gerakan lama, lawan gerakan baru.",
    "start": 0.4,
-   "end": 3.385,
+   "end": 4.37,
    "words": [
     {
      "w": "Ini",
      "start": 0.4,
-     "end": 0.62
+     "end": 0.597
     },
     {
      "w": "motion",
-     "start": 0.639,
-     "end": 1.023
+     "start": 0.597,
+     "end": 0.962
     },
     {
      "w": "lab.",
-     "start": 1.057,
-     "end": 1.331
+     "start": 0.962,
+     "end": 1.328
     },
     {
      "w": "Gerakan",
-     "start": 1.355,
-     "end": 1.795
+     "start": 2.115,
+     "end": 2.492
     },
     {
      "w": "lama,",
-     "start": 1.833,
-     "end": 2.162
+     "start": 2.492,
+     "end": 2.975
     },
     {
      "w": "lawan",
-     "start": 2.191,
-     "end": 2.521
+     "start": 3.247,
+     "end": 3.577
     },
     {
      "w": "gerakan",
-     "start": 2.549,
-     "end": 2.989
+     "start": 3.577,
+     "end": 3.895
     },
     {
      "w": "baru.",
-     "start": 3.027,
-     "end": 3.356
+     "start": 3.895,
+     "end": 4.32
     }
    ]
   },
@@ -55,43 +57,43 @@
    "id": "L02",
    "chapter": "INTRO",
    "text": "Lihat bedanya, terus pilih yang kamu suka.",
-   "start": 3.765,
-   "end": 6.377,
+   "start": 4.69,
+   "end": 6.998,
    "words": [
     {
      "w": "Lihat",
-     "start": 3.765,
-     "end": 4.1
+     "start": 4.69,
+     "end": 4.907
     },
     {
      "w": "bedanya,",
-     "start": 4.13,
-     "end": 4.632
+     "start": 4.907,
+     "end": 5.52
     },
     {
      "w": "terus",
-     "start": 4.676,
-     "end": 5.012
+     "start": 5.768,
+     "end": 5.957
     },
     {
      "w": "pilih",
-     "start": 5.041,
-     "end": 5.376
+     "start": 5.957,
+     "end": 6.193
     },
     {
      "w": "yang",
-     "start": 5.405,
-     "end": 5.685
+     "start": 6.193,
+     "end": 6.322
     },
     {
      "w": "kamu",
-     "start": 5.709,
-     "end": 5.988
+     "start": 6.322,
+     "end": 6.476
     },
     {
      "w": "suka.",
-     "start": 6.013,
-     "end": 6.348
+     "start": 6.476,
+     "end": 6.959
     }
    ]
   },
@@ -99,48 +101,48 @@
    "id": "L03",
    "chapter": "00 · TEKS",
    "text": "Headline lama: blur, terus naik. Semua video sama.",
-   "start": 7.677,
-   "end": 10.662,
+   "start": 7.998,
+   "end": 12.429,
    "words": [
     {
      "w": "Headline",
-     "start": 7.677,
-     "end": 8.162
+     "start": 7.998,
+     "end": 8.296
     },
     {
      "w": "lama:",
-     "start": 8.204,
-     "end": 8.527
+     "start": 8.296,
+     "end": 8.78
     },
     {
      "w": "blur,",
-     "start": 8.555,
-     "end": 8.878
+     "start": 9.051,
+     "end": 9.523
     },
     {
      "w": "terus",
-     "start": 8.906,
-     "end": 9.229
+     "start": 9.7,
+     "end": 9.959
     },
     {
      "w": "naik.",
-     "start": 9.257,
-     "end": 9.58
+     "start": 9.959,
+     "end": 10.395
     },
     {
      "w": "Semua",
-     "start": 9.609,
-     "end": 9.932
+     "start": 11.184,
+     "end": 11.585
     },
     {
      "w": "video",
-     "start": 9.96,
-     "end": 10.283
+     "start": 11.585,
+     "end": 11.88
     },
     {
      "w": "sama.",
-     "start": 10.311,
-     "end": 10.634
+     "start": 11.88,
+     "end": 12.387
     }
    ]
   },
@@ -148,58 +150,58 @@
    "id": "L04",
    "chapter": "00 · TEKS",
    "text": "Yang baru: tiap kata muncul dari balik garis, pakai spring.",
-   "start": 11.042,
-   "end": 14.773,
+   "start": 12.749,
+   "end": 16.151,
    "words": [
     {
      "w": "Yang",
-     "start": 11.042,
-     "end": 11.328
+     "start": 12.749,
+     "end": 12.893
     },
     {
      "w": "baru:",
-     "start": 11.353,
-     "end": 11.696
+     "start": 12.893,
+     "end": 13.365
     },
     {
      "w": "tiap",
-     "start": 11.726,
-     "end": 12.012
+     "start": 13.636,
+     "end": 13.86
     },
     {
      "w": "kata",
-     "start": 12.037,
-     "end": 12.323
+     "start": 13.86,
+     "end": 14.037
     },
     {
      "w": "muncul",
-     "start": 12.348,
-     "end": 12.749
+     "start": 14.037,
+     "end": 14.344
     },
     {
      "w": "dari",
-     "start": 12.783,
-     "end": 13.069
+     "start": 14.344,
+     "end": 14.497
     },
     {
      "w": "balik",
-     "start": 13.094,
-     "end": 13.438
+     "start": 14.497,
+     "end": 14.698
     },
     {
      "w": "garis,",
-     "start": 13.467,
-     "end": 13.868
+     "start": 14.698,
+     "end": 15.169
     },
     {
      "w": "pakai",
-     "start": 13.903,
-     "end": 14.246
+     "start": 15.346,
+     "end": 15.617
     },
     {
      "w": "spring.",
-     "start": 14.276,
-     "end": 14.734
+     "start": 15.618,
+     "end": 16.101
     }
    ]
   },
@@ -207,38 +209,38 @@
    "id": "L05",
    "chapter": "00 · TEKS",
    "text": "Atau huruf demi huruf, tracking-nya merapat.",
-   "start": 15.153,
-   "end": 17.392,
+   "start": 16.471,
+   "end": 18.744,
    "words": [
     {
      "w": "Atau",
-     "start": 15.153,
-     "end": 15.382
+     "start": 16.471,
+     "end": 16.678
     },
     {
      "w": "huruf",
-     "start": 15.402,
-     "end": 15.677
+     "start": 16.678,
+     "end": 16.938
     },
     {
      "w": "demi",
-     "start": 15.701,
-     "end": 15.93
+     "start": 16.938,
+     "end": 17.115
     },
     {
      "w": "huruf,",
-     "start": 15.949,
-     "end": 16.27
+     "start": 17.115,
+     "end": 17.61
     },
     {
      "w": "tracking-nya",
-     "start": 16.298,
-     "end": 16.893
+     "start": 17.822,
+     "end": 18.259
     },
     {
      "w": "merapat.",
-     "start": 16.944,
-     "end": 17.356
+     "start": 18.259,
+     "end": 18.777
     }
    ]
   },
@@ -246,53 +248,53 @@
    "id": "L06",
    "chapter": "01 · HERO",
    "text": "Hero lama: keluar, terus scene baru mulai dari nol.",
-   "start": 18.692,
-   "end": 22.05,
+   "start": 19.744,
+   "end": 22.823,
    "words": [
     {
      "w": "Hero",
-     "start": 18.692,
-     "end": 18.989
+     "start": 19.744,
+     "end": 19.887
     },
     {
      "w": "lama:",
-     "start": 19.015,
-     "end": 19.372
+     "start": 19.887,
+     "end": 20.335
     },
     {
      "w": "keluar,",
-     "start": 19.403,
-     "end": 19.878
+     "start": 20.571,
+     "end": 21.09
     },
     {
      "w": "terus",
-     "start": 19.919,
-     "end": 20.276
+     "start": 21.338,
+     "end": 21.526
     },
     {
      "w": "scene",
-     "start": 20.307,
-     "end": 20.663
+     "start": 21.526,
+     "end": 21.774
     },
     {
      "w": "baru",
-     "start": 20.694,
-     "end": 20.991
+     "start": 21.774,
+     "end": 22.01
     },
     {
      "w": "mulai",
-     "start": 21.017,
-     "end": 21.374
+     "start": 22.01,
+     "end": 22.246
     },
     {
      "w": "dari",
-     "start": 21.405,
-     "end": 21.702
+     "start": 22.246,
+     "end": 22.411
     },
     {
      "w": "nol.",
-     "start": 21.728,
-     "end": 22.025
+     "start": 22.411,
+     "end": 22.776
     }
    ]
   },
@@ -300,53 +302,53 @@
    "id": "L07",
    "chapter": "01 · HERO",
    "text": "Hero baru nggak pernah pergi. Dia cuma pindah tempat.",
-   "start": 22.43,
-   "end": 25.789,
+   "start": 23.143,
+   "end": 26.337,
    "words": [
     {
      "w": "Hero",
-     "start": 22.43,
-     "end": 22.717
+     "start": 23.143,
+     "end": 23.32
     },
     {
      "w": "baru",
-     "start": 22.741,
-     "end": 23.027
+     "start": 23.32,
+     "end": 23.509
     },
     {
      "w": "nggak",
-     "start": 23.052,
-     "end": 23.396
+     "start": 23.509,
+     "end": 23.65
     },
     {
      "w": "pernah",
-     "start": 23.425,
-     "end": 23.826
+     "start": 23.65,
+     "end": 23.863
     },
     {
      "w": "pergi.",
-     "start": 23.861,
-     "end": 24.261
+     "start": 23.863,
+     "end": 24.346
     },
     {
      "w": "Dia",
-     "start": 24.296,
-     "end": 24.525
+     "start": 25.133,
+     "end": 25.404
     },
     {
      "w": "cuma",
-     "start": 24.545,
-     "end": 24.831
+     "start": 25.404,
+     "end": 25.616
     },
     {
      "w": "pindah",
-     "start": 24.856,
-     "end": 25.256
+     "start": 25.616,
+     "end": 25.876
     },
     {
      "w": "tempat.",
-     "start": 25.291,
-     "end": 25.749
+     "start": 25.876,
+     "end": 26.406
     }
    ]
   },
@@ -354,38 +356,38 @@
    "id": "L08",
    "chapter": "01 · HERO",
    "text": "Isinya ganti di balik sapuan cahaya.",
-   "start": 26.169,
-   "end": 28.407,
+   "start": 26.657,
+   "end": 28.625,
    "words": [
     {
      "w": "Isinya",
-     "start": 26.169,
-     "end": 26.558
+     "start": 26.657,
+     "end": 26.976
     },
     {
      "w": "ganti",
-     "start": 26.592,
-     "end": 26.926
+     "start": 26.976,
+     "end": 27.329
     },
     {
      "w": "di",
-     "start": 26.955,
-     "end": 27.122
+     "start": 27.329,
+     "end": 27.412
     },
     {
      "w": "balik",
-     "start": 27.137,
-     "end": 27.471
+     "start": 27.412,
+     "end": 27.648
     },
     {
      "w": "sapuan",
-     "start": 27.5,
-     "end": 27.89
+     "start": 27.648,
+     "end": 27.99
     },
     {
      "w": "cahaya.",
-     "start": 27.923,
-     "end": 28.369
+     "start": 27.99,
+     "end": 28.579
     }
    ]
   },
@@ -393,38 +395,38 @@
    "id": "L09",
    "chapter": "01 · HERO",
    "text": "Dan keluarnya pelan, jadi abu-abu dulu.",
-   "start": 28.787,
-   "end": 31.026,
+   "start": 28.945,
+   "end": 31.363,
    "words": [
     {
      "w": "Dan",
-     "start": 28.787,
-     "end": 28.993
+     "start": 28.945,
+     "end": 29.125
     },
     {
      "w": "keluarnya",
-     "start": 29.011,
-     "end": 29.526
+     "start": 29.125,
+     "end": 29.467
     },
     {
      "w": "pelan,",
-     "start": 29.571,
-     "end": 29.931
+     "start": 29.467,
+     "end": 29.904
     },
     {
      "w": "jadi",
-     "start": 29.963,
-     "end": 30.22
+     "start": 30.163,
+     "end": 30.505
     },
     {
      "w": "abu-abu",
-     "start": 30.243,
-     "end": 30.655
+     "start": 30.505,
+     "end": 30.882
     },
     {
      "w": "dulu.",
-     "start": 30.69,
-     "end": 30.999
+     "start": 30.882,
+     "end": 31.319
     }
    ]
   },
@@ -432,48 +434,48 @@
    "id": "L10",
    "chapter": "02 · KAMERA",
    "text": "Kamera lama: zoom rata, semua ikut gerak bareng.",
-   "start": 32.326,
-   "end": 35.311,
+   "start": 32.363,
+   "end": 35.519,
    "words": [
     {
      "w": "Kamera",
-     "start": 32.326,
-     "end": 32.719
+     "start": 32.363,
+     "end": 32.598
     },
     {
      "w": "lama:",
-     "start": 32.753,
-     "end": 33.089
+     "start": 32.598,
+     "end": 33.069
     },
     {
      "w": "zoom",
-     "start": 33.118,
-     "end": 33.398
+     "start": 33.305,
+     "end": 33.576
     },
     {
      "w": "rata,",
-     "start": 33.423,
-     "end": 33.759
+     "start": 33.576,
+     "end": 34.072
     },
     {
      "w": "semua",
-     "start": 33.788,
-     "end": 34.125
+     "start": 34.308,
+     "end": 34.614
     },
     {
      "w": "ikut",
-     "start": 34.154,
-     "end": 34.434
+     "start": 34.614,
+     "end": 34.815
     },
     {
      "w": "gerak",
-     "start": 34.458,
-     "end": 34.795
+     "start": 34.815,
+     "end": 35.003
     },
     {
      "w": "bareng.",
-     "start": 34.824,
-     "end": 35.272
+     "start": 35.003,
+     "end": 35.463
     }
    ]
   },
@@ -481,48 +483,48 @@
    "id": "L11",
    "chapter": "02 · KAMERA",
    "text": "Kamera baru: tiga lapis, beda kecepatan. Ada kedalaman.",
-   "start": 35.691,
-   "end": 38.676,
+   "start": 35.839,
+   "end": 40.607,
    "words": [
     {
      "w": "Kamera",
-     "start": 35.691,
-     "end": 36.035
+     "start": 35.839,
+     "end": 36.085
     },
     {
      "w": "baru:",
-     "start": 36.064,
-     "end": 36.359
+     "start": 36.085,
+     "end": 36.568
     },
     {
      "w": "tiga",
-     "start": 36.384,
-     "end": 36.63
+     "start": 36.816,
+     "end": 37.052
     },
     {
      "w": "lapis,",
-     "start": 36.651,
-     "end": 36.994
+     "start": 37.052,
+     "end": 37.547
     },
     {
      "w": "beda",
-     "start": 37.024,
-     "end": 37.269
+     "start": 37.724,
+     "end": 38.03
     },
     {
      "w": "kecepatan.",
-     "start": 37.29,
-     "end": 37.83
+     "start": 38.031,
+     "end": 38.714
     },
     {
      "w": "Ada",
-     "start": 37.877,
-     "end": 38.073
+     "start": 39.502,
+     "end": 39.833
     },
     {
      "w": "kedalaman.",
-     "start": 38.09,
-     "end": 38.63
+     "start": 39.833,
+     "end": 40.564
     }
    ]
   },
@@ -530,38 +532,38 @@
    "id": "L12",
    "chapter": "OUTRO",
    "text": "Mana yang paling kerasa? Kabarin aku.",
-   "start": 39.976,
-   "end": 42.215,
+   "start": 41.607,
+   "end": 44.404,
    "words": [
     {
      "w": "Mana",
-     "start": 39.976,
-     "end": 40.247
+     "start": 41.607,
+     "end": 41.808
     },
     {
      "w": "yang",
-     "start": 40.271,
-     "end": 40.542
+     "start": 41.808,
+     "end": 41.938
     },
     {
      "w": "paling",
-     "start": 40.566,
-     "end": 40.945
+     "start": 41.938,
+     "end": 42.139
     },
     {
      "w": "kerasa?",
-     "start": 40.978,
-     "end": 41.412
+     "start": 42.139,
+     "end": 42.681
     },
     {
      "w": "Kabarin",
-     "start": 41.449,
-     "end": 41.883
+     "start": 43.468,
+     "end": 43.88
     },
     {
      "w": "aku.",
-     "start": 41.921,
-     "end": 42.192
+     "start": 43.88,
+     "end": 44.364
     }
    ]
   }
