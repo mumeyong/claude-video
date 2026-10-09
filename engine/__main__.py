@@ -14,20 +14,21 @@
   sheet    <slug>                 contact sheet, one thumbnail per script line          (user runs)
   preview  <slug> [--from s --to s]  540x960 30fps quick render with audio           (user runs)
   render   <slug> [--from s --to s]  1080x1920 60fps final                           (user runs)
-  tts      <slug>                 Ardi voice → audio/voice_tts.wav + exact timing.json (edge-tts, online;
+  tts      <slug>                 Mumeyong voice → audio/voice_tts.wav + exact timing.json (edge-tts, online;
                                   automatic in go when there is no voice.wav; voice.wav always wins) (user runs)
   mix      <slug>                 audio only → out/mix.wav                              (user runs)
   music    <slug>                 generated score only → out/music_gen.wav (if no audio/music.*) (user runs)
   register <slug>                 index rows (ideas/REGISTRY.md, hasil/README.md) from PLAN.md   (Claude may run)
   api                             engine/API.md — one line per component (Claude reads this, not the sources)
-  sfx                             export synth SFX to .cache/sfx_preview to audition
+  sfx                             export synth SFX (classic + kit strips) to .cache/sfx_preview to audition
+  audition                        40 s demo per music style + SFX kit strips → .cache/audition/   (user runs)
 """
 import argparse
 import shutil
 import sys
 
 from . import draw  # noqa: F401  (font setup first)
-from .project import Project, ROOT
+from .project import Project, ROOT, find
 
 
 def main(argv=None):
@@ -54,6 +55,10 @@ def main(argv=None):
     if a.cmd == "sfx":
         from .audio.sfx import export_library
         export_library(ROOT / ".cache" / "sfx_preview")
+        return 0
+    if a.cmd == "audition":
+        from .audio.score import audition
+        audition(ROOT / ".cache" / "audition")
         return 0
     if not a.slug:
         ap.error("slug required")
@@ -82,8 +87,8 @@ def main(argv=None):
         from .render import check
         rc = check(a.slug)
         if a.dry:
-            from .lint import dry_check
-            rc = max(rc, dry_check(a.slug))
+            from .lint import dry_check, audio_dry
+            rc = max(rc, dry_check(a.slug), audio_dry(a.slug))
         return rc
     elif a.cmd == "still":
         from .render import render_stills
@@ -130,7 +135,7 @@ def new_video(title):
     title = title.strip().strip('"')
     slug = slugify(title)
     dst = ROOT / "videos" / slug
-    if dst.exists():
+    if find("videos", slug).exists():
         sys.exit(f"sudah ada: {dst}")
     for d in ("audio", "assets", "out"):
         (dst / d).mkdir(parents=True)
@@ -170,7 +175,7 @@ def list_videos():
         if (d / "timing.json").exists():
             tj = json.load(open(d / "timing.json"))
             dur = f"{tj['duration']:.0f}s" + ("" if tj.get("source") == "whisper" else "~")
-        if (ROOT / "hasil" / d.name / f"{d.name}.mp4").exists():
+        if (find("hasil", d.name) / f"{d.name}.mp4").exists():
             stage = "📦 final"
         elif (d / "out" / "preview.mp4").exists():
             stage = "🔁 review"
@@ -184,6 +189,10 @@ def list_videos():
             stage = "💡 brief"
         voice = " 🎙" if (d / "audio" / "voice.wav").exists() else ""
         print(f"{d.name:28s} {stage + voice:22s} {dur:>7s}  {title}")
+    for sub in sorted(x for x in (ROOT / "videos").iterdir() if x.is_dir() and x.name.startswith("_")):
+        names = sorted(x.name for x in sub.iterdir() if x.is_dir() and not x.name.startswith((".", "_")))
+        if names:
+            print(f"  videos/{sub.name}/ ({len(names)}): {', '.join(names)}")
     print("\n  claude-video <video>        review   ·   claude-video <video> final   ·   claude-video \"Judul baru\"")
     return 0
 
@@ -224,11 +233,11 @@ def go(p, a):
             from .audio.align import align
             align(script, real, timing, model=a.model)
     else:
-        # no recording → Ardi TTS voice. Redone only when the script changes (or an older TTS version is found).
+        # no recording → Mumeyong TTS voice. Redone only when the script changes (or an older TTS version is found).
         from .audio.tts import synthesize, VERSION
         prev = json.load(open(timing)) if timing.exists() else {}
         if src != "tts" or not synth.exists() or _newer(script, timing) or prev.get("tts") != VERSION:
-            step("suara TTS (Ardi) — belum ada rekaman voice.wav")
+            step("suara TTS (Mumeyong) — belum ada rekaman voice.wav")
             try:
                 synthesize(p)
                 done.append(f"voice_tts   {synth}")
@@ -271,8 +280,8 @@ def go(p, a):
     for d in done:
         print(f"  {d}")
     if final:
-        from .project import ROOT
-        up = ROOT / "hasil" / p.slug
+        from .project import find
+        up = find("hasil", p.slug)
         print(f"\n▶ UPLOAD FILE INI (1080×1920 60fps): {up / (p.slug + '.mp4')}")
         print(f"  cover: {up / 'cover.png'} · caption: {up / 'POST.md'}")
     else:

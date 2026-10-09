@@ -7,7 +7,10 @@ start, with a riser into it and a soft impact on it. Tempo = video.bpm (HUD show
 
 Per-video character (key, mood, seed) is seeded from the slug, or set it in scenes.py:
     v.music = dict(key="D", mood="tense")   # moods: warm · tense · bright · dreamy
+    v.music = dict(style="lofi", key="F", mood="warm")   # styled score (audio/score.py): lofi · marimba ·
+                                            # ambient · garage · cinematic — own band, groove, tempo range, motif
     v.music = False                         # no generated music
+No style = "pulse": the original sine-pad / four-on-the-floor score below (finished videos keep it).
 Drop a real track at audio/music.(wav|mp3) and it wins over the generator.
 """
 import zlib
@@ -34,6 +37,14 @@ def _f(m):
     return 440.0 * 2 ** ((m - 69) / 12)
 
 
+STYLE_NAMES = ("pulse", "lofi", "marimba", "ambient", "garage", "cinematic")
+
+
+def style_of(video):
+    conf = getattr(video, "music", None)
+    return conf.get("style", "pulse") if isinstance(conf, dict) else "pulse"
+
+
 def config(video, slug):
     """(key name, mood, seed) or None when the video opts out."""
     conf = getattr(video, "music", None)
@@ -45,6 +56,8 @@ def config(video, slug):
     mood = conf.get("mood", list(MOODS)[(seed // 7) % len(MOODS)])
     if key not in KEYS or mood not in MOODS:
         raise ValueError(f"music: unknown key {key!r} or mood {mood!r}")
+    if style_of(video) not in STYLE_NAMES:
+        raise ValueError(f"music: unknown style {style_of(video)!r}; known: {', '.join(STYLE_NAMES)}")
     return key, mood, seed
 
 
@@ -82,7 +95,13 @@ def plan(video, slug):
     if cfg is None:
         return ["music: off (v.music = False)"]
     key, mood, seed = cfg
-    lines = [f"music: generated · {key} {mood} · {video.bpm} BPM · seed {seed}  (audio/music.* overrides)"]
+    style = style_of(video)
+    lines = [f"music: generated · {style} · {key} {mood} · {video.bpm} BPM · seed {seed}  (audio/music.* overrides)"]
+    if style != "pulse":
+        from .score import STYLES
+        lo, hi = STYLES[style]["bpm"]
+        if not lo <= video.bpm <= hi:
+            lines.append(f"  ⚠ {style} wants {lo}–{hi} BPM — set Video(..., bpm=...) in that range")
     for t, kind, idx in sections(video):
         lines.append(f"    {t:7.2f}  {kind}{'' if idx is None else ' ' + str(idx)}")
     return lines
@@ -140,11 +159,14 @@ def _voicing(tonic_midi, root, ivs, lo, hi):
 
 
 def compose(video, slug):
-    """Mono float64 array, length = video.duration."""
+    """Float64 array, length = video.duration: mono for "pulse", (n, 2) stereo for styled scores."""
     cfg = config(video, slug)
     if cfg is None:
         return None
     key, mood, seed = cfg
+    if style_of(video) != "pulse":
+        from .score import compose_styled
+        return compose_styled(video, key, mood, seed, style_of(video))
     rng = np.random.default_rng(seed)
     dur = video.duration
     n_total = int(SR * (dur + 2.0))

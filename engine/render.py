@@ -135,8 +135,8 @@ def render_video(slug, mode="preview", workers=None, t_from=0.0, t_to=None, audi
 
 def publish(project, video, final_mp4):
     """Copy a full final render to hasil/<slug>/ with a cover frame. POST.md is written by Claude."""
-    from .project import ROOT
-    d = ROOT / "hasil" / project.slug
+    from .project import find
+    d = find("hasil", project.slug)
     d.mkdir(parents=True, exist_ok=True)
     shutil.copy2(final_mp4, d / f"{project.slug}.mp4")
     render_cover(project, video, d / "cover.png")

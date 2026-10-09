@@ -12,7 +12,7 @@ cd "$REPO" || exit 1
 PY="$REPO/.venv/bin/python"
 [ -x "$PY" ] || { echo "venv missing: python3 -m venv --system-site-packages $REPO/.venv && $REPO/.venv/bin/pip install faster-whisper edge-tts"; exit 1; }
 
-COMMANDS=" go new estimate naskah align tts check still cover sheet preview render mix music sfx help ls list open "
+COMMANDS=" go new estimate naskah align tts check still cover sheet preview render mix music sfx audition help ls list open "
 
 case "${1:-ls}" in
   ls|list)    exec "$PY" -m engine ls ;;
@@ -20,7 +20,7 @@ case "${1:-ls}" in
   open)       shift; xdg-open "$REPO/videos/${1:-}" >/dev/null 2>&1 & echo "$REPO/videos/${1:-}"; exit 0 ;;
 esac
 
-if [ -d "videos/$1" ]; then slug=$1; shift; exec "$PY" -m engine go "$slug" "$@"; fi
+if [ -n "$1" ] && { [ -d "videos/$1" ] || compgen -G "videos/_*/$1/" >/dev/null; }; then slug=$1; shift; exec "$PY" -m engine go "$slug" "$@"; fi
 
 if [[ "$COMMANDS" != *" $1 "* ]]; then
   # not a command, not an existing video → offer to create a new one from this title

@@ -8,10 +8,19 @@ from .timing import Timing
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 
+def find(kind, slug):
+    """videos/<slug> or hasil/<slug>; else one level down in a status folder (videos/_arsip, videos/_lab,
+    hasil/_tayang). Missing → the top-level path (where new things are created)."""
+    top = ROOT / kind / slug
+    if top.is_dir():
+        return top
+    return next(iter(sorted((ROOT / kind).glob(f"_*/{slug}"))), top)
+
+
 class Project:
     def __init__(self, slug):
         self.slug = slug
-        self.dir = ROOT / "videos" / slug
+        self.dir = find("videos", slug)
         if not self.dir.is_dir():
             sys.exit(f"no such video: {self.dir}")
         self.out = self.dir / "out"

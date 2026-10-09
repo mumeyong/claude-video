@@ -1,0 +1,4 @@
+LOS = el o es
+PON = pe o en
+ISP = i es pe
+fiber = faiber

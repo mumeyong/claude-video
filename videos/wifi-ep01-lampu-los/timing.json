@@ -1,0 +1,1114 @@
+{
+ "source": "tts",
+ "voice": "id-ID-ArdiNeural",
+ "tts": "ardi",
+ "duration": 86.277,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Jam sembilan malam. Lampu kecil di modem kamu nyala merah.",
+   "start": 0.4,
+   "end": 4.169,
+   "words": [
+    {
+     "w": "Jam",
+     "start": 0.4,
+     "end": 0.639
+    },
+    {
+     "w": "sembilan",
+     "start": 0.639,
+     "end": 1.016
+    },
+    {
+     "w": "malam.",
+     "start": 1.016,
+     "end": 1.5
+    },
+    {
+     "w": "Lampu",
+     "start": 2.288,
+     "end": 2.606
+    },
+    {
+     "w": "kecil",
+     "start": 2.606,
+     "end": 2.913
+    },
+    {
+     "w": "di",
+     "start": 2.913,
+     "end": 2.995
+    },
+    {
+     "w": "modem",
+     "start": 2.995,
+     "end": 3.267
+    },
+    {
+     "w": "kamu",
+     "start": 3.267,
+     "end": 3.502
+    },
+    {
+     "w": "nyala",
+     "start": 3.502,
+     "end": 3.679
+    },
+    {
+     "w": "merah.",
+     "start": 3.679,
+     "end": 4.139
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Tulisannya LOS. Dan dia lagi ngasih tahu: masalahnya di kabel, bukan di modem.",
+   "start": 4.489,
+   "end": 10.162,
+   "words": [
+    {
+     "w": "Tulisannya",
+     "start": 4.489,
+     "end": 5.216
+    },
+    {
+     "w": "LOS.",
+     "start": 5.279,
+     "end": 5.609
+    },
+    {
+     "w": "Dan",
+     "start": 5.638,
+     "end": 5.902
+    },
+    {
+     "w": "dia",
+     "start": 5.925,
+     "end": 6.189
+    },
+    {
+     "w": "lagi",
+     "start": 6.212,
+     "end": 6.543
+    },
+    {
+     "w": "ngasih",
+     "start": 6.571,
+     "end": 7.034
+    },
+    {
+     "w": "tahu:",
+     "start": 7.074,
+     "end": 7.471
+    },
+    {
+     "w": "masalahnya",
+     "start": 7.505,
+     "end": 8.232
+    },
+    {
+     "w": "di",
+     "start": 8.295,
+     "end": 8.493
+    },
+    {
+     "w": "kabel,",
+     "start": 8.511,
+     "end": 8.973
+    },
+    {
+     "w": "bukan",
+     "start": 9.013,
+     "end": 9.41
+    },
+    {
+     "w": "di",
+     "start": 9.444,
+     "end": 9.642
+    },
+    {
+     "w": "modem.",
+     "start": 9.66,
+     "end": 10.122
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Tiap lampu di modem itu nunjuk satu tempat. Kita baca bareng.",
+   "start": 10.762,
+   "end": 14.696,
+   "words": [
+    {
+     "w": "Tiap",
+     "start": 10.762,
+     "end": 10.92
+    },
+    {
+     "w": "lampu",
+     "start": 10.92,
+     "end": 11.203
+    },
+    {
+     "w": "di",
+     "start": 11.203,
+     "end": 11.286
+    },
+    {
+     "w": "modem",
+     "start": 11.286,
+     "end": 11.498
+    },
+    {
+     "w": "itu",
+     "start": 11.498,
+     "end": 11.757
+    },
+    {
+     "w": "nunjuk",
+     "start": 11.757,
+     "end": 12.087
+    },
+    {
+     "w": "satu",
+     "start": 12.087,
+     "end": 12.311
+    },
+    {
+     "w": "tempat.",
+     "start": 12.312,
+     "end": 12.795
+    },
+    {
+     "w": "Kita",
+     "start": 13.582,
+     "end": 13.877
+    },
+    {
+     "w": "baca",
+     "start": 13.877,
+     "end": 14.136
+    },
+    {
+     "w": "bareng.",
+     "start": 14.137,
+     "end": 14.644
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · LOS",
+   "text": "Internet rumahmu itu sebenernya cahaya, lewat kabel fiber.",
+   "start": 15.696,
+   "end": 18.947,
+   "words": [
+    {
+     "w": "Internet",
+     "start": 15.696,
+     "end": 16.03
+    },
+    {
+     "w": "rumahmu",
+     "start": 16.03,
+     "end": 16.313
+    },
+    {
+     "w": "itu",
+     "start": 16.313,
+     "end": 16.513
+    },
+    {
+     "w": "sebenernya",
+     "start": 16.513,
+     "end": 16.902
+    },
+    {
+     "w": "cahaya,",
+     "start": 16.902,
+     "end": 17.492
+    },
+    {
+     "w": "lewat",
+     "start": 17.752,
+     "end": 18.046
+    },
+    {
+     "w": "kabel",
+     "start": 18.046,
+     "end": 18.329
+    },
+    {
+     "w": "fiber.",
+     "start": 18.329,
+     "end": 18.907
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · LOS",
+   "text": "Jalannya dari kantor ISP, ke kotak hitam di tiang, baru masuk ke rumah.",
+   "start": 19.267,
+   "end": 23.195,
+   "words": [
+    {
+     "w": "Jalannya",
+     "start": 19.267,
+     "end": 19.719
+    },
+    {
+     "w": "dari",
+     "start": 19.758,
+     "end": 20.009
+    },
+    {
+     "w": "kantor",
+     "start": 20.031,
+     "end": 20.382
+    },
+    {
+     "w": "ISP,",
+     "start": 20.413,
+     "end": 20.664
+    },
+    {
+     "w": "ke",
+     "start": 20.686,
+     "end": 20.836
+    },
+    {
+     "w": "kotak",
+     "start": 20.849,
+     "end": 21.151
+    },
+    {
+     "w": "hitam",
+     "start": 21.177,
+     "end": 21.478
+    },
+    {
+     "w": "di",
+     "start": 21.504,
+     "end": 21.655
+    },
+    {
+     "w": "tiang,",
+     "start": 21.668,
+     "end": 22.019
+    },
+    {
+     "w": "baru",
+     "start": 22.05,
+     "end": 22.3
+    },
+    {
+     "w": "masuk",
+     "start": 22.322,
+     "end": 22.623
+    },
+    {
+     "w": "ke",
+     "start": 22.65,
+     "end": 22.8
+    },
+    {
+     "w": "rumah.",
+     "start": 22.813,
+     "end": 23.165
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · LOS",
+   "text": "LOS itu Loss of Signal. Cahayanya nggak nyampe, ada yang putus di jalan.",
+   "start": 23.515,
+   "end": 28.411,
+   "words": [
+    {
+     "w": "LOS",
+     "start": 23.515,
+     "end": 23.762
+    },
+    {
+     "w": "itu",
+     "start": 23.783,
+     "end": 24.03
+    },
+    {
+     "w": "Loss",
+     "start": 24.052,
+     "end": 24.36
+    },
+    {
+     "w": "of",
+     "start": 24.387,
+     "end": 24.572
+    },
+    {
+     "w": "Signal.",
+     "start": 24.588,
+     "end": 25.082
+    },
+    {
+     "w": "Cahayanya",
+     "start": 25.125,
+     "end": 25.742
+    },
+    {
+     "w": "nggak",
+     "start": 25.795,
+     "end": 26.166
+    },
+    {
+     "w": "nyampe,",
+     "start": 26.198,
+     "end": 26.691
+    },
+    {
+     "w": "ada",
+     "start": 26.734,
+     "end": 26.981
+    },
+    {
+     "w": "yang",
+     "start": 27.003,
+     "end": 27.311
+    },
+    {
+     "w": "putus",
+     "start": 27.338,
+     "end": 27.708
+    },
+    {
+     "w": "di",
+     "start": 27.74,
+     "end": 27.925
+    },
+    {
+     "w": "jalan.",
+     "start": 27.942,
+     "end": 28.373
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "00 · LOS",
+   "text": "Cek dulu kabel kecil di belakang modem, jangan sampai ketekuk.",
+   "start": 28.731,
+   "end": 31.673,
+   "words": [
+    {
+     "w": "Cek",
+     "start": 28.731,
+     "end": 28.845
+    },
+    {
+     "w": "dulu",
+     "start": 28.845,
+     "end": 29.022
+    },
+    {
+     "w": "kabel",
+     "start": 29.022,
+     "end": 29.234
+    },
+    {
+     "w": "kecil",
+     "start": 29.234,
+     "end": 29.517
+    },
+    {
+     "w": "di",
+     "start": 29.517,
+     "end": 29.588
+    },
+    {
+     "w": "belakang",
+     "start": 29.588,
+     "end": 29.883
+    },
+    {
+     "w": "modem,",
+     "start": 29.883,
+     "end": 30.343
+    },
+    {
+     "w": "jangan",
+     "start": 30.579,
+     "end": 30.933
+    },
+    {
+     "w": "sampai",
+     "start": 30.933,
+     "end": 31.18
+    },
+    {
+     "w": "ketekuk.",
+     "start": 31.18,
+     "end": 31.699
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "00 · LOS",
+   "text": "Aman? Berarti putusnya di luar. Restart berapa kali pun, nggak ngefek.",
+   "start": 31.993,
+   "end": 37.654,
+   "words": [
+    {
+     "w": "Aman?",
+     "start": 31.993,
+     "end": 32.459
+    },
+    {
+     "w": "Berarti",
+     "start": 33.246,
+     "end": 33.694
+    },
+    {
+     "w": "putusnya",
+     "start": 33.694,
+     "end": 34.143
+    },
+    {
+     "w": "di",
+     "start": 34.143,
+     "end": 34.249
+    },
+    {
+     "w": "luar.",
+     "start": 34.249,
+     "end": 34.72
+    },
+    {
+     "w": "Restart",
+     "start": 35.509,
+     "end": 35.922
+    },
+    {
+     "w": "berapa",
+     "start": 35.922,
+     "end": 36.169
+    },
+    {
+     "w": "kali",
+     "start": 36.169,
+     "end": 36.358
+    },
+    {
+     "w": "pun,",
+     "start": 36.358,
+     "end": 36.7
+    },
+    {
+     "w": "nggak",
+     "start": 36.959,
+     "end": 37.219
+    },
+    {
+     "w": "ngefek.",
+     "start": 37.219,
+     "end": 37.632
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · PON",
+   "text": "Kalau yang kedip itu lampu PON, cahayanya udah sampai.",
+   "start": 38.654,
+   "end": 41.578,
+   "words": [
+    {
+     "w": "Kalau",
+     "start": 38.654,
+     "end": 38.948
+    },
+    {
+     "w": "yang",
+     "start": 38.973,
+     "end": 39.218
+    },
+    {
+     "w": "kedip",
+     "start": 39.239,
+     "end": 39.532
+    },
+    {
+     "w": "itu",
+     "start": 39.558,
+     "end": 39.754
+    },
+    {
+     "w": "lampu",
+     "start": 39.771,
+     "end": 40.064
+    },
+    {
+     "w": "PON,",
+     "start": 40.09,
+     "end": 40.334
+    },
+    {
+     "w": "cahayanya",
+     "start": 40.356,
+     "end": 40.845
+    },
+    {
+     "w": "udah",
+     "start": 40.887,
+     "end": 41.132
+    },
+    {
+     "w": "sampai.",
+     "start": 41.153,
+     "end": 41.544
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · PON",
+   "text": "Modem kamu lagi kenalan sama kantor ISP, minta didaftarin.",
+   "start": 41.898,
+   "end": 45.22,
+   "words": [
+    {
+     "w": "Modem",
+     "start": 41.898,
+     "end": 42.209
+    },
+    {
+     "w": "kamu",
+     "start": 42.236,
+     "end": 42.495
+    },
+    {
+     "w": "lagi",
+     "start": 42.518,
+     "end": 42.777
+    },
+    {
+     "w": "kenalan",
+     "start": 42.799,
+     "end": 43.213
+    },
+    {
+     "w": "sama",
+     "start": 43.249,
+     "end": 43.508
+    },
+    {
+     "w": "kantor",
+     "start": 43.531,
+     "end": 43.893
+    },
+    {
+     "w": "ISP,",
+     "start": 43.925,
+     "end": 44.184
+    },
+    {
+     "w": "minta",
+     "start": 44.206,
+     "end": 44.517
+    },
+    {
+     "w": "didaftarin.",
+     "start": 44.544,
+     "end": 45.166
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "01 · PON",
+   "text": "Tunggu beberapa menit. Kedip terus? Baru lapor.",
+   "start": 45.54,
+   "end": 49.896,
+   "words": [
+    {
+     "w": "Tunggu",
+     "start": 45.54,
+     "end": 45.809
+    },
+    {
+     "w": "beberapa",
+     "start": 45.809,
+     "end": 46.163
+    },
+    {
+     "w": "menit.",
+     "start": 46.163,
+     "end": 46.599
+    },
+    {
+     "w": "Kedip",
+     "start": 47.387,
+     "end": 47.705
+    },
+    {
+     "w": "terus?",
+     "start": 47.705,
+     "end": 48.177
+    },
+    {
+     "w": "Baru",
+     "start": 48.967,
+     "end": 49.297
+    },
+    {
+     "w": "lapor.",
+     "start": 49.297,
+     "end": 49.851
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "02 · INTERNET",
+   "text": "Nah, kalau PON hijau tapi lampu Internet mati,",
+   "start": 50.896,
+   "end": 53.714,
+   "words": [
+    {
+     "w": "Nah,",
+     "start": 50.896,
+     "end": 51.172
+    },
+    {
+     "w": "kalau",
+     "start": 51.195,
+     "end": 51.527
+    },
+    {
+     "w": "PON",
+     "start": 51.555,
+     "end": 51.776
+    },
+    {
+     "w": "hijau",
+     "start": 51.795,
+     "end": 52.126
+    },
+    {
+     "w": "tapi",
+     "start": 52.155,
+     "end": 52.431
+    },
+    {
+     "w": "lampu",
+     "start": 52.455,
+     "end": 52.786
+    },
+    {
+     "w": "Internet",
+     "start": 52.815,
+     "end": 53.311
+    },
+    {
+     "w": "mati,",
+     "start": 53.354,
+     "end": 53.685
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "02 · INTERNET",
+   "text": "kabelnya aman. Yang belum kebuka itu akunmu: login gagal, atau tagihan telat.",
+   "start": 54.034,
+   "end": 59.302,
+   "words": [
+    {
+     "w": "kabelnya",
+     "start": 54.034,
+     "end": 54.376
+    },
+    {
+     "w": "aman.",
+     "start": 54.376,
+     "end": 54.883
+    },
+    {
+     "w": "Yang",
+     "start": 55.669,
+     "end": 55.87
+    },
+    {
+     "w": "belum",
+     "start": 55.87,
+     "end": 56.047
+    },
+    {
+     "w": "kebuka",
+     "start": 56.047,
+     "end": 56.283
+    },
+    {
+     "w": "itu",
+     "start": 56.283,
+     "end": 56.448
+    },
+    {
+     "w": "akunmu:",
+     "start": 56.448,
+     "end": 56.978
+    },
+    {
+     "w": "login",
+     "start": 57.226,
+     "end": 57.568
+    },
+    {
+     "w": "gagal,",
+     "start": 57.568,
+     "end": 58.087
+    },
+    {
+     "w": "atau",
+     "start": 58.299,
+     "end": 58.547
+    },
+    {
+     "w": "tagihan",
+     "start": 58.547,
+     "end": 58.912
+    },
+    {
+     "w": "telat.",
+     "start": 58.912,
+     "end": 59.36
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "02 · INTERNET",
+   "text": "Di sini, restart kadang beneran ngefek.",
+   "start": 59.622,
+   "end": 61.832,
+   "words": [
+    {
+     "w": "Di",
+     "start": 59.622,
+     "end": 59.711
+    },
+    {
+     "w": "sini,",
+     "start": 59.711,
+     "end": 60.206
+    },
+    {
+     "w": "restart",
+     "start": 60.466,
+     "end": 60.866
+    },
+    {
+     "w": "kadang",
+     "start": 60.866,
+     "end": 61.126
+    },
+    {
+     "w": "beneran",
+     "start": 61.126,
+     "end": 61.409
+    },
+    {
+     "w": "ngefek.",
+     "start": 61.409,
+     "end": 61.81
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "RECAP",
+   "text": "Di kerjaan, kalau sistem down, aku nggak nebak. Aku cek dari yang paling dekat dulu.",
+   "start": 62.832,
+   "end": 68.164,
+   "words": [
+    {
+     "w": "Di",
+     "start": 62.832,
+     "end": 62.912
+    },
+    {
+     "w": "kerjaan,",
+     "start": 62.912,
+     "end": 63.537
+    },
+    {
+     "w": "kalau",
+     "start": 63.796,
+     "end": 63.997
+    },
+    {
+     "w": "sistem",
+     "start": 63.997,
+     "end": 64.327
+    },
+    {
+     "w": "down,",
+     "start": 64.327,
+     "end": 64.693
+    },
+    {
+     "w": "aku",
+     "start": 64.917,
+     "end": 65.141
+    },
+    {
+     "w": "nggak",
+     "start": 65.141,
+     "end": 65.27
+    },
+    {
+     "w": "nebak.",
+     "start": 65.27,
+     "end": 65.73
+    },
+    {
+     "w": "Aku",
+     "start": 66.518,
+     "end": 66.825
+    },
+    {
+     "w": "cek",
+     "start": 66.825,
+     "end": 67.025
+    },
+    {
+     "w": "dari",
+     "start": 67.025,
+     "end": 67.202
+    },
+    {
+     "w": "yang",
+     "start": 67.202,
+     "end": 67.308
+    },
+    {
+     "w": "paling",
+     "start": 67.308,
+     "end": 67.509
+    },
+    {
+     "w": "dekat",
+     "start": 67.509,
+     "end": 67.709
+    },
+    {
+     "w": "dulu.",
+     "start": 67.709,
+     "end": 68.122
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "RECAP",
+   "text": "Modem kamu udah ngelakuin itu. Kamu tinggal baca lampunya.",
+   "start": 68.484,
+   "end": 72.22,
+   "words": [
+    {
+     "w": "Modem",
+     "start": 68.484,
+     "end": 68.819
+    },
+    {
+     "w": "kamu",
+     "start": 68.819,
+     "end": 69.031
+    },
+    {
+     "w": "udah",
+     "start": 69.031,
+     "end": 69.208
+    },
+    {
+     "w": "ngelakuin",
+     "start": 69.208,
+     "end": 69.527
+    },
+    {
+     "w": "itu.",
+     "start": 69.527,
+     "end": 69.975
+    },
+    {
+     "w": "Kamu",
+     "start": 70.761,
+     "end": 71.02
+    },
+    {
+     "w": "tinggal",
+     "start": 71.02,
+     "end": 71.338
+    },
+    {
+     "w": "baca",
+     "start": 71.338,
+     "end": 71.562
+    },
+    {
+     "w": "lampunya.",
+     "start": 71.562,
+     "end": 72.187
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "RECAP",
+   "text": "Lapor gangguan? Sebut lampunya: LOS merah. Biar langsung ketahuan ini masalah kabel.",
+   "start": 72.54,
+   "end": 79.213,
+   "words": [
+    {
+     "w": "Lapor",
+     "start": 72.54,
+     "end": 72.974
+    },
+    {
+     "w": "gangguan?",
+     "start": 73.011,
+     "end": 73.734
+    },
+    {
+     "w": "Sebut",
+     "start": 73.796,
+     "end": 74.23
+    },
+    {
+     "w": "lampunya:",
+     "start": 74.267,
+     "end": 74.99
+    },
+    {
+     "w": "LOS",
+     "start": 75.053,
+     "end": 75.341
+    },
+    {
+     "w": "merah.",
+     "start": 75.367,
+     "end": 75.872
+    },
+    {
+     "w": "Biar",
+     "start": 75.916,
+     "end": 76.277
+    },
+    {
+     "w": "langsung",
+     "start": 76.309,
+     "end": 76.959
+    },
+    {
+     "w": "ketahuan",
+     "start": 77.015,
+     "end": 77.665
+    },
+    {
+     "w": "ini",
+     "start": 77.722,
+     "end": 78.011
+    },
+    {
+     "w": "masalah",
+     "start": 78.036,
+     "end": 78.614
+    },
+    {
+     "w": "kabel.",
+     "start": 78.664,
+     "end": 79.169
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "OUTRO",
+   "text": "Episode dua: WiFi connected, tapi no internet.",
+   "start": 80.213,
+   "end": 83.327,
+   "words": [
+    {
+     "w": "Episode",
+     "start": 80.213,
+     "end": 80.578
+    },
+    {
+     "w": "dua:",
+     "start": 80.578,
+     "end": 81.026
+    },
+    {
+     "w": "WiFi",
+     "start": 81.274,
+     "end": 81.639
+    },
+    {
+     "w": "connected,",
+     "start": 81.639,
+     "end": 82.135
+    },
+    {
+     "w": "tapi",
+     "start": 82.359,
+     "end": 82.606
+    },
+    {
+     "w": "no",
+     "start": 82.606,
+     "end": 82.76
+    },
+    {
+     "w": "internet.",
+     "start": 82.76,
+     "end": 83.349
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 83.647,
+   "end": 85.477,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 83.647,
+     "end": 84.113
+    },
+    {
+     "w": "biar",
+     "start": 84.349,
+     "end": 84.62
+    },
+    {
+     "w": "nggak",
+     "start": 84.62,
+     "end": 84.762
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 84.762,
+     "end": 85.422
+    }
+   ]
+  }
+ ]
+}

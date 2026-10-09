@@ -4,6 +4,16 @@
 > Masalah yang mau diselesaiin: topik cloud murni = audiens kecil. Solusinya bukan ganti topik, tapi
 > **ganti pintu masuknya**: mulai dari hal yang penonton udah alamin, baru bongkar cloud di baliknya.
 
+## 0. Lensa channel (2026-10-09)
+
+**"Teknologi di balik hal yang kamu pakai tiap hari — dijelasin sama orang yang kerja di ruang mesinnya."**
+Bukan "channel general", bukan "channel AI", bukan campur acak. Semua video jawab satu pertanyaan: *kenapa X bisa begitu?*
+- Audiens Indonesia paling nyantol sama **simple tech sehari-hari** yang mereka alamin sendiri (WiFi mati, lampu modem, kuota,
+  sinyal, OTP telat) — lebih dari cloud/arsitektur murni.
+- **AI masuk sebagai hal sehari-hari** (ChatGPT/Gemini udah dipakai tiap hari), dari sudut infra: *di balik* AI-nya, bukan tips
+  pakai tools. Sudut ini yang creator AI lain nggak punya.
+- ✗ AI murni (ramai, generik, visual robot/otak dilarang) · ✗ topik acak (penonton nggak tahu kenapa harus follow).
+
 ## 1. Dari mana uangnya (urut dari kecil ke besar)
 
 | Lapisan | Apa | Syarat / catatan |
@@ -16,11 +26,12 @@
 
 | Pilar | Tugasnya | Durasi | Contoh |
 |---|---|---|---|
-| **B · Broad** (everyday tech / berita) | narik penonton baru | 60–75 s (lewat 1 menit buat payout) | app bank down pas gajian, war tiket crash, QRIS 2 detik, foto WhatsApp ke mana |
+| **B · Broad** (everyday tech / berita) | narik penonton baru | 60–75 s (lewat 1 menit buat payout) | seri Bongkar WiFi Rumah (#14), app bank down, QRIS 2 detik, foto WhatsApp ke mana |
+| **B · AI sehari-hari** (sudut infra) | narik penonton yang lagi rame AI + sponsor | 60–75 s | ChatGPT ngarang (#15), prompt diproses di mana (#16), AI gratis siapa bayar (#18) |
 | **C · Karier** | bikin orang follow & nanti beli | 60–90 s | roadmap cloud, isi kerjaan + jenjang, pertanyaan interview |
-| **D · Deep** (seri Bongkar Arsitektur) | kepercayaan + portfolio buat sponsor | 75–90 s | EP01–EP07 |
+| **D · Deep** (seri Bongkar Arsitektur — tamat EP07) | kepercayaan + portfolio buat sponsor | 75–90 s | EP01–EP07 · berikutnya: hemat-14k-cloud, Season 2 dari komentar EP07 |
 
-Tiap 5 video: 3 B · 1 C · 1 D. Opini (#05) masuk ke B atau C.
+Tiap 5 video: **2 B everyday + 1 B AI · 1 C · 1 D**. Opini (#05) masuk ke B atau C.
 
 ## 3. Ritme produksi
 
@@ -65,7 +76,14 @@ nggak, berarti generik.
 - **Tahan 3 detik** (hook kerja nggak?) · **completion rate** · **share + save** (konten B/C) · **follow dari video itu**.
 - Tiap 10 video: lihat pilar mana yang paling narik follower → geser rasio.
 
-## 7. Urutan tayang yang disarankan (sementara)
+## 7. Urutan tayang yang disarankan (update 2026-10-09 — setelah Bongkar Arsitektur tamat)
+
+1. #04 biaya-cloud-bocor (B, tinggal final) · 2. WiFi EP01 lampu LOS (B) · 3. WiFi EP02 connected no internet (B)
+4. #15 AI ngarang jawaban (B·AI) · 5. #13 interview cloud atau #19 AI butuh cloud engineer (C)
+6. WiFi EP03 hujan (B) · 7. hemat-14k-cloud (D) · 8. WiFi EP04 restart (B) · 9. #16 prompt diproses di mana (B·AI) · 10. WiFi EP05 jam 8 malam (B)
+Slot berita (#09) nyelip kapan aja ada kejadian — gangguan internet massal = WiFi EP02 bisa dinaikin duluan.
+
+### Urutan lama (2026-10-06, sudah tayang semua s/d EP07)
 
 0. **Intro `kenalan-mumeyong` (pin di profil)** — tayang bareng / dalam minggu yang sama dengan 1 & 2
 1. #06 bank down pas gajian (B) · 2. EP01 (D) · 3. #07 war tiket (B) · 4. #12 roadmap cloud (C) · 5. #08 QRIS (B)

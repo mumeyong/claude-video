@@ -17,7 +17,7 @@ claude-video <video> final                # render final → hasil/<video>/
 
 1. **naskah** — generate ulang `NASKAH.md` kalau `SCRIPT.md` berubah
 2. **suara + timing** — ada rekamanmu (`audio/voice.wav`)? → **align otomatis**. Belum ada? → **suara TTS otomatis**
-   (Ardi; butuh internet). Dibikin ulang cuma kalau naskah berubah. Offline → timing estimasi tanpa suara.
+   (suara Mumeyong; butuh internet). Dibikin ulang cuma kalau naskah berubah. Offline → timing estimasi tanpa suara.
 3. **check** — cek struktur + jalanin semua kode gambar tanpa nulis apa-apa (`--dry`: error, keluar kolom aman,
    teks kekecilan); kalau ada error dia berhenti
 4. **cover** — `out/cover.png` (cover TikTok yang didesain)
@@ -121,6 +121,10 @@ videos/<video>/
 └── out/             hasil render sementara (nggak di-commit)
 ```
 
+**Folder per status:** `videos/<video>/` = lagi dikerjain · `videos/_arsip/` = selesai · `videos/_lab/` = eksperimen.
+`hasil/<video>/` = siap upload · `hasil/_tayang/` = sudah tayang. Setelah upload, pindahin dua-duanya ke folder `_`.
+`claude-video <video>` tetap nemu video di folder `_` mana pun. Git cuma nyimpen teks/kode — mp4, png, wav nggak di-commit.
+
 ## Ide video
 
 Daftar di `ideas/README.md`. Status: 💡 ide → ⭐ dipilih → 🎬 produksi → ✅ tayang (🗑 batal).
@@ -148,11 +152,11 @@ tiap video** — itu yang paling bikin nggak generik.
 
 ### Suara sintetis (otomatis kalau belum ada rekaman)
 ```bash
-claude-video <video>                      # belum ada voice.wav → suara Ardi dibikin otomatis
+claude-video <video>                      # belum ada voice.wav → suara Mumeyong dibikin otomatis
 claude-video tts <video>                  # cuma bikin suaranya aja
 ```
 - Pakai **edge-tts** (suara neural Microsoft, gratis, **butuh internet — teks naskah dikirim ke Microsoft**).
-- Satu suara aja: **Ardi**, tempo santai. Nggak ada opsi yang perlu diatur.
+- Satu suara aja: **Mumeyong** (mesinnya edge-tts `id-ID-ArdiNeural`), tempo santai. Nggak ada opsi yang perlu diatur.
 - Timing per kata langsung dari TTS → nggak perlu aligner. Tanda *tekanan* nggak kebaca, napas `//` = jeda lebih panjang.
 - Istilah English dibaca pakai ejaan Indonesia (`serverless` → "serverles"). Ada yang salah ucap? Tambahin di
   `audio/tts_lexicon.txt`: `airflow = erflo` (satu per baris).
@@ -164,8 +168,11 @@ claude-video tts <video>                  # cuma bikin suaranya aja
 - **Kamu cukup rekam suara.** Kalau `audio/music.*` kosong, musik **digenerate otomatis** waktu render
   (`engine/audio/music.py`): disusun dari bab-bab videonya sendiri — intro ringan, tiap bab groove penuh dengan pola
   arp sendiri, recap gelap tanpa drum, outro resolve. Pergantian bab jatuh pas di beat, ada riser + impact.
-- Tiap video punya karakter sendiri (key + mood: warm · tense · bright · dreamy), diatur di PLAN.md /
-  `v.music = dict(key="D", mood="warm")`. `claude-video check <video>` nampilin rencana musiknya.
+- Tiap video punya **band sendiri**: style (lofi · marimba · ambient · garage · cinematic) + key + mood + tempo,
+  plus melodi motif sendiri — diatur di PLAN.md / `v.music = dict(style="lofi", key="F", mood="warm")`.
+  SFX ikut: `v.sfx_kit` (glass · wood · soft · mech), nadanya nyatu sama key musiknya.
+  `claude-video check <video>` nampilin rencana musiknya. Video lama tetap pakai musik lamanya.
+- **Dengerin semua pilihan:** `claude-video audition` → `.cache/audition/` (tiap style 40 detik + tiap kit SFX).
 - Dengerin musiknya aja: `claude-video music <video>` → `out/music_gen.wav`.
 - Mau pakai lagu sendiri? Taruh royalty-free ± 128 BPM di `audio/music.mp3` — itu yang dipakai.
 - Otomatis turun (ducking) waktu kamu ngomong, naik lagi di jeda antar bab.

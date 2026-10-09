@@ -7,8 +7,8 @@ longest at a chapter change.
 
 A real recording always wins: as soon as audio/voice.wav exists, the pipeline aligns that instead.
 
-Voice: Ardi (id-ID-ArdiNeural), one steady pace. Nothing to configure.
-Ardi mispronounces English tech terms, so a respelling lexicon is applied:
+Voice: "Mumeyong" — the channel's TTS voice (engine: edge-tts id-ID-ArdiNeural), one steady pace. Nothing to
+configure. It mispronounces English tech terms, so a respelling lexicon is applied:
 LEXICON below + optional videos/<slug>/audio/tts_lexicon.txt ("word = respelling", one per line).
 """
 import asyncio
@@ -21,7 +21,8 @@ import numpy as np
 from .align import parse_script, _spread_words
 
 SR = 48000
-VOICE = "id-ID-ArdiNeural"
+VOICE = "id-ID-ArdiNeural"     # edge-tts voice id (must stay exact)
+VOICE_NAME = "Mumeyong"        # what the CLI and docs call it
 RATE = "+6%"           # casual pace, close to the 161 wpm reference
 VERSION = "ardi"       # stored in timing.json; a different value → the voice is regenerated
 LEAD_IN = 0.4
@@ -112,13 +113,13 @@ def _trim(y, thr=0.008):
 
 
 def synthesize(project):
-    """Write audio/voice_tts.wav + timing.json (Ardi). Returns the timing dict."""
+    """Write audio/voice_tts.wav + timing.json (Mumeyong voice). Returns the timing dict."""
     lex = _lexicon(project)
     script = project.dir / "SCRIPT.md"
     marked = parse_script(script, keep_marks=True)
     lines = parse_script(script)
     spoken = [_respell(ln["text"], lex) for ln in lines]
-    print(f"tts: {len(lines)} lines · Ardi (online, edge-tts)")
+    print(f"tts: {len(lines)} lines · suara {VOICE_NAME} (online, edge-tts)")
     results = asyncio.run(_speak_all(spoken))
 
     parts, t, prev_ch = [np.zeros(int(LEAD_IN * SR))], LEAD_IN, None

@@ -17,7 +17,14 @@ def build_mix(project, video, out_wav):
     dur = video.duration
     out_wav.parent.mkdir(parents=True, exist_ok=True)
     sfx_wav = out_wav.parent / "sfx.wav"
-    S.write_wav(sfx_wav, S.track(video.all_cues(), dur))
+    kit = getattr(video, "sfx_kit", None)
+    key, minor = "C", False
+    if kit:
+        from .music import config
+        cfg = config(video, project.slug)
+        if cfg:
+            key, minor = cfg[0], cfg[1] == "tense"
+    S.write_wav(sfx_wav, S.track(video.all_cues(), dur, kit, key, minor))
     voice, music = project.voice(), project.music()
     generated = False
     if not music:

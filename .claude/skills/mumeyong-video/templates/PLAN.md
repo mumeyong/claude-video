@@ -11,7 +11,7 @@ color: <nama> `#RRGGBB`
 hook: <format hook>
 struktur: <struktur>
 komponen: <komponen_baru_1, komponen_baru_2>
-musik: <key> <mood>
+musik: <style> <key> <mood> <bpm> · sfx <kit>
 durasi: <detik>
 -->
 
@@ -21,7 +21,8 @@ durasi: <detik>
 | Motion (STYLE §6d) | spring … · reveal … · glue … · exit … (beda set dari video sebelumnya) |
 | Metafora | … (≥ 3 bab) |
 | Signature move | … (dipakai ulang di bab berbeda) |
-| Color · hook · struktur · musik | … |
+| Color · hook · struktur | … |
+| Suara (STYLE §7) | style … · key … · mood … · bpm … · sfx kit … (style + kit beda dari video sebelumnya) |
 | Komponen baru (1–2, QUICK) | … |
 | Sentuhan manusia | artefak: … · opini: … · kejutan: … · ketidaksempurnaan: … |
 

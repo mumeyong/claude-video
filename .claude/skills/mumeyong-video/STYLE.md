@@ -185,6 +185,26 @@ Proof sheet for every move: `videos/motion-lab`.
   (intro light · chapters full groove, own arp pattern each · dark recap no drums + bells · outro resolves),
   section changes on the beat with riser + impact. Key + mood (warm · tense · bright · dreamy) are part of the
   video's identity — not the same as the previous video.
+- **Styled score (new videos from 2026-10-09, `engine/audio/score.py`)** — `v.music = dict(style=.., key=.., mood=..)`.
+  Each style is its own band, groove and tempo; pick one per video, never the same as the previous video:
+
+  | style | BPM | band | for |
+  |---|---|---|---|
+  | `lofi` | 76–94 | boom-bap + rim, Rhodes, sub, vinyl, swing | santai, ngobrol, everyday tech |
+  | `marimba` | 100–116 | mallet ostinato, clap, shaker, pluck bass | main-main, keynote, explainer ringan |
+  | `ambient` | 70–90 | felt piano broken chords, wide pad, no drums | tenang, deep, cerita personal |
+  | `garage` | 126–136 | 2-step shuffle, chord stabs, sidechain | cepat, urban, hitung mundur |
+  | `cinematic` | 88–110 | string ostinato, taiko, bells | tegang, berita, outage |
+
+  Every styled score also has a seeded **motif** (the video's own melody, from chapter 2), two progressions per mood
+  (chapters alternate), an arrangement that builds (intro sparse → chapter 1 + bass/drums → later + motif), a fill
+  every 8th bar, a style-specific transition (reverse swell · mallet gliss · riser · taiko roll — not one stock
+  riser), humanised timing and stereo space. `pulse` = the original score (all videos before 2026-10-09).
+  Audition: `claude-video audition` → `.cache/audition/` (music_<style>.wav + kit_<kit>.wav).
+- **SFX kit** — `v.sfx_kit = "glass" | "wood" | "soft" | "mech"`: the material of every UI sound, pitched to the
+  score's key (pop/tick runs climb the scale, chime = the key's triad, thud = tonic), whooshes rotate 4 shapes.
+  Match the metaphor (wood = kampung/kentongan/dapur · glass = UI/app · soft = calm/personal · mech = mesin/loket).
+  No kit = the classic set (old videos).
 - SFX (synth, `engine/audio/sfx.py`): `key` typing · `pop` chip/card/tag in · `click` cursor/button ·
   `send` chat send · `whoosh` chapter change · `whoosh_dark` into dark section · `chime` success/✓ ·
   `tick` count-up · `rec` recording starts · `thud` big punch word.

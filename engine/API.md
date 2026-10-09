@@ -259,6 +259,14 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `stat(c, x, y, w, h, value, label, t, t0, decimals=0, suffix="", dur=1.2, highlight=False)` — Count-up stat card ('2.951' / 'baris kode'). Indonesian number format.
 - `waveform(c, x, y, w, h, t, t0, dur, colors=None, bar=5, gap=3, seed=1, segments=None, env=None)` — Waveform drawn left→right from t0 over dur. y is the center line.
 
+## components/wifi.py — Home-WiFi components (first used in "wifi-ep01-lampu-los", series Bongkar WiFi Rumah).
+- `fiber_route(c, box, t, p_draw=1.0, flow=1.0, cut=0.0, cut_at=0.78, house_light=0.0, labels=True, speed=0.32, n=5, alpha=1.0, mark=0.0)` — Street scene in box (x, y, w, h): ISP office (top left) → pole with the black ODP box → your house (bottom
+- `led_state(t, code)` — (color, on 0..1) for a state code: '' off · 'g' green · 'gb' green blinking · 'r' red · 'rb' red blinking.
+- `modem(c, cx, cy, w, t, lights, focus=None, focus_p=0.0, labels=True, alpha=1.0, antenna=True)` — ONT / home modem, front view, centered (cx, cy), width w (height ≈ 0.4 w + antennas).
+- `modem_led(cx, cy, w, name)` — Center (x, y) of LED `name` on a modem drawn with the same cx, cy, w.
+- `patchcord(c, x0, y0, x1, y1, bend=0.0, alpha=1.0)` — The short fiber patch cable behind the modem, from the wall socket (x0, y0) to the modem port (x1, y1).
+- `route_point(box, f)` — (x, y) at arc fraction f (0 = ISP office, 1 = house) of fiber_route drawn in box.
+
 ## ease (engine.ease)
 - `clamp(x, a=0.0, b=1.0)` — 
 - `lerp(a, b, t)` — 
@@ -275,8 +283,8 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `out_back(p, s=1.5)` — 
 - `spring(p, damping=0.55, freq=2.2)` — Underdamped spring 0→1 (overshoots once, settles). p is 0..1 of the window.
 - `out_spring(p)` — Gentle settle 0→1: one small overshoot (~6%), then rest. For small pops and camera stops (opt-in, fx.py).
-- `ease(t, start, dur, fn=<function out_expo at 0x7f46b52156c0>)` — 
-- `inout(t, t_in, t_out, d_in=0.55, d_out=0.35, fn_in=<function out_expo at 0x7f46b52156c0>, fn_out=<function in_cubic at 0x7f46b52154e0>)` — Presence of an element that enters at t_in and leaves at t_out.
+- `ease(t, start, dur, fn=<function out_expo at 0x7f1de88916c0>)` — 
+- `inout(t, t_in, t_out, d_in=0.55, d_out=0.35, fn_in=<function out_expo at 0x7f1de88916c0>, fn_out=<function in_cubic at 0x7f1de88914e0>)` — Presence of an element that enters at t_in and leaves at t_out.
 - `pulse(t, start, dur)` — 0→1→0 bump over the window (sin).
 - `blink(t, hz=1.0)` — Caret blink: 1 for the first half of each period.
 
@@ -325,7 +333,7 @@ One line per public function: `name(signature)` — first docstring line. Import
 
 ## camera `v.camera` (engine.camera)
 - `.apply(self, ctx, t)` — 
-- `.focus(self, t, box, zoom=1.06, dur=0.8, ease=<function in_out_cubic at 0x7f46b5215580>)` — 
-- `.key(self, t, zoom=1.0, x=None, y=None, dur=0.8, ease=<function in_out_cubic at 0x7f46b5215580>)` — 
-- `.reset(self, t, dur=0.8, ease=<function in_out_cubic at 0x7f46b5215580>)` — 
+- `.focus(self, t, box, zoom=1.06, dur=0.8, ease=<function in_out_cubic at 0x7f1de8891580>)` — 
+- `.key(self, t, zoom=1.0, x=None, y=None, dur=0.8, ease=<function in_out_cubic at 0x7f1de8891580>)` — 
+- `.reset(self, t, dur=0.8, ease=<function in_out_cubic at 0x7f1de8891580>)` — 
 - `.state(self, t)` — 

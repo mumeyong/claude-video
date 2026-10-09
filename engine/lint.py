@@ -143,3 +143,37 @@ def dry_check(slug, step=0.25):
         print(f"  ! TEXT    {name}  t={t:.2f}s  {size:.1f}px < {MIN_TEXT}: {text[:40]!r}")
     print("  ok — no problems" if not bad else f"  {bad} problem(s)")
     return 1 if errors else 0
+
+
+def audio_dry(slug):
+    """Compose the generated score + SFX track in memory (nothing written): exceptions, NaN, clipping, length."""
+    import time
+    from .audio import music, sfx
+    project, video = _video(slug)
+    t0 = time.time()
+    problems = []
+    try:
+        y = music.compose(video, slug)
+        if y is not None:
+            if not np.isfinite(y).all():
+                problems.append("music: NaN/inf in the score")
+            if abs(len(y) / music.SR - video.duration) > 0.05:
+                problems.append(f"music: length {len(y) / music.SR:.2f}s ≠ video {video.duration:.2f}s")
+            desc = f"music {music.style_of(video)} {'stereo' if y.ndim == 2 else 'mono'} peak {np.abs(y).max():.2f}"
+        else:
+            desc = "music off"
+        kit = getattr(video, "sfx_kit", None)
+        cfg = music.config(video, slug)
+        fx = sfx.track(video.all_cues(), video.duration, kit, cfg[0] if cfg else "C", bool(cfg) and cfg[1] == "tense")
+        if not np.isfinite(fx).all():
+            problems.append("sfx: NaN/inf")
+        desc += f" · sfx {kit or 'classic'} {len(video.all_cues())} cues peak {np.abs(fx).max():.2f}"
+    except Exception as e:  # noqa: BLE001 — report, don't crash the check
+        tb = traceback.extract_tb(e.__traceback__)[-1]
+        problems.append(f"✗ ERROR {type(e).__name__}: {e}  ({tb.filename.split('/')[-1]}:{tb.lineno})")
+        desc = "audio"
+    print(f"{slug}: audio dry · {desc} · {time.time() - t0:.1f}s · nothing written")
+    for pr in problems:
+        print(f"  {pr}")
+    print("  ok — no problems" if not problems else f"  {len(problems)} problem(s)")
+    return 1 if problems else 0

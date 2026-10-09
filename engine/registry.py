@@ -5,14 +5,14 @@ section of hasil/README.md. Text only — Claude may run it. Saves hand-editing 
 """
 import re
 
-from .project import ROOT
+from .project import ROOT, find
 
 KEYS = ("pilar", "metafora", "signature", "color", "hook", "struktur", "komponen", "musik", "durasi")
 SECTION = {"B": "## B · Broad", "C": "## C · Karier", "D": "## D · Seri Bongkar Arsitektur"}
 
 
 def read_block(slug):
-    path = ROOT / "videos" / slug / "PLAN.md"
+    path = find("videos", slug) / "PLAN.md"
     m = re.search(r"<!--\s*registry(.*?)-->", path.read_text(), re.S) if path.exists() else None
     if not m:
         raise SystemExit(f"{path}: no <!-- registry … --> block")
@@ -48,7 +48,7 @@ def register(slug):
     p = ROOT / "ideas" / "REGISTRY.md"
     lines = p.read_text().split("\n")
     end = next(i for i, ln in enumerate(lines) if ln.startswith("## Musik"))
-    row = (f"| [{slug}](../videos/{slug}/PLAN.md) | {d['metafora']} | {d['signature']} | {d['color']} | {d['hook']} | "
+    row = (f"| [{slug}](../{find('videos', slug).relative_to(ROOT).as_posix()}/PLAN.md) | {d['metafora']} | {d['signature']} | {d['color']} | {d['hook']} | "
            f"{d['struktur']} | {d['komponen']} | — |")
     r1 = _upsert_row(lines, 0, end, f"[{slug}](", row)
     text = "\n".join(lines)
@@ -73,10 +73,11 @@ def register(slug):
         raise SystemExit(f"hasil/README.md: section '{head}' not found")
     e = next((i for i in range(s + 1, len(lines)) if lines[i].startswith("## ") or lines[i].startswith("**Status")),
              len(lines))
-    has_post = (ROOT / "hasil" / slug / "POST.md").exists()
-    has_mp4 = (ROOT / "hasil" / slug / f"{slug}.mp4").exists()
+    hd = find("hasil", slug)
+    has_post = (hd / "POST.md").exists()
+    has_mp4 = (hd / f"{slug}.mp4").exists()
     status = "📦 final — mp4 + cover + POST.md" if has_mp4 else ("🎬 produksi — POST.md siap" if has_post else "🎬 produksi")
-    row = f"| — | [{slug}]({slug}/) | ± {d['durasi']} s | — | {status} |"
+    row = f"| — | [{slug}]({hd.relative_to(ROOT / 'hasil').as_posix()}/) | ± {d['durasi']} s | — | {status} |"
     r2 = _upsert_row(lines, s, e, f"[{slug}](", row)
     p.write_text("\n".join(lines))
     print(f"✓ ideas/REGISTRY.md row {r1} · hasil/README.md ({head[3:]}) row {r2} · status: {status}")

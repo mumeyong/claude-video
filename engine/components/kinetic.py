@@ -270,7 +270,16 @@ def lockup(c, t, t_in, t_out, cx, base, left, right, sep="×", style="headline",
     gap = size * 0.4 if gap is None else gap
     wl, wr = c.measure(left, f, size, ls)[0], c.measure(right, f, size, ls)[0]
     ws = c.measure(sep, tk.F["ui"], size * 0.5)[0]
-    x_l = cx - (wl + wr + ws + 2 * gap) / 2
+    # shrink to the safe column, then keep it inside (long word pairs / off-center cx)
+    col_x, col_w = tk.L["col_x"], tk.L["col_w"]
+    k = min(1.0, col_w / (wl + wr + ws + 2 * gap))
+    if k < 1:
+        size, gap = size * k, gap * k
+        wl, wr = c.measure(left, f, size, ls)[0], c.measure(right, f, size, ls)[0]
+        ws = c.measure(sep, tk.F["ui"], size * 0.5)[0]
+    total = wl + wr + ws + 2 * gap
+    cx = min(max(cx, col_x + total / 2), col_x + col_w - total / 2)
+    x_l = cx - total / 2
     x_s, x_r = x_l + wl + gap, x_l + wl + gap + ws + gap
     b = 0.0 if t_out is None else prog(t, t_out, tk.M["dim_out"])
     if t < t_in or b >= 1:

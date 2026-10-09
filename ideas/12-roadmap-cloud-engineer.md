@@ -1,6 +1,6 @@
 # Roadmap jadi cloud engineer (yang beneran aku pakai)
 
-- **Status:** 🎬 produksi — [`videos/roadmap-cloud-engineer`](../videos/roadmap-cloud-engineer/) · **Pilar:** C (karier) · **Format:** QUICK
+- **Status:** ✅ tayang — [`videos/_arsip/roadmap-cloud-engineer`](../videos/_arsip/roadmap-cloud-engineer/) · **Pilar:** C (karier) · **Format:** QUICK
 - **Slug:** roadmap-cloud-engineer
 - **Seri:** —
 - **Durasi target:** 60–75 s

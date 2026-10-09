@@ -37,3 +37,4 @@ from .kinetic import (spring_p, spring_at, anticipate, Rig, motion_blur, drift, 
 from .keynote import Morph, bento, turn_at, yaw, press, sheet
 from .beats import (pop_tag, tag_center, check_badge, series_outro, heads, draw_heads, punch_word,
                     standard_outro)
+from .wifi import modem, modem_led, led_state, fiber_route, route_point, patchcord, LEDS, ODP_F, PURPLE as WIFI_PURPLE
