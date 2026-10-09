@@ -20,7 +20,7 @@ X, CW = L["col_x"], L["col_w"]
 MID = tk.W / 2
 LEAD = 0.6
 OUTRO_TAIL = 3.0
-PRE_ROLL = 1.2
+PRE_ROLL = 2.05                           # long brand sting (version 2): voice starts under its wipe
 RED, OK = C["rec"], C["ok"]
 MW = 760                                  # hero modem width at scale 1
 CH = ["00 · LOS", "01 · PON", "02 · INTERNET", "RECAP", "OUTRO"]
@@ -37,7 +37,7 @@ ALL_OK = dict(POWER="g", PON="g", LOS="", INTERNET="g", WLAN="g")
 def build(project):
     T = project.timing
     v = Video(duration=T["L19"].end + OUTRO_TAIL, bpm=86, beat_offset=0.0, series="BONGKAR WIFI RUMAH · EP 01")
-    brand_intro(v)
+    brand_intro(v, version=2)
     v.music = dict(style="lofi", key="F", mood="dreamy")     # first styled score; all earlier videos = pulse 128
     v.sfx_kit = "glass"
     v.cover = lambda c: cover(c, "Lampu modem\n*merah*?", kicker="BONGKAR WIFI RUMAH · EP 01", color=PURPLE,
@@ -135,7 +135,7 @@ def _hero(v, T, b, t_rs):
 def intro(v, T, s, e):
     v.chapter(None, "INTRO", s, e)
     L1, L2, L3 = T["L01"], T["L02"], T["L03"]
-    v.add(s, L1.start + 1.2, lambda c, t: curtain(c, t, L1.start - 0.4), z=100)
+    v.add(s, L1.start + 1.2, lambda c, t: curtain(c, t, L1.start - 0.6), z=100)
     hs = _ink(T, [("Masalahnya\ndi *kabel*.", "L02"), ("Tiap lampu,\n*satu tempat*.", "L03")], e - DIM)
     hs[0] = (hs[0][0], T.word("L02", "kabel") - 0.35, hs[0][2])
     places = [("PON", "kantor ISP", "lampu"), ("LOS", "kabel", "tempat"), ("INTERNET", "akun", "baca")]

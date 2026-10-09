@@ -37,4 +37,6 @@ Finished videos (final in `hasil/`) are frozen — lessons apply to the NEXT vid
 - After each review round, add the user's notes here (line id + what was wrong + the rule).
 
 ## User review notes
-(none yet — add here after each round)
+- 2026-10-09 (brand sting, all videos): "logo di awal terlalu cepat dan animasinya jelek — itu hook pertama, all out"
+  → v1 (1,5 s, ensō in 0,7 s) replaced for new videos by `brand_intro(v, version=2)` (2,45 s: drop → ensō → seal →
+  wordmark → brushy wipe) + `PRE_ROLL = 2.05`. Watch 3-second hold on the first v2 video; shorten with `dur=` if it drops.

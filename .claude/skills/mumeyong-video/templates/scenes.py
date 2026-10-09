@@ -15,13 +15,13 @@ OUT = M["out"]
 X, CW = L["col_x"], L["col_w"]
 LEAD = 0.6          # chapter starts this long before its first line
 OUTRO_TAIL = 3.5    # seconds after the last line
-PRE_ROLL = 1.2      # brand sting first: the engine starts the voice + every T time this much later
+PRE_ROLL = 2.05     # brand sting (version 2) first: the engine starts the voice + every T time this much later
 
 
 def build(project):
     T = project.timing
     v = Video(duration=T.line("L08").end + OUTRO_TAIL, bpm=128, beat_offset=0.0)
-    brand_intro(v)  # opening sting: mumei mark (ensō + seal) on paper → into the HUD corner
+    brand_intro(v, version=2)  # opening sting: ink drop → ensō → seal → MUMEYONG → brushy wipe into the video
     v.chat = ChatTrack()
     b = {name: T.chapter_span(name)[0] - LEAD for name in ("00 · ATURAN", "01 · KODE", "RECAP", "OUTRO")}
     intro(v, T, 0.0, b["00 · ATURAN"])

@@ -10,7 +10,7 @@ Code mirror: `engine/tokens.py`. If you change a value here, change it there too
 | Canvas | 1080×1920, 60 fps, H.264 yuv420p, AAC 192k, −14 LUFS |
 | Language | Bahasa Indonesia, casual "aku/kamu", short punchy sentences |
 | Brand | HUD top-left `MUMEYONG · TUTORIAL` (series word can change per video) |
-| Opening | (new videos, from 2026-10-08) **brand sting** 1,5 s: the mumei mark (ensō brushed in + seal stamp) on paper → shrinks into the HUD corner; `PRE_ROLL = 1.2` + `brand_intro(v)` |
+| Opening | **brand sting v2** (new videos from 2026-10-09) 2,45 s on paper: ink drop blooms → ensō brushed in (wet tip, slow push-in) → flecks → seal stamps (shadow, press ring) → MUMEYONG letter by letter + brushed vermilion underline + url → brushy wipe reveals the video as the mark flies into the HUD corner; `PRE_ROLL = 2.05` + `brand_intro(v, version=2)`. (2026-10-08 videos: v1, 1,5 s, `PRE_ROLL = 1.2`.) |
 | Ending | dark recap → logo (new videos: `mumei_mark`) + "Follow" click → contact pills |
 | Safe zone | content column x 81→929 (keeps clear of TikTok's right rail), nothing important below y 1560 except HUD |
 

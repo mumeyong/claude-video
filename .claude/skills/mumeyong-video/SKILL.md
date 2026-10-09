@@ -71,7 +71,7 @@ otherwise Claude runs `python -m engine new "Judul"` itself (it only writes text
   content via `appear(...)` → chat events → `v.sfx(...)` for each visible event.
 - Each chapter's elements exit at the next chapter's start − 0.35 s (`out`).
 - Use `wobble` for idle life, `select_box` / dim-and-outline for focus, `fmt_id` for numbers.
-- **Brand sting (every new video):** `PRE_ROLL = 1.2` at the top of scenes.py + `brand_intro(v)` first thing in
+- **Brand sting (every new video):** `PRE_ROLL = 2.05` at the top of scenes.py + `brand_intro(v, version=2)` first thing in
   `build()` (components/brand.py). The engine shifts voice + all `T` times by PRE_ROLL; the hook starts under the
   sting's exit. Outro logo = `mumei_mark(..., ink=C["d_ink"], paper=C["d_bg"])`, not the old ring.
 - **Cover + post (every video):** `v.cover = lambda c: cover(c, "<title with one *accent*>", kicker=.., color=<signature>,

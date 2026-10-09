@@ -1,3 +1,9 @@
+# brand sting v2 (2,45 s) — tetes tinta → ensō → seal → MUMEYONG → wipe
+0.3   # tetes tinta mendarat + mekar
+0.9   # ensō setengah jalan, ujung basah
+1.45  # seal baru nge-stamp + ring
+1.85  # MUMEYONG + garis kuas merah
+2.2   # wipe kuas buka video, logo terbang ke pojok HUD
 # Stills putaran 1 — EP 01 pertama pakai motion silk/ink/Rig/Morph + musik lofi + SFX glass
 L01   # cold open: lampu LOS merah close-up (sengaja full-bleed, keluar safe column 0–6 s)
 L03   # modem 5 lampu + tag kantor ISP · kabel · akun di bawahnya
