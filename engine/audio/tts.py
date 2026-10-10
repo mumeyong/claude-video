@@ -10,11 +10,28 @@ A real recording always wins: as soon as audio/voice.wav exists, the pipeline al
 Voice: "Mumeyong" — the channel's TTS voice (engine: edge-tts id-ID-ArdiNeural), one steady pace. Nothing to
 configure. It mispronounces English tech terms, so a respelling lexicon is applied:
 LEXICON below + optional videos/<slug>/audio/tts_lexicon.txt ("word = respelling", one per line).
+
+Cartesia (opt-in, 2026-10-11, testing): put a `.cartesia` file in the repo root (git-ignored):
+    key   = sk_car_...          # or env CARTESIA_API_KEY — play.cartesia.ai/keys
+    voice = <voice id>          # `claude-video voices` lists Indonesian voices
+    only  = apple-lab           # optional: comma list of slugs that use Cartesia (omit = every video)
+    skip  = slug-a, slug-b      # optional: slugs that keep the edge-tts voice (e.g. finished, frozen videos)
+    # optional: model = sonic-3.6 · speed = 1.0 (0.6–1.5) · lexicon = off|on (respelling; default off)
+Same contract as edge-tts: one request per [Lxx] line with word timestamps → exact timing.json, no aligner.
+The script text is sent to Cartesia. Switching engine/voice regenerates the voice; the old file is kept as
+audio/voice_tts.prev.wav for an A/B listen.
 """
 import asyncio
+import base64
 import json
+import os
 import re
+import shutil
 import subprocess
+import urllib.error
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
 
 import numpy as np
 
@@ -43,6 +60,102 @@ LEXICON = {
     "full": "ful", "copy": "kopi", "incremental": "inkremental", "match": "mecc", "plan": "plen",
     "di-patch": "di-pecc", "di-restart": "di-ristart",
 }
+
+
+CARTESIA_API = "https://api.cartesia.ai"
+CARTESIA_VERSION = "2026-08-14"
+CARTESIA_CFG = Path(__file__).resolve().parents[2] / ".cartesia"
+
+
+def cartesia_config(slug=None):
+    """Settings from .cartesia (+ env CARTESIA_API_KEY). With slug: None unless Cartesia applies to that video."""
+    cfg = {}
+    if CARTESIA_CFG.exists():
+        for ln in CARTESIA_CFG.read_text(encoding="utf-8").splitlines():
+            ln = ln.split("#", 1)[0]
+            if "=" in ln:
+                k, v = ln.split("=", 1)
+                cfg[k.strip().lower()] = v.strip()
+    if os.environ.get("CARTESIA_API_KEY"):
+        cfg["key"] = os.environ["CARTESIA_API_KEY"]
+    if slug is None:
+        return cfg
+    if not cfg.get("key") or not cfg.get("voice"):
+        return None
+    only = [x.strip() for x in cfg.get("only", "").split(",") if x.strip()]
+    skip = [x.strip() for x in cfg.get("skip", "").split(",") if x.strip()]
+    return cfg if (not only or slug in only) and slug not in skip else None
+
+
+def version(project):
+    """Tag stored in timing.json as "tts": a different value (engine/voice/speed changed) → the voice is regenerated."""
+    cfg = cartesia_config(project.slug)
+    if cfg is None:
+        return VERSION
+    return f"cartesia:{cfg.get('model', 'sonic-3.6')}:{cfg['voice']}:{cfg.get('speed', '1.0')}:{cfg.get('lexicon', 'off')}"
+
+
+def _cartesia_req(cfg, path, body=None, timeout=60):
+    req = urllib.request.Request(CARTESIA_API + path, data=None if body is None else json.dumps(body).encode(),
+                                 method="GET" if body is None else "POST",
+                                 headers={"Authorization": f"Bearer {cfg['key']}", "Cartesia-Version": CARTESIA_VERSION,
+                                          "Content-Type": "application/json"})
+    return urllib.request.urlopen(req, timeout=timeout)
+
+
+def _cartesia_line(cfg, text):
+    """One line → (mono float64 @ SR, [(start, dur, word)]) via the SSE endpoint with word timestamps."""
+    body = {"model_id": cfg.get("model", "sonic-3.6"), "transcript": text, "voice": {"id": cfg["voice"]},
+            "language": "id", "add_timestamps": True,
+            "output_format": {"container": "raw", "encoding": "pcm_f32le", "sample_rate": SR}}
+    if cfg.get("speed"):
+        body["generation_config"] = {"speed": float(cfg["speed"])}
+    for attempt in range(4):
+        try:
+            audio, words = bytearray(), []
+            with _cartesia_req(cfg, "/tts/sse", body, timeout=120) as r:
+                for raw in r:
+                    ln = raw.decode("utf-8").strip()
+                    if not ln.startswith("data:"):
+                        continue
+                    ev = json.loads(ln[5:].strip() or "{}")
+                    kind = ev.get("type")
+                    if kind == "chunk" and ev.get("data"):
+                        audio += base64.b64decode(ev["data"])
+                    elif kind == "timestamps" and ev.get("word_timestamps"):
+                        wt = ev["word_timestamps"]
+                        words += [(a, b - a, w) for w, a, b in zip(wt["words"], wt["start"], wt["end"])]
+                    elif kind == "error":
+                        raise RuntimeError(ev.get("error") or ev)
+            return np.frombuffer(bytes(audio), np.float32).astype(np.float64), words
+        except urllib.error.HTTPError as e:
+            msg = e.read().decode("utf-8", "replace")[:200]
+            if e.code in (401, 402, 403) or attempt == 3:   # bad key / out of credits: retrying won't help
+                raise SystemExit(f"cartesia {e.code} for {text[:40]!r}: {msg}")
+        except (urllib.error.URLError, TimeoutError, RuntimeError) as e:
+            if attempt == 3:
+                raise SystemExit(f"cartesia failed for {text[:40]!r}: {e}")
+        import time
+        time.sleep(1.5 * (attempt + 1))
+
+
+def list_voices(lang="id"):
+    """Print Cartesia voices for a language (needs the key in .cartesia or CARTESIA_API_KEY)."""
+    cfg = cartesia_config()
+    if not cfg.get("key"):
+        raise SystemExit(f"no Cartesia key — put `key = sk_car_...` in {CARTESIA_CFG} (or env CARTESIA_API_KEY)")
+    after, n = None, 0
+    while True:
+        q = f"/voices?limit=100&language={lang}" + (f"&starting_after={after}" if after else "")
+        with _cartesia_req(cfg, q) as r:
+            res = json.load(r)
+        for v in res.get("data", []):
+            n += 1
+            print(f"{v['id']}  {v.get('gender') or '-':<14} {v['name']}" + (f" — {v['tagline']}" if v.get("tagline") else ""))
+        if not res.get("has_more") or not res.get("next_page"):
+            break
+        after = res["next_page"]
+    print(f"{n} voice(s) for language={lang}. Put one id in {CARTESIA_CFG.name}: voice = <id>")
 
 
 def _lexicon(project):
@@ -118,16 +231,25 @@ def _trim(y, thr=0.008):
 
 def synthesize(project):
     """Write audio/voice_tts.wav + timing.json (Mumeyong voice). Returns the timing dict."""
+    cfg = cartesia_config(project.slug)
     lex = _lexicon(project)
     script = project.dir / "SCRIPT.md"
     marked = parse_script(script, keep_marks=True)
     lines = parse_script(script)
-    spoken = [_respell(ln["text"], lex) for ln in lines]
-    print(f"tts: {len(lines)} lines · suara {VOICE_NAME} (online, edge-tts)")
-    results = asyncio.run(_speak_all(spoken))
+    if cfg is None:
+        spoken = [_respell(ln["text"], lex) for ln in lines]
+        print(f"tts: {len(lines)} lines · suara {VOICE_NAME} (online, edge-tts)")
+        results = [(_decode(mp3), b) for mp3, b in asyncio.run(_speak_all(spoken))]
+        voice_id = VOICE
+    else:
+        spoken = [_respell(ln["text"], lex) if cfg.get("lexicon") == "on" else ln["text"] for ln in lines]
+        print(f"tts: {len(lines)} lines · Cartesia {cfg.get('model', 'sonic-3.6')} · voice {cfg['voice']} (online)")
+        with ThreadPoolExecutor(2) as ex:      # free plan: keep concurrency low
+            results = list(ex.map(lambda tx: _cartesia_line(cfg, tx), spoken))
+        voice_id = f"cartesia:{cfg['voice']}"
 
     parts, t, prev_ch = [np.zeros(int(LEAD_IN * SR))], LEAD_IN, None
-    for i, (ln, (mp3, bounds)) in enumerate(zip(lines, results)):
+    for i, (ln, (y, bounds)) in enumerate(zip(lines, results)):
         if prev_ch is not None and ln["chapter"] != prev_ch:
             gap = GAP_CHAPTER
         elif i > 0:
@@ -136,7 +258,6 @@ def synthesize(project):
             gap = 0.0
         parts.append(np.zeros(int(gap * SR)))
         t += gap
-        y = _decode(mp3)
         a, b = _trim(y)
         y = y[a:b]
         shift = a / SR
@@ -153,11 +274,15 @@ def synthesize(project):
     parts.append(np.zeros(int(TAIL * SR)))
     voice_wav = project.audio / "voice_tts.wav"
     voice_wav.parent.mkdir(parents=True, exist_ok=True)
+    tag = version(project)
+    if voice_wav.exists() and project.timing_path.exists():   # engine/voice switch → keep the old take for A/B
+        if json.load(open(project.timing_path)).get("tts") not in (None, tag):
+            shutil.copy2(voice_wav, voice_wav.with_name("voice_tts.prev.wav"))
     y = np.concatenate(parts)
     y *= 0.89 / (np.max(np.abs(y)) or 1.0)
     from .sfx import write_wav
     write_wav(voice_wav, y)
-    data = {"source": "tts", "voice": VOICE, "tts": VERSION, "duration": round(len(y) / SR, 3), "lines": lines}
+    data = {"source": "tts", "voice": voice_id, "tts": tag, "duration": round(len(y) / SR, 3), "lines": lines}
     json.dump(data, open(project.timing_path, "w"), ensure_ascii=False, indent=1)
     mism = sum(1 for ln, (_, bd) in zip(lines, results) if len(bd) != len(ln["text"].split()))
     print(f"✓ {voice_wav}  ({data['duration']:.1f}s)")

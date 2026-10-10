@@ -1,0 +1,8 @@
+# Copy to .cartesia (git-ignored) and fill in. Cartesia = opt-in TTS engine (engine/audio/tts.py).
+key   = sk_car_xxxxxxxxxxxxxxxx     # play.cartesia.ai/keys  (or env CARTESIA_API_KEY)
+voice = PUT-A-VOICE-ID-HERE         # `claude-video voices` lists Indonesian voices
+# only  = apple-lab                 # optional: ONLY these slugs use Cartesia (comma list)
+# skip  = slug-a, slug-b            # optional: these keep the edge-tts voice (finished videos)
+# model   = sonic-3.6
+# speed   = 1.0                     # 0.6–1.5
+# lexicon = off                     # on = apply the edge-tts respelling list (kubernetes → kubernetis)

@@ -22,6 +22,7 @@
   render   <slug> [--from s --to s]  1080x1920 60fps final                           (user runs)
   tts      <slug>                 Mumeyong voice → audio/voice_tts.wav + exact timing.json (edge-tts, online;
                                   automatic in go when there is no voice.wav; voice.wav always wins) (user runs)
+  voices   [lang]                 list Cartesia voices (default id) (needs .cartesia key) → put one id in .cartesia  (user runs)
   mix      <slug>                 audio only → out/mix.wav                              (user runs)
   music    <slug>                 generated score only → out/music_gen.wav (if no audio/music.*) (user runs)
   register <slug>                 index rows (ideas/REGISTRY.md, hasil/README.md) from PLAN.md   (Claude may run)
@@ -64,6 +65,10 @@ def main(argv=None):
     if a.cmd == "sfx":
         from .audio.sfx import export_library
         export_library(ROOT / ".cache" / "sfx_preview")
+        return 0
+    if a.cmd == "voices":
+        from .audio.tts import list_voices
+        list_voices(a.slug or "id")      # `voices` or `voices en`
         return 0
     if a.cmd == "audition":
         from .audio.score import audition
@@ -319,9 +324,9 @@ def go(p, a):
             align(script, real, timing, model=a.model)
     else:
         # no recording → Mumeyong TTS voice. Redone only when the script changes (or an older TTS version is found).
-        from .audio.tts import synthesize, VERSION
+        from .audio.tts import synthesize, version
         prev = json.load(open(timing)) if timing.exists() else {}
-        if src != "tts" or not synth.exists() or _newer(script, timing) or prev.get("tts") != VERSION:
+        if src != "tts" or not synth.exists() or _newer(script, timing) or prev.get("tts") != version(p):
             step("suara TTS (Mumeyong) — belum ada rekaman voice.wav")
             try:
                 synthesize(p)

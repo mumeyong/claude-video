@@ -54,6 +54,10 @@ mp4/png/wav nggak masuk git — backup sendiri.
   "AI-generated content" di TikTok/YouTube. Salah ucap → tambahin di `audio/tts_lexicon.txt` (`airflow = erflo`).
 - **Rekam sendiri:** baca `videos/<slug>/NASKAH.md` sekali jalan, simpan `videos/<slug>/audio/voice.wav` →
   `claude-video <slug>` lagi (align otomatis, rekaman asli selalu menang, final dirender ulang). Salah ngomong? Diam sebentar, ulangi kalimatnya.
+- **Coba suara Cartesia** (lebih natural, ada emosi; free plan cukup buat tes, nggak boleh komersial): daftar di
+  play.cartesia.ai → API key → `cp .cartesia.example .cartesia`, isi `key` → `claude-video voices` (daftar suara
+  Indonesia) → isi `voice` → `claude-video apple-lab`. Semua video pakai Cartesia, kecuali yang ada di `skip =`; suara lama
+  disimpan di `audio/voice_tts.prev.wav` buat dibandingin. Mau diposting → wajib plan Pro ($5/bln). Teks naskah dikirim ke Cartesia.
 - Musik + SFX dibikin otomatis. Mau lagu sendiri: `audio/music.mp3`. Dengerin pilihan: `claude-video audition`.
 
 ## Feedback yang enak buat Claude

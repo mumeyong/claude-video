@@ -1,50 +1,50 @@
 {
  "source": "tts",
- "voice": "id-ID-ArdiNeural",
- "tts": "ardi",
- "duration": 44.085,
+ "voice": "cartesia:a053f6bc-7df4-40de-96d4-de026bc47ce8",
+ "tts": "cartesia:sonic-3.6:a053f6bc-7df4-40de-96d4-de026bc47ce8:1.0:off",
+ "duration": 42.675,
  "lines": [
   {
    "id": "L01",
    "chapter": "INTRO",
    "text": "Ini Apple lab. Gerakannya tenang, tapi presisi.",
    "start": 0.4,
-   "end": 4.296,
+   "end": 3.376,
    "words": [
     {
      "w": "Ini",
-     "start": 0.4,
-     "end": 0.686
+     "start": 0.412,
+     "end": 0.652
     },
     {
      "w": "Apple",
-     "start": 0.686,
-     "end": 1.039
+     "start": 0.732,
+     "end": 0.892
     },
     {
      "w": "lab.",
-     "start": 1.039,
-     "end": 1.405
+     "start": 0.892,
+     "end": 1.132
     },
     {
      "w": "Gerakannya",
-     "start": 2.191,
-     "end": 2.628
+     "start": 1.346,
+     "end": 1.772
     },
     {
      "w": "tenang,",
-     "start": 2.628,
-     "end": 3.076
+     "start": 1.852,
+     "end": 2.332
     },
     {
      "w": "tapi",
-     "start": 3.324,
-     "end": 3.595
+     "start": 2.513,
+     "end": 2.812
     },
     {
      "w": "presisi.",
-     "start": 3.595,
-     "end": 4.255
+     "start": 2.812,
+     "end": 3.452
     }
    ]
   },
@@ -52,33 +52,33 @@
    "id": "L02",
    "chapter": "01 · LEADER",
    "text": "Yang lama: semuanya gerak barengan.",
-   "start": 5.296,
-   "end": 7.458,
+   "start": 4.376,
+   "end": 6.803,
    "words": [
     {
      "w": "Yang",
-     "start": 5.296,
-     "end": 5.443
+     "start": 4.397,
+     "end": 4.557
     },
     {
      "w": "lama:",
-     "start": 5.443,
-     "end": 5.939
+     "start": 4.637,
+     "end": 5.037
     },
     {
      "w": "semuanya",
-     "start": 6.186,
-     "end": 6.658
+     "start": 5.259,
+     "end": 5.917
     },
     {
      "w": "gerak",
-     "start": 6.658,
-     "end": 6.858
+     "start": 5.917,
+     "end": 6.157
     },
     {
      "w": "barengan.",
-     "start": 6.858,
-     "end": 7.413
+     "start": 6.157,
+     "end": 6.797
     }
    ]
   },
@@ -86,43 +86,43 @@
    "id": "L03",
    "chapter": "01 · LEADER",
    "text": "Yang baru: satu yang mimpin, sisanya nyusul.",
-   "start": 8.058,
-   "end": 11.013,
+   "start": 7.403,
+   "end": 10.422,
    "words": [
     {
      "w": "Yang",
-     "start": 8.058,
-     "end": 8.206
+     "start": 7.428,
+     "end": 7.588
     },
     {
      "w": "baru:",
-     "start": 8.206,
-     "end": 8.677
+     "start": 7.668,
+     "end": 8.068
     },
     {
      "w": "satu",
-     "start": 8.913,
-     "end": 9.208
+     "start": 8.148,
+     "end": 8.628
     },
     {
      "w": "yang",
-     "start": 9.208,
-     "end": 9.338
+     "start": 8.708,
+     "end": 8.788
     },
     {
      "w": "mimpin,",
-     "start": 9.338,
-     "end": 9.845
+     "start": 8.788,
+     "end": 9.348
     },
     {
      "w": "sisanya",
-     "start": 10.033,
-     "end": 10.458
+     "start": 9.428,
+     "end": 9.908
     },
     {
      "w": "nyusul.",
-     "start": 10.458,
-     "end": 10.965
+     "start": 9.908,
+     "end": 10.468
     }
    ]
   },
@@ -130,43 +130,43 @@
    "id": "L04",
    "chapter": "02 · MENDARAT",
    "text": "Gerakan besar mendarat pas kata yang ditekan.",
-   "start": 12.013,
-   "end": 14.111,
+   "start": 11.422,
+   "end": 14.217,
    "words": [
     {
      "w": "Gerakan",
-     "start": 12.013,
-     "end": 12.296
+     "start": 11.428,
+     "end": 11.828
     },
     {
      "w": "besar",
-     "start": 12.296,
-     "end": 12.579
+     "start": 11.828,
+     "end": 12.388
     },
     {
      "w": "mendarat",
-     "start": 12.579,
-     "end": 12.909
+     "start": 12.468,
+     "end": 12.948
     },
     {
      "w": "pas",
-     "start": 12.909,
-     "end": 13.086
+     "start": 12.948,
+     "end": 13.188
     },
     {
      "w": "kata",
-     "start": 13.086,
-     "end": 13.357
+     "start": 13.268,
+     "end": 13.588
     },
     {
      "w": "yang",
-     "start": 13.357,
-     "end": 13.499
+     "start": 13.588,
+     "end": 13.668
     },
     {
      "w": "ditekan.",
-     "start": 13.499,
-     "end": 14.065
+     "start": 13.668,
+     "end": 14.228
     }
    ]
   },
@@ -174,38 +174,38 @@
    "id": "L05",
    "chapter": "02 · MENDARAT",
    "text": "Habis itu, diam sebentar. Biar kebaca.",
-   "start": 14.711,
-   "end": 18.295,
+   "start": 14.817,
+   "end": 17.721,
    "words": [
     {
      "w": "Habis",
-     "start": 14.711,
-     "end": 14.937
+     "start": 14.817,
+     "end": 15.125
     },
     {
      "w": "itu,",
-     "start": 14.937,
-     "end": 15.385
+     "start": 15.205,
+     "end": 15.525
     },
     {
      "w": "diam",
-     "start": 15.621,
-     "end": 15.881
+     "start": 15.725,
+     "end": 16.005
     },
     {
      "w": "sebentar.",
-     "start": 15.881,
-     "end": 16.494
+     "start": 16.005,
+     "end": 16.645
     },
     {
      "w": "Biar",
-     "start": 17.283,
-     "end": 17.636
+     "start": 16.936,
+     "end": 17.205
     },
     {
      "w": "kebaca.",
-     "start": 17.636,
-     "end": 18.25
+     "start": 17.205,
+     "end": 17.685
     }
    ]
   },
@@ -213,48 +213,48 @@
    "id": "L06",
    "chapter": "03 · TEKS",
    "text": "Judul naik per baris. Opacity duluan, posisi nyusul.",
-   "start": 19.295,
-   "end": 23.474,
+   "start": 18.721,
+   "end": 22.454,
    "words": [
     {
      "w": "Judul",
-     "start": 19.295,
-     "end": 19.589
+     "start": 18.745,
+     "end": 19.225
     },
     {
      "w": "naik",
-     "start": 19.589,
-     "end": 19.825
+     "start": 19.272,
+     "end": 19.545
     },
     {
      "w": "per",
-     "start": 19.825,
-     "end": 19.931
+     "start": 19.625,
+     "end": 19.705
     },
     {
      "w": "baris.",
-     "start": 19.931,
-     "end": 20.485
+     "start": 19.785,
+     "end": 20.185
     },
     {
      "w": "Opacity",
-     "start": 21.271,
-     "end": 21.743
+     "start": 20.412,
+     "end": 20.905
     },
     {
      "w": "duluan,",
-     "start": 21.743,
-     "end": 22.285
+     "start": 20.905,
+     "end": 21.465
     },
     {
      "w": "posisi",
-     "start": 22.533,
-     "end": 22.91
+     "start": 21.546,
+     "end": 21.945
     },
     {
      "w": "nyusul.",
-     "start": 22.91,
-     "end": 23.429
+     "start": 21.945,
+     "end": 22.505
     }
    ]
   },
@@ -262,38 +262,38 @@
    "id": "L07",
    "chapter": "03 · TEKS",
    "text": "Atau dibuka pakai wipe yang lembut.",
-   "start": 24.074,
-   "end": 25.73,
+   "start": 23.054,
+   "end": 25.042,
    "words": [
     {
      "w": "Atau",
-     "start": 24.074,
-     "end": 24.273
+     "start": 23.098,
+     "end": 23.338
     },
     {
      "w": "dibuka",
-     "start": 24.273,
-     "end": 24.615
+     "start": 23.419,
+     "end": 23.739
     },
     {
      "w": "pakai",
-     "start": 24.615,
-     "end": 24.898
+     "start": 23.739,
+     "end": 24.059
     },
     {
      "w": "wipe",
-     "start": 24.898,
-     "end": 25.181
+     "start": 24.139,
+     "end": 24.538
     },
     {
      "w": "yang",
-     "start": 25.181,
-     "end": 25.311
+     "start": 24.538,
+     "end": 24.618
     },
     {
      "w": "lembut.",
-     "start": 25.311,
-     "end": 25.794
+     "start": 24.698,
+     "end": 25.018
     }
    ]
   },
@@ -301,38 +301,38 @@
    "id": "L08",
    "chapter": "04 · KONTINUITAS",
    "text": "Yang lama mundur, yang baru maju.",
-   "start": 26.73,
-   "end": 28.701,
+   "start": 26.042,
+   "end": 28.315,
    "words": [
     {
      "w": "Yang",
-     "start": 26.73,
-     "end": 26.85
+     "start": 26.052,
+     "end": 26.292
     },
     {
      "w": "lama",
-     "start": 26.85,
-     "end": 27.027
+     "start": 26.372,
+     "end": 26.532
     },
     {
      "w": "mundur,",
-     "start": 27.027,
-     "end": 27.522
+     "start": 26.532,
+     "end": 27.172
     },
     {
      "w": "yang",
-     "start": 27.758,
-     "end": 27.982
+     "start": 27.332,
+     "end": 27.572
     },
     {
      "w": "baru",
-     "start": 27.982,
-     "end": 28.159
+     "start": 27.572,
+     "end": 27.812
     },
     {
      "w": "maju.",
-     "start": 28.159,
-     "end": 28.666
+     "start": 27.892,
+     "end": 28.372
     }
    ]
   },
@@ -340,48 +340,48 @@
    "id": "L09",
    "chapter": "04 · KONTINUITAS",
    "text": "Pill tumbuh jadi card. Nggak ada layar kosong.",
-   "start": 29.301,
-   "end": 32.459,
+   "start": 28.915,
+   "end": 31.67,
    "words": [
     {
      "w": "Pill",
-     "start": 29.301,
-     "end": 29.432
+     "start": 28.937,
+     "end": 29.179
     },
     {
      "w": "tumbuh",
-     "start": 29.432,
-     "end": 29.774
+     "start": 29.259,
+     "end": 29.579
     },
     {
      "w": "jadi",
-     "start": 29.774,
-     "end": 30.034
+     "start": 29.579,
+     "end": 29.819
     },
     {
      "w": "card.",
-     "start": 30.034,
-     "end": 30.435
+     "start": 29.899,
+     "end": 30.219
     },
     {
      "w": "Nggak",
-     "start": 31.223,
-     "end": 31.447
+     "start": 30.471,
+     "end": 30.619
     },
     {
      "w": "ada",
-     "start": 31.447,
-     "end": 31.624
+     "start": 30.699,
+     "end": 30.779
     },
     {
      "w": "layar",
-     "start": 31.624,
-     "end": 31.871
+     "start": 30.859,
+     "end": 31.099
     },
     {
      "w": "kosong.",
-     "start": 31.871,
-     "end": 32.414
+     "start": 31.099,
+     "end": 31.659
     }
    ]
   },
@@ -389,38 +389,38 @@
    "id": "L10",
    "chapter": "05 · FOKUS",
    "text": "Background-nya nge-blur, angkanya muncul di depan.",
-   "start": 33.459,
-   "end": 35.954,
+   "start": 32.67,
+   "end": 35.54,
    "words": [
     {
      "w": "Background-nya",
-     "start": 33.459,
-     "end": 33.926
+     "start": 32.67,
+     "end": 33.352
     },
     {
      "w": "nge-blur,",
-     "start": 33.926,
-     "end": 34.445
+     "start": 33.352,
+     "end": 34.033
     },
     {
      "w": "angkanya",
-     "start": 34.693,
-     "end": 35.058
+     "start": 34.178,
+     "end": 34.593
     },
     {
      "w": "muncul",
-     "start": 35.058,
-     "end": 35.365
+     "start": 34.593,
+     "end": 34.993
     },
     {
      "w": "di",
-     "start": 35.365,
-     "end": 35.447
+     "start": 35.073,
+     "end": 35.073
     },
     {
      "w": "depan.",
-     "start": 35.447,
-     "end": 35.919
+     "start": 35.153,
+     "end": 35.633
     }
    ]
   },
@@ -428,28 +428,28 @@
    "id": "L11",
    "chapter": "06 · TEMPO",
    "text": "Pelan. Pelan. Terus... cut.",
-   "start": 36.954,
-   "end": 40.724,
+   "start": 36.54,
+   "end": 38.798,
    "words": [
     {
      "w": "Pelan.",
-     "start": 36.954,
-     "end": 37.429
+     "start": 36.54,
+     "end": 37.011
     },
     {
      "w": "Pelan.",
-     "start": 38.216,
-     "end": 38.794
+     "start": 37.241,
+     "end": 37.651
     },
     {
      "w": "Terus...",
-     "start": 39.584,
-     "end": 40.162
+     "start": 37.882,
+     "end": 38.371
     },
     {
      "w": "cut.",
-     "start": 40.304,
-     "end": 40.763
+     "start": 38.504,
+     "end": 38.691
     }
    ]
   },
@@ -457,33 +457,33 @@
    "id": "L12",
    "chapter": "OUTRO",
    "text": "Diam itu bagian dari gerakan.",
-   "start": 41.724,
-   "end": 43.285,
+   "start": 39.798,
+   "end": 41.875,
    "words": [
     {
      "w": "Diam",
-     "start": 41.724,
-     "end": 41.897
+     "start": 39.824,
+     "end": 40.145
     },
     {
      "w": "itu",
-     "start": 41.897,
-     "end": 42.132
+     "start": 40.225,
+     "end": 40.545
     },
     {
      "w": "bagian",
-     "start": 42.132,
-     "end": 42.51
+     "start": 40.545,
+     "end": 41.025
     },
     {
      "w": "dari",
-     "start": 42.51,
-     "end": 42.663
+     "start": 41.105,
+     "end": 41.265
     },
     {
      "w": "gerakan.",
-     "start": 42.663,
-     "end": 43.241
+     "start": 41.265,
+     "end": 41.905
     }
    ]
   }

@@ -14,7 +14,7 @@ cd "$REPO" || exit 1
 PY="$REPO/.venv/bin/python"
 [ -x "$PY" ] || { echo "venv missing: python3 -m venv --system-site-packages $REPO/.venv && $REPO/.venv/bin/pip install faster-whisper edge-tts"; exit 1; }
 
-COMMANDS=" go auto new ideas estimate naskah align tts check still cover sheet preview render mix music sfx audition help ls list open "
+COMMANDS=" go auto new ideas estimate naskah align tts check still cover sheet preview render mix music sfx audition voices help ls list open "
 
 case "${1:-ls}" in
   ls|list)    exec "$PY" -m engine ls ;;

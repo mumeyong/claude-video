@@ -16,3 +16,6 @@ refs/
 
 # graphify knowledge graph (rebuild: graphify update .)
 graphify-out/
+
+# Cartesia TTS key + voice (never commit)
+.cartesia
