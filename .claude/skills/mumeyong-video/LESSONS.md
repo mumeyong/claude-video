@@ -30,6 +30,14 @@ Finished videos (final in `hasil/`) are frozen — lessons apply to the NEXT vid
 - All 14 videos moved identically (out_expo + blur-rise headlines + blur-out exits, ~6 camera keys) → the user
   found them generic. Motion is now chosen per video in PLAN.md: spring · reveal · glue · exit. Proof: videos/motion-lab.
 
+## Apple motion craft (2026-10-11 — STYLE §6f)
+- User: "all out like professional motion graphic… especially Apple animation" — videos still read as AI slop. Cause:
+  every rule ADDED motion (camera per chapter, always-alive drift, beat every 2.5 s, 2–4 reel moves, punches), nothing
+  asked for stillness, and Claude never sees a frame. → §6f: one leader · arrive on the word · holds ≥ 0,8 s · quiet
+  exits · continuity · real iOS springs / Apple curves. `check --dry` now prints a motion table (still % per chapter,
+  CROWD, STACK) — Claude's eyes. Baseline 2026-10-11: war-tiket-crash 3–5 % still in its busy chapters (flagged),
+  prompt-diproses 3× camera on top of content moves (STACK), jalur-karier clean.
+
 ## Process
 - Token budget (user asked 2026-10-08): one fresh session per video; read `engine/API.md` (not sources / old
   scenes.py); PLAN.md instead of IDENTITY + TREATMENT; `register` for index tables; beats helpers; 1–2 new components.

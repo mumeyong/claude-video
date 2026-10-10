@@ -1,207 +1,80 @@
 # START — bikin video MUMEYONG
 
-Panduan buat kamu. **Claude** nulis naskah, storyboard, dan kode animasinya.
-**Kamu** yang jalanin render (Claude nggak pernah nge-render sendiri), rekam suara, dan upload.
+**Claude** nulis naskah, rencana, dan kode animasinya. **Kamu** yang render, rekam suara (opsional), dan upload.
 Aturan lengkap: `CLAUDE.md` · gaya visual: `.claude/skills/mumeyong-video/STYLE.md`.
 
-## Satu command: `claude-video` (dari folder mana pun)
-
-```bash
-claude-video                              # daftar semua video + tahapnya
-claude-video "Judul video baru"           # bikin video baru dari judul (folder & slug otomatis)
-claude-video <video>                      # satu putaran review (Claude bilang kapan)
-claude-video <video> final                # render final → hasil/<video>/
-```
-
-`claude-video <video>` otomatis ngerjain yang perlu aja, berurutan, lalu nge-print file apa yang dikirim ke Claude:
-
-1. **naskah** — generate ulang `NASKAH.md` kalau `SCRIPT.md` berubah
-2. **suara + timing** — ada rekamanmu (`audio/voice.wav`)? → **align otomatis**. Belum ada? → **suara TTS otomatis**
-   (suara Mumeyong; butuh internet). Dibikin ulang cuma kalau naskah berubah. Offline → timing estimasi tanpa suara.
-3. **check** — cek struktur + jalanin semua kode gambar tanpa nulis apa-apa (`--dry`: error, keluar kolom aman,
-   teks kekecilan); kalau ada error dia berhenti
-4. **cover** — `out/cover.png` (cover TikTok yang didesain)
-5. **sheet** — satu thumbnail per kalimat
-6. **stills** — frame penuh untuk baris di file `REVIEW` (diisi Claude tiap putaran)
-7. **preview** — 540×960 30fps + suara + musik otomatis
-
-`claude-video <video> final` = sama, tapi render final → `hasil/<video>/` (mp4 + cover.png; POST.md udah ada).
-
-## Mulai video baru (contoh: EP02) — langkah demi langkah
-
-**Versi singkat:** `cd` ke repo → `claude` → "kerjain EP02 seri Bongkar Arsitektur" → jawab pertanyaan →
-"ok" tiap gerbang → `claude-video <video>` → rekam → `claude-video <video> final`.
-
-**1. Buka Claude di folder repo** (wajib di sini — biar `CLAUDE.md`, skill, glossary, dan memory ke-load otomatis)
-```bash
-cd ~/aschente/claude-video
-claude
-```
-
-**2. Bilang satu kalimat** — mis. *"kerjain EP02 seri Bongkar Arsitektur"* atau *"kerjain ide #03"*.
-(Opsional: bikin foldernya dulu pakai `claude-video "Bongkar EP02 Big Data Migration"`.)
-Mau cepat? Bilang *"kerjain ide #06 format quick"* → 60–75 s, satu hero object, tetap unik (aturan anti-slop di `ideas/STRATEGY.md`).
-
-**3. Jawab brief** — Claude cuma nanya yang kurang: nama samaran klien, angka asli, apa yang sebenarnya terjadi.
-💡 Siapin 1–2 fakta/angka asli atau screenshot yang disamarkan — itu yang paling bikin videonya unik.
-
-**4. Autopilot** — Claude jalan terus tanpa nanya "ok" tiap tahap (naskah → identitas → storyboard → kode),
-lalu berhenti dengan satu ringkasan + perintah render. Mau koreksi? Bilang aja kapan pun, Claude revisi:
-
-| Tahap | Kamu dapat | Kamu ngapain |
-|---|---|---|
-| Naskah | `SCRIPT.md` + 2–3 opsi hook + `NASKAH.md` | cek fakta, ganti hook kalau mau |
-| Rencana | `PLAN.md` — metafora, gerakan, warna, hook baru (beda dari video sebelumnya) + komposisi tiap bab | "ok" |
-| Kode | `scenes.py` + komponen baru + `REVIEW` terisi | tunggu aja |
-
-**5. Putaran review (± 3×)** — `claude-video <video>` → kirim sheet/stills/preview + catatan per baris → Claude
-revisi → jalanin lagi.
-
-**6. Rekam suara** — baca `NASKAH.md`, simpan `videos/<video>/audio/voice.wav` (musik dibikin otomatis) →
-jalanin `claude-video <video>` lagi (align otomatis).
-
-**7. Final** — `claude-video <video> final` → bilang "final ok" → Claude bikin `POST.md` (caption + hashtag) dan
-update `hasil/`, `ideas/`, registry → upload ke TikTok → kirim link ke Claude → bilang "commit" kalau mau disimpan
-ke git.
-
-## Alur kerja
+## Alurnya: satu command
 
 ```
- KAMU                                     CLAUDE
- ────                                     ──────
- 1. claude-video "Judul"           ──►    (atau langsung bilang "bikin video tentang X")
-    "kerjain video <video>"               tanya yang kurang: takeaway, durasi, CTA
-
- 2. pilih hook, bilang "ok"        ◄──    SCRIPT.md (2–3 opsi hook + naskah)
-                                          + NASKAH.md (versi bersih buat dibaca)
-
- 3. bilang "ok"                    ◄──    PLAN.md: metafora, gerakan khas, warna, format hook, struktur,
-                                          komponen baru + komposisi tiap bab → tulis scenes.py → check → isi REVIEW
-
- 4. claude-video <video>           ──►    kirim sheet / stills / preview + catatan
-    (± 3 putaran)                  ◄──    revisi → "jalanin claude-video <video> lagi"
-
- 5. baca NASKAH.md, rekam voice.wav
-    claude-video <video>           ──►    align otomatis → kirim hasil skor
-                                   ◄──    benerin baris yang ditandai, tweak timing
-
- 6. claude-video <video> final     ──►    "final ok"
-                                   ◄──    POST.md (caption + hashtag), update hasil/ & ideas/
-
- 7. upload TikTok, kirim link      ──►    catat link + performa → bahan ide berikutnya
- 8. bilang "commit"                ──►    Claude commit (cuma kalau kamu minta)
+1. PILIH      claude-video ideas      lihat ide yang belum dibikin (nomor + judul)
+2. BIKIN      claude-video 24         Claude nulis semuanya → langsung render FINAL → hasil/<slug>/
+                                      (mp4 + cover.png + POST.md). Tinggal tunggu, nggak perlu buka `claude`.
+3. CEK        baca "⚠ CEK SEBELUM UPLOAD" di akhir output — fakta/opini yang cuma kamu yang tahu
+4. UPLOAD     hasil/<slug>/<slug>.mp4 + caption dari POST.md
 ```
 
-Tiap langkah ada **gerbang**: Claude berhenti dan nunggu "ok" dari kamu sebelum lanjut.
+Ada yang mau diubah? Buka `claude` → "video 24: L14 kegedean" → jalanin `claude-video 24` lagi.
+Mau lihat dulu versi cepat 540p? `claude-video 24 preview` (opsional).
 
-## Isi repo
+Setelah upload: kirim link (+ views) ke Claude → dicatat, foldernya dipindah ke `_tayang/` / `_arsip/`.
+Mau simpan ke git? Bilang "commit" — Claude nggak pernah commit sendiri.
 
-```
-claude-video/
-├── START.md         ← kamu di sini
-├── ideas/           backlog ide (README.md) + REGISTRY.md (identitas tiap video, biar nggak ngulang)
-├── videos/<video>/  satu folder per video (lihat di bawah)
-├── hasil/           video final: <video>.mp4 + cover.png + POST.md (README.md = daftar tayang)
-├── engine/          mesin animasinya (Claude yang urus)
-└── vid              script di balik `claude-video`
-```
+## Mulai dari mana: nomor ide atau judul?
 
-## Isi folder video
+| Kamu ketik | Artinya |
+|---|---|
+| `claude-video 24` | **Dari ide di backlog** (`ideas/24-*.md`). Brief + hook-nya dipakai, status ide → 🎬. **Paling aman.** |
+| `claude-video "Judul baru"` | **Video baru** tanpa ide. Claude bikin idenya sendiri dari judul itu. |
+| `claude-video <slug>` atau nomornya | **Video yang sudah ada** → render final lagi (setelah revisi). |
 
-```
-videos/<video>/
-├── SCRIPT.md        naskah, 1 kalimat per [Lxx], per ## BAB (sumber utama — yang diubah cuma ini)
-├── NASKAH.md        versi baca dari SCRIPT.md, buat rekam (auto-generate, jangan diedit)
-├── PLAN.md          identitas unik + komposisi tiap bab (video lama: IDENTITY.md + TREATMENT.md)
-├── REVIEW           baris yang dicek sebagai still putaran ini (diisi Claude)
-├── timing.json      waktu tiap kalimat & kata (estimasi → align dari suaramu)
-├── scenes.py        kode animasinya
-├── audio/           voice.wav (kamu) · music.mp3 opsional (kalau kosong → musik digenerate)
-├── assets/          screenshot / gambar PNG yang mau dipakai
-└── out/             hasil render sementara (nggak di-commit)
-```
+⚠ Judul cuma dianggap ide yang sudah ada kalau **persis sama**. Beda dikit → jadi video baru (dobel). Pakai nomor.
 
-**Folder per status:** `videos/<video>/` = lagi dikerjain · `videos/_arsip/` = selesai · `videos/_lab/` = eksperimen.
-`hasil/<video>/` = siap upload · `hasil/_tayang/` = sudah tayang. Setelah upload, pindahin dua-duanya ke folder `_`.
-`claude-video <video>` tetap nemu video di folder `_` mana pun. Git cuma nyimpen teks/kode — mp4, png, wav nggak di-commit.
+## Ide
 
-## Ide video
-
-Daftar di `ideas/README.md`. Status: 💡 ide → ⭐ dipilih → 🎬 produksi → ✅ tayang (🗑 batal).
-
+- Daftar semua ide: `ideas/README.md` · status: 💡 ide → ⭐ dipilih → 🎬 produksi → ✅ tayang (🗑 batal)
+- Urutan tayang yang disarankan: `ideas/STRATEGY.md` §7 · antrean upload: `hasil/README.md`
 - **Nambah ide:** bilang ke Claude "simpan ide: …"
-- **Mulai:** "kerjain ide #04" → Claude bikin folder videonya dan mulai dari naskah
-- **Setelah tayang:** kirim link + views → dicatat, buat bahan ide berikutnya
+- Biar nggak generik: kasih Claude **satu angka / screenshot asli** per video.
 
-## Biar tiap video unik
+## Folder
 
-Yang **selalu sama** (biar orang langsung kenal "ini Mumeyong"): HUD, font, biru aksen, rasa geraknya, outro.
-Yang **beda tiap video** (dicatat di `PLAN.md`, dicek ke `ideas/REGISTRY.md`): metafora, gerakan khas,
-warna khas, format hook, struktur, dan minimal satu komponen visual baru. Plus sentuhan manusia: artefak asli
-(screenshot/angka yang disamarkan), opinimu, satu kejutan. **Bantu Claude dengan satu angka/screenshot asli
-tiap video** — itu yang paling bikin nggak generik.
-
-## Rekam suara
-
-- Ruangan sepi, mic/HP ± 20 cm dari mulut, simpan sebagai `videos/<video>/audio/voice.wav` (48 kHz).
-- Buka **NASKAH.md** (di HP / layar kedua), baca seluruhnya **sekali jalan**, santai, ± 160 kata/menit.
-- **Tebal** = kasih tekanan · *(napas)* = ambil napas · ⏸ = jeda ± 1 detik ganti bab.
-- Salah ngomong? Diam sebentar, **ulangi kalimat itu**. Aligner otomatis ambil take terakhir yang bagus.
-- Mau ganti kata-kata? Bilang ke Claude → SCRIPT.md diubah → NASKAH.md ikut ke-generate. Jangan edit NASKAH.md langsung.
-- Nggak perlu nunggu suara buat mulai: visual bisa dibangun & direview pakai timing estimasi dulu.
-
-### Suara sintetis (otomatis kalau belum ada rekaman)
-```bash
-claude-video <video>                      # belum ada voice.wav → suara Mumeyong dibikin otomatis
-claude-video tts <video>                  # cuma bikin suaranya aja
 ```
-- Pakai **edge-tts** (suara neural Microsoft, gratis, **butuh internet — teks naskah dikirim ke Microsoft**).
-- Satu suara aja: **Mumeyong** (mesinnya edge-tts `id-ID-ArdiNeural`), tempo santai. Nggak ada opsi yang perlu diatur.
-- Timing per kata langsung dari TTS → nggak perlu aligner. Tanda *tekanan* nggak kebaca, napas `//` = jeda lebih panjang.
-- Istilah English dibaca pakai ejaan Indonesia (`serverless` → "serverles"). Ada yang salah ucap? Tambahin di
-  `audio/tts_lexicon.txt`: `airflow = erflo` (satu per baris).
-- **Rekaman asli selalu menang:** begitu ada `audio/voice.wav`, itu yang dipakai (align otomatis).
-- Tayang pakai suara sintetis? Nyalain label **"AI-generated content"** di TikTok/YouTube — dan jujur ke penonton.
+ideas/              backlog ide
+videos/<slug>/      video yang lagi dikerjain (SCRIPT.md, NASKAH.md, PLAN.md, scenes.py, audio/, out/)
+hasil/<slug>/       siap upload: <slug>.mp4 + cover.png + POST.md (caption tiap platform)
+videos/_arsip/  hasil/_tayang/    sudah selesai / sudah tayang
+```
 
-## Musik
+Yang di-upload **selalu** `hasil/<slug>/<slug>.mp4` (1080×1920 60fps). `out/preview.mp4` (kalau pakai `preview`) cuma 540p.
+mp4/png/wav nggak masuk git — backup sendiri.
 
-- **Kamu cukup rekam suara.** Kalau `audio/music.*` kosong, musik **digenerate otomatis** waktu render
-  (`engine/audio/music.py`): disusun dari bab-bab videonya sendiri — intro ringan, tiap bab groove penuh dengan pola
-  arp sendiri, recap gelap tanpa drum, outro resolve. Pergantian bab jatuh pas di beat, ada riser + impact.
-- Tiap video punya **band sendiri**: style (lofi · marimba · ambient · garage · cinematic) + key + mood + tempo,
-  plus melodi motif sendiri — diatur di PLAN.md / `v.music = dict(style="lofi", key="F", mood="warm")`.
-  SFX ikut: `v.sfx_kit` (glass · wood · soft · mech), nadanya nyatu sama key musiknya.
-  `claude-video check <video>` nampilin rencana musiknya. Video lama tetap pakai musik lamanya.
-- **Dengerin semua pilihan:** `claude-video audition` → `.cache/audition/` (tiap style 40 detik + tiap kit SFX).
-- Dengerin musiknya aja: `claude-video music <video>` → `out/music_gen.wav`.
-- Mau pakai lagu sendiri? Taruh royalty-free ± 128 BPM di `audio/music.mp3` — itu yang dipakai.
-- Otomatis turun (ducking) waktu kamu ngomong, naik lagi di jeda antar bab.
+## Suara
 
-## Hasil final
+- **Nggak rekam?** Suara AI "Mumeyong" dibikin otomatis (butuh internet). Tayang pakai ini → nyalain label
+  "AI-generated content" di TikTok/YouTube. Salah ucap → tambahin di `audio/tts_lexicon.txt` (`airflow = erflo`).
+- **Rekam sendiri:** baca `videos/<slug>/NASKAH.md` sekali jalan, simpan `videos/<slug>/audio/voice.wav` →
+  `claude-video <slug>` lagi (align otomatis, rekaman asli selalu menang, final dirender ulang). Salah ngomong? Diam sebentar, ulangi kalimatnya.
+- Musik + SFX dibikin otomatis. Mau lagu sendiri: `audio/music.mp3`. Dengerin pilihan: `claude-video audition`.
 
-> **Yang di-upload selalu `hasil/<video>/<video>.mp4`** (1080×1920 60fps). `out/preview.mp4` cuma 540p buat review.
+## Feedback yang enak buat Claude
 
-`claude-video <video> final` nyalin hasil ke `hasil/<video>/`:
-`<video>.mp4` (1080×1920 60fps) dan `cover.png` (cover TikTok yang didesain). `POST.md` (caption, deskripsi buat
-search, hashtag, komentar pin, checklist upload) udah ditulis Claude dari waktu produksi — tinggal copy-paste.
-Cover juga muncul tiap putaran review di `out/cover.png` (atau `claude-video cover <video>`).
-File mp4 **nggak masuk git** — backup sendiri (mis. Google Drive).
+✅ "L14: angkanya kegedean" · ✅ "00:42 zoom-nya kecepetan" · ❌ "kurang bagus"
 
-## Kasih feedback yang spesifik
+**Gerakan = gaya Apple keynote** (STYLE §6f, sejak 2026-10-11): satu yang gerak duluan, mendarat pas kata yang
+ditekan, terus diam sebentar. Claude ngecek ini sendiri lewat tabel *motion* di `check --dry` (tanpa render).
+Mau lihat contohnya: `claude-video apple-lab` (proof sheet ± 45 s, nggak buat diposting).
 
-- ✅ "L14: angkanya kegedean, headline ganti jadi *Cek sendiri.*"
-- ✅ "00:00:42 — kameranya kecepetan zoom-nya"
-- ✅ "Bab UKURAN masih kerasa kayak template"
-- ❌ "kurang bagus" → Claude bakal nanya baris mana
-
-## Command lain (jarang perlu)
+## Command lain
 
 | Kapan | Command |
 |---|---|
-| Preview satu bagian aja | `claude-video <video> --from 20 --to 45` |
-| Buka folder video | `claude-video open <video>` |
-| Dengerin semua SFX | `claude-video sfx` |
-| Command satuan (still, sheet, preview, align, mix, …) | `claude-video help` |
+| Daftar video + tahapnya | `claude-video` |
+| Preview 540p (opsional) | `claude-video <slug> preview` · sebagian: `… preview --from 20 --to 45` |
+| Cuma bikin folder (tanpa Claude) | `claude-video new "Judul"` |
+| Buka folder video | `claude-video open <slug>` |
+| Semua command satuan | `claude-video help` |
+
+Error? Copy-paste output-nya + command-nya ke Claude. Autopilot gagal di tengah? `claude` → "lanjutin video <slug>".
 
 ## Setup di komputer baru
 
@@ -211,9 +84,4 @@ cd ~/aschente/claude-video
 python3 -m venv --system-site-packages .venv && .venv/bin/pip install faster-whisper edge-tts
 ln -s ~/aschente/claude-video/vid ~/.local/bin/claude-video   # ~/.local/bin harus ada di PATH
 ```
-Butuh: Python 3.13, ffmpeg, Pango + PyGObject (`gir1.2-pango-1.0`, `python3-gi`, `python3-cairo`).
-Font sudah ikut di repo (`assets/fonts/`).
-
-## Kalau error
-
-Copy-paste output-nya ke Claude, plus command yang kamu jalanin.
+Butuh: Python 3.13, ffmpeg, Pango + PyGObject (`gir1.2-pango-1.0`, `python3-gi`, `python3-cairo`). Font ikut di repo.

@@ -95,7 +95,11 @@ async def _speak_all(texts, conc=4):
     async def one(t):
         async with sem:
             return await _speak(t)
-    return await asyncio.gather(*(one(t) for t in texts))
+    res = await asyncio.gather(*(one(t) for t in texts), return_exceptions=True)
+    for r in res:   # surface the first failure once, no "Task exception was never retrieved" noise
+        if isinstance(r, BaseException):
+            raise r
+    return res
 
 
 def _decode(mp3):

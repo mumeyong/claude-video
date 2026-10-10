@@ -1,6 +1,6 @@
 # Kubernetes bukan jawaban buat semua hal
 
-- **Status:** 💡 ide
+- **Status:** ✅ tayang → [`videos/_arsip/kubernetes-bukan-jawaban/`](../videos/_arsip/kubernetes-bukan-jawaban/)
 - **Slug:** kubernetes-bukan-jawaban
 - **Seri:** —
 - **Durasi target:** 60–90 s

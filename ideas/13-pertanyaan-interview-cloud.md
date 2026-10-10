@@ -1,6 +1,6 @@
 # 5 pertanyaan interview cloud yang selalu aku tanya
 
-- **Status:** 💡 ide · **Pilar:** C (karier) · **Format:** QUICK
+- **Status:** 🎬 produksi — [`videos/interview-cloud-5-pertanyaan/`](../videos/interview-cloud-5-pertanyaan/)
 - **Slug:** interview-cloud-5-pertanyaan
 - **Seri:** —
 - **Durasi target:** 60–75 s

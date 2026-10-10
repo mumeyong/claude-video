@@ -12,14 +12,17 @@ User-facing workflow guide: `START.md` — keep it in sync when commands or phas
    (screenshots, timecodes, errors). The only engine commands Claude may run are
    `check`, `check --dry`, `estimate`, `naskah`, `api` and `register` (text/JSON only, no image/audio output). `check --dry` runs the
    draw functions on throw-away in-memory surfaces to catch exceptions / safe-zone / tiny-text problems — approved
-   by the user 2026-10-08; it writes nothing. Run it on every scenes.py before handing over a render command.
+   by the user 2026-10-08; it writes nothing. It also prints a **motion table** (still % per chapter, CROWD, STACK —
+   STYLE §6f Apple motion craft); fix every `!` in it too. Run it on every scenes.py before handing over a render command.
 2. **Autopilot — jangan berhenti di gate.** The user approves every gate by default ("oke" to everything).
    Don't stop to ask for ok between phases: make the best call yourself, write each phase's file, then move on.
    Run straight through to scenes.py + `check`, then stop and hand over the render command (rule 1).
    Only stop early if blocked on a fact only the user knows (real numbers, NDA, what actually happened) — and
    even then prefer a safe default (no number shown) and list the open question in the final message.
 3. **Urutan wajib:** SCRIPT.md (+ NASKAH.md) → PLAN.md (+ `register`) → scenes.py → `check --dry` → user renders
-   stills/preview → feedback → final. The order stays; the waiting between steps doesn't (rule 2).
+   the final → feedback → re-render. The order stays; the waiting between steps doesn't (rule 2).
+   Since 2026-10-10 `claude-video <slug>` renders the FINAL directly (user trusts it, no preview round);
+   the 540p review round is opt-in: `claude-video <slug> preview`.
 3b. **Every video ships a read-aloud script.** Whenever SCRIPT.md is written or changed, regenerate
    `NASKAH.md` with `python -m engine naskah <slug>` and tell the user. Never hand-edit NASKAH.md and
    never let it drift from SCRIPT.md — the user records voice.wav from it.
@@ -58,7 +61,7 @@ engine/            reusable engine (tokens, draw, video, timing, components/, au
 assets/fonts/      Inter, Inter Display, Instrument Serif Italic, JetBrains Mono
 assets/sfx/        optional real SFX samples (<name>.wav overrides the synth)
 videos/<slug>/     IN PRODUCTION only: SCRIPT.md, NASKAH.md, PLAN.md, timing.json, scenes.py, REVIEW, audio/, assets/, out/
-videos/_arsip/     finished videos (frozen) · videos/_lab/ experiments (motion-lab) — `_` = hidden from `claude-video` list
+videos/_arsip/     finished videos (frozen) · videos/_lab/ proof sheets (motion-lab §6d, reel-lab §6e, apple-lab §6f) — `_` = hidden from `claude-video` list
 engine/API.md      one line per component — read this instead of the sources (`python -m engine api`)
 hasil/<slug>/      final, NOT posted yet = upload queue: <slug>.mp4 + cover.png + POST.md · hasil/_tayang/ = posted
                    git keeps only text (scripts, code, POST.md); mp4/png/wav/out are git-ignored — back up mp4s yourself
@@ -68,15 +71,18 @@ ideas/             video idea backlog: README.md (index + status) + one NN-slug.
 
 ## Commands (the user runs these — Claude only hands them over)
 
-**Hand over ONE command per round:** `claude-video <slug>` (global command = `vid` symlinked into
-~/.local/bin; works from any folder; `./vid` inside the repo is identical) (review) or `claude-video <slug> final`. Before handing it over,
-update `videos/<slug>/REVIEW` with the line ids/seconds the user should look at as stills this round.
+**Hand over ONE command:** `claude-video <slug>` (global command = `vid` symlinked into ~/.local/bin; works from
+any folder; `./vid` inside the repo is identical) — it renders the final straight into `hasil/<slug>/`. Keep
+`videos/<slug>/REVIEW` filled anyway (used by the opt-in `preview` round).
 
 ```bash
-claude-video <slug>                      # review round: naskah → voice (align recording, else TTS) → check → cover → sheet → stills(REVIEW) → preview+music
-claude-video <slug> final                # final 1080x1920 60fps → out/final.mp4 + hasil/<slug>/
-claude-video <slug> --from 20 --to 45    # same, preview only that range
-claude-video "Judul video"             # new video from a title (slug auto); `claude-video` alone = list
+claude-video <slug>                      # naskah → voice (align recording, else TTS) → check → final 1080x1920 60fps → hasil/<slug>/
+claude-video <slug> preview              # optional review round: cover → sheet → stills(REVIEW) → 540p preview+music
+claude-video <slug> preview --from 20 --to 45   # preview only that range
+claude-video "Judul video"             # AUTOPILOT: scaffold → `claude -p` headless (prompt: skill AUTOPILOT.md) writes
+                                       # idea+SCRIPT+PLAN+scenes until check --dry is clean → final render. Same for an
+                                       # idea number or a brief-only slug. `claude-video new "Judul"` = folder only.
+claude-video ideas                       # unproduced ideas; `claude-video <NN>` or the exact idea title → videos/<idea slug>/, idea status 🎬
 claude-video check <slug> [--dry]        # structure check; --dry also runs draw code off-screen (Claude may run)
 claude-video help                        # all low-level commands (still, sheet, preview, render, align, mix, sfx)
 ```
@@ -86,3 +92,13 @@ claude-video help                        # all low-level commands (still, sheet,
 - faster-whisper: pass audio as a numpy array (PyAV here rejects `metadata_errors`). `align.py` already does.
 - Pango must load fonts from `assets/fonts` — always `import engine` (it sets FONTCONFIG_FILE) before `gi`.
 - Numbers on screen use Indonesian format: `2.951`, `44,4 s` → `fmt_id()`.
+
+## graphify
+
+This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+
+Rules:
+- For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
+- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
+- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
+- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).

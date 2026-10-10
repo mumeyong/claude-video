@@ -1,0 +1,4 @@
+ISP = i es pe
+DNS = de en es
+fiber = faiber
+Cloudflare = klaudfler

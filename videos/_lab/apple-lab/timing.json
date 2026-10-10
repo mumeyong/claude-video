@@ -1,0 +1,489 @@
+{
+ "source": "estimate",
+ "duration": 39.985,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Ini Apple lab. Gerakannya tenang, tapi presisi.",
+   "start": 0.4,
+   "end": 3.012,
+   "words": [
+    {
+     "w": "Ini",
+     "start": 0.4,
+     "end": 0.6
+    },
+    {
+     "w": "Apple",
+     "start": 0.618,
+     "end": 0.918
+    },
+    {
+     "w": "lab.",
+     "start": 0.944,
+     "end": 1.194
+    },
+    {
+     "w": "Gerakannya",
+     "start": 1.216,
+     "end": 1.767
+    },
+    {
+     "w": "tenang,",
+     "start": 1.815,
+     "end": 2.215
+    },
+    {
+     "w": "tapi",
+     "start": 2.25,
+     "end": 2.5
+    },
+    {
+     "w": "presisi.",
+     "start": 2.522,
+     "end": 2.973
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "01 · LEADER",
+   "text": "Yang lama: semuanya gerak barengan.",
+   "start": 4.312,
+   "end": 6.178,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 4.312,
+     "end": 4.55
+    },
+    {
+     "w": "lama:",
+     "start": 4.571,
+     "end": 4.857
+    },
+    {
+     "w": "semuanya",
+     "start": 4.882,
+     "end": 5.311
+    },
+    {
+     "w": "gerak",
+     "start": 5.348,
+     "end": 5.634
+    },
+    {
+     "w": "barengan.",
+     "start": 5.659,
+     "end": 6.136
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "01 · LEADER",
+   "text": "Yang baru: satu yang mimpin, sisanya nyusul.",
+   "start": 6.558,
+   "end": 9.17,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 6.558,
+     "end": 6.825
+    },
+    {
+     "w": "baru:",
+     "start": 6.848,
+     "end": 7.168
+    },
+    {
+     "w": "satu",
+     "start": 7.196,
+     "end": 7.463
+    },
+    {
+     "w": "yang",
+     "start": 7.486,
+     "end": 7.753
+    },
+    {
+     "w": "mimpin,",
+     "start": 7.777,
+     "end": 8.204
+    },
+    {
+     "w": "sisanya",
+     "start": 8.241,
+     "end": 8.668
+    },
+    {
+     "w": "nyusul.",
+     "start": 8.705,
+     "end": 9.132
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "02 · MENDARAT",
+   "text": "Gerakan besar mendarat pas kata yang ditekan.",
+   "start": 10.47,
+   "end": 13.081,
+   "words": [
+    {
+     "w": "Gerakan",
+     "start": 10.47,
+     "end": 10.887
+    },
+    {
+     "w": "besar",
+     "start": 10.924,
+     "end": 11.237
+    },
+    {
+     "w": "mendarat",
+     "start": 11.264,
+     "end": 11.735
+    },
+    {
+     "w": "pas",
+     "start": 11.776,
+     "end": 11.984
+    },
+    {
+     "w": "kata",
+     "start": 12.003,
+     "end": 12.264
+    },
+    {
+     "w": "yang",
+     "start": 12.287,
+     "end": 12.548
+    },
+    {
+     "w": "ditekan.",
+     "start": 12.57,
+     "end": 13.041
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "02 · MENDARAT",
+   "text": "Habis itu, diam sebentar. Biar kebaca.",
+   "start": 13.461,
+   "end": 15.7,
+   "words": [
+    {
+     "w": "Habis",
+     "start": 13.461,
+     "end": 13.778
+    },
+    {
+     "w": "itu,",
+     "start": 13.806,
+     "end": 14.07
+    },
+    {
+     "w": "diam",
+     "start": 14.093,
+     "end": 14.357
+    },
+    {
+     "w": "sebentar.",
+     "start": 14.38,
+     "end": 14.908
+    },
+    {
+     "w": "Biar",
+     "start": 14.954,
+     "end": 15.218
+    },
+    {
+     "w": "kebaca.",
+     "start": 15.241,
+     "end": 15.664
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "03 · TEKS",
+   "text": "Judul naik per baris. Opacity duluan, posisi nyusul.",
+   "start": 17.0,
+   "end": 19.985,
+   "words": [
+    {
+     "w": "Judul",
+     "start": 17.0,
+     "end": 17.311
+    },
+    {
+     "w": "naik",
+     "start": 17.338,
+     "end": 17.597
+    },
+    {
+     "w": "per",
+     "start": 17.62,
+     "end": 17.827
+    },
+    {
+     "w": "baris.",
+     "start": 17.845,
+     "end": 18.208
+    },
+    {
+     "w": "Opacity",
+     "start": 18.239,
+     "end": 18.654
+    },
+    {
+     "w": "duluan,",
+     "start": 18.69,
+     "end": 19.104
+    },
+    {
+     "w": "posisi",
+     "start": 19.141,
+     "end": 19.503
+    },
+    {
+     "w": "nyusul.",
+     "start": 19.535,
+     "end": 19.949
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "03 · TEKS",
+   "text": "Atau dibuka pakai wipe yang lembut.",
+   "start": 20.365,
+   "end": 22.604,
+   "words": [
+    {
+     "w": "Atau",
+     "start": 20.365,
+     "end": 20.651
+    },
+    {
+     "w": "dibuka",
+     "start": 20.676,
+     "end": 21.077
+    },
+    {
+     "w": "pakai",
+     "start": 21.112,
+     "end": 21.455
+    },
+    {
+     "w": "wipe",
+     "start": 21.485,
+     "end": 21.771
+    },
+    {
+     "w": "yang",
+     "start": 21.796,
+     "end": 22.082
+    },
+    {
+     "w": "lembut.",
+     "start": 22.107,
+     "end": 22.564
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "04 · KONTINUITAS",
+   "text": "Yang lama mundur, yang baru maju.",
+   "start": 23.904,
+   "end": 26.143,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 23.904,
+     "end": 24.207
+    },
+    {
+     "w": "lama",
+     "start": 24.233,
+     "end": 24.536
+    },
+    {
+     "w": "mundur,",
+     "start": 24.563,
+     "end": 25.047
+    },
+    {
+     "w": "yang",
+     "start": 25.089,
+     "end": 25.392
+    },
+    {
+     "w": "baru",
+     "start": 25.419,
+     "end": 25.722
+    },
+    {
+     "w": "maju.",
+     "start": 25.748,
+     "end": 26.111
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "04 · KONTINUITAS",
+   "text": "Pill tumbuh jadi card. Nggak ada layar kosong.",
+   "start": 26.523,
+   "end": 29.508,
+   "words": [
+    {
+     "w": "Pill",
+     "start": 26.523,
+     "end": 26.815
+    },
+    {
+     "w": "tumbuh",
+     "start": 26.841,
+     "end": 27.25
+    },
+    {
+     "w": "jadi",
+     "start": 27.285,
+     "end": 27.577
+    },
+    {
+     "w": "card.",
+     "start": 27.603,
+     "end": 27.953
+    },
+    {
+     "w": "Nggak",
+     "start": 27.984,
+     "end": 28.334
+    },
+    {
+     "w": "ada",
+     "start": 28.365,
+     "end": 28.599
+    },
+    {
+     "w": "layar",
+     "start": 28.619,
+     "end": 28.969
+    },
+    {
+     "w": "kosong.",
+     "start": 29.0,
+     "end": 29.467
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "05 · FOKUS",
+   "text": "Background-nya nge-blur, angkanya muncul di depan.",
+   "start": 30.808,
+   "end": 33.047,
+   "words": [
+    {
+     "w": "Background-nya",
+     "start": 30.808,
+     "end": 31.414
+    },
+    {
+     "w": "nge-blur,",
+     "start": 31.467,
+     "end": 31.87
+    },
+    {
+     "w": "angkanya",
+     "start": 31.906,
+     "end": 32.269
+    },
+    {
+     "w": "muncul",
+     "start": 32.301,
+     "end": 32.583
+    },
+    {
+     "w": "di",
+     "start": 32.608,
+     "end": 32.729
+    },
+    {
+     "w": "depan.",
+     "start": 32.74,
+     "end": 33.022
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "06 · TEMPO",
+   "text": "Pelan. Pelan. Terus... cut.",
+   "start": 34.347,
+   "end": 35.839,
+   "words": [
+    {
+     "w": "Pelan.",
+     "start": 34.347,
+     "end": 34.69
+    },
+    {
+     "w": "Pelan.",
+     "start": 34.72,
+     "end": 35.063
+    },
+    {
+     "w": "Terus...",
+     "start": 35.093,
+     "end": 35.534
+    },
+    {
+     "w": "cut.",
+     "start": 35.573,
+     "end": 35.818
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "OUTRO",
+   "text": "Diam itu bagian dari gerakan.",
+   "start": 37.139,
+   "end": 39.005,
+   "words": [
+    {
+     "w": "Diam",
+     "start": 37.139,
+     "end": 37.425
+    },
+    {
+     "w": "itu",
+     "start": 37.45,
+     "end": 37.679
+    },
+    {
+     "w": "bagian",
+     "start": 37.699,
+     "end": 38.1
+    },
+    {
+     "w": "dari",
+     "start": 38.134,
+     "end": 38.42
+    },
+    {
+     "w": "gerakan.",
+     "start": 38.445,
+     "end": 38.96
+    }
+   ]
+  }
+ ]
+}

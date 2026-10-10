@@ -9,7 +9,7 @@ Headline syntax:
 import re
 
 from .. import tokens as tk
-from ..ease import out_expo, in_cubic, in_out_cubic, mix, prog
+from ..ease import curve, out_expo, in_cubic, in_out_cubic, mix, prog
 from .motion import appear  # noqa: F401  (re-export convenience)
 
 _TOKEN = re.compile(r"([*_~])[^*_~]+?\1[.,:;!?]*|\S+")
@@ -100,8 +100,13 @@ class Headline:
         """Words blur+rise in one by one from t_in; all blur out from t_out.
         reveal: "blur" (default) · "mask" (each word springs up from behind its baseline, kinetic.py)
                 · "ink" (Apple: whole line fades in faint, then words ink in one by one)
-        exit:   "blur" (default) · "mask" (words leave up through the mask) · "dim" (drain to grey, then fade)"""
+                · "rise" (Apple: each LINE fades up as one piece on an iOS spring, opacity first, no blur)
+                · "wipe" (Apple keynote title: a feathered mask sweeps across each line)
+        exit:   "blur" (default) · "mask" (words leave up through the mask) · "dim" (drain to grey, then fade)
+                · "quiet" (Apple: fade + slight drop in scale, faster than the entrance)"""
         M = tk.M
+        if reveal in ("rise", "wipe"):
+            return self._draw_apple(c, t, t_in, t_out, strike_at, stagger, reveal, exit)
         if reveal != "blur" or exit != "blur":
             return self._draw_kinetic(c, t, t_in, t_out, strike_at, stagger, reveal, exit)
         stg = M["word_stagger"] if stagger is None else stagger
@@ -138,6 +143,41 @@ class Headline:
             idx.append(k)
         return idx
 
+    def _lines(self, c):
+        """[(baseline, x0, x1, [word tuples])] top → bottom."""
+        out = {}
+        for wd in self.words(c):
+            out.setdefault(wd[4], []).append(wd)
+        return [(b, min(w[3] for w in ws), max(w[3] + w[5] for w in ws), ws) for b, ws in sorted(out.items())]
+
+    def _draw_apple(self, c, t, t_in, t_out, strike_at, stagger, reveal, exit):
+        from .keynote import rise, wipe
+        from .kinetic import dim_color, dim_alpha
+        M = tk.M
+        stg = (M["rise_line_stagger"] if reveal == "rise" else 0.14) if stagger is None else stagger
+        ink = c.theme(self.ink, "d_ink")
+        acc = c.theme(self.accent, "d_accent")
+        b_dim = 0.0 if (t_out is None or exit != "dim") else prog(t, t_out, M["dim_out"])
+        if b_dim >= 1:
+            return
+        quiet_out = t_out if exit != "dim" else None
+        for i, (base, x0, x1, ws) in enumerate(self._lines(c)):
+            def body(c, ws=ws):
+                for (w, kind, strike, x, b_, pw) in ws:
+                    f, s, ls = self._font(kind)
+                    col = acc if kind != "plain" else ink
+                    if b_dim > 0:
+                        col = dim_color(c, col, b_dim)
+                    c.text(x, b_, w, f, s, col, dim_alpha(b_dim) if b_dim > 0 else 1.0, ls)
+            box = (x0 - 12, base - self.size, x1 - x0 + 24, self.size * 1.35)
+            ti = t_in + i * stg
+            if reveal == "rise":
+                rise(c, t, ti, quiet_out, box, body, dy=self.size * 0.34)
+            else:
+                wipe(c, t, ti, box, body, t_out=quiet_out)
+        if strike_at is not None:
+            self._strike(c, t, strike_at, t_out)
+
     def _draw_kinetic(self, c, t, t_in, t_out, strike_at, stagger, reveal, exit):
         from .kinetic import mask_word, dim_color, dim_alpha
         M = tk.M
@@ -152,10 +192,13 @@ class Headline:
             if reveal == "ink":
                 a0 = out_expo(prog(t, t_in, M["word_in"]))
                 k = in_out_cubic(prog(t, t_in + 0.25 + i * M["ink_stagger"], M["ink_in"]))
-                b = 0.0 if t_out is None else prog(t, t_out, M["dim_out"])
+                b = 0.0 if t_out is None else prog(t, t_out, M["quiet_out"] if exit == "quiet" else M["dim_out"])
                 if a0 <= 0.002 or b >= 1:
                     continue
                 col = mix(c.theme("faint", "d_line"), col, k)
+                if exit == "quiet":
+                    c.text(x, base + 6 * b, w, f, s, col, a0 * (1 - curve("apple_in")(b)), ls)
+                    continue
                 c.text(x, base, w, f, s, dim_color(c, col, b) if exit == "dim" else col, a0 * dim_alpha(b), ls)
                 continue
             if reveal == "mask":
@@ -165,10 +208,14 @@ class Headline:
             a = out_expo(prog(t, ti, M["word_in"]))
             if a <= 0.002:
                 continue
-            b = 0.0 if t_out is None else prog(t, t_out, M["out"] if exit == "mask" else M["dim_out"])
+            b = 0.0 if t_out is None else prog(t, t_out, {"mask": M["out"], "quiet": M["quiet_out"]}.get(exit, M["dim_out"]))
             if b >= 1:
                 continue
             dy = M["word_rise"] * (1 - a)
+            if exit == "quiet":
+                with c.layer((x - 8, base - s, pw + 16, s * 1.35), a * (1 - curve("apple_in")(b)), M["word_blur"] * (1 - a)):
+                    c.text(x, base + dy + 6 * b, w, f, s, col, 1.0, ls)
+                continue
             if exit == "mask":
                 b = in_cubic(b)
                 with c.clip(x - 10, base - s * 1.02, pw + 20, s * 1.30):

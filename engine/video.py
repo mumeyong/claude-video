@@ -57,6 +57,7 @@ class Video:
     cues: list = field(default_factory=list)   # (sfx name, t, gain)
     chat: object = None                         # ChatTrack or None
     hud: bool = True
+    ground: tuple = None                        # flat background color instead of tinted glows (reel layer: paper)
     camera: object = field(default_factory=Camera)   # applies to layers with z < 80
 
     def __post_init__(self):
@@ -162,6 +163,11 @@ def draw_background(c, video, t):
     import cairo
     cx = c.ctx
     W, H = tk.W, tk.H
+    if video.ground is not None:
+        c.src(video.ground)
+        cx.rectangle(0, 0, W, H)
+        cx.fill()
+        return
     drift = math.sin(t * 0.25) * 40  # slow living drift
     # light
     if c.dark < 1:

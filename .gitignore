@@ -13,3 +13,6 @@ hasil/**/*.png
 
 # reference videos for motion study (not ours to publish)
 refs/
+
+# graphify knowledge graph (rebuild: graphify update .)
+graphify-out/

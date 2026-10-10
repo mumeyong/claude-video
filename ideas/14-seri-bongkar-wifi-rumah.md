@@ -1,6 +1,6 @@
 # Seri: Bongkar WiFi Rumah (5 episode)
 
-- **Status:** 🎬 produksi — EP01 → [`videos/wifi-ep01-lampu-los/`](../videos/wifi-ep01-lampu-los/)
+- **Status:** 🎬 seri jalan — EP01 ✅ tayang → [`videos/_arsip/wifi-ep01-lampu-los/`](../videos/_arsip/wifi-ep01-lampu-los/)
 - **Pilar:** B (broad) · **Format:** QUICK
 - **Slug:** wifi-ep<NN>-<nama-episode>
 - **Seri:** Bongkar WiFi Rumah — pengganti slot seri setelah Bongkar Arsitektur tamat

@@ -53,6 +53,72 @@ def out_spring(p):
     return spring(p, damping=0.72, freq=1.3)
 
 
+_BEZ = {}
+
+
+def bezier(x1, y1, x2, y2):
+    """CSS cubic-bezier(x1, y1, x2, y2) as an easing function p → value (Newton + bisection on x). Cached.
+    Apple's curves live in tk.EASE — use curve("apple_out") etc. instead of raw numbers in scenes."""
+    key = (x1, y1, x2, y2)
+    if key in _BEZ:
+        return _BEZ[key]
+
+    def bx(s): return 3 * x1 * s * (1 - s) ** 2 + 3 * x2 * s * s * (1 - s) + s ** 3
+    def by(s): return 3 * y1 * s * (1 - s) ** 2 + 3 * y2 * s * s * (1 - s) + s ** 3
+    def dx(s): return 3 * x1 * (1 - s) ** 2 + 6 * (x2 - x1) * s * (1 - s) + 3 * (1 - x2) * s * s
+
+    def fn(p):
+        if p <= 0: return 0.0
+        if p >= 1: return 1.0
+        s = p
+        for _ in range(8):
+            d = dx(s)
+            if abs(d) < 1e-6:
+                break
+            s2 = s - (bx(s) - p) / d
+            if not 0 <= s2 <= 1:
+                break
+            s = s2
+        if abs(bx(s) - p) > 1e-5:   # Newton wandered: bisection fallback
+            lo, hi = 0.0, 1.0
+            for _ in range(40):
+                s = (lo + hi) / 2
+                lo, hi = (s, hi) if bx(s) < p else (lo, s)
+        return by(s)
+    _BEZ[key] = fn
+    return fn
+
+
+def curve(name):
+    """Named easing from tk.EASE: 'apple' · 'apple_out' · 'apple_in' · 'apple_in_out' · 'apple_dolly'."""
+    from .tokens import EASE
+    return bezier(*EASE[name])
+
+
+def ios_spring(dt, response=0.5, damping=1.0):
+    """SwiftUI-style spring by real time: value 0→1 `dt` seconds after the move starts.
+    response = period of the undamped spring (s) · damping = dampingFraction (1 = critically damped, no overshoot;
+    0.85 = iOS .snappy, ~1% overshoot; 0.7 = .bouncy). Starts with zero velocity, so it never 'jumps'."""
+    if dt <= 0:
+        return 0.0
+    w0 = 2 * math.pi / max(1e-3, response)
+    z = damping
+    if z >= 1:   # critically damped (the iOS default feel: fast, then glides to rest)
+        return 1 - math.exp(-w0 * dt) * (1 + w0 * dt)
+    wd = w0 * math.sqrt(1 - z * z)
+    return 1 - math.exp(-z * w0 * dt) * (math.cos(wd * dt) + z * w0 / wd * math.sin(wd * dt))
+
+
+def ios_settle(response=0.5, damping=1.0, eps=0.002):
+    """Seconds until an ios_spring stays within eps of 1 (its visual duration)."""
+    t, step, last_out = 0.0, 1 / 240, 0.0
+    while t < 6 * response + 2:
+        t += step
+        if abs(1 - ios_spring(t, response, damping)) > eps:
+            last_out = t
+    return last_out + step
+
+
 def ease(t, start, dur, fn=out_expo):
     return fn(prog(t, start, dur))
 

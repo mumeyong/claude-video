@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 # MUMEYONG — one entry point, works from any folder (installed as `claude-video`).
 #   claude-video                       list videos + status
-#   claude-video "Judul video baru"    create a new video from a title (asks to confirm)
-#   claude-video new "Judul video"     same, no question
-#   claude-video <slug>                review round: naskah → voice (recording, else TTS) → check → cover → sheet → stills → preview+music
-#   claude-video <slug> final          same voice/music, final render → hasil/<slug>/ (mp4 + cover.png)
+#   claude-video "Judul video baru"    AUTOPILOT: new video from a title or idea number → Claude (headless) writes
+#                                      idea + script + plan + scenes.py until check is clean → final render → hasil/
+#   claude-video ideas                 list ideas not produced yet
+#   claude-video new "Judul video"     only scaffold the folder (no Claude, no render)
+#   claude-video <slug>                naskah → voice (recording, else TTS) → check → final render → hasil/<slug>/
+#   claude-video <slug> preview        review round instead: cover → sheet → stills → 540p preview (optional)
 #   claude-video open <slug>           open the video folder
 #   claude-video <command> ...         any engine command — see `claude-video help`
 REPO="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
@@ -12,7 +14,7 @@ cd "$REPO" || exit 1
 PY="$REPO/.venv/bin/python"
 [ -x "$PY" ] || { echo "venv missing: python3 -m venv --system-site-packages $REPO/.venv && $REPO/.venv/bin/pip install faster-whisper edge-tts"; exit 1; }
 
-COMMANDS=" go new estimate naskah align tts check still cover sheet preview render mix music sfx audition help ls list open "
+COMMANDS=" go auto new ideas estimate naskah align tts check still cover sheet preview render mix music sfx audition help ls list open "
 
 case "${1:-ls}" in
   ls|list)    exec "$PY" -m engine ls ;;
@@ -20,13 +22,16 @@ case "${1:-ls}" in
   open)       shift; xdg-open "$REPO/videos/${1:-}" >/dev/null 2>&1 & echo "$REPO/videos/${1:-}"; exit 0 ;;
 esac
 
-if [ -n "$1" ] && { [ -d "videos/$1" ] || compgen -G "videos/_*/$1/" >/dev/null; }; then slug=$1; shift; exec "$PY" -m engine go "$slug" "$@"; fi
+if [ -n "$1" ] && { [ -d "videos/$1" ] || compgen -G "videos/_*/$1/" >/dev/null; }; then
+  slug=$1; shift
+  # brief only (no scenes.py yet) → autopilot writes it first, then renders
+  if [ -d "videos/$slug" ] && [ ! -f "videos/$slug/scenes.py" ]; then exec "$PY" -m engine auto "$slug" "$@"; fi
+  exec "$PY" -m engine go "$slug" "$@"
+fi
 
 if [[ "$COMMANDS" != *" $1 "* ]]; then
-  # not a command, not an existing video → offer to create a new one from this title
-  read -r -p "Belum ada video \"$1\". Bikin video baru dengan judul ini? [y/N] " ans
-  [[ "$ans" =~ ^[yY] ]] || exit 1
-  exec "$PY" -m engine new "$@"
+  # not a command, not an existing video → autopilot: new video from this title / idea number, then render
+  exec "$PY" -m engine auto "$@"
 fi
 
 exec "$PY" -m engine "$@"

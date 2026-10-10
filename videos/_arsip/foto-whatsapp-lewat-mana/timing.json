@@ -1,0 +1,984 @@
+{
+ "source": "tts",
+ "voice": "id-ID-ArdiNeural",
+ "tts": "ardi",
+ "duration": 68.687,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Jam sembilan lewat empat, kamu kirim satu foto ke temen.",
+   "start": 0.4,
+   "end": 3.288,
+   "words": [
+    {
+     "w": "Jam",
+     "start": 0.4,
+     "end": 0.59
+    },
+    {
+     "w": "sembilan",
+     "start": 0.59,
+     "end": 0.956
+    },
+    {
+     "w": "lewat",
+     "start": 0.956,
+     "end": 1.156
+    },
+    {
+     "w": "empat,",
+     "start": 1.156,
+     "end": 1.604
+    },
+    {
+     "w": "kamu",
+     "start": 1.84,
+     "end": 2.064
+    },
+    {
+     "w": "kirim",
+     "start": 2.064,
+     "end": 2.288
+    },
+    {
+     "w": "satu",
+     "start": 2.288,
+     "end": 2.501
+    },
+    {
+     "w": "foto",
+     "start": 2.501,
+     "end": 2.76
+    },
+    {
+     "w": "ke",
+     "start": 2.76,
+     "end": 2.831
+    },
+    {
+     "w": "temen.",
+     "start": 2.831,
+     "end": 3.255
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Sebelum centang dua muncul, foto itu udah keliling dulu.",
+   "start": 3.608,
+   "end": 6.439,
+   "words": [
+    {
+     "w": "Sebelum",
+     "start": 3.608,
+     "end": 3.895
+    },
+    {
+     "w": "centang",
+     "start": 3.895,
+     "end": 4.201
+    },
+    {
+     "w": "dua",
+     "start": 4.201,
+     "end": 4.331
+    },
+    {
+     "w": "muncul,",
+     "start": 4.331,
+     "end": 4.85
+    },
+    {
+     "w": "foto",
+     "start": 5.086,
+     "end": 5.31
+    },
+    {
+     "w": "itu",
+     "start": 5.31,
+     "end": 5.498
+    },
+    {
+     "w": "udah",
+     "start": 5.498,
+     "end": 5.687
+    },
+    {
+     "w": "keliling",
+     "start": 5.687,
+     "end": 5.982
+    },
+    {
+     "w": "dulu.",
+     "start": 5.982,
+     "end": 6.395
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Lewat server WhatsApp, tapi servernya nggak bisa lihat isinya.",
+   "start": 7.039,
+   "end": 10.106,
+   "words": [
+    {
+     "w": "Lewat",
+     "start": 7.039,
+     "end": 7.249
+    },
+    {
+     "w": "server",
+     "start": 7.249,
+     "end": 7.567
+    },
+    {
+     "w": "WhatsApp,",
+     "start": 7.567,
+     "end": 8.122
+    },
+    {
+     "w": "tapi",
+     "start": 8.381,
+     "end": 8.605
+    },
+    {
+     "w": "servernya",
+     "start": 8.605,
+     "end": 9.018
+    },
+    {
+     "w": "nggak",
+     "start": 9.018,
+     "end": 9.147
+    },
+    {
+     "w": "bisa",
+     "start": 9.147,
+     "end": 9.336
+    },
+    {
+     "w": "lihat",
+     "start": 9.336,
+     "end": 9.525
+    },
+    {
+     "w": "isinya.",
+     "start": 9.525,
+     "end": 10.067
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · DIKUNCI DI HP",
+   "text": "Pertama, foto itu dikunci di HP-mu sendiri.",
+   "start": 11.106,
+   "end": 13.814,
+   "words": [
+    {
+     "w": "Pertama,",
+     "start": 11.106,
+     "end": 11.677
+    },
+    {
+     "w": "foto",
+     "start": 11.937,
+     "end": 12.173
+    },
+    {
+     "w": "itu",
+     "start": 12.173,
+     "end": 12.373
+    },
+    {
+     "w": "dikunci",
+     "start": 12.373,
+     "end": 12.75
+    },
+    {
+     "w": "di",
+     "start": 12.75,
+     "end": 12.845
+    },
+    {
+     "w": "HP-mu",
+     "start": 12.845,
+     "end": 13.222
+    },
+    {
+     "w": "sendiri.",
+     "start": 13.222,
+     "end": 13.776
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · DIKUNCI DI HP",
+   "text": "HP-mu bikin key baru, khusus buat foto ini aja.",
+   "start": 14.134,
+   "end": 16.947,
+   "words": [
+    {
+     "w": "HP-mu",
+     "start": 14.134,
+     "end": 14.56
+    },
+    {
+     "w": "bikin",
+     "start": 14.56,
+     "end": 14.808
+    },
+    {
+     "w": "key",
+     "start": 14.808,
+     "end": 14.902
+    },
+    {
+     "w": "baru,",
+     "start": 14.902,
+     "end": 15.35
+    },
+    {
+     "w": "khusus",
+     "start": 15.598,
+     "end": 15.94
+    },
+    {
+     "w": "buat",
+     "start": 15.94,
+     "end": 16.105
+    },
+    {
+     "w": "foto",
+     "start": 16.105,
+     "end": 16.294
+    },
+    {
+     "w": "ini",
+     "start": 16.294,
+     "end": 16.447
+    },
+    {
+     "w": "aja.",
+     "start": 16.447,
+     "end": 16.907
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · DIKUNCI DI HP",
+   "text": "Yang keluar dari HP cuma kotak terkunci.",
+   "start": 17.267,
+   "end": 19.224,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 17.267,
+     "end": 17.395
+    },
+    {
+     "w": "keluar",
+     "start": 17.395,
+     "end": 17.642
+    },
+    {
+     "w": "dari",
+     "start": 17.643,
+     "end": 17.808
+    },
+    {
+     "w": "HP",
+     "start": 17.808,
+     "end": 18.091
+    },
+    {
+     "w": "cuma",
+     "start": 18.091,
+     "end": 18.315
+    },
+    {
+     "w": "kotak",
+     "start": 18.315,
+     "end": 18.551
+    },
+    {
+     "w": "terkunci.",
+     "start": 18.551,
+     "end": 19.199
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "01 · DITITIP DI LOKER",
+   "text": "Kotak itu di-upload ke server WhatsApp, kayak loker penitipan.",
+   "start": 20.224,
+   "end": 23.381,
+   "words": [
+    {
+     "w": "Kotak",
+     "start": 20.224,
+     "end": 20.399
+    },
+    {
+     "w": "itu",
+     "start": 20.399,
+     "end": 20.623
+    },
+    {
+     "w": "di-upload",
+     "start": 20.623,
+     "end": 21.048
+    },
+    {
+     "w": "ke",
+     "start": 21.048,
+     "end": 21.119
+    },
+    {
+     "w": "server",
+     "start": 21.119,
+     "end": 21.414
+    },
+    {
+     "w": "WhatsApp,",
+     "start": 21.414,
+     "end": 21.944
+    },
+    {
+     "w": "kayak",
+     "start": 22.192,
+     "end": 22.439
+    },
+    {
+     "w": "loker",
+     "start": 22.44,
+     "end": 22.687
+    },
+    {
+     "w": "penitipan.",
+     "start": 22.687,
+     "end": 23.336
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · DITITIP DI LOKER",
+   "text": "Penjaga lokernya pegang kotaknya, tapi nggak pegang key-nya.",
+   "start": 23.701,
+   "end": 26.517,
+   "words": [
+    {
+     "w": "Penjaga",
+     "start": 23.701,
+     "end": 24.002
+    },
+    {
+     "w": "lokernya",
+     "start": 24.002,
+     "end": 24.344
+    },
+    {
+     "w": "pegang",
+     "start": 24.344,
+     "end": 24.568
+    },
+    {
+     "w": "kotaknya,",
+     "start": 24.568,
+     "end": 25.181
+    },
+    {
+     "w": "tapi",
+     "start": 25.44,
+     "end": 25.688
+    },
+    {
+     "w": "nggak",
+     "start": 25.688,
+     "end": 25.818
+    },
+    {
+     "w": "pegang",
+     "start": 25.818,
+     "end": 26.042
+    },
+    {
+     "w": "key-nya.",
+     "start": 26.042,
+     "end": 26.478
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · DITITIP DI LOKER",
+   "text": "Dibuka paksa pun, isinya cuma data acak.",
+   "start": 26.837,
+   "end": 29.225,
+   "words": [
+    {
+     "w": "Dibuka",
+     "start": 26.837,
+     "end": 27.133
+    },
+    {
+     "w": "paksa",
+     "start": 27.133,
+     "end": 27.416
+    },
+    {
+     "w": "pun,",
+     "start": 27.416,
+     "end": 27.758
+    },
+    {
+     "w": "isinya",
+     "start": 28.017,
+     "end": 28.395
+    },
+    {
+     "w": "cuma",
+     "start": 28.395,
+     "end": 28.619
+    },
+    {
+     "w": "data",
+     "start": 28.619,
+     "end": 28.807
+    },
+    {
+     "w": "acak.",
+     "start": 28.807,
+     "end": 29.267
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "02 · JALAN LAIN",
+   "text": "Nah, ini bagian yang aku suka.",
+   "start": 30.225,
+   "end": 32.157,
+   "words": [
+    {
+     "w": "Nah,",
+     "start": 30.225,
+     "end": 30.616
+    },
+    {
+     "w": "ini",
+     "start": 30.816,
+     "end": 31.017
+    },
+    {
+     "w": "bagian",
+     "start": 31.017,
+     "end": 31.359
+    },
+    {
+     "w": "yang",
+     "start": 31.359,
+     "end": 31.477
+    },
+    {
+     "w": "aku",
+     "start": 31.477,
+     "end": 31.63
+    },
+    {
+     "w": "suka.",
+     "start": 31.63,
+     "end": 32.113
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "02 · JALAN LAIN",
+   "text": "Key-nya nggak ikut ke loker. Dia lewat jalan lain.",
+   "start": 32.477,
+   "end": 35.631,
+   "words": [
+    {
+     "w": "Key-nya",
+     "start": 32.477,
+     "end": 32.682
+    },
+    {
+     "w": "nggak",
+     "start": 32.682,
+     "end": 32.8
+    },
+    {
+     "w": "ikut",
+     "start": 32.8,
+     "end": 33.001
+    },
+    {
+     "w": "ke",
+     "start": 33.001,
+     "end": 33.06
+    },
+    {
+     "w": "loker.",
+     "start": 33.06,
+     "end": 33.508
+    },
+    {
+     "w": "Dia",
+     "start": 34.296,
+     "end": 34.579
+    },
+    {
+     "w": "lewat",
+     "start": 34.579,
+     "end": 34.838
+    },
+    {
+     "w": "jalan",
+     "start": 34.838,
+     "end": 35.121
+    },
+    {
+     "w": "lain.",
+     "start": 35.121,
+     "end": 35.593
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "02 · JALAN LAIN",
+   "text": "Key sama nomor lokernya diselipin di pesan chat, yang di-encrypt end-to-end.",
+   "start": 35.951,
+   "end": 39.308,
+   "words": [
+    {
+     "w": "Key",
+     "start": 35.951,
+     "end": 36.008
+    },
+    {
+     "w": "sama",
+     "start": 36.008,
+     "end": 36.232
+    },
+    {
+     "w": "nomor",
+     "start": 36.232,
+     "end": 36.445
+    },
+    {
+     "w": "lokernya",
+     "start": 36.445,
+     "end": 36.846
+    },
+    {
+     "w": "diselipin",
+     "start": 36.846,
+     "end": 37.246
+    },
+    {
+     "w": "di",
+     "start": 37.246,
+     "end": 37.305
+    },
+    {
+     "w": "pesan",
+     "start": 37.305,
+     "end": 37.577
+    },
+    {
+     "w": "chat,",
+     "start": 37.577,
+     "end": 37.848
+    },
+    {
+     "w": "yang",
+     "start": 38.096,
+     "end": 38.284
+    },
+    {
+     "w": "di-encrypt",
+     "start": 38.284,
+     "end": 38.662
+    },
+    {
+     "w": "end-to-end.",
+     "start": 38.662,
+     "end": 39.275
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "02 · JALAN LAIN",
+   "text": "Pesan itu sampai server: centang satu. Sampai HP temenmu: centang dua.",
+   "start": 39.628,
+   "end": 44.923,
+   "words": [
+    {
+     "w": "Pesan",
+     "start": 39.628,
+     "end": 39.8
+    },
+    {
+     "w": "itu",
+     "start": 39.8,
+     "end": 40.012
+    },
+    {
+     "w": "sampai",
+     "start": 40.012,
+     "end": 40.283
+    },
+    {
+     "w": "server:",
+     "start": 40.283,
+     "end": 40.849
+    },
+    {
+     "w": "centang",
+     "start": 41.073,
+     "end": 41.415
+    },
+    {
+     "w": "satu.",
+     "start": 41.415,
+     "end": 41.911
+    },
+    {
+     "w": "Sampai",
+     "start": 42.698,
+     "end": 43.075
+    },
+    {
+     "w": "HP",
+     "start": 43.075,
+     "end": 43.288
+    },
+    {
+     "w": "temenmu:",
+     "start": 43.288,
+     "end": 43.842
+    },
+    {
+     "w": "centang",
+     "start": 44.089,
+     "end": 44.467
+    },
+    {
+     "w": "dua.",
+     "start": 44.467,
+     "end": 44.868
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "02 · JALAN LAIN",
+   "text": "HP-nya ambil kotak dari loker, buka pakai key itu, fotonya muncul.",
+   "start": 45.243,
+   "end": 49.023,
+   "words": [
+    {
+     "w": "HP-nya",
+     "start": 45.243,
+     "end": 45.566
+    },
+    {
+     "w": "ambil",
+     "start": 45.566,
+     "end": 45.79
+    },
+    {
+     "w": "kotak",
+     "start": 45.79,
+     "end": 46.026
+    },
+    {
+     "w": "dari",
+     "start": 46.026,
+     "end": 46.179
+    },
+    {
+     "w": "loker,",
+     "start": 46.179,
+     "end": 46.627
+    },
+    {
+     "w": "buka",
+     "start": 46.851,
+     "end": 47.087
+    },
+    {
+     "w": "pakai",
+     "start": 47.087,
+     "end": 47.311
+    },
+    {
+     "w": "key",
+     "start": 47.311,
+     "end": 47.394
+    },
+    {
+     "w": "itu,",
+     "start": 47.394,
+     "end": 47.83
+    },
+    {
+     "w": "fotonya",
+     "start": 48.054,
+     "end": 48.432
+    },
+    {
+     "w": "muncul.",
+     "start": 48.432,
+     "end": 48.974
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "03 · KALAU OFFLINE",
+   "text": "Kalau temenmu lagi offline? Kotaknya nunggu di loker.",
+   "start": 50.023,
+   "end": 53.409,
+   "words": [
+    {
+     "w": "Kalau",
+     "start": 50.023,
+     "end": 50.2
+    },
+    {
+     "w": "temenmu",
+     "start": 50.2,
+     "end": 50.507
+    },
+    {
+     "w": "lagi",
+     "start": 50.507,
+     "end": 50.707
+    },
+    {
+     "w": "offline?",
+     "start": 50.707,
+     "end": 51.309
+    },
+    {
+     "w": "Kotaknya",
+     "start": 52.096,
+     "end": 52.556
+    },
+    {
+     "w": "nunggu",
+     "start": 52.556,
+     "end": 52.815
+    },
+    {
+     "w": "di",
+     "start": 52.815,
+     "end": 52.898
+    },
+    {
+     "w": "loker.",
+     "start": 52.898,
+     "end": 53.358
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "03 · KALAU OFFLINE",
+   "text": "Tetap terkunci, sampai HP-nya online lagi.",
+   "start": 53.729,
+   "end": 56.265,
+   "words": [
+    {
+     "w": "Tetap",
+     "start": 53.729,
+     "end": 53.907
+    },
+    {
+     "w": "terkunci,",
+     "start": 53.907,
+     "end": 54.555
+    },
+    {
+     "w": "sampai",
+     "start": 54.815,
+     "end": 55.145
+    },
+    {
+     "w": "HP-nya",
+     "start": 55.145,
+     "end": 55.487
+    },
+    {
+     "w": "online",
+     "start": 55.487,
+     "end": 55.758
+    },
+    {
+     "w": "lagi.",
+     "start": 55.758,
+     "end": 56.23
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "RECAP",
+   "text": "Jadi server WhatsApp itu penjaga loker: pegang kotaknya, bukan key-nya.",
+   "start": 57.265,
+   "end": 61.231,
+   "words": [
+    {
+     "w": "Jadi",
+     "start": 57.265,
+     "end": 57.494
+    },
+    {
+     "w": "server",
+     "start": 57.494,
+     "end": 57.812
+    },
+    {
+     "w": "WhatsApp",
+     "start": 57.812,
+     "end": 58.119
+    },
+    {
+     "w": "itu",
+     "start": 58.119,
+     "end": 58.343
+    },
+    {
+     "w": "penjaga",
+     "start": 58.343,
+     "end": 58.696
+    },
+    {
+     "w": "loker:",
+     "start": 58.696,
+     "end": 59.121
+    },
+    {
+     "w": "pegang",
+     "start": 59.357,
+     "end": 59.616
+    },
+    {
+     "w": "kotaknya,",
+     "start": 59.616,
+     "end": 60.218
+    },
+    {
+     "w": "bukan",
+     "start": 60.418,
+     "end": 60.748
+    },
+    {
+     "w": "key-nya.",
+     "start": 60.748,
+     "end": 61.196
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "OUTRO",
+   "text": "Ada app lain yang pengin kamu bongkar? Tulis di komentar.",
+   "start": 62.231,
+   "end": 65.738,
+   "words": [
+    {
+     "w": "Ada",
+     "start": 62.231,
+     "end": 62.382
+    },
+    {
+     "w": "app",
+     "start": 62.382,
+     "end": 62.512
+    },
+    {
+     "w": "lain",
+     "start": 62.512,
+     "end": 62.747
+    },
+    {
+     "w": "yang",
+     "start": 62.748,
+     "end": 62.865
+    },
+    {
+     "w": "pengin",
+     "start": 62.865,
+     "end": 63.089
+    },
+    {
+     "w": "kamu",
+     "start": 63.09,
+     "end": 63.266
+    },
+    {
+     "w": "bongkar?",
+     "start": 63.266,
+     "end": 63.797
+    },
+    {
+     "w": "Tulis",
+     "start": 64.584,
+     "end": 64.973
+    },
+    {
+     "w": "di",
+     "start": 64.973,
+     "end": 65.056
+    },
+    {
+     "w": "komentar.",
+     "start": 65.056,
+     "end": 65.681
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 66.058,
+   "end": 67.887,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 66.058,
+     "end": 66.524
+    },
+    {
+     "w": "biar",
+     "start": 66.76,
+     "end": 67.031
+    },
+    {
+     "w": "nggak",
+     "start": 67.031,
+     "end": 67.173
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 67.173,
+     "end": 67.833
+    }
+   ]
+  }
+ ]
+}

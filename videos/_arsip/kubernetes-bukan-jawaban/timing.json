@@ -1,0 +1,954 @@
+{
+ "source": "tts",
+ "voice": "id-ID-ArdiNeural",
+ "tts": "ardi",
+ "duration": 74.889,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Bikin app baru? Pakai Kubernetes aja.",
+   "start": 0.4,
+   "end": 3.51,
+   "words": [
+    {
+     "w": "Bikin",
+     "start": 0.4,
+     "end": 0.666
+    },
+    {
+     "w": "app",
+     "start": 0.666,
+     "end": 0.795
+    },
+    {
+     "w": "baru?",
+     "start": 0.795,
+     "end": 1.279
+    },
+    {
+     "w": "Pakai",
+     "start": 2.065,
+     "end": 2.43
+    },
+    {
+     "w": "Kubernetes",
+     "start": 2.43,
+     "end": 2.949
+    },
+    {
+     "w": "aja.",
+     "start": 2.949,
+     "end": 3.468
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Jawaban jujur orang cloud: tergantung.",
+   "start": 3.83,
+   "end": 6.259,
+   "words": [
+    {
+     "w": "Jawaban",
+     "start": 3.83,
+     "end": 4.252
+    },
+    {
+     "w": "jujur",
+     "start": 4.252,
+     "end": 4.547
+    },
+    {
+     "w": "orang",
+     "start": 4.547,
+     "end": 4.759
+    },
+    {
+     "w": "cloud:",
+     "start": 4.759,
+     "end": 5.242
+    },
+    {
+     "w": "tergantung.",
+     "start": 5.466,
+     "end": 6.209
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Aku pernah bangun Kubernetes yang nahan sepuluh ribu request barengan.",
+   "start": 6.859,
+   "end": 9.868,
+   "words": [
+    {
+     "w": "Aku",
+     "start": 6.859,
+     "end": 7.024
+    },
+    {
+     "w": "pernah",
+     "start": 7.024,
+     "end": 7.283
+    },
+    {
+     "w": "bangun",
+     "start": 7.283,
+     "end": 7.531
+    },
+    {
+     "w": "Kubernetes",
+     "start": 7.531,
+     "end": 8.109
+    },
+    {
+     "w": "yang",
+     "start": 8.109,
+     "end": 8.227
+    },
+    {
+     "w": "nahan",
+     "start": 8.227,
+     "end": 8.486
+    },
+    {
+     "w": "sepuluh",
+     "start": 8.486,
+     "end": 8.793
+    },
+    {
+     "w": "ribu",
+     "start": 8.793,
+     "end": 8.97
+    },
+    {
+     "w": "request",
+     "start": 8.97,
+     "end": 9.288
+    },
+    {
+     "w": "barengan.",
+     "start": 9.288,
+     "end": 9.842
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "INTRO",
+   "text": "Justru karena itu, aku tahu kapan dia nggak perlu.",
+   "start": 10.188,
+   "end": 12.872,
+   "words": [
+    {
+     "w": "Justru",
+     "start": 10.188,
+     "end": 10.497
+    },
+    {
+     "w": "karena",
+     "start": 10.497,
+     "end": 10.698
+    },
+    {
+     "w": "itu,",
+     "start": 10.698,
+     "end": 11.146
+    },
+    {
+     "w": "aku",
+     "start": 11.429,
+     "end": 11.641
+    },
+    {
+     "w": "tahu",
+     "start": 11.641,
+     "end": 11.842
+    },
+    {
+     "w": "kapan",
+     "start": 11.842,
+     "end": 12.125
+    },
+    {
+     "w": "dia",
+     "start": 12.125,
+     "end": 12.254
+    },
+    {
+     "w": "nggak",
+     "start": 12.254,
+     "end": 12.396
+    },
+    {
+     "w": "perlu.",
+     "start": 12.396,
+     "end": 12.832
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · PELABUHAN",
+   "text": "Kubernetes itu kayak pelabuhan peti kemas.",
+   "start": 13.872,
+   "end": 15.906,
+   "words": [
+    {
+     "w": "Kubernetes",
+     "start": 13.872,
+     "end": 14.281
+    },
+    {
+     "w": "itu",
+     "start": 14.281,
+     "end": 14.552
+    },
+    {
+     "w": "kayak",
+     "start": 14.552,
+     "end": 14.788
+    },
+    {
+     "w": "pelabuhan",
+     "start": 14.788,
+     "end": 15.213
+    },
+    {
+     "w": "peti",
+     "start": 15.213,
+     "end": 15.378
+    },
+    {
+     "w": "kemas.",
+     "start": 15.378,
+     "end": 15.861
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · PELABUHAN",
+   "text": "Ada crane, ada lapangan, ada jadwal yang ngatur ratusan container tiap hari.",
+   "start": 16.226,
+   "end": 20.328,
+   "words": [
+    {
+     "w": "Ada",
+     "start": 16.226,
+     "end": 16.396
+    },
+    {
+     "w": "crane,",
+     "start": 16.396,
+     "end": 16.797
+    },
+    {
+     "w": "ada",
+     "start": 17.045,
+     "end": 17.233
+    },
+    {
+     "w": "lapangan,",
+     "start": 17.233,
+     "end": 17.764
+    },
+    {
+     "w": "ada",
+     "start": 18.023,
+     "end": 18.236
+    },
+    {
+     "w": "jadwal",
+     "start": 18.236,
+     "end": 18.578
+    },
+    {
+     "w": "yang",
+     "start": 18.578,
+     "end": 18.684
+    },
+    {
+     "w": "ngatur",
+     "start": 18.684,
+     "end": 18.896
+    },
+    {
+     "w": "ratusan",
+     "start": 18.896,
+     "end": 19.25
+    },
+    {
+     "w": "container",
+     "start": 19.25,
+     "end": 19.651
+    },
+    {
+     "w": "tiap",
+     "start": 19.651,
+     "end": 19.875
+    },
+    {
+     "w": "hari.",
+     "start": 19.875,
+     "end": 20.288
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "00 · PELABUHAN",
+   "text": "Kapalnya banyak, muatannya naik turun? Pelabuhan itu juara.",
+   "start": 20.648,
+   "end": 24.842,
+   "words": [
+    {
+     "w": "Kapalnya",
+     "start": 20.648,
+     "end": 20.966
+    },
+    {
+     "w": "banyak,",
+     "start": 20.966,
+     "end": 21.496
+    },
+    {
+     "w": "muatannya",
+     "start": 21.709,
+     "end": 22.145
+    },
+    {
+     "w": "naik",
+     "start": 22.145,
+     "end": 22.334
+    },
+    {
+     "w": "turun?",
+     "start": 22.334,
+     "end": 22.758
+    },
+    {
+     "w": "Pelabuhan",
+     "start": 23.545,
+     "end": 24.005
+    },
+    {
+     "w": "itu",
+     "start": 24.005,
+     "end": 24.206
+    },
+    {
+     "w": "juara.",
+     "start": 24.206,
+     "end": 24.784
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · SATU PAKET",
+   "text": "Tapi app kamu cuma satu, user-nya masih ratusan.",
+   "start": 25.842,
+   "end": 28.615,
+   "words": [
+    {
+     "w": "Tapi",
+     "start": 25.842,
+     "end": 26.019
+    },
+    {
+     "w": "app",
+     "start": 26.019,
+     "end": 26.161
+    },
+    {
+     "w": "kamu",
+     "start": 26.161,
+     "end": 26.338
+    },
+    {
+     "w": "cuma",
+     "start": 26.338,
+     "end": 26.526
+    },
+    {
+     "w": "satu,",
+     "start": 26.526,
+     "end": 27.045
+    },
+    {
+     "w": "user-nya",
+     "start": 27.305,
+     "end": 27.776
+    },
+    {
+     "w": "masih",
+     "start": 27.776,
+     "end": 28.0
+    },
+    {
+     "w": "ratusan.",
+     "start": 28.0,
+     "end": 28.567
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · SATU PAKET",
+   "text": "Itu kayak kirim satu paket, tapi sewa pelabuhan lengkap.",
+   "start": 28.935,
+   "end": 31.677,
+   "words": [
+    {
+     "w": "Itu",
+     "start": 28.935,
+     "end": 29.1
+    },
+    {
+     "w": "kayak",
+     "start": 29.1,
+     "end": 29.324
+    },
+    {
+     "w": "kirim",
+     "start": 29.324,
+     "end": 29.525
+    },
+    {
+     "w": "satu",
+     "start": 29.525,
+     "end": 29.737
+    },
+    {
+     "w": "paket,",
+     "start": 29.737,
+     "end": 30.185
+    },
+    {
+     "w": "tapi",
+     "start": 30.433,
+     "end": 30.657
+    },
+    {
+     "w": "sewa",
+     "start": 30.657,
+     "end": 30.869
+    },
+    {
+     "w": "pelabuhan",
+     "start": 30.869,
+     "end": 31.258
+    },
+    {
+     "w": "lengkap.",
+     "start": 31.258,
+     "end": 31.753
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · SATU PAKET",
+   "text": "Cukup kurir: VM biasa, atau serverless yang bayarnya per request.",
+   "start": 31.997,
+   "end": 36.065,
+   "words": [
+    {
+     "w": "Cukup",
+     "start": 31.997,
+     "end": 32.337
+    },
+    {
+     "w": "kurir:",
+     "start": 32.366,
+     "end": 32.763
+    },
+    {
+     "w": "VM",
+     "start": 32.798,
+     "end": 32.968
+    },
+    {
+     "w": "biasa,",
+     "start": 32.983,
+     "end": 33.38
+    },
+    {
+     "w": "atau",
+     "start": 33.414,
+     "end": 33.698
+    },
+    {
+     "w": "serverless",
+     "start": 33.723,
+     "end": 34.347
+    },
+    {
+     "w": "yang",
+     "start": 34.401,
+     "end": 34.684
+    },
+    {
+     "w": "bayarnya",
+     "start": 34.709,
+     "end": 35.219
+    },
+    {
+     "w": "per",
+     "start": 35.264,
+     "end": 35.491
+    },
+    {
+     "w": "request.",
+     "start": 35.51,
+     "end": 36.021
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "02 · BIAYA DIAM",
+   "text": "Yang jarang dibahas: pelabuhan harus dijaga, walau lagi sepi.",
+   "start": 37.065,
+   "end": 40.801,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 37.065,
+     "end": 37.211
+    },
+    {
+     "w": "jarang",
+     "start": 37.211,
+     "end": 37.459
+    },
+    {
+     "w": "dibahas:",
+     "start": 37.459,
+     "end": 38.049
+    },
+    {
+     "w": "pelabuhan",
+     "start": 38.285,
+     "end": 38.721
+    },
+    {
+     "w": "harus",
+     "start": 38.721,
+     "end": 38.933
+    },
+    {
+     "w": "dijaga,",
+     "start": 38.933,
+     "end": 39.582
+    },
+    {
+     "w": "walau",
+     "start": 39.794,
+     "end": 40.077
+    },
+    {
+     "w": "lagi",
+     "start": 40.077,
+     "end": 40.301
+    },
+    {
+     "w": "sepi.",
+     "start": 40.301,
+     "end": 40.761
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "02 · BIAYA DIAM",
+   "text": "Control plane, monitoring, upgrade versi tiap beberapa bulan.",
+   "start": 41.121,
+   "end": 44.878,
+   "words": [
+    {
+     "w": "Control",
+     "start": 41.121,
+     "end": 41.393
+    },
+    {
+     "w": "plane,",
+     "start": 41.393,
+     "end": 41.912
+    },
+    {
+     "w": "monitoring,",
+     "start": 42.16,
+     "end": 42.855
+    },
+    {
+     "w": "upgrade",
+     "start": 43.126,
+     "end": 43.492
+    },
+    {
+     "w": "versi",
+     "start": 43.492,
+     "end": 43.81
+    },
+    {
+     "w": "tiap",
+     "start": 43.81,
+     "end": 44.034
+    },
+    {
+     "w": "beberapa",
+     "start": 44.035,
+     "end": 44.353
+    },
+    {
+     "w": "bulan.",
+     "start": 44.353,
+     "end": 44.825
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "02 · BIAYA DIAM",
+   "text": "Dan orang yang ngerti ngurusnya. Itu yang paling mahal.",
+   "start": 45.198,
+   "end": 48.486,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 45.198,
+     "end": 45.344
+    },
+    {
+     "w": "orang",
+     "start": 45.344,
+     "end": 45.592
+    },
+    {
+     "w": "yang",
+     "start": 45.592,
+     "end": 45.71
+    },
+    {
+     "w": "ngerti",
+     "start": 45.71,
+     "end": 45.91
+    },
+    {
+     "w": "ngurusnya.",
+     "start": 45.91,
+     "end": 46.523
+    },
+    {
+     "w": "Itu",
+     "start": 47.31,
+     "end": 47.581
+    },
+    {
+     "w": "yang",
+     "start": 47.581,
+     "end": 47.735
+    },
+    {
+     "w": "paling",
+     "start": 47.735,
+     "end": 47.959
+    },
+    {
+     "w": "mahal.",
+     "start": 47.959,
+     "end": 48.442
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "03 · TIGA PERTANYAAN",
+   "text": "Sebelum pilih, jawab tiga ini.",
+   "start": 49.486,
+   "end": 51.524,
+   "words": [
+    {
+     "w": "Sebelum",
+     "start": 49.486,
+     "end": 49.761
+    },
+    {
+     "w": "pilih,",
+     "start": 49.761,
+     "end": 50.257
+    },
+    {
+     "w": "jawab",
+     "start": 50.457,
+     "end": 50.846
+    },
+    {
+     "w": "tiga",
+     "start": 50.846,
+     "end": 51.07
+    },
+    {
+     "w": "ini.",
+     "start": 51.07,
+     "end": 51.483
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "03 · TIGA PERTANYAAN",
+   "text": "Service-nya banyak? Traffic-nya naik turun ekstrem? Ada tim yang siap jaga?",
+   "start": 51.844,
+   "end": 57.201,
+   "words": [
+    {
+     "w": "Service-nya",
+     "start": 51.844,
+     "end": 52.32
+    },
+    {
+     "w": "banyak?",
+     "start": 52.32,
+     "end": 52.874
+    },
+    {
+     "w": "Traffic-nya",
+     "start": 53.66,
+     "end": 54.167
+    },
+    {
+     "w": "naik",
+     "start": 54.167,
+     "end": 54.368
+    },
+    {
+     "w": "turun",
+     "start": 54.368,
+     "end": 54.556
+    },
+    {
+     "w": "ekstrem?",
+     "start": 54.556,
+     "end": 55.075
+    },
+    {
+     "w": "Ada",
+     "start": 55.866,
+     "end": 56.149
+    },
+    {
+     "w": "tim",
+     "start": 56.149,
+     "end": 56.326
+    },
+    {
+     "w": "yang",
+     "start": 56.326,
+     "end": 56.444
+    },
+    {
+     "w": "siap",
+     "start": 56.444,
+     "end": 56.644
+    },
+    {
+     "w": "jaga?",
+     "start": 56.644,
+     "end": 57.175
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "03 · TIGA PERTANYAAN",
+   "text": "Tiga-tiganya iya? Baru Kubernetes.",
+   "start": 57.521,
+   "end": 60.546,
+   "words": [
+    {
+     "w": "Tiga-tiganya",
+     "start": 57.521,
+     "end": 58.09
+    },
+    {
+     "w": "iya?",
+     "start": 58.09,
+     "end": 58.514
+    },
+    {
+     "w": "Baru",
+     "start": 59.302,
+     "end": 59.68
+    },
+    {
+     "w": "Kubernetes.",
+     "start": 59.68,
+     "end": 60.493
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "RECAP",
+   "text": "Kubernetes itu alat yang hebat. Tapi alat dipilih buat masalahnya, bukan buat trennya.",
+   "start": 61.546,
+   "end": 66.877,
+   "words": [
+    {
+     "w": "Kubernetes",
+     "start": 61.546,
+     "end": 61.989
+    },
+    {
+     "w": "itu",
+     "start": 61.989,
+     "end": 62.249
+    },
+    {
+     "w": "alat",
+     "start": 62.249,
+     "end": 62.485
+    },
+    {
+     "w": "yang",
+     "start": 62.485,
+     "end": 62.626
+    },
+    {
+     "w": "hebat.",
+     "start": 62.626,
+     "end": 63.157
+    },
+    {
+     "w": "Tapi",
+     "start": 63.955,
+     "end": 64.202
+    },
+    {
+     "w": "alat",
+     "start": 64.202,
+     "end": 64.403
+    },
+    {
+     "w": "dipilih",
+     "start": 64.403,
+     "end": 64.733
+    },
+    {
+     "w": "buat",
+     "start": 64.733,
+     "end": 64.922
+    },
+    {
+     "w": "masalahnya,",
+     "start": 64.922,
+     "end": 65.629
+    },
+    {
+     "w": "bukan",
+     "start": 65.853,
+     "end": 66.148
+    },
+    {
+     "w": "buat",
+     "start": 66.148,
+     "end": 66.313
+    },
+    {
+     "w": "trennya.",
+     "start": 66.313,
+     "end": 66.832
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "OUTRO",
+   "text": "Kamu tim pelabuhan, atau tim kurir? Tulis di komentar.",
+   "start": 67.877,
+   "end": 71.939,
+   "words": [
+    {
+     "w": "Kamu",
+     "start": 67.877,
+     "end": 68.052
+    },
+    {
+     "w": "tim",
+     "start": 68.052,
+     "end": 68.205
+    },
+    {
+     "w": "pelabuhan,",
+     "start": 68.205,
+     "end": 68.842
+    },
+    {
+     "w": "atau",
+     "start": 69.102,
+     "end": 69.361
+    },
+    {
+     "w": "tim",
+     "start": 69.361,
+     "end": 69.538
+    },
+    {
+     "w": "kurir?",
+     "start": 69.538,
+     "end": 69.986
+    },
+    {
+     "w": "Tulis",
+     "start": 70.774,
+     "end": 71.163
+    },
+    {
+     "w": "di",
+     "start": 71.163,
+     "end": 71.257
+    },
+    {
+     "w": "komentar.",
+     "start": 71.257,
+     "end": 71.894
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 72.259,
+   "end": 74.089,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 72.259,
+     "end": 72.725
+    },
+    {
+     "w": "biar",
+     "start": 72.961,
+     "end": 73.232
+    },
+    {
+     "w": "nggak",
+     "start": 73.232,
+     "end": 73.374
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 73.374,
+     "end": 74.034
+    }
+   ]
+  }
+ ]
+}

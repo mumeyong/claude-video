@@ -1,0 +1,3 @@
+Kubernetes = kubernetis
+serverless = server les
+VM = vi em

@@ -1,6 +1,6 @@
 # Foto yang kamu kirim di WhatsApp, sebenernya lewat mana?
 
-- **Status:** 💡 ide · **Pilar:** B (broad) · **Format:** QUICK
+- **Status:** ✅ tayang → [`videos/_arsip/foto-whatsapp-lewat-mana/`](../videos/_arsip/foto-whatsapp-lewat-mana/)
 - **Slug:** foto-whatsapp-lewat-mana
 - **Seri:** —
 - **Durasi target:** 60–70 s
@@ -30,5 +30,7 @@ Fotomu dikunci (end-to-end encryption) sebelum keluar dari HP, dititip sebentar 
 | 6 | Komponen baru | `parcel` (kardus + segel gembok) · `tracking_log` (daftar status resi) · `double_tick` |
 
 ## Catatan
+- 2026-10-10 produksi: metafora diganti jadi **loker penitipan** (ekspedisi/paket bentrok sama kubernetes-bukan-jawaban
+  yang baru pakai kurir + paket). Komponen: loker, kotak, kunci, centang, foto. Lihat `videos/foto-whatsapp-lewat-mana/PLAN.md`.
 - ⚠️ **Fakta wajib dicek** (cara penyimpanan media sementara, berapa lama). Tetap tingkat tinggi, jangan detail
   yang nggak pasti. Istilah English: end-to-end encryption, server, CDN, key.

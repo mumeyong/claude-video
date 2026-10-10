@@ -64,27 +64,28 @@ def series_outro(v, T, s, e, teaser_id, follow_id, kicker, title, sub, color, se
 
 
 # ── added 2026-10-08: less boilerplate per video (new videos only) ──────
-def heads(T, items, end, style="headline"):
+def heads(T, items, end, style="headline", gap=0.15):
     """Headlines that hand over line to line. items = [("Teks *aksen*.", "L04"), ("Lagi.", "L05", "L06"), …]:
-    each starts at its line and ends just before the next item's line (or at `end` for the last one).
+    each starts at its line and ends `gap` s before the next item's line (or at `end` for the last one).
     Returns [(Headline, t_in, t_out)] for draw_heads()."""
     from .headline import Headline
     out = []
     for i, it in enumerate(items):
         text, a = it[0], it[1]
         if len(it) > 2 and it[2]:
-            t_out = T[it[2]].start - 0.15
+            t_out = T[it[2]].start - gap
         elif i + 1 < len(items):
-            t_out = T[items[i + 1][1]].start - 0.15
+            t_out = T[items[i + 1][1]].start - gap
         else:
             t_out = end
         out.append((Headline(text, style=style), T[a].start, t_out))
     return out
 
 
-def draw_heads(c, t, hs):
+def draw_heads(c, t, hs, **kw):
+    """Draw heads() output; kw goes to Headline.draw (reveal=, exit=, stagger=)."""
     for h, a, b in hs:
-        h.draw(c, t, a, b)
+        h.draw(c, t, a, b, **kw)
 
 
 def punch_word(c, t, t_in, t_word, word, color, caption=None, y=1100, size=150):

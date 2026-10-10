@@ -1,8 +1,14 @@
 """CLI.  python -m engine <command> <slug> [options]
 
-  go       <slug> [final]         ONE command per review round: naskah → voice (align voice.wav, else TTS) →
-                                  check → cover → sheet → stills (REVIEW) → preview+music  ('final' = final render)
-  new      "Judul video"          scaffold videos/<slug> from a title (slug auto)
+  go       <slug> [preview]       ONE command: naskah → voice (align voice.wav, else TTS) → check → final render
+                                  → hasil/<slug>/.  'preview' = review round instead: cover → sheet → stills
+                                  (REVIEW) → 540p preview+music
+  auto     "Judul video" | NN | <slug>  autopilot: scaffold (if new) → Claude headless writes idea, SCRIPT, NASKAH,
+                                  PLAN, scenes.py, cover, POST.md until check --dry is clean → go (final render)
+                                  (user runs — it starts Claude; Claude itself never runs this)
+  new      "Judul video" | NN     scaffold videos/<slug> from a title or idea number; a matching ideas/NN-*.md
+                                  (by number, title or slug) gives the slug + brief
+  ideas                           list ideas that are not produced yet (number, pillar, title)
   ls                              list videos with stage + duration
   estimate <slug>                 timing.json from SCRIPT.md (no audio yet, 161 wpm)      (Claude may run)
   naskah   <slug>                 NASKAH.md — clean read-aloud script for recording      (Claude may run)
@@ -24,6 +30,7 @@
   audition                        40 s demo per music style + SFX kit strips → .cache/audition/   (user runs)
 """
 import argparse
+import re
 import shutil
 import sys
 
@@ -48,6 +55,8 @@ def main(argv=None):
 
     if a.cmd in ("ls", "list"):
         return list_videos()
+    if a.cmd == "ideas":
+        return list_ideas()
     if a.cmd == "api":
         from .apidoc import build_api
         build_api()
@@ -65,6 +74,8 @@ def main(argv=None):
 
     if a.cmd == "new":
         return new_video(" ".join([a.slug] + a.rest))
+    if a.cmd == "auto":
+        return auto(a)
 
     p = Project(a.slug)
     if a.cmd == "go":
@@ -87,8 +98,8 @@ def main(argv=None):
         from .render import check
         rc = check(a.slug)
         if a.dry:
-            from .lint import dry_check, audio_dry
-            rc = max(rc, dry_check(a.slug), audio_dry(a.slug))
+            from .lint import dry_check, audio_dry, motion_check
+            rc = max(rc, dry_check(a.slug), audio_dry(a.slug), motion_check(a.slug))
         return rc
     elif a.cmd == "still":
         from .render import render_stills
@@ -129,19 +140,56 @@ def slugify(title):
     return s[:48].rstrip("-") or "video"
 
 
-def new_video(title):
-    """Scaffold videos/<slug>/ from a title: SCRIPT.md skeleton (Claude fills it, then PLAN.md)."""
+def _ideas():
+    """[(num, title, slug, status, pillar, path)] from ideas/NN-*.md."""
+    out = []
+    for f in sorted((ROOT / "ideas").glob("[0-9][0-9]-*.md")):
+        txt = f.read_text(encoding="utf-8")
+        title = next((ln[2:].strip() for ln in txt.splitlines() if ln.startswith("# ")), f.stem)
+        field = lambda k: (re.search(rf"\*\*{k}:\*\*\s*([^\n]*)", txt) or [None, ""])[1].strip()
+        slug = re.sub(r"[`<].*", "", field("Slug")).strip() or f.stem[3:]
+        out.append((f.name[:2], title, slug, field("Status"), field("Pilar").split(" · **")[0].strip(), f))
+    return out
+
+
+def find_idea(arg):
+    key = arg.strip().lstrip("#")
+    for idea in _ideas():
+        num, title, slug, *_ = idea
+        if key == num or key.zfill(2) == num or slugify(arg) in (slug, slugify(title)):
+            return idea
+    return None
+
+
+def list_ideas():
+    for num, title, slug, status, pillar, _ in _ideas():
+        if not status.startswith(("💡", "⭐")) or "<" in slug or "format" in status:
+            continue
+        print(f"{num}  {pillar[:20]:20s} {title}")
+    print('\n  claude-video <nomor>   atau   claude-video "Judul persis"   → bikin videos/<slug>/ dari ide itu')
+    return 0
+
+
+def new_video(title, hint=True):
+    """Scaffold videos/<slug>/ from a title or idea number: SCRIPT.md skeleton (Claude fills it, then PLAN.md)."""
     import datetime
     title = title.strip().strip('"')
-    slug = slugify(title)
+    idea = find_idea(title)
+    if idea:
+        _, title, slug, _, _, idea_path = idea
+    elif title.lstrip("#").isdigit():
+        sys.exit(f"nggak ada ide nomor {title} — lihat: claude-video ideas")
+    else:
+        slug = slugify(title)
     dst = ROOT / "videos" / slug
     if find("videos", slug).exists():
         sys.exit(f"sudah ada: {dst}")
     for d in ("audio", "assets", "out"):
         (dst / d).mkdir(parents=True)
+    brief = f"\n> Ide: [ideas/{idea_path.name}](../../ideas/{idea_path.name}) — brief, hook, bab ada di sana" if idea else ""
     (dst / "SCRIPT.md").write_text(f"""# {title}
 
-> Dibuat {datetime.date.today()} · status: brief — minta Claude: "kerjain video {slug}"
+> Dibuat {datetime.date.today()} · status: brief — minta Claude: "kerjain video {slug}"{brief}
 > Satu kalimat per [Lxx]. Tanda baca-keras: *kata* = tekanan, ' //' = napas.
 
 ## INTRO
@@ -157,11 +205,43 @@ def new_video(title):
 [L04] Follow, …
 """)
     (dst / "REVIEW").write_text("# Stills untuk putaran review (diisi Claude)\n")
-    print(f"✓ videos/{slug}/  —  \"{title}\"")
+    if idea:
+        txt = idea_path.read_text(encoding="utf-8")
+        txt = re.sub(r"(\*\*Status:\*\*\s*)[^\n]*", rf"\g<1>🎬 produksi — [`videos/{slug}/`](../videos/{slug}/)", txt, count=1)
+        idea_path.write_text(txt, encoding="utf-8")
+    print(f"✓ videos/{slug}/  —  \"{title}\"" + (f"  (dari ide {idea_path.name})" if idea else ""))
+    if not hint:
+        return 0
     print(f"  lanjut di Claude Code (folder {ROOT}):")
-    print(f"    \"kerjain video {slug}\"   → brief, naskah + NASKAH.md, storyboard, kode")
+    print(f"    \"kerjain video {slug}\"   → brief, naskah + NASKAH.md, storyboard, kode (+ status di ideas/README.md)")
     print(f"  setelah ada scenes.py:  claude-video {slug}")
     return 0
+
+
+def resolve(arg):
+    """(slug, title) for an existing slug, an idea number/title, or a new title."""
+    arg = arg.strip().strip('"')
+    if find("videos", arg).exists():
+        return arg, arg
+    idea = find_idea(arg)
+    if idea:
+        return idea[2], idea[1]
+    if arg.lstrip("#").isdigit():
+        sys.exit(f"nggak ada ide nomor {arg} — lihat: claude-video ideas")
+    return slugify(arg), arg
+
+
+def auto(a):
+    """Title/idea/slug → scaffold if new → Claude headless writes everything (if no scenes.py yet) → go."""
+    slug, title = resolve(" ".join([a.slug] + [x for x in a.rest if x not in ("final", "preview")]))
+    d = find("videos", slug)
+    if not d.exists():
+        new_video(title, hint=False)
+    if not (find("videos", slug) / "scenes.py").exists():
+        from .autopilot import autopilot
+        if autopilot(slug, title):
+            return 1
+    return go(Project(slug), a)
 
 
 def list_videos():
@@ -203,8 +283,8 @@ def _newer(a, b):
 
 
 def go(p, a):
-    """One command for a review round: naskah → voice (recording → align · none → TTS) → check → cover → sheet →
-    stills → preview with music (or final → hasil/).
+    """One command: naskah → voice (recording → align · none → TTS) → check → final render → hasil/<slug>/.
+    'preview' in the args = review round instead: cover → sheet → stills → 540p preview with music.
 
     Only redoes what is out of date. Stills: line ids / seconds listed in videos/<slug>/REVIEW (one per line
     or space-separated; '#' comments) — Claude keeps that file updated with what to look at this round.
@@ -212,12 +292,17 @@ def go(p, a):
     import json
     import time
     t0 = time.time()
-    final = "final" in a.rest
+    final = "preview" not in a.rest
     script, naskah, timing = p.dir / "SCRIPT.md", p.dir / "NASKAH.md", p.timing_path
     done = []
 
     def step(msg):
         print(f"\n━━ {msg}")
+
+    if not (p.dir / "scenes.py").exists():   # still a brief: no script/voice/render work to do yet
+        print(f"videos/{p.slug}/ masih brief (belum ada naskah + scenes.py).\n"
+              f"  autopilot: claude-video auto {p.slug}   (atau di Claude Code: \"kerjain video {p.slug}\")")
+        return 1
 
     if _newer(script, naskah):
         step("naskah (SCRIPT.md berubah)")
@@ -284,8 +369,12 @@ def go(p, a):
         up = find("hasil", p.slug)
         print(f"\n▶ UPLOAD FILE INI (1080×1920 60fps): {up / (p.slug + '.mp4')}")
         print(f"  cover: {up / 'cover.png'} · caption: {up / 'POST.md'}")
+        notes = p.out / "autopilot.md"
+        if notes.exists() and "ertanyaan terbuka" in (txt := notes.read_text(encoding="utf-8")):
+            print("\n⚠ CEK SEBELUM UPLOAD — pertanyaan terbuka dari autopilot (salah? bilang ke Claude, lalu ulang):")
+            print(txt[txt.index("ertanyaan terbuka") - 1:].split("\n", 1)[-1].rstrip())
     else:
-        print(f"\n  ⚠ preview = 540p, JANGAN di-upload. Buat upload: claude-video {p.slug} final")
+        print(f"\n  ⚠ preview = 540p, JANGAN di-upload. Buat upload: claude-video {p.slug}")
     return 0
 
 

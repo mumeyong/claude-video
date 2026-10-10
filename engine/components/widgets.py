@@ -110,10 +110,10 @@ def filmstrip(c, x, y, w, h, images, t, head=None, head_label=None, colors=None)
             size_label(c, hx, y - 58, head_label)
 
 
-def phone(c, x, y, w, h, image=None, draw_screen=None, dark=True):
-    """Phone mockup. Either an image path or draw_screen(c, sx, sy, sw, sh)."""
+def phone(c, x, y, w, h, image=None, draw_screen=None, dark=True, shadow=0.25):
+    """Phone mockup. Either an image path or draw_screen(c, sx, sy, sw, sh). shadow = drop-shadow alpha."""
     r = w * 0.13
-    c.shadow(x, y, w, h, r, 40, 18, 0.25)
+    c.shadow(x, y, w, h, r, 40, 18, shadow)
     c.fill_rrect(x, y, w, h, r, (0.05, 0.05, 0.07, 1) if dark else (1, 1, 1, 1))
     b = w * 0.035
     sx, sy, sw, sh = x + b, y + b, w - 2 * b, h - 2 * b

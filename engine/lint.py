@@ -11,6 +11,7 @@ seconds. Reports:
   · text smaller than 17 px
 Full-screen overlays (z >= 100, e.g. the series bumper) are skipped. Shadows/glows are ignored (alpha threshold).
 """
+import math
 import traceback
 
 import numpy as np
@@ -177,3 +178,120 @@ def audio_dry(slug):
         print(f"  {pr}")
     print("  ok — no problems" if not problems else f"  {len(problems)} problem(s)")
     return 1 if problems else 0
+
+
+# ── motion check (STYLE §6f, 2026-10-11): measure how the video MOVES, without rendering anything ──────────
+# The content layers (z < 100: content + screen-fixed UI; no camera, background, HUD or full-screen overlays) are composited off-screen every M_STEP s; consecutive
+# alpha masks are diffed on a coarse grid. A grid cell "moves" when enough of its ink changed; neighbouring moving
+# cells form one "mover". The camera is measured separately from v.camera.state(t).
+M_STEP = 1 / 15
+M_DIFF = 48            # alpha change (0-255) that counts as motion
+M_CELL = (6, 10)       # grid: 6 columns × 10 rows (~180 px cells)
+M_CELL_MIN = 0.012     # fraction of a cell's pixels that must change
+CAM_ZOOM_V, CAM_PAN_V = 0.035, 70     # camera faster than this (zoom/s, px/s) = a real move (a dolly stays below)
+REST_MIN, REST_BAD = 0.45, 0.30       # share of a chapter that should be still (holds) / clearly too busy
+BUSY_MAX, BUSY_BAD = 2.5, 4.0         # longest stretch without a single still moment (s)
+CROWD_N, CROWD_T = 3, 0.5             # ≥ 3 movers at once for ≥ 0.5 s = no clear leader
+
+
+def _movers(cells):
+    """Count 4-connected groups of True in a small 2-D bool grid."""
+    rows, cols = cells.shape
+    seen = np.zeros_like(cells)
+    n = 0
+    for r in range(rows):
+        for c_ in range(cols):
+            if cells[r, c_] and not seen[r, c_]:
+                n += 1
+                stack = [(r, c_)]
+                seen[r, c_] = True
+                while stack:
+                    y, x = stack.pop()
+                    for yy, xx in ((y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)):
+                        if 0 <= yy < rows and 0 <= xx < cols and cells[yy, xx] and not seen[yy, xx]:
+                            seen[yy, xx] = True
+                            stack.append((yy, xx))
+    return n
+
+
+def _spans(flags, ts, min_len):
+    out, s0 = [], None
+    for f, t in zip(flags + [False], ts + [ts[-1] + M_STEP if ts else 0]):
+        if f and s0 is None:
+            s0 = t
+        elif not f and s0 is not None:
+            if t - s0 >= min_len:
+                out.append((s0, t))
+            s0 = None
+    return out
+
+
+def motion_profile(video):
+    """[(t, movers, ink_moving_fraction, camera_moving)] sampled every M_STEP s."""
+    cols, rows = M_CELL
+    prev, out = None, []
+    n = int(video.duration / M_STEP) + 1
+    for i in range(n):
+        t = i * M_STEP
+        surf, c = new_frame(SCALE)
+        c.dark = video.dark_amount(t)
+        for ly in sorted((l for l in video.layers if l.start <= t < l.end and l.z < 100), key=lambda l: l.z):
+            try:
+                c.ctx.save()
+                ly.fn(c, t)
+                c.ctx.restore()
+            except Exception:  # noqa: BLE001 — dry_check reports exceptions; here they just don't count
+                c.ctx.restore()
+        a = _alpha(surf).astype(np.int16)[:, :int(tk.W * SCALE)]
+        z0, x0, y0 = video.camera.state(max(0.0, t - M_STEP))
+        z1, x1, y1 = video.camera.state(t)
+        cam = abs(z1 - z0) / M_STEP > CAM_ZOOM_V or math.hypot(x1 - x0, y1 - y0) / M_STEP > CAM_PAN_V
+        if prev is None:
+            out.append((t, 0, 0.0, cam))
+        else:
+            d = np.abs(a - prev) > M_DIFF
+            h, w = d.shape
+            ch, cw = h // rows, w // cols
+            grid = d[:ch * rows, :cw * cols].reshape(rows, ch, cols, cw).mean(axis=(1, 3)) > M_CELL_MIN
+            ink = max(1, int((a > 90).sum()))
+            out.append((t, _movers(grid), float(d.sum()) / ink, cam))
+        prev = a
+    return out
+
+
+def motion_check(slug):
+    """Per chapter: how much is still (holds), the longest stretch without rest, crowd moments (no single leader),
+    camera moves stacked on content moves. Advisory — fix every `!` before handing over a render command."""
+    project, video = _video(slug)
+    prof = motion_profile(video)
+    chs = video.chapters or []
+    spans = [(ch.label, ch.start, ch.end) for ch in chs] or [("video", 0.0, video.duration)]
+    print(f"{slug}: motion check · {len(prof)} samples every {M_STEP:.3f}s · nothing written")
+    print(f"  {'chapter':<22}{'still':>7}{'longest busy':>14}{'peak movers':>13}")
+    flags = 0
+    for label, s, e in spans:
+        rows = [p for p in prof if s <= p[0] < e]
+        if not rows:
+            continue
+        still = [p[1] == 0 and not p[3] for p in rows]
+        ts = [p[0] for p in rows]
+        share = sum(still) / len(rows)
+        busy = max([b - a for a, b in _spans([not x for x in still], ts, 0.0)] or [0.0])
+        peak = max(p[1] for p in rows)
+        mark = "!" if share < REST_BAD or busy > BUSY_BAD else ("~" if share < REST_MIN or busy > BUSY_MAX else " ")
+        print(f"{mark} {label[:22]:<22}{share * 100:>6.0f}%{busy:>12.1f} s{peak:>13}")
+        if mark == "!":
+            flags += 1
+        crowd = _spans([p[1] >= CROWD_N for p in rows], ts, CROWD_T)
+        for a, b in crowd:
+            flags += 1
+            print(f"    ! CROWD {a:.2f}–{b:.2f}s  {CROWD_N}+ things move at once — pick one leader, delay the rest "
+                  f"(follow()) or hold them still")
+        stack = _spans([p[3] and p[1] >= 2 for p in rows], ts, 0.3)
+        for a, b in stack:
+            flags += 1
+            print(f"    ! STACK {a:.2f}–{b:.2f}s  camera move on top of 2+ content moves — move the camera in a hold")
+    tot = sum(p[1] == 0 and not p[3] for p in prof) / max(1, len(prof))
+    print(f"  overall still {tot * 100:.0f}% (aim ≥ {REST_MIN * 100:.0f}% per chapter) · "
+          + ("ok — no motion flags" if not flags else f"{flags} motion flag(s)"))
+    return 0

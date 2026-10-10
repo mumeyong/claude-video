@@ -53,6 +53,9 @@ C = {
     "brand_paper": hexc("#FAF9F5"),
     "brand_ink": hexc("#2B2C29"),
     "brand_seal": hexc("#C44834"),
+    # reel layer (opt-in, 2026-10-10, components/reel.py — brand teasers only, STYLE §6e): paper = brand_paper
+    "reel_green": hexc("#608A70"),  # the reel's main color: iris, orbit satellite, highlighter, dotted lines
+    "reel_ink": hexc("#22231F"),    # reel type, chips border, dark pills, pixel wipe
     # code syntax
     "code_kw": hexc("#7C3AED"),
     "code_str": hexc("#0E9F6E"),
@@ -73,6 +76,10 @@ CHAPTER = [
     (hexc("#E8861A"), hexc("#F8F1EA")),
 ]
 INTRO_TINT = hexc("#EEEBF8")
+
+# Reel "six worlds" (mumeyong.dev site sections) — chip squares, card labels, verb-slam grounds. Reel layer only.
+REEL_WORLDS = [hexc("#608A70"), hexc("#52D6CE"), hexc("#D6785C"),   # root · platform · security
+               hexc("#8A96FF"), hexc("#D6AA48"), hexc("#B078C4")]   # cloud · automation · observability
 
 # Chip dot colors (context chips above the chat input)
 CHIP = {"green": hexc("#10A060"), "purple": hexc("#7558F0"),
@@ -162,6 +169,22 @@ M = {
     "sheet_dim": 0.18,         # backdrop dim behind a floating sheet
     "ink_stagger": 0.11,       # Headline reveal="ink": per-word ink-in
     "ink_in": 0.55,
+    # reel.py (opt-in, 2026-10-10 — brand teasers, STYLE §6e)
+    "reel_smear_in": 0.45,     # smear entrance: offset + horizontal stretch + blur 16 → 0
+    "reel_smear_blur": 16,
+    "reel_out": 0.4,           # reel exit: scale +30%, blur 18, fade
+    "reel_out_blur": 18,
+    "reel_gather": 1.35,       # dots gather onto the ensō (logo build)
+    "reel_iris": 0.6,          # iris close / circle swell
+    "reel_block": 72,          # pixel-wipe block size (15 × 27 on 1080 × 1920)
+    "reel_block_sweep": 0.55,  # time for the wipe front to cross the frame
+    "reel_block_hold": 0.34,   # how long each block stays ink before turning paper
+    "reel_hl": 0.4,            # highlighter swipe
+    "reel_chip_stagger": 0.11,
+    "reel_count": 1.75,        # count-up inside a pill
+    "reel_card_stagger": 0.16,
+    "reel_slam": 0.2,          # verb slam whip-in
+    "reel_type": 0.6,          # wordmark clip-type
 }
 
 # Spring personalities: (damping, frequency, settle seconds). PLAN.md picks one as the video's default.
@@ -171,6 +194,44 @@ SPRING = {
     "floaty": (0.55, 1.8, 1.25),   # soft / playful worlds — ~12% overshoot, small objects only
     "silk":   (0.93, 0.9, 1.15),   # Apple keynote — long, smooth, no visible overshoot (morphs, sheets, heroes)
 }
+
+# ── Apple motion craft (STYLE §6f, 2026-10-11 — default for every new video) ──────────────────────
+# Named cubic-bezier curves (ease.curve(name)). Entrances decelerate long, exits accelerate short.
+EASE = {
+    "apple":        (0.28, 0.11, 0.32, 1.0),   # apple.com standard transition
+    "apple_out":    (0.16, 1.0, 0.3, 1.0),     # entrances: decisive start, long glide to rest
+    "apple_in":     (0.4, 0.0, 0.9, 0.55),     # exits: quiet start, leaves quickly
+    "apple_in_out": (0.65, 0.0, 0.35, 1.0),    # push / pan between two focus points
+    "apple_dolly":  (0.42, 0.0, 0.58, 1.0),    # slow camera dolly over a hold
+}
+
+# SwiftUI springs by real time: (response s, dampingFraction). ease.ios_spring(dt, *IOS[name]).
+IOS = {
+    "smooth":  (0.5, 1.0),    # iOS .smooth — no overshoot (default for text + cards)
+    "snappy":  (0.5, 0.85),   # iOS .snappy — ~1% overshoot (UI pops, chips, buttons)
+    "bouncy":  (0.5, 0.7),    # iOS .bouncy — small objects only, max once per chapter
+    "default": (0.55, 0.825), # iOS .spring() default
+    "hero":    (0.85, 1.0),   # big hero objects / full-bleed shrink — heavy, no overshoot
+}
+
+M.update({
+    "rise_dy": 34,            # fade-up travel (px) for text/cards; distance-scaled for bigger objects
+    "rise_scale": 0.985,      # fade-up start scale
+    "rise_line_stagger": 0.08,   # Headline reveal="rise": per line
+    "op_lead": 0.45,          # opacity is done at 45 % of the move — opacity leads, position follows
+    "wipe_in": 0.95,          # soft-edged mask wipe (titles, images)
+    "wipe_soft": 0.22,        # feather of the wipe edge (fraction of the box)
+    "quiet_out": 0.32,        # exit: fade + scale 0.98, apple_in — exits are faster and quieter than entrances
+    "quiet_scale": 0.98,
+    "swap_dur": 0.85,         # depth_swap: old goes back, new comes forward
+    "swap_back": 0.92, "swap_front": 1.06,
+    "focus_blur": 9,          # focus_pull: background depth-of-field blur (px) — depth, never a glass panel
+    "focus_scale": 0.965, "focus_dim": 0.35,
+    "dolly_zoom": 0.03,       # camera dolly over a hold (+3 %)
+    "follow_gap": 0.12,       # follower starts this long after the leader
+    "follow_amp": 0.5,        # follower moves ≤ half the leader's distance
+    "hold_min": 0.8,          # stillness after an arrival before the next move
+})
 
 # ── shadow ──────────────────────────────────────────────────────────────
 SHADOW = {

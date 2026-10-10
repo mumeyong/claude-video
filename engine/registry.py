@@ -48,7 +48,8 @@ def register(slug):
     p = ROOT / "ideas" / "REGISTRY.md"
     lines = p.read_text().split("\n")
     end = next(i for i, ln in enumerate(lines) if ln.startswith("## Musik"))
-    row = (f"| [{slug}](../{find('videos', slug).relative_to(ROOT).as_posix()}/PLAN.md) | {d['metafora']} | {d['signature']} | {d['color']} | {d['hook']} | "
+    sig = d["signature"] + (f" · look {d['look']}" if d.get("look") else "")   # look (STYLE §6e) is optional
+    row = (f"| [{slug}](../{find('videos', slug).relative_to(ROOT).as_posix()}/PLAN.md) | {d['metafora']} | {sig} | {d['color']} | {d['hook']} | "
            f"{d['struktur']} | {d['komponen']} | — |")
     r1 = _upsert_row(lines, 0, end, f"[{slug}](", row)
     text = "\n".join(lines)

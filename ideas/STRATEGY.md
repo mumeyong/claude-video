@@ -81,7 +81,11 @@ nggak, berarti generik.
 1. #04 biaya-cloud-bocor (B, tinggal final) · 2. WiFi EP01 lampu LOS (B) · 3. WiFi EP02 connected no internet (B)
 4. #15 AI ngarang jawaban (B·AI) · 5. #13 interview cloud atau #19 AI butuh cloud engineer (C)
 6. WiFi EP03 hujan (B) · 7. hemat-14k-cloud (D) · 8. WiFi EP04 restart (B) · 9. #16 prompt diproses di mana (B·AI) · 10. WiFi EP05 jam 8 malam (B)
+11. #31 AI lupa obrolan (B·AI) · 12. #24 OTP telat (B) · 13. #33 on-call jam 2 pagi (C) · 14. #28 YouTube langsung main (B)
+15. #35 postmortem (D, butuh insiden asli) · 16. #25 flash sale (B — pas menjelang 11.11 / 12.12) · 17. #32 filter AI (B·AI)
+18. #26 ojol (B) · 19. #34 sertifikat (C) · 20. #27 Maps macet (B) · cadangan: #29 transfer bank, #30 sinyal lift, #10 foto WA
 Slot berita (#09) nyelip kapan aja ada kejadian — gangguan internet massal = WiFi EP02 bisa dinaikin duluan.
+Musiman: #25 flash sale sebelum 11.11 / 12.12 · #29 transfer bank dekat tanggal gajian.
 
 ### Urutan lama (2026-10-06, sudah tayang semua s/d EP07)
 

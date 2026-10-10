@@ -1,6 +1,6 @@
 # 5 tanda biaya cloud kamu bocor
 
-- **Status:** 📦 final (siap upload) → [`videos/_arsip/biaya-cloud-bocor/`](../videos/_arsip/biaya-cloud-bocor/)
+- **Status:** ✅ tayang → [`videos/_arsip/biaya-cloud-bocor/`](../videos/_arsip/biaya-cloud-bocor/)
 - **Slug:** biaya-cloud-bocor
 - **Seri:** — (teaser buat #01)
 - **Durasi target:** 60–75 s (lewat 1 menit buat payout)

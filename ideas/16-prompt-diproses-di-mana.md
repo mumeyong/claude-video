@@ -1,6 +1,6 @@
 # Kamu ngetik prompt — sebenernya diproses di mana?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/prompt-diproses-di-mana/`](../videos/prompt-diproses-di-mana/)
 - **Pilar:** B · AI sehari-hari · **Format:** QUICK
 - **Slug:** prompt-diproses-di-mana
 - **Seri:** —

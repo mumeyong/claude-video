@@ -1,6 +1,6 @@
 # Kenapa ChatGPT kadang ngarang jawaban?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/ai-ngarang-jawaban/`](../videos/ai-ngarang-jawaban/)
 - **Pilar:** B · AI sehari-hari · **Format:** QUICK
 - **Slug:** ai-ngarang-jawaban
 - **Seri:** —

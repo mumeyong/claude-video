@@ -1,6 +1,6 @@
 # Dari System Engineer ke Senior Cloud Engineer — jalur aku
 
-- **Status:** 💡 ide · **Pilar:** C (karier) · **Format:** FULL
+- **Status:** 🎬 produksi — [`videos/jalur-karier-cloud/`](../videos/jalur-karier-cloud/)
 - **Slug:** jalur-karier-cloud
 - **Seri:** —
 - **Durasi target:** 75–90 s
