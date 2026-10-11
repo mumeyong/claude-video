@@ -58,6 +58,14 @@ def build_api():
                         lines.append(f"  - `.{mn}{_sig(mo)}` — {_doc(mo)}")
         lines.append("")
         assert src.exists(), src
+    # namespace modules: `from engine.components import material` → material.body(...)
+    for m in ("material",):
+        mod = getattr(components, m)
+        lines.append(f"## components/{m}.py (namespace `{m}.`) — {(inspect.getdoc(mod) or '').splitlines()[0]}")
+        for name, obj in _members(mod):
+            if inspect.isfunction(obj) and obj.__module__ == mod.__name__:
+                lines.append(f"- `{m}.{name}{_sig(obj)}` — {_doc(obj)}")
+        lines.append("")
     # core modules
     for title, mod, cls in (("ease (engine.ease)", ease, None), ("Video (engine.video)", video, "Video"),
                             ("Canvas `c` (engine.draw)", draw, "Canvas"), ("Timing `T` (engine.timing)", timing, None),

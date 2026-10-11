@@ -1,0 +1,991 @@
+{
+ "source": "tts",
+ "voice": "cartesia:a053f6bc-7df4-40de-96d4-de026bc47ce8",
+ "tts": "cartesia:sonic-3.6:a053f6bc-7df4-40de-96d4-de026bc47ce8:1.0:off",
+ "duration": 70.451,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Satu GPU buat AI, listriknya kira-kira kayak dua setrika yang nggak pernah dicabut.",
+   "start": 0.4,
+   "end": 5.056,
+   "words": [
+    {
+     "w": "Satu",
+     "start": 0.4,
+     "end": 0.711
+    },
+    {
+     "w": "GPU",
+     "start": 0.791,
+     "end": 1.111
+    },
+    {
+     "w": "buat",
+     "start": 1.111,
+     "end": 1.351
+    },
+    {
+     "w": "AI,",
+     "start": 1.351,
+     "end": 1.991
+    },
+    {
+     "w": "listriknya",
+     "start": 2.151,
+     "end": 2.551
+    },
+    {
+     "w": "kira-kira",
+     "start": 2.551,
+     "end": 3.031
+    },
+    {
+     "w": "kayak",
+     "start": 3.111,
+     "end": 3.271
+    },
+    {
+     "w": "dua",
+     "start": 3.271,
+     "end": 3.511
+    },
+    {
+     "w": "setrika",
+     "start": 3.511,
+     "end": 3.991
+    },
+    {
+     "w": "yang",
+     "start": 4.071,
+     "end": 4.071
+    },
+    {
+     "w": "nggak",
+     "start": 4.071,
+     "end": 4.231
+    },
+    {
+     "w": "pernah",
+     "start": 4.311,
+     "end": 4.471
+    },
+    {
+     "w": "dicabut.",
+     "start": 4.471,
+     "end": 5.031
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Terus kenapa data center AI bisa butuh listrik segede satu kota?",
+   "start": 5.656,
+   "end": 9.132,
+   "words": [
+    {
+     "w": "Terus",
+     "start": 5.663,
+     "end": 5.904
+    },
+    {
+     "w": "kenapa",
+     "start": 5.984,
+     "end": 6.304
+    },
+    {
+     "w": "data",
+     "start": 6.384,
+     "end": 6.464
+    },
+    {
+     "w": "center",
+     "start": 6.464,
+     "end": 6.784
+    },
+    {
+     "w": "AI",
+     "start": 6.864,
+     "end": 7.184
+    },
+    {
+     "w": "bisa",
+     "start": 7.184,
+     "end": 7.504
+    },
+    {
+     "w": "butuh",
+     "start": 7.504,
+     "end": 7.824
+    },
+    {
+     "w": "listrik",
+     "start": 7.904,
+     "end": 8.144
+    },
+    {
+     "w": "segede",
+     "start": 8.144,
+     "end": 8.464
+    },
+    {
+     "w": "satu",
+     "start": 8.464,
+     "end": 8.704
+    },
+    {
+     "w": "kota?",
+     "start": 8.784,
+     "end": 9.104
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "00 · NYALA BARENGAN",
+   "text": "Tiap kamu nanya ke AI, jawabannya dihitung sama GPU di data center.",
+   "start": 10.132,
+   "end": 13.905,
+   "words": [
+    {
+     "w": "Tiap",
+     "start": 10.147,
+     "end": 10.387
+    },
+    {
+     "w": "kamu",
+     "start": 10.467,
+     "end": 10.627
+    },
+    {
+     "w": "nanya",
+     "start": 10.707,
+     "end": 10.867
+    },
+    {
+     "w": "ke",
+     "start": 10.867,
+     "end": 11.027
+    },
+    {
+     "w": "AI,",
+     "start": 11.027,
+     "end": 11.507
+    },
+    {
+     "w": "jawabannya",
+     "start": 11.629,
+     "end": 12.147
+    },
+    {
+     "w": "dihitung",
+     "start": 12.227,
+     "end": 12.467
+    },
+    {
+     "w": "sama",
+     "start": 12.467,
+     "end": 12.707
+    },
+    {
+     "w": "GPU",
+     "start": 12.787,
+     "end": 13.107
+    },
+    {
+     "w": "di",
+     "start": 13.187,
+     "end": 13.187
+    },
+    {
+     "w": "data",
+     "start": 13.187,
+     "end": 13.427
+    },
+    {
+     "w": "center.",
+     "start": 13.507,
+     "end": 13.827
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · NYALA BARENGAN",
+   "text": "Dan di data center AI yang gede, GPU-nya bisa puluhan ribu.",
+   "start": 14.225,
+   "end": 17.625,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 14.236,
+     "end": 14.397
+    },
+    {
+     "w": "di",
+     "start": 14.477,
+     "end": 14.557
+    },
+    {
+     "w": "data",
+     "start": 14.637,
+     "end": 14.797
+    },
+    {
+     "w": "center",
+     "start": 14.797,
+     "end": 15.037
+    },
+    {
+     "w": "AI",
+     "start": 15.117,
+     "end": 15.357
+    },
+    {
+     "w": "yang",
+     "start": 15.437,
+     "end": 15.516
+    },
+    {
+     "w": "gede,",
+     "start": 15.517,
+     "end": 15.997
+    },
+    {
+     "w": "GPU-nya",
+     "start": 16.196,
+     "end": 16.636
+    },
+    {
+     "w": "bisa",
+     "start": 16.717,
+     "end": 16.876
+    },
+    {
+     "w": "puluhan",
+     "start": 16.876,
+     "end": 17.196
+    },
+    {
+     "w": "ribu.",
+     "start": 17.196,
+     "end": 17.676
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · NYALA BARENGAN",
+   "text": "Semuanya nyala barengan, siang malam.",
+   "start": 18.225,
+   "end": 20.782,
+   "words": [
+    {
+     "w": "Semuanya",
+     "start": 18.225,
+     "end": 18.765
+    },
+    {
+     "w": "nyala",
+     "start": 18.845,
+     "end": 19.005
+    },
+    {
+     "w": "barengan,",
+     "start": 19.005,
+     "end": 19.645
+    },
+    {
+     "w": "siang",
+     "start": 19.791,
+     "end": 20.285
+    },
+    {
+     "w": "malam.",
+     "start": 20.285,
+     "end": 20.765
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · NYALA BARENGAN",
+   "text": "Puluhan ribu setrika di satu gedung. Itu udah kayak listrik satu kota kecil.",
+   "start": 21.102,
+   "end": 25.283,
+   "words": [
+    {
+     "w": "Puluhan",
+     "start": 21.126,
+     "end": 21.527
+    },
+    {
+     "w": "ribu",
+     "start": 21.607,
+     "end": 21.767
+    },
+    {
+     "w": "setrika",
+     "start": 21.767,
+     "end": 22.247
+    },
+    {
+     "w": "di",
+     "start": 22.247,
+     "end": 22.327
+    },
+    {
+     "w": "satu",
+     "start": 22.327,
+     "end": 22.567
+    },
+    {
+     "w": "gedung.",
+     "start": 22.647,
+     "end": 23.047
+    },
+    {
+     "w": "Itu",
+     "start": 23.366,
+     "end": 23.527
+    },
+    {
+     "w": "udah",
+     "start": 23.607,
+     "end": 23.687
+    },
+    {
+     "w": "kayak",
+     "start": 23.767,
+     "end": 23.927
+    },
+    {
+     "w": "listrik",
+     "start": 23.927,
+     "end": 24.327
+    },
+    {
+     "w": "satu",
+     "start": 24.407,
+     "end": 24.567
+    },
+    {
+     "w": "kota",
+     "start": 24.567,
+     "end": 24.807
+    },
+    {
+     "w": "kecil.",
+     "start": 24.807,
+     "end": 25.367
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "01 · JADI PANAS",
+   "text": "Masalahnya, listrik yang masuk ke GPU ujung-ujungnya jadi panas.",
+   "start": 26.283,
+   "end": 30.098,
+   "words": [
+    {
+     "w": "Masalahnya,",
+     "start": 26.283,
+     "end": 27.071
+    },
+    {
+     "w": "listrik",
+     "start": 27.231,
+     "end": 27.551
+    },
+    {
+     "w": "yang",
+     "start": 27.551,
+     "end": 27.711
+    },
+    {
+     "w": "masuk",
+     "start": 27.791,
+     "end": 27.951
+    },
+    {
+     "w": "ke",
+     "start": 28.031,
+     "end": 28.031
+    },
+    {
+     "w": "GPU",
+     "start": 28.031,
+     "end": 28.511
+    },
+    {
+     "w": "ujung-ujungnya",
+     "start": 28.511,
+     "end": 29.151
+    },
+    {
+     "w": "jadi",
+     "start": 29.151,
+     "end": 29.391
+    },
+    {
+     "w": "panas.",
+     "start": 29.391,
+     "end": 30.111
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · JADI PANAS",
+   "text": "Kalau panasnya nggak dibuang, GPU-nya throttle, sengaja ngelambat biar nggak rusak.",
+   "start": 30.418,
+   "end": 35.098,
+   "words": [
+    {
+     "w": "Kalau",
+     "start": 30.418,
+     "end": 30.656
+    },
+    {
+     "w": "panasnya",
+     "start": 30.736,
+     "end": 31.056
+    },
+    {
+     "w": "nggak",
+     "start": 31.056,
+     "end": 31.136
+    },
+    {
+     "w": "dibuang,",
+     "start": 31.216,
+     "end": 31.856
+    },
+    {
+     "w": "GPU-nya",
+     "start": 31.981,
+     "end": 32.496
+    },
+    {
+     "w": "throttle,",
+     "start": 32.496,
+     "end": 33.216
+    },
+    {
+     "w": "sengaja",
+     "start": 33.297,
+     "end": 33.696
+    },
+    {
+     "w": "ngelambat",
+     "start": 33.696,
+     "end": 34.256
+    },
+    {
+     "w": "biar",
+     "start": 34.336,
+     "end": 34.416
+    },
+    {
+     "w": "nggak",
+     "start": 34.496,
+     "end": 34.576
+    },
+    {
+     "w": "rusak.",
+     "start": 34.576,
+     "end": 35.136
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · JADI PANAS",
+   "text": "Jadi harus ada cooling: kipas raksasa, AC, sampai air yang ngalir di pipa.",
+   "start": 35.698,
+   "end": 40.387,
+   "words": [
+    {
+     "w": "Jadi",
+     "start": 35.707,
+     "end": 35.947
+    },
+    {
+     "w": "harus",
+     "start": 36.027,
+     "end": 36.107
+    },
+    {
+     "w": "ada",
+     "start": 36.107,
+     "end": 36.267
+    },
+    {
+     "w": "cooling:",
+     "start": 36.347,
+     "end": 36.827
+    },
+    {
+     "w": "kipas",
+     "start": 36.964,
+     "end": 37.227
+    },
+    {
+     "w": "raksasa,",
+     "start": 37.227,
+     "end": 38.027
+    },
+    {
+     "w": "AC,",
+     "start": 38.256,
+     "end": 38.347
+    },
+    {
+     "w": "sampai",
+     "start": 38.818,
+     "end": 39.227
+    },
+    {
+     "w": "air",
+     "start": 39.307,
+     "end": 39.467
+    },
+    {
+     "w": "yang",
+     "start": 39.547,
+     "end": 39.627
+    },
+    {
+     "w": "ngalir",
+     "start": 39.707,
+     "end": 39.867
+    },
+    {
+     "w": "di",
+     "start": 39.867,
+     "end": 39.947
+    },
+    {
+     "w": "pipa.",
+     "start": 40.027,
+     "end": 40.347
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · JADI PANAS",
+   "text": "Dan cooling itu juga nyedot listrik. Tagihannya nambah lagi.",
+   "start": 40.707,
+   "end": 43.801,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 40.714,
+     "end": 40.954
+    },
+    {
+     "w": "cooling",
+     "start": 41.034,
+     "end": 41.194
+    },
+    {
+     "w": "itu",
+     "start": 41.274,
+     "end": 41.354
+    },
+    {
+     "w": "juga",
+     "start": 41.354,
+     "end": 41.594
+    },
+    {
+     "w": "nyedot",
+     "start": 41.674,
+     "end": 41.834
+    },
+    {
+     "w": "listrik.",
+     "start": 41.834,
+     "end": 42.474
+    },
+    {
+     "w": "Tagihannya",
+     "start": 42.632,
+     "end": 43.114
+    },
+    {
+     "w": "nambah",
+     "start": 43.194,
+     "end": 43.354
+    },
+    {
+     "w": "lagi.",
+     "start": 43.354,
+     "end": 43.834
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "02 · PINDAH KE COLOKAN",
+   "text": "Makanya data center AI sekarang dibangun deket pembangkit listrik.",
+   "start": 44.801,
+   "end": 48.321,
+   "words": [
+    {
+     "w": "Makanya",
+     "start": 44.809,
+     "end": 45.289
+    },
+    {
+     "w": "data",
+     "start": 45.29,
+     "end": 45.609
+    },
+    {
+     "w": "center",
+     "start": 45.689,
+     "end": 45.849
+    },
+    {
+     "w": "AI",
+     "start": 45.929,
+     "end": 46.249
+    },
+    {
+     "w": "sekarang",
+     "start": 46.249,
+     "end": 46.649
+    },
+    {
+     "w": "dibangun",
+     "start": 46.649,
+     "end": 47.049
+    },
+    {
+     "w": "deket",
+     "start": 47.129,
+     "end": 47.289
+    },
+    {
+     "w": "pembangkit",
+     "start": 47.289,
+     "end": 47.769
+    },
+    {
+     "w": "listrik.",
+     "start": 47.849,
+     "end": 48.329
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "02 · PINDAH KE COLOKAN",
+   "text": "Deket air juga, buat cooling-nya.",
+   "start": 48.641,
+   "end": 50.624,
+   "words": [
+    {
+     "w": "Deket",
+     "start": 48.664,
+     "end": 48.904
+    },
+    {
+     "w": "air",
+     "start": 48.984,
+     "end": 49.064
+    },
+    {
+     "w": "juga,",
+     "start": 49.064,
+     "end": 49.624
+    },
+    {
+     "w": "buat",
+     "start": 49.746,
+     "end": 50.024
+    },
+    {
+     "w": "cooling-nya.",
+     "start": 50.104,
+     "end": 50.504
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "02 · PINDAH KE COLOKAN",
+   "text": "Bukan deket kota, tapi deket colokannya.",
+   "start": 51.224,
+   "end": 53.747,
+   "words": [
+    {
+     "w": "Bukan",
+     "start": 51.23,
+     "end": 51.551
+    },
+    {
+     "w": "deket",
+     "start": 51.631,
+     "end": 51.711
+    },
+    {
+     "w": "kota,",
+     "start": 51.711,
+     "end": 52.351
+    },
+    {
+     "w": "tapi",
+     "start": 52.541,
+     "end": 52.751
+    },
+    {
+     "w": "deket",
+     "start": 52.751,
+     "end": 52.991
+    },
+    {
+     "w": "colokannya.",
+     "start": 53.071,
+     "end": 53.631
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "RECAP",
+   "text": "Jadi tiap kamu nanya ke AI, ada setrika yang nyala buat kamu.",
+   "start": 54.747,
+   "end": 58.271,
+   "words": [
+    {
+     "w": "Jadi",
+     "start": 54.781,
+     "end": 55.021
+    },
+    {
+     "w": "tiap",
+     "start": 55.101,
+     "end": 55.261
+    },
+    {
+     "w": "kamu",
+     "start": 55.341,
+     "end": 55.501
+    },
+    {
+     "w": "nanya",
+     "start": 55.501,
+     "end": 55.741
+    },
+    {
+     "w": "ke",
+     "start": 55.821,
+     "end": 55.901
+    },
+    {
+     "w": "AI,",
+     "start": 55.901,
+     "end": 56.461
+    },
+    {
+     "w": "ada",
+     "start": 56.635,
+     "end": 56.781
+    },
+    {
+     "w": "setrika",
+     "start": 56.781,
+     "end": 57.261
+    },
+    {
+     "w": "yang",
+     "start": 57.341,
+     "end": 57.341
+    },
+    {
+     "w": "nyala",
+     "start": 57.341,
+     "end": 57.661
+    },
+    {
+     "w": "buat",
+     "start": 57.741,
+     "end": 57.901
+    },
+    {
+     "w": "kamu.",
+     "start": 57.901,
+     "end": 58.301
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "RECAP",
+   "text": "Nanya boleh banget. Cuma sekarang kamu tahu, jawabannya nggak gratis.",
+   "start": 58.871,
+   "end": 63.16,
+   "words": [
+    {
+     "w": "Nanya",
+     "start": 58.889,
+     "end": 59.209
+    },
+    {
+     "w": "boleh",
+     "start": 59.289,
+     "end": 59.449
+    },
+    {
+     "w": "banget.",
+     "start": 59.449,
+     "end": 59.849
+    },
+    {
+     "w": "Cuma",
+     "start": 60.142,
+     "end": 60.729
+    },
+    {
+     "w": "sekarang",
+     "start": 60.809,
+     "end": 61.049
+    },
+    {
+     "w": "kamu",
+     "start": 61.049,
+     "end": 61.289
+    },
+    {
+     "w": "tahu,",
+     "start": 61.369,
+     "end": 61.689
+    },
+    {
+     "w": "jawabannya",
+     "start": 61.772,
+     "end": 62.249
+    },
+    {
+     "w": "nggak",
+     "start": 62.329,
+     "end": 62.409
+    },
+    {
+     "w": "gratis.",
+     "start": 62.409,
+     "end": 63.129
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "OUTRO",
+   "text": "Save video ini, terus kirim ke temen yang tiap hari nanya ke AI.",
+   "start": 64.16,
+   "end": 67.686,
+   "words": [
+    {
+     "w": "Save",
+     "start": 64.16,
+     "end": 64.479
+    },
+    {
+     "w": "video",
+     "start": 64.559,
+     "end": 64.799
+    },
+    {
+     "w": "ini,",
+     "start": 64.799,
+     "end": 65.279
+    },
+    {
+     "w": "terus",
+     "start": 65.438,
+     "end": 65.599
+    },
+    {
+     "w": "kirim",
+     "start": 65.599,
+     "end": 65.919
+    },
+    {
+     "w": "ke",
+     "start": 65.999,
+     "end": 65.999
+    },
+    {
+     "w": "temen",
+     "start": 66.079,
+     "end": 66.239
+    },
+    {
+     "w": "yang",
+     "start": 66.239,
+     "end": 66.479
+    },
+    {
+     "w": "tiap",
+     "start": 66.559,
+     "end": 66.719
+    },
+    {
+     "w": "hari",
+     "start": 66.799,
+     "end": 66.879
+    },
+    {
+     "w": "nanya",
+     "start": 66.959,
+     "end": 67.119
+    },
+    {
+     "w": "ke",
+     "start": 67.119,
+     "end": 67.279
+    },
+    {
+     "w": "AI.",
+     "start": 67.359,
+     "end": 67.759
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 68.006,
+   "end": 69.651,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 68.006,
+     "end": 68.429
+    },
+    {
+     "w": "biar",
+     "start": 68.589,
+     "end": 68.829
+    },
+    {
+     "w": "nggak",
+     "start": 68.909,
+     "end": 68.989
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 68.989,
+     "end": 69.629
+    }
+   ]
+  }
+ ]
+}

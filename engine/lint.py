@@ -97,6 +97,17 @@ def dry_check(slug, step=0.25):
     try:
         for i in range(n):
             t = i * step
+            for hook in ("stage", "finish"):           # Video.stage / Video.finish (material looks): exceptions only
+                fn = getattr(video, hook, None)
+                if fn is None or hook in errors:
+                    continue
+                surf, c = new_frame(SCALE)
+                c.dark = video.dark_amount(t)
+                try:
+                    fn(c, t)
+                except Exception as ex:  # noqa: BLE001
+                    f = traceback.extract_tb(ex.__traceback__)[-1]
+                    errors[hook] = (t, f"{type(ex).__name__}: {ex}", f"{f.filename.split('claude-video/')[-1]}:{f.lineno}")
             for ly in video.layers:
                 if not (ly.start <= t < ly.end) or ly.z >= 100:
                     continue
@@ -115,6 +126,8 @@ def dry_check(slug, step=0.25):
                         f = here[-1]
                         errors[name] = (t, f"{type(ex).__name__}: {ex}",
                                         f"{f.filename.split('claude-video/')[-1]}:{f.lineno}")
+                    continue
+                if ly.bleed:
                     continue
                 for side, over, box in _outside(_alpha(surf), x_lo, x_hi, y_lo, y_hi):
                     (out_x if side == "X" else out_y).setdefault(name, []).append((t, over, box))

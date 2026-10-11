@@ -233,6 +233,33 @@ M.update({
     "hold_min": 0.8,          # stillness after an arrival before the next move
 })
 
+# ── material / look (STYLE §6g, 2026-10-12 — components/material.py) ──────────────────────────────
+# The look = how objects are SHADED. "flat" = plain fills (before 2026-10-12). Volume comes from light, never extrusion.
+LOOK = {
+    "lit": dict(                 # soft studio light from the top-left (Apple product film)
+        hi=0.30, lo=0.30,        # body gradient: lighten the lit side / darken the far side
+        ao=0.24,                 # ambient occlusion at the edges (volume)
+        rim=0.55, rim_w=3.0,     # bright top edge = light catching the material
+        sheen=0.10,              # soft diagonal reflection band
+        shadow_blur=46, shadow_dy=30, shadow_alpha=0.16,   # cast shadow at 600 px object size (scales with size)
+        contact_alpha=0.20,      # tight dark shadow where the object touches its surface
+        spill=0.30,              # light of a glowing part falling on what's around it
+        grain=0.06, vignette=0.12,
+    ),
+    "paper": dict(               # cut paper, layers lying on each other
+        stack_dy=9, stack_alpha=0.17,                      # short hard shadow of the layer below
+        soft_blur=20, soft_dy=14, soft_alpha=0.10,
+        fibre=0.30,              # paper fibre texture (soft light)
+        edge=0.45,               # cut edge catching light (thin top highlight)
+        tilt=0.012,              # hand-placed: each part a touch off-square (radians)
+        grain=0.05, vignette=0.06,
+    ),
+}
+C.update({
+    "paper_ground": hexc("#EEE8DC"),   # paper look: the ground the cut-outs lie on
+    "studio_floor": hexc("#DDE2E9"),   # lit look: floor of the studio sweep (tinted by the video color)
+})
+
 # ── shadow ──────────────────────────────────────────────────────────────
 SHADOW = {
     "card": dict(blur=34, dy=14, alpha=0.075),

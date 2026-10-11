@@ -1,0 +1,499 @@
+{
+ "source": "tts",
+ "voice": "cartesia:e0445740-223f-45c5-8038-8ff25e49f342",
+ "tts": "cartesia:sonic-3.6:e0445740-223f-45c5-8038-8ff25e49f342:1.0:off",
+ "duration": 42.154,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Satu adegan, empat cara gambar. Tetes air yang sama, kotak ODP yang sama.",
+   "start": 0.4,
+   "end": 5.156,
+   "words": [
+    {
+     "w": "Satu",
+     "start": 0.417,
+     "end": 0.737
+    },
+    {
+     "w": "adegan,",
+     "start": 0.737,
+     "end": 1.377
+    },
+    {
+     "w": "empat",
+     "start": 1.47,
+     "end": 1.777
+    },
+    {
+     "w": "cara",
+     "start": 1.857,
+     "end": 2.017
+    },
+    {
+     "w": "gambar.",
+     "start": 2.017,
+     "end": 2.497
+    },
+    {
+     "w": "Tetes",
+     "start": 2.713,
+     "end": 3.057
+    },
+    {
+     "w": "air",
+     "start": 3.137,
+     "end": 3.217
+    },
+    {
+     "w": "yang",
+     "start": 3.297,
+     "end": 3.377
+    },
+    {
+     "w": "sama,",
+     "start": 3.377,
+     "end": 3.937
+    },
+    {
+     "w": "kotak",
+     "start": 4.017,
+     "end": 4.337
+    },
+    {
+     "w": "ODP",
+     "start": 4.417,
+     "end": 4.577
+    },
+    {
+     "w": "yang",
+     "start": 4.657,
+     "end": 4.737
+    },
+    {
+     "w": "sama.",
+     "start": 4.737,
+     "end": 5.137
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "01 · SEBELUM",
+   "text": "Ini cara kita selama ini. Objeknya kecil, sisanya layar kosong.",
+   "start": 6.156,
+   "end": 10.262,
+   "words": [
+    {
+     "w": "Ini",
+     "start": 6.169,
+     "end": 6.409
+    },
+    {
+     "w": "cara",
+     "start": 6.489,
+     "end": 6.649
+    },
+    {
+     "w": "kita",
+     "start": 6.729,
+     "end": 6.889
+    },
+    {
+     "w": "selama",
+     "start": 6.889,
+     "end": 7.209
+    },
+    {
+     "w": "ini.",
+     "start": 7.289,
+     "end": 7.529
+    },
+    {
+     "w": "Objeknya",
+     "start": 7.764,
+     "end": 8.169
+    },
+    {
+     "w": "kecil,",
+     "start": 8.169,
+     "end": 8.889
+    },
+    {
+     "w": "sisanya",
+     "start": 9.033,
+     "end": 9.449
+    },
+    {
+     "w": "layar",
+     "start": 9.449,
+     "end": 9.769
+    },
+    {
+     "w": "kosong.",
+     "start": 9.849,
+     "end": 10.249
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "02 · BESAR",
+   "text": "Gambarnya sama, cuma dibesarin. Kotaknya ngisi layar, kepotong di pinggir.",
+   "start": 11.262,
+   "end": 15.944,
+   "words": [
+    {
+     "w": "Gambarnya",
+     "start": 11.262,
+     "end": 11.659
+    },
+    {
+     "w": "sama,",
+     "start": 11.659,
+     "end": 12.139
+    },
+    {
+     "w": "cuma",
+     "start": 12.299,
+     "end": 12.539
+    },
+    {
+     "w": "dibesarin.",
+     "start": 12.619,
+     "end": 13.179
+    },
+    {
+     "w": "Kotaknya",
+     "start": 13.486,
+     "end": 13.899
+    },
+    {
+     "w": "ngisi",
+     "start": 13.899,
+     "end": 14.219
+    },
+    {
+     "w": "layar,",
+     "start": 14.299,
+     "end": 14.699
+    },
+    {
+     "w": "kepotong",
+     "start": 14.842,
+     "end": 15.339
+    },
+    {
+     "w": "di",
+     "start": 15.419,
+     "end": 15.419
+    },
+    {
+     "w": "pinggir.",
+     "start": 15.419,
+     "end": 15.899
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "02 · BESAR",
+   "text": "Udah lebih dekat. Tapi masih kerasa kayak ikon.",
+   "start": 16.544,
+   "end": 19.58,
+   "words": [
+    {
+     "w": "Udah",
+     "start": 16.606,
+     "end": 16.766
+    },
+    {
+     "w": "lebih",
+     "start": 16.846,
+     "end": 17.006
+    },
+    {
+     "w": "dekat.",
+     "start": 17.006,
+     "end": 17.326
+    },
+    {
+     "w": "Tapi",
+     "start": 17.824,
+     "end": 18.126
+    },
+    {
+     "w": "masih",
+     "start": 18.206,
+     "end": 18.366
+    },
+    {
+     "w": "kerasa",
+     "start": 18.366,
+     "end": 18.766
+    },
+    {
+     "w": "kayak",
+     "start": 18.846,
+     "end": 19.086
+    },
+    {
+     "w": "ikon.",
+     "start": 19.166,
+     "end": 19.486
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "03 · CAHAYA",
+   "text": "Sekarang dikasih cahaya. Ada terang, ada bayangan, ada pantulan.",
+   "start": 20.58,
+   "end": 24.993,
+   "words": [
+    {
+     "w": "Sekarang",
+     "start": 20.598,
+     "end": 20.998
+    },
+    {
+     "w": "dikasih",
+     "start": 21.078,
+     "end": 21.318
+    },
+    {
+     "w": "cahaya.",
+     "start": 21.318,
+     "end": 21.798
+    },
+    {
+     "w": "Ada",
+     "start": 22.102,
+     "end": 22.278
+    },
+    {
+     "w": "terang,",
+     "start": 22.278,
+     "end": 22.918
+    },
+    {
+     "w": "ada",
+     "start": 23.099,
+     "end": 23.238
+    },
+    {
+     "w": "bayangan,",
+     "start": 23.238,
+     "end": 23.958
+    },
+    {
+     "w": "ada",
+     "start": 24.109,
+     "end": 24.278
+    },
+    {
+     "w": "pantulan.",
+     "start": 24.278,
+     "end": 24.918
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "03 · CAHAYA",
+   "text": "Tetesnya mantulin lampu, kabelnya kerasa bulat.",
+   "start": 25.593,
+   "end": 28.548,
+   "words": [
+    {
+     "w": "Tetesnya",
+     "start": 25.61,
+     "end": 26.01
+    },
+    {
+     "w": "mantulin",
+     "start": 26.01,
+     "end": 26.49
+    },
+    {
+     "w": "lampu,",
+     "start": 26.57,
+     "end": 27.13
+    },
+    {
+     "w": "kabelnya",
+     "start": 27.271,
+     "end": 27.69
+    },
+    {
+     "w": "kerasa",
+     "start": 27.77,
+     "end": 28.01
+    },
+    {
+     "w": "bulat.",
+     "start": 28.01,
+     "end": 28.57
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "04 · KERTAS",
+   "text": "Atau gaya kertas. Tiap bagian kayak digunting, terus ditumpuk.",
+   "start": 29.548,
+   "end": 33.196,
+   "words": [
+    {
+     "w": "Atau",
+     "start": 29.611,
+     "end": 29.856
+    },
+    {
+     "w": "gaya",
+     "start": 29.936,
+     "end": 30.096
+    },
+    {
+     "w": "kertas.",
+     "start": 30.096,
+     "end": 30.656
+    },
+    {
+     "w": "Tiap",
+     "start": 30.737,
+     "end": 30.896
+    },
+    {
+     "w": "bagian",
+     "start": 30.976,
+     "end": 31.376
+    },
+    {
+     "w": "kayak",
+     "start": 31.376,
+     "end": 31.616
+    },
+    {
+     "w": "digunting,",
+     "start": 31.616,
+     "end": 32.336
+    },
+    {
+     "w": "terus",
+     "start": 32.554,
+     "end": 32.656
+    },
+    {
+     "w": "ditumpuk.",
+     "start": 32.656,
+     "end": 33.216
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "04 · KERTAS",
+   "text": "Lebih hangat. Kerasa buatan tangan.",
+   "start": 33.796,
+   "end": 36.454,
+   "words": [
+    {
+     "w": "Lebih",
+     "start": 33.824,
+     "end": 34.144
+    },
+    {
+     "w": "hangat.",
+     "start": 34.224,
+     "end": 34.544
+    },
+    {
+     "w": "Kerasa",
+     "start": 35.033,
+     "end": 35.504
+    },
+    {
+     "w": "buatan",
+     "start": 35.584,
+     "end": 35.904
+    },
+    {
+     "w": "tangan.",
+     "start": 35.904,
+     "end": 36.384
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "OUTRO",
+   "text": "Brand-nya tetap sama. Yang ganti cuma cara gambarnya. Kamu pilih yang mana?",
+   "start": 37.454,
+   "end": 41.354,
+   "words": [
+    {
+     "w": "Brand-nya",
+     "start": 37.468,
+     "end": 37.788
+    },
+    {
+     "w": "tetap",
+     "start": 37.788,
+     "end": 38.108
+    },
+    {
+     "w": "sama.",
+     "start": 38.188,
+     "end": 38.588
+    },
+    {
+     "w": "Yang",
+     "start": 38.745,
+     "end": 38.908
+    },
+    {
+     "w": "ganti",
+     "start": 38.988,
+     "end": 39.228
+    },
+    {
+     "w": "cuma",
+     "start": 39.228,
+     "end": 39.468
+    },
+    {
+     "w": "cara",
+     "start": 39.548,
+     "end": 39.628
+    },
+    {
+     "w": "gambarnya.",
+     "start": 39.628,
+     "end": 40.268
+    },
+    {
+     "w": "Kamu",
+     "start": 40.487,
+     "end": 40.668
+    },
+    {
+     "w": "pilih",
+     "start": 40.668,
+     "end": 40.908
+    },
+    {
+     "w": "yang",
+     "start": 40.988,
+     "end": 40.988
+    },
+    {
+     "w": "mana?",
+     "start": 41.068,
+     "end": 41.308
+    }
+   ]
+  }
+ ]
+}

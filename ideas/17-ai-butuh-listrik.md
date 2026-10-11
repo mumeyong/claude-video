@@ -1,6 +1,6 @@
 # Kenapa AI butuh listrik segede satu kota?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/ai-butuh-listrik/`](../videos/ai-butuh-listrik/)
 - **Pilar:** B · AI sehari-hari · **Format:** QUICK
 - **Slug:** ai-butuh-listrik
 - **Seri:** —

@@ -1,0 +1,1167 @@
+{
+ "source": "tts",
+ "voice": "cartesia:e0445740-223f-45c5-8038-8ff25e49f342",
+ "tts": "cartesia:sonic-3.6:e0445740-223f-45c5-8038-8ff25e49f342:1.0:off",
+ "duration": 86.465,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Hujan deras, jam empat sore. Video kamu muter terus.",
+   "start": 0.4,
+   "end": 4.065,
+   "words": [
+    {
+     "w": "Hujan",
+     "start": 0.4,
+     "end": 0.72
+    },
+    {
+     "w": "deras,",
+     "start": 0.72,
+     "end": 1.36
+    },
+    {
+     "w": "jam",
+     "start": 1.483,
+     "end": 1.6
+    },
+    {
+     "w": "empat",
+     "start": 1.68,
+     "end": 1.92
+    },
+    {
+     "w": "sore.",
+     "start": 2.0,
+     "end": 2.32
+    },
+    {
+     "w": "Video",
+     "start": 2.584,
+     "end": 2.96
+    },
+    {
+     "w": "kamu",
+     "start": 3.04,
+     "end": 3.2
+    },
+    {
+     "w": "muter",
+     "start": 3.2,
+     "end": 3.52
+    },
+    {
+     "w": "terus.",
+     "start": 3.52,
+     "end": 4.08
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Jadi WiFi beneran takut hujan?",
+   "start": 4.665,
+   "end": 6.727,
+   "words": [
+    {
+     "w": "Jadi",
+     "start": 4.669,
+     "end": 5.149
+    },
+    {
+     "w": "WiFi",
+     "start": 5.149,
+     "end": 5.549
+    },
+    {
+     "w": "beneran",
+     "start": 5.629,
+     "end": 5.949
+    },
+    {
+     "w": "takut",
+     "start": 5.949,
+     "end": 6.269
+    },
+    {
+     "w": "hujan?",
+     "start": 6.349,
+     "end": 6.669
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Hujannya nggak salah. Yang salah itu satu tetes.",
+   "start": 7.047,
+   "end": 10.107,
+   "words": [
+    {
+     "w": "Hujannya",
+     "start": 7.078,
+     "end": 7.398
+    },
+    {
+     "w": "nggak",
+     "start": 7.478,
+     "end": 7.558
+    },
+    {
+     "w": "salah.",
+     "start": 7.558,
+     "end": 8.118
+    },
+    {
+     "w": "Yang",
+     "start": 8.58,
+     "end": 8.678
+    },
+    {
+     "w": "salah",
+     "start": 8.678,
+     "end": 8.998
+    },
+    {
+     "w": "itu",
+     "start": 9.078,
+     "end": 9.158
+    },
+    {
+     "w": "satu",
+     "start": 9.158,
+     "end": 9.398
+    },
+    {
+     "w": "tetes.",
+     "start": 9.398,
+     "end": 10.038
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · MITOS",
+   "text": "Gelombang WiFi memang bisa diredam air.",
+   "start": 11.107,
+   "end": 13.368,
+   "words": [
+    {
+     "w": "Gelombang",
+     "start": 11.126,
+     "end": 11.526
+    },
+    {
+     "w": "WiFi",
+     "start": 11.526,
+     "end": 11.926
+    },
+    {
+     "w": "memang",
+     "start": 12.006,
+     "end": 12.326
+    },
+    {
+     "w": "bisa",
+     "start": 12.406,
+     "end": 12.566
+    },
+    {
+     "w": "diredam",
+     "start": 12.566,
+     "end": 12.966
+    },
+    {
+     "w": "air.",
+     "start": 13.046,
+     "end": 13.366
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · MITOS",
+   "text": "Tapi router kamu di dalam rumah. Hujannya di luar.",
+   "start": 13.688,
+   "end": 16.734,
+   "words": [
+    {
+     "w": "Tapi",
+     "start": 13.722,
+     "end": 14.042
+    },
+    {
+     "w": "router",
+     "start": 14.122,
+     "end": 14.362
+    },
+    {
+     "w": "kamu",
+     "start": 14.362,
+     "end": 14.602
+    },
+    {
+     "w": "di",
+     "start": 14.682,
+     "end": 14.762
+    },
+    {
+     "w": "dalam",
+     "start": 14.842,
+     "end": 15.002
+    },
+    {
+     "w": "rumah.",
+     "start": 15.002,
+     "end": 15.402
+    },
+    {
+     "w": "Hujannya",
+     "start": 15.738,
+     "end": 16.122
+    },
+    {
+     "w": "di",
+     "start": 16.202,
+     "end": 16.202
+    },
+    {
+     "w": "luar.",
+     "start": 16.202,
+     "end": 16.682
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · MITOS",
+   "text": "Dari HP ke router cuma beberapa meter, nggak ada hujan di antaranya.",
+   "start": 17.054,
+   "end": 21.022,
+   "words": [
+    {
+     "w": "Dari",
+     "start": 17.071,
+     "end": 17.311
+    },
+    {
+     "w": "HP",
+     "start": 17.391,
+     "end": 17.551
+    },
+    {
+     "w": "ke",
+     "start": 17.631,
+     "end": 17.711
+    },
+    {
+     "w": "router",
+     "start": 17.711,
+     "end": 18.111
+    },
+    {
+     "w": "cuma",
+     "start": 18.111,
+     "end": 18.431
+    },
+    {
+     "w": "beberapa",
+     "start": 18.511,
+     "end": 18.831
+    },
+    {
+     "w": "meter,",
+     "start": 18.831,
+     "end": 19.231
+    },
+    {
+     "w": "nggak",
+     "start": 19.599,
+     "end": 19.711
+    },
+    {
+     "w": "ada",
+     "start": 19.791,
+     "end": 19.871
+    },
+    {
+     "w": "hujan",
+     "start": 19.871,
+     "end": 20.191
+    },
+    {
+     "w": "di",
+     "start": 20.191,
+     "end": 20.351
+    },
+    {
+     "w": "antaranya.",
+     "start": 20.431,
+     "end": 20.911
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "00 · MITOS",
+   "text": "Jadi kalau lemotnya cuma pas hujan, carinya di luar rumah.",
+   "start": 21.622,
+   "end": 25.293,
+   "words": [
+    {
+     "w": "Jadi",
+     "start": 21.661,
+     "end": 21.981
+    },
+    {
+     "w": "kalau",
+     "start": 22.061,
+     "end": 22.381
+    },
+    {
+     "w": "lemotnya",
+     "start": 22.381,
+     "end": 22.861
+    },
+    {
+     "w": "cuma",
+     "start": 22.861,
+     "end": 23.181
+    },
+    {
+     "w": "pas",
+     "start": 23.261,
+     "end": 23.341
+    },
+    {
+     "w": "hujan,",
+     "start": 23.341,
+     "end": 23.981
+    },
+    {
+     "w": "carinya",
+     "start": 24.114,
+     "end": 24.541
+    },
+    {
+     "w": "di",
+     "start": 24.621,
+     "end": 24.621
+    },
+    {
+     "w": "luar",
+     "start": 24.701,
+     "end": 24.781
+    },
+    {
+     "w": "rumah.",
+     "start": 24.781,
+     "end": 25.261
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · SATU TETES",
+   "text": "Internet rumahmu masuk lewat kabel fiber, dari tiang depan rumah.",
+   "start": 26.293,
+   "end": 30.166,
+   "words": [
+    {
+     "w": "Internet",
+     "start": 26.311,
+     "end": 26.791
+    },
+    {
+     "w": "rumahmu",
+     "start": 26.791,
+     "end": 27.191
+    },
+    {
+     "w": "masuk",
+     "start": 27.191,
+     "end": 27.591
+    },
+    {
+     "w": "lewat",
+     "start": 27.671,
+     "end": 27.831
+    },
+    {
+     "w": "kabel",
+     "start": 27.831,
+     "end": 28.151
+    },
+    {
+     "w": "fiber,",
+     "start": 28.151,
+     "end": 28.711
+    },
+    {
+     "w": "dari",
+     "start": 28.949,
+     "end": 29.111
+    },
+    {
+     "w": "tiang",
+     "start": 29.111,
+     "end": 29.431
+    },
+    {
+     "w": "depan",
+     "start": 29.431,
+     "end": 29.751
+    },
+    {
+     "w": "rumah.",
+     "start": 29.831,
+     "end": 30.071
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · SATU TETES",
+   "text": "Di tiang itu ada kotak kecil, namanya ODP. Isinya sambungan kabel.",
+   "start": 30.486,
+   "end": 34.848,
+   "words": [
+    {
+     "w": "Di",
+     "start": 30.492,
+     "end": 30.652
+    },
+    {
+     "w": "tiang",
+     "start": 30.732,
+     "end": 30.972
+    },
+    {
+     "w": "itu",
+     "start": 31.052,
+     "end": 31.132
+    },
+    {
+     "w": "ada",
+     "start": 31.132,
+     "end": 31.372
+    },
+    {
+     "w": "kotak",
+     "start": 31.452,
+     "end": 31.612
+    },
+    {
+     "w": "kecil,",
+     "start": 31.612,
+     "end": 32.172
+    },
+    {
+     "w": "namanya",
+     "start": 32.319,
+     "end": 32.732
+    },
+    {
+     "w": "ODP.",
+     "start": 32.812,
+     "end": 33.052
+    },
+    {
+     "w": "Isinya",
+     "start": 33.438,
+     "end": 33.852
+    },
+    {
+     "w": "sambungan",
+     "start": 33.852,
+     "end": 34.332
+    },
+    {
+     "w": "kabel.",
+     "start": 34.412,
+     "end": 34.812
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · SATU TETES",
+   "text": "Mirip talang bocor. Hujannya di mana-mana, yang netes cuma satu sambungan.",
+   "start": 35.168,
+   "end": 39.922,
+   "words": [
+    {
+     "w": "Mirip",
+     "start": 35.194,
+     "end": 35.514
+    },
+    {
+     "w": "talang",
+     "start": 35.594,
+     "end": 35.834
+    },
+    {
+     "w": "bocor.",
+     "start": 35.834,
+     "end": 36.474
+    },
+    {
+     "w": "Hujannya",
+     "start": 36.623,
+     "end": 37.114
+    },
+    {
+     "w": "di",
+     "start": 37.194,
+     "end": 37.194
+    },
+    {
+     "w": "mana-mana,",
+     "start": 37.194,
+     "end": 38.074
+    },
+    {
+     "w": "yang",
+     "start": 38.222,
+     "end": 38.394
+    },
+    {
+     "w": "netes",
+     "start": 38.474,
+     "end": 38.714
+    },
+    {
+     "w": "cuma",
+     "start": 38.714,
+     "end": 38.954
+    },
+    {
+     "w": "satu",
+     "start": 39.034,
+     "end": 39.194
+    },
+    {
+     "w": "sambungan.",
+     "start": 39.194,
+     "end": 39.834
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "01 · SATU TETES",
+   "text": "Kalau tutup kotaknya renggang, atau kabelnya retak, air bisa masuk.",
+   "start": 40.242,
+   "end": 44.189,
+   "words": [
+    {
+     "w": "Kalau",
+     "start": 40.25,
+     "end": 40.49
+    },
+    {
+     "w": "tutup",
+     "start": 40.57,
+     "end": 40.89
+    },
+    {
+     "w": "kotaknya",
+     "start": 40.89,
+     "end": 41.29
+    },
+    {
+     "w": "renggang,",
+     "start": 41.37,
+     "end": 41.85
+    },
+    {
+     "w": "atau",
+     "start": 42.007,
+     "end": 42.25
+    },
+    {
+     "w": "kabelnya",
+     "start": 42.33,
+     "end": 42.65
+    },
+    {
+     "w": "retak,",
+     "start": 42.65,
+     "end": 43.13
+    },
+    {
+     "w": "air",
+     "start": 43.289,
+     "end": 43.53
+    },
+    {
+     "w": "bisa",
+     "start": 43.61,
+     "end": 43.77
+    },
+    {
+     "w": "masuk.",
+     "start": 43.77,
+     "end": 44.17
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "01 · SATU TETES",
+   "text": "Cahaya di dalam fiber jadi lemah pas lewat sambungan basah.",
+   "start": 44.789,
+   "end": 48.011,
+   "words": [
+    {
+     "w": "Cahaya",
+     "start": 44.793,
+     "end": 45.193
+    },
+    {
+     "w": "di",
+     "start": 45.193,
+     "end": 45.273
+    },
+    {
+     "w": "dalam",
+     "start": 45.353,
+     "end": 45.513
+    },
+    {
+     "w": "fiber",
+     "start": 45.513,
+     "end": 45.913
+    },
+    {
+     "w": "jadi",
+     "start": 45.913,
+     "end": 46.153
+    },
+    {
+     "w": "lemah",
+     "start": 46.233,
+     "end": 46.553
+    },
+    {
+     "w": "pas",
+     "start": 46.598,
+     "end": 46.793
+    },
+    {
+     "w": "lewat",
+     "start": 46.873,
+     "end": 47.113
+    },
+    {
+     "w": "sambungan",
+     "start": 47.113,
+     "end": 47.593
+    },
+    {
+     "w": "basah.",
+     "start": 47.593,
+     "end": 47.993
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "01 · SATU TETES",
+   "text": "Modem masih nyala, tapi internetnya putus-nyambung.",
+   "start": 48.331,
+   "end": 51.637,
+   "words": [
+    {
+     "w": "Modem",
+     "start": 48.337,
+     "end": 48.657
+    },
+    {
+     "w": "masih",
+     "start": 48.737,
+     "end": 48.977
+    },
+    {
+     "w": "nyala,",
+     "start": 48.977,
+     "end": 49.457
+    },
+    {
+     "w": "tapi",
+     "start": 49.616,
+     "end": 50.177
+    },
+    {
+     "w": "internetnya",
+     "start": 50.258,
+     "end": 50.657
+    },
+    {
+     "w": "putus-nyambung.",
+     "start": 50.657,
+     "end": 51.617
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Satu: lihat kabel dari tiang ke rumahmu. Ada yang kendor, atau kena tetesan talang?",
+   "start": 52.637,
+   "end": 57.615,
+   "words": [
+    {
+     "w": "Satu:",
+     "start": 52.64,
+     "end": 53.2
+    },
+    {
+     "w": "lihat",
+     "start": 53.329,
+     "end": 53.68
+    },
+    {
+     "w": "kabel",
+     "start": 53.76,
+     "end": 54.0
+    },
+    {
+     "w": "dari",
+     "start": 54.0,
+     "end": 54.24
+    },
+    {
+     "w": "tiang",
+     "start": 54.24,
+     "end": 54.48
+    },
+    {
+     "w": "ke",
+     "start": 54.48,
+     "end": 54.56
+    },
+    {
+     "w": "rumahmu.",
+     "start": 54.56,
+     "end": 55.12
+    },
+    {
+     "w": "Ada",
+     "start": 55.394,
+     "end": 55.52
+    },
+    {
+     "w": "yang",
+     "start": 55.6,
+     "end": 55.6
+    },
+    {
+     "w": "kendor,",
+     "start": 55.6,
+     "end": 56.16
+    },
+    {
+     "w": "atau",
+     "start": 56.321,
+     "end": 56.64
+    },
+    {
+     "w": "kena",
+     "start": 56.72,
+     "end": 56.8
+    },
+    {
+     "w": "tetesan",
+     "start": 56.8,
+     "end": 57.28
+    },
+    {
+     "w": "talang?",
+     "start": 57.36,
+     "end": 57.6
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Dua: pas lagi lemot, catat jamnya, terus foto lampu modemnya.",
+   "start": 57.935,
+   "end": 62.016,
+   "words": [
+    {
+     "w": "Dua:",
+     "start": 57.976,
+     "end": 58.376
+    },
+    {
+     "w": "pas",
+     "start": 58.658,
+     "end": 58.776
+    },
+    {
+     "w": "lagi",
+     "start": 58.776,
+     "end": 59.016
+    },
+    {
+     "w": "lemot,",
+     "start": 59.016,
+     "end": 59.416
+    },
+    {
+     "w": "catat",
+     "start": 59.607,
+     "end": 59.816
+    },
+    {
+     "w": "jamnya,",
+     "start": 59.816,
+     "end": 60.376
+    },
+    {
+     "w": "terus",
+     "start": 60.529,
+     "end": 60.776
+    },
+    {
+     "w": "foto",
+     "start": 60.776,
+     "end": 61.096
+    },
+    {
+     "w": "lampu",
+     "start": 61.176,
+     "end": 61.336
+    },
+    {
+     "w": "modemnya.",
+     "start": 61.336,
+     "end": 61.896
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Tiga: lapor ke ISP, bilang lemotnya tiap hujan.",
+   "start": 62.336,
+   "end": 65.668,
+   "words": [
+    {
+     "w": "Tiga:",
+     "start": 62.343,
+     "end": 62.823
+    },
+    {
+     "w": "lapor",
+     "start": 62.957,
+     "end": 63.303
+    },
+    {
+     "w": "ke",
+     "start": 63.383,
+     "end": 63.463
+    },
+    {
+     "w": "ISP,",
+     "start": 63.463,
+     "end": 63.863
+    },
+    {
+     "w": "bilang",
+     "start": 64.172,
+     "end": 64.503
+    },
+    {
+     "w": "lemotnya",
+     "start": 64.503,
+     "end": 64.983
+    },
+    {
+     "w": "tiap",
+     "start": 65.063,
+     "end": 65.223
+    },
+    {
+     "w": "hujan.",
+     "start": 65.223,
+     "end": 65.623
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Kalimat itu nyuruh teknisi ngecek di luar, bukan cuma nyuruh kamu restart.",
+   "start": 65.988,
+   "end": 69.912,
+   "words": [
+    {
+     "w": "Kalimat",
+     "start": 65.988,
+     "end": 66.383
+    },
+    {
+     "w": "itu",
+     "start": 66.383,
+     "end": 66.623
+    },
+    {
+     "w": "nyuruh",
+     "start": 66.703,
+     "end": 66.943
+    },
+    {
+     "w": "teknisi",
+     "start": 66.943,
+     "end": 67.343
+    },
+    {
+     "w": "ngecek",
+     "start": 67.343,
+     "end": 67.663
+    },
+    {
+     "w": "di",
+     "start": 67.663,
+     "end": 67.743
+    },
+    {
+     "w": "luar,",
+     "start": 67.823,
+     "end": 68.223
+    },
+    {
+     "w": "bukan",
+     "start": 68.364,
+     "end": 68.623
+    },
+    {
+     "w": "cuma",
+     "start": 68.703,
+     "end": 68.863
+    },
+    {
+     "w": "nyuruh",
+     "start": 68.863,
+     "end": 69.183
+    },
+    {
+     "w": "kamu",
+     "start": 69.263,
+     "end": 69.343
+    },
+    {
+     "w": "restart.",
+     "start": 69.343,
+     "end": 70.063
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "RECAP",
+   "text": "Di kerjaan, tiap ada yang bilang gara-gara cuaca, aku tanya balik: basahnya di mana?",
+   "start": 70.912,
+   "end": 75.98,
+   "words": [
+    {
+     "w": "Di",
+     "start": 70.936,
+     "end": 71.016
+    },
+    {
+     "w": "kerjaan,",
+     "start": 71.096,
+     "end": 71.656
+    },
+    {
+     "w": "tiap",
+     "start": 71.87,
+     "end": 72.056
+    },
+    {
+     "w": "ada",
+     "start": 72.136,
+     "end": 72.296
+    },
+    {
+     "w": "yang",
+     "start": 72.296,
+     "end": 72.456
+    },
+    {
+     "w": "bilang",
+     "start": 72.536,
+     "end": 72.696
+    },
+    {
+     "w": "gara-gara",
+     "start": 72.696,
+     "end": 73.336
+    },
+    {
+     "w": "cuaca,",
+     "start": 73.336,
+     "end": 73.976
+    },
+    {
+     "w": "aku",
+     "start": 74.121,
+     "end": 74.296
+    },
+    {
+     "w": "tanya",
+     "start": 74.376,
+     "end": 74.536
+    },
+    {
+     "w": "balik:",
+     "start": 74.536,
+     "end": 74.856
+    },
+    {
+     "w": "basahnya",
+     "start": 75.092,
+     "end": 75.416
+    },
+    {
+     "w": "di",
+     "start": 75.496,
+     "end": 75.496
+    },
+    {
+     "w": "mana?",
+     "start": 75.496,
+     "end": 75.896
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "RECAP",
+   "text": "Hujan itu cuma pemicu. Celahnya udah ada dari dulu.",
+   "start": 76.3,
+   "end": 79.552,
+   "words": [
+    {
+     "w": "Hujan",
+     "start": 76.312,
+     "end": 76.632
+    },
+    {
+     "w": "itu",
+     "start": 76.712,
+     "end": 76.792
+    },
+    {
+     "w": "cuma",
+     "start": 76.792,
+     "end": 77.032
+    },
+    {
+     "w": "pemicu.",
+     "start": 77.032,
+     "end": 77.752
+    },
+    {
+     "w": "Celahnya",
+     "start": 78.048,
+     "end": 78.392
+    },
+    {
+     "w": "udah",
+     "start": 78.392,
+     "end": 78.712
+    },
+    {
+     "w": "ada",
+     "start": 78.792,
+     "end": 78.872
+    },
+    {
+     "w": "dari",
+     "start": 78.872,
+     "end": 79.112
+    },
+    {
+     "w": "dulu.",
+     "start": 79.192,
+     "end": 79.432
+    }
+   ]
+  },
+  {
+   "id": "L20",
+   "chapter": "OUTRO",
+   "text": "Episode empat: restart router, beneran ngefek?",
+   "start": 80.552,
+   "end": 83.545,
+   "words": [
+    {
+     "w": "Episode",
+     "start": 80.584,
+     "end": 80.984
+    },
+    {
+     "w": "empat:",
+     "start": 81.064,
+     "end": 81.384
+    },
+    {
+     "w": "restart",
+     "start": 81.762,
+     "end": 82.184
+    },
+    {
+     "w": "router,",
+     "start": 82.184,
+     "end": 82.584
+    },
+    {
+     "w": "beneran",
+     "start": 82.731,
+     "end": 83.224
+    },
+    {
+     "w": "ngefek?",
+     "start": 83.224,
+     "end": 83.624
+    }
+   ]
+  },
+  {
+   "id": "L21",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 83.865,
+   "end": 85.665,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 83.865,
+     "end": 84.377
+    },
+    {
+     "w": "biar",
+     "start": 84.513,
+     "end": 84.697
+    },
+    {
+     "w": "nggak",
+     "start": 84.777,
+     "end": 84.937
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 84.937,
+     "end": 85.577
+    }
+   ]
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 # WiFi lemot pas hujan: mitos atau beneran?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/wifi-ep03-lemot-pas-hujan/`](../videos/wifi-ep03-lemot-pas-hujan/)
 - **Pilar:** B · broad · **Format:** QUICK
 - **Slug:** wifi-ep03-lemot-pas-hujan
 - **Seri:** #14 Bongkar WiFi Rumah — EP 03

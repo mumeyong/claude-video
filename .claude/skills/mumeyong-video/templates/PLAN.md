@@ -7,7 +7,7 @@
 pilar: B
 metafora: <satu dunia, singkat>
 signature: <gerakan khas, singkat>
-look: <classic | classic+reel | reel>   (default: classic — Apple craft §6f)
+look: <classic | classic+reel | reel> + <flat | lit | paper>   (default: classic — Apple craft §6f; material §6g ≠ previous video)
 color: <nama> `#RRGGBB`
 hook: <format hook>
 struktur: <struktur>
@@ -20,6 +20,7 @@ durasi: <detik>
 | | |
 |---|---|
 | Look (STYLE §6e) | **classic + Apple craft (default)** · classic + 1–3 reel moves (sebut) · reel (teaser/trailer, atau alasan jelas) |
+| Material (STYLE §6g) | **lit** · paper · flat — beda dari video sebelumnya (`ideas/REGISTRY.md`) · hero ngisi 60–80 % frame, boleh kepotong (`bleed=True`) |
 | Motion (STYLE §6d + §6f) | reveal … (rise · wipe · ink · mask) · glue … (Morph · Rig · depth_swap · focus_pull · bento · sheet) · exit quiet · spring smooth/hero (+ snappy buat UI kecil) — reveal + glue beda dari video sebelumnya |
 | Apple craft (§6f) | leader tiap bab = … · hold terpanjang di … (dolly) · tempo slow–slow–snap: snap di … · kontinuitas antar bab: … |
 | Metafora | … (≥ 3 bab) |

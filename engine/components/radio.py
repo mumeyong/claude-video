@@ -132,9 +132,9 @@ def airwaves(c, cx, cy, p, r_max, color=None, n=3, a0=-0.5, a1=0.5, width=6, alp
         cx_.stroke()
 
 
-def data_center(c, x, y, w, h, t=0.0, lamp=0.0, color=None, alpha=1.0, label="DATA CENTER"):
+def data_center(c, x, y, w, h, t=0.0, lamp=0.0, color=None, alpha=1.0, label="DATA CENTER", roof=True):
     """Flat windowless data-center block (x, y, w, h) with rows of rack vents, a small ON AIR lamp on the roof
-    (lamp 0..1) and a mono label. Returns the lamp centre."""
+    (lamp 0..1, roof=False leaves it off) and a mono label. Returns the lamp centre."""
     if alpha <= 0.002:
         return (x + w / 2, y)
     c.shadow(x, y, w, h, 14, 26, 10, 0.08 * alpha)
@@ -153,5 +153,6 @@ def data_center(c, x, y, w, h, t=0.0, lamp=0.0, color=None, alpha=1.0, label="DA
     c.text(x + w / 2, y + h * 0.2, label, F["mono_med"], max(17.0, min(22.0, w * 0.085)), mix(INK, PAPER, 0.3),
            alpha, 0.14, align="c")
     lx, ly = x + w / 2, y - w * 0.17
-    on_air(c, lx, ly, w * 0.62, lamp, color=color, alpha=alpha, mount=False)
+    if roof:
+        on_air(c, lx, ly, w * 0.62, lamp, color=color, alpha=alpha, mount=False)
     return (lx, ly)

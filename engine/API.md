@@ -93,6 +93,14 @@ One line per public function: `name(signature)` — first docstring line. Import
   - `.words(self, c)` — 
 - `kicker(c, t, t_in, t_out, label, color, x=None, y=None)` — '● 02 · NASKAH' — mono label with a chapter-colored dot.
 
+## components/hujan.py — Rainy-day home components (first used in "wifi-ep03-lemot-pas-hujan", Bongkar WiFi Rumah EP 03).
+- `along(pts, f)` — (x, y, angle) at arc-length fraction f (0..1) of polyline pts.
+- `hujan(c, box, t, density=1.0, color=None, n=110, speed=1700, length=54, slant=0.16, width=3.0, seed=1, alpha=1.0)` — Rain streaks inside box (x, y, w, h), clipped to it. density 0..1 thins the rain streak by streak (each has
+- `odp_box(c, cx, cy, w, t, lid=0.0, wet=0.0, glow=1.0, label="ODP", color=None, alpha=1.0)` — Fiber distribution box (ODP) on a pole, close-up, centred on (cx, cy), width w (height 1.3 w). The front is
+- `rumah_geo(x, base_y, w, h)` — Geometry of rumah_potong drawn with the same x, base_y, w, h (no drawing): dict with router, phone,
+- `rumah_potong(c, x, base_y, w, h, t, light=1.0, loss=0.0, screen=None, odp_lid=0.0, rain=0.0, color=None, alpha=1.0)` — Cut-away house in the rain, scene (x, base_y - h) → (x + w, base_y). Left 60 %: the house with its front wall
+- `tetes(c, cx, cy, s, color=None, alpha=1.0, stretch=0.0)` — One water drop, height s, its round belly centred on (cx, cy). stretch 0..1 pulls the tip up (falling).
+
 ## components/infra.py — Infrastructure explainer components (first used in Bongkar Arsitektur EP01).
 - `arch_diagram(c, t, nodes, edges, speed=0.6, packets=3)` — nodes: {id: node dict}; edges: [(from_id, to_id, draw_p, flow 0..1)]. Packets ride the edges.
 - `arch_node(c, nd)` — Draw one node dict: {x, y, w, h, kind, label, a, s, state, sub}.
@@ -253,7 +261,7 @@ One line per public function: `name(signature)` — first docstring line. Import
 
 ## components/radio.py — Radio-studio components (first used in "prompt-diproses-di-mana", reel look).
 - `airwaves(c, cx, cy, p, r_max, color=None, n=3, a0=-0.5, a1=0.5, width=6, alpha=1.0)` — Broadcast arcs leaving (cx, cy) toward angle range (a0, a1) radians (0 = right, π/2 = down); p 0..1 spreads
-- `data_center(c, x, y, w, h, t=0.0, lamp=0.0, color=None, alpha=1.0, label="DATA CENTER")` — Flat windowless data-center block (x, y, w, h) with rows of rack vents, a small ON AIR lamp on the roof
+- `data_center(c, x, y, w, h, t=0.0, lamp=0.0, color=None, alpha=1.0, label="DATA CENTER", roof=True)` — Flat windowless data-center block (x, y, w, h) with rows of rack vents, a small ON AIR lamp on the roof
 - `mic_studio(c, cx, cy, s, on=0.0, color=None, alpha=1.0, facing=-1)` — Broadcast microphone (capsule height s) centred on (cx, cy), hanging from a boom arm that reaches down to a
 - `on_air(c, cx, cy, w, on=0.0, label="ON AIR", color=None, alpha=1.0, mount=True)` — ON AIR box lamp centred on (cx, cy), width w (height 0.34 w). on 0..1 lights the panel (dark glass → color,
 - `paku_nota(c, cx, base_y, s, slips=(), color=None, alpha=1.0)` — Note spike (needle height s) standing on base_y with request slips impaled on it.
@@ -300,6 +308,11 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `qris_stand(c, cx, base_y, s, seed=1, color=None, name="Warung Es Teh", alpha=1.0)` — Acrylic QR standee on a counter: card (width s) with a header band, merchant name and the QR, on a foot.
 - `relay_track(c, x, y, w, h, xs, labels, t, baton_x=None, lit=(), active=None, back=0.0, slow=0.0, color=None, draw=1.0, dim=())` — Horizontal running track (band x, y, w, h) with runner tokens at xs (numbered), labels under them.
 - `slowmo_badge(c, x, y, t, speed="0,1×", tc="", frozen=0.0, alpha=1.0, align="r")` — Replay badge: '▶ 0,1×' (or '❚❚ TAHAN' when frozen) + a mono timecode. (x, y) = its right (or left) top.
+
+## components/setrika.py — Clothes-iron components (first used in "ai-butuh-listrik").
+- `pembangkit(c, x, base_y, w, h, steam=0.0, color=None, alpha=1.0, label="PEMBANGKIT LISTRIK")` — Power plant standing on base_y from x to x + w, height h: a curved cooling tower on the right, a turbine hall
+- `setrika(c, cx, base_y, s, lamp=0.0, color=None, alpha=1.0, cord=True, plate=True)` — Household iron, side view, tip to the right, standing on base_y; width s (height ≈ 0.6 s).
+- `uap_panas(c, cx, base_y, w, h, p, color=None, n=3, alpha=1.0, width=None, seed=0)` — Heat lines rising from (cx, base_y): n wavy strokes across w, each drawn bottom → top as p goes 0 → 1
 
 ## components/skilltree.py — Skill-tree components (first used in "jalur-karier-cloud").
 - `branch(c, x0, y0, x1, y1, p, color=None, width=6, ghost=1.0, alpha=1.0)` — Branch from a parent's top (x0, y0) up to a child's bottom (x1, y1) as a vertical S-curve.
@@ -348,6 +361,23 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `patchcord(c, x0, y0, x1, y1, bend=0.0, alpha=1.0)` — The short fiber patch cable behind the modem, from the wall socket (x0, y0) to the modem port (x1, y1).
 - `route_point(box, f)` — (x, y) at arc fraction f (0 = ISP office, 1 = house) of fiber_route drawn in box.
 
+## components/material.py (namespace `material.`) — Material layer (2026-10-12, STYLE §6g) — light, shade and texture, so a hero reads as a rendered object, not an icon.
+- `material.tone(color, k)` — k > 0 lightens toward white, k < 0 darkens toward black (alpha kept).
+- `material.tilt(look, seed=0)` — Hand-placed rotation (radians) for a part in the paper look; 0 otherwise. Same seed → same angle.
+- `material.rrect_path(x, y, w, h, r)` — Rounded rect path builder.
+- `material.poly_path(pts)` — Closed polygon path builder.
+- `material.circle_path(cx, cy, r)` — Circle path builder.
+- `material.drop_path(cx, cy, s, stretch=0.0)` — Water-drop outline (same geometry as hujan.tetes): height s, round belly centred on (cx, cy).
+- `material.drop_box(cx, cy, s, stretch=0.0)` — Bounding box of drop_path.
+- `material.body(c, look, path, bbox, color, alpha=1.0, form="box", r=None, lift=1.0, shadow=True)` — Fill a shape in the look's material. path(ctx) builds the shape (rrect_path, poly_path, circle_path,
+- `material.inset(c, look, path, bbox, alpha=1.0)` — Recess (a window cut into a body, a tray): darker toward its top-left edge, as if the rim shades it.
+- `material.caustic(c, look, cx, y, w, color, alpha=1.0)` — Light focused through a drop onto the surface under it (lit only): a soft bright ellipse in the drop's color.
+- `material.spill(c, look, cx, cy, r, color, amount=1.0)` — Light of a glowing part falling on what's around it (lit: soft; paper: a flat pale disc; flat: nothing).
+- `material.cable(c, look, pts, width, color, alpha=1.0, shadow=True)` — A round cable along polyline pts. lit: shadow on the surface behind, dark edge, body, a highlight line
+- `material.stage(c, look, color, alpha=1.0, horizon=0.66)` — Full-frame ground for a look, tinted by the video's signature color. lit: a studio sweep (light from the
+- `material.rain(c, t, look, box, color, density=1.0, n=70, speed=1500, length=70, slant=0.16, seed=3, alpha=1.0)` — Background rain in a look (pure function of t). lit: out-of-focus streaks (a wide faint stroke + a thin
+- `material.finish(c, look, alpha=1.0)` — Frame finish for a look (use in Video.finish): static film grain + a soft vignette. flat: nothing.
+
 ## ease (engine.ease)
 - `clamp(x, a=0.0, b=1.0)` — 
 - `lerp(a, b, t)` — 
@@ -368,13 +398,13 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `curve(name)` — Named easing from tk.EASE: 'apple' · 'apple_out' · 'apple_in' · 'apple_in_out' · 'apple_dolly'.
 - `ios_spring(dt, response=0.5, damping=1.0)` — SwiftUI-style spring by real time: value 0→1 `dt` seconds after the move starts.
 - `ios_settle(response=0.5, damping=1.0, eps=0.002)` — Seconds until an ios_spring stays within eps of 1 (its visual duration).
-- `ease(t, start, dur, fn=<function out_expo at 0x7f0454e1d760>)` — 
-- `inout(t, t_in, t_out, d_in=0.55, d_out=0.35, fn_in=<function out_expo at 0x7f0454e1d760>, fn_out=<function in_cubic at 0x7f0454e1d580>)` — Presence of an element that enters at t_in and leaves at t_out.
+- `ease(t, start, dur, fn=<function out_expo at 0x7fc506fd9760>)` — 
+- `inout(t, t_in, t_out, d_in=0.55, d_out=0.35, fn_in=<function out_expo at 0x7fc506fd9760>, fn_out=<function in_cubic at 0x7fc506fd9580>)` — Presence of an element that enters at t_in and leaves at t_out.
 - `pulse(t, start, dur)` — 0→1→0 bump over the window (sin).
 - `blink(t, hz=1.0)` — Caret blink: 1 for the first half of each period.
 
 ## Video (engine.video)
-- `.add(self, start, end, fn, z=0)` — Register fn(c, t) to draw while start <= t < end (include exit time in end!).
+- `.add(self, start, end, fn, z=0, bleed=False)` — Register fn(c, t) to draw while start <= t < end (include exit time in end!).
 - `.all_cues(self)` — Explicit cues + cues generated by the chat track and cursors.
 - `.chapter(self, num, label, start, end, dark=False)` — 
 - `.chapter_at(self, t)` — 
@@ -418,7 +448,7 @@ One line per public function: `name(signature)` — first docstring line. Import
 
 ## camera `v.camera` (engine.camera)
 - `.apply(self, ctx, t)` — 
-- `.focus(self, t, box, zoom=1.06, dur=0.8, ease=<function in_out_cubic at 0x7f0454e1d620>)` — 
-- `.key(self, t, zoom=1.0, x=None, y=None, dur=0.8, ease=<function in_out_cubic at 0x7f0454e1d620>)` — 
-- `.reset(self, t, dur=0.8, ease=<function in_out_cubic at 0x7f0454e1d620>)` — 
+- `.focus(self, t, box, zoom=1.06, dur=0.8, ease=<function in_out_cubic at 0x7fc506fd9620>)` — 
+- `.key(self, t, zoom=1.0, x=None, y=None, dur=0.8, ease=<function in_out_cubic at 0x7fc506fd9620>)` — 
+- `.reset(self, t, dur=0.8, ease=<function in_out_cubic at 0x7fc506fd9620>)` — 
 - `.state(self, t)` — 

@@ -32,7 +32,7 @@ format tetap: yang kamu lihat → yang sebenernya kejadian → yang bisa kamu la
 |---|---|---|---|
 | 01 | Lampu modem merah "LOS" itu artinya apa? | [`wifi-ep01-lampu-los`](../videos/_arsip/wifi-ep01-lampu-los/) | ✅ tayang |
 | 02 | [#20 WiFi connected, tapi no internet. Kok bisa?](20-wifi-ep02-connected-no-internet.md) | [`wifi-ep02-connected-no-internet`](../videos/_arsip/wifi-ep02-connected-no-internet/) | ✅ tayang |
-| 03 | [#21 WiFi lemot pas hujan: mitos atau beneran?](21-wifi-ep03-lemot-pas-hujan.md) | — | 💡 ide · ⚠️ cek fakta |
+| 03 | [#21 WiFi lemot pas hujan: mitos atau beneran?](21-wifi-ep03-lemot-pas-hujan.md) | [`wifi-ep03-lemot-pas-hujan`](../videos/wifi-ep03-lemot-pas-hujan/) | 🎬 produksi · ⚠️ cek fakta |
 | 04 | [#22 Restart router beneran ngefek?](22-wifi-ep04-restart-router.md) | — | 💡 ide |
 | 05 | [#23 Kenapa internet lemot tiap jam 8 malam?](23-wifi-ep05-lemot-jam-8-malam.md) | — | 💡 ide |
 
@@ -42,7 +42,7 @@ format tetap: yang kamu lihat → yang sebenernya kejadian → yang bisa kamu la
 |---|---|---|---|---|---|
 | 15 | [Kenapa ChatGPT kadang ngarang jawaban?](15-ai-ngarang-jawaban.md) | 🎬 produksi — [`videos/ai-ngarang-jawaban`](../videos/ai-ngarang-jawaban/) | 60–75 s | keyboard_hp, suggest_bar, tebakan | QUICK · keyboard HP nebak kata · classic + reel moves |
 | 16 | [Kamu ngetik prompt — diproses di mana?](16-prompt-diproses-di-mana.md) | 🎬 produksi — [`videos/prompt-diproses-di-mana`](../videos/prompt-diproses-di-mana/) | 60–75 s | on_air, mic_studio, paku_nota (+ gpu_card ulang) | QUICK · studio radio ON AIR · look reel · link ke EP07 |
-| 17 | [Kenapa AI butuh listrik segede satu kota?](17-ai-butuh-listrik.md) | 💡 ide | 60–75 s | — | QUICK · ⚠️ angka wajib bersumber |
+| 17 | [Kenapa AI butuh listrik segede satu kota?](17-ai-butuh-listrik.md) | 🎬 produksi — [`videos/ai-butuh-listrik`](../videos/ai-butuh-listrik/) | 60–75 s | setrika, uap_panas, pembangkit (+ gpu_card, data_center ulang) | QUICK · setrika rumah = GPU · classic + Apple craft · ⚠️ angka wajib bersumber |
 | 18 | [AI gratis itu — siapa yang bayar?](18-ai-gratis-siapa-bayar.md) | 💡 ide | 60–75 s | receipt ulang | QUICK · sudut FinOps |
 | 31 | [Kenapa AI lupa isi obrolan yang panjang?](31-ai-lupa-obrolan-panjang.md) | 💡 ide | 60–75 s | whiteboard | QUICK · papan tulis dihapus (context window) |
 | 32 | [Filter AI di kamera HP: diproses di HP atau di server?](32-filter-ai-hp-atau-server.md) | 💡 ide | 60–75 s | chip_npu | QUICK · printer rumah vs percetakan |

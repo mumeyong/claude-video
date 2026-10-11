@@ -30,6 +30,8 @@ hasil/<slug>/
 | — | [foto-whatsapp-lewat-mana](_tayang/foto-whatsapp-lewat-mana/) | ± 74 s | — | ✅ tayang |
 | — | [ai-ngarang-jawaban](ai-ngarang-jawaban/) | ± 74 s | — | 🎬 produksi |
 | — | [prompt-diproses-di-mana](prompt-diproses-di-mana/) | ± 77 s | — | 🎬 produksi |
+| — | [ai-butuh-listrik](ai-butuh-listrik/) | ± 74 s | — | 🎬 produksi |
+| — | [wifi-ep03-lemot-pas-hujan](wifi-ep03-lemot-pas-hujan/) | ± 74 s | — | 🎬 produksi |
 
 ## C · Karier
 

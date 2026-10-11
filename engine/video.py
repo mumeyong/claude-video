@@ -43,6 +43,7 @@ class Layer:
     end: float
     fn: object             # fn(c, t)  — t is GLOBAL time
     z: int = 0
+    bleed: bool = False    # hero art may run past the safe column / off-frame (check skips the safe-zone test)
 
 
 @dataclass
@@ -59,6 +60,8 @@ class Video:
     hud: bool = True
     ground: tuple = None                        # flat background color instead of tinted glows (reel layer: paper)
     camera: object = field(default_factory=Camera)   # applies to layers with z < 80
+    stage: object = None                        # stage(c, t) replaces the background (material looks, §6g)
+    finish: object = None                       # finish(c, t) after the content, under the HUD (grain, vignette)
 
     def __post_init__(self):
         self.beat = Beat(self.bpm, self.beat_offset)
@@ -70,9 +73,10 @@ class Video:
         self.chapters.sort(key=lambda c: c.start)
         return ch
 
-    def add(self, start, end, fn, z=0):
-        """Register fn(c, t) to draw while start <= t < end (include exit time in end!)."""
-        self.layers.append(Layer(start, end, fn, z))
+    def add(self, start, end, fn, z=0, bleed=False):
+        """Register fn(c, t) to draw while start <= t < end (include exit time in end!).
+        bleed=True: hero art that is meant to crop at the frame edge (never text) — check skips the safe zone."""
+        self.layers.append(Layer(start, end, fn, z, bleed))
         return fn
 
     def sfx(self, name, t, gain=1.0):
@@ -123,11 +127,16 @@ class Video:
     # drawing ----------------------------------------------------------------
     def draw(self, c, t):
         c.dark = self.dark_amount(t)
-        draw_background(c, self, t)
+        if self.stage is not None:
+            self.stage(c, t)
+        else:
+            draw_background(c, self, t)
         active = sorted((ly for ly in self.layers if ly.start <= t < ly.end), key=lambda l: l.z)
         for ly in active:  # z < 100: content
             if ly.z < 100:
                 self._run(c, ly, t)
+        if self.finish is not None:
+            self.finish(c, t)
         if self.chat is not None:
             self.chat.draw(c, t)
         if self.hud:

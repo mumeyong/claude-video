@@ -8,7 +8,7 @@ from .pill import chip, tag, word_pill, size_label, select_box, strike
 from .chat import ChatTrack
 from .widgets import stat, big_number, waveform, rec_bar, filmstrip, phone, comment, Cursor
 from .recap import step_row, rule_box, connector, segments, follow_button, contact_pill
-from . import window, icons
+from . import window, icons, material
 from .charts import (bill_counter, cost_chart, usage_meter, seat_grid, price_bars, day_timeline, block_split,
                      odometer, clock24, moon, receipt, stamp, note, chart_point)
 from .infra import (particle_flow, toll_plaza, booth, car, arch_diagram, arch_node, load_graph, stack_layers,
@@ -46,6 +46,8 @@ from .skilltree import branch, skill_tile, skill_tree, name_card, RED as TREE_RE
 from .kuis import flip_card, countdown_ring, TEAL as KUIS_TEAL
 from .tebak import keyboard_hp, suggest_bar, token_line, KB_RATIO, PURPLE as TEBAK_PURPLE
 from .radio import on_air, mic_studio, slip, paku_nota, airwaves, data_center, ORANGE as RADIO_ORANGE
+from .setrika import setrika, uap_panas, pembangkit, CORAL as SETRIKA_CORAL
+from .hujan import hujan, tetes, odp_box, rumah_potong, rumah_geo, along, TEAL as HUJAN_TEAL
 from .reel import (smear, smear_p, out_p, smear_words, viewfinder, dot_gather, orbit, iris, pixel_wipe, highlight,
                    highlight_phrase, type_clip, reel_chip, float_chips, pill as reel_pill, count_pill, formula,
                    pop_card, tilt_plane, stat_panel, verb_slam, end_card, reel_sfx, ink_on, WORLDS as REEL_WORLDS)

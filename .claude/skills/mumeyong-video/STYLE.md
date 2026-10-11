@@ -261,6 +261,38 @@ glue (Morph · Rig · depth_swap · focus_pull · bento · sheet) · the video's
 **Self-check before handing over:** `check --dry` motion table has no `!`, every chapter's `still` ≥ 45 %, no `CROWD`,
 no `STACK`. Then the 3-frame test (§8b) — and a motion test: "would an Apple motion designer remove anything?" If yes, remove it.
 
+## 6g. Material layer — the look is how things are LIT (2026-10-12, `components/material.py`, proof: `videos/_lab/look-lab`)
+
+Viewers said the videos look "cheap / copied from Claude". Diagnosis from the contact sheets: every video changed its
+metaphor, but every frame was drawn the same way — flat shapes, one color, no light, a small icon in the middle of an
+empty frame, headline top-left. Motion craft (§6f) can't fix that: the problem is *what* moves, not how.
+
+**1. Look = material (PLAN.md picks one; rotate like the metaphor — not the same as the previous video):**
+| Look | Feel | Code |
+|---|---|---|
+| `flat` | the old look — plain fills | `look="flat"` |
+| `lit` | Apple product film: soft studio light from the top-left, gradient body, edges a touch darker (AO), bright top rim (light catching the material), sheen, cast shadow that grows with the object, studio sweep ground, grain + vignette | `look="lit"` |
+| `paper` | cut paper: flat color + fibre texture, short stacked shadow, paper ground, parts placed a touch off-square | `look="paper"` |
+
+Primitives (all take `look=`): `material.body` (any shape via `rrect_path` / `poly_path` / `circle_path` /
+`drop_path`; `form="box" | "cyl" | "drop"`), `material.cable`, `material.inset` (recesses), `material.spill` (light
+falling on things around a glowing part), `material.caustic`, `material.rain`. Frame: `v.stage = …material.stage(…)`
+(replaces the background) and `v.finish = …material.finish(…)` (grain + vignette, under the HUD). Tokens: `tk.LOOK`.
+New hero components take a `look=` parameter and draw with these — never a second, private shading recipe.
+
+**2. Big hero.** The hero fills 60–80 % of the frame and may crop at the frame edge (`v.add(…, bleed=True)` — art only,
+never text; `check` skips the safe-zone test for bleed layers). One hero, one idea per frame. A small object floating in
+empty space is the #1 "AI slop" tell. Text stays in the safe column.
+
+**3. Continuity.** The hero stays on screen between chapters (shared element): it grows, dissolves to the next take, or
+changes look ON the spoken word — never exit-then-enter.
+
+**4. Volume from light, never extrusion.** §8's "3D extrusions" ban (extruded WordArt type/logos, bevel-and-emboss)
+still stands. `lit` gets depth from gradients, shadows and rim light only. `spill` is light falling on a surface — not
+a neon glow. Bigger objects get deeper, softer shadows (apple-design skill: bigger surfaces read thicker).
+
+**5. Brand DNA is unchanged** in every look: HUD, fonts, accent blue for words/UI, chapter dots, outro, voice.
+
 ## 7. Sound
 
 - Voice on top (recorded by the user, one take). Music bed side-chain ducked under voice (own track −19 dB,
@@ -296,7 +328,8 @@ no `STACK`. Then the 3-frame test (§8b) — and a motion test: "would an Apple 
 
 ## 8. LARANGAN (banned — biar nggak keliatan generik)
 
-- ✗ Stock gradients (purple→pink), neon glow, glassmorphism blur panels, lens flares, 3D extrusions.
+- ✗ Stock gradients (purple→pink), neon glow, glassmorphism blur panels, lens flares, 3D extrusions (extruded type/logos —
+  volume by light in the `lit` look, §6g, is fine).
 - ✗ Emoji as decoration, clip-art icons, drop shadows darker than 12% in light mode.
 - ✗ More than one accent color in a frame (chapter dots excepted), any accent other than `#1F5EFF`.
 - ✗ Centered body text in light chapters (everything is left-aligned on the column; outro is the only centered screen).
