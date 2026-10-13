@@ -1,0 +1,943 @@
+{
+ "source": "tts",
+ "voice": "cartesia:e0445740-223f-45c5-8038-8ff25e49f342",
+ "tts": "cartesia:sonic-3.6:e0445740-223f-45c5-8038-8ff25e49f342:1.0:off",
+ "duration": 64.36,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Pesan pertama, aku udah bilang namaku. // Satu jam kemudian, dia nanya: nama kamu siapa?",
+   "start": 0.4,
+   "end": 5.649,
+   "words": [
+    {
+     "w": "Pesan",
+     "start": 0.4,
+     "end": 0.631
+    },
+    {
+     "w": "pertama,",
+     "start": 0.631,
+     "end": 1.271
+    },
+    {
+     "w": "aku",
+     "start": 1.423,
+     "end": 1.591
+    },
+    {
+     "w": "udah",
+     "start": 1.591,
+     "end": 1.831
+    },
+    {
+     "w": "bilang",
+     "start": 1.831,
+     "end": 2.071
+    },
+    {
+     "w": "namaku.",
+     "start": 2.151,
+     "end": 2.551
+    },
+    {
+     "w": "//",
+     "start": 2.711,
+     "end": 2.831
+    },
+    {
+     "w": "Satu",
+     "start": 2.831,
+     "end": 2.951
+    },
+    {
+     "w": "jam",
+     "start": 2.951,
+     "end": 3.191
+    },
+    {
+     "w": "kemudian,",
+     "start": 3.191,
+     "end": 3.831
+    },
+    {
+     "w": "dia",
+     "start": 3.924,
+     "end": 4.151
+    },
+    {
+     "w": "nanya:",
+     "start": 4.151,
+     "end": 4.391
+    },
+    {
+     "w": "nama",
+     "start": 4.741,
+     "end": 5.031
+    },
+    {
+     "w": "kamu",
+     "start": 5.031,
+     "end": 5.191
+    },
+    {
+     "w": "siapa?",
+     "start": 5.271,
+     "end": 5.591
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Dia nggak pikun. // Dia emang nggak punya ingatan.",
+   "start": 5.969,
+   "end": 8.908,
+   "words": [
+    {
+     "w": "Dia",
+     "start": 5.987,
+     "end": 6.148
+    },
+    {
+     "w": "nggak",
+     "start": 6.228,
+     "end": 6.308
+    },
+    {
+     "w": "pikun.",
+     "start": 6.308,
+     "end": 6.948
+    },
+    {
+     "w": "//",
+     "start": 7.287,
+     "end": 7.437
+    },
+    {
+     "w": "Dia",
+     "start": 7.437,
+     "end": 7.588
+    },
+    {
+     "w": "emang",
+     "start": 7.588,
+     "end": 7.828
+    },
+    {
+     "w": "nggak",
+     "start": 7.908,
+     "end": 7.988
+    },
+    {
+     "w": "punya",
+     "start": 8.068,
+     "end": 8.228
+    },
+    {
+     "w": "ingatan.",
+     "start": 8.228,
+     "end": 8.868
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "00 · BACA ULANG",
+   "text": "AI nggak nyimpen obrolan kamu di kepalanya.",
+   "start": 9.908,
+   "end": 12.543,
+   "words": [
+    {
+     "w": "AI",
+     "start": 9.943,
+     "end": 10.343
+    },
+    {
+     "w": "nggak",
+     "start": 10.343,
+     "end": 10.583
+    },
+    {
+     "w": "nyimpen",
+     "start": 10.583,
+     "end": 10.983
+    },
+    {
+     "w": "obrolan",
+     "start": 10.983,
+     "end": 11.463
+    },
+    {
+     "w": "kamu",
+     "start": 11.543,
+     "end": 11.783
+    },
+    {
+     "w": "di",
+     "start": 11.863,
+     "end": 11.863
+    },
+    {
+     "w": "kepalanya.",
+     "start": 11.863,
+     "end": 12.423
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · BACA ULANG",
+   "text": "Tiap kamu kirim pesan, aplikasinya ngirim ulang seluruh obrolan, dari baris pertama.",
+   "start": 12.863,
+   "end": 17.69,
+   "words": [
+    {
+     "w": "Tiap",
+     "start": 12.883,
+     "end": 13.123
+    },
+    {
+     "w": "kamu",
+     "start": 13.123,
+     "end": 13.363
+    },
+    {
+     "w": "kirim",
+     "start": 13.363,
+     "end": 13.603
+    },
+    {
+     "w": "pesan,",
+     "start": 13.603,
+     "end": 14.243
+    },
+    {
+     "w": "aplikasinya",
+     "start": 14.382,
+     "end": 14.963
+    },
+    {
+     "w": "ngirim",
+     "start": 14.963,
+     "end": 15.283
+    },
+    {
+     "w": "ulang",
+     "start": 15.283,
+     "end": 15.523
+    },
+    {
+     "w": "seluruh",
+     "start": 15.523,
+     "end": 15.923
+    },
+    {
+     "w": "obrolan,",
+     "start": 16.003,
+     "end": 16.483
+    },
+    {
+     "w": "dari",
+     "start": 16.622,
+     "end": 16.803
+    },
+    {
+     "w": "baris",
+     "start": 16.803,
+     "end": 17.123
+    },
+    {
+     "w": "pertama.",
+     "start": 17.123,
+     "end": 17.603
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · BACA ULANG",
+   "text": "Kamu ngetik \"oke\" doang, // dia baca ulang semuanya.",
+   "start": 18.01,
+   "end": 20.767,
+   "words": [
+    {
+     "w": "Kamu",
+     "start": 18.01,
+     "end": 18.247
+    },
+    {
+     "w": "ngetik",
+     "start": 18.327,
+     "end": 18.567
+    },
+    {
+     "w": "\"oke\"",
+     "start": 18.567,
+     "end": 18.887
+    },
+    {
+     "w": "doang,",
+     "start": 18.887,
+     "end": 19.367
+    },
+    {
+     "w": "//",
+     "start": 19.514,
+     "end": 19.601
+    },
+    {
+     "w": "dia",
+     "start": 19.601,
+     "end": 19.687
+    },
+    {
+     "w": "baca",
+     "start": 19.767,
+     "end": 20.007
+    },
+    {
+     "w": "ulang",
+     "start": 20.007,
+     "end": 20.247
+    },
+    {
+     "w": "semuanya.",
+     "start": 20.247,
+     "end": 20.647
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "01 · CONTEXT WINDOW",
+   "text": "Bayangin papan tulis di kelas. // Semua yang dia baca harus muat di sini.",
+   "start": 21.767,
+   "end": 25.787,
+   "words": [
+    {
+     "w": "Bayangin",
+     "start": 21.781,
+     "end": 22.261
+    },
+    {
+     "w": "papan",
+     "start": 22.261,
+     "end": 22.581
+    },
+    {
+     "w": "tulis",
+     "start": 22.661,
+     "end": 22.901
+    },
+    {
+     "w": "di",
+     "start": 22.981,
+     "end": 22.981
+    },
+    {
+     "w": "kelas.",
+     "start": 22.981,
+     "end": 23.541
+    },
+    {
+     "w": "//",
+     "start": 23.623,
+     "end": 23.862
+    },
+    {
+     "w": "Semua",
+     "start": 23.862,
+     "end": 24.101
+    },
+    {
+     "w": "yang",
+     "start": 24.181,
+     "end": 24.261
+    },
+    {
+     "w": "dia",
+     "start": 24.261,
+     "end": 24.421
+    },
+    {
+     "w": "baca",
+     "start": 24.501,
+     "end": 24.741
+    },
+    {
+     "w": "harus",
+     "start": 24.821,
+     "end": 24.981
+    },
+    {
+     "w": "muat",
+     "start": 24.981,
+     "end": 25.301
+    },
+    {
+     "w": "di",
+     "start": 25.381,
+     "end": 25.381
+    },
+    {
+     "w": "sini.",
+     "start": 25.381,
+     "end": 25.701
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "01 · CONTEXT WINDOW",
+   "text": "Papan ini namanya context window, // ukurannya diitung pakai token, potongan kata.",
+   "start": 26.107,
+   "end": 30.752,
+   "words": [
+    {
+     "w": "Papan",
+     "start": 26.112,
+     "end": 26.432
+    },
+    {
+     "w": "ini",
+     "start": 26.512,
+     "end": 26.592
+    },
+    {
+     "w": "namanya",
+     "start": 26.592,
+     "end": 27.072
+    },
+    {
+     "w": "context",
+     "start": 27.152,
+     "end": 27.392
+    },
+    {
+     "w": "window,",
+     "start": 27.392,
+     "end": 27.952
+    },
+    {
+     "w": "//",
+     "start": 28.1,
+     "end": 28.346
+    },
+    {
+     "w": "ukurannya",
+     "start": 28.346,
+     "end": 28.592
+    },
+    {
+     "w": "diitung",
+     "start": 28.672,
+     "end": 28.912
+    },
+    {
+     "w": "pakai",
+     "start": 28.912,
+     "end": 29.152
+    },
+    {
+     "w": "token,",
+     "start": 29.152,
+     "end": 29.712
+    },
+    {
+     "w": "potongan",
+     "start": 29.898,
+     "end": 30.352
+    },
+    {
+     "w": "kata.",
+     "start": 30.352,
+     "end": 30.752
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · CONTEXT WINDOW",
+   "text": "Papannya bisa dibikin lebih gede, // tapi tiap baris makan GPU memory. // Makin panjang, makin mahal.",
+   "start": 31.072,
+   "end": 37.014,
+   "words": [
+    {
+     "w": "Papannya",
+     "start": 31.09,
+     "end": 31.57
+    },
+    {
+     "w": "bisa",
+     "start": 31.57,
+     "end": 31.81
+    },
+    {
+     "w": "dibikin",
+     "start": 31.89,
+     "end": 32.13
+    },
+    {
+     "w": "lebih",
+     "start": 32.13,
+     "end": 32.45
+    },
+    {
+     "w": "gede,",
+     "start": 32.53,
+     "end": 32.77
+    },
+    {
+     "w": "//",
+     "start": 33.003,
+     "end": 33.127
+    },
+    {
+     "w": "tapi",
+     "start": 33.127,
+     "end": 33.25
+    },
+    {
+     "w": "tiap",
+     "start": 33.25,
+     "end": 33.49
+    },
+    {
+     "w": "baris",
+     "start": 33.49,
+     "end": 33.81
+    },
+    {
+     "w": "makan",
+     "start": 33.89,
+     "end": 34.05
+    },
+    {
+     "w": "GPU",
+     "start": 34.05,
+     "end": 34.37
+    },
+    {
+     "w": "memory.",
+     "start": 34.37,
+     "end": 35.01
+    },
+    {
+     "w": "//",
+     "start": 35.294,
+     "end": 35.392
+    },
+    {
+     "w": "Makin",
+     "start": 35.392,
+     "end": 35.49
+    },
+    {
+     "w": "panjang,",
+     "start": 35.49,
+     "end": 36.13
+    },
+    {
+     "w": "makin",
+     "start": 36.253,
+     "end": 36.53
+    },
+    {
+     "w": "mahal.",
+     "start": 36.53,
+     "end": 37.01
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "02 · DIHAPUS",
+   "text": "Obrolan makin panjang, // papannya penuh.",
+   "start": 38.014,
+   "end": 40.466,
+   "words": [
+    {
+     "w": "Obrolan",
+     "start": 38.036,
+     "end": 38.436
+    },
+    {
+     "w": "makin",
+     "start": 38.436,
+     "end": 38.756
+    },
+    {
+     "w": "panjang,",
+     "start": 38.756,
+     "end": 39.476
+    },
+    {
+     "w": "//",
+     "start": 39.606,
+     "end": 39.781
+    },
+    {
+     "w": "papannya",
+     "start": 39.781,
+     "end": 39.956
+    },
+    {
+     "w": "penuh.",
+     "start": 39.956,
+     "end": 40.356
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "02 · DIHAPUS",
+   "text": "Biar pesan baru muat, // tulisan paling atas yang dihapus duluan.",
+   "start": 40.786,
+   "end": 44.239,
+   "words": [
+    {
+     "w": "Biar",
+     "start": 40.815,
+     "end": 41.135
+    },
+    {
+     "w": "pesan",
+     "start": 41.135,
+     "end": 41.375
+    },
+    {
+     "w": "baru",
+     "start": 41.455,
+     "end": 41.695
+    },
+    {
+     "w": "muat,",
+     "start": 41.695,
+     "end": 42.095
+    },
+    {
+     "w": "//",
+     "start": 42.232,
+     "end": 42.443
+    },
+    {
+     "w": "tulisan",
+     "start": 42.443,
+     "end": 42.655
+    },
+    {
+     "w": "paling",
+     "start": 42.735,
+     "end": 42.895
+    },
+    {
+     "w": "atas",
+     "start": 42.895,
+     "end": 43.215
+    },
+    {
+     "w": "yang",
+     "start": 43.295,
+     "end": 43.375
+    },
+    {
+     "w": "dihapus",
+     "start": 43.375,
+     "end": 43.695
+    },
+    {
+     "w": "duluan.",
+     "start": 43.775,
+     "end": 44.175
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "02 · DIHAPUS",
+   "text": "Dan namamu, // ada di baris paling atas.",
+   "start": 44.559,
+   "end": 47.142,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 44.57,
+     "end": 44.73
+    },
+    {
+     "w": "namamu,",
+     "start": 44.73,
+     "end": 45.45
+    },
+    {
+     "w": "//",
+     "start": 45.62,
+     "end": 45.735
+    },
+    {
+     "w": "ada",
+     "start": 45.735,
+     "end": 45.85
+    },
+    {
+     "w": "di",
+     "start": 45.93,
+     "end": 45.93
+    },
+    {
+     "w": "baris",
+     "start": 45.93,
+     "end": 46.33
+    },
+    {
+     "w": "paling",
+     "start": 46.41,
+     "end": 46.49
+    },
+    {
+     "w": "atas.",
+     "start": 46.49,
+     "end": 47.13
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "RECAP",
+   "text": "Jadi kalau obrolannya udah panjang, // minta dia rangkum, terus buka chat baru.",
+   "start": 48.142,
+   "end": 52.633,
+   "words": [
+    {
+     "w": "Jadi",
+     "start": 48.17,
+     "end": 48.33
+    },
+    {
+     "w": "kalau",
+     "start": 48.33,
+     "end": 48.49
+    },
+    {
+     "w": "obrolannya",
+     "start": 48.49,
+     "end": 48.97
+    },
+    {
+     "w": "udah",
+     "start": 49.05,
+     "end": 49.21
+    },
+    {
+     "w": "panjang,",
+     "start": 49.21,
+     "end": 49.93
+    },
+    {
+     "w": "//",
+     "start": 50.013,
+     "end": 50.171
+    },
+    {
+     "w": "minta",
+     "start": 50.171,
+     "end": 50.33
+    },
+    {
+     "w": "dia",
+     "start": 50.33,
+     "end": 50.49
+    },
+    {
+     "w": "rangkum,",
+     "start": 50.49,
+     "end": 51.29
+    },
+    {
+     "w": "terus",
+     "start": 51.458,
+     "end": 51.61
+    },
+    {
+     "w": "buka",
+     "start": 51.69,
+     "end": 51.85
+    },
+    {
+     "w": "chat",
+     "start": 51.85,
+     "end": 52.09
+    },
+    {
+     "w": "baru.",
+     "start": 52.09,
+     "end": 52.65
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "RECAP",
+   "text": "Aku sendiri gitu. // Chat baru itu bukan mulai dari nol, // itu ngapus papan dengan sengaja.",
+   "start": 52.953,
+   "end": 57.799,
+   "words": [
+    {
+     "w": "Aku",
+     "start": 52.975,
+     "end": 53.135
+    },
+    {
+     "w": "sendiri",
+     "start": 53.135,
+     "end": 53.535
+    },
+    {
+     "w": "gitu.",
+     "start": 53.615,
+     "end": 53.855
+    },
+    {
+     "w": "//",
+     "start": 54.069,
+     "end": 54.162
+    },
+    {
+     "w": "Chat",
+     "start": 54.162,
+     "end": 54.255
+    },
+    {
+     "w": "baru",
+     "start": 54.335,
+     "end": 54.495
+    },
+    {
+     "w": "itu",
+     "start": 54.495,
+     "end": 54.655
+    },
+    {
+     "w": "bukan",
+     "start": 54.655,
+     "end": 54.975
+    },
+    {
+     "w": "mulai",
+     "start": 55.055,
+     "end": 55.215
+    },
+    {
+     "w": "dari",
+     "start": 55.215,
+     "end": 55.455
+    },
+    {
+     "w": "nol,",
+     "start": 55.455,
+     "end": 55.935
+    },
+    {
+     "w": "//",
+     "start": 56.017,
+     "end": 56.176
+    },
+    {
+     "w": "itu",
+     "start": 56.176,
+     "end": 56.335
+    },
+    {
+     "w": "ngapus",
+     "start": 56.335,
+     "end": 56.655
+    },
+    {
+     "w": "papan",
+     "start": 56.735,
+     "end": 57.055
+    },
+    {
+     "w": "dengan",
+     "start": 57.055,
+     "end": 57.295
+    },
+    {
+     "w": "sengaja.",
+     "start": 57.375,
+     "end": 57.775
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "OUTRO",
+   "text": "Video berikutnya: kenapa OTP suka telat.",
+   "start": 58.799,
+   "end": 61.36,
+   "words": [
+    {
+     "w": "Video",
+     "start": 58.799,
+     "end": 59.096
+    },
+    {
+     "w": "berikutnya:",
+     "start": 59.096,
+     "end": 59.656
+    },
+    {
+     "w": "kenapa",
+     "start": 59.848,
+     "end": 60.376
+    },
+    {
+     "w": "OTP",
+     "start": 60.456,
+     "end": 60.696
+    },
+    {
+     "w": "suka",
+     "start": 60.696,
+     "end": 61.016
+    },
+    {
+     "w": "telat.",
+     "start": 61.096,
+     "end": 61.416
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 61.68,
+   "end": 63.56,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 61.68,
+     "end": 62.134
+    },
+    {
+     "w": "biar",
+     "start": 62.337,
+     "end": 62.534
+    },
+    {
+     "w": "nggak",
+     "start": 62.614,
+     "end": 62.774
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 62.774,
+     "end": 63.494
+    }
+   ]
+  }
+ ]
+}

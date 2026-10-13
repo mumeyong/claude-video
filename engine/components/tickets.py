@@ -7,7 +7,7 @@ Pure functions of their progress values and t; all variation is hash-seeded.
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, mix, out_expo, out_back
+from ..ease import clamp, mix, glide, pop
 from .infra import _h
 
 GREEN = tk.CHAPTER[1][0]
@@ -29,7 +29,7 @@ def big_clock(c, x, y, text, size, prev=None, jump=1.0, color=None, accent_from=
         x -= total / 2
     elif align == "r":
         x -= total
-    e = out_expo(clamp(jump))
+    e = glide(clamp(jump))
     with c.clip(x - 10, y - size * 0.95, total + 20, size * 1.15):
         for i, ch in enumerate(text):
             col = color if accent_from is not None and i >= accent_from else ink
@@ -53,7 +53,7 @@ def print_slip(c, x, y, w, h, p, lines, color=None, rot=0.0, slot=True):
         c.fill_rrect(x - 14, y - 6, w + 28, 12, 6, c.theme("ink", "d_ink"), 0.85)
     if p <= 0:
         return (x, y, w, 0)
-    L = h * out_expo(clamp(p))
+    L = h * glide(clamp(p))
     with c.at(0, 0, 1.0, origin=(x + w / 2, y), rot=rot * clamp(p)):
         with c.clip(x - 40, y, w + 80, L + 40):
             top = y + L - h          # the paper slides down: its own top is still inside the slot
@@ -147,7 +147,7 @@ def loket(c, x, y, w, h, t, full=0.0, label="", seed=0, color=None, alpha=1.0, b
         if label:
             c.text(x + w / 2, y + h * 0.86, label, tk.F["mono_bold"], max(17, w * 0.085), ink2, 1, 0.1, align="c")
         if full > 0:
-            pa = out_back(clamp(full), 1.6)
+            pa = pop(clamp(full), 1.6)
             with c.at(0, 0, max(0.01, pa), origin=(gx + gw / 2, gy + gh / 2)):
                 c.fill_rrect(gx + gw * 0.1, gy + gh * 0.32, gw * 0.8, gh * 0.36, 6, red, clamp(full * 2))
                 c.text(gx + gw / 2, gy + gh * 0.58, "PENUH", tk.F["mono_bold"], max(17, gw * 0.15), WHITE,
@@ -194,5 +194,5 @@ def refresh_storm(c, cx, cy, rx, ry, t, n=24, amount=1.0, speed=0.25, size=(26, 
         k = (0.55 + 0.45 * _h(i, seed + 2)) * (1 - 0.45 * clamp(inward) * (0.5 + 0.5 * math.sin(t * 3 + i)))
         x, y = cx + rx * k * math.cos(ang), cy + ry * k * math.sin(ang)
         s = size[0] + (size[1] - size[0]) * _h(i, seed + 3)
-        pop = out_back(a, 1.8)
-        refresh_icon(c, x, y, s * pop, color, rot=t * (2 + 3 * _h(i, seed + 4)), alpha=a * alpha * 0.9)
+        pk = pop(a, 1.8)
+        refresh_icon(c, x, y, s * pk, color, rot=t * (2 + 3 * _h(i, seed + 4)), alpha=a * alpha * 0.9)

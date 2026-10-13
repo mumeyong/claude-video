@@ -6,7 +6,7 @@ Pure drawing from explicit progress values and t; flicker/blink is a determinist
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, mix, out_expo, out_back
+from ..ease import clamp, mix, glide, pop
 from .infra import _h
 from . import icons
 
@@ -123,7 +123,7 @@ def order_ticket(c, x, y, w, h, title, lines=(), alpha=1.0, rot=0.0, done=0.0):
             for i, ln in enumerate(lines):
                 c.text(x + 16, y + 104 + i * 34, ln, tk.F["serif"], min(32, w * 0.2), c.theme("ink2", "d_muted"), 1)
             if done > 0:
-                p = out_back(clamp(done), 1.8)
+                p = pop(clamp(done), 1.8)
                 bx, by = x + w - 26, y + 44
                 with c.at(0, 0, max(0.01, p), origin=(bx, by)):
                     c.circle(bx, by, 18, tk.C["ok"])
@@ -140,7 +140,7 @@ def ticket_rail(c, x, y, w, tickets, tw=150, th=190, alpha=1.0):
         if p <= 0:
             continue
         dy, fade = tkt.get("drop", (0.0, 0.0))
-        ty = y - 4 - 140 * (1 - out_back(p, 1.4)) + dy
+        ty = y - 4 - 140 * (1 - pop(p, 1.4)) + dy
         rot = tkt.get("rot", 0.0) * (0.3 + 0.7 * p)
         order_ticket(c, tkt["x"] - tw / 2, ty, tw, th, tkt["title"], tkt.get("lines", ()),
                      alpha * clamp(p * 3) * (1 - clamp(fade)), rot, tkt.get("done", 0.0))
@@ -183,7 +183,7 @@ def dag_flow(c, x, y, w, tasks, p=1.0, title="AIRFLOW · DAG", sub="schedule: da
             c.fill_rrect(bx + 14, by + box_h - 20, bw - 28, 6, 3, c.theme("line", "d_line"), a)
             c.fill_rrect(bx + 14, by + box_h - 20, (bw - 28) * run, 6, 3, ORANGE, a)
         if done > 0:
-            pk = out_back(done, 1.8)
+            pk = pop(done, 1.8)
             cx_, cy_ = bx + bw - 4, by + 4
             with c.at(0, 0, max(0.01, pk), origin=(cx_, cy_)):
                 c.circle(cx_, cy_, 16, green, a)
@@ -196,7 +196,7 @@ def dag_state(t, t0, n, step=0.55):
     out = []
     for i in range(n):
         s = t0 + i * step
-        out.append((clamp((t - s) / (step * 0.8)), out_expo(clamp((t - s - step * 0.8) / 0.25))))
+        out.append((clamp((t - s) / (step * 0.8)), glide(clamp((t - s - step * 0.8) / 0.25))))
     return out
 
 
@@ -224,7 +224,7 @@ def lake_pantry(c, x, y, w, h, t, title="Paimon", sub="DATA LAKE · TABLES", tab
     if n:
         jw = min(200, (w - 64 - 20 * (n - 1)) / n)
         for i, name in enumerate(tables):
-            p = out_back(clamp(p_tables * (n + 1) - i), 1.6)
+            p = pop(clamp(p_tables * (n + 1) - i), 1.6)
             if p <= 0.01:
                 continue
             jx = x + 32 + i * (jw + 20)

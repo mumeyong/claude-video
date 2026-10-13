@@ -8,7 +8,7 @@ Pure functions of their progress values and t.
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, out_back, in_out_cubic
+from ..ease import clamp, in_out_cubic, pop
 
 ORANGE = tk.CHAPTER[2][0]           # signature: boom barrier + test envelope
 WHITE = (1, 1, 1, 1)
@@ -43,7 +43,7 @@ def wifi_icon(c, cx, cy, s, bars=3.0, bang=0.0, color=None, alpha=1.0):
             p = clamp(bars - k)
             if p > 0:
                 _arc(c, cx, cy, r, a0, a1, on, wid, p)
-        b = out_back(clamp(bang))
+        b = pop(clamp(bang))
         if b > 0.01:
             bx, by, br = cx + s * 0.62, cy - s * 0.08, s * 0.24
             with c.at(0, 0, b, origin=(bx, by)):
@@ -78,7 +78,7 @@ def pos_satpam(c, cx, base_y, s, t, p_open=0.0, arm=None, confused=0.0, label="P
         c.circle(gx, gy - wh * 0.6, s * 0.085, ink2)
         c.fill_rrect(gx - s * 0.1, gy - wh * 0.6 - s * 0.1, s * 0.2, s * 0.05, 4, color)  # cap band
         c.fill_rrect(x + s * 0.1, yt + h * 0.66, s * 0.8, h * 0.05, 3, c.theme("line", "d_line"))   # counter
-        q = out_back(clamp(confused))
+        q = pop(clamp(confused))
         if q > 0.01:
             qx, qy = gx + s * 0.34, wy - s * 0.12
             with c.at(0, 0, q, origin=(qx, qy + s * 0.1)):
@@ -144,7 +144,7 @@ def buku_alamat(c, x, y, w, h, rows, scan=None, fail=0.0, found=0.0, title="BUKU
         st = clamp(fail * 2 - 1)
         if st > 0.01:
             sx, sy = x + w * 0.58, y + h * 0.58
-            k = 1 + 0.6 * (1 - out_back(st))
+            k = 1 + 0.6 * (1 - pop(st))
             with c.at(0, 0, k, origin=(sx, sy), rot=-0.16):
                 c.stroke_rrect(sx - 150, sy - 52, 300, 104, 16, tk.C["rec"], 6, st)
                 c.text(sx, sy + 22, "ERROR", tk.F["mono_bold"], 58, tk.C["rec"], st, 0.12, align="c")

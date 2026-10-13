@@ -3,7 +3,7 @@ import html
 import re
 
 from .. import tokens as tk
-from ..ease import out_expo, prog, in_out_cubic
+from ..ease import prog, in_out_cubic, glide
 from .motion import typed
 
 HEADER_H = 66
@@ -50,7 +50,7 @@ def md_lines(c, x, y, lines, t, reveal=None, focus=None, focus_t=None, width=780
     for i, raw in enumerate(lines):
         top = y + i * step
         rows.append((top, step))
-        a = 1.0 if reveal is None else out_expo(prog(t, reveal[i], 0.35))
+        a = 1.0 if reveal is None else glide(prog(t, reveal[i], 0.35))
         if a <= 0.002:
             continue
         dim = 1.0 - (0.7 * fp if (focus is not None and i != focus) else 0.0)

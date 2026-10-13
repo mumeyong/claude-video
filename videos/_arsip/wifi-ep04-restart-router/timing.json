@@ -1,0 +1,1016 @@
+{
+ "source": "tts",
+ "voice": "cartesia:e0445740-223f-45c5-8038-8ff25e49f342",
+ "tts": "cartesia:sonic-3.6:e0445740-223f-45c5-8038-8ff25e49f342:1.0:off",
+ "duration": 78.04,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "\"Udah dicoba restart, Kak?\"",
+   "start": 0.4,
+   "end": 1.682,
+   "words": [
+    {
+     "w": "\"Udah",
+     "start": 0.448,
+     "end": 0.608
+    },
+    {
+     "w": "dicoba",
+     "start": 0.688,
+     "end": 0.928
+    },
+    {
+     "w": "restart,",
+     "start": 0.928,
+     "end": 1.408
+    },
+    {
+     "w": "Kak?\"",
+     "start": 1.489,
+     "end": 1.648
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Kadang beneran sembuh. Kadang cuma buang waktu.",
+   "start": 2.282,
+   "end": 5.474,
+   "words": [
+    {
+     "w": "Kadang",
+     "start": 2.302,
+     "end": 2.622
+    },
+    {
+     "w": "beneran",
+     "start": 2.622,
+     "end": 3.022
+    },
+    {
+     "w": "sembuh.",
+     "start": 3.022,
+     "end": 3.582
+    },
+    {
+     "w": "Kadang",
+     "start": 4.092,
+     "end": 4.542
+    },
+    {
+     "w": "cuma",
+     "start": 4.622,
+     "end": 4.782
+    },
+    {
+     "w": "buang",
+     "start": 4.782,
+     "end": 5.102
+    },
+    {
+     "w": "waktu.",
+     "start": 5.102,
+     "end": 5.502
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Bedanya ada di satu buku tamu.",
+   "start": 5.794,
+   "end": 7.317,
+   "words": [
+    {
+     "w": "Bedanya",
+     "start": 5.815,
+     "end": 6.215
+    },
+    {
+     "w": "ada",
+     "start": 6.295,
+     "end": 6.375
+    },
+    {
+     "w": "di",
+     "start": 6.455,
+     "end": 6.455
+    },
+    {
+     "w": "satu",
+     "start": 6.455,
+     "end": 6.695
+    },
+    {
+     "w": "buku",
+     "start": 6.775,
+     "end": 6.935
+    },
+    {
+     "w": "tamu.",
+     "start": 6.935,
+     "end": 7.335
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · BUKU TAMU",
+   "text": "Router kamu itu kayak satpam yang nyatet tiap tamu.",
+   "start": 8.317,
+   "end": 11.386,
+   "words": [
+    {
+     "w": "Router",
+     "start": 8.33,
+     "end": 8.65
+    },
+    {
+     "w": "kamu",
+     "start": 8.73,
+     "end": 8.97
+    },
+    {
+     "w": "itu",
+     "start": 8.97,
+     "end": 9.29
+    },
+    {
+     "w": "kayak",
+     "start": 9.29,
+     "end": 9.61
+    },
+    {
+     "w": "satpam",
+     "start": 9.61,
+     "end": 10.17
+    },
+    {
+     "w": "yang",
+     "start": 10.25,
+     "end": 10.33
+    },
+    {
+     "w": "nyatet",
+     "start": 10.41,
+     "end": 10.65
+    },
+    {
+     "w": "tiap",
+     "start": 10.65,
+     "end": 10.89
+    },
+    {
+     "w": "tamu.",
+     "start": 10.89,
+     "end": 11.37
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · BUKU TAMU",
+   "text": "Tiap app yang konek ke internet, dapet satu baris.",
+   "start": 11.706,
+   "end": 14.615,
+   "words": [
+    {
+     "w": "Tiap",
+     "start": 11.719,
+     "end": 12.039
+    },
+    {
+     "w": "app",
+     "start": 12.039,
+     "end": 12.199
+    },
+    {
+     "w": "yang",
+     "start": 12.199,
+     "end": 12.439
+    },
+    {
+     "w": "konek",
+     "start": 12.519,
+     "end": 12.679
+    },
+    {
+     "w": "ke",
+     "start": 12.759,
+     "end": 12.839
+    },
+    {
+     "w": "internet,",
+     "start": 12.839,
+     "end": 13.319
+    },
+    {
+     "w": "dapet",
+     "start": 13.572,
+     "end": 13.799
+    },
+    {
+     "w": "satu",
+     "start": 13.799,
+     "end": 14.039
+    },
+    {
+     "w": "baris.",
+     "start": 14.039,
+     "end": 14.599
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · BUKU TAMU",
+   "text": "Namanya NAT table. Dan halamannya terbatas.",
+   "start": 14.935,
+   "end": 17.764,
+   "words": [
+    {
+     "w": "Namanya",
+     "start": 14.936,
+     "end": 15.416
+    },
+    {
+     "w": "NAT",
+     "start": 15.416,
+     "end": 15.656
+    },
+    {
+     "w": "table.",
+     "start": 15.658,
+     "end": 16.136
+    },
+    {
+     "w": "Dan",
+     "start": 16.419,
+     "end": 16.536
+    },
+    {
+     "w": "halamannya",
+     "start": 16.536,
+     "end": 17.016
+    },
+    {
+     "w": "terbatas.",
+     "start": 17.016,
+     "end": 17.736
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "00 · BUKU TAMU",
+   "text": "Nyala berminggu-minggu, bukunya penuh. Memory-nya juga sesak.",
+   "start": 18.364,
+   "end": 22.017,
+   "words": [
+    {
+     "w": "Nyala",
+     "start": 18.398,
+     "end": 18.718
+    },
+    {
+     "w": "berminggu-minggu,",
+     "start": 18.718,
+     "end": 19.758
+    },
+    {
+     "w": "bukunya",
+     "start": 19.993,
+     "end": 20.318
+    },
+    {
+     "w": "penuh.",
+     "start": 20.318,
+     "end": 20.718
+    },
+    {
+     "w": "Memory-nya",
+     "start": 20.952,
+     "end": 21.358
+    },
+    {
+     "w": "juga",
+     "start": 21.438,
+     "end": 21.598
+    },
+    {
+     "w": "sesak.",
+     "start": 21.598,
+     "end": 21.998
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "00 · BUKU TAMU",
+   "text": "Tamu baru disuruh nunggu. Itu lemot yang kamu rasain.",
+   "start": 22.337,
+   "end": 25.605,
+   "words": [
+    {
+     "w": "Tamu",
+     "start": 22.357,
+     "end": 22.677
+    },
+    {
+     "w": "baru",
+     "start": 22.757,
+     "end": 22.917
+    },
+    {
+     "w": "disuruh",
+     "start": 22.917,
+     "end": 23.317
+    },
+    {
+     "w": "nunggu.",
+     "start": 23.397,
+     "end": 23.797
+    },
+    {
+     "w": "Itu",
+     "start": 23.98,
+     "end": 24.197
+    },
+    {
+     "w": "lemot",
+     "start": 24.277,
+     "end": 24.597
+    },
+    {
+     "w": "yang",
+     "start": 24.597,
+     "end": 24.757
+    },
+    {
+     "w": "kamu",
+     "start": 24.837,
+     "end": 24.917
+    },
+    {
+     "w": "rasain.",
+     "start": 24.917,
+     "end": 25.557
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "00 · BUKU TAMU",
+   "text": "Restart itu nyobek semua halamannya. Buku bersih lagi.",
+   "start": 25.925,
+   "end": 28.967,
+   "words": [
+    {
+     "w": "Restart",
+     "start": 25.937,
+     "end": 26.337
+    },
+    {
+     "w": "itu",
+     "start": 26.417,
+     "end": 26.577
+    },
+    {
+     "w": "nyobek",
+     "start": 26.577,
+     "end": 26.977
+    },
+    {
+     "w": "semua",
+     "start": 27.057,
+     "end": 27.297
+    },
+    {
+     "w": "halamannya.",
+     "start": 27.297,
+     "end": 27.777
+    },
+    {
+     "w": "Buku",
+     "start": 27.986,
+     "end": 28.257
+    },
+    {
+     "w": "bersih",
+     "start": 28.257,
+     "end": 28.577
+    },
+    {
+     "w": "lagi.",
+     "start": 28.577,
+     "end": 28.897
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · KAPAN PERCUMA",
+   "text": "Tapi restart cuma ngurus yang ada di dalam router.",
+   "start": 29.967,
+   "end": 32.831,
+   "words": [
+    {
+     "w": "Tapi",
+     "start": 29.973,
+     "end": 30.293
+    },
+    {
+     "w": "restart",
+     "start": 30.293,
+     "end": 30.693
+    },
+    {
+     "w": "cuma",
+     "start": 30.693,
+     "end": 31.013
+    },
+    {
+     "w": "ngurus",
+     "start": 31.013,
+     "end": 31.413
+    },
+    {
+     "w": "yang",
+     "start": 31.493,
+     "end": 31.653
+    },
+    {
+     "w": "ada",
+     "start": 31.653,
+     "end": 31.893
+    },
+    {
+     "w": "di",
+     "start": 31.973,
+     "end": 31.973
+    },
+    {
+     "w": "dalam",
+     "start": 31.973,
+     "end": 32.293
+    },
+    {
+     "w": "router.",
+     "start": 32.373,
+     "end": 32.773
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "01 · KAPAN PERCUMA",
+   "text": "Lampu LOS merah? Kabelnya putus. Episode satu.",
+   "start": 33.151,
+   "end": 36.739,
+   "words": [
+    {
+     "w": "Lampu",
+     "start": 33.183,
+     "end": 33.583
+    },
+    {
+     "w": "LOS",
+     "start": 33.663,
+     "end": 33.743
+    },
+    {
+     "w": "merah?",
+     "start": 33.743,
+     "end": 34.143
+    },
+    {
+     "w": "Kabelnya",
+     "start": 34.473,
+     "end": 34.943
+    },
+    {
+     "w": "putus.",
+     "start": 34.943,
+     "end": 35.503
+    },
+    {
+     "w": "Episode",
+     "start": 35.666,
+     "end": 36.303
+    },
+    {
+     "w": "satu.",
+     "start": 36.383,
+     "end": 36.783
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "01 · KAPAN PERCUMA",
+   "text": "Gangguan dari ISP? Palangnya di luar. Episode dua.",
+   "start": 37.059,
+   "end": 40.365,
+   "words": [
+    {
+     "w": "Gangguan",
+     "start": 37.075,
+     "end": 37.475
+    },
+    {
+     "w": "dari",
+     "start": 37.555,
+     "end": 37.795
+    },
+    {
+     "w": "ISP?",
+     "start": 37.795,
+     "end": 38.035
+    },
+    {
+     "w": "Palangnya",
+     "start": 38.342,
+     "end": 38.755
+    },
+    {
+     "w": "di",
+     "start": 38.835,
+     "end": 38.835
+    },
+    {
+     "w": "luar.",
+     "start": 38.835,
+     "end": 39.395
+    },
+    {
+     "w": "Episode",
+     "start": 39.683,
+     "end": 40.035
+    },
+    {
+     "w": "dua.",
+     "start": 40.035,
+     "end": 40.355
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "01 · KAPAN PERCUMA",
+   "text": "Sambungan basah kena hujan? Episode tiga.",
+   "start": 40.685,
+   "end": 43.651,
+   "words": [
+    {
+     "w": "Sambungan",
+     "start": 40.693,
+     "end": 41.173
+    },
+    {
+     "w": "basah",
+     "start": 41.173,
+     "end": 41.493
+    },
+    {
+     "w": "kena",
+     "start": 41.573,
+     "end": 41.653
+    },
+    {
+     "w": "hujan?",
+     "start": 41.733,
+     "end": 42.133
+    },
+    {
+     "w": "Episode",
+     "start": 42.363,
+     "end": 43.173
+    },
+    {
+     "w": "tiga.",
+     "start": 43.177,
+     "end": 43.653
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "01 · KAPAN PERCUMA",
+   "text": "Bukunya diganti berkali-kali, jalannya tetap rusak.",
+   "start": 43.971,
+   "end": 46.992,
+   "words": [
+    {
+     "w": "Bukunya",
+     "start": 44.006,
+     "end": 44.406
+    },
+    {
+     "w": "diganti",
+     "start": 44.406,
+     "end": 44.806
+    },
+    {
+     "w": "berkali-kali,",
+     "start": 44.886,
+     "end": 45.686
+    },
+    {
+     "w": "jalannya",
+     "start": 45.904,
+     "end": 46.326
+    },
+    {
+     "w": "tetap",
+     "start": 46.406,
+     "end": 46.566
+    },
+    {
+     "w": "rusak.",
+     "start": 46.566,
+     "end": 47.046
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Restart sekali. Cabut, tunggu sebentar, colok lagi.",
+   "start": 47.992,
+   "end": 51.388,
+   "words": [
+    {
+     "w": "Restart",
+     "start": 48.01,
+     "end": 48.41
+    },
+    {
+     "w": "sekali.",
+     "start": 48.41,
+     "end": 48.89
+    },
+    {
+     "w": "Cabut,",
+     "start": 49.205,
+     "end": 49.61
+    },
+    {
+     "w": "tunggu",
+     "start": 49.755,
+     "end": 49.93
+    },
+    {
+     "w": "sebentar,",
+     "start": 49.93,
+     "end": 50.57
+    },
+    {
+     "w": "colok",
+     "start": 50.724,
+     "end": 50.97
+    },
+    {
+     "w": "lagi.",
+     "start": 51.05,
+     "end": 51.37
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Langsung lancar? Berarti bukunya yang penuh.",
+   "start": 51.708,
+   "end": 54.057,
+   "words": [
+    {
+     "w": "Langsung",
+     "start": 51.737,
+     "end": 52.057
+    },
+    {
+     "w": "lancar?",
+     "start": 52.057,
+     "end": 52.617
+    },
+    {
+     "w": "Berarti",
+     "start": 52.713,
+     "end": 53.097
+    },
+    {
+     "w": "bukunya",
+     "start": 53.097,
+     "end": 53.497
+    },
+    {
+     "w": "yang",
+     "start": 53.577,
+     "end": 53.577
+    },
+    {
+     "w": "penuh.",
+     "start": 53.577,
+     "end": 54.057
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Tapi kalau harus restart tiap hari, router-nya kewalahan.",
+   "start": 54.377,
+   "end": 57.81,
+   "words": [
+    {
+     "w": "Tapi",
+     "start": 54.397,
+     "end": 54.637
+    },
+    {
+     "w": "kalau",
+     "start": 54.637,
+     "end": 54.877
+    },
+    {
+     "w": "harus",
+     "start": 54.957,
+     "end": 55.117
+    },
+    {
+     "w": "restart",
+     "start": 55.117,
+     "end": 55.597
+    },
+    {
+     "w": "tiap",
+     "start": 55.597,
+     "end": 55.837
+    },
+    {
+     "w": "hari,",
+     "start": 55.917,
+     "end": 56.397
+    },
+    {
+     "w": "router-nya",
+     "start": 56.54,
+     "end": 57.037
+    },
+    {
+     "w": "kewalahan.",
+     "start": 57.037,
+     "end": 57.757
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Cek update firmware-nya, atau minta ISP ganti modem.",
+   "start": 58.13,
+   "end": 61.466,
+   "words": [
+    {
+     "w": "Cek",
+     "start": 58.147,
+     "end": 58.387
+    },
+    {
+     "w": "update",
+     "start": 58.467,
+     "end": 58.707
+    },
+    {
+     "w": "firmware-nya,",
+     "start": 58.707,
+     "end": 59.427
+    },
+    {
+     "w": "atau",
+     "start": 59.58,
+     "end": 59.987
+    },
+    {
+     "w": "minta",
+     "start": 60.067,
+     "end": 60.307
+    },
+    {
+     "w": "ISP",
+     "start": 60.307,
+     "end": 60.707
+    },
+    {
+     "w": "ganti",
+     "start": 60.707,
+     "end": 60.947
+    },
+    {
+     "w": "modem.",
+     "start": 61.027,
+     "end": 61.347
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "RECAP",
+   "text": "Di kerjaan, server production juga sering sembuh abis di-restart.",
+   "start": 62.466,
+   "end": 66.135,
+   "words": [
+    {
+     "w": "Di",
+     "start": 62.496,
+     "end": 62.656
+    },
+    {
+     "w": "kerjaan,",
+     "start": 62.656,
+     "end": 63.376
+    },
+    {
+     "w": "server",
+     "start": 63.465,
+     "end": 63.936
+    },
+    {
+     "w": "production",
+     "start": 63.936,
+     "end": 64.416
+    },
+    {
+     "w": "juga",
+     "start": 64.496,
+     "end": 64.656
+    },
+    {
+     "w": "sering",
+     "start": 64.656,
+     "end": 64.896
+    },
+    {
+     "w": "sembuh",
+     "start": 64.896,
+     "end": 65.296
+    },
+    {
+     "w": "abis",
+     "start": 65.296,
+     "end": 65.536
+    },
+    {
+     "w": "di-restart.",
+     "start": 65.616,
+     "end": 66.096
+    }
+   ]
+  },
+  {
+   "id": "L20",
+   "chapter": "RECAP",
+   "text": "Tapi kalau harus restart rutin, itu bukan obat. Itu gejala.",
+   "start": 66.455,
+   "end": 70.157,
+   "words": [
+    {
+     "w": "Tapi",
+     "start": 66.472,
+     "end": 66.712
+    },
+    {
+     "w": "kalau",
+     "start": 66.712,
+     "end": 66.872
+    },
+    {
+     "w": "harus",
+     "start": 66.952,
+     "end": 67.112
+    },
+    {
+     "w": "restart",
+     "start": 67.112,
+     "end": 67.592
+    },
+    {
+     "w": "rutin,",
+     "start": 67.592,
+     "end": 68.072
+    },
+    {
+     "w": "itu",
+     "start": 68.23,
+     "end": 68.392
+    },
+    {
+     "w": "bukan",
+     "start": 68.392,
+     "end": 68.632
+    },
+    {
+     "w": "obat.",
+     "start": 68.632,
+     "end": 69.032
+    },
+    {
+     "w": "Itu",
+     "start": 69.388,
+     "end": 69.592
+    },
+    {
+     "w": "gejala.",
+     "start": 69.592,
+     "end": 70.072
+    }
+   ]
+  },
+  {
+   "id": "L21",
+   "chapter": "OUTRO",
+   "text": "Episode terakhir: kenapa internet lemot tiap jam delapan malam?",
+   "start": 71.157,
+   "end": 75.083,
+   "words": [
+    {
+     "w": "Episode",
+     "start": 71.21,
+     "end": 71.69
+    },
+    {
+     "w": "terakhir:",
+     "start": 71.77,
+     "end": 72.33
+    },
+    {
+     "w": "kenapa",
+     "start": 72.533,
+     "end": 73.05
+    },
+    {
+     "w": "internet",
+     "start": 73.05,
+     "end": 73.45
+    },
+    {
+     "w": "lemot",
+     "start": 73.45,
+     "end": 73.85
+    },
+    {
+     "w": "tiap",
+     "start": 73.93,
+     "end": 74.09
+    },
+    {
+     "w": "jam",
+     "start": 74.09,
+     "end": 74.33
+    },
+    {
+     "w": "delapan",
+     "start": 74.41,
+     "end": 74.65
+    },
+    {
+     "w": "malam?",
+     "start": 74.65,
+     "end": 75.05
+    }
+   ]
+  },
+  {
+   "id": "L22",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 75.403,
+   "end": 77.24,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 75.403,
+     "end": 75.959
+    },
+    {
+     "w": "biar",
+     "start": 76.114,
+     "end": 76.279
+    },
+    {
+     "w": "nggak",
+     "start": 76.359,
+     "end": 76.519
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 76.519,
+     "end": 77.159
+    }
+   ]
+  }
+ ]
+}

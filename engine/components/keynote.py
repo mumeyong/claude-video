@@ -1,8 +1,8 @@
-"""Keynote motion (2026-10-08; Apple craft layer = default from 2026-10-11, STYLE §6f): the Apple product-film / iOS feel — silk springs with no visible bounce,
+"""Keynote motion (2026-10-08; Apple craft layer = default from 2026-10-11, STYLE §3): the Apple product-film / iOS feel — silk springs with no visible bounce,
 shapes that morph (Dynamic Island, App Store card expand), bento grids that assemble, text that inks in, a hero
 that shrinks from full-bleed into place, a 3D-ish turn, button presses, floating sheets.
 
-Pairs with kinetic.py (Rig, sheen, parallax). STYLE §6d lists both. No frosted-glass blur (banned, §8).
+Pairs with kinetic.py (Rig, sheen, parallax). STYLE §3 lists both. No frosted-glass blur (banned, IDENTITY.md).
 
     m = Morph((440, 300, 200, 56), r=28)                    # a pill …
     m.to(t1, (81, 600, 848, 520), r=44)                     # … grows into a card (silk spring)
@@ -148,7 +148,7 @@ def sheet(c, t, t_in, t_out, box, draw, dim=None, r=None):
         draw(c, x, y, w, h)
 
 
-# ── Apple motion craft (STYLE §6f, 2026-10-11 — the default grammar for every new video) ───────────
+# ── Apple motion craft (STYLE §3, 2026-10-11 — the default grammar for every new video) ───────────
 # One leader at a time · arrive ON the stressed word · hold still after arriving · opacity leads, position follows ·
 # exits faster + quieter than entrances · continuity (shared element / depth swap) instead of exit-then-enter.
 _ARRIVE = {}
@@ -272,7 +272,7 @@ def depth_swap(c, t, t_swap, bbox, old, new, dur=None):
 
 def focus_pull(c, t, t0, t1, bbox, draw):
     """Rack focus: while a foreground element (sheet, card, number) is up between t0 and t1, the background
-    draw(c) goes soft — depth-of-field blur + scale .965 + dim. Depth, not a frosted-glass panel (§8 still bans those)."""
+    draw(c) goes soft — depth-of-field blur + scale .965 + dim. Depth, not a frosted-glass panel (IDENTITY.md still bans those)."""
     M = tk.M
     k = curve("apple")(prog(t, t0, 0.6)) * (1 - (0.0 if t1 is None else curve("apple")(prog(t, t1, 0.6))))
     if k <= 0.002:

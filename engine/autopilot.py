@@ -1,9 +1,9 @@
-"""Autopilot: run Claude Code headless to write a whole video (idea → SCRIPT → NASKAH → PLAN → scenes.py →
-cover + POST.md → check --dry clean), so `claude-video "Judul"` can go straight on to the final render.
+"""Autopilot: run Claude Code headless to write a whole video (idea → SCRIPT → NASKAH → scenes.py → PLAN →
+cover + POST.md → check --dry clean → critique loop), so `claude-video "Judul"` can go straight on to the final render.
 
 The user runs this (it spawns `claude -p`). The headless Claude only writes text files and may run the
-text-only engine commands (check / naskah / estimate / api / register); it can never render — those Bash
-commands are simply not allowed. Progress is streamed as one line per tool call.
+text-only engine commands (check / naskah / estimate / api / register) plus `critique` (PNG review sheets it
+reads back — STYLE §5); it can never render video or audio — those Bash commands are simply not allowed. Progress is streamed as one line per tool call.
 """
 import json
 import shutil
@@ -15,8 +15,8 @@ from .project import ROOT
 PROMPT = ROOT / ".claude" / "skills" / "mumeyong-video" / "AUTOPILOT.md"
 PY = ".venv/bin/python -m engine"
 ALLOWED = ["Read", "Write", "Edit", "Glob", "Grep", "Skill", "TodoWrite",
-           *(f"Bash({PY} {c}:*)" for c in ("check", "naskah", "estimate", "api", "register", "ideas", "ls")),
-           *(f"Bash(python -m engine {c}:*)" for c in ("check", "naskah", "estimate", "api", "register")),
+           *(f"Bash({PY} {c}:*)" for c in ("check", "naskah", "estimate", "api", "register", "ideas", "ls", "critique")),
+           *(f"Bash(python -m engine {c}:*)" for c in ("check", "naskah", "estimate", "api", "register", "critique")),
            "Bash(ls:*)"]
 
 

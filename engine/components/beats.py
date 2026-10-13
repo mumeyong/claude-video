@@ -3,7 +3,7 @@
 pop_tag · tag_center · check_badge · series_outro
 """
 from .. import tokens as tk
-from ..ease import prog, out_back, out_cubic, clamp
+from ..ease import prog, out_cubic, clamp, glide, pop
 from .pill import tag
 from .motion import appear, fade
 from .recap import follow_button
@@ -15,7 +15,7 @@ def pop_tag(c, t, t0, x, y, label, color, h=44, align="l"):
     """Tag that pops in at t0 (scale overshoot). align='r' anchors its right edge at x."""
     if t < t0:
         return
-    p = out_back(prog(t, t0, 0.4), 1.6)
+    p = pop(prog(t, t0, 0.4), 1.6)
     with c.at(0, 0, max(0.01, p), origin=(x, y + h / 2)):
         tag(c, x, y, label, color, clamp(p * 2), align=align, h=h)
 
@@ -27,7 +27,7 @@ def tag_center(c, cx, y, label, color, alpha=1.0, h=44):
 
 
 def check_badge(c, x, y, r, p):
-    """Green ✓ disc at (x, y), radius r, scaled by p (0..1, use out_back for a pop)."""
+    """Green ✓ disc at (x, y), radius r, scaled by p (0..1, use pop for a pop)."""
     if p <= 0.01:
         return
     with c.at(0, 0, max(0.01, p), origin=(x, y)):
@@ -93,7 +93,7 @@ def punch_word(c, t, t_in, t_word, word, color, caption=None, y=1100, size=150):
     X, CW, MID, F = tk.L["col_x"], tk.L["col_w"], tk.W / 2, tk.F
     from ..ease import out_expo
     if caption:
-        a0 = out_expo(prog(t, t_in, 0.4))
+        a0 = glide(prog(t, t_in, 0.4))
         c.text(MID, y - 260, caption, F["mono_med"], 32, c.theme("ink2", "d_muted"), a0, 0.06, align="c")
         c.line(MID, y - 220, MID, y - 220 + 70 * a0, c.theme("faint", "d_line"), 4)
     p = prog(t, t_word, 0.35)

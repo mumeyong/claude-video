@@ -32,6 +32,10 @@ hasil/<slug>/
 | — | [prompt-diproses-di-mana](prompt-diproses-di-mana/) | ± 77 s | — | 🎬 produksi |
 | — | [ai-butuh-listrik](ai-butuh-listrik/) | ± 74 s | — | 🎬 produksi |
 | — | [wifi-ep03-lemot-pas-hujan](wifi-ep03-lemot-pas-hujan/) | ± 74 s | — | 🎬 produksi |
+| — | [ai-gratis-siapa-bayar](ai-gratis-siapa-bayar/) | ± 76 s | — | 🎬 produksi |
+| — | [wifi-ep04-restart-router](wifi-ep04-restart-router/) | ± 75 s | — | 🎬 produksi |
+| — | [wifi-ep05-lemot-jam-8-malam](wifi-ep05-lemot-jam-8-malam/) | ± 74 s | — | 🎬 produksi |
+| — | [ai-lupa-obrolan-panjang](ai-lupa-obrolan-panjang/) | ± 71 s | — | 📦 final — mp4 + cover + POST.md |
 
 ## C · Karier
 
@@ -41,6 +45,7 @@ hasil/<slug>/
 | — | [kubernetes-bukan-jawaban](_tayang/kubernetes-bukan-jawaban/) | ± 74 s | — | ✅ tayang |
 | — | [jalur-karier-cloud](jalur-karier-cloud/) | ± 78 s | — | 🎬 produksi |
 | — | [interview-cloud-5-pertanyaan](interview-cloud-5-pertanyaan/) | ± 78 s | — | 🎬 produksi |
+| — | [ai-butuh-cloud-engineer](ai-butuh-cloud-engineer/) | ± 74 s | — | 🎬 produksi |
 
 ## D · Seri Bongkar Arsitektur
 

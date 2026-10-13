@@ -1,0 +1,169 @@
+---
+name: mumeyong-video
+description: Make a MUMEYONG vertical (9:16) animated explainer video in Python + ffmpeg, in the light-glass UI-keynote style — script, storyboard, voice-timed scenes, review loop. Use for any new video, scene, or change to a video in videos/<slug>/. Claude writes the code; the USER renders.
+---
+
+# MUMEYONG video workflow
+
+Read `STYLE.md` and `LESSONS.md` (same folder) before writing a script or a scene. After every review round,
+add the user's notes to `LESSONS.md` (line id + what was wrong + the rule). Read `CLAUDE.md` rules — especially
+**rule 1: never render; hand the user the command.**
+
+Each phase ends with a **gate** — but the user runs in **autopilot** (CLAUDE.md rule 2): every gate is
+auto-approved. Don't stop and wait; make the best choice (pick hook A, sensible identity), write the file, continue.
+Do the phases in order through Phase 4 (`check` passes), then stop with ONE summary + the render command.
+Never skip a phase's file and never render (rule 1). Open questions (real numbers, screenshots) go in the summary.
+
+## Phase 0 — Brief
+Ask (only what's missing): topic, audience, the ONE takeaway, target length (default 60–150 s),
+CTA/contact for the outro, any visuals/footage the user owns (PNG screenshots go in `videos/<slug>/assets/`).
+The user may already have run `claude-video "Judul"` (creates videos/<slug>/ with SCRIPT skeletons);
+otherwise Claude runs `python -m engine new "Judul"` itself (it only writes text files). Also add/update the idea in `ideas/`.
+**Headless autopilot:** `claude-video "Judul"` runs you via `claude -p` with `AUTOPILOT.md` as the prompt — no user to
+ask; use safe defaults, finish through `check --dry` clean, end with a ≤ 12-line summary. Never run `auto`/`go` yourself.
+
+## Phase 1 — SCRIPT.md (naskah)  → gate
+- Format: `## CHAPTER` headings, one sentence per `[Lxx]` line. Chapters: `INTRO`, `00 · LABEL` … `06 · LABEL`, `RECAP`, `OUTRO`.
+- Structure (from the reference, 152 s): hook 0–20 s (answer a comment / bold claim, show the result first) →
+  4–7 numbered chapters of 8–28 s → dark recap tying back to the claim → outro CTA 10–12 s.
+- Voice: casual Indonesian (aku/kamu, "nah", "terus", "udah"), 2–3 s per sentence, ~160 wpm → about
+  **2.7 words per second of runtime**. 150 s ≈ 300 words, ~45 lines.
+- Every line must "earn" a visual. Mark the key word you'll animate on with `{curly}` in a comment if needed.
+- Offer 2–3 hook options as A/B/C (like the reference's option cards) and let the user pick.
+- **Tech terms stay English** (GLOSSARY.md): node, pod, load balancer, auto-scaling, idle, reserved instance…
+  Run the glossary check on every line and every on-screen label before the gate.
+- Read-aloud marks: `*kata*` = vocal stress (put it on the same words the visuals land on), ` //` at line
+  end = breath. Write it to be SPOKEN: short clauses, no parentheses, numbers as words where they're said
+  ("empat belas ribu dolar"), English terms only if you'd say them out loud.
+- **After every SCRIPT.md write/change: run `python -m engine naskah <slug>` → NASKAH.md** and tell the
+  user it's ready to read. Rerun it after every revision so it always matches.
+
+## Phase 1.5 — PLAN.md (identitas + komposisi, satu file)  → gate
+- Read `ideas/REGISTRY.md` (only the last ~5 rows matter). Fill `videos/<slug>/PLAN.md` from `templates/PLAN.md`:
+  the `<!-- registry -->` block, identity table, one composition row per chapter, line notes only where the code
+  won't make it obvious. **No per-line storyboard table** — the headlines/visuals live in scenes.py.
+- **Apple motion craft (STYLE §6f) is the default grammar for every video** — one leader, arrive on the word, holds,
+  quiet exits, continuity, real iOS springs / Apple curves. PLAN.md's Motion row names the leader per chapter and the
+  holds; the signature (§6d: reveal · glue · signature move) still rotates per video *inside* that grammar.
+- **Look** (STYLE §6e) in PLAN.md: **classic + Apple craft (default)** · classic + 1–3 reel moves as accents · full reel
+  look (teasers/trailers; an explainer only with a reason in PLAN). Proof sheets: `videos/_lab/apple-lab` (§6f),
+  `videos/_lab/reel-lab` (§6e), `videos/motion-lab` (§6d).
+- Choices 1–5 differ from the previous two videos (STYLE §6c); metaphor in ≥ 3 chapters; no two consecutive
+  chapters with the same layout (STYLE §6b); ≤ 3 cards; one accent per headline.
+- Then `python -m engine register <slug>` — it writes the REGISTRY row, music, new components and the hasil/README
+  row. Don't hand-edit those tables.
+- (Videos made before 2026-10-08 have IDENTITY.md + TREATMENT.md instead — leave them.)
+
+## Phase 3 — Voice + timing
+- Before the voice exists: `python -m engine estimate <slug>` (161 wpm estimate) so scenes can be built and previewed.
+- No recording yet → `claude-video <slug>` makes the **Mumeyong** TTS voice automatically (`audio/voice_tts.wav` + exact
+  timing, edge-tts, online; one voice, no options). Mispronounced terms → `audio/tts_lexicon.txt`. A real `voice.wav` always wins.
+- User records `videos/<slug>/audio/voice.wav` reading **NASKAH.md** (48 kHz, quiet room, ONE take start→finish; on a mistake just
+  repeat the sentence — the aligner keeps the last good take). Then `python -m engine align <slug>`.
+  Lines scoring < 0.75 are flagged — check them in timing.json.
+- Music: **generated by default** (`engine/audio/music.py`, composed from the chapters; the user only records voice).
+  Pick **style + key + mood** and an **sfx kit** in PLAN.md (STYLE §7 — style and kit differ from the previous video)
+  and set `v.music = dict(style=.., key=.., mood=..)`, `v.sfx_kit = ".."`, and `Video(bpm=..)` inside the style's
+  range; `check` prints the plan (⚠ if the bpm is off) and `check --dry` composes music + SFX in memory. A real track at `audio/music.(mp3|wav)` overrides it (then set `beat_offset`).
+
+## Phase 4 — scenes.py (kode)
+- **Don't read old videos, labs, component sources or the whole API.md.** Start from `templates/scenes.py` (current
+  grammar) + `python -m engine api core` + `api index`; `api <module>` for one kit's signatures; `recent <slug>` for what
+  must differ (last 3 videos + previous series episode). `python -m engine api` regenerates API.md after you
+  add/change a component. Aim for ~350 lines: use `heads`/`draw_heads` for headlines, `pop_tag`, `tag_center`,
+  `check_badge`, `punch_word`, `standard_outro` (beats.py) instead of re-writing them. QUICK: 1–2 new components.
+- `build(project) -> Video`. Get `T = project.timing`; every time comes from `T.line(..)`, `T.word(..)`,
+  `T.after(..)`, chapter spans, or `video.beat`.
+- Structure: one function per chapter (`def ch_naskah(v, T): ...`) that registers layers with
+  `v.add(start, end, fn)`; `fn(c, t)` draws with components. End time of a layer must include its exit.
+- Pattern per chapter: `v.chapter(n, LABEL, start, end)` → `kicker` + `Headline.draw(t, t_in, t_out)` →
+  content via `appear(...)` → chat events → `v.sfx(...)` for each visible event.
+- Each chapter's elements exit at the next chapter's start − 0.35 s (`out`) — or better, hand over with continuity
+  (`depth_swap`, `Morph`, `Rig`) so the frame is never empty (§6f rule 8).
+- **Apple craft in code (§6f):** time big moves with `arrive(T.word(..))`, followers with `follow()`; headlines
+  `draw_heads(c, t, hs, reveal="rise", exit="quiet")` (or wipe/ink); cards `rise(...)`; camera only `dolly` (holds) /
+  `push` / `cut`; springs `ios_at(t, t0, "smooth"|"hero"|"snappy")`, window springs `glide(p)` / `pop(p, s)`
+  instead of `out_expo` / `out_back`, and **`track(t, frames, preset)` for any value with 2+ targets** (§6h).
+- `select_box` / dim-and-outline / `focus_pull` for focus, `fmt_id` for numbers.
+- **Brand sting (every new video):** `PRE_ROLL = 2.05` at the top of scenes.py + `brand_intro(v, version=2)` first thing in
+  `build()` (components/brand.py). The engine shifts voice + all `T` times by PRE_ROLL; the hook starts under the
+  sting's exit. Outro logo = `mumei_mark(..., ink=C["d_ink"], paper=C["d_bg"])`, not the old ring.
+- **Cover + post (every video):** `v.cover = lambda c: cover(c, "<title with one *accent*>", kicker=.., color=<signature>,
+  tags=[<2–3 short proof pills>], badge=.., hero=<fn(c, box) drawing the video's hero object>)`. The title is a
+  curiosity hook, not the video title verbatim; ≤ 2 lines at 128 px. Then write `hasil/<slug>/POST.md` from
+  `POST_TEMPLATE.md` (title ≤ 60 chars + paste blocks for TikTok · YouTube Shorts · Instagram/Facebook, no clichés — STYLE §8b) (the hasil/README row comes from `register`).
+- After writing: Claude runs `python -m engine check <slug> --dry` and fixes every ✗ ERROR and `!` item (`·` items
+  are a few px of card edge — judge them). `--dry` runs all draw code off-screen and writes nothing.
+  Its **motion table** (still % · longest busy · peak movers per chapter, `CROWD`/`STACK` flags) is how Claude "sees"
+  the motion: fix every `!` (add holds, give one leader, move the camera into a hold), aim for `~`-free.
+  Its **easing check** lists `out_expo` / `out_back` / `keys()` in scenes.py — switch them to springs (§6h).
+- **Critique loop (§6h):** Claude runs `python -m engine critique <slug>` (PNG review sheets only) and LOOKS at
+  `out/critique/hook.png`, `sheet.png`, `moves.png`; scores hook · readability · motion · variety · brand · sound
+  sync 1–10 in `videos/<slug>/CRITIQUE.md` (`templates/CRITIQUE.md`), fixes the 3 worst, repeats until all ≥ 8
+  (max 3 rounds).
+- Then hand the user the commands (see below). **Do not run them.**
+
+## Format QUICK (pilar B/C — lihat `ideas/STRATEGY.md`)
+Less work, **not** less creative. Same phases and files (SCRIPT → NASKAH → PLAN → scenes → check), smaller scope:
+- **60–75 s** (stay over 1 minute for platform payouts), ~14–20 lines, INTRO + 2–3 chapters + 1-line punch + short outro
+  (the dark recap may be a single line or skipped; outro logo + follow stays — brand DNA).
+- **One hero object** that carries the whole video (the metaphor's object), changing state each chapter — instead of a
+  new layout per chapter. Composition rule §6b still applies inside it: motivated camera (§6f), punch every ~15 s.
+- **≥ 1 new component**, OR an existing component used in a clearly new way (new role in a new metaphor) — never
+  the same component as hero in two videos in a row.
+- Identity rules unchanged: metaphor, signature move, color, hook, structure differ from the previous video (REGISTRY).
+- **Anti-slop gate** (STYLE §8b + STRATEGY §4) checked on the script before PLAN: one thing only Mumeyong could say,
+  no cliché openers, hero = metaphor object (never a glowing server / robot / globe).
+- Template: `templates/SCRIPT_QUICK.md`.
+
+## Phase 5 — Render + feedback
+1. User runs `claude-video <slug>` → final render straight into `hasil/<slug>/` (no preview round by default — the
+   user trusts it). Open questions in `out/autopilot.md` / your final message are printed after the render.
+2. Feedback on the final → fix → `claude-video <slug>` again. Optional cheap check of one chapter:
+   `claude-video <slug> preview --from 20 --to 45` (540p, sheet + REVIEW stills).
+3. Feedback must be specific: line id or timecode + what's wrong. If vague, ask which line.
+4. Fix → new commands → repeat. Expect ~3 rounds (the reference took 3 versions).
+
+## Phase 6 — Final + commit
+`claude-video <slug>` already auto-copies `<slug>.mp4` + the designed `cover.png` to `hasil/<slug>/`
+(POST.md already exists from phase 4 — refresh it if the script changed). Update `hasil/README.md` (📦 final) and the idea file. When the user confirms it's good, suggest
+`git add videos/<slug> && git commit -m "feat(<slug>): …"` — commit only if the user says so.
+
+## Command to hand over — ONE per round
+1. Write the line ids / seconds worth a close look into `videos/<slug>/REVIEW` (space-separated, `#` comments).
+2. Hand over exactly:
+```bash
+claude-video <slug>              # naskah, voice (align or TTS), check, final render → hasil/<slug>/
+claude-video <slug> preview      # optional 540p review round (cover, sheet, REVIEW stills, preview+music)
+```
+`claude-video` needs no venv activation and only redoes what's out of date (e.g. align runs by itself once
+audio/voice.wav appears or changes).
+
+## Engine cheat-sheet
+```python
+from engine import Video, tokens as tk
+from engine.ease import prog, glide, pop, track, in_cubic, curve  # curve("apple_out") etc. (tk.EASE)
+x = track(t, [(t0, 120), (t1, 480), (t2, 300)], "snappy")       # 2+ targets: summed springs (§6h)
+a = glide(prog(t, t_in, 0.5))                                     # entrance from rest (not out_expo)
+from engine.components import (arrive, follow, rise, wipe, depth_swap, focus_pull, dolly, push, cut, ios_at,
+    heads, draw_heads)                                            # Apple craft (STYLE §6f)
+t0 = arrive(T.word("L07", "kode"))                               # lands ON the stressed word
+rise(c, t, t0, t_out, (x, y, w, h), lambda c: c.card(x, y, w, h)) # fade-up, opacity leads, quiet exit
+draw_heads(c, t, hs, reveal="rise", exit="quiet")
+dolly(v, hold_start, hold_end)                                    # camera only moves in holds
+from engine.components import (Headline, kicker, appear, fade, ChatTrack, window, chip, tag, word_pill,
+    select_box, strike, stat, big_number, waveform, rec_bar, filmstrip, phone, comment, Cursor,
+    step_row, rule_box, connector, segments, follow_button, contact_pill, fmt_id, wobble)
+
+v = Video(duration=T.duration, bpm=128, beat_offset=0.0)
+v.chapter(2, "NASKAH", start, end)            # numbered chapter → HUD + dot + bg tint
+v.chapter(None, "LIMA ATURAN", s, e, dark=True)
+v.add(start, end, lambda c, t: ..., z=0)       # draw fn, t = global seconds
+v.sfx("whoosh", start)                          # sound cue
+v.chat = ChatTrack(); v.chat.show(t); v.chat.type("…", at=t); v.chat.send(at=t2)
+v.track(Cursor([(t0, x0, y0), (t1, x1, y1)], clicks=[t1]))
+
+h = Headline("Naskah *dulu*.")                 # *accent*  _serif_  ~strike~  \n
+h.draw(c, t, t_in, t_out, strike_at=None)
+appear(c, t, t_in, t_out, (x, y, w, h), lambda c: window.frame(c, x, y, w, h, "CLAUDE.md", "aturan kerja"))
+```

@@ -1,0 +1,4 @@
+ISP = i es pe
+LOS = el o es
+NAT = nat
+firmware = férmwer

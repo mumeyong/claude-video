@@ -7,7 +7,7 @@ Pure functions of their progress values and t.
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, mix, out_expo, in_out_cubic
+from ..ease import clamp, mix, in_out_cubic, glide
 
 PURPLE = tk.CHAPTER[3][0]
 WHITE = (1, 1, 1, 1)
@@ -132,7 +132,7 @@ def bubble(c, x, y, text, p=1.0, align="l", color=None, size=30):
     bw, bh = tw + 44, size * 1.9
     bx = x - 30 if align == "l" else x - bw + 30
     by = y - bh - 16
-    with c.at(0, 0, 0.6 + 0.4 * out_expo(p), origin=(x, y)):
+    with c.at(0, 0, 0.6 + 0.4 * glide(p), origin=(x, y)):
         with c.group(clamp(p * 2)):
             c.shadow(bx, by, bw, bh, bh / 2, 20, 8, 0.12)
             c.fill_rrect(bx, by, bw, bh, bh / 2, color)
@@ -209,7 +209,7 @@ def lapis(c, cx, cy, w, h, layers, gap=70, color=None):
             continue
         pad = gap * (k + 1)
         x, y, ww, hh = cx - w / 2 - pad, cy - h / 2 - pad, w + 2 * pad, h + 2 * pad
-        s = 0.94 + 0.06 * out_expo(p)
+        s = 0.94 + 0.06 * glide(p)
         with c.at(0, 0, s, origin=(cx, cy)):
             c.fill_rrect(x, y, ww, hh, 30 + pad * 0.3, (*color[:3], 0.035 * p))
             c.stroke_rrect(x, y, ww, hh, 30 + pad * 0.3, color, ly.get("thick", 4), p,

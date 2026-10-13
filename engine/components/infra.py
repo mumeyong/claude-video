@@ -6,7 +6,7 @@ All pure: drawn from explicit progress values / time; randomness is hash-seeded.
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, lerp, mix, out_expo, out_back, in_out_cubic
+from ..ease import clamp, lerp, mix, in_out_cubic, pop
 from .motion import bezier_point
 
 PURPLE = tk.CHAPTER[3][0]
@@ -57,7 +57,7 @@ def car(c, cx, cy, color=None, alpha=1.0, rot=0.0, w=34, h=52):
 def booth(c, cx, cy, w=70, h=46, open_p=1.0, color=None, state="ok", alpha=1.0):
     """Top-down toll booth: purple box + barrier arm (raised when open). state: ok / idle / red."""
     color = {"ok": color or PURPLE, "idle": c.theme("faint", "d_line"), "red": tk.C["rec"]}[state]
-    s = out_back(clamp(open_p), 1.6) if open_p < 1 else 1.0
+    s = pop(clamp(open_p), 1.6) if open_p < 1 else 1.0
     with c.at(0, 0, max(0.01, s), origin=(cx, cy)):
         c.shadow(cx - w / 2, cy - h / 2, w, h, 10, 14, 6, 0.12 * alpha)
         c.fill_rrect(cx - w / 2, cy - h / 2, w, h, 10, color, alpha)
@@ -316,7 +316,7 @@ def stack_layers(c, x, y_bottom, w, layers, slab_h=120, depth=22, gap=18, ghost=
                            dash=[10, 8])
         if p <= 0:
             continue
-        dy = -340 * (1 - out_back(clamp(p), 1.3))
+        dy = -340 * (1 - pop(clamp(p), 1.3))
         a = clamp(p * 4)
         with c.group(a):
             c.shadow(x, sy + dy, w, slab_h + depth, 22, 26, 14, 0.12)

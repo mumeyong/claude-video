@@ -5,7 +5,7 @@ All are drawn "at rest" from explicit progress values (0..1) the scene computes 
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, lerp, mix, out_expo, out_back, in_out_cubic
+from ..ease import clamp, lerp, mix, out_expo, in_out_cubic, glide, pop
 from .motion import fmt_id
 
 
@@ -136,7 +136,7 @@ def seat_grid(c, x, y, cols, rows, t, p_in=1.0, filled=(0,), p_fill=1.0, keep=No
         c.circle(wx, y + ch + 2, 16, c.theme("ink2", "d_muted"))
     for i in range(n):
         r_, k_ = divmod(i, cols)
-        wave = out_back(clamp((p_in * (n + 10) - (r_ + k_) * 1.2) / 6))
+        wave = pop(clamp((p_in * (n + 10) - (r_ + k_) * 1.2) / 6))
         a = 1.0
         if keep and i >= keep:
             a *= 1 - p_keep
@@ -148,7 +148,7 @@ def seat_grid(c, x, y, cols, rows, t, p_in=1.0, filled=(0,), p_fill=1.0, keep=No
         col = c.theme("faint", "d_line")
         c.fill_rrect(sx + (seat - s) / 2, sy + (seat - s) / 2, s, s, 10, col, a)
         if i in filled and p_fill > 0:
-            fs = s * out_back(p_fill)
+            fs = s * pop(p_fill)
             c.fill_rrect(sx + (seat - fs) / 2, sy + (seat - fs) / 2, fs, fs, 10, c.theme("accent", "d_accent"), a)
     return cw, ch
 
@@ -162,9 +162,9 @@ def price_bars(c, x, y, w, rows, bracket=0.0, bracket_label="beda jauh", row_h=1
         if p <= 0.002:
             continue
         ry = y + 30 + i * row_h
-        c.text(x + 40, ry + 34, label, tk.F["ui_semi"], 28, c.theme("ink", "d_ink"), out_expo(min(1, p * 2)), -0.02)
+        c.text(x + 40, ry + 34, label, tk.F["ui_semi"], 28, c.theme("ink", "d_ink"), glide(min(1, p * 2)), -0.02)
         c.fill_rrect(x + 40, ry + 54, bw, 40, 12, c.theme("line", "d_line"))
-        L = bw * length * out_expo(p)
+        L = bw * length * glide(p)
         if L > 2:
             c.fill_rrect(x + 40, ry + 54, max(24, L), 40, 12, color)
         if tg and p > 0.5:
@@ -175,7 +175,7 @@ def price_bars(c, x, y, w, rows, bracket=0.0, bracket_label="beda jauh", row_h=1
         y1, y2 = y + 30 + 54 + 20, y + 30 + (len(rows) - 1) * row_h + 54 + 20
         ym = lerp(y1, y2, 0.5)
         acc = c.theme("accent", "d_accent")
-        p = out_expo(bracket)
+        p = glide(bracket)
         c.line(bx, ym - (ym - y1) * p, bx + 18, ym - (ym - y1) * p, acc, 3)
         c.line(bx + 18, ym - (ym - y1) * p, bx + 18, ym + (y2 - ym) * p, acc, 3)
         c.line(bx, ym + (y2 - ym) * p, bx + 18, ym + (y2 - ym) * p, acc, 3)
@@ -233,7 +233,7 @@ def block_split(c, x, y, w, labels, p_split=0.0, moved=(), p_move=0.0, zone_labe
         sx0, sy0 = x + k_ * (w / cols), y + r_ * (h / rows_)          # slice inside big block
         sw0, sh0 = w / cols, h / rows_
         sx1, sy1 = x + k_ * (bw + gap), y + r_ * (bh + gap)           # spaced grid
-        sp = out_back(clamp(p_split), 1.2)
+        sp = pop(clamp(p_split), 1.2)
         bx, by = lerp(sx0, sx1, sp), lerp(sy0, sy1, sp)
         bww, bhh = lerp(sw0, bw, sp), lerp(sh0, bh, sp)
         is_moved = i in moved
@@ -275,7 +275,7 @@ def odometer(c, x, y, text, p, size, color, font=None, ls=-0.055, spins=2, stagg
             c.text(px, y, ch, font, size, color, 1.0, ls)
             continue
         k = n - 1 - digits.index(i)  # 0 = rightmost
-        pi = out_expo(clamp(p * (1 + stagger * n) - stagger * k))
+        pi = glide(clamp(p * (1 + stagger * n) - stagger * k))
         R = pi * (int(ch) + 10 * spins)
         d0, frac = int(R) % 10, R - int(R)
         cw = c.measure(ch, font, size, ls)[0] + size * 0.12
@@ -376,12 +376,12 @@ def receipt(c, x, y, w, lines, title="TAGIHAN CLOUD", sub="per bulan", row_h=96)
         pp = clamp(pp)
         if pp <= 0.01:
             continue
-        a = out_expo(pp)
+        a = glide(pp)
         base = yy + row_h * 0.55
         c.text(x + 36, base, label, tk.F["ui_semi"], 32, ink, a, -0.02)
         c.text(x + w - 36, base, value, tk.F["mono_bold"], 34, vcol or ink, a, 0.06, align="r")
         if ps > 0:
-            sw = (w - 60) * out_expo(ps)
+            sw = (w - 60) * glide(ps)
             c.line(x + 28, base - 11, x + 28 + sw, base - 11, tk.C["rec"], 5)
         yy += row_h * pp
     _dash(c, x + 30, y + h - foot_h + 14, x + w - 30, muted)
@@ -421,7 +421,7 @@ def note(c, x, y, text, p, arrow_to=None, color=None, size=None, align="l"):
     color = color or c.theme("accent", "d_accent")
     size = size or tk.T["note"][0]
     lines = text.split("\n")
-    a = out_expo(clamp(p * 2))
+    a = glide(clamp(p * 2))
     for i, ln in enumerate(lines):
         c.text(x, y + i * size * 1.05, ln, tk.F["serif"], size, color, a, 0.0, align=align)
     if arrow_to:

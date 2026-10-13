@@ -3,7 +3,7 @@ on an orbit, iris + pixel-block wipes, smear entrances, highlighter swipes, floa
 tilted card planes, hard-cut stat panels, verb slams on the six world colors, a logo end card.
 
 Ported from the claude.ai Motion film "Six Worlds, One Walk" (mumeyong.dev brand reel ’26, 16:9, 31,4 s) and re-laid
-for 1080×1920. For brand teasers / brand moments only (STYLE §6e) — explainer videos keep the §6d signature layer.
+for 1080×1920. For brand teasers / brand moments only (STYLE §1) — explainer videos keep STYLE §3.
 
     v.hud = False                                             # the reel brings its own HUD
     v.add(0, v.duration, lambda c, t: viewfinder(c, t, section(t), v.duration, dark=d(t)), z=90)
@@ -25,7 +25,7 @@ from contextlib import contextmanager
 import cairo
 
 from .. import tokens as tk
-from ..ease import clamp, in_cubic, in_out_cubic, lerp, mix, out_back, out_cubic
+from ..ease import clamp, in_cubic, in_out_cubic, lerp, mix, out_cubic, pop
 from .brand import _ENSO, mumei_mark
 from .motion import fmt_id
 
@@ -41,7 +41,7 @@ def _seg(t, a, b):
 
 
 def _eob(p, s=1.7):
-    return out_back(clamp(p), s) if p > 0 else 0.0
+    return pop(clamp(p), s) if p > 0 else 0.0
 
 
 def _lum(col):
@@ -350,7 +350,7 @@ def pill(c, cx, y, text, size=36, label=None, scale=1.0, alpha=1.0, width_of=Non
 
 
 def count_pill(c, t, t0, cx, y, v0, v1, label=None, fmt=None, suffix="", dur=None, t_out=None, size=36):
-    """Dark pill that pops at t0 (out_back 1.7) with a number counting v0 → v1 (Indonesian format by default);
+    """Dark pill that pops at t0 (pop 1.7) with a number counting v0 → v1 (Indonesian format by default);
     suffix ('+') lands when the count finishes. Returns the value shown."""
     if t < t0:
         return v0
@@ -412,7 +412,7 @@ def formula(c, t, t0, boxes, cards, target, op="+", t_out=None):
 
 
 def pop_card(c, t, t0, x, y, w, h, draw=None, image=None, label=None, color=None, r=None, alpha=1.0):
-    """A card that pops in at t0 (from −40, +80 px, scale .86 → 1, out_back 1.5): paper card, optional image (cover),
+    """A card that pops in at t0 (from −40, +80 px, scale .86 → 1, pop 1.5): paper card, optional image (cover),
     custom draw(c, x, y, w, h), and a chip label bottom-left."""
     if t < t0:
         return
@@ -526,7 +526,7 @@ def verb_slam(c, t, t0, words, colors=None, each=None, cx=None, base=1010, size=
 
 
 def end_card(c, t, t0, cx=None, cy=820, r=130, name="mumeyong.dev", sub=None, cta=None, lift=180):
-    """Logo end card from t0: 8 dots spiral in → the mumei mark grows (out_back) inside a swelling green ring → seal
+    """Logo end card from t0: 8 dots spiral in → the mumei mark grows (pop) inside a swelling green ring → seal
     stamps (0.95 s) → mark lifts by `lift` px and shrinks 15% → dotted orbit + the six world dots on an arc →
     wordmark clip-types in (1.35 s) → serif sub smears up (1.95 s) → dark CTA pill pops (2.3 s). Needs ~3.2 s."""
     u = t - t0

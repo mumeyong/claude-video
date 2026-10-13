@@ -1,0 +1,1205 @@
+{
+ "source": "estimate",
+ "duration": 90.411,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Kamu nunggu kode OTP, // timernya udah \"kirim ulang dalam lima puluh sembilan detik\", // dan HP-mu masih sepi.",
+   "start": 0.4,
+   "end": 7.49,
+   "words": [
+    {
+     "w": "Kamu",
+     "start": 0.4,
+     "end": 0.694
+    },
+    {
+     "w": "nunggu",
+     "start": 0.719,
+     "end": 1.131
+    },
+    {
+     "w": "kode",
+     "start": 1.166,
+     "end": 1.46
+    },
+    {
+     "w": "OTP,",
+     "start": 1.486,
+     "end": 1.78
+    },
+    {
+     "w": "//",
+     "start": 1.805,
+     "end": 1.981
+    },
+    {
+     "w": "timernya",
+     "start": 1.997,
+     "end": 2.526
+    },
+    {
+     "w": "udah",
+     "start": 2.572,
+     "end": 2.865
+    },
+    {
+     "w": "\"kirim",
+     "start": 2.891,
+     "end": 3.302
+    },
+    {
+     "w": "ulang",
+     "start": 3.338,
+     "end": 3.691
+    },
+    {
+     "w": "dalam",
+     "start": 3.721,
+     "end": 4.074
+    },
+    {
+     "w": "lima",
+     "start": 4.104,
+     "end": 4.398
+    },
+    {
+     "w": "puluh",
+     "start": 4.424,
+     "end": 4.776
+    },
+    {
+     "w": "sembilan",
+     "start": 4.807,
+     "end": 5.336
+    },
+    {
+     "w": "detik\",",
+     "start": 5.382,
+     "end": 5.852
+    },
+    {
+     "w": "//",
+     "start": 5.893,
+     "end": 6.069
+    },
+    {
+     "w": "dan",
+     "start": 6.084,
+     "end": 6.319
+    },
+    {
+     "w": "HP-mu",
+     "start": 6.34,
+     "end": 6.692
+    },
+    {
+     "w": "masih",
+     "start": 6.723,
+     "end": 7.076
+    },
+    {
+     "w": "sepi.",
+     "start": 7.106,
+     "end": 7.459
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Padahal kodenya udah dikirim. // Dia cuma lagi antre.",
+   "start": 7.87,
+   "end": 11.228,
+   "words": [
+    {
+     "w": "Padahal",
+     "start": 7.87,
+     "end": 8.327
+    },
+    {
+     "w": "kodenya",
+     "start": 8.367,
+     "end": 8.825
+    },
+    {
+     "w": "udah",
+     "start": 8.865,
+     "end": 9.151
+    },
+    {
+     "w": "dikirim.",
+     "start": 9.176,
+     "end": 9.69
+    },
+    {
+     "w": "//",
+     "start": 9.735,
+     "end": 9.907
+    },
+    {
+     "w": "Dia",
+     "start": 9.922,
+     "end": 10.151
+    },
+    {
+     "w": "cuma",
+     "start": 10.171,
+     "end": 10.457
+    },
+    {
+     "w": "lagi",
+     "start": 10.481,
+     "end": 10.768
+    },
+    {
+     "w": "antre.",
+     "start": 10.792,
+     "end": 11.193
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "00 · JALANNYA",
+   "text": "Kode OTP itu kayak surat yang lewat beberapa kantor pos.",
+   "start": 12.528,
+   "end": 16.259,
+   "words": [
+    {
+     "w": "Kode",
+     "start": 12.528,
+     "end": 12.829
+    },
+    {
+     "w": "OTP",
+     "start": 12.855,
+     "end": 13.096
+    },
+    {
+     "w": "itu",
+     "start": 13.117,
+     "end": 13.358
+    },
+    {
+     "w": "kayak",
+     "start": 13.379,
+     "end": 13.74
+    },
+    {
+     "w": "surat",
+     "start": 13.772,
+     "end": 14.133
+    },
+    {
+     "w": "yang",
+     "start": 14.164,
+     "end": 14.465
+    },
+    {
+     "w": "lewat",
+     "start": 14.492,
+     "end": 14.853
+    },
+    {
+     "w": "beberapa",
+     "start": 14.884,
+     "end": 15.426
+    },
+    {
+     "w": "kantor",
+     "start": 15.474,
+     "end": 15.895
+    },
+    {
+     "w": "pos.",
+     "start": 15.932,
+     "end": 16.233
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · JALANNYA",
+   "text": "Dari server aplikasi, // diserahin ke SMS gateway, // terus ke operator, // terus ke BTS dekat rumahmu.",
+   "start": 16.639,
+   "end": 23.356,
+   "words": [
+    {
+     "w": "Dari",
+     "start": 16.639,
+     "end": 16.936
+    },
+    {
+     "w": "server",
+     "start": 16.962,
+     "end": 17.378
+    },
+    {
+     "w": "aplikasi,",
+     "start": 17.414,
+     "end": 18.008
+    },
+    {
+     "w": "//",
+     "start": 18.06,
+     "end": 18.238
+    },
+    {
+     "w": "diserahin",
+     "start": 18.254,
+     "end": 18.848
+    },
+    {
+     "w": "ke",
+     "start": 18.899,
+     "end": 19.078
+    },
+    {
+     "w": "SMS",
+     "start": 19.093,
+     "end": 19.331
+    },
+    {
+     "w": "gateway,",
+     "start": 19.352,
+     "end": 19.886
+    },
+    {
+     "w": "//",
+     "start": 19.933,
+     "end": 20.111
+    },
+    {
+     "w": "terus",
+     "start": 20.126,
+     "end": 20.483
+    },
+    {
+     "w": "ke",
+     "start": 20.514,
+     "end": 20.692
+    },
+    {
+     "w": "operator,",
+     "start": 20.708,
+     "end": 21.302
+    },
+    {
+     "w": "//",
+     "start": 21.354,
+     "end": 21.532
+    },
+    {
+     "w": "terus",
+     "start": 21.547,
+     "end": 21.904
+    },
+    {
+     "w": "ke",
+     "start": 21.935,
+     "end": 22.113
+    },
+    {
+     "w": "BTS",
+     "start": 22.128,
+     "end": 22.366
+    },
+    {
+     "w": "dekat",
+     "start": 22.387,
+     "end": 22.743
+    },
+    {
+     "w": "rumahmu.",
+     "start": 22.774,
+     "end": 23.309
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · JALANNYA",
+   "text": "Tiap kantor nerima, // nyortir, // baru nerusin.",
+   "start": 23.736,
+   "end": 26.721,
+   "words": [
+    {
+     "w": "Tiap",
+     "start": 23.736,
+     "end": 24.016
+    },
+    {
+     "w": "kantor",
+     "start": 24.04,
+     "end": 24.432
+    },
+    {
+     "w": "nerima,",
+     "start": 24.467,
+     "end": 24.915
+    },
+    {
+     "w": "//",
+     "start": 24.954,
+     "end": 25.122
+    },
+    {
+     "w": "nyortir,",
+     "start": 25.137,
+     "end": 25.641
+    },
+    {
+     "w": "//",
+     "start": 25.685,
+     "end": 25.853
+    },
+    {
+     "w": "baru",
+     "start": 25.868,
+     "end": 26.148
+    },
+    {
+     "w": "nerusin.",
+     "start": 26.172,
+     "end": 26.677
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "01 · ANTREAN",
+   "text": "Masalahnya, // tiap kantor punya antrean.",
+   "start": 28.021,
+   "end": 30.259,
+   "words": [
+    {
+     "w": "Masalahnya,",
+     "start": 28.021,
+     "end": 28.609
+    },
+    {
+     "w": "//",
+     "start": 28.66,
+     "end": 28.807
+    },
+    {
+     "w": "tiap",
+     "start": 28.82,
+     "end": 29.065
+    },
+    {
+     "w": "kantor",
+     "start": 29.087,
+     "end": 29.43
+    },
+    {
+     "w": "punya",
+     "start": 29.46,
+     "end": 29.754
+    },
+    {
+     "w": "antrean.",
+     "start": 29.78,
+     "end": 30.221
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "01 · ANTREAN",
+   "text": "Pas jam rame, // tanggal gajian, // atau lagi ada promo, // semua aplikasi ngirim kode lewat jalur yang sama.",
+   "start": 30.639,
+   "end": 38.102,
+   "words": [
+    {
+     "w": "Pas",
+     "start": 30.639,
+     "end": 30.889
+    },
+    {
+     "w": "jam",
+     "start": 30.911,
+     "end": 31.16
+    },
+    {
+     "w": "rame,",
+     "start": 31.182,
+     "end": 31.557
+    },
+    {
+     "w": "//",
+     "start": 31.589,
+     "end": 31.776
+    },
+    {
+     "w": "tanggal",
+     "start": 31.793,
+     "end": 32.292
+    },
+    {
+     "w": "gajian,",
+     "start": 32.335,
+     "end": 32.835
+    },
+    {
+     "w": "//",
+     "start": 32.878,
+     "end": 33.065
+    },
+    {
+     "w": "atau",
+     "start": 33.082,
+     "end": 33.394
+    },
+    {
+     "w": "lagi",
+     "start": 33.421,
+     "end": 33.733
+    },
+    {
+     "w": "ada",
+     "start": 33.76,
+     "end": 34.01
+    },
+    {
+     "w": "promo,",
+     "start": 34.032,
+     "end": 34.468
+    },
+    {
+     "w": "//",
+     "start": 34.506,
+     "end": 34.694
+    },
+    {
+     "w": "semua",
+     "start": 34.71,
+     "end": 35.084
+    },
+    {
+     "w": "aplikasi",
+     "start": 35.117,
+     "end": 35.679
+    },
+    {
+     "w": "ngirim",
+     "start": 35.728,
+     "end": 36.165
+    },
+    {
+     "w": "kode",
+     "start": 36.202,
+     "end": 36.515
+    },
+    {
+     "w": "lewat",
+     "start": 36.542,
+     "end": 36.916
+    },
+    {
+     "w": "jalur",
+     "start": 36.949,
+     "end": 37.323
+    },
+    {
+     "w": "yang",
+     "start": 37.356,
+     "end": 37.668
+    },
+    {
+     "w": "sama.",
+     "start": 37.695,
+     "end": 38.07
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · ANTREAN",
+   "text": "Kalau HP-mu lagi nggak dapet sinyal, // operator nyimpen dulu suratnya, // nunggu kamu nongol lagi.",
+   "start": 38.482,
+   "end": 44.452,
+   "words": [
+    {
+     "w": "Kalau",
+     "start": 38.482,
+     "end": 38.812
+    },
+    {
+     "w": "HP-mu",
+     "start": 38.84,
+     "end": 39.17
+    },
+    {
+     "w": "lagi",
+     "start": 39.199,
+     "end": 39.473
+    },
+    {
+     "w": "nggak",
+     "start": 39.497,
+     "end": 39.827
+    },
+    {
+     "w": "dapet",
+     "start": 39.855,
+     "end": 40.185
+    },
+    {
+     "w": "sinyal,",
+     "start": 40.213,
+     "end": 40.653
+    },
+    {
+     "w": "//",
+     "start": 40.691,
+     "end": 40.856
+    },
+    {
+     "w": "operator",
+     "start": 40.87,
+     "end": 41.364
+    },
+    {
+     "w": "nyimpen",
+     "start": 41.407,
+     "end": 41.847
+    },
+    {
+     "w": "dulu",
+     "start": 41.885,
+     "end": 42.16
+    },
+    {
+     "w": "suratnya,",
+     "start": 42.184,
+     "end": 42.733
+    },
+    {
+     "w": "//",
+     "start": 42.781,
+     "end": 42.945
+    },
+    {
+     "w": "nunggu",
+     "start": 42.96,
+     "end": 43.344
+    },
+    {
+     "w": "kamu",
+     "start": 43.378,
+     "end": 43.652
+    },
+    {
+     "w": "nongol",
+     "start": 43.676,
+     "end": 44.061
+    },
+    {
+     "w": "lagi.",
+     "start": 44.094,
+     "end": 44.424
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · ANTREAN",
+   "text": "Yang bikin aku gemes: // di log server, // status-nya udah sent dari detik pertama.",
+   "start": 44.832,
+   "end": 50.429,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 44.832,
+     "end": 45.139
+    },
+    {
+     "w": "bikin",
+     "start": 45.165,
+     "end": 45.533
+    },
+    {
+     "w": "aku",
+     "start": 45.565,
+     "end": 45.81
+    },
+    {
+     "w": "gemes:",
+     "start": 45.832,
+     "end": 46.261
+    },
+    {
+     "w": "//",
+     "start": 46.298,
+     "end": 46.482
+    },
+    {
+     "w": "di",
+     "start": 46.498,
+     "end": 46.682
+    },
+    {
+     "w": "log",
+     "start": 46.698,
+     "end": 46.943
+    },
+    {
+     "w": "server,",
+     "start": 46.964,
+     "end": 47.455
+    },
+    {
+     "w": "//",
+     "start": 47.497,
+     "end": 47.681
+    },
+    {
+     "w": "status-nya",
+     "start": 47.697,
+     "end": 48.372
+    },
+    {
+     "w": "udah",
+     "start": 48.43,
+     "end": 48.737
+    },
+    {
+     "w": "sent",
+     "start": 48.763,
+     "end": 49.07
+    },
+    {
+     "w": "dari",
+     "start": 49.097,
+     "end": 49.403
+    },
+    {
+     "w": "detik",
+     "start": 49.43,
+     "end": 49.798
+    },
+    {
+     "w": "pertama.",
+     "start": 49.83,
+     "end": 50.381
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · ANTREAN",
+   "text": "Padahal sent cuma artinya udah diserahin ke gateway, // bukan udah sampai di HP-mu.",
+   "start": 50.809,
+   "end": 56.033,
+   "words": [
+    {
+     "w": "Padahal",
+     "start": 50.809,
+     "end": 51.267
+    },
+    {
+     "w": "sent",
+     "start": 51.307,
+     "end": 51.593
+    },
+    {
+     "w": "cuma",
+     "start": 51.618,
+     "end": 51.904
+    },
+    {
+     "w": "artinya",
+     "start": 51.929,
+     "end": 52.386
+    },
+    {
+     "w": "udah",
+     "start": 52.426,
+     "end": 52.712
+    },
+    {
+     "w": "diserahin",
+     "start": 52.737,
+     "end": 53.309
+    },
+    {
+     "w": "ke",
+     "start": 53.359,
+     "end": 53.531
+    },
+    {
+     "w": "gateway,",
+     "start": 53.546,
+     "end": 54.06
+    },
+    {
+     "w": "//",
+     "start": 54.105,
+     "end": 54.277
+    },
+    {
+     "w": "bukan",
+     "start": 54.292,
+     "end": 54.635
+    },
+    {
+     "w": "udah",
+     "start": 54.665,
+     "end": 54.951
+    },
+    {
+     "w": "sampai",
+     "start": 54.976,
+     "end": 55.376
+    },
+    {
+     "w": "di",
+     "start": 55.411,
+     "end": 55.583
+    },
+    {
+     "w": "HP-mu.",
+     "start": 55.598,
+     "end": 55.998
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "02 · KIRIM ULANG",
+   "text": "Makanya sekarang banyak aplikasi kirim kode lewat WhatsApp atau notifikasi, // jalannya internet, // bukan antrean SMS.",
+   "start": 57.333,
+   "end": 63.676,
+   "words": [
+    {
+     "w": "Makanya",
+     "start": 57.333,
+     "end": 57.722
+    },
+    {
+     "w": "sekarang",
+     "start": 57.756,
+     "end": 58.194
+    },
+    {
+     "w": "banyak",
+     "start": 58.232,
+     "end": 58.572
+    },
+    {
+     "w": "aplikasi",
+     "start": 58.602,
+     "end": 59.039
+    },
+    {
+     "w": "kirim",
+     "start": 59.078,
+     "end": 59.369
+    },
+    {
+     "w": "kode",
+     "start": 59.395,
+     "end": 59.638
+    },
+    {
+     "w": "lewat",
+     "start": 59.659,
+     "end": 59.951
+    },
+    {
+     "w": "WhatsApp",
+     "start": 59.976,
+     "end": 60.414
+    },
+    {
+     "w": "atau",
+     "start": 60.452,
+     "end": 60.695
+    },
+    {
+     "w": "notifikasi,",
+     "start": 60.716,
+     "end": 61.3
+    },
+    {
+     "w": "//",
+     "start": 61.351,
+     "end": 61.496
+    },
+    {
+     "w": "jalannya",
+     "start": 61.509,
+     "end": 61.947
+    },
+    {
+     "w": "internet,",
+     "start": 61.985,
+     "end": 62.471
+    },
+    {
+     "w": "//",
+     "start": 62.513,
+     "end": 62.659
+    },
+    {
+     "w": "bukan",
+     "start": 62.672,
+     "end": 62.964
+    },
+    {
+     "w": "antrean",
+     "start": 62.989,
+     "end": 63.378
+    },
+    {
+     "w": "SMS.",
+     "start": 63.412,
+     "end": 63.655
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "02 · KIRIM ULANG",
+   "text": "Dan satu lagi: // jangan pencet kirim ulang berkali-kali.",
+   "start": 64.056,
+   "end": 67.415,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 64.056,
+     "end": 64.269
+    },
+    {
+     "w": "satu",
+     "start": 64.288,
+     "end": 64.554
+    },
+    {
+     "w": "lagi:",
+     "start": 64.578,
+     "end": 64.897
+    },
+    {
+     "w": "//",
+     "start": 64.925,
+     "end": 65.085
+    },
+    {
+     "w": "jangan",
+     "start": 65.099,
+     "end": 65.471
+    },
+    {
+     "w": "pencet",
+     "start": 65.504,
+     "end": 65.877
+    },
+    {
+     "w": "kirim",
+     "start": 65.909,
+     "end": 66.229
+    },
+    {
+     "w": "ulang",
+     "start": 66.257,
+     "end": 66.576
+    },
+    {
+     "w": "berkali-kali.",
+     "start": 66.604,
+     "end": 67.35
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "02 · KIRIM ULANG",
+   "text": "Di banyak aplikasi, // kode baru bikin kode lama hangus, // jadi yang akhirnya nyampe malah yang udah nggak berlaku.",
+   "start": 67.795,
+   "end": 75.257,
+   "words": [
+    {
+     "w": "Di",
+     "start": 67.795,
+     "end": 67.971
+    },
+    {
+     "w": "banyak",
+     "start": 67.986,
+     "end": 68.397
+    },
+    {
+     "w": "aplikasi,",
+     "start": 68.432,
+     "end": 69.019
+    },
+    {
+     "w": "//",
+     "start": 69.07,
+     "end": 69.246
+    },
+    {
+     "w": "kode",
+     "start": 69.262,
+     "end": 69.555
+    },
+    {
+     "w": "baru",
+     "start": 69.581,
+     "end": 69.874
+    },
+    {
+     "w": "bikin",
+     "start": 69.899,
+     "end": 70.252
+    },
+    {
+     "w": "kode",
+     "start": 70.282,
+     "end": 70.576
+    },
+    {
+     "w": "lama",
+     "start": 70.601,
+     "end": 70.895
+    },
+    {
+     "w": "hangus,",
+     "start": 70.92,
+     "end": 71.389
+    },
+    {
+     "w": "//",
+     "start": 71.43,
+     "end": 71.606
+    },
+    {
+     "w": "jadi",
+     "start": 71.622,
+     "end": 71.915
+    },
+    {
+     "w": "yang",
+     "start": 71.941,
+     "end": 72.234
+    },
+    {
+     "w": "akhirnya",
+     "start": 72.259,
+     "end": 72.788
+    },
+    {
+     "w": "nyampe",
+     "start": 72.834,
+     "end": 73.244
+    },
+    {
+     "w": "malah",
+     "start": 73.28,
+     "end": 73.632
+    },
+    {
+     "w": "yang",
+     "start": 73.663,
+     "end": 73.956
+    },
+    {
+     "w": "udah",
+     "start": 73.982,
+     "end": 74.275
+    },
+    {
+     "w": "nggak",
+     "start": 74.301,
+     "end": 74.653
+    },
+    {
+     "w": "berlaku.",
+     "start": 74.683,
+     "end": 75.211
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "RECAP",
+   "text": "OTP telat itu bukan HP-mu yang rusak. // Suratnya cuma lagi antre di jalan.",
+   "start": 76.557,
+   "end": 81.781,
+   "words": [
+    {
+     "w": "OTP",
+     "start": 76.557,
+     "end": 76.81
+    },
+    {
+     "w": "telat",
+     "start": 76.832,
+     "end": 77.212
+    },
+    {
+     "w": "itu",
+     "start": 77.245,
+     "end": 77.498
+    },
+    {
+     "w": "bukan",
+     "start": 77.52,
+     "end": 77.899
+    },
+    {
+     "w": "HP-mu",
+     "start": 77.932,
+     "end": 78.311
+    },
+    {
+     "w": "yang",
+     "start": 78.344,
+     "end": 78.661
+    },
+    {
+     "w": "rusak.",
+     "start": 78.688,
+     "end": 79.131
+    },
+    {
+     "w": "//",
+     "start": 79.169,
+     "end": 79.359
+    },
+    {
+     "w": "Suratnya",
+     "start": 79.375,
+     "end": 79.945
+    },
+    {
+     "w": "cuma",
+     "start": 79.994,
+     "end": 80.31
+    },
+    {
+     "w": "lagi",
+     "start": 80.338,
+     "end": 80.654
+    },
+    {
+     "w": "antre",
+     "start": 80.681,
+     "end": 81.061
+    },
+    {
+     "w": "di",
+     "start": 81.094,
+     "end": 81.284
+    },
+    {
+     "w": "jalan.",
+     "start": 81.3,
+     "end": 81.743
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "OUTRO",
+   "text": "Kamu pernah nunggu OTP paling lama berapa menit? // Tulis di komentar.",
+   "start": 83.081,
+   "end": 87.559,
+   "words": [
+    {
+     "w": "Kamu",
+     "start": 83.081,
+     "end": 83.371
+    },
+    {
+     "w": "pernah",
+     "start": 83.397,
+     "end": 83.803
+    },
+    {
+     "w": "nunggu",
+     "start": 83.838,
+     "end": 84.244
+    },
+    {
+     "w": "OTP",
+     "start": 84.279,
+     "end": 84.512
+    },
+    {
+     "w": "paling",
+     "start": 84.532,
+     "end": 84.938
+    },
+    {
+     "w": "lama",
+     "start": 84.973,
+     "end": 85.263
+    },
+    {
+     "w": "berapa",
+     "start": 85.288,
+     "end": 85.695
+    },
+    {
+     "w": "menit?",
+     "start": 85.73,
+     "end": 86.136
+    },
+    {
+     "w": "//",
+     "start": 86.171,
+     "end": 86.345
+    },
+    {
+     "w": "Tulis",
+     "start": 86.361,
+     "end": 86.709
+    },
+    {
+     "w": "di",
+     "start": 86.739,
+     "end": 86.913
+    },
+    {
+     "w": "komentar.",
+     "start": 86.928,
+     "end": 87.508
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 87.939,
+   "end": 89.431,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 87.939,
+     "end": 88.282
+    },
+    {
+     "w": "biar",
+     "start": 88.312,
+     "end": 88.526
+    },
+    {
+     "w": "nggak",
+     "start": 88.545,
+     "end": 88.803
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 88.825,
+     "end": 89.383
+    }
+   ]
+  }
+ ]
+}

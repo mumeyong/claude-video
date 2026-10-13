@@ -13,7 +13,7 @@ import math
 import random
 
 from .. import tokens as tk
-from ..ease import clamp, in_cubic, in_out_sine, out_expo, prog
+from ..ease import clamp, in_cubic, in_out_sine, out_expo, prog, glide
 
 PAPER, INK, SEAL = tk.C["brand_paper"], tk.C["brand_ink"], tk.C["brand_seal"]
 STING = 1.5                                     # seconds; PRE_ROLL a bit shorter so the hook starts under the exit
@@ -102,7 +102,7 @@ def brand_sting(c, t, t0=0.0, dur=STING):
     p_enso = in_out_sine(prog(u, 0.05, 0.7))
     mumei_mark(c, cx, cy, r, p_enso=p_enso, p_seal=prog(u, 0.82, 0.25), flecks=prog(u, 0.72, 0.15),
                alpha=1 - prog(u, dur - 0.12, 0.12))
-    wa = out_expo(prog(u, 0.95, 0.35)) * (1 - prog(u, ex, 0.15))
+    wa = glide(prog(u, 0.95, 0.35)) * (1 - prog(u, ex, 0.15))
     c.text(MID, 1210, "MUMEYONG", tk.F["mono_med"], 30, INK, wa, 0.3, align="c")
     c.text(MID, 1260, "mumeyong.dev", tk.F["mono"], 22, tk.C["muted"], wa * 0.9, 0.06, align="c")
 
@@ -180,7 +180,7 @@ def brand_sting2(c, t, t0=0.0, dur=STING2):
         c.circle(0, 0, 11, INK)
         c.ctx.restore()
     else:
-        bloom = out_expo(prog(u, t_drop, 0.35 * k)) * (1 - prog(u, t_brush + 0.5 * k, 0.4 * k))
+        bloom = glide(prog(u, t_drop, 0.35 * k)) * (1 - prog(u, t_brush + 0.5 * k, 0.4 * k))
         if bloom > 0.01:
             bx, by = cx + sx0 * r, cy + sy0 * r
             for ang, dist, rad in _BLOT:
@@ -227,7 +227,7 @@ def brand_sting2(c, t, t0=0.0, dur=STING2):
                     if x0 + 460 * f > x1:
                         break
                     c.circle(x0 + 460 * f, y0 + 2 * math.sin(f * 7), 5.5 * (1 - 0.65 * f), SEAL)
-            c.text(MID, 1340, "mumeyong.dev", tk.F["mono"], 26, tk.C["muted"], out_expo(prog(u, t_word + 0.35 * k, 0.3)),
+            c.text(MID, 1340, "mumeyong.dev", tk.F["mono"], 26, tk.C["muted"], glide(prog(u, t_word + 0.35 * k, 0.3)),
                    0.12, align="c")
 
 

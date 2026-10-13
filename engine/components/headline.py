@@ -9,7 +9,7 @@ Headline syntax:
 import re
 
 from .. import tokens as tk
-from ..ease import curve, out_expo, in_cubic, in_out_cubic, mix, prog
+from ..ease import curve, in_cubic, in_out_cubic, mix, prog, glide
 from .motion import appear  # noqa: F401  (re-export convenience)
 
 _TOKEN = re.compile(r"([*_~])[^*_~]+?\1[.,:;!?]*|\S+")
@@ -120,7 +120,7 @@ class Headline:
                 k += 1
             idx.append(k)
         for (w, kind, strike, x, base, pw), i in zip(ws, idx):
-            a = out_expo(prog(t, t_in + i * stg, M["word_in"]))
+            a = glide(prog(t, t_in + i * stg, M["word_in"]))
             b = 0.0 if t_out is None else in_cubic(prog(t, t_out, M["out"]))
             vis = a * (1 - b)
             if vis <= 0.002:
@@ -190,7 +190,7 @@ class Headline:
             col = acc if kind != "plain" else ink
             ti = t_in + i * stg
             if reveal == "ink":
-                a0 = out_expo(prog(t, t_in, M["word_in"]))
+                a0 = glide(prog(t, t_in, M["word_in"]))
                 k = in_out_cubic(prog(t, t_in + 0.25 + i * M["ink_stagger"], M["ink_in"]))
                 b = 0.0 if t_out is None else prog(t, t_out, M["quiet_out"] if exit == "quiet" else M["dim_out"])
                 if a0 <= 0.002 or b >= 1:
@@ -205,7 +205,7 @@ class Headline:
                 mask_word(c, t, ti, t_out, x, base, w, f, s, col, ls, exit="mask" if exit == "mask" else "dim")
                 continue
             # blur reveal with a kinetic exit
-            a = out_expo(prog(t, ti, M["word_in"]))
+            a = glide(prog(t, ti, M["word_in"]))
             if a <= 0.002:
                 continue
             b = 0.0 if t_out is None else prog(t, t_out, {"mask": M["out"], "quiet": M["quiet_out"]}.get(exit, M["dim_out"]))
@@ -233,7 +233,7 @@ class Headline:
             if strike:
                 s = segs.setdefault(base, [x, x + pw])
                 s[1] = x + pw
-        p = out_expo(prog(t, t0, 0.5))
+        p = glide(prog(t, t0, 0.5))
         b = 0.0 if t_out is None else in_cubic(prog(t, t_out, tk.M["out"]))
         if p <= 0 or b >= 1:
             return
@@ -247,7 +247,7 @@ def kicker(c, t, t_in, t_out, label, color, x=None, y=None):
     """'● 02 · NASKAH' — mono label with a chapter-colored dot."""
     x = tk.L["col_x"] if x is None else x
     y = tk.L["kicker_y"] if y is None else y
-    a = out_expo(prog(t, t_in, 0.5))
+    a = glide(prog(t, t_in, 0.5))
     b = 0.0 if t_out is None else in_cubic(prog(t, t_out, tk.M["out"]))
     vis = a * (1 - b)
     if vis <= 0.002:

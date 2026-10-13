@@ -177,12 +177,12 @@ def render_stills(slug, times, scale=1.0):
     return paths
 
 
-def render_sheet(slug, times=None, cols=6, scale=0.25):
+def render_sheet(slug, times=None, cols=6, scale=0.25, path=None, labels=None):
     """Contact sheet: one thumbnail per script line (at 60% through it) with time + line id."""
     import cairo
     from .draw import Canvas
     project, video = _video(slug)
-    labels = []
+    labels = list(labels or [])
     if times is None:
         times = []
         for ln in project.timing.lines:
@@ -202,11 +202,33 @@ def render_sheet(slug, times=None, cols=6, scale=0.25):
         cx.set_source_surface(surf, x, y)
         cx.paint()
         lab.text(x, y + th + 24, f"{lb}  {t:6.2f}s", tk.F["mono"], 16, (1, 1, 1, 0.8))
-    p = project.out / "sheet.png"
+    p = path or project.out / "sheet.png"
     p.parent.mkdir(parents=True, exist_ok=True)
     sheet.write_to_png(str(p))
     print(f"✓ {p}")
     return p
+
+
+def render_critique(slug):
+    """Review sheets for the critique loop (STYLE §5, refs.pdf §11) — PNG only at 1/4 scale, no encode, no audio,
+    so Claude may run it and LOOK at the result:
+      out/critique/sheet.png   one frame per script line (60 % through it) — readability, variety, brand
+      out/critique/hook.png    8 frames over the first 2 s — is there a hook before the thumb scrolls on?
+      out/critique/moves.png   each chapter's entrance as 6 frames 0.1 s apart — does the motion start at rest,
+                               lead with one thing, and settle (no pop, no stop-and-go)?"""
+    project, video = _video(slug)
+    d = project.out / "critique"
+    out = [render_sheet(slug, path=d / "sheet.png")]
+    hook = [i * 2.0 / 7 for i in range(8)]
+    out.append(render_sheet(slug, hook, cols=8, path=d / "hook.png", labels=["hook"] * 8))
+    times, labels = [], []
+    for ch in video.chapters:
+        for k in range(6):
+            times.append(min(video.duration - 0.01, ch.start + 0.1 * k))
+            labels.append(f"{ch.label[:10]} +{0.1 * k:.1f}" if k else ch.label[:14])
+    if times:
+        out.append(render_sheet(slug, times, cols=6, path=d / "moves.png", labels=labels))
+    return out
 
 
 def check(slug):

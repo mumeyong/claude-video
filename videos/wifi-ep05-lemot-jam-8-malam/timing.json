@@ -1,0 +1,1008 @@
+{
+ "source": "tts",
+ "voice": "cartesia:e0445740-223f-45c5-8038-8ff25e49f342",
+ "tts": "cartesia:sonic-3.6:e0445740-223f-45c5-8038-8ff25e49f342:1.0:off",
+ "duration": 76.746,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Jam dua siang, video jalan mulus.",
+   "start": 0.4,
+   "end": 2.902,
+   "words": [
+    {
+     "w": "Jam",
+     "start": 0.4,
+     "end": 0.635
+    },
+    {
+     "w": "dua",
+     "start": 0.635,
+     "end": 0.875
+    },
+    {
+     "w": "siang,",
+     "start": 0.875,
+     "end": 1.515
+    },
+    {
+     "w": "video",
+     "start": 1.656,
+     "end": 1.915
+    },
+    {
+     "w": "jalan",
+     "start": 1.995,
+     "end": 2.235
+    },
+    {
+     "w": "mulus.",
+     "start": 2.235,
+     "end": 2.875
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Jam delapan malam, paket yang sama, muter terus.",
+   "start": 3.222,
+   "end": 6.455,
+   "words": [
+    {
+     "w": "Jam",
+     "start": 3.231,
+     "end": 3.391
+    },
+    {
+     "w": "delapan",
+     "start": 3.391,
+     "end": 3.711
+    },
+    {
+     "w": "malam,",
+     "start": 3.711,
+     "end": 4.271
+    },
+    {
+     "w": "paket",
+     "start": 4.412,
+     "end": 4.751
+    },
+    {
+     "w": "yang",
+     "start": 4.831,
+     "end": 4.831
+    },
+    {
+     "w": "sama,",
+     "start": 4.831,
+     "end": 5.311
+    },
+    {
+     "w": "muter",
+     "start": 5.524,
+     "end": 5.951
+    },
+    {
+     "w": "terus.",
+     "start": 5.951,
+     "end": 6.431
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Router kamu nggak rusak. Internetmu lagi dibagi.",
+   "start": 7.055,
+   "end": 9.843,
+   "words": [
+    {
+     "w": "Router",
+     "start": 7.069,
+     "end": 7.309
+    },
+    {
+     "w": "kamu",
+     "start": 7.309,
+     "end": 7.549
+    },
+    {
+     "w": "nggak",
+     "start": 7.629,
+     "end": 7.709
+    },
+    {
+     "w": "rusak.",
+     "start": 7.709,
+     "end": 8.189
+    },
+    {
+     "w": "Internetmu",
+     "start": 8.427,
+     "end": 8.909
+    },
+    {
+     "w": "lagi",
+     "start": 8.909,
+     "end": 9.149
+    },
+    {
+     "w": "dibagi.",
+     "start": 9.149,
+     "end": 9.789
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · SATU PIPA",
+   "text": "Bayangin air PDAM di satu rusun.",
+   "start": 10.843,
+   "end": 13.098,
+   "words": [
+    {
+     "w": "Bayangin",
+     "start": 10.854,
+     "end": 11.254
+    },
+    {
+     "w": "air",
+     "start": 11.254,
+     "end": 11.574
+    },
+    {
+     "w": "PDAM",
+     "start": 11.574,
+     "end": 12.134
+    },
+    {
+     "w": "di",
+     "start": 12.214,
+     "end": 12.214
+    },
+    {
+     "w": "satu",
+     "start": 12.294,
+     "end": 12.534
+    },
+    {
+     "w": "rusun.",
+     "start": 12.534,
+     "end": 13.014
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · SATU PIPA",
+   "text": "Siang, cuma beberapa keran yang kebuka. Airmu deres.",
+   "start": 13.418,
+   "end": 16.986,
+   "words": [
+    {
+     "w": "Siang,",
+     "start": 13.418,
+     "end": 13.973
+    },
+    {
+     "w": "cuma",
+     "start": 14.169,
+     "end": 14.453
+    },
+    {
+     "w": "beberapa",
+     "start": 14.453,
+     "end": 14.933
+    },
+    {
+     "w": "keran",
+     "start": 14.933,
+     "end": 15.173
+    },
+    {
+     "w": "yang",
+     "start": 15.253,
+     "end": 15.333
+    },
+    {
+     "w": "kebuka.",
+     "start": 15.333,
+     "end": 15.893
+    },
+    {
+     "w": "Airmu",
+     "start": 16.122,
+     "end": 16.453
+    },
+    {
+     "w": "deres.",
+     "start": 16.453,
+     "end": 17.013
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · SATU PIPA",
+   "text": "Internet rumah juga gitu: bandwidth dari ISP dipakai bareng satu area.",
+   "start": 17.306,
+   "end": 21.407,
+   "words": [
+    {
+     "w": "Internet",
+     "start": 17.324,
+     "end": 17.724
+    },
+    {
+     "w": "rumah",
+     "start": 17.724,
+     "end": 17.964
+    },
+    {
+     "w": "juga",
+     "start": 17.964,
+     "end": 18.124
+    },
+    {
+     "w": "gitu:",
+     "start": 18.124,
+     "end": 18.684
+    },
+    {
+     "w": "bandwidth",
+     "start": 18.782,
+     "end": 19.244
+    },
+    {
+     "w": "dari",
+     "start": 19.244,
+     "end": 19.484
+    },
+    {
+     "w": "ISP",
+     "start": 19.484,
+     "end": 19.964
+    },
+    {
+     "w": "dipakai",
+     "start": 20.044,
+     "end": 20.284
+    },
+    {
+     "w": "bareng",
+     "start": 20.284,
+     "end": 20.684
+    },
+    {
+     "w": "satu",
+     "start": 20.764,
+     "end": 20.924
+    },
+    {
+     "w": "area.",
+     "start": 20.924,
+     "end": 21.404
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "01 · JAM RAME",
+   "text": "Jam delapan, semua orang udah di rumah.",
+   "start": 22.407,
+   "end": 24.984,
+   "words": [
+    {
+     "w": "Jam",
+     "start": 22.427,
+     "end": 22.667
+    },
+    {
+     "w": "delapan,",
+     "start": 22.667,
+     "end": 23.547
+    },
+    {
+     "w": "semua",
+     "start": 23.67,
+     "end": 24.027
+    },
+    {
+     "w": "orang",
+     "start": 24.107,
+     "end": 24.267
+    },
+    {
+     "w": "udah",
+     "start": 24.347,
+     "end": 24.427
+    },
+    {
+     "w": "di",
+     "start": 24.507,
+     "end": 24.507
+    },
+    {
+     "w": "rumah.",
+     "start": 24.507,
+     "end": 24.907
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · JAM RAME",
+   "text": "Streaming, game, video call, barengan. Itu peak hour.",
+   "start": 25.304,
+   "end": 29.177,
+   "words": [
+    {
+     "w": "Streaming,",
+     "start": 25.327,
+     "end": 26.012
+    },
+    {
+     "w": "game,",
+     "start": 26.167,
+     "end": 26.652
+    },
+    {
+     "w": "video",
+     "start": 26.765,
+     "end": 27.132
+    },
+    {
+     "w": "call,",
+     "start": 27.212,
+     "end": 27.612
+    },
+    {
+     "w": "barengan.",
+     "start": 27.732,
+     "end": 28.332
+    },
+    {
+     "w": "Itu",
+     "start": 28.477,
+     "end": 28.652
+    },
+    {
+     "w": "peak",
+     "start": 28.732,
+     "end": 28.812
+    },
+    {
+     "w": "hour.",
+     "start": 28.812,
+     "end": 29.212
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · JAM RAME",
+   "text": "Jalurnya nggak dibangun buat semua orang full sekaligus.",
+   "start": 29.497,
+   "end": 32.79,
+   "words": [
+    {
+     "w": "Jalurnya",
+     "start": 29.546,
+     "end": 30.107
+    },
+    {
+     "w": "nggak",
+     "start": 30.107,
+     "end": 30.267
+    },
+    {
+     "w": "dibangun",
+     "start": 30.267,
+     "end": 30.827
+    },
+    {
+     "w": "buat",
+     "start": 30.827,
+     "end": 30.987
+    },
+    {
+     "w": "semua",
+     "start": 30.987,
+     "end": 31.387
+    },
+    {
+     "w": "orang",
+     "start": 31.387,
+     "end": 31.707
+    },
+    {
+     "w": "full",
+     "start": 31.787,
+     "end": 32.027
+    },
+    {
+     "w": "sekaligus.",
+     "start": 32.027,
+     "end": 32.747
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · JAM RAME",
+   "text": "Namanya oversubscription. Biasanya aman, kecuali jam segini.",
+   "start": 33.11,
+   "end": 36.741,
+   "words": [
+    {
+     "w": "Namanya",
+     "start": 33.123,
+     "end": 33.523
+    },
+    {
+     "w": "oversubscription.",
+     "start": 33.523,
+     "end": 34.563
+    },
+    {
+     "w": "Biasanya",
+     "start": 34.697,
+     "end": 35.123
+    },
+    {
+     "w": "aman,",
+     "start": 35.123,
+     "end": 35.603
+    },
+    {
+     "w": "kecuali",
+     "start": 35.691,
+     "end": 36.083
+    },
+    {
+     "w": "jam",
+     "start": 36.163,
+     "end": 36.243
+    },
+    {
+     "w": "segini.",
+     "start": 36.243,
+     "end": 36.723
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "01 · JAM RAME",
+   "text": "Keranmu kebagian sisanya. Tinggal netes.",
+   "start": 37.341,
+   "end": 39.952,
+   "words": [
+    {
+     "w": "Keranmu",
+     "start": 37.352,
+     "end": 37.832
+    },
+    {
+     "w": "kebagian",
+     "start": 37.832,
+     "end": 38.232
+    },
+    {
+     "w": "sisanya.",
+     "start": 38.232,
+     "end": 38.792
+    },
+    {
+     "w": "Tinggal",
+     "start": 39.002,
+     "end": 39.272
+    },
+    {
+     "w": "netes.",
+     "start": 39.272,
+     "end": 39.912
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Tes pakai kabel LAN, siang dan malam.",
+   "start": 40.952,
+   "end": 43.346,
+   "words": [
+    {
+     "w": "Tes",
+     "start": 40.959,
+     "end": 41.199
+    },
+    {
+     "w": "pakai",
+     "start": 41.199,
+     "end": 41.439
+    },
+    {
+     "w": "kabel",
+     "start": 41.439,
+     "end": 41.999
+    },
+    {
+     "w": "LAN,",
+     "start": 42.079,
+     "end": 42.079
+    },
+    {
+     "w": "siang",
+     "start": 42.235,
+     "end": 42.719
+    },
+    {
+     "w": "dan",
+     "start": 42.719,
+     "end": 42.879
+    },
+    {
+     "w": "malam.",
+     "start": 42.879,
+     "end": 43.279
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Kabel juga lemot jam delapan? Berarti jalurnya, bukan WiFi-mu.",
+   "start": 43.666,
+   "end": 47.489,
+   "words": [
+    {
+     "w": "Kabel",
+     "start": 43.692,
+     "end": 44.012
+    },
+    {
+     "w": "juga",
+     "start": 44.012,
+     "end": 44.252
+    },
+    {
+     "w": "lemot",
+     "start": 44.252,
+     "end": 44.572
+    },
+    {
+     "w": "jam",
+     "start": 44.652,
+     "end": 44.732
+    },
+    {
+     "w": "delapan?",
+     "start": 44.732,
+     "end": 45.212
+    },
+    {
+     "w": "Berarti",
+     "start": 45.284,
+     "end": 45.612
+    },
+    {
+     "w": "jalurnya,",
+     "start": 45.612,
+     "end": 46.332
+    },
+    {
+     "w": "bukan",
+     "start": 46.552,
+     "end": 46.732
+    },
+    {
+     "w": "WiFi-mu.",
+     "start": 46.732,
+     "end": 47.452
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Cuma WiFi yang lemot? Pindah ke 5 GHz, channel-nya lebih lega.",
+   "start": 47.809,
+   "end": 51.584,
+   "words": [
+    {
+     "w": "Cuma",
+     "start": 47.827,
+     "end": 48.067
+    },
+    {
+     "w": "WiFi",
+     "start": 48.147,
+     "end": 48.387
+    },
+    {
+     "w": "yang",
+     "start": 48.467,
+     "end": 48.467
+    },
+    {
+     "w": "lemot?",
+     "start": 48.467,
+     "end": 48.787
+    },
+    {
+     "w": "Pindah",
+     "start": 49.119,
+     "end": 49.427
+    },
+    {
+     "w": "ke",
+     "start": 49.507,
+     "end": 49.587
+    },
+    {
+     "w": "5",
+     "start": 49.587,
+     "end": 50.04
+    },
+    {
+     "w": "GHz,",
+     "start": 50.04,
+     "end": 50.494
+    },
+    {
+     "w": "channel-nya",
+     "start": 50.494,
+     "end": 50.947
+    },
+    {
+     "w": "lebih",
+     "start": 50.947,
+     "end": 51.187
+    },
+    {
+     "w": "lega.",
+     "start": 51.187,
+     "end": 51.587
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "02 · YANG BISA KAMU LAKUIN",
+   "text": "Terus catat jam sama hasil speedtest-nya. Itu bukti buat komplain.",
+   "start": 51.904,
+   "end": 55.71,
+   "words": [
+    {
+     "w": "Terus",
+     "start": 51.919,
+     "end": 52.159
+    },
+    {
+     "w": "catat",
+     "start": 52.159,
+     "end": 52.479
+    },
+    {
+     "w": "jam",
+     "start": 52.559,
+     "end": 52.799
+    },
+    {
+     "w": "sama",
+     "start": 52.799,
+     "end": 53.119
+    },
+    {
+     "w": "hasil",
+     "start": 53.199,
+     "end": 53.359
+    },
+    {
+     "w": "speedtest-nya.",
+     "start": 53.359,
+     "end": 54.079
+    },
+    {
+     "w": "Itu",
+     "start": 54.296,
+     "end": 54.479
+    },
+    {
+     "w": "bukti",
+     "start": 54.479,
+     "end": 54.799
+    },
+    {
+     "w": "buat",
+     "start": 54.879,
+     "end": 55.039
+    },
+    {
+     "w": "komplain.",
+     "start": 55.039,
+     "end": 55.679
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "RECAP",
+   "text": "Lima episode, satu kebiasaan: cari dulu rusaknya di mana.",
+   "start": 56.71,
+   "end": 60.226,
+   "words": [
+    {
+     "w": "Lima",
+     "start": 56.746,
+     "end": 57.066
+    },
+    {
+     "w": "episode,",
+     "start": 57.066,
+     "end": 57.466
+    },
+    {
+     "w": "satu",
+     "start": 57.668,
+     "end": 58.026
+    },
+    {
+     "w": "kebiasaan:",
+     "start": 58.026,
+     "end": 58.826
+    },
+    {
+     "w": "cari",
+     "start": 58.906,
+     "end": 59.146
+    },
+    {
+     "w": "dulu",
+     "start": 59.226,
+     "end": 59.386
+    },
+    {
+     "w": "rusaknya",
+     "start": 59.386,
+     "end": 59.786
+    },
+    {
+     "w": "di",
+     "start": 59.786,
+     "end": 59.946
+    },
+    {
+     "w": "mana.",
+     "start": 59.946,
+     "end": 60.106
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "RECAP",
+   "text": "Di kerjaan, aku nyiapin server buat jam paling rame.",
+   "start": 60.546,
+   "end": 63.769,
+   "words": [
+    {
+     "w": "Di",
+     "start": 60.568,
+     "end": 60.648
+    },
+    {
+     "w": "kerjaan,",
+     "start": 60.648,
+     "end": 61.448
+    },
+    {
+     "w": "aku",
+     "start": 61.606,
+     "end": 61.848
+    },
+    {
+     "w": "nyiapin",
+     "start": 61.848,
+     "end": 62.248
+    },
+    {
+     "w": "server",
+     "start": 62.248,
+     "end": 62.648
+    },
+    {
+     "w": "buat",
+     "start": 62.648,
+     "end": 62.888
+    },
+    {
+     "w": "jam",
+     "start": 62.888,
+     "end": 63.048
+    },
+    {
+     "w": "paling",
+     "start": 63.128,
+     "end": 63.288
+    },
+    {
+     "w": "rame.",
+     "start": 63.288,
+     "end": 63.768
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "RECAP",
+   "text": "Internet rumah dibangun buat rata-rata. Sebelum beli router baru, bawa catatanmu ke ISP.",
+   "start": 64.089,
+   "end": 69.511,
+   "words": [
+    {
+     "w": "Internet",
+     "start": 64.11,
+     "end": 64.511
+    },
+    {
+     "w": "rumah",
+     "start": 64.511,
+     "end": 64.91
+    },
+    {
+     "w": "dibangun",
+     "start": 64.911,
+     "end": 65.39
+    },
+    {
+     "w": "buat",
+     "start": 65.39,
+     "end": 65.55
+    },
+    {
+     "w": "rata-rata.",
+     "start": 65.551,
+     "end": 66.35
+    },
+    {
+     "w": "Sebelum",
+     "start": 66.514,
+     "end": 66.91
+    },
+    {
+     "w": "beli",
+     "start": 66.91,
+     "end": 67.151
+    },
+    {
+     "w": "router",
+     "start": 67.151,
+     "end": 67.39
+    },
+    {
+     "w": "baru,",
+     "start": 67.39,
+     "end": 68.03
+    },
+    {
+     "w": "bawa",
+     "start": 68.174,
+     "end": 68.43
+    },
+    {
+     "w": "catatanmu",
+     "start": 68.43,
+     "end": 68.91
+    },
+    {
+     "w": "ke",
+     "start": 68.99,
+     "end": 69.07
+    },
+    {
+     "w": "ISP.",
+     "start": 69.071,
+     "end": 69.39
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "OUTRO",
+   "text": "Seri ini tamat. Mau aku bongkar apa lagi? Tulis di komentar.",
+   "start": 70.511,
+   "end": 73.794,
+   "words": [
+    {
+     "w": "Seri",
+     "start": 70.515,
+     "end": 70.835
+    },
+    {
+     "w": "ini",
+     "start": 70.915,
+     "end": 70.995
+    },
+    {
+     "w": "tamat.",
+     "start": 70.995,
+     "end": 71.395
+    },
+    {
+     "w": "Mau",
+     "start": 71.593,
+     "end": 71.795
+    },
+    {
+     "w": "aku",
+     "start": 71.875,
+     "end": 71.955
+    },
+    {
+     "w": "bongkar",
+     "start": 71.955,
+     "end": 72.275
+    },
+    {
+     "w": "apa",
+     "start": 72.355,
+     "end": 72.435
+    },
+    {
+     "w": "lagi?",
+     "start": 72.435,
+     "end": 72.835
+    },
+    {
+     "w": "Tulis",
+     "start": 72.913,
+     "end": 73.155
+    },
+    {
+     "w": "di",
+     "start": 73.235,
+     "end": 73.235
+    },
+    {
+     "w": "komentar.",
+     "start": 73.235,
+     "end": 73.795
+    }
+   ]
+  },
+  {
+   "id": "L20",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 74.114,
+   "end": 75.946,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 74.114,
+     "end": 74.608
+    },
+    {
+     "w": "biar",
+     "start": 74.735,
+     "end": 74.928
+    },
+    {
+     "w": "nggak",
+     "start": 74.928,
+     "end": 75.168
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 75.168,
+     "end": 75.888
+    }
+   ]
+  }
+ ]
+}

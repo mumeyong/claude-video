@@ -7,7 +7,7 @@ Pure functions of their progress values and t; QR modules and jitter are hash-se
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, mix, out_expo, out_back, in_out_cubic
+from ..ease import clamp, mix, out_expo, in_out_cubic, glide, pop
 from .infra import _h
 
 PURPLE = tk.CHAPTER[3][0]
@@ -195,13 +195,13 @@ def mesh_hub(c, cx, cy, r, t, n=6, p_mesh=1.0, p_hub=0.0, color=None, hub_label=
             continue
         (ax, ay), (bx, by) = pts[i], pts[j]
         c.line(ax, ay, ax + (bx - ax) * f, ay + (by - ay) * f, c.theme("ink2", "d_muted"), 2, 0.55 * mesh_a)
-    hp = out_expo(clamp(p_hub))
+    hp = glide(clamp(p_hub))
     if hp > 0:
         for k, (px, py) in enumerate(pts):
             c.line(cx, cy, cx + (px - cx) * hp, cy + (py - cy) * hp, color, 5)
             f = (t * 0.6 + k / n) % 1.0
             c.circle(cx + (px - cx) * f, cy + (py - cy) * f, 7, WHITE, hp * 0.9)
-        hr = r * 0.32 * out_back(clamp(p_hub), 1.6)
+        hr = r * 0.32 * pop(clamp(p_hub), 1.6)
         c.shadow(cx - hr, cy - hr, 2 * hr, 2 * hr, hr, 24, 8, 0.25 * hp, color)
         c.circle(cx, cy, hr, color)
         c.text(cx, cy + 8, hub_label, tk.F["mono_bold"], max(17, r * 0.085), WHITE, hp, 0.04, align="c")

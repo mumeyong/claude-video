@@ -6,7 +6,7 @@ Pure drawing from explicit progress values; all variation is hash-seeded (determ
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, lerp, mix, out_expo, out_back, in_out_cubic, in_cubic, prog
+from ..ease import clamp, lerp, mix, out_expo, in_out_cubic, in_cubic, prog, glide, pop
 from .infra import _elbow, _along, _draw_poly, _h, arch_node
 from . import icons
 
@@ -126,7 +126,7 @@ def sync_pipe(c, t, src, dst, p_pipe=1.0, p_full=0.0, p_inc=0.0, open_badge=0.0,
             c.circle(px, py, 8, GREEN, min(1, f * 6, (1 - f) * 6))
     if open_badge > 0:
         bx, by = src["x"] + src["w"] - 18, src["y"] - 18
-        with c.at(0, 0, max(0.01, out_back(clamp(open_badge))), origin=(bx, by)):
+        with c.at(0, 0, max(0.01, pop(clamp(open_badge))), origin=(bx, by)):
             c.fill_rrect(bx - 90, by - 22, 110, 44, 22, GREEN)
             c.text(bx - 35, by + 8, "OPEN", tk.F["mono_bold"], 20, (1, 1, 1, 1), 1, 0.12, align="c")
 
@@ -154,7 +154,7 @@ def twin_table(c, x, y, w, rows, row_h=96, titles=("LEGACY", "ALIBABA CLOUD")):
         c.text(lx + 24, ry + 72, f"{r['count']} rows", tk.F["mono"], 18, muted, 1)
         c.text(lx + cw - 24, ry + 72, r["h_left"], tk.F["mono"], 18, muted, 1, align="r")
         # right (cloud) row slides in
-        s = out_expo(clamp(r.get("slide", 0)))
+        s = glide(clamp(r.get("slide", 0)))
         if s <= 0.01:
             continue
         ox = 160 * (1 - s)
@@ -181,8 +181,8 @@ def twin_table(c, x, y, w, rows, row_h=96, titles=("LEGACY", "ALIBABA CLOUD")):
             c.stroke_rrect(lx + 10, ry, cw - 20, row_h - 12, 14, col, 2.5, lk)
             c.stroke_rrect(rx + 10, ry, cw - 20, row_h - 12, 14, col, 2.5, lk)
             mx, my = x + cw + gap / 2, ry + (row_h - 12) / 2
-            c.line(lx + cw - 10, my, lx + cw - 10 + (gap + 20) * out_expo(lk), my, col, 4, lk)
-            pk = out_back(lk, 1.8)
+            c.line(lx + cw - 10, my, lx + cw - 10 + (gap + 20) * glide(lk), my, col, 4, lk)
+            pk = pop(lk, 1.8)
             with c.at(0, 0, max(0.01, pk), origin=(mx, my)):
                 c.circle(mx, my, 22, col)
                 icons.check(c, mx, my, 20, (1, 1, 1, 1), 3.5)
@@ -232,8 +232,8 @@ def cutover_switch(c, t, x, y, w, h, p_flip=0.0, p_rollback=0.0, flow=1.0):
         arch_node(c, nd)
     if p_rollback > 0:
         mx, my = to_l[1][0] + 10, to_l[1][1] - 30
-        c.text(mx, my, "ROLLBACK PLAN", tk.F["mono_bold"], 20, c.theme("muted", "d_muted"), out_expo(clamp(p_rollback)), 0.14)
-        c.text(mx, my + 30, "← jalan balik siap", tk.F["serif"], 32, acc, out_expo(clamp(p_rollback)))
+        c.text(mx, my, "ROLLBACK PLAN", tk.F["mono_bold"], 20, c.theme("muted", "d_muted"), glide(clamp(p_rollback)), 0.14)
+        c.text(mx, my + 30, "← jalan balik siap", tk.F["serif"], 32, acc, glide(clamp(p_rollback)))
 
 
 # ── padlock ─────────────────────────────────────────────────────────────
@@ -263,13 +263,13 @@ def padlock(c, cx, cy, s, p_open=0.0, color=None):
 # ── series bumper ───────────────────────────────────────────────────────
 def series_bumper(c, t, t0, t1, ep, sub, color, title=("BONGKAR", "ARSITEKTUR")):
     """Full-bleed color panel that wipes up at t0, holds, wipes out ending at t1 (draw at z >= 100)."""
-    pin = out_expo(prog(t, t0, 0.4))
+    pin = glide(prog(t, t0, 0.4))
     pout = in_cubic(prog(t, t1 - 0.35, 0.35))
     top = tk.H * (1 - pin) - tk.H * pout
     c.src(color)
     c.ctx.rectangle(0, top, tk.W, tk.H)
     c.ctx.fill()
-    a = out_expo(prog(t, t0 + 0.15, 0.4)) * (1 - pout)
+    a = glide(prog(t, t0 + 0.15, 0.4)) * (1 - pout)
     x = tk.L["col_x"]
     with c.layer((0, 0, tk.W, tk.H), a, 10 * (1 - out_expo(prog(t, t0 + 0.15, 0.4)))):
         c.text(x, 760, title[0], tk.F["display"], 150, (1, 1, 1, 1), 1, -0.06)

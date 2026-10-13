@@ -14,7 +14,7 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `shuttle_arc(x0, y0, x1, y1, peak, u)` — (x, y, angle) at u 0..1 on a parabola from (x0, y0) to (x1, y1) rising `peak` px above the higher end.
 
 ## components/beats.py — Small recurring beats every video uses — import these instead of re-defining them in scenes.py.
-- `check_badge(c, x, y, r, p)` — Green ✓ disc at (x, y), radius r, scaled by p (0..1, use out_back for a pop).
+- `check_badge(c, x, y, r, p)` — Green ✓ disc at (x, y), radius r, scaled by p (0..1, use pop for a pop).
 - `draw_heads(c, t, hs, **kw)` — Draw heads() output; kw goes to Headline.draw (reveal=, exit=, stagger=).
 - `heads(T, items, end, style="headline", gap=0.15)` — Headlines that hand over line to line. items = [("Teks *aksen*.", "L04"), ("Lagi.", "L05", "L06"), …]:
 - `pop_tag(c, t, t0, x, y, label, color, h=44, align="l")` — Tag that pops in at t0 (scale overshoot). align='r' anchors its right edge at x.
@@ -47,6 +47,10 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `brand_sting2(c, t, t0=0.0, dur=2.45)` — The long opening sting (z >= 100), all on paper: an ink drop falls and blooms where the brush starts → the ensō
 - `mumei_mark(c, cx, cy, r, p_enso=1.0, p_seal=1.0, flecks=1.0, alpha=1.0, ink=None, seal=None, paper=None)` — The emblem with its ensō centred at (cx, cy), radius r px. p_enso 0..1 paints the stroke along its path;
 
+## components/bukutamu.py — Guestbook components (first used in "wifi-ep04-restart-router", Bongkar WiFi Rumah EP 04).
+- `buku_geo(x, y, w)` — Geometry of buku_tamu drawn with the same x, y, w (no drawing): dict with f, h, left/right page boxes,
+- `buku_tamu(c, x, y, w, rows=(), fill=1.0, under=(), under_fill=0.0, tear=0.0, stubs=0.0, mem=0.0, stamp=None, stamp_p=0.0, title="BUKU TAMU", sub="POS · ROUTER", look="flat", color=None, alpha=1.0)` — Open guestbook lying on the desk, top-left (x, y), width w (height 0.64 w): cardboard cover in color, left page
+
 ## components/charts.py — Data/explainer components: bill counter, cost chart, meters, seat grid, price bars, 24h timeline, block split.
 - `bill_counter(c, x, y, w, h, value, caption="", unit="/ bulan", prefix="$", sub="", sub_alpha=1.0, size=150, card=True)` — Big money number in a card: caption (mono) · '$14.000' + unit · optional sub line.
 - `block_split(c, x, y, w, labels, p_split=0.0, moved=(), p_move=0.0, zone_label="serverless", big_label="monolith · 24/7", h=300, zone_h=150, glow=())` — One big block splits into a 2x3 grid; `moved` indices slide into a dashed zone below.
@@ -78,6 +82,29 @@ One line per public function: `name(signature)` — first docstring line. Import
 
 ## components/cover.py — Designed TikTok cover (1080×1920) — set per video with `v.cover = lambda c: cover(c, ...)` in scenes.py.
 - `cover(c, title, hero=None, kicker="", color=None, tags=(), badge="")` — 
+
+## components/craft.py — Craft v2 (2026-10-12, STYLE §3) — the motion-designer moves the engine was missing, distilled from the
+- `carry(c, t, t_cut, bbox, old, new, axis="y", direction=-1, travel=None, blur=0.0)` — Cut-the-curve seam: old accelerates out along ONE direction (apple_in, carry_out 0.3 s), the cut lands
+- `count_up(c, t, t0, x, y, v0, v1, font, size, color, dur=None, decimals=0, suffix="", suffix_font=None, suffix_color=None, scale_from=None, align="l", t_out=None, alpha=1.0)` — Count v0 → v1 on apple_out in dur (1.2–2.5 s, tk.M['count_dur']) with tabular figures (no jitter as digit
+- `draw_chain(t0, durs, chain=None)` — Start times of chained draw_on segments: each starts at draw_chain (75 %) of the previous one's duration.
+- `draw_on(c, t, t0, pts, color, width=4.0, dur=None, t_out=None, fill=None, fill_alpha=1.0, alpha=1.0)` — Stroke draw-on (DrawSVG): 0 → full length on the 'draw' curve (power2.out) in dur (tk.M['draw_in']); a fill
+- `mark(c, t, t0, kind, bbox, color, width=5.0, dur=None, t_out=None, seed=0, alpha=1.0)` — Hand-drawn annotation that draws itself (Remotion annotations): kind = underline · circle · box · strike ·
+- `morph_pair(a, b, n=128)` — (A, B) resampled to n points, same winding, B rotated so Σ|aᵢ − bᵢ|² is smallest (no twisting). Cached.
+- `morph_path(c, t, t0, a, b, color, dur=None, n=128, alpha=1.0, draw=None)` — Shape morph A → B (MorphSVG) on apple_in_out in dur (0.6–1.2 s, tk.M['morph_dur']). a / b = closed point
+- `path_at(c, t, t0, dur, pts, draw, rotate=False, ease="apple_in_out", trail=None, trail_color=None, width=4.0)` — Move draw(c) (drawn around 0, 0) along pts by arc length in dur. rotate=True only for things with a nose
+- `path_len(pts)` — 
+- `path_point(pts, u, smooth=1)` — (x, y, heading) at arc-length fraction u. Heading = tangent angle, low-passed over ±smooth samples so it
+- `pts_bezier(p0, p1, p2, p3, n=48)` — Cubic bezier as n + 1 points.
+- `pts_cairo(c, build, tolerance=0.5)` — Flatten any cairo path: build(ctx) draws it (move_to / curve_to / arc …); returns its first sub-path's points.
+- `pts_circle(cx, cy, r, n=96, start=-1.5707963267948966, sweep=6.283185307179586)` — Circle / arc as points, starting at 12 o'clock and going clockwise (rings start at 12, HyperFrames rule).
+- `pts_poly(pts, closed=False)` — A polyline (optionally closed: the first point is appended at the end).
+- `pts_rrect(x, y, w, h, r, n_corner=10)` — Rounded rect outline, clockwise from the top-left straight edge, closed.
+- `rack_cut(c, t, t_cut, bbox, old, new, blur=None, breathe=None)` — Defocus cut on the SAME surface: old stays opaque while blur ramps 0 → 10 px (power2.in, 0.25 s) with a
+- `resample(pts, n=128)` — n points evenly spaced by arc length (closed shapes: pass a closed point list).
+- `shutter(c, t, draw_at, speed=None, angle=None, n=None, sharp=True, gate=None, fps=60)` — Shutter-accumulation motion blur (Remotion CameraMotionBlur): draw_at(c, tt) n times across a 180° shutter
+- `split_rise(c, t, t_in, t_out, x, y, text, font, size, color, by="line", order="start", accent=None, each=None, gap=None, dy=None, ls=0.0, line_h=1.0, exit="quiet", seed=0, alpha=1.0)` — SplitText-style masked reveal. text may have several lines (\n) and *accent* words (drawn in `accent`).
+- `stroke_partial(c, pts, p, color, width=4.0, alpha=1.0, p0=0.0, cap="round")` — Stroke the first p (or p0..p) of a polyline by arc length — exact, round caps hidden at p ≈ 0.
+- `trim(pts, p0, p1=None)` — Sub-polyline between arc-length fractions p0 and p1 (one argument = from the start to p0).
 
 ## components/fx.py — Physical-motion upgrades (opt-in, 2026-10-08): springs, landings, contact shadows, ghost trails.
 - `contact_shadow(c, cx, base_y, w, lift=0.0, alpha=1.0)` — Soft ellipse shadow on the floor under an object of width w; lift (px above the floor) shrinks + fades it.
@@ -121,7 +148,13 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `rumah_gede(c, x, base_y, w, h, rooms, t, trip=0.0, closed=0.0, p_labels=1.0, color=None, alpha=1.0, mcb=True)` — The monolith: one wide house, rooms in a row under one roof, one MCB box on the left wall.
 - `sound_rings(c, cx, cy, p, color=None, n=3, r0=20, r_max=420, width=5, alpha=1.0, squash=1.0, arc=None)` — n expanding rings after a strike; p 0..1 over the whole spread. squash scales them vertically (< 1 = street
 
-## components/keynote.py — Keynote motion (2026-10-08; Apple craft layer = default from 2026-10-11, STYLE §6f): the Apple product-film / iOS feel — silk springs with no visible bounce,
+## components/kasir.py — Cashier-receipt components (first used in "ai-gratis-siapa-bayar").
+- `saklar(c, x, y, w, on=0.0, color=None, alpha=1.0)` — iOS-style toggle, top-left (x, y), width w (height 0.6 w). on 0..1 slides the knob right and fills the track
+- `stempel(c, cx, cy, text, p, color=None, size=40, rot=-0.14, alpha=1.0)` — Rubber stamp centred on (cx, cy): rounded frame + mono-bold text. p 0..1 presses it on (1.12 → 1, opacity
+- `struk(c, x, y, w, front, back=None, flip=0.0, feed=1.0, look="flat", color=None, alpha=1.0)` — Thermal receipt, top-left (x, y), width w; height follows the rows (struk_h). Straight top (the printer
+- `struk_h(side, w)` — Height (without the torn edge) of a struk side drawn at width w — rows count by their g (0..1).
+
+## components/keynote.py — Keynote motion (2026-10-08; Apple craft layer = default from 2026-10-11, STYLE §3): the Apple product-film / iOS feel — silk springs with no visible bounce,
 - `Morph(box, r=None, preset="silk")` — A rounded rect whose box + radius spring between keys. Content cross-fades between keys.
   - `.draw(self, c, t, color, content=None, shadow="card", alpha=1.0)` — Fill the shape; content(c, box, k) draws inside it (clipped), old key fading out as the new fades in.
   - `.state(self, t)` — (box, r, k, blend): k = index of the last key started (0 = base), blend 0..1 into it.
@@ -234,6 +267,21 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `typed(text, t, t0, cps=None)` — Typewriter state: (full_chars_text, partial_char, partial_alpha, done).
 - `wobble(t, seed=0, amp=1.0, hz=0.3)` — Tiny deterministic idle float (use 2-4 px) so resting cards feel alive.
 
+## components/obrolan.py — iOS-Messages-style chat on a phone (first used in "ai-lupa-obrolan-panjang", 2026-10-13).
+- `chat_geo(x, y, w, h)` — Geometry of chat_phone drawn with the same box: f, screen, header, thread (view box), input bar, send button.
+- `chat_phone(c, t, x, y, w, h, msgs, title="Asisten AI", sub="online", draft="", caret=False, send=None, base_scroll=0.0, scroll_preset="smooth", color=None, alpha=1.0)` — Phone with a chat thread, top-left (x, y), size w × h.
+
+## components/panggung.py — Hajatan-stage components (first used in "ai-butuh-cloud-engineer").
+- `panggung(c, x, y, w, h, t, lit=None, spot=None, show=1.0, run=0.0, pack=None, swap=0.0, banner="LIVE", look="flat", color=None, alpha=1.0)` — Hajatan stage cut open from the side, box (x, y, w, h): truss + two lamps, backdrop, speaker stack, the
+- `panggung_geo(x, y, w, h)` — Geometry of panggung() drawn with the same x, y, w, h (no drawing): dict with floor (deck top y), deck_h,
+- `sorot(c, cx, cy, r, amount=1.0, color=None)` — Follow-spot pool on a dark surface: a soft disc of light (bright core, long falloff) — light, not a neon glow.
+
+## components/papan.py — Classroom-whiteboard components (first used in "ai-lupa-obrolan-panjang").
+- `memori(c, x, y, w, cells=8, lit=0.0, look="paper", color=None, label="GPU memory", alpha=1.0)` — GPU memory as a memory stick, top-left (x, y), width w (height 0.2 w): dark board, `cells` chips in a row,
+- `papan_geo(x, y, w, h, slots=8, scroll=0.0)` — Geometry of papan_tulis drawn with the same x, y, w, h (no drawing): f, surface box, rows box, row_h,
+- `papan_tulis(c, x, y, w, h, rows=(), scroll=0.0, slots=8, scan=None, scan_a=1.0, tok=0.0, ghost=0.07, eraser=1.0, look="paper", color=None, alpha=1.0, font=None)` — Whiteboard on the wall, top-left (x, y), size w × h (+ a marker tray under it).
+- `penghapus(c, cx, cy, s=1.0, look="paper", color=None, smudge=0.0, rot=0.0, alpha=1.0)` — Whiteboard eraser centred on (cx, cy): a handle block in color on a grey felt pad (pad faces down, the
+
 ## components/payday.py — Payday / detective components (first used in "kenapa-bank-down-gajian").
 - `cashier(c, cx, cy, s, t, busy=1.0, seed=0, color=None, alpha=1.0)` — Checkout counter seen from above, centered on (cx, cy), width s: belt with items moving, register, cashier.
 - `ledger(c, cx, cy, s, t, filled=1.0, hot=0.0, writing=0.0, title="BUKU KAS", color=None, alpha=1.0)` — Open ledger book seen from above, centered on (cx, cy), width s. Cover in the signature color, two ruled pages.
@@ -244,6 +292,12 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `suspect_card(c, x, y, w, h, num, name, label, icon=None, reveal=1.0, tear=0.0, rot=0.0, focus=0.0, dim=0.0, color=None)` — Polaroid-style suspect card pinned at its top center.
 - `tear_calendar(c, x, y, w, h, t, t0, start=21, end=25, step=0.2, month="OKTOBER", color=None, circle_p=0.0, sub="", sub_p=0.0)` — Desk tear-off calendar: color header band with the month, two rings, page with the date.
 - `torn_flight(p, w, h)` — (dx, dy, rot, alpha) of a sheet torn off and falling away, p 0..1 (gravity: dy ~ p²).
+
+## components/pdam.py — Water-main components (first used in "wifi-ep05-lemot-jam-8-malam", Bongkar WiFi Rumah EP 05).
+- `aliran(c, t, pts, width, color=None, alpha=1.0, speed=0.35, n=5, dash=0.1)` — Water running along polyline pts: a band of `width` with lighter shimmer dashes travelling start → end
+- `pressure(hf, demand, cap=4.0, n=10)` — Water pressure 0..1 at height fraction hf of the riser when `demand` taps' worth are open. Below `cap` the
+- `rusun_air(c, x, y, w, h, t, taps=None, lights=None, night=0.0, supply=1.0, cap=4.0, clock="14.00", clock_b=None, clock_p=0.0, look="flat", color=None, alpha=1.0)` — Apartment block cut open, box (x, y, w, h) (≈ 900 × 1050 at f = 1): roof clock, 5 floors × 2 units, one riser
+- `rusun_geo(x, y, w, h)` — Geometry of rusun_air drawn with the same box (no drawing): dict with f, roof, ground, street (pipe y),
 
 ## components/pelabuhan.py — Container-port components (first used in "kubernetes-bukan-jawaban").
 - `crane(c, x, base_y, w, h, t, trolley=0.5, hoist=0.0, load=None, color=None, lamp=0.0, alpha=1.0)` — Gantry crane standing on base_y from x to x + w, beam h px above the ground (cantilevered 12% to the left).
@@ -276,9 +330,9 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `step_row(c, x, y, w, num, label, active=0.0, h=62)` — Left-column chapter row ('01 ATURAN'). active 0..1 brightens it.
 
 ## components/reel.py — Reel motion (opt-in, 2026-10-10): the brand-reel layer — warm paper inside a viewfinder HUD, a dot logo that gathers
-- `count_pill(c, t, t0, cx, y, v0, v1, label=None, fmt=None, suffix="", dur=None, t_out=None, size=36)` — Dark pill that pops at t0 (out_back 1.7) with a number counting v0 → v1 (Indonesian format by default);
+- `count_pill(c, t, t0, cx, y, v0, v1, label=None, fmt=None, suffix="", dur=None, t_out=None, size=36)` — Dark pill that pops at t0 (pop 1.7) with a number counting v0 → v1 (Indonesian format by default);
 - `dot_gather(c, t, t0, cx, cy, r, ring=True, alpha=1.0)` — Logo build from t0: ~150 dots drift on a wide flattened orbit, gather (staggered) onto the ensō's own stroke
-- `end_card(c, t, t0, cx=None, cy=820, r=130, name="mumeyong.dev", sub=None, cta=None, lift=180)` — Logo end card from t0: 8 dots spiral in → the mumei mark grows (out_back) inside a swelling green ring → seal
+- `end_card(c, t, t0, cx=None, cy=820, r=130, name="mumeyong.dev", sub=None, cta=None, lift=180)` — Logo end card from t0: 8 dots spiral in → the mumei mark grows (pop) inside a swelling green ring → seal
 - `float_chips(c, t, t0, chips, t_out=None, stagger=None, size=26)` — Chips fly in from their side (−1 left / +1 right) with the smear, one every reel_chip_stagger, then idle-float
 - `formula(c, t, t0, boxes, cards, target, op="+", t_out=None)` — 'A + B + C = result' from t0: cards pop up one by one (0.22 s apart), operators fade in between consecutive
 - `highlight(c, t, t0, x, y, w, h, color=None, dur=None, alpha=1.0)` — Highlighter swipe behind text: a skewed (−8°) soft-green bar grows left → right from t0. Draw before the text.
@@ -288,7 +342,7 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `orbit(c, t, cx, cy, rx, ry, tilt=-0.22, alpha=1.0, n=70, speed=2.4, sats=None)` — Dotted elliptical orbit (tilted) with satellites riding it — default: a green 7 px sat + a seal 4.5 px sat
 - `out_p(t, t_out, dur=None)` — Exit progress for smear(out=…): in_cubic over reel_out from t_out (0 when t_out is None).
 - `pixel_wipe(c, t, t0, color=None, after=(0.9803921568627451, 0.9764705882352941, 0.9607843137254902, 1.0), block=None, diag=0.28)` — Block wipe from t0: blocks flip to color along a diagonal front (left → right, bottom-up lean), hold
-- `pop_card(c, t, t0, x, y, w, h, draw=None, image=None, label=None, color=None, r=None, alpha=1.0)` — A card that pops in at t0 (from −40, +80 px, scale .86 → 1, out_back 1.5): paper card, optional image (cover),
+- `pop_card(c, t, t0, x, y, w, h, draw=None, image=None, label=None, color=None, r=None, alpha=1.0)` — A card that pops in at t0 (from −40, +80 px, scale .86 → 1, pop 1.5): paper card, optional image (cover),
 - `reel_chip(c, x, y, label, color, size=26, alpha=1.0)` — Paper chip with a colored rounded square + label (top-left at x, y). Returns (w, h).
 - `reel_pill(c, cx, y, text, size=36, label=None, scale=1.0, alpha=1.0, width_of=None)` — Dark pill centred on cx (top at y): a soft-green dot, optional small tracked label, mono-bold text.
 - `reel_sfx(v, move, t0, n=1, each=None)` — Register the sounds that belong to a reel move started at t0:
@@ -361,7 +415,7 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `patchcord(c, x0, y0, x1, y1, bend=0.0, alpha=1.0)` — The short fiber patch cable behind the modem, from the wall socket (x0, y0) to the modem port (x1, y1).
 - `route_point(box, f)` — (x, y) at arc fraction f (0 = ISP office, 1 = house) of fiber_route drawn in box.
 
-## components/material.py (namespace `material.`) — Material layer (2026-10-12, STYLE §6g) — light, shade and texture, so a hero reads as a rendered object, not an icon.
+## components/material.py (namespace `material.`) — Material layer (2026-10-12, STYLE §1) — light, shade and texture, so a hero reads as a rendered object, not an icon.
 - `material.tone(color, k)` — k > 0 lightens toward white, k < 0 darkens toward black (alpha kept).
 - `material.tilt(look, seed=0)` — Hand-placed rotation (radians) for a part in the paper look; 0 otherwise. Same seed → same angle.
 - `material.rrect_path(x, y, w, h, r)` — Rounded rect path builder.
@@ -393,13 +447,22 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `out_expo(p)` — 
 - `out_back(p, s=1.5)` — 
 - `spring(p, damping=0.55, freq=2.2)` — Underdamped spring 0→1 (overshoots once, settles). p is 0..1 of the window.
+- `glide(p)` — Critically damped spring over the window: accelerates for ~10 %, then a long glide to rest. Replaces out_expo.
+- `pop(p, s=1.5)` — Underdamped spring over the window with the SAME overshoot as out_back(p, s) (s 1.5 ≈ 8 %, 1.8 ≈ 11 %), but it
 - `out_spring(p)` — Gentle settle 0→1: one small overshoot (~6%), then rest. For small pops and camera stops (opt-in, fx.py).
 - `bezier(x1, y1, x2, y2)` — CSS cubic-bezier(x1, y1, x2, y2) as an easing function p → value (Newton + bisection on x). Cached.
 - `curve(name)` — Named easing from tk.EASE: 'apple' · 'apple_out' · 'apple_in' · 'apple_in_out' · 'apple_dolly'.
+- `lerp_scale(s0, s1, p)` — Perceptual scale interpolation (Remotion 'perceptual-scale'): lerp in log space, so a 2.4 → 1 shrink
+- `nudge(p)` — Slow–fast–slow reposition (HyperFrames 'nudge-curve'): power3.in over 20 % of the time (10 % of the
+- `keys(t, frames, eases=None)` — Multi-keyframe value: frames = [(t0, v0), (t1, v1), …], clamped on both sides; eases = one fn per segment
 - `ios_spring(dt, response=0.5, damping=1.0)` — SwiftUI-style spring by real time: value 0→1 `dt` seconds after the move starts.
 - `ios_settle(response=0.5, damping=1.0, eps=0.002)` — Seconds until an ios_spring stays within eps of 1 (its visual duration).
-- `ease(t, start, dur, fn=<function out_expo at 0x7fc506fd9760>)` — 
-- `inout(t, t_in, t_out, d_in=0.55, d_out=0.35, fn_in=<function out_expo at 0x7fc506fd9760>, fn_out=<function in_cubic at 0x7fc506fd9580>)` — Presence of an element that enters at t_in and leaves at t_out.
+- `track(t, frames, preset="smooth")` — Value at t of something that changes target several times: frames = [(t0, v0), (t1, v1), …] sorted by time.
+- `track_settle(frames, preset="smooth")` — Time the last spring of a track() is visually at rest — budget the next hold from here.
+- `indicator(t, stops, width, lead="lead", trail="trail")` — A tab / highlight that stretches while it travels: the leading edge is stiffer than the trailing one.
+- `swap_alpha(t, t_in, t_out=None)` — Text inside a morphing box: fades in just after the morph starts (t_in), out just before the next (t_out).
+- `ease(t, start, dur, fn=glide)` — 
+- `inout(t, t_in, t_out, d_in=0.55, d_out=0.35, fn_in=glide, fn_out=in_cubic)` — Presence of an element that enters at t_in and leaves at t_out.
 - `pulse(t, start, dur)` — 0→1→0 bump over the window (sin).
 - `blink(t, hz=1.0)` — Caret blink: 1 for the first half of each period.
 
@@ -448,7 +511,7 @@ One line per public function: `name(signature)` — first docstring line. Import
 
 ## camera `v.camera` (engine.camera)
 - `.apply(self, ctx, t)` — 
-- `.focus(self, t, box, zoom=1.06, dur=0.8, ease=<function in_out_cubic at 0x7fc506fd9620>)` — 
-- `.key(self, t, zoom=1.0, x=None, y=None, dur=0.8, ease=<function in_out_cubic at 0x7fc506fd9620>)` — 
-- `.reset(self, t, dur=0.8, ease=<function in_out_cubic at 0x7fc506fd9620>)` — 
+- `.focus(self, t, box, zoom=1.06, dur=0.8, ease=in_out_cubic)` — 
+- `.key(self, t, zoom=1.0, x=None, y=None, dur=0.8, ease=in_out_cubic)` — 
+- `.reset(self, t, dur=0.8, ease=in_out_cubic)` — 
 - `.state(self, t)` — 

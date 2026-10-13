@@ -8,7 +8,7 @@ import math
 
 from .. import tokens as tk
 from ..draw import PangoCairo
-from ..ease import clamp, mix, out_expo, out_back, in_out_cubic
+from ..ease import clamp, mix, in_out_cubic, glide, pop
 from .infra import _draw_poly, _h
 
 TEAL = tk.CHAPTER[4][0]
@@ -117,7 +117,7 @@ def dimension(c, x1, y1, x2, y2, label, p, color=None, off=0):
     if p <= 0:
         return
     col = _line_col(c, color)
-    e = out_expo(clamp(p))
+    e = glide(clamp(p))
     mx, my = (x1 + x2) / 2, (y1 + y2) / 2
     hx, hy = (x2 - x1) / 2 * e, (y2 - y1) / 2 * e
     c.line(mx - hx, my - hy, mx + hx, my + hy, col, 2)
@@ -248,7 +248,7 @@ def city_map(c, x, y, w, h, blocks, cols=3, rows=3, street=34, pin=None, pin_p=0
     if pin and pin in rects and pin_p > 0:
         bx, by, ww, hh = rects[pin]
         px, py = bx + ww - 40, by + 26
-        s = out_back(clamp(pin_p), 1.8)
+        s = pop(clamp(pin_p), 1.8)
         with c.at(0, 0, max(0.01, s), origin=(px, py + 30)):
             c.circle(px, py, 18, tk.C["rec"])
             c.ctx.new_path()

@@ -7,7 +7,7 @@ Pure functions of their progress values and t.
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, mix, out_expo, out_back, in_out_cubic, prog, pulse
+from ..ease import clamp, mix, out_expo, in_out_cubic, prog, pulse, pop
 from .infra import _draw_poly
 
 ORANGE = tk.CHAPTER[2][0]
@@ -36,7 +36,7 @@ def route_strip(c, x, ys, t, p_draw=1.0, reach=0.0, lit=(), names=(), subs=(), c
         lk = clamp(lit[k]) if k < len(lit) else 0.0
         dk = clamp(dead[k]) if k < len(dead) else 0.0
         ring = mix(mix(faint, color, lk), faint, dk)
-        s = out_back(a, 1.8)
+        s = pop(a, 1.8)
         c.circle(x, y, 26 * s, c.theme("card", "d_card"), a)
         c.ctx.new_path()
         c.ctx.arc(x, y, 22 * s, 0, 2 * math.pi)

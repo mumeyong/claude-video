@@ -18,6 +18,8 @@
   still    <slug> <t> [<t>...]    PNG frames at times (seconds) or line ids (L05)     (user runs)
   cover    <slug>                 TikTok cover → out/cover.png (v.cover, else frame at v.cover_t) (user runs)
   sheet    <slug>                 contact sheet, one thumbnail per script line          (user runs)
+  critique <slug>                 review PNGs → out/critique/: sheet (per line) · hook (first 2 s) · moves (each
+                                  chapter entrance, 6 frames) — 1/4 scale, no encode, no audio  (Claude may run)
   preview  <slug> [--from s --to s]  540x960 30fps quick render with audio           (user runs)
   render   <slug> [--from s --to s]  1080x1920 60fps final                           (user runs)
   tts      <slug>                 Mumeyong voice → audio/voice_tts.wav + exact timing.json (edge-tts, online;
@@ -26,7 +28,11 @@
   mix      <slug>                 audio only → out/mix.wav                              (user runs)
   music    <slug>                 generated score only → out/music_gen.wav (if no audio/music.*) (user runs)
   register <slug>                 index rows (ideas/REGISTRY.md, hasil/README.md) from PLAN.md   (Claude may run)
-  api                             engine/API.md — one line per component (Claude reads this, not the sources)
+  api                             engine/API.md — one line per component (regenerate after a component change)
+  api core | index | <module>…    print only those API.md sections: core = every video · index = kit names ·
+                                  <module> = one kit in full (Claude reads this, not API.md / sources) (Claude may run)
+  recent   <slug>                 what the new video must differ from: last 3 REGISTRY rows + their look/material/
+                                  sound + the previous series episode (plan + spoken lines)  (Claude may run)
   sfx                             export synth SFX (classic + kit strips) to .cache/sfx_preview to audition
   audition                        40 s demo per music style + SFX kit strips → .cache/audition/   (user runs)
 """
@@ -59,9 +65,15 @@ def main(argv=None):
     if a.cmd == "ideas":
         return list_ideas()
     if a.cmd == "api":
+        if a.slug:                       # `api core`, `api index`, `api hujan kasir` → print only those sections
+            from .apidoc import show
+            return show([a.slug] + a.rest)
         from .apidoc import build_api
         build_api()
         return 0
+    if a.cmd == "recent":
+        from .registry import recent
+        return recent(a.slug)
     if a.cmd == "sfx":
         from .audio.sfx import export_library
         export_library(ROOT / ".cache" / "sfx_preview")
@@ -103,8 +115,8 @@ def main(argv=None):
         from .render import check
         rc = check(a.slug)
         if a.dry:
-            from .lint import dry_check, audio_dry, motion_check
-            rc = max(rc, dry_check(a.slug), audio_dry(a.slug), motion_check(a.slug))
+            from .lint import dry_check, audio_dry, motion_check, ease_check
+            rc = max(rc, dry_check(a.slug), audio_dry(a.slug), motion_check(a.slug), ease_check(a.slug))
         return rc
     elif a.cmd == "still":
         from .render import render_stills
@@ -118,6 +130,9 @@ def main(argv=None):
     elif a.cmd == "sheet":
         from .render import render_sheet
         render_sheet(a.slug)
+    elif a.cmd == "critique":
+        from .render import render_critique
+        render_critique(a.slug)
     elif a.cmd in ("preview", "render"):
         from .render import render_video
         render_video(a.slug, "preview" if a.cmd == "preview" else "final", a.workers, a.t_from, a.t_to,

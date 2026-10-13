@@ -1,6 +1,6 @@
 # AI gratis itu — siapa yang bayar?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/ai-gratis-siapa-bayar/`](../videos/ai-gratis-siapa-bayar/)
 - **Pilar:** B · AI sehari-hari · **Format:** QUICK
 - **Slug:** ai-gratis-siapa-bayar
 - **Seri:** —

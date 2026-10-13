@@ -1,6 +1,6 @@
 # AI nggak gantiin cloud engineer — AI butuh cloud engineer
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/ai-butuh-cloud-engineer/`](../videos/ai-butuh-cloud-engineer/)
 - **Pilar:** C (karier) · **Format:** QUICK
 - **Slug:** ai-butuh-cloud-engineer
 - **Seri:** —
@@ -20,7 +20,7 @@ Tiap AI yang kamu pakai jalan di atas infrastruktur yang harus dibangun, dijaga,
 3. Skill yang dicari sekarang → soft CTA (pinned comment: waitlist kelas / mentoring)
 
 ## Butuh komponen baru?
-- pakai ulang `route_strip` / `cert_card` (roadmap) dengan cara baru?
+- `panggung` + `sorot` (components/panggung.py) — metafora panggung hajatan (lihat videos/ai-butuh-cloud-engineer/PLAN.md)
 
 ## Catatan
 - Pilar C: pinned comment = soft CTA ke produk (STRATEGY §5).

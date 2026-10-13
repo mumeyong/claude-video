@@ -1,6 +1,6 @@
 # Kenapa internet lemot tiap jam 8 malam?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/wifi-ep05-lemot-jam-8-malam/`](../videos/wifi-ep05-lemot-jam-8-malam/)
 - **Pilar:** B · broad · **Format:** QUICK
 - **Slug:** wifi-ep05-lemot-jam-8-malam
 - **Seri:** #14 Bongkar WiFi Rumah — EP 05 (penutup seri)

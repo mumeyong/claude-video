@@ -41,6 +41,7 @@ C = {
     "ok": hexc("#16A34A"),
     "rec": hexc("#E5484D"),
     "wa": hexc("#25D366"),
+    "bubble": hexc("#E9E9EB"),      # received chat bubble (iOS Messages grey) — components/obrolan.py
     # dark section (recap / outro)
     "d_bg": hexc("#0C0C12"),
     "d_glow": hexc("#13265A"),
@@ -53,7 +54,7 @@ C = {
     "brand_paper": hexc("#FAF9F5"),
     "brand_ink": hexc("#2B2C29"),
     "brand_seal": hexc("#C44834"),
-    # reel layer (opt-in, 2026-10-10, components/reel.py — brand teasers only, STYLE §6e): paper = brand_paper
+    # reel layer (opt-in, 2026-10-10, components/reel.py — brand teasers only, STYLE §1): paper = brand_paper
     "reel_green": hexc("#608A70"),  # the reel's main color: iris, orbit satellite, highlighter, dotted lines
     "reel_ink": hexc("#22231F"),    # reel type, chips border, dark pills, pixel wipe
     # code syntax
@@ -151,7 +152,7 @@ M = {
     "land_squash": 0.12,       # max squash (12% wider / shorter)
     "trail_n": 4,              # ghost-trail samples behind fast movers
     "trail_span": 0.05,        # seconds the trail reaches back
-    # kinetic.py (opt-in, 2026-10-08 — motion signature per video, STYLE §6d)
+    # kinetic.py (opt-in, 2026-10-08 — motion signature per video, STYLE §3)
     "mask_in": 0.75,           # word rises from behind its baseline mask
     "track_in": 0.9,           # tracking-collapse line: letters arrive + spacing closes
     "track_spread": 0.32,      # extra tracking at the start (em)
@@ -169,7 +170,7 @@ M = {
     "sheet_dim": 0.18,         # backdrop dim behind a floating sheet
     "ink_stagger": 0.11,       # Headline reveal="ink": per-word ink-in
     "ink_in": 0.55,
-    # reel.py (opt-in, 2026-10-10 — brand teasers, STYLE §6e)
+    # reel.py (opt-in, 2026-10-10 — brand teasers, STYLE §1)
     "reel_smear_in": 0.45,     # smear entrance: offset + horizontal stretch + blur 16 → 0
     "reel_smear_blur": 16,
     "reel_out": 0.4,           # reel exit: scale +30%, blur 18, fade
@@ -195,7 +196,7 @@ SPRING = {
     "silk":   (0.93, 0.9, 1.15),   # Apple keynote — long, smooth, no visible overshoot (morphs, sheets, heroes)
 }
 
-# ── Apple motion craft (STYLE §6f, 2026-10-11 — default for every new video) ──────────────────────
+# ── Apple motion craft (STYLE §3, 2026-10-11 — default for every new video) ──────────────────────
 # Named cubic-bezier curves (ease.curve(name)). Entrances decelerate long, exits accelerate short.
 EASE = {
     "apple":        (0.28, 0.11, 0.32, 1.0),   # apple.com standard transition
@@ -212,6 +213,9 @@ IOS = {
     "bouncy":  (0.5, 0.7),    # iOS .bouncy — small objects only, max once per chapter
     "default": (0.55, 0.825), # iOS .spring() default
     "hero":    (0.85, 1.0),   # big hero objects / full-bleed shrink — heavy, no overshoot
+    # ease.indicator() edges (2026-10-13, refs.pdf §08): leading edge stiffer than the trailing one → it stretches
+    "lead":    (0.35, 0.84),
+    "trail":   (0.53, 0.93),
 }
 
 M.update({
@@ -233,7 +237,26 @@ M.update({
     "hold_min": 0.8,          # stillness after an arrival before the next move
 })
 
-# ── material / look (STYLE §6g, 2026-10-12 — components/material.py) ──────────────────────────────
+# ── craft v2 (STYLE §3, 2026-10-12 — components/craft.py; research: HyperFrames + Remotion skills) ──
+EASE["draw"] = (0.33, 1.0, 0.68, 1.0)          # pen draw-on (power2.out) — pens never bounce
+M.update({
+    "draw_in": 0.6,            # stroke draw-on per segment (0.3–0.8 s by length)
+    "draw_chain": 0.75,        # next segment starts at 75 % of the previous one
+    "draw_fill": 0.4,          # fill fades in after the stroke lands
+    "split_line": 0.65, "split_line_gap": 0.10,   # split_rise by line: per-line mask rise
+    "split_word": 0.45, "split_word_gap": 0.07,   # by word
+    "split_char": 0.35, "split_char_gap": 0.025,  # by char — 1–3 word punch lines only
+    "split_cap": 0.5,          # whole stagger never longer than this (step compresses)
+    "count_dur": 1.6,          # count_up: 1.2–2.5 s (under 0.8 reads as a flash)
+    "count_scale": 0.55,       # number grows 0.55 → 1 on the same curve as the count
+    "morph_dur": 0.9,          # morph_path: 0.6–1.2 s, apple_in_out
+    "carry_travel": 110,       # carry seam: travel (px) along the video's one direction (≈ 6 % of the frame)
+    "carry_out": 0.30, "carry_in": 0.42,
+    "rack_blur": 10, "rack_in": 0.25, "rack_out": 0.32, "rack_breathe": 1.04,   # rack_cut: the one visible cut
+    "shutter_angle": 180, "shutter_n": 8, "shutter_gate": 300,   # sub-frame motion blur, only above gate px/s
+})
+
+# ── material / look (STYLE §1, 2026-10-12 — components/material.py) ──────────────────────────────
 # The look = how objects are SHADED. "flat" = plain fills (before 2026-10-12). Volume comes from light, never extrusion.
 LOOK = {
     "lit": dict(                 # soft studio light from the top-left (Apple product film)

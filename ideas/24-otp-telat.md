@@ -1,6 +1,6 @@
 # Kenapa OTP suka telat datang?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/otp-telat/`](../videos/otp-telat/)
 - **Pilar:** B · broad · **Format:** QUICK
 - **Slug:** otp-telat
 - **Seri:** —

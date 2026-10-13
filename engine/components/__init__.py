@@ -48,6 +48,15 @@ from .tebak import keyboard_hp, suggest_bar, token_line, KB_RATIO, PURPLE as TEB
 from .radio import on_air, mic_studio, slip, paku_nota, airwaves, data_center, ORANGE as RADIO_ORANGE
 from .setrika import setrika, uap_panas, pembangkit, CORAL as SETRIKA_CORAL
 from .hujan import hujan, tetes, odp_box, rumah_potong, rumah_geo, along, TEAL as HUJAN_TEAL
+from .kasir import struk, struk_h, stempel, saklar, GREEN as KASIR_GREEN
+from .panggung import panggung, panggung_geo, sorot, PURPLE as PANGGUNG_PURPLE
+from .bukutamu import buku_tamu, buku_geo, RED as BUKU_RED
+from .pdam import rusun_air, rusun_geo, aliran, pressure, TEAL as PDAM_TEAL
+from .papan import papan_tulis, papan_geo, penghapus, memori, ORANGE as PAPAN_ORANGE
+from .obrolan import chat_phone, chat_geo
 from .reel import (smear, smear_p, out_p, smear_words, viewfinder, dot_gather, orbit, iris, pixel_wipe, highlight,
                    highlight_phrase, type_clip, reel_chip, float_chips, pill as reel_pill, count_pill, formula,
                    pop_card, tilt_plane, stat_panel, verb_slam, end_card, reel_sfx, ink_on, WORLDS as REEL_WORLDS)
+from .craft import (pts_poly, pts_bezier, pts_circle, pts_rrect, pts_cairo, path_len, trim, path_point,
+                    stroke_partial, draw_on, draw_chain, mark, split_rise, count_up, resample, morph_pair, morph_path,
+                    path_at, shutter, carry, rack_cut)

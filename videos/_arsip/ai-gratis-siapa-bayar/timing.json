@@ -1,0 +1,1004 @@
+{
+ "source": "tts",
+ "voice": "cartesia:e0445740-223f-45c5-8038-8ff25e49f342",
+ "tts": "cartesia:sonic-3.6:e0445740-223f-45c5-8038-8ff25e49f342:1.0:off",
+ "duration": 74.025,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Hari ini kamu nanya AI dua puluh kali. Totalnya: nol rupiah.",
+   "start": 0.4,
+   "end": 4.273,
+   "words": [
+    {
+     "w": "Hari",
+     "start": 0.4,
+     "end": 0.633
+    },
+    {
+     "w": "ini",
+     "start": 0.713,
+     "end": 0.793
+    },
+    {
+     "w": "kamu",
+     "start": 0.873,
+     "end": 1.033
+    },
+    {
+     "w": "nanya",
+     "start": 1.033,
+     "end": 1.193
+    },
+    {
+     "w": "AI",
+     "start": 1.193,
+     "end": 1.593
+    },
+    {
+     "w": "dua",
+     "start": 1.673,
+     "end": 1.833
+    },
+    {
+     "w": "puluh",
+     "start": 1.913,
+     "end": 2.073
+    },
+    {
+     "w": "kali.",
+     "start": 2.073,
+     "end": 2.473
+    },
+    {
+     "w": "Totalnya:",
+     "start": 2.632,
+     "end": 3.273
+    },
+    {
+     "w": "nol",
+     "start": 3.561,
+     "end": 3.753
+    },
+    {
+     "w": "rupiah.",
+     "start": 3.753,
+     "end": 4.153
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Tapi struk ini ada baliknya.",
+   "start": 4.873,
+   "end": 6.367,
+   "words": [
+    {
+     "w": "Tapi",
+     "start": 4.886,
+     "end": 5.206
+    },
+    {
+     "w": "struk",
+     "start": 5.207,
+     "end": 5.526
+    },
+    {
+     "w": "ini",
+     "start": 5.527,
+     "end": 5.686
+    },
+    {
+     "w": "ada",
+     "start": 5.766,
+     "end": 5.926
+    },
+    {
+     "w": "baliknya.",
+     "start": 6.007,
+     "end": 6.326
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "Ada yang bayar. Pertanyaannya, siapa?",
+   "start": 6.687,
+   "end": 9.197,
+   "words": [
+    {
+     "w": "Ada",
+     "start": 6.737,
+     "end": 6.897
+    },
+    {
+     "w": "yang",
+     "start": 6.977,
+     "end": 7.057
+    },
+    {
+     "w": "bayar.",
+     "start": 7.057,
+     "end": 7.457
+    },
+    {
+     "w": "Pertanyaannya,",
+     "start": 7.741,
+     "end": 8.497
+    },
+    {
+     "w": "siapa?",
+     "start": 8.656,
+     "end": 9.137
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · BIAYA ASLI",
+   "text": "Tiap jawaban AI itu dihitung di GPU, di dalam data center.",
+   "start": 10.197,
+   "end": 13.673,
+   "words": [
+    {
+     "w": "Tiap",
+     "start": 10.206,
+     "end": 10.526
+    },
+    {
+     "w": "jawaban",
+     "start": 10.526,
+     "end": 11.006
+    },
+    {
+     "w": "AI",
+     "start": 11.006,
+     "end": 11.326
+    },
+    {
+     "w": "itu",
+     "start": 11.406,
+     "end": 11.486
+    },
+    {
+     "w": "dihitung",
+     "start": 11.566,
+     "end": 11.886
+    },
+    {
+     "w": "di",
+     "start": 11.886,
+     "end": 12.126
+    },
+    {
+     "w": "GPU,",
+     "start": 12.206,
+     "end": 12.526
+    },
+    {
+     "w": "di",
+     "start": 12.679,
+     "end": 12.766
+    },
+    {
+     "w": "dalam",
+     "start": 12.846,
+     "end": 13.006
+    },
+    {
+     "w": "data",
+     "start": 13.006,
+     "end": 13.246
+    },
+    {
+     "w": "center.",
+     "start": 13.326,
+     "end": 13.646
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · BIAYA ASLI",
+   "text": "GPU itu disewa per jam, listriknya nyala terus.",
+   "start": 13.993,
+   "end": 17.221,
+   "words": [
+    {
+     "w": "GPU",
+     "start": 14.009,
+     "end": 14.489
+    },
+    {
+     "w": "itu",
+     "start": 14.569,
+     "end": 14.649
+    },
+    {
+     "w": "disewa",
+     "start": 14.649,
+     "end": 15.049
+    },
+    {
+     "w": "per",
+     "start": 15.129,
+     "end": 15.209
+    },
+    {
+     "w": "jam,",
+     "start": 15.209,
+     "end": 15.689
+    },
+    {
+     "w": "listriknya",
+     "start": 15.845,
+     "end": 16.409
+    },
+    {
+     "w": "nyala",
+     "start": 16.489,
+     "end": 16.649
+    },
+    {
+     "w": "terus.",
+     "start": 16.649,
+     "end": 17.209
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · BIAYA ASLI",
+   "text": "Aku kerja ngurusin tagihan cloud. Baris GPU itu yang paling bikin orang kaget.",
+   "start": 17.541,
+   "end": 21.797,
+   "words": [
+    {
+     "w": "Aku",
+     "start": 17.576,
+     "end": 17.736
+    },
+    {
+     "w": "kerja",
+     "start": 17.816,
+     "end": 18.056
+    },
+    {
+     "w": "ngurusin",
+     "start": 18.056,
+     "end": 18.456
+    },
+    {
+     "w": "tagihan",
+     "start": 18.456,
+     "end": 18.936
+    },
+    {
+     "w": "cloud.",
+     "start": 19.016,
+     "end": 19.256
+    },
+    {
+     "w": "Baris",
+     "start": 19.501,
+     "end": 19.896
+    },
+    {
+     "w": "GPU",
+     "start": 19.976,
+     "end": 20.296
+    },
+    {
+     "w": "itu",
+     "start": 20.296,
+     "end": 20.456
+    },
+    {
+     "w": "yang",
+     "start": 20.536,
+     "end": 20.616
+    },
+    {
+     "w": "paling",
+     "start": 20.696,
+     "end": 20.936
+    },
+    {
+     "w": "bikin",
+     "start": 20.936,
+     "end": 21.176
+    },
+    {
+     "w": "orang",
+     "start": 21.256,
+     "end": 21.416
+    },
+    {
+     "w": "kaget.",
+     "start": 21.416,
+     "end": 21.896
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "00 · BIAYA ASLI",
+   "text": "Jadi jawaban gratis itu bukan nol. Cuma bukan kamu yang bayar.",
+   "start": 22.397,
+   "end": 25.887,
+   "words": [
+    {
+     "w": "Jadi",
+     "start": 22.407,
+     "end": 22.647
+    },
+    {
+     "w": "jawaban",
+     "start": 22.727,
+     "end": 22.967
+    },
+    {
+     "w": "gratis",
+     "start": 22.967,
+     "end": 23.367
+    },
+    {
+     "w": "itu",
+     "start": 23.447,
+     "end": 23.527
+    },
+    {
+     "w": "bukan",
+     "start": 23.607,
+     "end": 23.767
+    },
+    {
+     "w": "nol.",
+     "start": 23.767,
+     "end": 24.247
+    },
+    {
+     "w": "Cuma",
+     "start": 24.531,
+     "end": 24.727
+    },
+    {
+     "w": "bukan",
+     "start": 24.807,
+     "end": 24.967
+    },
+    {
+     "w": "kamu",
+     "start": 25.047,
+     "end": 25.207
+    },
+    {
+     "w": "yang",
+     "start": 25.207,
+     "end": 25.367
+    },
+    {
+     "w": "bayar.",
+     "start": 25.447,
+     "end": 25.767
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · YANG NANGGUNG",
+   "text": "Kita balik struknya. Ada empat kemungkinan.",
+   "start": 26.887,
+   "end": 29.717,
+   "words": [
+    {
+     "w": "Kita",
+     "start": 26.887,
+     "end": 27.119
+    },
+    {
+     "w": "balik",
+     "start": 27.199,
+     "end": 27.359
+    },
+    {
+     "w": "struknya.",
+     "start": 27.359,
+     "end": 27.919
+    },
+    {
+     "w": "Ada",
+     "start": 28.448,
+     "end": 28.639
+    },
+    {
+     "w": "empat",
+     "start": 28.719,
+     "end": 28.959
+    },
+    {
+     "w": "kemungkinan.",
+     "start": 28.959,
+     "end": 29.679
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · YANG NANGGUNG",
+   "text": "Satu: yang subscription. Yang bayar bulanan ikut nanggung yang gratis.",
+   "start": 30.037,
+   "end": 34.16,
+   "words": [
+    {
+     "w": "Satu:",
+     "start": 30.048,
+     "end": 30.528
+    },
+    {
+     "w": "yang",
+     "start": 30.68,
+     "end": 30.848
+    },
+    {
+     "w": "subscription.",
+     "start": 30.848,
+     "end": 31.648
+    },
+    {
+     "w": "Yang",
+     "start": 31.809,
+     "end": 31.968
+    },
+    {
+     "w": "bayar",
+     "start": 31.968,
+     "end": 32.208
+    },
+    {
+     "w": "bulanan",
+     "start": 32.288,
+     "end": 32.768
+    },
+    {
+     "w": "ikut",
+     "start": 32.771,
+     "end": 33.088
+    },
+    {
+     "w": "nanggung",
+     "start": 33.088,
+     "end": 33.408
+    },
+    {
+     "w": "yang",
+     "start": 33.488,
+     "end": 33.568
+    },
+    {
+     "w": "gratis.",
+     "start": 33.648,
+     "end": 34.128
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · YANG NANGGUNG",
+   "text": "Dua: investor. Perusahaannya rela rugi dulu, biar kamu betah.",
+   "start": 34.48,
+   "end": 38.55,
+   "words": [
+    {
+     "w": "Dua:",
+     "start": 34.517,
+     "end": 34.917
+    },
+    {
+     "w": "investor.",
+     "start": 35.072,
+     "end": 35.797
+    },
+    {
+     "w": "Perusahaannya",
+     "start": 35.949,
+     "end": 36.597
+    },
+    {
+     "w": "rela",
+     "start": 36.677,
+     "end": 36.837
+    },
+    {
+     "w": "rugi",
+     "start": 36.837,
+     "end": 37.077
+    },
+    {
+     "w": "dulu,",
+     "start": 37.157,
+     "end": 37.557
+    },
+    {
+     "w": "biar",
+     "start": 37.664,
+     "end": 37.877
+    },
+    {
+     "w": "kamu",
+     "start": 37.877,
+     "end": 38.117
+    },
+    {
+     "w": "betah.",
+     "start": 38.197,
+     "end": 38.437
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "01 · YANG NANGGUNG",
+   "text": "Tiga: iklan, kayak di media sosial.",
+   "start": 38.87,
+   "end": 41.485,
+   "words": [
+    {
+     "w": "Tiga:",
+     "start": 38.9,
+     "end": 39.38
+    },
+    {
+     "w": "iklan,",
+     "start": 39.532,
+     "end": 40.1
+    },
+    {
+     "w": "kayak",
+     "start": 40.335,
+     "end": 40.5
+    },
+    {
+     "w": "di",
+     "start": 40.5,
+     "end": 40.58
+    },
+    {
+     "w": "media",
+     "start": 40.66,
+     "end": 40.9
+    },
+    {
+     "w": "sosial.",
+     "start": 40.9,
+     "end": 41.46
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "01 · YANG NANGGUNG",
+   "text": "Empat: data. Obrolanmu bisa dipakai buat training model berikutnya.",
+   "start": 41.805,
+   "end": 45.831,
+   "words": [
+    {
+     "w": "Empat:",
+     "start": 41.871,
+     "end": 42.191
+    },
+    {
+     "w": "data.",
+     "start": 42.401,
+     "end": 42.831
+    },
+    {
+     "w": "Obrolanmu",
+     "start": 43.046,
+     "end": 43.631
+    },
+    {
+     "w": "bisa",
+     "start": 43.711,
+     "end": 43.871
+    },
+    {
+     "w": "dipakai",
+     "start": 43.871,
+     "end": 44.351
+    },
+    {
+     "w": "buat",
+     "start": 44.431,
+     "end": 44.591
+    },
+    {
+     "w": "training",
+     "start": 44.591,
+     "end": 44.991
+    },
+    {
+     "w": "model",
+     "start": 45.071,
+     "end": 45.231
+    },
+    {
+     "w": "berikutnya.",
+     "start": 45.231,
+     "end": 45.711
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "01 · YANG NANGGUNG",
+   "text": "Tiap produk campurannya beda.",
+   "start": 46.431,
+   "end": 48.327,
+   "words": [
+    {
+     "w": "Tiap",
+     "start": 46.452,
+     "end": 46.612
+    },
+    {
+     "w": "produk",
+     "start": 46.692,
+     "end": 47.172
+    },
+    {
+     "w": "campurannya",
+     "start": 47.205,
+     "end": 47.732
+    },
+    {
+     "w": "beda.",
+     "start": 47.732,
+     "end": 48.212
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "02 · BAGIANMU",
+   "text": "Yang bisa kamu lakuin: buka setting privasinya.",
+   "start": 49.327,
+   "end": 52.283,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 49.329,
+     "end": 49.569
+    },
+    {
+     "w": "bisa",
+     "start": 49.649,
+     "end": 49.729
+    },
+    {
+     "w": "kamu",
+     "start": 49.809,
+     "end": 49.969
+    },
+    {
+     "w": "lakuin:",
+     "start": 49.969,
+     "end": 50.689
+    },
+    {
+     "w": "buka",
+     "start": 50.853,
+     "end": 51.249
+    },
+    {
+     "w": "setting",
+     "start": 51.249,
+     "end": 51.569
+    },
+    {
+     "w": "privasinya.",
+     "start": 51.569,
+     "end": 52.209
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "02 · BAGIANMU",
+   "text": "Cari pilihan soal data buat training, terus putusin sendiri: nyala atau mati.",
+   "start": 52.603,
+   "end": 56.986,
+   "words": [
+    {
+     "w": "Cari",
+     "start": 52.623,
+     "end": 52.863
+    },
+    {
+     "w": "pilihan",
+     "start": 52.943,
+     "end": 53.263
+    },
+    {
+     "w": "soal",
+     "start": 53.263,
+     "end": 53.503
+    },
+    {
+     "w": "data",
+     "start": 53.583,
+     "end": 53.823
+    },
+    {
+     "w": "buat",
+     "start": 53.903,
+     "end": 54.063
+    },
+    {
+     "w": "training,",
+     "start": 54.063,
+     "end": 54.623
+    },
+    {
+     "w": "terus",
+     "start": 54.86,
+     "end": 55.023
+    },
+    {
+     "w": "putusin",
+     "start": 55.023,
+     "end": 55.343
+    },
+    {
+     "w": "sendiri:",
+     "start": 55.423,
+     "end": 55.823
+    },
+    {
+     "w": "nyala",
+     "start": 55.979,
+     "end": 56.383
+    },
+    {
+     "w": "atau",
+     "start": 56.463,
+     "end": 56.543
+    },
+    {
+     "w": "mati.",
+     "start": 56.543,
+     "end": 56.943
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "02 · BAGIANMU",
+   "text": "Dan jangan tempel data kantor di versi gratis.",
+   "start": 57.306,
+   "end": 60.214,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 57.312,
+     "end": 57.632
+    },
+    {
+     "w": "jangan",
+     "start": 57.712,
+     "end": 58.032
+    },
+    {
+     "w": "tempel",
+     "start": 58.032,
+     "end": 58.432
+    },
+    {
+     "w": "data",
+     "start": 58.512,
+     "end": 58.672
+    },
+    {
+     "w": "kantor",
+     "start": 58.672,
+     "end": 59.072
+    },
+    {
+     "w": "di",
+     "start": 59.152,
+     "end": 59.232
+    },
+    {
+     "w": "versi",
+     "start": 59.312,
+     "end": 59.552
+    },
+    {
+     "w": "gratis.",
+     "start": 59.552,
+     "end": 60.192
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "RECAP",
+   "text": "Di tagihan cloud, nggak ada baris yang nol. Gratis cuma artinya tagihannya dikirim ke orang lain.",
+   "start": 61.214,
+   "end": 66.612,
+   "words": [
+    {
+     "w": "Di",
+     "start": 61.229,
+     "end": 61.309
+    },
+    {
+     "w": "tagihan",
+     "start": 61.389,
+     "end": 61.869
+    },
+    {
+     "w": "cloud,",
+     "start": 61.869,
+     "end": 62.189
+    },
+    {
+     "w": "nggak",
+     "start": 62.423,
+     "end": 62.509
+    },
+    {
+     "w": "ada",
+     "start": 62.589,
+     "end": 62.669
+    },
+    {
+     "w": "baris",
+     "start": 62.669,
+     "end": 62.909
+    },
+    {
+     "w": "yang",
+     "start": 62.989,
+     "end": 63.149
+    },
+    {
+     "w": "nol.",
+     "start": 63.229,
+     "end": 63.469
+    },
+    {
+     "w": "Gratis",
+     "start": 63.627,
+     "end": 64.189
+    },
+    {
+     "w": "cuma",
+     "start": 64.269,
+     "end": 64.589
+    },
+    {
+     "w": "artinya",
+     "start": 64.589,
+     "end": 64.989
+    },
+    {
+     "w": "tagihannya",
+     "start": 64.989,
+     "end": 65.469
+    },
+    {
+     "w": "dikirim",
+     "start": 65.549,
+     "end": 65.789
+    },
+    {
+     "w": "ke",
+     "start": 65.869,
+     "end": 65.869
+    },
+    {
+     "w": "orang",
+     "start": 65.949,
+     "end": 66.109
+    },
+    {
+     "w": "lain.",
+     "start": 66.109,
+     "end": 66.509
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "OUTRO",
+   "text": "Save video ini, buat pas ada yang bilang \"kan gratis\".",
+   "start": 67.612,
+   "end": 71.025,
+   "words": [
+    {
+     "w": "Save",
+     "start": 67.621,
+     "end": 67.941
+    },
+    {
+     "w": "video",
+     "start": 68.021,
+     "end": 68.261
+    },
+    {
+     "w": "ini,",
+     "start": 68.261,
+     "end": 68.661
+    },
+    {
+     "w": "buat",
+     "start": 68.823,
+     "end": 68.981
+    },
+    {
+     "w": "pas",
+     "start": 68.981,
+     "end": 69.221
+    },
+    {
+     "w": "ada",
+     "start": 69.301,
+     "end": 69.301
+    },
+    {
+     "w": "yang",
+     "start": 69.381,
+     "end": 69.541
+    },
+    {
+     "w": "bilang",
+     "start": 69.621,
+     "end": 69.941
+    },
+    {
+     "w": "\"kan",
+     "start": 69.941,
+     "end": 70.101
+    },
+    {
+     "w": "gratis\".",
+     "start": 70.101,
+     "end": 70.981
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 71.345,
+   "end": 73.225,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 71.366,
+     "end": 71.926
+    },
+    {
+     "w": "biar",
+     "start": 72.069,
+     "end": 72.326
+    },
+    {
+     "w": "nggak",
+     "start": 72.406,
+     "end": 72.486
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 72.486,
+     "end": 73.206
+    }
+   ]
+  }
+ ]
+}

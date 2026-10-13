@@ -1,0 +1,934 @@
+{
+ "source": "tts",
+ "voice": "cartesia:e0445740-223f-45c5-8038-8ff25e49f342",
+ "tts": "cartesia:sonic-3.6:e0445740-223f-45c5-8038-8ff25e49f342:1.0:off",
+ "duration": 70.794,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Aku pernah bangun fondasi buat training AI, di Azure.",
+   "start": 0.4,
+   "end": 3.426,
+   "words": [
+    {
+     "w": "Aku",
+     "start": 0.42,
+     "end": 0.58
+    },
+    {
+     "w": "pernah",
+     "start": 0.66,
+     "end": 0.9
+    },
+    {
+     "w": "bangun",
+     "start": 0.98,
+     "end": 1.14
+    },
+    {
+     "w": "fondasi",
+     "start": 1.14,
+     "end": 1.62
+    },
+    {
+     "w": "buat",
+     "start": 1.7,
+     "end": 1.86
+    },
+    {
+     "w": "training",
+     "start": 1.86,
+     "end": 2.5
+    },
+    {
+     "w": "AI,",
+     "start": 2.58,
+     "end": 2.66
+    },
+    {
+     "w": "di",
+     "start": 2.81,
+     "end": 2.9
+    },
+    {
+     "w": "Azure.",
+     "start": 2.98,
+     "end": 3.38
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Yang ngurus di situ tiap hari? Bukan AI-nya.",
+   "start": 3.746,
+   "end": 6.448,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 3.768,
+     "end": 4.008
+    },
+    {
+     "w": "ngurus",
+     "start": 4.088,
+     "end": 4.248
+    },
+    {
+     "w": "di",
+     "start": 4.328,
+     "end": 4.328
+    },
+    {
+     "w": "situ",
+     "start": 4.328,
+     "end": 4.568
+    },
+    {
+     "w": "tiap",
+     "start": 4.568,
+     "end": 4.728
+    },
+    {
+     "w": "hari?",
+     "start": 4.808,
+     "end": 5.048
+    },
+    {
+     "w": "Bukan",
+     "start": 5.56,
+     "end": 5.928
+    },
+    {
+     "w": "AI-nya.",
+     "start": 6.008,
+     "end": 6.328
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "INTRO",
+   "text": "AI nggak gantiin cloud engineer. AI butuh cloud engineer.",
+   "start": 7.048,
+   "end": 10.367,
+   "words": [
+    {
+     "w": "AI",
+     "start": 7.083,
+     "end": 7.323
+    },
+    {
+     "w": "nggak",
+     "start": 7.403,
+     "end": 7.483
+    },
+    {
+     "w": "gantiin",
+     "start": 7.563,
+     "end": 7.883
+    },
+    {
+     "w": "cloud",
+     "start": 7.883,
+     "end": 8.123
+    },
+    {
+     "w": "engineer.",
+     "start": 8.203,
+     "end": 8.683
+    },
+    {
+     "w": "AI",
+     "start": 8.891,
+     "end": 9.163
+    },
+    {
+     "w": "butuh",
+     "start": 9.163,
+     "end": 9.563
+    },
+    {
+     "w": "cloud",
+     "start": 9.643,
+     "end": 9.723
+    },
+    {
+     "w": "engineer.",
+     "start": 9.803,
+     "end": 10.283
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · KOLONG PANGGUNG",
+   "text": "Bayangin AI itu biduan di panggung hajatan.",
+   "start": 11.367,
+   "end": 14.109,
+   "words": [
+    {
+     "w": "Bayangin",
+     "start": 11.376,
+     "end": 11.856
+    },
+    {
+     "w": "AI",
+     "start": 11.857,
+     "end": 12.256
+    },
+    {
+     "w": "itu",
+     "start": 12.336,
+     "end": 12.416
+    },
+    {
+     "w": "biduan",
+     "start": 12.496,
+     "end": 12.896
+    },
+    {
+     "w": "di",
+     "start": 12.896,
+     "end": 12.976
+    },
+    {
+     "w": "panggung",
+     "start": 13.056,
+     "end": 13.376
+    },
+    {
+     "w": "hajatan.",
+     "start": 13.376,
+     "end": 14.096
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · KOLONG PANGGUNG",
+   "text": "Yang kamu lihat cuma penyanyinya. Suaranya bagus.",
+   "start": 14.429,
+   "end": 17.427,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 14.455,
+     "end": 14.615
+    },
+    {
+     "w": "kamu",
+     "start": 14.695,
+     "end": 14.855
+    },
+    {
+     "w": "lihat",
+     "start": 14.935,
+     "end": 15.175
+    },
+    {
+     "w": "cuma",
+     "start": 15.175,
+     "end": 15.415
+    },
+    {
+     "w": "penyanyinya.",
+     "start": 15.495,
+     "end": 16.055
+    },
+    {
+     "w": "Suaranya",
+     "start": 16.273,
+     "end": 16.775
+    },
+    {
+     "w": "bagus.",
+     "start": 16.775,
+     "end": 17.415
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · KOLONG PANGGUNG",
+   "text": "Tapi di kolong panggung ada genset. Itu GPU-nya.",
+   "start": 18.027,
+   "end": 21.275,
+   "words": [
+    {
+     "w": "Tapi",
+     "start": 18.034,
+     "end": 18.275
+    },
+    {
+     "w": "di",
+     "start": 18.355,
+     "end": 18.355
+    },
+    {
+     "w": "kolong",
+     "start": 18.435,
+     "end": 18.675
+    },
+    {
+     "w": "panggung",
+     "start": 18.675,
+     "end": 19.075
+    },
+    {
+     "w": "ada",
+     "start": 19.155,
+     "end": 19.235
+    },
+    {
+     "w": "genset.",
+     "start": 19.235,
+     "end": 19.875
+    },
+    {
+     "w": "Itu",
+     "start": 20.212,
+     "end": 20.355
+    },
+    {
+     "w": "GPU-nya.",
+     "start": 20.355,
+     "end": 21.155
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "00 · KOLONG PANGGUNG",
+   "text": "Kabel ke mana-mana, itu network. Peti alat, itu storage.",
+   "start": 21.595,
+   "end": 25.473,
+   "words": [
+    {
+     "w": "Kabel",
+     "start": 21.613,
+     "end": 21.933
+    },
+    {
+     "w": "ke",
+     "start": 22.013,
+     "end": 22.093
+    },
+    {
+     "w": "mana-mana,",
+     "start": 22.173,
+     "end": 22.733
+    },
+    {
+     "w": "itu",
+     "start": 22.925,
+     "end": 23.053
+    },
+    {
+     "w": "network.",
+     "start": 23.053,
+     "end": 23.693
+    },
+    {
+     "w": "Peti",
+     "start": 23.829,
+     "end": 24.093
+    },
+    {
+     "w": "alat,",
+     "start": 24.173,
+     "end": 24.413
+    },
+    {
+     "w": "itu",
+     "start": 24.71,
+     "end": 24.813
+    },
+    {
+     "w": "storage.",
+     "start": 24.813,
+     "end": 25.453
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "00 · KOLONG PANGGUNG",
+   "text": "Dan ada nota sewa yang jalan terus tiap jam.",
+   "start": 25.793,
+   "end": 28.453,
+   "words": [
+    {
+     "w": "Dan",
+     "start": 25.813,
+     "end": 26.133
+    },
+    {
+     "w": "ada",
+     "start": 26.133,
+     "end": 26.373
+    },
+    {
+     "w": "nota",
+     "start": 26.453,
+     "end": 26.693
+    },
+    {
+     "w": "sewa",
+     "start": 26.693,
+     "end": 27.013
+    },
+    {
+     "w": "yang",
+     "start": 27.093,
+     "end": 27.253
+    },
+    {
+     "w": "jalan",
+     "start": 27.333,
+     "end": 27.653
+    },
+    {
+     "w": "terus",
+     "start": 27.653,
+     "end": 27.973
+    },
+    {
+     "w": "tiap",
+     "start": 27.973,
+     "end": 28.213
+    },
+    {
+     "w": "jam.",
+     "start": 28.293,
+     "end": 28.453
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · KRU SOUND",
+   "text": "Terus yang jagain semua itu siapa? Kru sound-nya.",
+   "start": 29.453,
+   "end": 32.516,
+   "words": [
+    {
+     "w": "Terus",
+     "start": 29.453,
+     "end": 29.676
+    },
+    {
+     "w": "yang",
+     "start": 29.756,
+     "end": 29.916
+    },
+    {
+     "w": "jagain",
+     "start": 29.916,
+     "end": 30.316
+    },
+    {
+     "w": "semua",
+     "start": 30.396,
+     "end": 30.636
+    },
+    {
+     "w": "itu",
+     "start": 30.716,
+     "end": 30.796
+    },
+    {
+     "w": "siapa?",
+     "start": 30.796,
+     "end": 31.276
+    },
+    {
+     "w": "Kru",
+     "start": 31.444,
+     "end": 31.596
+    },
+    {
+     "w": "sound-nya.",
+     "start": 31.596,
+     "end": 32.396
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "01 · KRU SOUND",
+   "text": "Di project-ku, kerjaannya gini: GPU nyala pas training, di-scale turun pas selesai.",
+   "start": 32.836,
+   "end": 38.162,
+   "words": [
+    {
+     "w": "Di",
+     "start": 32.862,
+     "end": 33.022
+    },
+    {
+     "w": "project-ku,",
+     "start": 33.102,
+     "end": 33.822
+    },
+    {
+     "w": "kerjaannya",
+     "start": 33.928,
+     "end": 34.382
+    },
+    {
+     "w": "gini:",
+     "start": 34.462,
+     "end": 34.782
+    },
+    {
+     "w": "GPU",
+     "start": 34.96,
+     "end": 35.422
+    },
+    {
+     "w": "nyala",
+     "start": 35.502,
+     "end": 35.662
+    },
+    {
+     "w": "pas",
+     "start": 35.662,
+     "end": 35.902
+    },
+    {
+     "w": "training,",
+     "start": 35.982,
+     "end": 36.462
+    },
+    {
+     "w": "di-scale",
+     "start": 36.62,
+     "end": 37.102
+    },
+    {
+     "w": "turun",
+     "start": 37.102,
+     "end": 37.422
+    },
+    {
+     "w": "pas",
+     "start": 37.502,
+     "end": 37.582
+    },
+    {
+     "w": "selesai.",
+     "start": 37.582,
+     "end": 38.142
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "01 · KRU SOUND",
+   "text": "Inference harus selalu siap, kapan aja ada yang nanya.",
+   "start": 38.482,
+   "end": 41.28,
+   "words": [
+    {
+     "w": "Inference",
+     "start": 38.52,
+     "end": 39.08
+    },
+    {
+     "w": "harus",
+     "start": 39.16,
+     "end": 39.32
+    },
+    {
+     "w": "selalu",
+     "start": 39.4,
+     "end": 39.64
+    },
+    {
+     "w": "siap,",
+     "start": 39.64,
+     "end": 40.04
+    },
+    {
+     "w": "kapan",
+     "start": 40.257,
+     "end": 40.52
+    },
+    {
+     "w": "aja",
+     "start": 40.52,
+     "end": 40.76
+    },
+    {
+     "w": "ada",
+     "start": 40.84,
+     "end": 40.92
+    },
+    {
+     "w": "yang",
+     "start": 41.0,
+     "end": 41.0
+    },
+    {
+     "w": "nanya.",
+     "start": 41.08,
+     "end": 41.16
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "01 · KRU SOUND",
+   "text": "Semuanya di container, biar bisa pindah cloud.",
+   "start": 41.6,
+   "end": 44.495,
+   "words": [
+    {
+     "w": "Semuanya",
+     "start": 41.6,
+     "end": 42.133
+    },
+    {
+     "w": "di",
+     "start": 42.213,
+     "end": 42.213
+    },
+    {
+     "w": "container,",
+     "start": 42.213,
+     "end": 43.013
+    },
+    {
+     "w": "biar",
+     "start": 43.17,
+     "end": 43.413
+    },
+    {
+     "w": "bisa",
+     "start": 43.493,
+     "end": 43.653
+    },
+    {
+     "w": "pindah",
+     "start": 43.653,
+     "end": 44.053
+    },
+    {
+     "w": "cloud.",
+     "start": 44.133,
+     "end": 44.453
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "01 · KRU SOUND",
+   "text": "Biduannya nggak bisa ngurus panggungnya sendiri.",
+   "start": 45.095,
+   "end": 47.793,
+   "words": [
+    {
+     "w": "Biduannya",
+     "start": 45.113,
+     "end": 45.593
+    },
+    {
+     "w": "nggak",
+     "start": 45.673,
+     "end": 45.833
+    },
+    {
+     "w": "bisa",
+     "start": 45.833,
+     "end": 46.153
+    },
+    {
+     "w": "ngurus",
+     "start": 46.233,
+     "end": 46.473
+    },
+    {
+     "w": "panggungnya",
+     "start": 46.473,
+     "end": 46.953
+    },
+    {
+     "w": "sendiri.",
+     "start": 46.953,
+     "end": 47.753
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "02 · SKILL-NYA",
+   "text": "Makin banyak AI, makin banyak panggung.",
+   "start": 48.793,
+   "end": 51.371,
+   "words": [
+    {
+     "w": "Makin",
+     "start": 48.793,
+     "end": 49.113
+    },
+    {
+     "w": "banyak",
+     "start": 49.193,
+     "end": 49.353
+    },
+    {
+     "w": "AI,",
+     "start": 49.353,
+     "end": 49.913
+    },
+    {
+     "w": "makin",
+     "start": 50.147,
+     "end": 50.393
+    },
+    {
+     "w": "banyak",
+     "start": 50.393,
+     "end": 50.713
+    },
+    {
+     "w": "panggung.",
+     "start": 50.713,
+     "end": 51.353
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "02 · SKILL-NYA",
+   "text": "Yang aku lihat dicari sekarang: yang ngerti GPU, network, dan biaya-nya.",
+   "start": 51.691,
+   "end": 56.503,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 51.713,
+     "end": 51.873
+    },
+    {
+     "w": "aku",
+     "start": 51.953,
+     "end": 52.113
+    },
+    {
+     "w": "lihat",
+     "start": 52.193,
+     "end": 52.353
+    },
+    {
+     "w": "dicari",
+     "start": 52.353,
+     "end": 52.673
+    },
+    {
+     "w": "sekarang:",
+     "start": 52.753,
+     "end": 53.313
+    },
+    {
+     "w": "yang",
+     "start": 53.453,
+     "end": 53.793
+    },
+    {
+     "w": "ngerti",
+     "start": 53.873,
+     "end": 53.953
+    },
+    {
+     "w": "GPU,",
+     "start": 53.953,
+     "end": 54.673
+    },
+    {
+     "w": "network,",
+     "start": 54.832,
+     "end": 55.393
+    },
+    {
+     "w": "dan",
+     "start": 55.548,
+     "end": 55.793
+    },
+    {
+     "w": "biaya-nya.",
+     "start": 55.873,
+     "end": 56.433
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "02 · SKILL-NYA",
+   "text": "Kerjaannya berubah. Bukan hilang.",
+   "start": 56.823,
+   "end": 59.227,
+   "words": [
+    {
+     "w": "Kerjaannya",
+     "start": 56.831,
+     "end": 57.311
+    },
+    {
+     "w": "berubah.",
+     "start": 57.311,
+     "end": 57.711
+    },
+    {
+     "w": "Bukan",
+     "start": 58.449,
+     "end": 58.751
+    },
+    {
+     "w": "hilang.",
+     "start": 58.831,
+     "end": 59.151
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "RECAP",
+   "text": "Biduannya boleh ganti tiap bulan. Panggungnya tetap butuh orang.",
+   "start": 60.227,
+   "end": 63.82,
+   "words": [
+    {
+     "w": "Biduannya",
+     "start": 60.234,
+     "end": 60.714
+    },
+    {
+     "w": "boleh",
+     "start": 60.714,
+     "end": 61.034
+    },
+    {
+     "w": "ganti",
+     "start": 61.114,
+     "end": 61.354
+    },
+    {
+     "w": "tiap",
+     "start": 61.354,
+     "end": 61.594
+    },
+    {
+     "w": "bulan.",
+     "start": 61.674,
+     "end": 62.074
+    },
+    {
+     "w": "Panggungnya",
+     "start": 62.275,
+     "end": 62.794
+    },
+    {
+     "w": "tetap",
+     "start": 62.874,
+     "end": 63.034
+    },
+    {
+     "w": "butuh",
+     "start": 63.034,
+     "end": 63.354
+    },
+    {
+     "w": "orang.",
+     "start": 63.354,
+     "end": 63.834
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "chapter": "OUTRO",
+   "text": "Mau mulai jadi kru panggungnya? Tulis panggung di komentar.",
+   "start": 64.82,
+   "end": 67.848,
+   "words": [
+    {
+     "w": "Mau",
+     "start": 64.82,
+     "end": 64.976
+    },
+    {
+     "w": "mulai",
+     "start": 65.056,
+     "end": 65.296
+    },
+    {
+     "w": "jadi",
+     "start": 65.296,
+     "end": 65.536
+    },
+    {
+     "w": "kru",
+     "start": 65.616,
+     "end": 65.776
+    },
+    {
+     "w": "panggungnya?",
+     "start": 65.776,
+     "end": 66.336
+    },
+    {
+     "w": "Tulis",
+     "start": 66.611,
+     "end": 66.816
+    },
+    {
+     "w": "panggung",
+     "start": 66.816,
+     "end": 67.216
+    },
+    {
+     "w": "di",
+     "start": 67.296,
+     "end": 67.296
+    },
+    {
+     "w": "komentar.",
+     "start": 67.376,
+     "end": 67.856
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 68.168,
+   "end": 69.994,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 68.168,
+     "end": 68.674
+    },
+    {
+     "w": "biar",
+     "start": 68.829,
+     "end": 69.074
+    },
+    {
+     "w": "nggak",
+     "start": 69.154,
+     "end": 69.234
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 69.234,
+     "end": 69.954
+    }
+   ]
+  }
+ ]
+}

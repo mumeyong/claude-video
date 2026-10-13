@@ -7,7 +7,7 @@ Pure functions of their progress values and t; all variation is hash-seeded.
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, mix, out_expo, prog
+from ..ease import clamp, mix, prog, glide
 from .infra import _draw_poly, _along, _h
 
 RED = tk.CHAPTER[5][0]
@@ -50,7 +50,7 @@ def _cal_page(c, x, y, w, h, num, color, circle_p=0.0, sub="", sub_p=0.0, torn=F
     c.text(x + w / 2, y + h * 0.62, str(num), tk.F["display"], size, ncol, 1, -0.05, align="c")
     if sub and sub_p > 0:
         c.text(x + w / 2, y + h * 0.88, sub, tk.F["mono_bold"], max(17, h * 0.085), c.theme("ink2", "d_muted"),
-               out_expo(clamp(sub_p)), 0.12, align="c")
+               glide(clamp(sub_p)), 0.12, align="c")
     if circle_p > 0:
         # hand-drawn marker loop: overshoots its start, radius wobbles (deterministic)
         mx, my = x + w / 2, y + h * 0.43

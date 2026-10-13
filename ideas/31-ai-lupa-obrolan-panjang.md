@@ -1,6 +1,6 @@
 # Kenapa AI lupa isi obrolan yang panjang?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/ai-lupa-obrolan-panjang/`](../videos/ai-lupa-obrolan-panjang/)
 - **Pilar:** B · AI sehari-hari · **Format:** QUICK
 - **Slug:** ai-lupa-obrolan-panjang
 - **Seri:** —

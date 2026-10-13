@@ -2,7 +2,7 @@
 import math
 
 from .. import tokens as tk
-from ..ease import out_expo, in_out_cubic, prog, pulse, clamp, lerp
+from ..ease import out_expo, in_out_cubic, prog, pulse, clamp, lerp, glide
 from . import icons
 from .motion import count, fmt_id
 
@@ -175,7 +175,7 @@ class Cursor:
         return [("click", t, 0.7) for t in self.clicks]
 
     def draw(self, c, t):
-        a = out_expo(prog(t, self.show, 0.3))
+        a = glide(prog(t, self.show, 0.3))
         if self.hide is not None:
             a *= 1 - prog(t, self.hide, 0.3)
         if a <= 0.002:

@@ -20,7 +20,7 @@ from contextlib import contextmanager
 import cairo
 
 from .. import tokens as tk
-from ..ease import clamp, in_cubic, in_out_cubic, in_out_sine, lerp, mix, out_expo, prog, spring
+from ..ease import clamp, in_cubic, in_out_cubic, in_out_sine, lerp, mix, prog, spring, glide
 
 
 # ── springs ─────────────────────────────────────────────────────────────
@@ -176,7 +176,7 @@ def track_line(c, t, t_in, t_out, x, y, text, font, size, color, ls=None, align=
     d_out = d_out or M["dim_out"]
     ws = _prefix_widths(c, text, f, size, ls)
     total = ws[-1]
-    g = out_expo(prog(t, t_in, d_in))
+    g = glide(prog(t, t_in, d_in))
     b = 0.0 if t_out is None else prog(t, t_out, d_out)
     if g <= 0 or b >= 1:
         return total
@@ -191,7 +191,7 @@ def track_line(c, t, t_in, t_out, x, y, text, font, size, color, ls=None, align=
         for i, ch in enumerate(text):
             if ch == " ":
                 continue
-            a = out_expo(prog(t, t_in + i * stg, d_in * 0.5))
+            a = glide(prog(t, t_in + i * stg, d_in * 0.5))
             if a <= 0.002:
                 continue
             col = dim_color(c, mix(flash, color, clamp(a * 1.4 - 0.2)), b)

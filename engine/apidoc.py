@@ -5,6 +5,7 @@ Regenerate after adding or changing a component (Claude may run it — text only
 """
 import inspect
 import pathlib
+import re
 
 HERE = pathlib.Path(__file__).resolve().parent
 
@@ -14,7 +15,7 @@ def _sig(obj):
         s = str(inspect.signature(obj))
     except (TypeError, ValueError):
         return "(…)"
-    return s.replace("'", '"')
+    return re.sub(r"<function (\w+) at 0x[0-9a-f]+>", r"\1", s.replace("'", '"'))   # fn defaults by name
 
 
 def _doc(obj):
@@ -90,3 +91,50 @@ def build_api():
     n = sum(1 for ln in lines if ln.startswith("- ") or ln.startswith("  - "))
     print(f"✓ {out}  ({n} entries, {len(lines)} lines)")
     return out
+
+
+# Sections every scenes.py needs (headlines, beats, motion, cover, material + engine core). Everything else is a
+# metaphor kit: list its names with `api index`, print its full lines only when the video uses it.
+CORE = ("beats", "headline", "motion", "keynote", "craft", "pill", "cover", "material", "ease", "Video", "Canvas", "Timing",
+        "camera")
+
+
+def _sections():
+    path = HERE / "API.md"
+    if not path.exists():
+        build_api()
+    out, cur = {}, None
+    for ln in path.read_text().splitlines():
+        if ln.startswith("## "):
+            m = ln[3:].split(" ", 1)[0]
+            cur = m.removeprefix("components/").removesuffix(".py")
+            out[cur] = [ln]
+        elif cur and ln.strip():
+            out[cur].append(ln)
+    return out
+
+
+def show(names):
+    """`api core | index | <module> …` — print only those API.md sections (token-lean; text only, Claude may run).
+
+    core  = sections every video needs · index = every other component module with just its names ·
+    <module> (e.g. `hujan kasir`) = that module's full lines.
+    """
+    sec = _sections()
+    for n in names:
+        if n == "core":
+            for k in CORE:
+                print("\n".join(sec.get(k, [])) + "\n")
+        elif n == "index":
+            print("## component kits (names only — `api <module>` for signatures)")
+            for k, lines in sec.items():
+                if k in CORE:
+                    continue
+                fns = [ln.split("`")[1].split("(")[0] for ln in lines[1:] if ln.startswith("- `")]
+                head = lines[0].split(" — ", 1)[-1][:90]
+                print(f"- {k}: {head} → {', '.join(fns)}")
+        elif n in sec:
+            print("\n".join(sec[n]) + "\n")
+        else:
+            print(f"? no API section '{n}' (try: core, index, {', '.join(k for k in sec if k not in CORE)})")
+    return 0

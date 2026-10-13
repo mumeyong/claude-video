@@ -1,7 +1,8 @@
 # START — bikin video MUMEYONG
 
 **Claude** nulis naskah, rencana, dan kode animasinya. **Kamu** yang render, rekam suara (opsional), dan upload.
-Aturan lengkap: `CLAUDE.md` · gaya visual: `.claude/skills/mumeyong-video/STYLE.md`.
+Aturan lengkap: `CLAUDE.md` · identitas (tetap): `.claude/skills/mumeyong-video/IDENTITY.md` · gaya (bebas, panduan): `STYLE.md`.
+Claude bebas milih metafora, struktur, layout, gerakan — yang dikunci cuma identitas Mumeyong.
 
 ## Alurnya: satu command
 
@@ -64,9 +65,15 @@ mp4/png/wav nggak masuk git — backup sendiri.
 
 ✅ "L14: angkanya kegedean" · ✅ "00:42 zoom-nya kecepetan" · ❌ "kurang bagus"
 
-**Gerakan = gaya Apple keynote** (STYLE §6f, sejak 2026-10-11): satu yang gerak duluan, mendarat pas kata yang
+**Gerakan = gaya Apple keynote** (STYLE §3): satu yang gerak duluan, mendarat pas kata yang
 ditekan, terus diam sebentar. Claude ngecek ini sendiri lewat tabel *motion* di `check --dry` (tanpa render).
 Mau lihat contohnya: `claude-video apple-lab` (proof sheet ± 45 s, nggak buat diposting).
+
+**Sejak 2026-10-13 semua gerakan pakai spring** (STYLE §3, dari refs.pdf): mulai dari diam, nggak
+"nyentak" di frame pertama, dan yang pindah target berkali-kali (kursor, indikator) belok halus pakai `track()`.
+Claude juga **ngeliat frame-nya sendiri**: `python -m engine critique <slug>` bikin PNG review (hook 2 detik pertama,
+satu frame per baris, tiap awal bab 6 frame) — tanpa encode video/audio — terus dinilai di `videos/<slug>/CRITIQUE.md`
+sampai semua skor ≥ 8. Bandingin gerakan lama vs baru: `claude-video spring-lab`.
 
 ## Command lain
 
@@ -76,6 +83,7 @@ Mau lihat contohnya: `claude-video apple-lab` (proof sheet ± 45 s, nggak buat d
 | Preview 540p (opsional) | `claude-video <slug> preview` · sebagian: `… preview --from 20 --to 45` |
 | Cuma bikin folder (tanpa Claude) | `claude-video new "Judul"` |
 | Buka folder video | `claude-video open <slug>` |
+| Review PNG (Claude juga boleh) | `python -m engine critique <slug>` → `out/critique/` |
 | Semua command satuan | `claude-video help` |
 
 Error? Copy-paste output-nya + command-nya ke Claude. Autopilot gagal di tengah? `claude` → "lanjutin video <slug>".

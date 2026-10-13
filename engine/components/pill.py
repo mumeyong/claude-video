@@ -1,6 +1,6 @@
 """Pills, chips, tags, selection boxes — the small UI vocabulary."""
 from .. import tokens as tk
-from ..ease import out_back, out_expo, prog
+from ..ease import prog, glide, pop
 
 
 def chip(c, x, y, label, dot, alpha=1.0, h=40):
@@ -57,13 +57,13 @@ def size_label(c, cx, y, text, alpha=1.0):
 
 def select_box(c, t, t0, x, y, w, h, label=None, t_out=None, pad=10):
     """Design-tool selection: blue frame + square handles + size label. Pops in at t0."""
-    p = out_expo(prog(t, t0, 0.45))
+    p = glide(prog(t, t0, 0.45))
     b = 0.0 if t_out is None else prog(t, t_out, 0.25)
     vis = p * (1 - b)
     if vis <= 0.002:
         return
     acc = c.theme("accent", "d_accent")
-    s = 0.92 + 0.08 * out_back(prog(t, t0, 0.45))
+    s = 0.92 + 0.08 * pop(prog(t, t0, 0.45))
     x0, y0, ww, hh = x - pad, y - pad, w + 2 * pad, h + 2 * pad
     with c.at(0, 0, s, origin=(x0 + ww / 2, y0 + hh / 2)):
         c.stroke_rrect(x0, y0, ww, hh, 2, acc, 2.0, vis)
@@ -76,6 +76,6 @@ def select_box(c, t, t0, x, y, w, h, label=None, t_out=None, pad=10):
 
 def strike(c, t, t0, x1, x2, y, width=7, dur=0.5, alpha=1.0):
     """Blue strike-through drawn left→right."""
-    p = out_expo(prog(t, t0, dur))
+    p = glide(prog(t, t0, dur))
     if p > 0:
         c.line(x1, y, x1 + (x2 - x1) * p, y, c.theme("accent", "d_accent"), width, alpha)

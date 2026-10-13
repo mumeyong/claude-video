@@ -7,7 +7,7 @@ import math
 from dataclasses import dataclass, field
 
 from . import tokens as tk
-from .ease import mix, prog, in_out_cubic, out_expo
+from .ease import mix, prog, in_out_cubic, glide
 from .timing import Beat
 from .camera import Camera
 
@@ -60,7 +60,7 @@ class Video:
     hud: bool = True
     ground: tuple = None                        # flat background color instead of tinted glows (reel layer: paper)
     camera: object = field(default_factory=Camera)   # applies to layers with z < 80
-    stage: object = None                        # stage(c, t) replaces the background (material looks, §6g)
+    stage: object = None                        # stage(c, t) replaces the background (material looks, STYLE §1)
     finish: object = None                       # finish(c, t) after the content, under the HUD (grain, vignette)
 
     def __post_init__(self):
@@ -236,7 +236,7 @@ def draw_hud(c, video, t):
     ch = video.chapter_at(t)
     if ch is not None:
         # chapter label (crossfade on change)
-        p = out_expo(prog(t, ch.start, 0.5))
+        p = glide(prog(t, ch.start, 0.5))
         prev = [x for x in video.chapters if x.start < ch.start]
         if prev and p < 1:
             c.text(x1, top + 7, prev[-1].hud, F["mono"], size, muted, 1 - p, ls, align="r")
@@ -249,7 +249,7 @@ def draw_hud(c, video, t):
             for i, nc in enumerate(nums):
                 x = x1 - r - (n - 1 - i) * gap
                 if ch.num is not None and nc.num == ch.num:
-                    pp = out_expo(prog(t, ch.start, 0.5))
+                    pp = glide(prog(t, ch.start, 0.5))
                     col = mix(tk.C["faint"], nc.color, pp)
                     c.circle(x, L["dots_y"], r * (1 + 0.25 * pp), col)
                 elif ch.num is not None and nc.num < ch.num:

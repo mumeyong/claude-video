@@ -193,7 +193,7 @@ def audio_dry(slug):
     return 1 if problems else 0
 
 
-# ── motion check (STYLE §6f, 2026-10-11): measure how the video MOVES, without rendering anything ──────────
+# ── motion check (STYLE §3, 2026-10-11): measure how the video MOVES, without rendering anything ──────────
 # The content layers (z < 100: content + screen-fixed UI; no camera, background, HUD or full-screen overlays) are composited off-screen every M_STEP s; consecutive
 # alpha masks are diffed on a coarse grid. A grid cell "moves" when enough of its ink changed; neighbouring moving
 # cells form one "mover". The camera is measured separately from v.camera.state(t).
@@ -307,4 +307,38 @@ def motion_check(slug):
     tot = sum(p[1] == 0 and not p[3] for p in prof) / max(1, len(prof))
     print(f"  overall still {tot * 100:.0f}% (aim ≥ {REST_MIN * 100:.0f}% per chapter) · "
           + ("ok — no motion flags" if not flags else f"{flags} motion flag(s)"))
+    return 0
+
+
+# ── easing check (STYLE §3 "springs", 2026-10-13, refs.pdf §08): read scenes.py, flag motion that starts with a jolt ──
+_EASE_RULES = (
+    (r"\bout_expo\(", "out_expo jumps to full speed on frame 1 → glide(p) or ios_at(t, t0, 'smooth') "
+                      "(keep out_expo only for impacts: ripple rings, slam-down scale)"),
+    (r"\bout_back\(", "out_back jumps to full speed on frame 1 → pop(p, s) (same overshoot) or ios_at(t, t0, 'snappy')"),
+    (r"\bkeys\(", "keys() stops dead at every keyframe → track(t, frames, preset) for anything with 2+ targets "
+                  "(keys() only for a camera pan/dolly between two holds)"),
+)
+
+
+def ease_check(slug):
+    """Static scan of videos/<slug>/scenes.py for easings the springs rule replaces. Advisory, like the motion table."""
+    import re
+    project, _ = _video(slug)
+    src = (project.dir / "scenes.py").read_text().split("\n")
+    hits, in_doc = [], False
+    for i, ln in enumerate(src, 1):
+        q = ln.count('"""') + ln.count("'''")
+        if in_doc or q:                               # docstrings may name the old easings
+            in_doc = in_doc != (q % 2 == 1)
+            continue
+        code = ln.split("#", 1)[0]
+        if code.lstrip().startswith(("from ", "import ")):
+            continue
+        for pat, why in _EASE_RULES:
+            if re.search(pat, code):
+                hits.append((i, why))
+    print(f"{slug}: easing check · scenes.py · nothing written")
+    for i, why in hits:
+        print(f"  ~ scenes.py:{i}  {why}")
+    print("  ok — springs only" if not hits else f"  {len(hits)} easing note(s) — fix unless it is an impact")
     return 0

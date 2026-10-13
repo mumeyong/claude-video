@@ -6,7 +6,7 @@ word in the suggestion bar jumps into the sentence (its probability bar full, th
 Pure functions of their progress values (frame = f(t)); colors from tokens.
 """
 from .. import tokens as tk
-from ..ease import clamp, lerp, mix, out_back, out_cubic
+from ..ease import clamp, lerp, mix, out_cubic, pop
 
 PURPLE = tk.CHAPTER[3][0]           # signature: picked slot, probability bars, token pills
 F, C = tk.F, tk.C
@@ -54,7 +54,7 @@ def keyboard_hp(c, x, y, w, press=None, press_p=0.0, keys=1.0, dark=False, alpha
                 c.fill_rrect(kx, ky, kw, kh, 10, th["key"], a)
                 c.text(kx + kw / 2, ky + kh * 0.66, ch, F["ui_reg"], size, th["ink"], a, align="c")
                 if press == ch and press_p > 0:
-                    p = out_back(clamp(press_p), 1.6)
+                    p = pop(clamp(press_p), 1.6)
                     pw, ph = kw * 1.5, kh * 1.7
                     with c.at(0, 0, max(0.01, p), origin=(kx + kw / 2, ky)):
                         c.shadow(kx + kw / 2 - pw / 2, ky - ph, pw, ph, 14, 18, 6, 0.08 * a)

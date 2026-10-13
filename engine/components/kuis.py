@@ -9,7 +9,7 @@ Pure functions of their progress values (frame = f(t)); colors from tokens.
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, mix, out_back
+from ..ease import clamp, mix, pop
 
 TEAL = tk.CHAPTER[4][0]             # signature: ring, card band, the back of the card
 F, C = tk.F, tk.C
@@ -43,7 +43,7 @@ def countdown_ring(c, cx, cy, r, p, color=None, n=3, width=None, alpha=1.0, grou
                      PAPER, alpha)
         d = min(n, int(n * (1 - p)) + 1)
         local = (n * p) % 1.0
-        s = out_back(clamp(local / 0.35), 2.2) * 0.25 + 0.75 if p > 0 else 1.0
+        s = pop(clamp(local / 0.35), 2.2) * 0.25 + 0.75 if p > 0 else 1.0
         size = r * 0.95
         with c.at(0, 0, s, origin=(cx, cy)):
             c.text(cx, cy + size * 0.36, str(d), F["mono_bold"], size, INK, alpha, align="c")

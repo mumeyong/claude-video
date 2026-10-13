@@ -19,3 +19,6 @@ graphify-out/
 
 # Cartesia TTS key + voice (never commit)
 .cartesia
+
+# third-party reference guide (Movez, "How to build motion design studio") — not ours to publish
+refs.pdf

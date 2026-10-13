@@ -7,7 +7,7 @@ listen light up, work, and go dark again. Pure functions of their progress value
 import math
 
 from .. import tokens as tk
-from ..ease import clamp, mix, out_expo, out_cubic, in_out_cubic
+from ..ease import clamp, mix, out_cubic, in_out_cubic, glide
 from .infra import _h
 
 TEAL = tk.CHAPTER[4][0]
@@ -190,7 +190,7 @@ def rumah_gede(c, x, base_y, w, h, rooms, t, trip=0.0, closed=0.0, p_labels=1.0,
             la = clamp(p_labels * n - k)
             if la > 0 and rm.get("label"):
                 c.text(rx + rw / 2, base_y - h * 0.18, rm["label"], tk.F["mono_med"], max(17, min(22, rw * 0.13)),
-                       c.theme("ink2", "d_ink"), out_expo(la), 0.02, align="c")
+                       c.theme("ink2", "d_ink"), glide(la), 0.02, align="c")
         if mcb:
             bx, by = x + 22, yt + h * 0.2
             c.fill_rrect(bx, by, 44, 76, 8, c.theme("faint", "d_line"))
@@ -199,7 +199,7 @@ def rumah_gede(c, x, base_y, w, h, rooms, t, trip=0.0, closed=0.0, p_labels=1.0,
             c.fill_rrect(bx + 12, ly, 20, 26, 5, lever)
             c.text(bx + 22, by + 106, "MCB", tk.F["mono_bold"], 17, c.theme("muted", "d_muted"), 1, 0.1, align="c")
         if closed > 0.01:
-            p = out_expo(closed)
+            p = glide(closed)
             bw, bh = w * 0.82, 92
             cxb, cyb = x + w / 2, yt + h * 0.45
             with c.at(0, -40 * (1 - p), 1, origin=(cxb, cyb), rot=-0.05):

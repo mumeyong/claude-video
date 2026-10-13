@@ -1,6 +1,6 @@
 """Dark-section components: recap diagram (steps → rules) and the outro CTA."""
 from .. import tokens as tk
-from ..ease import out_expo, out_back, prog, in_out_cubic, pulse
+from ..ease import prog, in_out_cubic, pulse, pop
 from . import icons
 from .motion import bezier_partial
 
@@ -21,7 +21,7 @@ def rule_box(c, x, y, w, idx, label, color, fill=0.0, h=62):
         c.stroke_rrect(x, y, w, h, 14, tk.C["d_line"], 1.5, 1 - fill, dash=[6, 6])
         c.stroke_rrect(x + 18, y + 20, 22, 22, 5, color, 2, 0.6 * (1 - fill))
     if fill > 0:
-        s = 0.9 + 0.1 * out_back(fill)
+        s = 0.9 + 0.1 * pop(fill)
         with c.at(0, 0, s, origin=(x + w / 2, y + h / 2)):
             c.fill_rrect(x, y, w, h, 14, (0.12, 0.17, 0.32, 1), fill)
             c.stroke_rrect(x + 0.5, y + 0.5, w - 1, h - 1, 14, tk.C["d_accent"], 1.5, 0.5 * fill)

@@ -1,6 +1,6 @@
 # Restart router beneran ngefek?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/wifi-ep04-restart-router/`](../videos/wifi-ep04-restart-router/)
 - **Pilar:** B · broad · **Format:** QUICK
 - **Slug:** wifi-ep04-restart-router
 - **Seri:** #14 Bongkar WiFi Rumah — EP 04

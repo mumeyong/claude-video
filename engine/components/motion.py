@@ -2,7 +2,7 @@
 import math
 
 from .. import tokens as tk
-from ..ease import inout, out_expo, in_cubic, prog
+from ..ease import inout, in_cubic, prog, glide, pop
 
 
 WHIP = 260  # px travelled by left/right whips
@@ -22,7 +22,7 @@ def appear(c, t, t_in, t_out, bbox, draw, rise=None, scale=None, blur=None,
     scale = M["card_scale"] if scale is None else scale
     blur = M["card_blur"] if blur is None else blur
     d_in = d_in or M["card_in"]
-    a, b = inout(t, t_in, t_out, d_in, d_out or M["out"], out_expo, in_cubic)
+    a, b = inout(t, t_in, t_out, d_in, d_out or M["out"], glide, in_cubic)
     vis = a * (1 - b)
     if vis <= 0.002:
         return 0.0
@@ -38,8 +38,7 @@ def appear(c, t, t_in, t_out, bbox, draw, rise=None, scale=None, blur=None,
     elif enter == "left":
         dx -= WHIP * (1 - a)
     elif enter == "pop":
-        from ..ease import out_back
-        sc = 0.6 + 0.4 * out_back(prog(t, t_in, d_in), 1.8)
+        sc = 0.6 + 0.4 * pop(prog(t, t_in, d_in), 1.8)
         bl *= 0.5
     if exit == "up":
         dy -= 18 * b
@@ -60,7 +59,7 @@ def appear(c, t, t_in, t_out, bbox, draw, rise=None, scale=None, blur=None,
 
 def fade(c, t, t_in, t_out, draw, d_in=0.4, d_out=0.3):
     """Plain opacity in/out (for small things: labels, tags)."""
-    a, b = inout(t, t_in, t_out, d_in, d_out, out_expo, in_cubic)
+    a, b = inout(t, t_in, t_out, d_in, d_out, glide, in_cubic)
     vis = a * (1 - b)
     if vis <= 0.002:
         return 0.0
@@ -98,7 +97,7 @@ def stagger(i, step=None):
 
 def count(t, t0, dur, v0, v1):
     """Eased count-up value."""
-    return v0 + (v1 - v0) * out_expo(prog(t, t0, dur))
+    return v0 + (v1 - v0) * glide(prog(t, t0, dur))
 
 
 def fmt_id(v, decimals=0):

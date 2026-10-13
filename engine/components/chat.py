@@ -12,7 +12,7 @@ Usage (in build):
 from gi.repository import Pango
 
 from .. import tokens as tk
-from ..ease import out_expo, in_cubic, prog, pulse, in_out_cubic
+from ..ease import out_expo, in_cubic, prog, pulse, in_out_cubic, glide
 from . import icons
 from .motion import typed, type_cues
 from .pill import chip, chip_width
@@ -71,7 +71,7 @@ class ChatTrack:
             return 0.0
         prev = [x for x in self.ev if x[1] in ("show", "hide") and x[0] < e[0]]
         if e[1] == "show":
-            return out_expo(prog(t, e[0], 0.6))
+            return glide(prog(t, e[0], 0.6))
         was = 1.0 if prev and prev[-1][1] == "show" else 0.0
         return was * (1 - in_cubic(prog(t, e[0], 0.4)))
 
@@ -123,7 +123,7 @@ class ChatTrack:
                 if ce and ce[2]:
                     cx = x + 6
                     for i, (label, col) in enumerate(ce[2]):
-                        p = out_expo(prog(t, ce[0] + i * 0.08, 0.45))
+                        p = glide(prog(t, ce[0] + i * 0.08, 0.45))
                         cw = chip_width(c, label)
                         if p > 0.002:
                             with c.at(0, 14 * (1 - p), 0.9 + 0.1 * p, origin=(cx + cw / 2, y - 42)):

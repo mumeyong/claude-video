@@ -1,0 +1,5 @@
+# Spring lab — cek gerakan lama vs baru (STYLE §6h)
+L02 L03   # masuk: out_expo nyentak vs glide
+L05       # pop: out_back vs pop (overshoot sama)
+L07       # pindah: keys() stop-and-go vs track()
+L09       # indikator melar
