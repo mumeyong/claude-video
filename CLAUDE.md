@@ -29,9 +29,10 @@ Workflow: skill `mumeyong-video` (`SKILL.md`). **Fixed: the voice + opening logo
 12. **Free craft:** look, colors, fonts, metaphor, structure, layout, motion are Claude's call. Don't repeat the last video (`recent <slug>`,
     info only); the critique loop judges quality — add a rule only when the same mistake happens twice.
 13. **Tech terms stay English** (`GLOSSARY.md`).
-14. **HyperFrames skills are a library, not the workflow.** `mumeyong-video` owns every video here — never route
-    through `hyperframes` / `faceless-explainer` / `general-video` etc., never `hyperframes init/render/preview/snapshot/tts`.
-    Use `hyperframes-animation`, `-keyframes`, `-creative`, `-registry` for motion craft inside film.html (WEB.md § HyperFrames).
+14. **HyperFrames skills are a library, not the workflow.** `mumeyong-video` owns every video here; never
+    `hyperframes init/render/preview/snapshot/tts`. Only the library skills are installed (`hyperframes-animation`,
+    `-keyframes`, `-creative`, `-registry`, `-core`) — motion craft inside film.html (WEB.md § HyperFrames). Don't reinstall
+    the workflow skills; the plugin is disabled in `.claude/settings.json`.
 
 ## Layout
 ```
@@ -63,13 +64,3 @@ claude-video ideas | help
 - Numbers on screen: Indonesian format via `fmt_id()`.
 - HTML film frames are cached in `out/.web/` keyed by a hash of the page + data + assets (can be GBs at 60 fps).
 - Wrapped text under a scaled canvas: Pango line spacing collapses — wrap in design units (see `obrolan._wrap`).
-
-## graphify
-
-This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
-
-Rules:
-- For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
-- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
-- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
-- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).

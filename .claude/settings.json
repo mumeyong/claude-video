@@ -1,24 +1,6 @@
 {
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Bash|Grep",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/home/mumei/.local/bin/graphify hook-guard search"
-          }
-        ]
-      },
-      {
-        "matcher": "Read|Glob",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/home/mumei/.local/bin/graphify hook-guard read"
-          }
-        ]
-      }
-    ]
-  }
+  "enabledPlugins": {
+    "hyperframes@hyperframes": false
+  },
+  "disableAllHooks": true
 }

@@ -34,6 +34,8 @@ films: `hyperframes-animation` (motion rules, scene blueprints, transitions, 24 
   Ported code that sets `window.__timelines['main'] = tl` works with a bare `timeline()`.
 - Their contract carries over (single paused timeline, `fromTo` not CSS transforms, no clocks/random). Ours wins on
   the clock: every tween position and clip time from `T` / `FILM`, never a typed `data-start="3.2"`.
+- Token-lean: never read `rules-index.md` / `blueprints-index.md` whole (~6k tokens each) — `grep -n` them for the
+  effect you need, then open just that one rule/blueprint file.
 - Not used here: their project scaffold (`init`, `index.html`, sub-compositions), `render` / `preview` / `snapshot`
   (rule 1 — our harness renders), and `media-use` voice/TTS/BGM (IDENTITY.md: voice and sound are the engine's).
 
