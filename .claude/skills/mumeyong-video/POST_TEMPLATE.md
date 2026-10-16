@@ -11,7 +11,7 @@
   · Baris pertama tiap caption = yang kelihatan tanpa "lainnya" (TikTok ± 150, Instagram ± 125 karakter).
   · Deskripsi = 2–3 kalimat bahasa ngomong + kata kunci search, bukan daftar keyword.
   · Hashtag 3–5 (Instagram maks 5): 1 topik besar + 1–2 spesifik + 1 komunitas. Tech terms tetap English.
-  · Tanpa klise (IDENTITY.md): "Di era digital", "Tahukah kamu", "Yuk simak", "wajib tahu", emoji berderet. -->
+  · Tanpa klise (STYLE §4): "Di era digital", "Tahukah kamu", "Yuk simak", "wajib tahu", emoji berderet. -->
 
 ## Judul (dipakai di semua platform)
 <≤ 60 karakter>

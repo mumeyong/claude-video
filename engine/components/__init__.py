@@ -54,6 +54,8 @@ from .bukutamu import buku_tamu, buku_geo, RED as BUKU_RED
 from .pdam import rusun_air, rusun_geo, aliran, pressure, TEAL as PDAM_TEAL
 from .papan import papan_tulis, papan_geo, penghapus, memori, ORANGE as PAPAN_ORANGE
 from .obrolan import chat_phone, chat_geo
+from .kantorpos import amplop, belt, loket, hp_otp, hp_box, log_card, notif, GREEN as POS_GREEN
+from .minimarket import rak, rak_geo, filler, produk, empty_spot, label_stok, tangan
 from .reel import (smear, smear_p, out_p, smear_words, viewfinder, dot_gather, orbit, iris, pixel_wipe, highlight,
                    highlight_phrase, type_clip, reel_chip, float_chips, pill as reel_pill, count_pill, formula,
                    pop_card, tilt_plane, stat_panel, verb_slam, end_card, reel_sfx, ink_on, WORLDS as REEL_WORLDS)

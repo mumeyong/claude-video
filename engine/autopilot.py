@@ -3,7 +3,7 @@ cover + POST.md → check --dry clean → critique loop), so `claude-video "Judu
 
 The user runs this (it spawns `claude -p`). The headless Claude only writes text files and may run the
 text-only engine commands (check / naskah / estimate / api / register) plus `critique` (PNG review sheets it
-reads back — STYLE §5); it can never render video or audio — those Bash commands are simply not allowed. Progress is streamed as one line per tool call.
+reads back — STYLE §6); it can never render video or audio — those Bash commands are simply not allowed. Progress is streamed as one line per tool call.
 """
 import json
 import shutil
@@ -15,9 +15,11 @@ from .project import ROOT
 PROMPT = ROOT / ".claude" / "skills" / "mumeyong-video" / "AUTOPILOT.md"
 PY = ".venv/bin/python -m engine"
 ALLOWED = ["Read", "Write", "Edit", "Glob", "Grep", "Skill", "TodoWrite",
-           *(f"Bash({PY} {c}:*)" for c in ("check", "naskah", "estimate", "api", "register", "ideas", "ls", "critique")),
-           *(f"Bash(python -m engine {c}:*)" for c in ("check", "naskah", "estimate", "api", "register", "critique")),
-           "Bash(ls:*)"]
+           *(f"Bash({PY} {c}:*)" for c in ("check", "naskah", "estimate", "api", "register", "ideas", "ls", "critique",
+                                            "recent", "ref", "capture", "beats")),
+           *(f"Bash(python -m engine {c}:*)" for c in ("check", "naskah", "estimate", "api", "register", "critique",
+                                                       "recent", "ref", "capture", "beats")),
+           "Bash(ls:*)", "WebFetch"]   # WebFetch: read the --url page for real facts
 
 
 def _short(tool, inp):
@@ -32,11 +34,19 @@ def _short(tool, inp):
     return ""
 
 
-def autopilot(slug, title, note=""):
+MODE = {
+    "web": "**HTML film** (default): gambarnya `videos/{{SLUG}}/film.html` — look grak/cheese, baca `WEB.md`. "
+           "`scenes.py` cuma bungkus identitas (logo pembuka + film + logo penutup) dari `templates/scenes_web.py`.",
+    "py": "**Python**: semua digambar di `scenes.py` (`api core` + `api index`, contoh `templates/scenes.py`).",
+}
+
+
+def autopilot(slug, title, note="", mode="web"):
     """Write videos/<slug>/ with Claude headless. Returns 0 when scenes.py exists afterwards."""
     if not shutil.which("claude"):
         sys.exit("`claude` (Claude Code CLI) nggak ketemu di PATH")
-    prompt = PROMPT.read_text(encoding="utf-8").replace("{{SLUG}}", slug).replace("{{TITLE}}", title)
+    prompt = PROMPT.read_text(encoding="utf-8").replace("{{MODE}}", MODE[mode])
+    prompt = prompt.replace("{{SLUG}}", slug).replace("{{TITLE}}", title)
     if note:
         prompt += f"\n\n## Catatan tambahan dari user\n{note}\n"
     cmd = ["claude", "-p", prompt, "--output-format", "stream-json", "--verbose",

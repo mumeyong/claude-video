@@ -1,0 +1,26 @@
+/* The repo's fonts (assets/fonts) for HTML films: <link rel="stylesheet" href="/web/lib/fonts.css">.
+   Same faces the Python engine uses, so a film and the logos around it can share type. */
+@font-face{font-family:'Inter';src:url('/assets/fonts/Inter-Regular.ttf');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'Inter';src:url('/assets/fonts/Inter-Medium.ttf');font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:'Inter';src:url('/assets/fonts/Inter-SemiBold.ttf');font-weight:600;font-style:normal;font-display:block}
+@font-face{font-family:'Inter';src:url('/assets/fonts/Inter-Bold.ttf');font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:'Inter';src:url('/assets/fonts/Inter-ExtraBold.ttf');font-weight:800;font-style:normal;font-display:block}
+@font-face{font-family:'Inter Display';src:url('/assets/fonts/InterDisplay-Regular.ttf');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'Inter Display';src:url('/assets/fonts/InterDisplay-Medium.ttf');font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:'Inter Display';src:url('/assets/fonts/InterDisplay-SemiBold.ttf');font-weight:600;font-style:normal;font-display:block}
+@font-face{font-family:'Inter Display';src:url('/assets/fonts/InterDisplay-Bold.ttf');font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:'Inter Display';src:url('/assets/fonts/InterDisplay-ExtraBold.ttf');font-weight:800;font-style:normal;font-display:block}
+@font-face{font-family:'JetBrains Mono';src:url('/assets/fonts/JetBrainsMono-Regular.ttf');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'JetBrains Mono';src:url('/assets/fonts/JetBrainsMono-Medium.ttf');font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:'JetBrains Mono';src:url('/assets/fonts/JetBrainsMono-Bold.ttf');font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:'Archivo Black';src:url('/assets/fonts/archivo-black-400-normal.ttf');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'Bricolage Grotesque';src:url('/assets/fonts/bricolage-grotesque-800-normal.ttf');font-weight:800;font-style:normal;font-display:block}
+@font-face{font-family:'Caveat';src:url('/assets/fonts/caveat-600-normal.ttf');font-weight:600;font-style:normal;font-display:block}
+@font-face{font-family:'DM Serif Display';src:url('/assets/fonts/dm-serif-display-400-normal.ttf');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'Fraunces';src:url('/assets/fonts/fraunces-700-normal.ttf');font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:'Fraunces';src:url('/assets/fonts/fraunces-400-italic.ttf');font-weight:400;font-style:italic;font-display:block}
+@font-face{font-family:'IBM Plex Mono';src:url('/assets/fonts/ibm-plex-mono-500-normal.ttf');font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:'Instrument Serif';src:url('/assets/fonts/InstrumentSerif-Italic.ttf');font-weight:400;font-style:italic;font-display:block}
+@font-face{font-family:'Space Grotesk';src:url('/assets/fonts/space-grotesk-700-normal.ttf');font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:'Syne';src:url('/assets/fonts/syne-800-normal.ttf');font-weight:800;font-style:normal;font-display:block}
+@font-face{font-family:'Unbounded';src:url('/assets/fonts/unbounded-700-normal.ttf');font-weight:700;font-style:normal;font-display:block}

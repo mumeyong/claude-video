@@ -1,4 +1,4 @@
-"""Headline + kicker — the signature element.
+"""Headline + kicker — one way to set type (any font from tk.F / FONTS, any position, any size).
 
 Headline syntax:
     "Kasih *aturan* main."        *word*  → accent blue
@@ -38,8 +38,10 @@ def _parse(text):
 
 
 class Headline:
-    def __init__(self, text, x=None, y=None, style="headline", width=None, ink="ink", accent="accent", align="l"):
-        """align='c' centers each line on x (default x = canvas center)."""
+    def __init__(self, text, x=None, y=None, style="headline", width=None, ink="ink", accent="accent", align="l",
+                 font=None, size=None, serif=None):
+        """align='c' centers each line on x (default x = canvas center). font/size/serif override the house
+        Inter Display / style size / Instrument Serif (e.g. font=tk.F["poster"], size=220)."""
         self.text = text
         self.align = align
         if align == "c" and x is None:
@@ -47,14 +49,16 @@ class Headline:
         self.x = tk.L["col_x"] if x is None else x
         self.y = tk.L["headline_y"] if y is None else y
         self.size, self.ls, self.lh = tk.T[style]
+        self.size = size or self.size
+        self.font, self.serif = font or tk.F["display"], serif or tk.F["serif"]
         self.width = width or tk.L["col_w"] + 60
         self.ink, self.accent = ink, accent
         self._words = None  # [(word, kind, strike, x, baseline, w)]
 
     def _font(self, kind):
         if kind == "serif":
-            return tk.F["serif"], self.size * tk.SERIF_SCALE, 0.0
-        return tk.F["display"], self.size, self.ls
+            return self.serif, self.size * tk.SERIF_SCALE, 0.0
+        return self.font, self.size, self.ls
 
     def words(self, c):
         if self._words is not None:
@@ -62,7 +66,7 @@ class Headline:
         out = []
         base = self.y + self.size * 0.75
         lh = self.size * self.lh
-        space = c.measure("a a", tk.F["display"], self.size, self.ls)[0] - c.measure("aa", tk.F["display"], self.size, self.ls)[0]
+        space = c.measure("a a", self.font, self.size, self.ls)[0] - c.measure("aa", self.font, self.size, self.ls)[0]
         line_i = 0
         x0 = self.x - self.width / 2 if self.align == "c" else self.x
         for line in _parse(self.text):

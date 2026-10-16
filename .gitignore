@@ -22,3 +22,6 @@ graphify-out/
 
 # third-party reference guide (Movez, "How to build motion design studio") — not ours to publish
 refs.pdf
+
+# HTML film harness deps (cd web && npm install)
+web/node_modules/

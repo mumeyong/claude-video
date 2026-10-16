@@ -1,6 +1,6 @@
 # Barang flash sale "habis" padahal udah di keranjang. Kok bisa?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/flash-sale-keranjang/`](../videos/flash-sale-keranjang/)
 - **Pilar:** B · broad · **Format:** QUICK
 - **Slug:** flash-sale-keranjang
 - **Seri:** —

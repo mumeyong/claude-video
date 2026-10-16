@@ -6,7 +6,7 @@ The look of a video is how its objects are SHADED, not only what they are. Every
             (light catching the material), a sheen, a cast shadow that grows with the object; grain on the frame.
   "paper" — cut paper: flat color, fibre texture, a short stacked shadow (layers lying on each other), a paper ground,
             parts placed a touch off-square by hand.
-Volume comes from light only — no extrusion (IDENTITY.md). Every function is pure (frame = f(t)); textures are seeded
+Volume comes from light only — no extrusion (STYLE §4). Every function is pure (frame = f(t)); textures are seeded
 and cached, never re-rolled per frame.
 
     body(c, look, rrect_path(x, y, w, h, r), (x, y, w, h), color)          # any shape: pass a path builder
@@ -276,7 +276,7 @@ def caustic(c, look, cx, y, w, color, alpha=1.0):
 
 def spill(c, look, cx, cy, r, color, amount=1.0):
     """Light of a glowing part falling on what's around it (lit: soft; paper: a flat pale disc; flat: nothing).
-    Subtle by design — this is light, not a neon glow (IDENTITY.md)."""
+    Subtle by design — this is light, not a neon glow (STYLE §4)."""
     if look == "flat" or amount <= 0.002:
         return
     ctx = c.ctx

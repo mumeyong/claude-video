@@ -1,0 +1,56 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>film</title>
+<link rel="stylesheet" href="/web/lib/fonts.css">
+<style>
+  /* EXAMPLE look — replace with this video's own. No CSS transition/animation: GSAP owns all motion. */
+  :root { --bg: #0E0E10; --ink: #F4F1EA; --acc: #FF4A1C; --mute: #7E7C86; }
+  .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); color: var(--ink);
+           font-family: "Inter Display", sans-serif; }
+  .hero { position: absolute; left: 0; top: 0; width: 1px; height: 1px; background: var(--acc); }
+  .line { position: absolute; left: 81px; width: 848px; top: 760px; }
+  .line h1 { margin: 0; font-weight: 800; font-size: 120px; line-height: 1.02; letter-spacing: -0.03em; }
+  .line .w { display: inline-block; }
+  .line .w.stress { color: var(--acc); }
+</style>
+<div class="stage"><div class="hero" id="hero"></div></div>
+<script type="module">
+// EXAMPLE HyperFrames-style film (WEB.md § HyperFrames) — one paused GSAP timeline, clips shown by time, every time
+// from the voice. Shows the grammar, not a look to copy. Motion craft: skills hyperframes-animation / -keyframes.
+import { FILM, ready, T, cue, SAFE } from '/web/lib/film.js';
+import { gsap, clip, timeline } from '/web/lib/hf.js';
+await ready;
+await document.fonts.load('800 120px "Inter Display"');
+
+const stage = document.querySelector('.stage');
+const tl = gsap.timeline({ paused: true });
+const lines = FILM.lines.filter((l) => l.start < FILM.end);
+
+// ── the hero: one accent shape that changes form on every line and never cuts ─────────────────────
+const SPOTS = [
+  { x: SAFE.x0, y: 400, width: 260, height: 260, borderRadius: 130 },
+  { x: SAFE.x1 - 420, y: 330, width: 420, height: 300, borderRadius: 36 },
+  { x: SAFE.x0, y: 470, width: SAFE.x1 - SAFE.x0, height: 120, borderRadius: 60 },
+];
+tl.set('#hero', { x: -400, y: 900, width: 1880, height: 1880, borderRadius: 940 }, 0);   // full-bleed under the sting
+lines.forEach((ln, i) => tl.to('#hero', { ...SPOTS[i % SPOTS.length], duration: 0.6, ease: 'expo.inOut' }, ln.start - 0.25));
+
+// ── each spoken line: a clip of big type, words land on their own spoken time ──────────────────────
+lines.forEach((ln, i) => {
+  const el = document.createElement('div');
+  el.className = 'line';
+  el.innerHTML = '<h1>' + ln.words.map((w) =>
+    `<span class="w${w.stress ? ' stress' : ''}">${w.w.replace(/[.,!?;:"“”]+$/g, '')}</span>`).join(' ') + '</h1>';
+  stage.appendChild(el);
+  const next = lines[i + 1]?.start ?? FILM.end;
+  clip(el, ln.start - 0.15, next);
+  el.querySelectorAll('.w').forEach((span, j) => {
+    tl.fromTo(span, { yPercent: 60, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.45, ease: 'expo.out' },
+      ln.words[j].start - 0.08);
+    if (ln.words[j].stress) cue('pop', ln.words[j].start, 0.4);
+  });
+  tl.to(el, { opacity: 0, y: -40, duration: 0.3, ease: 'power2.in' }, next - 0.3);
+});
+
+timeline(tl);
+</script>

@@ -176,7 +176,7 @@ def draw_chain(t0, durs, chain=None):
 
 def mark(c, t, t0, kind, bbox, color, width=5.0, dur=None, t_out=None, seed=0, alpha=1.0):
     """Hand-drawn annotation that draws itself (Remotion annotations): kind = underline · circle · box · strike ·
-    bracket. Deliberate imperfection (IDENTITY.md): a seeded wobble, the circle overshoots its start a little."""
+    bracket. Deliberate imperfection (STYLE §4): a seeded wobble, the circle overshoots its start a little."""
     x, y, w, h = bbox
     rnd = lambda k: math.sin(seed * 12.9898 + k * 78.233) * 0.5      # deterministic −0.5..0.5
     if kind == "underline":

@@ -1,8 +1,8 @@
 # START — bikin video MUMEYONG
 
 **Claude** nulis naskah, rencana, dan kode animasinya. **Kamu** yang render, rekam suara (opsional), dan upload.
-Aturan lengkap: `CLAUDE.md` · identitas (tetap): `.claude/skills/mumeyong-video/IDENTITY.md` · gaya (bebas, panduan): `STYLE.md`.
-Claude bebas milih metafora, struktur, layout, gerakan — yang dikunci cuma identitas Mumeyong.
+Aturan lengkap: `CLAUDE.md` · yang dikunci: `.claude/skills/mumeyong-video/IDENTITY.md` · ide gaya (opsional): `STYLE.md`.
+Yang tetap cuma **suaramu, logo pembuka, logo penutup** — look, warna, font, animasi, struktur bebas dipilih Claude.
 
 ## Alurnya: satu command
 
@@ -26,6 +26,7 @@ Mau simpan ke git? Bilang "commit" — Claude nggak pernah commit sendiri.
 |---|---|
 | `claude-video 24` | **Dari ide di backlog** (`ideas/24-*.md`). Brief + hook-nya dipakai, status ide → 🎬. **Paling aman.** |
 | `claude-video "Judul baru"` | **Video baru** tanpa ide. Claude bikin idenya sendiri dari judul itu. |
+| `claude-video "promo X" --url https://x.com --dur 20` | Sama, plus Claude baca halaman itu buat fakta asli (`--url`) dan naskahnya pas ± 20 detik (`--dur`). |
 | `claude-video <slug>` atau nomornya | **Video yang sudah ada** → render final lagi (setelah revisi). |
 
 ⚠ Judul cuma dianggap ide yang sudah ada kalau **persis sama**. Beda dikit → jadi video baru (dobel). Pakai nomor.
@@ -65,8 +66,10 @@ mp4/png/wav nggak masuk git — backup sendiri.
 
 ✅ "L14: angkanya kegedean" · ✅ "00:42 zoom-nya kecepetan" · ❌ "kurang bagus"
 
-**Gerakan = gaya Apple keynote** (STYLE §3): satu yang gerak duluan, mendarat pas kata yang
-ditekan, terus diam sebentar. Claude ngecek ini sendiri lewat tabel *motion* di `check --dry` (tanpa render).
+**Gerakan = mengalir, nggak pernah beku** (STYLE §3, dari refs.pdf): satu yang gerak duluan, mendarat pas kata yang
+ditekan, lalu langsung nyambung ke gerakan berikutnya — satu bentuk yang berubah wujud, bukan hilang-muncul.
+Render final otomatis pakai **motion blur** (4 subframe per frame), jadi gerakan cepat kelihatan halus, bukan
+patah-patah (render final jadi sedikit lebih lama). Claude ngecek frame beku (DEAD) di `check --dry` (tanpa render).
 Mau lihat contohnya: `claude-video apple-lab` (proof sheet ± 45 s, nggak buat diposting).
 
 **Sejak 2026-10-13 semua gerakan pakai spring** (STYLE §3, dari refs.pdf): mulai dari diam, nggak
@@ -74,6 +77,28 @@ Mau lihat contohnya: `claude-video apple-lab` (proof sheet ± 45 s, nggak buat d
 Claude juga **ngeliat frame-nya sendiri**: `python -m engine critique <slug>` bikin PNG review (hook 2 detik pertama,
 satu frame per baris, tiap awal bab 6 frame) — tanpa encode video/audio — terus dinilai di `videos/<slug>/CRITIQUE.md`
 sampai semua skor ≥ 8. Bandingin gerakan lama vs baru: `claude-video spring-lab`.
+
+## Animasi HTML (look grak / cheese) — default sejak 2026-10-15
+
+Video baru sekarang digambar sebagai **film HTML** (`videos/<slug>/film.html`, browser) — gaya grak/cheese yang kamu
+suka — tapi tetap **suaramu, logo pembuka, logo penutup** dari engine Python. Mau cara lama (gambar di Python)?
+Tambah `--py`: `claude-video "Judul" --py`.
+
+Animasinya bisa pakai **HyperFrames** (skill `hyperframes-*` dari heygen-com/hyperframes, GSAP): Claude ambil
+motion rules, blueprint scene, dan block registry-nya (chart, terminal, map, glitch…) untuk `film.html` — tetap
+suaramu, logomu, dan render-nya tetap `claude-video <slug>`. Mau minta? Tulis aja "pakai HyperFrames" di judul/brief.
+Update skill-nya: `npx skills update -p`.
+
+| Kapan | Command |
+|---|---|
+| Lihat filmnya live di browser | `claude-video serve` → buka `http://localhost:5173/videos/<slug>/film.html` |
+| Benerin cuma detik 12–15 (sisanya nggak dirender ulang) | `claude-video <slug> --fix 12,15` |
+| Gaya dari video/gambar referensi | `claude-video "Judul" --ref ~/Downloads/contoh.mp4` |
+| Pakai lagu sendiri, potongan pas ketukan | taruh `audio/music.mp3` → `claude-video beats <slug>` |
+| File khusus TikTok / Shorts / Reels | `claude-video export <slug>` → `hasil/<slug>/upload/` |
+
+Contoh bukti: `claude-video web-lab` (± 30 s, nggak buat diposting). Render pertama film HTML lebih lama (browser
+gambar tiap frame); frame disimpan di `out/.web/`, jadi render ulang tanpa perubahan cepat.
 
 ## Command lain
 
@@ -94,6 +119,7 @@ Error? Copy-paste output-nya + command-nya ke Claude. Autopilot gagal di tengah?
 git clone git@github.com:mumeyong/claude-video.git ~/aschente/claude-video
 cd ~/aschente/claude-video
 python3 -m venv --system-site-packages .venv && .venv/bin/pip install faster-whisper edge-tts
+(cd web && npm install)            # film HTML: Playwright (pakai Google Chrome yang sudah terpasang) + GSAP
 ln -s ~/aschente/claude-video/vid ~/.local/bin/claude-video   # ~/.local/bin harus ada di PATH
 ```
-Butuh: Python 3.13, ffmpeg, Pango + PyGObject (`gir1.2-pango-1.0`, `python3-gi`, `python3-cairo`). Font ikut di repo.
+Butuh: Python 3.13, Node ≥ 18 + Google Chrome (film HTML), ffmpeg, Pango + PyGObject (`gir1.2-pango-1.0`, `python3-gi`, `python3-cairo`). Font ikut di repo.

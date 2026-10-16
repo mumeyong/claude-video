@@ -36,6 +36,10 @@ hasil/<slug>/
 | — | [wifi-ep04-restart-router](wifi-ep04-restart-router/) | ± 75 s | — | 🎬 produksi |
 | — | [wifi-ep05-lemot-jam-8-malam](wifi-ep05-lemot-jam-8-malam/) | ± 74 s | — | 🎬 produksi |
 | — | [ai-lupa-obrolan-panjang](ai-lupa-obrolan-panjang/) | ± 71 s | — | 📦 final — mp4 + cover + POST.md |
+| — | [otp-telat](otp-telat/) | ± ~72 s | — | 🎬 produksi — POST.md siap |
+| — | [flash-sale-keranjang](flash-sale-keranjang/) | ± 84 s | — | 🎬 produksi |
+| — | [ojol-driver-terdekat](ojol-driver-terdekat/) | ± ~66 s suara (+ sting + logo penutup) s | — | 🎬 produksi |
+| — | [maps-tahu-macet](maps-tahu-macet/) | ± 66 s | — | 🎬 produksi |
 
 ## C · Karier
 

@@ -1,6 +1,6 @@
 # Gimana ojol nemuin driver terdekat dalam 3 detik?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/ojol-driver-terdekat/`](../videos/ojol-driver-terdekat/)
 - **Pilar:** B · broad · **Format:** QUICK
 - **Slug:** ojol-driver-terdekat
 - **Seri:** —

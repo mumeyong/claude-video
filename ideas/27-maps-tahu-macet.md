@@ -1,6 +1,6 @@
 # Google Maps tahu jalan macet dari mana?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/maps-tahu-macet/`](../videos/maps-tahu-macet/)
 - **Pilar:** B · broad · **Format:** QUICK
 - **Slug:** maps-tahu-macet
 - **Seri:** —

@@ -1,0 +1,1136 @@
+{
+ "source": "tts",
+ "voice": "cartesia:151e06b6-244e-4332-a55f-f151c677c110",
+ "tts": "cartesia:sonic-3.6:151e06b6-244e-4332-a55f-f151c677c110:1.0:off",
+ "duration": 73.879,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Kamu pencet Pesan, // beberapa detik kemudian, satu driver udah jalan ke kamu.",
+   "start": 0.4,
+   "end": 4.684,
+   "words": [
+    {
+     "w": "Kamu",
+     "start": 0.406,
+     "end": 0.646
+    },
+    {
+     "w": "pencet",
+     "start": 0.646,
+     "end": 0.966
+    },
+    {
+     "w": "Pesan,",
+     "start": 0.966,
+     "end": 1.606
+    },
+    {
+     "w": "//",
+     "start": 1.686,
+     "end": 1.886
+    },
+    {
+     "w": "beberapa",
+     "start": 1.886,
+     "end": 2.086
+    },
+    {
+     "w": "detik",
+     "start": 2.086,
+     "end": 2.326
+    },
+    {
+     "w": "kemudian,",
+     "start": 2.326,
+     "end": 2.966
+    },
+    {
+     "w": "satu",
+     "start": 3.116,
+     "end": 3.366
+    },
+    {
+     "w": "driver",
+     "start": 3.366,
+     "end": 3.686
+    },
+    {
+     "w": "udah",
+     "start": 3.766,
+     "end": 3.846
+    },
+    {
+     "w": "jalan",
+     "start": 3.846,
+     "end": 4.246
+    },
+    {
+     "w": "ke",
+     "start": 4.326,
+     "end": 4.326
+    },
+    {
+     "w": "kamu.",
+     "start": 4.326,
+     "end": 4.566
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Padahal sekota ada banyak banget driver online. // Gimana app-nya milih secepat itu?",
+   "start": 5.004,
+   "end": 9.197,
+   "words": [
+    {
+     "w": "Padahal",
+     "start": 5.014,
+     "end": 5.414
+    },
+    {
+     "w": "sekota",
+     "start": 5.414,
+     "end": 5.894
+    },
+    {
+     "w": "ada",
+     "start": 5.974,
+     "end": 6.054
+    },
+    {
+     "w": "banyak",
+     "start": 6.134,
+     "end": 6.294
+    },
+    {
+     "w": "banget",
+     "start": 6.294,
+     "end": 6.614
+    },
+    {
+     "w": "driver",
+     "start": 6.694,
+     "end": 6.934
+    },
+    {
+     "w": "online.",
+     "start": 6.934,
+     "end": 7.334
+    },
+    {
+     "w": "//",
+     "start": 7.499,
+     "end": 7.736
+    },
+    {
+     "w": "Gimana",
+     "start": 7.736,
+     "end": 7.974
+    },
+    {
+     "w": "app-nya",
+     "start": 7.974,
+     "end": 8.214
+    },
+    {
+     "w": "milih",
+     "start": 8.294,
+     "end": 8.454
+    },
+    {
+     "w": "secepat",
+     "start": 8.454,
+     "end": 8.854
+    },
+    {
+     "w": "itu?",
+     "start": 8.854,
+     "end": 9.174
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "00 · PETA DIPOTONG",
+   "text": "Kalau app-nya ngitung jarak ke semua driver, satu-satu, // itu lambat.",
+   "start": 10.197,
+   "end": 14.086,
+   "words": [
+    {
+     "w": "Kalau",
+     "start": 10.224,
+     "end": 10.464
+    },
+    {
+     "w": "app-nya",
+     "start": 10.544,
+     "end": 10.784
+    },
+    {
+     "w": "ngitung",
+     "start": 10.784,
+     "end": 11.184
+    },
+    {
+     "w": "jarak",
+     "start": 11.264,
+     "end": 11.504
+    },
+    {
+     "w": "ke",
+     "start": 11.584,
+     "end": 11.584
+    },
+    {
+     "w": "semua",
+     "start": 11.584,
+     "end": 11.904
+    },
+    {
+     "w": "driver,",
+     "start": 11.904,
+     "end": 12.464
+    },
+    {
+     "w": "satu-satu,",
+     "start": 12.6,
+     "end": 12.972
+    },
+    {
+     "w": "//",
+     "start": 12.972,
+     "end": 13.344
+    },
+    {
+     "w": "itu",
+     "start": 13.578,
+     "end": 13.664
+    },
+    {
+     "w": "lambat.",
+     "start": 13.664,
+     "end": 14.064
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · PETA DIPOTONG",
+   "text": "Jadi petanya dipotong jadi kotak-kotak kecil, // kayak tribun stadion yang dibagi sektor.",
+   "start": 14.406,
+   "end": 18.981,
+   "words": [
+    {
+     "w": "Jadi",
+     "start": 14.429,
+     "end": 14.669
+    },
+    {
+     "w": "petanya",
+     "start": 14.669,
+     "end": 14.989
+    },
+    {
+     "w": "dipotong",
+     "start": 14.989,
+     "end": 15.469
+    },
+    {
+     "w": "jadi",
+     "start": 15.549,
+     "end": 15.629
+    },
+    {
+     "w": "kotak-kotak",
+     "start": 15.629,
+     "end": 16.349
+    },
+    {
+     "w": "kecil,",
+     "start": 16.349,
+     "end": 16.749
+    },
+    {
+     "w": "//",
+     "start": 16.996,
+     "end": 17.072
+    },
+    {
+     "w": "kayak",
+     "start": 17.072,
+     "end": 17.149
+    },
+    {
+     "w": "tribun",
+     "start": 17.149,
+     "end": 17.469
+    },
+    {
+     "w": "stadion",
+     "start": 17.469,
+     "end": 17.949
+    },
+    {
+     "w": "yang",
+     "start": 18.029,
+     "end": 18.189
+    },
+    {
+     "w": "dibagi",
+     "start": 18.189,
+     "end": 18.429
+    },
+    {
+     "w": "sektor.",
+     "start": 18.429,
+     "end": 18.909
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · PETA DIPOTONG",
+   "text": "Tiap driver tinggal nyatet, // dia lagi di kotak mana.",
+   "start": 19.301,
+   "end": 22.139,
+   "words": [
+    {
+     "w": "Tiap",
+     "start": 19.323,
+     "end": 19.483
+    },
+    {
+     "w": "driver",
+     "start": 19.483,
+     "end": 19.963
+    },
+    {
+     "w": "tinggal",
+     "start": 19.963,
+     "end": 20.283
+    },
+    {
+     "w": "nyatet,",
+     "start": 20.283,
+     "end": 20.683
+    },
+    {
+     "w": "//",
+     "start": 20.945,
+     "end": 21.054
+    },
+    {
+     "w": "dia",
+     "start": 21.054,
+     "end": 21.163
+    },
+    {
+     "w": "lagi",
+     "start": 21.163,
+     "end": 21.403
+    },
+    {
+     "w": "di",
+     "start": 21.483,
+     "end": 21.483
+    },
+    {
+     "w": "kotak",
+     "start": 21.563,
+     "end": 21.803
+    },
+    {
+     "w": "mana.",
+     "start": 21.803,
+     "end": 22.043
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "00 · PETA DIPOTONG",
+   "text": "Caranya macem-macem: geohash, // atau H3, grid hexagon yang di-open-source Uber.",
+   "start": 22.459,
+   "end": 27.476,
+   "words": [
+    {
+     "w": "Caranya",
+     "start": 22.47,
+     "end": 22.79
+    },
+    {
+     "w": "macem-macem:",
+     "start": 22.79,
+     "end": 23.51
+    },
+    {
+     "w": "geohash,",
+     "start": 23.664,
+     "end": 24.39
+    },
+    {
+     "w": "//",
+     "start": 24.629,
+     "end": 24.67
+    },
+    {
+     "w": "atau",
+     "start": 24.67,
+     "end": 24.71
+    },
+    {
+     "w": "H3,",
+     "start": 24.71,
+     "end": 25.27
+    },
+    {
+     "w": "grid",
+     "start": 25.587,
+     "end": 25.83
+    },
+    {
+     "w": "hexagon",
+     "start": 25.83,
+     "end": 26.39
+    },
+    {
+     "w": "yang",
+     "start": 26.47,
+     "end": 26.55
+    },
+    {
+     "w": "di-open-source",
+     "start": 26.55,
+     "end": 27.19
+    },
+    {
+     "w": "Uber.",
+     "start": 27.27,
+     "end": 27.43
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "chapter": "01 · CARI DARI KOTAKMU",
+   "text": "Pas kamu pesan, app ngecek kotak tempat kamu berdiri dulu.",
+   "start": 28.476,
+   "end": 31.707,
+   "words": [
+    {
+     "w": "Pas",
+     "start": 28.492,
+     "end": 28.652
+    },
+    {
+     "w": "kamu",
+     "start": 28.732,
+     "end": 28.892
+    },
+    {
+     "w": "pesan,",
+     "start": 28.892,
+     "end": 29.532
+    },
+    {
+     "w": "app",
+     "start": 29.692,
+     "end": 29.852
+    },
+    {
+     "w": "ngecek",
+     "start": 29.852,
+     "end": 30.092
+    },
+    {
+     "w": "kotak",
+     "start": 30.172,
+     "end": 30.412
+    },
+    {
+     "w": "tempat",
+     "start": 30.412,
+     "end": 30.732
+    },
+    {
+     "w": "kamu",
+     "start": 30.812,
+     "end": 30.972
+    },
+    {
+     "w": "berdiri",
+     "start": 30.972,
+     "end": 31.292
+    },
+    {
+     "w": "dulu.",
+     "start": 31.292,
+     "end": 31.692
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "chapter": "01 · CARI DARI KOTAKMU",
+   "text": "Kosong? // Dia melebar satu cincin, // terus satu cincin lagi.",
+   "start": 32.027,
+   "end": 35.454,
+   "words": [
+    {
+     "w": "Kosong?",
+     "start": 32.027,
+     "end": 32.503
+    },
+    {
+     "w": "//",
+     "start": 32.716,
+     "end": 32.81
+    },
+    {
+     "w": "Dia",
+     "start": 32.81,
+     "end": 32.903
+    },
+    {
+     "w": "melebar",
+     "start": 32.903,
+     "end": 33.303
+    },
+    {
+     "w": "satu",
+     "start": 33.303,
+     "end": 33.623
+    },
+    {
+     "w": "cincin,",
+     "start": 33.623,
+     "end": 34.103
+    },
+    {
+     "w": "//",
+     "start": 34.259,
+     "end": 34.381
+    },
+    {
+     "w": "terus",
+     "start": 34.381,
+     "end": 34.503
+    },
+    {
+     "w": "satu",
+     "start": 34.583,
+     "end": 34.743
+    },
+    {
+     "w": "cincin",
+     "start": 34.823,
+     "end": 35.063
+    },
+    {
+     "w": "lagi.",
+     "start": 35.063,
+     "end": 35.383
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "chapter": "01 · CARI DARI KOTAKMU",
+   "text": "Kayak nyari teman di stadion: // nggak teriak ke semua orang, // langsung ke sektornya.",
+   "start": 35.774,
+   "end": 39.647,
+   "words": [
+    {
+     "w": "Kayak",
+     "start": 35.774,
+     "end": 36.087
+    },
+    {
+     "w": "nyari",
+     "start": 36.087,
+     "end": 36.247
+    },
+    {
+     "w": "teman",
+     "start": 36.327,
+     "end": 36.487
+    },
+    {
+     "w": "di",
+     "start": 36.487,
+     "end": 36.647
+    },
+    {
+     "w": "stadion:",
+     "start": 36.647,
+     "end": 37.127
+    },
+    {
+     "w": "//",
+     "start": 37.315,
+     "end": 37.421
+    },
+    {
+     "w": "nggak",
+     "start": 37.421,
+     "end": 37.527
+    },
+    {
+     "w": "teriak",
+     "start": 37.607,
+     "end": 37.767
+    },
+    {
+     "w": "ke",
+     "start": 37.847,
+     "end": 37.847
+    },
+    {
+     "w": "semua",
+     "start": 37.847,
+     "end": 38.167
+    },
+    {
+     "w": "orang,",
+     "start": 38.167,
+     "end": 38.567
+    },
+    {
+     "w": "//",
+     "start": 38.73,
+     "end": 38.849
+    },
+    {
+     "w": "langsung",
+     "start": 38.849,
+     "end": 38.967
+    },
+    {
+     "w": "ke",
+     "start": 38.967,
+     "end": 39.127
+    },
+    {
+     "w": "sektornya.",
+     "start": 39.127,
+     "end": 39.527
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "chapter": "02 · BUKAN CUMA JARAK",
+   "text": "Nah, yang paling dekat belum tentu yang dipilih.",
+   "start": 40.647,
+   "end": 43.22,
+   "words": [
+    {
+     "w": "Nah,",
+     "start": 40.656,
+     "end": 40.976
+    },
+    {
+     "w": "yang",
+     "start": 41.123,
+     "end": 41.296
+    },
+    {
+     "w": "paling",
+     "start": 41.376,
+     "end": 41.616
+    },
+    {
+     "w": "dekat",
+     "start": 41.616,
+     "end": 41.936
+    },
+    {
+     "w": "belum",
+     "start": 41.961,
+     "end": 42.336
+    },
+    {
+     "w": "tentu",
+     "start": 42.416,
+     "end": 42.576
+    },
+    {
+     "w": "yang",
+     "start": 42.576,
+     "end": 42.736
+    },
+    {
+     "w": "dipilih.",
+     "start": 42.736,
+     "end": 43.136
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "chapter": "02 · BUKAN CUMA JARAK",
+   "text": "Bisa jadi dia lagi ngadep arah sebaliknya, // atau kepotong jalan satu arah.",
+   "start": 43.54,
+   "end": 47.689,
+   "words": [
+    {
+     "w": "Bisa",
+     "start": 43.58,
+     "end": 43.74
+    },
+    {
+     "w": "jadi",
+     "start": 43.74,
+     "end": 44.38
+    },
+    {
+     "w": "dia",
+     "start": 44.446,
+     "end": 44.7
+    },
+    {
+     "w": "lagi",
+     "start": 44.78,
+     "end": 44.94
+    },
+    {
+     "w": "ngadep",
+     "start": 45.02,
+     "end": 45.18
+    },
+    {
+     "w": "arah",
+     "start": 45.18,
+     "end": 45.42
+    },
+    {
+     "w": "sebaliknya,",
+     "start": 45.42,
+     "end": 45.98
+    },
+    {
+     "w": "//",
+     "start": 46.143,
+     "end": 46.262
+    },
+    {
+     "w": "atau",
+     "start": 46.262,
+     "end": 46.38
+    },
+    {
+     "w": "kepotong",
+     "start": 46.46,
+     "end": 46.78
+    },
+    {
+     "w": "jalan",
+     "start": 46.78,
+     "end": 47.1
+    },
+    {
+     "w": "satu",
+     "start": 47.18,
+     "end": 47.34
+    },
+    {
+     "w": "arah.",
+     "start": 47.34,
+     "end": 47.58
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "chapter": "02 · BUKAN CUMA JARAK",
+   "text": "Yang lebih jauh, // tapi searah dan baru kelar order, // bisa nyampe duluan.",
+   "start": 48.009,
+   "end": 52.034,
+   "words": [
+    {
+     "w": "Yang",
+     "start": 48.018,
+     "end": 48.178
+    },
+    {
+     "w": "lebih",
+     "start": 48.258,
+     "end": 48.418
+    },
+    {
+     "w": "jauh,",
+     "start": 48.418,
+     "end": 48.818
+    },
+    {
+     "w": "//",
+     "start": 48.899,
+     "end": 49.059
+    },
+    {
+     "w": "tapi",
+     "start": 49.059,
+     "end": 49.218
+    },
+    {
+     "w": "searah",
+     "start": 49.218,
+     "end": 49.778
+    },
+    {
+     "w": "dan",
+     "start": 49.778,
+     "end": 50.018
+    },
+    {
+     "w": "baru",
+     "start": 50.098,
+     "end": 50.178
+    },
+    {
+     "w": "kelar",
+     "start": 50.178,
+     "end": 50.498
+    },
+    {
+     "w": "order,",
+     "start": 50.498,
+     "end": 50.818
+    },
+    {
+     "w": "//",
+     "start": 51.046,
+     "end": 51.172
+    },
+    {
+     "w": "bisa",
+     "start": 51.172,
+     "end": 51.298
+    },
+    {
+     "w": "nyampe",
+     "start": 51.298,
+     "end": 51.538
+    },
+    {
+     "w": "duluan.",
+     "start": 51.538,
+     "end": 51.938
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "chapter": "03 · PAS HUJAN",
+   "text": "Pas hujan, // yang pesan di satu kotak tiba-tiba numpuk, // driver-nya tetap segitu.",
+   "start": 53.034,
+   "end": 57.486,
+   "words": [
+    {
+     "w": "Pas",
+     "start": 53.06,
+     "end": 53.22
+    },
+    {
+     "w": "hujan,",
+     "start": 53.22,
+     "end": 53.78
+    },
+    {
+     "w": "//",
+     "start": 53.911,
+     "end": 54.005
+    },
+    {
+     "w": "yang",
+     "start": 54.005,
+     "end": 54.1
+    },
+    {
+     "w": "pesan",
+     "start": 54.1,
+     "end": 54.42
+    },
+    {
+     "w": "di",
+     "start": 54.5,
+     "end": 54.5
+    },
+    {
+     "w": "satu",
+     "start": 54.5,
+     "end": 54.74
+    },
+    {
+     "w": "kotak",
+     "start": 54.74,
+     "end": 55.06
+    },
+    {
+     "w": "tiba-tiba",
+     "start": 55.06,
+     "end": 55.62
+    },
+    {
+     "w": "numpuk,",
+     "start": 55.62,
+     "end": 56.1
+    },
+    {
+     "w": "//",
+     "start": 56.248,
+     "end": 56.494
+    },
+    {
+     "w": "driver-nya",
+     "start": 56.494,
+     "end": 56.74
+    },
+    {
+     "w": "tetap",
+     "start": 56.82,
+     "end": 56.98
+    },
+    {
+     "w": "segitu.",
+     "start": 56.98,
+     "end": 57.46
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "chapter": "03 · PAS HUJAN",
+   "text": "Makanya tarif bisa naik: // salah satu tujuannya, narik driver dari kotak sebelah.",
+   "start": 57.806,
+   "end": 62.188,
+   "words": [
+    {
+     "w": "Makanya",
+     "start": 57.834,
+     "end": 58.154
+    },
+    {
+     "w": "tarif",
+     "start": 58.234,
+     "end": 58.394
+    },
+    {
+     "w": "bisa",
+     "start": 58.394,
+     "end": 58.634
+    },
+    {
+     "w": "naik:",
+     "start": 58.634,
+     "end": 58.954
+    },
+    {
+     "w": "//",
+     "start": 59.096,
+     "end": 59.265
+    },
+    {
+     "w": "salah",
+     "start": 59.265,
+     "end": 59.434
+    },
+    {
+     "w": "satu",
+     "start": 59.514,
+     "end": 59.674
+    },
+    {
+     "w": "tujuannya,",
+     "start": 59.674,
+     "end": 60.314
+    },
+    {
+     "w": "narik",
+     "start": 60.517,
+     "end": 60.874
+    },
+    {
+     "w": "driver",
+     "start": 60.954,
+     "end": 61.194
+    },
+    {
+     "w": "dari",
+     "start": 61.194,
+     "end": 61.434
+    },
+    {
+     "w": "kotak",
+     "start": 61.434,
+     "end": 61.754
+    },
+    {
+     "w": "sebelah.",
+     "start": 61.834,
+     "end": 62.074
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "chapter": "RECAP",
+   "text": "Jadi rahasianya bukan komputer super, // tapi peta yang dipotong kotak.",
+   "start": 63.188,
+   "end": 66.781,
+   "words": [
+    {
+     "w": "Jadi",
+     "start": 63.228,
+     "end": 63.468
+    },
+    {
+     "w": "rahasianya",
+     "start": 63.468,
+     "end": 63.948
+    },
+    {
+     "w": "bukan",
+     "start": 64.028,
+     "end": 64.268
+    },
+    {
+     "w": "komputer",
+     "start": 64.268,
+     "end": 64.588
+    },
+    {
+     "w": "super,",
+     "start": 64.588,
+     "end": 65.068
+    },
+    {
+     "w": "//",
+     "start": 65.303,
+     "end": 65.386
+    },
+    {
+     "w": "tapi",
+     "start": 65.386,
+     "end": 65.468
+    },
+    {
+     "w": "peta",
+     "start": 65.468,
+     "end": 65.868
+    },
+    {
+     "w": "yang",
+     "start": 65.948,
+     "end": 66.028
+    },
+    {
+     "w": "dipotong",
+     "start": 66.028,
+     "end": 66.428
+    },
+    {
+     "w": "kotak.",
+     "start": 66.428,
+     "end": 66.748
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "chapter": "OUTRO",
+   "text": "Pernah dapet driver yang malah muter jauh? // Ceritain di komentar.",
+   "start": 67.781,
+   "end": 71.118,
+   "words": [
+    {
+     "w": "Pernah",
+     "start": 67.781,
+     "end": 68.073
+    },
+    {
+     "w": "dapet",
+     "start": 68.153,
+     "end": 68.313
+    },
+    {
+     "w": "driver",
+     "start": 68.313,
+     "end": 68.793
+    },
+    {
+     "w": "yang",
+     "start": 68.793,
+     "end": 69.033
+    },
+    {
+     "w": "malah",
+     "start": 69.113,
+     "end": 69.273
+    },
+    {
+     "w": "muter",
+     "start": 69.273,
+     "end": 69.513
+    },
+    {
+     "w": "jauh?",
+     "start": 69.513,
+     "end": 69.833
+    },
+    {
+     "w": "//",
+     "start": 70.091,
+     "end": 70.282
+    },
+    {
+     "w": "Ceritain",
+     "start": 70.282,
+     "end": 70.473
+    },
+    {
+     "w": "di",
+     "start": 70.553,
+     "end": 70.553
+    },
+    {
+     "w": "komentar.",
+     "start": 70.553,
+     "end": 71.033
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "chapter": "OUTRO",
+   "text": "Follow, biar nggak ketinggalan.",
+   "start": 71.438,
+   "end": 73.079,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 71.439,
+     "end": 71.919
+    },
+    {
+     "w": "biar",
+     "start": 72.112,
+     "end": 72.319
+    },
+    {
+     "w": "nggak",
+     "start": 72.399,
+     "end": 72.479
+    },
+    {
+     "w": "ketinggalan.",
+     "start": 72.479,
+     "end": 73.039
+    }
+   ]
+  }
+ ]
+}

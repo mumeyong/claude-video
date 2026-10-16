@@ -3,8 +3,11 @@
   go       <slug> [preview]       ONE command: naskah → voice (align voice.wav, else TTS) → check → final render
                                   → hasil/<slug>/.  'preview' = review round instead: cover → sheet → stills
                                   (REVIEW) → 540p preview+music
-  auto     "Judul video" | NN | <slug>  autopilot: scaffold (if new) → Claude headless writes idea, SCRIPT, NASKAH,
-                                  PLAN, scenes.py, cover, POST.md until check --dry is clean → go (final render)
+  auto     "Judul video" | NN | <slug> [--url U] [--dur S] [--ref FILE] [--py]
+                                  autopilot: scaffold (if new) → Claude headless writes idea, SCRIPT, NASKAH, PLAN,
+                                  the film (film.html — the grak/cheese look; --py = draw it in Python instead),
+                                  cover, POST.md until check --dry is clean → go (final render). --url also captures
+                                  real screenshots of the page; --ref = a video/image whose look to study
                                   (user runs — it starts Claude; Claude itself never runs this)
   new      "Judul video" | NN     scaffold videos/<slug> from a title or idea number; a matching ideas/NN-*.md
                                   (by number, title or slug) gives the slug + brief
@@ -22,6 +25,14 @@
                                   chapter entrance, 6 frames) — 1/4 scale, no encode, no audio  (Claude may run)
   preview  <slug> [--from s --to s]  540x960 30fps quick render with audio           (user runs)
   render   <slug> [--from s --to s]  1080x1920 60fps final                           (user runs)
+           go / render  --fix A,B     HTML film: re-render only its seconds A–B, reuse every other cached frame
+  export   <slug> [tiktok shorts reels]  hasil/<slug>/upload/<slug>.<platform>.mp4 — platform-safe encodes (user runs)
+  ref      <slug> <video|image> [--every 0.5]  study a reference → videos/<slug>/refs/<name>/ contact sheet, cuts,
+                                  shot lengths, audio (decode + PNG only)                  (Claude may run)
+  capture  <slug> <url>           real screenshots (mobile + desktop) + colors/fonts/headings of a site →
+                                  videos/<slug>/assets/site/                                (Claude may run)
+  beats    <slug> [--phase 0-3]   beat grid of audio/music.* → beats.json (librosa) for the film (Claude may run)
+  serve                           live preview of HTML films: http://localhost:5173/videos/<slug>/film.html
   tts      <slug>                 Mumeyong voice → audio/voice_tts.wav + exact timing.json (edge-tts, online;
                                   automatic in go when there is no voice.wav; voice.wav always wins) (user runs)
   voices   [lang]                 list Cartesia voices (default id) (needs .cartesia key) → put one id in .cartesia  (user runs)
@@ -57,8 +68,16 @@ def main(argv=None):
     ap.add_argument("--workers", type=int, default=None)
     ap.add_argument("--scale", type=float, default=1.0)
     ap.add_argument("--no-audio", action="store_true")
+    ap.add_argument("--url", default=None, help="auto: page about the subject — Claude reads it for real facts")
+    ap.add_argument("--dur", type=float, default=None, help="auto: target length in seconds (script sized to it)")
     ap.add_argument("--dry", action="store_true", help="check: also run every draw fn off-screen (nothing written)")
+    ap.add_argument("--fix", default=None, help="go/render: A,B — HTML film: re-render only seconds A–B")
+    ap.add_argument("--ref", default=None, help="auto: reference video/image for the look")
+    ap.add_argument("--py", action="store_true", help="auto: draw the video in Python (scenes.py) instead of film.html")
+    ap.add_argument("--every", type=float, default=0.5, help="ref: seconds between contact-sheet frames")
+    ap.add_argument("--phase", type=int, default=None, help="beats: downbeat phase 0-3 (override)")
     a = ap.parse_args(argv)
+    a.fix = tuple(float(x) for x in a.fix.split(",")) if a.fix else None
 
     if a.cmd in ("ls", "list"):
         return list_videos()
@@ -82,6 +101,9 @@ def main(argv=None):
         from .audio.tts import list_voices
         list_voices(a.slug or "id")      # `voices` or `voices en`
         return 0
+    if a.cmd == "serve":
+        from .web import run
+        return run("serve").returncode
     if a.cmd == "audition":
         from .audio.score import audition
         audition(ROOT / ".cache" / "audition")
@@ -94,12 +116,29 @@ def main(argv=None):
     if a.cmd == "auto":
         return auto(a)
 
+    if a.cmd == "export":
+        from .render import export
+        export(a.slug, a.rest or None)
+        return 0
     p = Project(a.slug)
     if a.cmd == "go":
         return go(p, a)
     if a.cmd == "estimate":
         from .audio.align import estimate
         estimate(p.dir / "SCRIPT.md", p.timing_path)
+    elif a.cmd == "ref":
+        from .ref import ref
+        if not a.rest:
+            ap.error("ref <slug> <video|image>")
+        return ref(p, a.rest[0], a.every)
+    elif a.cmd == "capture":
+        from .web import run
+        if not a.rest:
+            ap.error("capture <slug> <url>")
+        return run("capture", "--url", a.rest[0], "--out", p.assets / "site").returncode
+    elif a.cmd == "beats":
+        from .audio.beats import write_beats
+        write_beats(p, a.phase)
     elif a.cmd == "register":
         from .registry import register
         register(a.slug)
@@ -136,7 +175,7 @@ def main(argv=None):
     elif a.cmd in ("preview", "render"):
         from .render import render_video
         render_video(a.slug, "preview" if a.cmd == "preview" else "final", a.workers, a.t_from, a.t_to,
-                     audio=not a.no_audio)
+                     audio=not a.no_audio, fix=a.fix)
     elif a.cmd == "tts":
         from .audio.tts import synthesize
         synthesize(p)
@@ -259,7 +298,25 @@ def auto(a):
         new_video(title, hint=False)
     if not (find("videos", slug) / "scenes.py").exists():
         from .autopilot import autopilot
-        if autopilot(slug, title):
+        p = Project(slug)
+        note = []
+        if a.url:
+            note.append(f"- Sumber: {a.url} — baca pakai WebFetch dulu. Nama, klaim, fitur, warna brand, angka: cuma "
+                        "yang ada di halaman itu (nggak ada di sana → jangan ditulis).")
+            from .web import run
+            if run("capture", "--url", a.url, "--out", p.assets / "site").returncode == 0:
+                note.append(f"- Screenshot asli halaman itu: `videos/{slug}/assets/site/` (mobile.png, desktop.png, "
+                            "*_full.png, site.json = judul, warna, font). Pakai UI aslinya — jangan bikin layar palsu.")
+        if a.ref:
+            from .ref import ref
+            ref(p, a.ref, a.every)
+            note.append(f"- Referensi look: `videos/{slug}/refs/` (contact.png + cuts.json kalau video). Ambil "
+                        "tata bahasanya (palet, tipe, panjang shot, transisi), bukan isinya.")
+        if a.dur:
+            words = int(a.dur * 2.7)
+            note.append(f"- Durasi target ± {a.dur:g} s (di luar logo pembuka/penutup) → naskah ± {words} kata. "
+                        "Pendek → lebih sedikit bab, hook langsung, tanpa recap kalau nggak muat.")
+        if autopilot(slug, title, "\n".join(note), mode="py" if a.py else "web"):
             return 1
     return go(Project(slug), a)
 
@@ -378,7 +435,7 @@ def go(p, a):
 
     step("render final 1080×1920 60fps" if final else "preview 540×960 30fps")
     out = render.render_video(p.slug, "final" if final else "preview", a.workers, a.t_from, a.t_to,
-                              audio=not a.no_audio)
+                              audio=not a.no_audio, fix=a.fix)
     done.append(f"{'final' if final else 'preview':11s} {out}")
 
     print(f"\n✓ selesai dalam {time.time() - t0:.0f}s — kirim ke Claude:")

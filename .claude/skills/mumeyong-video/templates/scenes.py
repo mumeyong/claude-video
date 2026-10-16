@@ -1,4 +1,4 @@
-"""EXAMPLE (optional) — one way to write scenes.py (STYLE §2 composition + §3 motion). Copy, then replace every
+"""EXAMPLE of the code grammar (timing, Cue, chapters) — its LAYOUT is the old house frame, don't copy that part (STYLE §2 composition + §3 motion). Copy, then replace every
 `REPLACE` with this video's own metaphor. Do NOT open other videos' scenes.py: this file + `api core` + the kit you
 build is everything. Structure only — throw any of it away if your idea wants another shape.
 

@@ -15,8 +15,8 @@ Satu file per ide (`NN-slug.md`, salin dari `_TEMPLATE.md`). Indeks dikelompokka
 | 10 | [Foto WhatsApp sebenernya lewat mana?](10-foto-whatsapp-ke-mana.md) | ✅ tayang [`videos/_arsip/foto-whatsapp-lewat-mana`](../videos/_arsip/foto-whatsapp-lewat-mana/) | 60–75 s | loker, kotak, kunci, centang, foto | QUICK · loker penitipan · reel look · ⚠️ cek fakta |
 | 05 | [Kubernetes bukan jawaban buat semua hal](05-kubernetes-bukan-jawaban.md) | ✅ tayang [`videos/_arsip/kubernetes-bukan-jawaban`](../videos/_arsip/kubernetes-bukan-jawaban/) | 60–75 s | crane, peti_kemas, paket, kurir | QUICK · pelabuhan vs kurir · opini |
 | 24 | [Kenapa OTP suka telat datang?](24-otp-telat.md) | 💡 ide | 60–75 s | sorting_belt, otp_timer | QUICK · kantor pos sortir · ⚠️ cek fakta |
-| 25 | [Barang flash sale "habis" padahal udah di keranjang](25-flash-sale-keranjang.md) | 💡 ide | 60–75 s | shelf_stock, grab_hands | QUICK · rak minimarket barang terakhir |
-| 26 | [Gimana ojol nemuin driver terdekat dalam 3 detik?](26-ojol-driver-terdekat.md) | 💡 ide | 60–75 s | geo_grid, motor_dot | QUICK · sektor tribun stadion |
+| 25 | [Barang flash sale "habis" padahal udah di keranjang](25-flash-sale-keranjang.md) | 🎬 [produksi](../videos/flash-sale-keranjang/) | 60–75 s | minimarket (rak, produk, label_stok, tangan) | QUICK · rak minimarket barang terakhir |
+| 26 | [Gimana ojol nemuin driver terdekat dalam 3 detik?](26-ojol-driver-terdekat.md) | 🎬 [produksi](../videos/ojol-driver-terdekat/) | 60–75 s | geo_grid, motor_dot | QUICK · sektor tribun stadion |
 | 27 | [Google Maps tahu jalan macet dari mana?](27-maps-tahu-macet.md) | 💡 ide | 60–70 s | road_speed, phone_dot | QUICK · barisan semut · ⚠️ cek fakta |
 | 28 | [Kenapa video YouTube langsung main, padahal servernya jauh?](28-youtube-langsung-main.md) | 💡 ide | 60–75 s | warung_cache, supply_truck | QUICK · warung titip stok (CDN) |
 | 29 | [Kenapa transfer antar bank kadang "sedang diproses"?](29-transfer-antar-bank.md) | 💡 ide | 60–75 s | bus_terminal | QUICK · ojek vs bus · ⚠️ cek fakta wajib |

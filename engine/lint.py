@@ -156,7 +156,8 @@ def dry_check(slug, step=0.25):
         bad += 1
         print(f"  ! TEXT    {name}  t={t:.2f}s  {size:.1f}px < {MIN_TEXT}: {text[:40]!r}")
     print("  ok — no problems" if not bad else f"  {bad} problem(s)")
-    return 1 if errors else 0
+    web = getattr(video, "web", None).check() if getattr(video, "web", None) is not None else 0
+    return 1 if errors or web else 0
 
 
 def audio_dry(slug):
@@ -202,8 +203,13 @@ M_DIFF = 48            # alpha change (0-255) that counts as motion
 M_CELL = (6, 10)       # grid: 6 columns × 10 rows (~180 px cells)
 M_CELL_MIN = 0.012     # fraction of a cell's pixels that must change
 CAM_ZOOM_V, CAM_PAN_V = 0.035, 70     # camera faster than this (zoom/s, px/s) = a real move (a dolly stays below)
-REST_MIN, REST_BAD = 0.45, 0.30       # share of a chapter that should be still (holds) / clearly too busy
-BUSY_MAX, BUSY_BAD = 2.5, 4.0         # longest stretch without a single still moment (s)
+# 2026-10-13 (refs.pdf: "something happens on every beat", "no dead time"): fluid beats still. Flag frozen frames
+# and chapters that are mostly static; keep a floor so it doesn't turn into chaos.
+STILL_HI, STILL_BAD = 0.65, 0.80      # share of a chapter with no mover — above = stop-and-go, not fluid
+REST_BAD = 0.08                       # below = nothing ever settles
+BUSY_MAX, BUSY_BAD = 6.0, 9.0         # longest stretch without a single settled moment (s)
+DEAD_MAX, DEAD_BAD = 1.2, 2.0         # a completely frozen frame (no pixel, no camera drift) longer than this (s)
+ALIVE_DIFF = 6                        # alpha change that counts as "something is still drifting"
 CROWD_N, CROWD_T = 3, 0.5             # ≥ 3 movers at once for ≥ 0.5 s = no clear leader
 
 
@@ -240,7 +246,8 @@ def _spans(flags, ts, min_len):
 
 
 def motion_profile(video):
-    """[(t, movers, ink_moving_fraction, camera_moving)] sampled every M_STEP s."""
+    """[(t, movers, ink_moving_fraction, camera_moving, alive)] sampled every M_STEP s. alive = any pixel or the
+    camera changed at all (a slow drift counts) — frames that aren't alive are dead time."""
     cols, rows = M_CELL
     prev, out = None, []
     n = int(video.duration / M_STEP) + 1
@@ -259,28 +266,34 @@ def motion_profile(video):
         z0, x0, y0 = video.camera.state(max(0.0, t - M_STEP))
         z1, x1, y1 = video.camera.state(t)
         cam = abs(z1 - z0) / M_STEP > CAM_ZOOM_V or math.hypot(x1 - x0, y1 - y0) / M_STEP > CAM_PAN_V
+        cam_any = (z0, x0, y0) != (z1, x1, y1) or any(l.start <= t < l.end and l.z >= 100 for l in video.layers
+                                                       if l.z >= 120)   # brand sting (z 120) counts as alive
         if prev is None:
-            out.append((t, 0, 0.0, cam))
+            out.append((t, 0, 0.0, cam, True))
         else:
             d = np.abs(a - prev) > M_DIFF
             h, w = d.shape
             ch, cw = h // rows, w // cols
             grid = d[:ch * rows, :cw * cols].reshape(rows, ch, cols, cw).mean(axis=(1, 3)) > M_CELL_MIN
             ink = max(1, int((a > 90).sum()))
-            out.append((t, _movers(grid), float(d.sum()) / ink, cam))
+            alive = cam_any or bool((np.abs(a - prev) > ALIVE_DIFF).any())
+            out.append((t, _movers(grid), float(d.sum()) / ink, cam, alive))
         prev = a
     return out
 
 
 def motion_check(slug):
-    """Per chapter: how much is still (holds), the longest stretch without rest, crowd moments (no single leader),
-    camera moves stacked on content moves. Advisory — fix every `!` before handing over a render command."""
+    """Per chapter: how much is still, the longest frozen (dead) stretch, crowd moments (no single leader), camera
+    moves stacked on content moves. Advisory hints — fluid wins over holds (refs.pdf: no dead time)."""
     project, video = _video(slug)
+    if getattr(video, "web", None) is not None:
+        print(f"{slug}: motion check · HTML film — judge its motion on the critique sheets (moves.png, hook.png)")
+        return 0
     prof = motion_profile(video)
     chs = video.chapters or []
     spans = [(ch.label, ch.start, ch.end) for ch in chs] or [("video", 0.0, video.duration)]
     print(f"{slug}: motion check · {len(prof)} samples every {M_STEP:.3f}s · nothing written")
-    print(f"  {'chapter':<22}{'still':>7}{'longest busy':>14}{'peak movers':>13}")
+    print(f"  {'chapter':<22}{'still':>7}{'longest dead':>14}{'peak movers':>13}")
     flags = 0
     for label, s, e in spans:
         rows = [p for p in prof if s <= p[0] < e]
@@ -290,11 +303,20 @@ def motion_check(slug):
         ts = [p[0] for p in rows]
         share = sum(still) / len(rows)
         busy = max([b - a for a, b in _spans([not x for x in still], ts, 0.0)] or [0.0])
+        dead = 0.0 if label.upper().startswith("OUTRO") else \
+            max([b - a for a, b in _spans([not p[4] for p in rows], ts, 0.0)] or [0.0])
         peak = max(p[1] for p in rows)
-        mark = "!" if share < REST_BAD or busy > BUSY_BAD else ("~" if share < REST_MIN or busy > BUSY_MAX else " ")
-        print(f"{mark} {label[:22]:<22}{share * 100:>6.0f}%{busy:>12.1f} s{peak:>13}")
+        if label.upper().startswith("OUTRO"):          # brand ending is fixed (IDENTITY.md) — not judged here
+            print(f"  {label[:22]:<22}{share * 100:>6.0f}%{'—':>14}{peak:>13}")
+            continue
+        bad = share > STILL_BAD or share < REST_BAD or busy > BUSY_BAD or dead > DEAD_BAD
+        mark = "!" if bad else ("~" if share > STILL_HI or busy > BUSY_MAX or dead > DEAD_MAX else " ")
+        print(f"{mark} {label[:22]:<22}{share * 100:>6.0f}%{dead:>12.1f} s{peak:>13}")
         if mark == "!":
             flags += 1
+        for a, b in _spans([not p[4] for p in rows], ts, DEAD_MAX) if dead else []:
+            print(f"    ! DEAD {a:.2f}–{b:.2f}s  frozen frame — keep something alive (camera drift, the next "
+                  f"element arriving early, a morph continuing)")
         crowd = _spans([p[1] >= CROWD_N for p in rows], ts, CROWD_T)
         for a, b in crowd:
             flags += 1
@@ -305,7 +327,7 @@ def motion_check(slug):
             flags += 1
             print(f"    ! STACK {a:.2f}–{b:.2f}s  camera move on top of 2+ content moves — move the camera in a hold")
     tot = sum(p[1] == 0 and not p[3] for p in prof) / max(1, len(prof))
-    print(f"  overall still {tot * 100:.0f}% (aim ≥ {REST_MIN * 100:.0f}% per chapter) · "
+    print(f"  overall still {tot * 100:.0f}% (fluid: {REST_BAD * 100:.0f}–{STILL_HI * 100:.0f}% per chapter) · "
           + ("ok — no motion flags" if not flags else f"{flags} motion flag(s)"))
     return 0
 

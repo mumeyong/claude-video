@@ -113,8 +113,8 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `settle(t, t0, dur=None)` — Spring progress 0 → ~1.06 → 1 starting at t0 (use as a scale for small pops, or as a camera ease).
 - `squash(c, cx, base_y, amount)` — Non-uniform scale anchored at the object's foot (cx, base_y): amount > 0 = wider & shorter.
 
-## components/headline.py — Headline + kicker — the signature element.
-- `Headline(text, x=None, y=None, style="headline", width=None, ink="ink", accent="accent", align="l")` — 
+## components/headline.py — Headline + kicker — one way to set type (any font from tk.F / FONTS, any position, any size).
+- `Headline(text, x=None, y=None, style="headline", width=None, ink="ink", accent="accent", align="l", font=None, size=None, serif=None)` — 
   - `.bottom(self, c)` — 
   - `.draw(self, c, t, t_in, t_out=None, strike_at=None, stagger=None, reveal="blur", exit="blur")` — Words blur+rise in one by one from t_in; all blur out from t_out.
   - `.words(self, c)` — 
@@ -147,6 +147,15 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `rumah(c, cx, base_y, s, t, light=0.0, busy=0.0, sleep=0.0, broken=0.0, label=None, label_rot=0.0, label_color=None, color=None, alpha=1.0, seed=0)` — Small house (one function), width s, standing on base_y. light/busy/sleep/broken 0..1. Label = signboard.
 - `rumah_gede(c, x, base_y, w, h, rooms, t, trip=0.0, closed=0.0, p_labels=1.0, color=None, alpha=1.0, mcb=True)` — The monolith: one wide house, rooms in a row under one roof, one MCB box on the left wall.
 - `sound_rings(c, cx, cy, p, color=None, n=3, r0=20, r_max=420, width=5, alpha=1.0, squash=1.0, arc=None)` — n expanding rings after a strike; p 0..1 over the whole spread. squash scales them vertically (< 1 = street
+
+## components/kantorpos.py — Post-office sorting components (first used in "otp-telat").
+- `amplop(c, cx, cy, w, color=None, code="", caps=0.0, alpha=1.0, mine=False)` — Envelope centred on (cx, cy), width w (height 0.62 w). color = stamp (grey for other people's letters).
+- `belt(c, x, y, w, offset, h=44, legs=110, color=None, alpha=1.0)` — Conveyor whose top surface spans (x, y)–(x + w, y + h); slats shift right with offset (px). Legs below.
+- `hp_box(x, y, s)` — Screen-space anchors of hp_otp at (x, y, s): dict(box, boxes (the 6-digit row), link (the resend line)).
+- `hp_otp(c, t, x, y, s, left=59.0, code="", filled=0.0, bars=4.0, detail=1.0, press=1.0, wrong=0.0, via="SMS", alpha=1.0)` — Phone on the OTP screen, top-left (x, y), scale s of a 600 × 1220 design. left = seconds on the resend timer
+- `log_card(c, x, y, w, rows, alpha=1.0, size=28, row_h=64)` — Dark terminal card with mono rows [(left, right, color)] — server log lines. Returns the row baselines.
+- `loket(c, x, y, w, h, label, sub="", color=None, alpha=1.0, lit=1.0)` — Post-office counter card: a tinted mail-slot icon, mono label, muted sub line. lit 0..1 tints the icon.
+- `notif(c, x, y, w, app, body, color=None, alpha=1.0)` — iOS-style notification banner (top-left x, y, width w, height 120): app square + name, one body line.
 
 ## components/kasir.py — Cashier-receipt components (first used in "ai-gratis-siapa-bayar").
 - `saklar(c, x, y, w, on=0.0, color=None, alpha=1.0)` — iOS-style toggle, top-left (x, y), width w (height 0.6 w). on 0..1 slides the knob right and fills the track
@@ -254,6 +263,15 @@ One line per public function: `name(signature)` — first docstring line. Import
 - `shelf_books(x, y, w, h, rows=4, seed=3)` — Deterministic book layout → list of (x, y, bw, bh, color_index).
 - `sync_pipe(c, t, src, dst, p_pipe=1.0, p_full=0.0, p_inc=0.0, open_badge=0.0, labels=("full copy", "incremental sync"))` — src/dst = node dicts for arch_node (x, y, w, h, kind, label, a). Two lanes between them:
 - `twin_table(c, x, y, w, rows, row_h=96, titles=("LEGACY", "ALIBABA CLOUD"))` — rows: [dict(name, count, h_left, h_right, slide, lock, bad=None|index, fix=0..1)].
+
+## components/minimarket.py — Minimarket-shelf components (first used in "flash-sale-keranjang"): a rack with yellow price strips, a boxed
+- `empty_spot(c, cx, by, s=1.0, alpha=1.0)` — Outline where a product used to stand (already sold).
+- `filler(c, i, x0, y, w, seed=0, gap=None, alpha=1.0)` — A row of muted everyday goods (boxes + bottles) standing on y — background stock, never the hero.
+- `label_stok(c, cx, y, text, ink, flip=1.0, alpha=1.0, w=250, h=66)` — Hanging stock tag (yellow, mono bold) centered on cx, top at y. flip 0..1 = vertical squash of a flip.
+- `produk(c, cx, by, color, s=1.0, look="flat", grey=0.0, alpha=1.0, ghost=False)` — The hero product: a box with a lid band and a lightning badge, bottom-center at (cx, by).
+- `rak(c, w, h, rows, look="flat", stock=None, alpha=1.0)` — Shelf rack centered on (0, 0): back panel, uprights, boards with a yellow price lip.
+- `rak_geo(w, h, rows)` — Board-top y (where items stand) of each row, rack centered on (0, 0). rows = row heights (px).
+- `tangan(c, x, y, ang, kind="point", sleeve=None, skin=None, s=1.0, alpha=1.0)` — A person's hand reaching in: the fingertip (point) or fist front (grab) at (x, y), pointing along ang
 
 ## components/motion.py — Shared motion recipes: how things enter, leave, and type.
 - `appear(c, t, t_in, t_out, bbox, draw, rise=None, scale=None, blur=None, d_in=None, d_out=None, pad=70, enter="up", exit="up", rot=0.0)` — Element entrance/exit with blur.
@@ -382,7 +400,6 @@ One line per public function: `name(signature)` — first docstring line. Import
 ## components/tickets.py — Ticket-war / queue components (first used in "war-tiket-crash").
 - `big_clock(c, x, y, text, size, prev=None, jump=1.0, color=None, accent_from=None, align="l")` — Digital clock text 'HH:MM:SS' with baseline y. Characters that differ from `prev` drop in from above
 - `dispenser(c, cx, y, s, t, serving="", serving_prev=None, jump=1.0, called=0.0, press=0.0, color=None)` — Queue-number machine (kantor pos), top center (cx, y), width s, height ≈ 1.45 s.
-- `loket(c, x, y, w, h, t, full=0.0, label="", seed=0, color=None, alpha=1.0, busy=1.0)` — Counter window: frame, glass with a clerk, lamp on top (green → red when full), label plate, slip slot.
 - `print_slip(c, x, y, w, h, p, lines, color=None, rot=0.0, slot=True)` — Slip feeding out of a slot whose top edge is at (x, y), width w; full length h at p=1.
 - `refresh_icon(c, x, y, s, color, rot=0.0, alpha=1.0, width=None)` — ↻ : open circular arrow, centered (x, y), diameter s.
 - `refresh_storm(c, cx, cy, rx, ry, t, n=24, amount=1.0, speed=0.25, size=(26, 54), seed=1, color=None, alpha=1.0, inward=0.0)` — ↻ icons swirling on an elliptical band around (cx, cy). amount 0..1 = share of the n icons present

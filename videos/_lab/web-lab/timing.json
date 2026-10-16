@@ -1,0 +1,370 @@
+{
+ "source": "estimate",
+ "duration": 28.254,
+ "lines": [
+  {
+   "id": "L01",
+   "chapter": "INTRO",
+   "text": "Video ini nggak dibikin di After Effects.",
+   "start": 0.4,
+   "end": 3.012,
+   "words": [
+    {
+     "w": "Video",
+     "start": 0.4,
+     "end": 0.743
+    },
+    {
+     "w": "ini",
+     "start": 0.773,
+     "end": 1.002
+    },
+    {
+     "w": "nggak",
+     "start": 1.022,
+     "end": 1.365
+    },
+    {
+     "w": "dibikin",
+     "start": 1.395,
+     "end": 1.853
+    },
+    {
+     "w": "di",
+     "start": 1.893,
+     "end": 2.064
+    },
+    {
+     "w": "After",
+     "start": 2.079,
+     "end": 2.422
+    },
+    {
+     "w": "Effects.",
+     "start": 2.452,
+     "end": 2.967
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "chapter": "INTRO",
+   "text": "Tiap frame-nya kode, // digambar ulang enam puluh kali per detik.",
+   "start": 3.392,
+   "end": 7.496,
+   "words": [
+    {
+     "w": "Tiap",
+     "start": 3.392,
+     "end": 3.678
+    },
+    {
+     "w": "frame-nya",
+     "start": 3.703,
+     "end": 4.275
+    },
+    {
+     "w": "kode,",
+     "start": 4.325,
+     "end": 4.668
+    },
+    {
+     "w": "//",
+     "start": 4.698,
+     "end": 4.87
+    },
+    {
+     "w": "digambar",
+     "start": 4.884,
+     "end": 5.399
+    },
+    {
+     "w": "ulang",
+     "start": 5.444,
+     "end": 5.787
+    },
+    {
+     "w": "enam",
+     "start": 5.817,
+     "end": 6.103
+    },
+    {
+     "w": "puluh",
+     "start": 6.128,
+     "end": 6.472
+    },
+    {
+     "w": "kali",
+     "start": 6.501,
+     "end": 6.787
+    },
+    {
+     "w": "per",
+     "start": 6.812,
+     "end": 7.041
+    },
+    {
+     "w": "detik.",
+     "start": 7.061,
+     "end": 7.462
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "chapter": "00 · CARANYA",
+   "text": "Browser gambar animasinya, // Python nempelin suara dan logo-ku.",
+   "start": 8.796,
+   "end": 12.155,
+   "words": [
+    {
+     "w": "Browser",
+     "start": 8.796,
+     "end": 9.177
+    },
+    {
+     "w": "gambar",
+     "start": 9.21,
+     "end": 9.542
+    },
+    {
+     "w": "animasinya,",
+     "start": 9.571,
+     "end": 10.142
+    },
+    {
+     "w": "//",
+     "start": 10.191,
+     "end": 10.334
+    },
+    {
+     "w": "Python",
+     "start": 10.346,
+     "end": 10.679
+    },
+    {
+     "w": "nempelin",
+     "start": 10.708,
+     "end": 11.136
+    },
+    {
+     "w": "suara",
+     "start": 11.173,
+     "end": 11.458
+    },
+    {
+     "w": "dan",
+     "start": 11.483,
+     "end": 11.673
+    },
+    {
+     "w": "logo-ku.",
+     "start": 11.69,
+     "end": 12.117
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "chapter": "00 · CARANYA",
+   "text": "Semua gerakan pakai spring, // mulai dari diam, // mendarat pas kata yang ditekan.",
+   "start": 12.535,
+   "end": 17.759,
+   "words": [
+    {
+     "w": "Semua",
+     "start": 12.535,
+     "end": 12.882
+    },
+    {
+     "w": "gerakan",
+     "start": 12.912,
+     "end": 13.375
+    },
+    {
+     "w": "pakai",
+     "start": 13.416,
+     "end": 13.763
+    },
+    {
+     "w": "spring,",
+     "start": 13.793,
+     "end": 14.257
+    },
+    {
+     "w": "//",
+     "start": 14.297,
+     "end": 14.471
+    },
+    {
+     "w": "mulai",
+     "start": 14.486,
+     "end": 14.833
+    },
+    {
+     "w": "dari",
+     "start": 14.863,
+     "end": 15.153
+    },
+    {
+     "w": "diam,",
+     "start": 15.178,
+     "end": 15.525
+    },
+    {
+     "w": "//",
+     "start": 15.556,
+     "end": 15.729
+    },
+    {
+     "w": "mendarat",
+     "start": 15.744,
+     "end": 16.266
+    },
+    {
+     "w": "pas",
+     "start": 16.311,
+     "end": 16.543
+    },
+    {
+     "w": "kata",
+     "start": 16.563,
+     "end": 16.852
+    },
+    {
+     "w": "yang",
+     "start": 16.877,
+     "end": 17.167
+    },
+    {
+     "w": "ditekan.",
+     "start": 17.192,
+     "end": 17.713
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "chapter": "00 · CARANYA",
+   "text": "Musiknya juga kode, // jadi tiap potongan jatuh pas di ketukan.",
+   "start": 18.139,
+   "end": 22.243,
+   "words": [
+    {
+     "w": "Musiknya",
+     "start": 18.139,
+     "end": 18.67
+    },
+    {
+     "w": "juga",
+     "start": 18.716,
+     "end": 19.011
+    },
+    {
+     "w": "kode,",
+     "start": 19.036,
+     "end": 19.39
+    },
+    {
+     "w": "//",
+     "start": 19.421,
+     "end": 19.598
+    },
+    {
+     "w": "jadi",
+     "start": 19.614,
+     "end": 19.909
+    },
+    {
+     "w": "tiap",
+     "start": 19.934,
+     "end": 20.229
+    },
+    {
+     "w": "potongan",
+     "start": 20.255,
+     "end": 20.786
+    },
+    {
+     "w": "jatuh",
+     "start": 20.832,
+     "end": 21.186
+    },
+    {
+     "w": "pas",
+     "start": 21.217,
+     "end": 21.453
+    },
+    {
+     "w": "di",
+     "start": 21.473,
+     "end": 21.65
+    },
+    {
+     "w": "ketukan.",
+     "start": 21.666,
+     "end": 22.197
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "chapter": "OUTRO",
+   "text": "Follow, // biar kamu lihat video berikutnya dibikin dari nol.",
+   "start": 23.543,
+   "end": 27.274,
+   "words": [
+    {
+     "w": "Follow,",
+     "start": 23.543,
+     "end": 23.986
+    },
+    {
+     "w": "//",
+     "start": 24.024,
+     "end": 24.191
+    },
+    {
+     "w": "biar",
+     "start": 24.205,
+     "end": 24.482
+    },
+    {
+     "w": "kamu",
+     "start": 24.506,
+     "end": 24.783
+    },
+    {
+     "w": "lihat",
+     "start": 24.807,
+     "end": 25.139
+    },
+    {
+     "w": "video",
+     "start": 25.168,
+     "end": 25.5
+    },
+    {
+     "w": "berikutnya",
+     "start": 25.529,
+     "end": 26.138
+    },
+    {
+     "w": "dibikin",
+     "start": 26.191,
+     "end": 26.634
+    },
+    {
+     "w": "dari",
+     "start": 26.672,
+     "end": 26.949
+    },
+    {
+     "w": "nol.",
+     "start": 26.973,
+     "end": 27.25
+    }
+   ]
+  }
+ ]
+}

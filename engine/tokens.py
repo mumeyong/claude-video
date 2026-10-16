@@ -99,6 +99,18 @@ F = {
     "mono": "JetBrains Mono Regular",
     "mono_med": "JetBrains Mono Medium",
     "mono_bold": "JetBrains Mono Bold",
+    # ── type palette (2026-10-13, OFL, fontsource latin) — pick a pairing per video; the house Inter is optional.
+    # Some files carry odd family names: the trailing comma makes Pango read the whole string as the family.
+    "serif_display": "Fraunces Bold",            # warm, chunky editorial serif
+    "serif_italic": "Fraunces Italic",
+    "classic": "DM Serif Display",               # high-contrast magazine serif
+    "grotesk": "Space Grotesk Light, Bold",      # techy grotesk (Space Grotesk Bold)
+    "poster": "Archivo Black,",                  # heavy poster sans, giant words
+    "quirky": "Bricolage Grotesque 96pt ExtraBold, ExtraBold",   # playful display
+    "wide": "Syne ExtraBold",                    # wide, editorial, fashion
+    "round": "Unbounded Bold",                   # round wide display, friendly-tech
+    "plex_mono": "IBM Plex Mono Medium,",        # softer mono (terminals, receipts)
+    "hand": "Caveat SemiBold",                   # handwriting (notes, margin marks)
 }
 
 T = {  # (size px, letter-spacing em, line-height x size)
