@@ -1,7 +1,0 @@
-# Stills untuk putaran review (v2: chat UI)
-L01   # chat: nama dilingkari → 1 jam lewat → "Nama kamu siapa?"
-L04   # kirim → seluruh thread terbang ke kartu AI (5 pesan)
-L05   # "oke" → 7 pesan, kartu kosong lagi
-L06   # HP mundur, papan maju (handover)
-L10   # penghapus nyapu baris atas
-L12

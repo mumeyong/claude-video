@@ -1,3 +1,0 @@
-ISP = i es pe
-LAN = len
-GHz = gigahertz

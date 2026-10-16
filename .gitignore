@@ -3,13 +3,9 @@
 __pycache__/
 *.pyc
 
-# ── generated output — never in git (rebuildable from scenes.py; back up the final mp4 yourself) ──
-videos/**/out/
-videos/**/audio/*.wav
-videos/**/audio/*.mp3
-videos/**/audio/*.m4a
-hasil/**/*.mp4
-hasil/**/*.png
+# ── videos + finals — never in git (local only; back up hasil/ and finished videos yourself) ──
+videos/
+hasil/
 
 # reference videos for motion study (not ours to publish)
 refs/

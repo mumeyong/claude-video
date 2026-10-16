@@ -1,7 +1,0 @@
-# Craft lab — cek gerakan craft v2 (STYLE §6f+)
-L02 L03   # garis ngegambar dari kartu A ke B, lalu dilingkarin (draw_on + mark)
-L04 L05   # teks naik per kata dari tengah, lalu "huruf." per huruf (split_rise)
-L06       # dua angka ngitung barengan, nggak goyang (count_up, tnum)
-L08 L09   # lingkaran → tetes → kartu, satu bentuk (morph_path)
-L10 L11   # paket ikut jalur + trail; chip cepat dapet motion blur (path_at + shutter)
-L12 L13   # carry ke atas tanpa layar kosong, lalu rack_cut (seams)

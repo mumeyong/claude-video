@@ -1,7 +1,0 @@
-# Stills putaran 1 — reel look (paper + viewfinder), komponen baru flip_card · countdown_ring
-L01   # kartu 01 mendarat + ring 3·2·1 di pojok kartu (push-in kamera)
-L05   # flip kartu 01 → tulisan tangan "sejak kapan? / apa yang berubah?", chips tool redup
-L08   # diagram scale up/out → antrean titik ke database (deck kanan-bawah, pile kiri-bawah)
-L10   # kartu 03 miring + cost report, baris "NAT gateway · baru" di-highlight
-L12   # 02.00 → tombol Rollback dipencet + ✓
-L15   # lima kartu kipas → nyatu jadi satu kartu (setelah pixel wipe)
