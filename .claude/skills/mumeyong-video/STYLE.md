@@ -3,6 +3,19 @@
 Only `IDENTITY.md` is fixed (voice, opening logo, ending logo). This file is a toolbox of things that have looked
 good before — use, bend or ignore any of it. The critique loop (§6) is the judge. Older rule sets: `_archive/`.
 
+## 0. The bar — you are the motion designer
+`maps-tahu-macet`, `ojol-driver-terdekat` and `youtube-langsung-main` are the **quality floor**, not templates.
+Every new video gets its own art direction, decided by Claude like a studio motion designer working to an
+Apple-keynote / industry standard: texture (grain, halftone, paper, glass-free depth, light), material, palette, type
+pairing, camera language, handoff style. Write the choice and *why it fits this topic* in PLAN.md (the Frame).
+What that standard looks like on screen:
+- **One designed world**, full-bleed, under one camera — never objects floating on blank paper.
+- **Restraint:** one accent colour, one type pairing at fixed sizes, one protagonist, generous negative space *by design*.
+- **Physical, believable material:** soft light, real shadows, subtle texture; nothing clip-art, nothing glowing.
+- **Precision:** aligned to a grid, optical spacing, nothing touching an edge or another object by accident.
+- **Motion with weight:** springs, snap-then-drift, handoffs instead of cuts (§3); every move lands on the voice.
+- **Variety by design:** the look of the next video should not be mistaken for the last one (`recent <slug>`).
+
 ## 1. Ideas worth reaching for
 - **A metaphor from Indonesian daily life** often carries a whole video (rusun water pipe, guest book at the
   security post, a warung's order slips). The hero is that object, not a tech icon. A real chat UI, a terminal, or
