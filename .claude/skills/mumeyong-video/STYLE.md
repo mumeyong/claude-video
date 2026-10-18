@@ -36,6 +36,19 @@ Keep one idea per frame and something on screen across chapter changes.
 - **One shape, never cut.** Prefer one element that morphs size, radius, colour, content from state to state
   (`Morph`, `morph_path`, `Rig`, `track`) over fade-out → fade-in. Text inside a morphing box enters after the morph
   starts and leaves before it ends (`swap_alpha`). Scenes hand over through a shared element, not a blank.
+- **Handoff patterns** (the last object of a chapter becomes the first of the next — pick a different one each time):
+  colour **spills** out of a tap/click point (`clip-path: circle(r at x y)`) and shrinks back to a point that the next
+  thing bursts from · a chip/box **blooms** into the next card (rect + radius + colour together) · things **collapse**
+  to one dot that becomes the next hero · a **mosaic** floods from the edges · a **stair wipe** · a bar **closes to a
+  line** that opens into the next scene · a **scan line** reveals the next layer. Measure the anchor point from the page
+  (`getBoundingClientRect` in setup), never type it in. Overlap the two chapters by 0.1–0.3 s.
+- **One protagonist for the film** when the story allows: one object (a packet, a dot, a coin) that changes form
+  chapter to chapter reads as one film; a new hero per chapter reads as slides.
+- **Snap, then drift:** moves take 0.35–0.6 s (expo-out / snappy spring), then a 0.4–0.8 s slow drift before the next
+  beat — fast in, calm hold. Long sine-eased glides read as floaty.
+- **Stepped vs smooth:** counters, pixels, typing and HUD readouts step at 12 per second (`floor(t*12)/12`), camera
+  and cards stay smooth at 60 fps — the contrast reads as digital.
+- Words split into spans need `margin: 0 .12em` (or a real space) — tight tracking glues them together.
 - **Springs from rest:** `ios_at`, `glide`, `pop`, `curve("apple_out")`; 2+ targets → `track(t, frames, preset)` —
   it bends to the new target instead of stop-and-go. Snappy for UI, smooth for cards/camera, heavy for big type.
 - **One leader at a time** (others `follow()` with less travel) — fluid is one thing always moving, not ten at once.
