@@ -155,6 +155,18 @@ def dry_check(slug, step=0.25):
     for name, (t, size, text) in small.items():
         bad += 1
         print(f"  ! TEXT    {name}  t={t:.2f}s  {size:.1f}px < {MIN_TEXT}: {text[:40]!r}")
+    cov = getattr(video, "cover", None)                      # every video ships a designed cover (look "air")
+    if cov is None:
+        bad += 1
+        print("  ✗ COVER   no v.cover — set v.cover = lambda c: cover(c, ...) (SKILL.md § cover), not a film frame")
+    else:
+        try:
+            cov(new_frame(1.0)[1])
+        except Exception as ex:  # noqa: BLE001
+            f = traceback.extract_tb(ex.__traceback__)[-1]
+            errors["cover"] = (0.0, f"{type(ex).__name__}: {ex}", f"{f.filename.split('claude-video/')[-1]}:{f.lineno}")
+            bad += 1
+            print(f"  ✗ ERROR   cover  {errors['cover'][2]}\n            {errors['cover'][1]}")
     print("  ok — no problems" if not bad else f"  {bad} problem(s)")
     web = getattr(video, "web", None).check() if getattr(video, "web", None) is not None else 0
     return 1 if errors or web else 0

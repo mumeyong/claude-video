@@ -27,7 +27,10 @@ then make something you'd be proud of. Never render (CLAUDE.md rule 1); don't st
   grammar if you want a start — don't read old videos.
 - `build(project) -> Video`; all times from `T = project.timing` (`T.line`, `T.word`, `arrive(...)`).
 - Reusable parts → `engine/components/` (then `python -m engine api`); one-off code stays in scenes.py.
-- Cover: `v.cover = lambda c: cover(c, "<hook with one *accent*>", ...)`. `hasil/<slug>/POST.md` from
+- Cover (every video, HTML films too — never a film frame / `cover_t`): `v.cover = lambda c: cover(c,
+  "<hook\n*turn*>", turn="<one quiet line>", kicker=..., bg=<video ground>, ink=..., color=<accent>, hero=<one small
+  object>)`. Default look "air": one flat ground, the hook, ONE small hero, lots of empty space — no boards, scenes,
+  tag pills or extra props. `hasil/<slug>/POST.md` from
   `POST_TEMPLATE.md`. `REVIEW`: 4–6 risky line ids.
 
 ## 4. Look at it (STYLE §6)

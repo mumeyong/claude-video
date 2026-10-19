@@ -81,7 +81,7 @@ One line per public function: `name(signature)` — first docstring line. Import
   - `.type(self, text, at, cps=None)` — 
 
 ## components/cover.py — Designed TikTok cover (1080×1920) — set per video with `v.cover = lambda c: cover(c, ...)` in scenes.py.
-- `cover(c, title, hero=None, kicker="", color=None, tags=(), badge="")` — 
+- `cover(c, title, hero=None, kicker="", color=None, tags=(), badge="", turn="", bg=None, ink=None, look="air")` — title: '\n' splits lines, *word* = serif italic turn. turn: one quiet serif line under the title.
 
 ## components/craft.py — Craft v2 (2026-10-12, STYLE §3) — the motion-designer moves the engine was missing, distilled from the
 - `carry(c, t, t_cut, bbox, old, new, axis="y", direction=-1, travel=None, blur=0.0)` — Cut-the-curve seam: old accelerates out along ONE direction (apple_in, carry_out 0.3 s), the cut lands

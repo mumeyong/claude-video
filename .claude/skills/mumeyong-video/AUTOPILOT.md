@@ -11,7 +11,7 @@ Mode: {{MODE}}
    `hyperframes-keyframes`, `hyperframes-registry` sebagai referensi motion (WEB.md § HyperFrames) — bukan workflow/render-nya. Jangan buka video lain atau source komponen.
 2. Kalau belum ada file ide: bikin dari `ideas/_TEMPLATE.md` + baris di `ideas/README.md`; status 🎬.
 3. SCRIPT.md → `naskah` → `estimate` · PLAN.md dengan **Frame** (STYLE §2: bukan house frame, `v.hud = False`,
-   komposisi beda tiap bab, font pairing sendiri) → `register` · gambarnya (lihat Mode) + cover + `hasil/{{SLUG}}/POST.md` + `REVIEW`.
+   komposisi beda tiap bab, font pairing sendiri) → `register` · gambarnya (lihat Mode) + cover (`v.cover = cover(...)`, look air: hook + satu hero kecil + banyak ruang kosong) + `hasil/{{SLUG}}/POST.md` + `REVIEW`.
 4. `check {{SLUG}} --dry` sampai nggak ada `✗`, lalu critique loop (maks 3 ronde).
 5. Fakta ragu → jangan tampilkan angka; tulis sebagai pertanyaan terbuka.
 
