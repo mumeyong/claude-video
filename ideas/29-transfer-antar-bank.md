@@ -1,6 +1,6 @@
 # Kenapa transfer antar bank kadang "sedang diproses"?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/transfer-antar-bank/`](../videos/transfer-antar-bank/)
 - **Pilar:** B · broad · **Format:** QUICK
 - **Slug:** transfer-antar-bank
 - **Seri:** —

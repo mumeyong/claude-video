@@ -13,3 +13,9 @@
 - 2026-10-13 flash-sale-keranjang: freedom without a layout decision fell back to the house frame in every frame
   (HUD top, headline top-left, hero centre, empty bottom, Inter) — only the hero changed. Design the Frame in PLAN.md
   first, `v.hud = False`, a different composition per chapter, a non-house type pairing (STYLE §2).
+- 2026-10-18 youtube-langsung-main v1: small objects floating on empty white paper + Syne fit-scaled per word + clip-art
+  thumbnails read as cheap, yet critique scored 8s. The standard is maps-tahu-macet / ojol-driver-terdekat: ONE full-bleed
+  world under one camera, texture (grain/halftone), heavy compact type at fixed sizes per role. Score "mostly empty paper" ≤ 6.
+- 2026-10-18 youtube-langsung-main v3: the user rejected the display type twice (Syne v1, all-caps Bricolage v3). What
+  landed: Inter Display 800 sentence case, tight (−0.04 em, word spacing back) + one Instrument Serif italic turn in the
+  accent colour, lines revealed out of a mask, mono uppercase labels. Wide/quirky display faces in caps read cheap here.

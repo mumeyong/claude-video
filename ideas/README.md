@@ -18,8 +18,8 @@ Satu file per ide (`NN-slug.md`, salin dari `_TEMPLATE.md`). Indeks dikelompokka
 | 25 | [Barang flash sale "habis" padahal udah di keranjang](25-flash-sale-keranjang.md) | 🎬 [produksi](../videos/flash-sale-keranjang/) | 60–75 s | minimarket (rak, produk, label_stok, tangan) | QUICK · rak minimarket barang terakhir |
 | 26 | [Gimana ojol nemuin driver terdekat dalam 3 detik?](26-ojol-driver-terdekat.md) | 🎬 [produksi](../videos/ojol-driver-terdekat/) | 60–75 s | geo_grid, motor_dot | QUICK · sektor tribun stadion |
 | 27 | [Google Maps tahu jalan macet dari mana?](27-maps-tahu-macet.md) | 💡 ide | 60–70 s | road_speed, phone_dot | QUICK · barisan semut · ⚠️ cek fakta |
-| 28 | [Kenapa video YouTube langsung main, padahal servernya jauh?](28-youtube-langsung-main.md) | 💡 ide | 60–75 s | warung_cache, supply_truck | QUICK · warung titip stok (CDN) |
-| 29 | [Kenapa transfer antar bank kadang "sedang diproses"?](29-transfer-antar-bank.md) | 💡 ide | 60–75 s | bus_terminal | QUICK · ojek vs bus · ⚠️ cek fakta wajib |
+| 28 | [Kenapa video YouTube langsung main, padahal servernya jauh?](28-youtube-langsung-main.md) | 🎬 [produksi](../videos/youtube-langsung-main/) | 60–75 s | — (film.html) | QUICK · progress bar = jalur data (CDN) |
+| 29 | [Kenapa transfer antar bank kadang "sedang diproses"?](29-transfer-antar-bank.md) | 🎬 [produksi](../videos/transfer-antar-bank/) | 60–75 s | — (film.html) | QUICK · ojek vs bus · tanpa angka (fakta belum dicek ulang) |
 | 30 | [Kenapa sinyal hilang pas masuk lift?](30-sinyal-hilang-di-lift.md) | 💡 ide | 60–70 s | lift, signal_bars | QUICK · musik kamar sebelah |
 | 37 | [Coba lihat huruf ketiga](37-coba-lihat-huruf-ketiga.md) | 💡 ide | 60–70 s | loupe, url_bar | QUICK · phishing huruf mirip (punycode) · tipografi murni · cadangan cepat · ⚠️ cek fakta browser |
 | 38 | [Fotomu nyimpen alamat rumahmu](38-foto-nyimpen-alamat-rumah.md) | 💡 ide | 60–75 s | foto_flip, peta_pin | QUICK · EXIF/GPS · foto dibalik = label bagasi · ⚠️ cek fakta per app/versi |

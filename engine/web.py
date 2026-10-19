@@ -55,6 +55,16 @@ def run(*args, capture=False):
                           capture_output=capture)
 
 
+def _png_ok(p):
+    """A cached frame is usable only if complete — an interrupted render leaves 0-byte / truncated PNGs."""
+    try:
+        with open(p, "rb") as f:
+            f.seek(-12, os.SEEK_END)
+            return f.read().endswith(b"IEND\xaeB`\x82")
+    except OSError:
+        return False
+
+
 def _times(ts):
     return ",".join(f"{t:.4f}" for t in ts)
 
@@ -158,10 +168,10 @@ class Film:
     def frame_path(self, t):
         for fps, d in self._frame_dirs():
             p = d / f"{int(round(t * fps)):06d}.png"
-            if p.exists():
+            if _png_ok(p):
                 return p
         p = self._at / f"{t:.4f}.png" if self._at else None
-        return p if p and p.exists() else None
+        return p if p and _png_ok(p) else None
 
     def draw(self, c, t):
         path = self.frame_path(t)
@@ -192,7 +202,7 @@ class Film:
             for f in range(int(fix[0] * fps), int(math.ceil(fix[1] * fps))):
                 (d / f"{f:06d}.png").unlink(missing_ok=True)
         fa, fb = max(f0, int(math.ceil(self.start * fps))), min(f1, int(math.ceil(self.end * fps)))
-        have = {int(p.stem) for p in d.glob("[0-9]*.png")}
+        have = {int(p.stem) for p in d.glob("[0-9]*.png") if _png_ok(p)}
         runs, a = [], None
         for f in range(fa, fb + 1):
             gap = f < fb and f not in have

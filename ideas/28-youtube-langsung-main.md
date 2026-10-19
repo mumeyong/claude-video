@@ -1,6 +1,6 @@
 # Kenapa video YouTube langsung main, padahal servernya jauh?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/youtube-langsung-main/`](../videos/youtube-langsung-main/)
 - **Pilar:** B · broad · **Format:** QUICK
 - **Slug:** youtube-langsung-main
 - **Seri:** —
