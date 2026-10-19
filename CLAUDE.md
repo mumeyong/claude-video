@@ -29,10 +29,9 @@ Workflow: skill `mumeyong-video` (`SKILL.md`). **Fixed: the voice + opening logo
 12. **Free craft:** look, colors, fonts, metaphor, structure, layout, motion are Claude's call. Don't repeat the last video (`recent <slug>`,
     info only); the critique loop judges quality — add a rule only when the same mistake happens twice.
 13. **Tech terms stay English** (`GLOSSARY.md`).
-14. **HyperFrames skills are a library, not the workflow.** `mumeyong-video` owns every video here; never
-    `hyperframes init/render/preview/snapshot/tts`. Only the library skills are installed (`hyperframes-animation`,
-    `-keyframes`, `-creative`, `-registry`, `-core`) — motion craft inside film.html (WEB.md § HyperFrames). Don't reinstall
-    the workflow skills; the plugin is disabled in `.claude/settings.json`.
+14. **HyperFrames skills are a library, not the workflow.** `mumeyong-video` owns every video here — never route
+    through `hyperframes` / `faceless-explainer` / `general-video` etc., never `hyperframes init/render/preview/snapshot/tts`.
+    Use `hyperframes-animation`, `-keyframes`, `-creative`, `-registry` for motion craft inside film.html (WEB.md § HyperFrames).
 
 ## Layout
 ```
