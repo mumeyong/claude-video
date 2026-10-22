@@ -38,8 +38,8 @@ then make something you'd be proud of. Never render (CLAUDE.md rule 1); don't st
 
 ## 5. Hand over
 ```bash
-claude-video <slug>              # naskah, voice (align voice.wav or TTS), check, final render → hasil/<slug>/
-claude-video <slug> preview      # optional 540p round
+souffle <slug>              # naskah, voice (align voice.wav or TTS), check, final render → hasil/<slug>/
+souffle <slug> preview      # optional 540p round
 ```
 Feedback names a line id or timecode; turn it into one line in `LESSONS.md`. After posting: numbers in POST.md,
 archive `videos/<slug>` → `videos/_arsip/`, `hasil/<slug>` → `hasil/_tayang/`. Commit only when the user says so.

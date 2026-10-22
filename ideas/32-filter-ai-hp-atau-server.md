@@ -1,6 +1,6 @@
 # Filter AI di kamera HP: diproses di HP atau di server?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/filter-ai-hp-atau-server/`](../videos/filter-ai-hp-atau-server/)
 - **Pilar:** B · AI sehari-hari · **Format:** QUICK
 - **Slug:** filter-ai-hp-atau-server
 - **Seri:** —
@@ -28,4 +28,4 @@ Metafora: **printer rumah vs percetakan** — print biasa langsung di rumah, ban
 
 ## Catatan
 - ✗ visual robot/otak. Sudut infra, bukan review app.
-- Mulai: `claude-video 32` atau `claude-video "Filter AI di kamera HP: diproses di HP atau di server?"`
+- Mulai: `souffle 32` atau `souffle "Filter AI di kamera HP: diproses di HP atau di server?"`

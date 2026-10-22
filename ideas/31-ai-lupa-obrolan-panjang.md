@@ -28,4 +28,4 @@ Metafora: **papan tulis kelas** — guru nulis terus, papan penuh, tulisan palin
 
 ## Catatan
 - Tetap pakai istilah English: context window, token, prompt. Jangan klaim angka context per model tanpa sumber.
-- Mulai: `claude-video 31` atau `claude-video "Kenapa AI lupa isi obrolan yang panjang?"`
+- Mulai: `souffle 31` atau `souffle "Kenapa AI lupa isi obrolan yang panjang?"`

@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-# MUMEYONG — one entry point, works from any folder (installed as `claude-video`).
-#   claude-video                       list videos + status
-#   claude-video "Judul video baru"    AUTOPILOT: new video from a title or idea number → Claude (headless) writes
+# MUMEYONG — one entry point, works from any folder (installed as `souffle`).
+#   souffle                       list videos + status
+#   souffle "Judul video baru"    AUTOPILOT: new video from a title or idea number → Claude (headless) writes
 #                                      idea + script + plan + scenes.py until check is clean → final render → hasil/
-#   claude-video ideas                 list ideas not produced yet
-#   claude-video new "Judul video"     only scaffold the folder (no Claude, no render)
-#   claude-video <slug>                naskah → voice (recording, else TTS) → check → final render → hasil/<slug>/
-#   claude-video <slug> preview        review round instead: cover → sheet → stills → 540p preview (optional)
-#   claude-video open <slug>           open the video folder
-#   claude-video <command> ...         any engine command — see `claude-video help`
+#   souffle ideas                 list ideas not produced yet
+#   souffle new "Judul video"     only scaffold the folder (no Claude, no render)
+#   souffle <slug>                naskah → voice (recording, else TTS) → check → final render → hasil/<slug>/
+#   souffle <slug> preview        review round instead: cover → sheet → stills → 540p preview (optional)
+#   souffle open <slug>           open the video folder
+#   souffle <command> ...         any engine command — see `souffle help`
 export CV_CWD="$PWD"   # relative paths in arguments (--ref, ref <file>) are resolved from where you ran it
 REPO="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
 cd "$REPO" || exit 1

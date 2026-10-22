@@ -28,4 +28,4 @@ Metafora: **ojek vs bus antar kota** — ojek berangkat langsung, bus nunggu pen
 
 ## Catatan
 - ⚠️ cek fakta WAJIB: BI-FAST, SKN, RTGS — limit, jam, biaya 2026. Beda dari bank-down (itu soal app crash).
-- Mulai: `claude-video 29` atau `claude-video "Kenapa transfer antar bank kadang "sedang diproses"?"`
+- Mulai: `souffle 29` atau `souffle "Kenapa transfer antar bank kadang "sedang diproses"?"`

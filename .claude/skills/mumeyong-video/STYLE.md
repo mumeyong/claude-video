@@ -15,6 +15,10 @@ What that standard looks like on screen:
 - **Precision:** aligned to a grid, optical spacing, nothing touching an edge or another object by accident.
 - **Motion with weight:** springs, snap-then-drift, handoffs instead of cuts (§3); every move lands on the voice.
 - **Variety by design:** the look of the next video should not be mistaken for the last one (`recent <slug>`).
+- **Ground: dark or light, both are house.** Alternate by topic mood — don't default to dark. A light film keeps the
+  same craft: a full-bleed *designed* light world (warm off-white / pastel / daylight, never empty white paper),
+  grain or paper texture, big heroes with real shadows, the fixed type slot in near-black ink, one saturated accent
+  that holds contrast on light (≥ 4.5:1 for type). Cover ground follows the film's ground.
 
 ## 1. Ideas worth reaching for
 - **A metaphor from Indonesian daily life** often carries a whole video (rusun water pipe, guest book at the

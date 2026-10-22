@@ -6,6 +6,9 @@ __pycache__/
 # ── videos + finals — never in git (local only; back up hasil/ and finished videos yourself) ──
 videos/
 hasil/
+# videos/ and hasil/ are symlinks to /mnt/windows/YONGKY/Aschente/souffle (patterns ending in / skip symlinks)
+/videos
+/hasil
 
 # reference videos for motion study (not ours to publish)
 refs/

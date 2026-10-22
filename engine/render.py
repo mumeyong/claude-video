@@ -191,7 +191,7 @@ def export(slug, targets=None):
     d = find("hasil", slug)
     src = d / f"{slug}.mp4"
     if not src.exists():
-        sys.exit(f"{src} missing — render first: claude-video {slug}")
+        sys.exit(f"{src} missing — render first: souffle {slug}")
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
                                 str(src)], capture_output=True, text=True, check=True).stdout)
     up = d / "upload"

@@ -1,6 +1,6 @@
 # Postmortem: malam waktu production mati
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/postmortem-production-mati/`](../videos/postmortem-production-mati/)
 - **Pilar:** D · deep · **Format:** FULL
 - **Slug:** postmortem-production-mati
 - **Seri:** — (kandidat Season 2 Bongkar)
@@ -28,4 +28,4 @@ Metafora: **kotak hitam pesawat** — setelah kejadian, rekamannya diputar ulang
 
 ## Catatan
 - ❓ butuh insiden asli dari user (klien disamarkan, angka asli). Tanpa itu jangan diproduksi.
-- Mulai: `claude-video 35` atau `claude-video "Postmortem: malam waktu production mati"`
+- Mulai: `souffle 35` atau `souffle "Postmortem: malam waktu production mati"`

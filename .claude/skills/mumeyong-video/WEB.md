@@ -48,4 +48,4 @@ films: `hyperframes-animation` (motion rules, scene blueprints, transitions, 24 
 ## Look at it
 `check <slug> --dry` (fix every ✗) → `critique <slug>` → read `out/critique/{sheet,hook,moves}.png` → fix the 3
 worst (text outside the box, unreadable, dead or crowded moments) → repeat, ≤ 3 rounds. Live preview for the user:
-`claude-video serve` → `http://localhost:5173/videos/<slug>/film.html?t=4.2`.
+`souffle serve` → `http://localhost:5173/videos/<slug>/film.html?t=4.2`.

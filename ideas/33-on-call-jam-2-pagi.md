@@ -1,6 +1,6 @@
 # On-call jam 2 pagi: kerjaan cloud engineer yang nggak kelihatan
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/on-call-jam-2-pagi/`](../videos/on-call-jam-2-pagi/)
 - **Pilar:** C · karier · **Format:** QUICK
 - **Slug:** on-call-jam-2-pagi
 - **Seri:** —
@@ -28,4 +28,4 @@ Metafora: **dokter jaga IGD** — nggak tiap malam ada pasien, tapi harus siap. 
 
 ## Catatan
 - ❓ butuh cerita on-call asli dari user (disamarkan). Soft CTA: mentoring / waitlist kelas.
-- Mulai: `claude-video 33` atau `claude-video "On-call jam 2 pagi: kerjaan cloud engineer yang nggak kelihatan"`
+- Mulai: `souffle 33` atau `souffle "On-call jam 2 pagi: kerjaan cloud engineer yang nggak kelihatan"`

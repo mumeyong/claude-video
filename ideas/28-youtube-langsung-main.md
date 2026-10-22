@@ -28,4 +28,4 @@ Metafora: **warung titip stok** — pabrik di Jawa Barat, tapi Indomie udah ada 
 
 ## Catatan
 - ⚠️ cek fakta Google Global Cache / Netflix Open Connect di ISP Indonesia sebelum disebut.
-- Mulai: `claude-video 28` atau `claude-video "Kenapa video YouTube langsung main, padahal servernya jauh?"`
+- Mulai: `souffle 28` atau `souffle "Kenapa video YouTube langsung main, padahal servernya jauh?"`

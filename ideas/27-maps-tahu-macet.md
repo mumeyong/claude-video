@@ -28,4 +28,4 @@ Metafora: **barisan semut** — tiap semut nggak tahu macet, tapi dilihat dari a
 
 ## Catatan
 - ⚠️ cek fakta sumber publik (blog Google, eksperimen Simon Weckert 2020).
-- Mulai: `claude-video 27` atau `claude-video "Google Maps tahu jalan macet dari mana?"`
+- Mulai: `souffle 27` atau `souffle "Google Maps tahu jalan macet dari mana?"`

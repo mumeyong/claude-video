@@ -71,7 +71,7 @@ const shot = async (page, t) => { await page.evaluate((t) => window.seek(t), t);
 async function frames(browser, port) {
   const fps = +arg('fps', 60), sub = +arg('sub', 1), out = arg('out'), dur = +arg('dur', 1e9);
   const f0 = +arg('from', 0), f1 = +arg('to');
-  const jobs = Math.max(1, Math.min(+arg('jobs', Math.max(1, Math.min(6, Math.floor(cpus().length / 3)))), f1 - f0));
+  const jobs = Math.max(1, Math.min(+arg('jobs', Math.max(1, Math.min(8, Math.floor(cpus().length / 3)))), f1 - f0));
   mkdirSync(out, { recursive: true });
   const size = Math.ceil((f1 - f0) / jobs), t0 = Date.now();
   let done = 0;
@@ -79,7 +79,10 @@ async function frames(browser, port) {
   await Promise.all(Array.from({ length: jobs }, async (_, j) => {
     const a = f0 + j * size, b = Math.min(f1, a + size);
     if (a >= b) return;
-    const page = await open(browser, port, errors);
+    // One browser per job: screenshots are PNG-encoded in the browser process, so a shared browser caps every
+    // job at one core. Job 0 reuses the browser it was handed.
+    const own = j ? await launch() : browser;
+    const page = await open(own, port, errors);
     // tmix averages each group of `sub` subframes; select keeps the last of each group.
     const vf = sub > 1 ? `tmix=frames=${sub},select='eq(mod(n\\,${sub})\\,${sub - 1})'` : 'null';
     const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(fps * sub), '-i', '-',
@@ -99,6 +102,7 @@ async function frames(browser, port) {
     const code = await new Promise((r) => ff.on('close', r));
     if (code) throw new Error(`ffmpeg exited ${code}`);
     await page.close();
+    if (own !== browser) await own.close();
   }));
   console.log(`\r  web frames ${f1 - f0} in ${((Date.now() - t0) / 1000).toFixed(0)}s (${jobs} pages${sub > 1 ? `, ${sub} subframes` : ''})          `);
   if (errors.length) { console.error('page errors:\n  ' + [...new Set(errors)].join('\n  ')); process.exitCode = 1; }

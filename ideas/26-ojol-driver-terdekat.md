@@ -28,4 +28,4 @@ Metafora: **cari teman di stadion lewat nomor tribun** — nggak teriak ke semua
 
 ## Catatan
 - Jelasin konsep umum, jangan klaim cara kerja internal Gojek/Grab.
-- Mulai: `claude-video 26` atau `claude-video "Gimana ojol nemuin driver terdekat dalam 3 detik?"`
+- Mulai: `souffle 26` atau `souffle "Gimana ojol nemuin driver terdekat dalam 3 detik?"`

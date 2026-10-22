@@ -28,4 +28,4 @@ Metafora: **talang bocor** — atap rumah aman, tapi satu sambungan talang netes
 
 ## Catatan
 - ⚠️ cek fakta wajib (redaman fiber vs air di konektor, rain fade cuma relevan di satelit/microwave). Jangan bilang "pasti".
-- Mulai: `claude-video 21` atau `claude-video "WiFi lemot pas hujan: mitos atau beneran?"`
+- Mulai: `souffle 21` atau `souffle "WiFi lemot pas hujan: mitos atau beneran?"`

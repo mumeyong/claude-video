@@ -20,7 +20,7 @@ Satu file per ide (`NN-slug.md`, salin dari `_TEMPLATE.md`). Indeks dikelompokka
 | 27 | [Google Maps tahu jalan macet dari mana?](27-maps-tahu-macet.md) | 💡 ide | 60–70 s | road_speed, phone_dot | QUICK · barisan semut · ⚠️ cek fakta |
 | 28 | [Kenapa video YouTube langsung main, padahal servernya jauh?](28-youtube-langsung-main.md) | 🎬 [produksi](../videos/youtube-langsung-main/) | 60–75 s | — (film.html) | QUICK · progress bar = jalur data (CDN) |
 | 29 | [Kenapa transfer antar bank kadang "sedang diproses"?](29-transfer-antar-bank.md) | 🎬 [produksi](../videos/transfer-antar-bank/) | 60–75 s | — (film.html) | QUICK · ojek vs bus · tanpa angka (fakta belum dicek ulang) |
-| 30 | [Kenapa sinyal hilang pas masuk lift?](30-sinyal-hilang-di-lift.md) | 💡 ide | 60–70 s | lift, signal_bars | QUICK · musik kamar sebelah |
+| 30 | [Kenapa sinyal hilang pas masuk lift?](30-sinyal-hilang-di-lift.md) | 🎬 [produksi](../videos/sinyal-hilang-di-lift/) | 60–70 s | — (HTML film) | QUICK · musik kamar sebelah |
 | 37 | [Coba lihat huruf ketiga](37-coba-lihat-huruf-ketiga.md) | 💡 ide | 60–70 s | loupe, url_bar | QUICK · phishing huruf mirip (punycode) · tipografi murni · cadangan cepat · ⚠️ cek fakta browser |
 | 38 | [Fotomu nyimpen alamat rumahmu](38-foto-nyimpen-alamat-rumah.md) | 💡 ide | 60–75 s | foto_flip, peta_pin | QUICK · EXIF/GPS · foto dibalik = label bagasi · ⚠️ cek fakta per app/versi |
 | 09 | [Slot berita: Bongkar Kejadian](09-slot-bongkar-kejadian.md) | 💡 format | 60–75 s | pakai ulang | reaktif ≤ 48 jam |
@@ -47,7 +47,7 @@ format tetap: yang kamu lihat → yang sebenernya kejadian → yang bisa kamu la
 | 17 | [Kenapa AI butuh listrik segede satu kota?](17-ai-butuh-listrik.md) | 🎬 produksi — [`videos/ai-butuh-listrik`](../videos/ai-butuh-listrik/) | 60–75 s | setrika, uap_panas, pembangkit (+ gpu_card, data_center ulang) | QUICK · setrika rumah = GPU · classic + Apple craft · ⚠️ angka wajib bersumber |
 | 18 | [AI gratis itu — siapa yang bayar?](18-ai-gratis-siapa-bayar.md) | 🎬 produksi — [`videos/ai-gratis-siapa-bayar`](../videos/ai-gratis-siapa-bayar/) | 60–75 s | struk, saklar | QUICK · struk Rp0 yang dibalik · classic + Apple craft · paper |
 | 31 | [Kenapa AI lupa isi obrolan yang panjang?](31-ai-lupa-obrolan-panjang.md) | 🎬 produksi — [`ai-lupa-obrolan-panjang`](../videos/ai-lupa-obrolan-panjang/) | 60–75 s | papan_tulis · penghapus · memori | QUICK · papan tulis dihapus (context window) · paper-big |
-| 32 | [Filter AI di kamera HP: diproses di HP atau di server?](32-filter-ai-hp-atau-server.md) | 💡 ide | 60–75 s | chip_npu | QUICK · printer rumah vs percetakan |
+| 32 | [Filter AI di kamera HP: diproses di HP atau di server?](32-filter-ai-hp-atau-server.md) | 🎬 produksi — [`filter-ai-hp-atau-server`](../videos/filter-ai-hp-atau-server/) | 60–75 s | — (film.html) | QUICK · lingkaran loading = rute fotomu · flat-big gelap + lime |
 | 36 | [Suara ini bukan suaraku](36-suara-ini-bukan-suaraku.md) | 💡 ide ⭐ tes pertama | 60–75 s | kolase_audio (+ chat_phone ulang) | QUICK · voice clone · surat kaleng dari potongan audio · reveal: narasi = clone suaraku · kata sandi keluarga |
 | 39 | [Aku nyembunyiin satu kalimat di CV ini](39-satu-kalimat-di-cv.md) | 💡 ide | 60–75 s | kertas_uv, stempel | QUICK · prompt injection · lampu UV · eksperimen setup sendiri · framing etis |
 
@@ -60,8 +60,8 @@ format tetap: yang kamu lihat → yang sebenernya kejadian → yang bisa kamu la
 | 11 | [Dari System Engineer ke Senior — jalur aku](11-jenjang-karier-cloud.md) | 🎬 produksi — [`videos/jalur-karier-cloud`](../videos/jalur-karier-cloud/) | 75–80 s | skill_tree, name_card | artefak = CV asli · classic + reel moves |
 | 13 | [5 pertanyaan interview cloud](13-pertanyaan-interview-cloud.md) | 🎬 produksi — [`videos/interview-cloud-5-pertanyaan`](../videos/interview-cloud-5-pertanyaan/) | 60–75 s | flip_card, countdown_ring | QUICK · kuis kartu · reel look · ⚠️ framing "aku tanya" |
 | 19 | [AI nggak gantiin cloud engineer — AI butuh cloud engineer](19-ai-butuh-cloud-engineer.md) | 🎬 produksi — [`videos/ai-butuh-cloud-engineer`](../videos/ai-butuh-cloud-engineer/) | 60–75 s | panggung, sorot | QUICK · panggung hajatan · soft CTA ke produk |
-| 33 | [On-call jam 2 pagi: kerjaan cloud engineer yang nggak kelihatan](33-on-call-jam-2-pagi.md) | 💡 ide | 65–80 s | pager_alert, night_room | QUICK · dokter jaga IGD · ❓ cerita asli |
-| 34 | [Sertifikat cloud: worth it atau buang duit?](34-sertifikat-cloud-worth-it.md) | 💡 ide | 60–75 s | license_card, drive_road | QUICK · SIM vs jam terbang · opini |
+| 33 | [On-call jam 2 pagi: kerjaan cloud engineer yang nggak kelihatan](33-on-call-jam-2-pagi.md) | 🎬 [produksi](../videos/on-call-jam-2-pagi/) | 65–80 s | pager_alert, night_room | QUICK · dokter jaga IGD · ❓ cerita asli |
+| 34 | [Sertifikat cloud: worth it atau buang duit?](34-sertifikat-cloud-worth-it.md) | 🎬 [produksi](../videos/sertifikat-cloud-worth-it/) | 60–75 s | license_card, drive_road | QUICK · SIM vs jam terbang · opini |
 | 40 | [Video ini 400 baris kode](40-video-ini-400-baris-kode.md) | 💡 ide | 45–60 s | code_scrub | QUICK · behind the scenes frame = f(t) · spring-lab before/after · soft CTA jasa motion |
 
 ## D · Seri Bongkar Arsitektur (deep, portfolio buat sponsor) — ✔ tamat EP07
@@ -83,7 +83,7 @@ disamarkan), format tetap masalah → keputusan → diagram → hasil, outro = t
 
 | # | Ide | Status | Durasi | Butuh komponen baru | Catatan |
 |---|---|---|---|---|---|
-| 35 | [Postmortem: malam waktu production mati](35-postmortem-production-mati.md) | 💡 ide | 75–90 s | blackbox, incident_timeline | FULL · kotak hitam pesawat · ❓ insiden asli · kandidat Season 2 |
+| 35 | [Postmortem: malam waktu production mati](35-postmortem-production-mati.md) | 🎬 [produksi](../videos/postmortem-production-mati/) | 75–90 s | blackbox, incident_timeline | FULL · kotak hitam pesawat · ❓ insiden asli · kandidat Season 2 |
 | 01 | [Gimana aku hemat $14.000/bulan biaya cloud](01-hemat-14k-cloud.md) | 🎬 produksi — [`videos/hemat-14k-cloud`](../videos/hemat-14k-cloud/) fase 5: review | 90–120 s | cost chart, bar before/after | cerita FinOps asli · FULL |
 
 ## Strategi & urutan tayang
@@ -91,8 +91,8 @@ Lihat **[STRATEGY.md](STRATEGY.md)** — tujuan creator income, rasio pilar **3 
 format FULL vs QUICK, aturan anti-slop, dan urutan tayang yang disarankan.
 
 ## Cara pakai
-- **Lihat ide yang siap:** `claude-video ideas` (nomor + pilar + judul).
-- **Mulai produksi dari ide:** `claude-video 24` atau `claude-video "Kenapa OTP suka telat datang?"` → bikin `videos/<slug>/`
+- **Lihat ide yang siap:** `souffle ideas` (nomor + pilar + judul).
+- **Mulai produksi dari ide:** `souffle 24` atau `souffle "Kenapa OTP suka telat datang?"` → bikin `videos/<slug>/`
   pakai slug dari file ide, status ide jadi 🎬. Lalu di Claude Code: "kerjain video <slug>".
 - **Nambah ide:** bilang ke Claude "simpan ide: …" → dibuatin file + baris di tabel ini.
 - **Mulai produksi:** "kerjain ide #01" → status 🎬, Claude bikin `videos/<slug>/` dan mulai dari SCRIPT.md.

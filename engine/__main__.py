@@ -225,7 +225,7 @@ def list_ideas():
         if not status.startswith(("💡", "⭐")) or "<" in slug or "format" in status:
             continue
         print(f"{num}  {pillar[:20]:20s} {title}")
-    print('\n  claude-video <nomor>   atau   claude-video "Judul persis"   → bikin videos/<slug>/ dari ide itu')
+    print('\n  souffle <nomor>   atau   souffle "Judul persis"   → bikin videos/<slug>/ dari ide itu')
     return 0
 
 
@@ -237,7 +237,7 @@ def new_video(title, hint=True):
     if idea:
         _, title, slug, _, _, idea_path = idea
     elif title.lstrip("#").isdigit():
-        sys.exit(f"nggak ada ide nomor {title} — lihat: claude-video ideas")
+        sys.exit(f"nggak ada ide nomor {title} — lihat: souffle ideas")
     else:
         slug = slugify(title)
     dst = ROOT / "videos" / slug
@@ -273,7 +273,7 @@ def new_video(title, hint=True):
         return 0
     print(f"  lanjut di Claude Code (folder {ROOT}):")
     print(f"    \"kerjain video {slug}\"   → brief, naskah + NASKAH.md, storyboard, kode (+ status di ideas/README.md)")
-    print(f"  setelah ada scenes.py:  claude-video {slug}")
+    print(f"  setelah ada scenes.py:  souffle {slug}")
     return 0
 
 
@@ -286,7 +286,7 @@ def resolve(arg):
     if idea:
         return idea[2], idea[1]
     if arg.lstrip("#").isdigit():
-        sys.exit(f"nggak ada ide nomor {arg} — lihat: claude-video ideas")
+        sys.exit(f"nggak ada ide nomor {arg} — lihat: souffle ideas")
     return slugify(arg), arg
 
 
@@ -350,7 +350,7 @@ def list_videos():
         names = sorted(x.name for x in sub.iterdir() if x.is_dir() and not x.name.startswith((".", "_")))
         if names:
             print(f"  videos/{sub.name}/ ({len(names)}): {', '.join(names)}")
-    print("\n  claude-video <video>        review   ·   claude-video <video> final   ·   claude-video \"Judul baru\"")
+    print("\n  souffle <video>        review   ·   souffle <video> final   ·   souffle \"Judul baru\"")
     return 0
 
 
@@ -378,7 +378,7 @@ def go(p, a):
 
     if not (p.dir / "scenes.py").exists():   # still a brief: no script/voice/render work to do yet
         print(f"videos/{p.slug}/ masih brief (belum ada naskah + scenes.py).\n"
-              f"  autopilot: claude-video auto {p.slug}   (atau di Claude Code: \"kerjain video {p.slug}\")")
+              f"  autopilot: souffle auto {p.slug}   (atau di Claude Code: \"kerjain video {p.slug}\")")
         return 1
 
     if _newer(script, naskah):
@@ -425,7 +425,9 @@ def go(p, a):
         done.append(f"sheet       {render.render_sheet(p.slug)}")
         rv = p.dir / "REVIEW"
         if rv.exists():
-            ids = [w for ln in rv.read_text().splitlines() for w in ln.split("#")[0].split()]
+            # one still per line: the first token is a line id (L05) or seconds; the rest is a note
+            ids = [ln.split()[0] for ln in (r.split("#")[0] for r in rv.read_text().splitlines()) if ln.split()]
+            ids = [x for x in ids if re.fullmatch(r"[Ll]\d+|\d+(\.\d+)?", x)]
             if ids:
                 step(f"stills ({len(ids)})")
                 tm = p.timing
@@ -451,7 +453,7 @@ def go(p, a):
             print("\n⚠ CEK SEBELUM UPLOAD — pertanyaan terbuka dari autopilot (salah? bilang ke Claude, lalu ulang):")
             print(txt[txt.index("ertanyaan terbuka") - 1:].split("\n", 1)[-1].rstrip())
     else:
-        print(f"\n  ⚠ preview = 540p, JANGAN di-upload. Buat upload: claude-video {p.slug}")
+        print(f"\n  ⚠ preview = 540p, JANGAN di-upload. Buat upload: souffle {p.slug}")
     return 0
 
 

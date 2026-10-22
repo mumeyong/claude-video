@@ -1,6 +1,6 @@
 # Sertifikat cloud: worth it atau buang duit?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/sertifikat-cloud-worth-it/`](../videos/sertifikat-cloud-worth-it/)
 - **Pilar:** C · karier · **Format:** QUICK
 - **Slug:** sertifikat-cloud-worth-it
 - **Seri:** —
@@ -28,4 +28,4 @@ Metafora: **SIM vs jam terbang nyetir** — kartu SIM di dompet vs jalan macet n
 
 ## Catatan
 - Opini berani = mancing komentar. ❓ jumlah & nama sertifikat user asli — kalau belum tahu, jangan tampilkan angka. Beda hero dari `cert_card` (roadmap).
-- Mulai: `claude-video 34` atau `claude-video "Sertifikat cloud: worth it atau buang duit?"`
+- Mulai: `souffle 34` atau `souffle "Sertifikat cloud: worth it atau buang duit?"`

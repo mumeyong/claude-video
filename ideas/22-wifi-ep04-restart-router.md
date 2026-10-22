@@ -28,4 +28,4 @@ Metafora: **buku tamu satpam yang penuh** — tiap koneksi dicatat, halaman habi
 
 ## Catatan
 - Sudut "cuma Mumeyong": cerita restart server production yang nutupin bug asli (disamarkan).
-- Mulai: `claude-video 22` atau `claude-video "Restart router beneran ngefek?"`
+- Mulai: `souffle 22` atau `souffle "Restart router beneran ngefek?"`

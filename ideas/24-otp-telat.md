@@ -28,4 +28,4 @@ Metafora: **kantor pos sortir** — amplop OTP lewat conveyor, cap pos tiap kant
 
 ## Catatan
 - ⚠️ cek fakta alur SMS A2P di Indonesia (aggregator, SMSC). Jangan sebut merek bank/app negatif.
-- Mulai: `claude-video 24` atau `claude-video "Kenapa OTP suka telat datang?"`
+- Mulai: `souffle 24` atau `souffle "Kenapa OTP suka telat datang?"`

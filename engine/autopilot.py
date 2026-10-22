@@ -1,5 +1,5 @@
 """Autopilot: run Claude Code headless to write a whole video (idea → SCRIPT → NASKAH → scenes.py → PLAN →
-cover + POST.md → check --dry clean → critique loop), so `claude-video "Judul"` can go straight on to the final render.
+cover + POST.md → check --dry clean → critique loop), so `souffle "Judul"` can go straight on to the final render.
 
 The user runs this (it spawns `claude -p`). The headless Claude only writes text files and may run the
 text-only engine commands (check / naskah / estimate / api / register) plus `critique` (PNG review sheets it
@@ -49,8 +49,11 @@ def autopilot(slug, title, note="", mode="web"):
     prompt = prompt.replace("{{SLUG}}", slug).replace("{{TITLE}}", title)
     if note:
         prompt += f"\n\n## Catatan tambahan dari user\n{note}\n"
+    # videos/ and hasil/ may be symlinks to another drive: grant their real paths, or every Write is refused
+    extra = sorted({str(p.resolve()) for p in (ROOT / "videos", ROOT / "hasil") if p.resolve() != p.absolute()})
     cmd = ["claude", "-p", prompt, "--output-format", "stream-json", "--verbose",
-           "--permission-mode", "acceptEdits", "--allowedTools", *ALLOWED]
+           "--permission-mode", "acceptEdits", *(["--add-dir", *extra] if extra else []),
+           "--allowedTools", *ALLOWED]
     print(f"━━ autopilot: Claude nulis videos/{slug}/ (naskah → plan → scenes.py → check). ± 10–25 menit…")
     proc = subprocess.Popen(cmd, cwd=ROOT, stdout=subprocess.PIPE, text=True)
     result = None

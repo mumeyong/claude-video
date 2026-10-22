@@ -1,6 +1,6 @@
 # Kenapa sinyal hilang pas masuk lift?
 
-- **Status:** 💡 ide
+- **Status:** 🎬 produksi — [`videos/sinyal-hilang-di-lift/`](../videos/sinyal-hilang-di-lift/)
 - **Pilar:** B · broad · **Format:** QUICK
 - **Slug:** sinyal-hilang-di-lift
 - **Seri:** —
@@ -28,4 +28,4 @@ Metafora: **suara musik dari kamar sebelah** — bass tembus dinding, suara ting
 
 ## Catatan
 - ⚠️ cek fakta ringan (Faraday cage nggak sempurna, frekuensi 5G di Indonesia).
-- Mulai: `claude-video 30` atau `claude-video "Kenapa sinyal hilang pas masuk lift?"`
+- Mulai: `souffle 30` atau `souffle "Kenapa sinyal hilang pas masuk lift?"`

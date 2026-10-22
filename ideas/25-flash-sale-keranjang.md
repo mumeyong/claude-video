@@ -28,4 +28,4 @@ Metafora: **rak minimarket barang terakhir** — banyak tangan nyamber satu bara
 
 ## Catatan
 - Bedain dari war-tiket-crash (itu soal server crash, ini soal stok). Hero & warna beda.
-- Mulai: `claude-video 25` atau `claude-video "Barang flash sale "habis" padahal udah di keranjang. Kok bisa?"`
+- Mulai: `souffle 25` atau `souffle "Barang flash sale "habis" padahal udah di keranjang. Kok bisa?"`

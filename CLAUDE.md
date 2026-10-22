@@ -47,14 +47,14 @@ _archive/rules-v*/   older rule sets (history only — don't read)
 
 ## Commands (the user runs these)
 ```bash
-claude-video <slug>              # naskah → voice (align voice.wav, else TTS) → check → final → hasil/<slug>/
-claude-video <slug> preview      # optional 540p round
-claude-video "Judul video"       # autopilot: Claude headless writes everything, then renders
-claude-video "promo X" --url https://x.com --dur 20   # + facts + real screenshots from a page, ~20 s
-claude-video "Judul" --ref clip.mp4 | --py           # study a reference look · draw in Python instead of HTML
-claude-video <slug> --fix 12,15                      # HTML film: re-render only seconds 12–15 of the film
-claude-video export <slug> · serve                   # per-platform files · live film preview in the browser
-claude-video ideas | help
+souffle <slug>              # naskah → voice (align voice.wav, else TTS) → check → final → hasil/<slug>/
+souffle <slug> preview      # optional 540p round
+souffle "Judul video"       # autopilot: Claude headless writes everything, then renders
+souffle "promo X" --url https://x.com --dur 20   # + facts + real screenshots from a page, ~20 s
+souffle "Judul" --ref clip.mp4 | --py           # study a reference look · draw in Python instead of HTML
+souffle <slug> --fix 12,15                      # HTML film: re-render only seconds 12–15 of the film
+souffle export <slug> · serve                   # per-platform files · live film preview in the browser
+souffle ideas | help
 ```
 
 ## Gotchas

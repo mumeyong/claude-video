@@ -28,4 +28,4 @@ Metafora: **intercom apartemen** — kamu nyambung ke resepsionis lobby (router)
 
 ## Catatan
 - Bisa dinaikin duluan kalau ada gangguan massal (slot berita #09). Jangan nyalahin merek ISP.
-- Mulai: `claude-video 20` atau `claude-video "WiFi connected, tapi no internet. Kok bisa?"`
+- Mulai: `souffle 20` atau `souffle "WiFi connected, tapi no internet. Kok bisa?"`

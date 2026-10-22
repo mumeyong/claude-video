@@ -1,6 +1,6 @@
 # Suara ini bukan suaraku
 
-- **Status:** 💡 ide · ⭐ rekomendasi pertama dari 5 konsep 2026-10-13
+- **Status:** 🎬 produksi — [`videos/suara-ini-bukan-suaraku/`](../videos/suara-ini-bukan-suaraku/)
 - **Pilar:** B · AI sehari-hari · **Format:** QUICK
 - **Slug:** suara-ini-bukan-suaraku
 - **Seri:** —

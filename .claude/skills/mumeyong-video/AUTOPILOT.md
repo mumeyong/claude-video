@@ -1,4 +1,4 @@
-# Autopilot prompt (`claude-video "Judul"` → engine/autopilot.py, Claude headless). {{SLUG}} / {{TITLE}} are filled in.
+# Autopilot prompt (`souffle "Judul"` → engine/autopilot.py, Claude headless). {{SLUG}} / {{TITLE}} are filled in.
 
 Kamu jalan headless — nggak ada user yang bisa ditanya. Bikin video MUMEYONG **"{{TITLE}}"** di `videos/{{SLUG}}/`.
 Yang tetap cuma suara, logo pembuka, logo penutup (`IDENTITY.md`); look, warna, font, animasi, struktur terserah kamu. JANGAN render.

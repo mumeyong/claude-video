@@ -13,7 +13,7 @@ LEXICON below + optional videos/<slug>/audio/tts_lexicon.txt ("word = respelling
 
 Cartesia (opt-in, 2026-10-11, testing): put a `.cartesia` file in the repo root (git-ignored):
     key   = sk_car_...          # or env CARTESIA_API_KEY — play.cartesia.ai/keys
-    voice = <voice id>          # `claude-video voices` lists Indonesian voices
+    voice = <voice id>          # `souffle voices` lists Indonesian voices
     only  = apple-lab           # optional: comma list of slugs that use Cartesia (omit = every video)
     skip  = slug-a, slug-b      # optional: slugs that keep the edge-tts voice (e.g. finished, frozen videos)
     # optional: model = sonic-3.6 · speed = 1.0 (0.6–1.5) · lexicon = off|on (respelling; default off)

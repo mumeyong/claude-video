@@ -12,6 +12,7 @@ seconds. Reports:
 Full-screen overlays (z >= 100, e.g. the series bumper) are skipped. Shadows/glows are ignored (alpha threshold).
 """
 import math
+import pathlib
 import traceback
 
 import numpy as np
@@ -19,6 +20,15 @@ import numpy as np
 from . import tokens as tk
 from .draw import new_frame, Canvas
 from .render import _video
+from .project import ROOT
+
+
+def _rel(path):
+    """Traceback path relative to the repo, whatever the folder is called."""
+    try:
+        return str(pathlib.Path(path).resolve().relative_to(ROOT))
+    except ValueError:
+        return path
 
 SCALE = 0.25
 ALPHA = 0.35          # ink below this alpha (soft shadows, glows) doesn't count
@@ -107,7 +117,7 @@ def dry_check(slug, step=0.25):
                     fn(c, t)
                 except Exception as ex:  # noqa: BLE001
                     f = traceback.extract_tb(ex.__traceback__)[-1]
-                    errors[hook] = (t, f"{type(ex).__name__}: {ex}", f"{f.filename.split('claude-video/')[-1]}:{f.lineno}")
+                    errors[hook] = (t, f"{type(ex).__name__}: {ex}", f"{_rel(f.filename)}:{f.lineno}")
             for ly in video.layers:
                 if not (ly.start <= t < ly.end) or ly.z >= 100:
                     continue
@@ -125,7 +135,7 @@ def dry_check(slug, step=0.25):
                         here = [f for f in tb if "videos/" in f.filename or "components/" in f.filename] or tb
                         f = here[-1]
                         errors[name] = (t, f"{type(ex).__name__}: {ex}",
-                                        f"{f.filename.split('claude-video/')[-1]}:{f.lineno}")
+                                        f"{_rel(f.filename)}:{f.lineno}")
                     continue
                 if ly.bleed:
                     continue
@@ -164,7 +174,7 @@ def dry_check(slug, step=0.25):
             cov(new_frame(1.0)[1])
         except Exception as ex:  # noqa: BLE001
             f = traceback.extract_tb(ex.__traceback__)[-1]
-            errors["cover"] = (0.0, f"{type(ex).__name__}: {ex}", f"{f.filename.split('claude-video/')[-1]}:{f.lineno}")
+            errors["cover"] = (0.0, f"{type(ex).__name__}: {ex}", f"{_rel(f.filename)}:{f.lineno}")
             bad += 1
             print(f"  ✗ ERROR   cover  {errors['cover'][2]}\n            {errors['cover'][1]}")
     print("  ok — no problems" if not bad else f"  {bad} problem(s)")

@@ -28,4 +28,4 @@ Metafora: **tekanan air PDAM** — jam mandi pagi semua keran dibuka, air di lan
 
 ## Catatan
 - ⚠️ angka rasio oversubscription jangan dikarang — kalau nggak ada sumber, nggak usah angka.
-- Mulai: `claude-video 23` atau `claude-video "Kenapa internet lemot tiap jam 8 malam?"`
+- Mulai: `souffle 23` atau `souffle "Kenapa internet lemot tiap jam 8 malam?"`
