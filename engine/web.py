@@ -121,10 +121,14 @@ class Film:
         h = hashlib.sha1()
         for f in sorted(WEB.glob("lib/*")) + [WEB / "run.mjs", WEB / "package.json", self.page, self.dir / "film.json"]:
             h.update(f.name.encode() + f.read_bytes())
-        for f in sorted(self.project.dir.rglob("*")):    # images/data the page may load (not out/, audio/, docs)
+        files = []                                       # images/data the page may load (not out/, audio/, docs)
+        for root, dirs, names in os.walk(self.project.dir):  # prune before stat: out/.web holds GBs of frames
+            if root == str(self.project.dir):
+                dirs[:] = [d for d in dirs if d not in ("out", "audio", "refs")]
+            files += [pathlib.Path(root) / n for n in names]
+        for f in sorted(files):
             rel = f.relative_to(self.project.dir).parts
-            if f.is_file() and rel[0] not in ("out", "audio", "refs") and f.suffix not in (".md", ".py") \
-                    and f.name not in ("timing.json", "REVIEW"):
+            if f.is_file() and f.suffix not in (".md", ".py") and f.name not in ("timing.json", "REVIEW"):
                 st = f.stat()
                 h.update(f"{'/'.join(rel)}:{st.st_size}:{st.st_mtime_ns}".encode())
         return h.hexdigest()[:16]
