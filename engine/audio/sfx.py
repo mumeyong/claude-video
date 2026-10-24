@@ -3,7 +3,7 @@
 Names used by cues: key, click, pop, send, whoosh, whoosh_dark, chime, tick, rec, thud.
 To use a real sample instead, drop assets/sfx/<name>.wav — it overrides the synth.
 
-Kits (opt-in, `v.sfx_kit = "wood"`): glass · wood · soft · mech · water. A kit swaps the material of every UI sound
+Kits (opt-in, `v.sfx_kit = "wood"`): glass · wood · soft · mech · water; or a sample pack folder in assets/sfx/packs/ (e.g. `kenney`, real CC0 recordings). A kit swaps the material of every UI sound
 (modal synthesis) and makes them musical: pitched to the score's key, quick runs of pop/tick climb the scale,
 chime = the key's triad, thud = the tonic, whooshes rotate 4 variants, ±1 dB per cue. No kit = the classic set.
 water = bubbles (2026-10-23, motion-design UI ref): every note is a "bloop" whose pitch rises as it decays (a real
@@ -17,6 +17,8 @@ import numpy as np
 
 SR = 48000
 ROOT = pathlib.Path(__file__).resolve().parents[2]
+PACKS = ROOT / "assets" / "sfx" / "packs"      # sample kits: one folder per kit, one subfolder per cue name
+PACK_GAIN = 0.6                                # recorded packs are mastered hot next to the synth kits
 
 
 def _t(dur):
@@ -255,6 +257,8 @@ def sample(name):
 
 def track(cues, duration, kit=None, key="C", minor=False):
     """Mix cues [(name, t, gain)] into one mono track. kit = None → classic synth set."""
+    if kit and (PACKS / kit).is_dir():
+        return _track_pack(cues, duration, kit)
     if kit:
         return _track_kit(cues, duration, kit, key, minor)
     out = np.zeros(int(SR * (duration + 1.5)))
@@ -262,6 +266,42 @@ def track(cues, duration, kit=None, key="C", minor=False):
         if name == "key":  # rotate keyboard variants so typing doesn't machine-gun
             name = ("key", "key1", "key2", "key3")[(i * 7) % 4]
         s = sample(name) * gain
+        a = int(t * SR)
+        if a < 0 or a >= len(out):
+            continue
+        b = min(len(out), a + len(s))
+        out[a:b] += s[: b - a]
+    return out[: int(SR * duration)]
+
+
+def kit_names():
+    """Every kit `v.sfx_kit` accepts: the synth kits + each folder in assets/sfx/packs/ (real recordings)."""
+    return sorted(KITS) + sorted(d.name for d in PACKS.iterdir() if d.is_dir()) if PACKS.is_dir() else sorted(KITS)
+
+
+@lru_cache(maxsize=None)
+def _pack_files(kit, name):
+    return sorted((PACKS / kit / name).glob("*.*")) if (PACKS / kit / name).is_dir() else []
+
+
+@lru_cache(maxsize=None)
+def _decode(path):
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-f", "f32le", "-ac", "1", "-ar", str(SR), "-"],
+                         capture_output=True, check=True).stdout
+    return np.frombuffer(raw, np.float32).astype(np.float64)
+
+
+def _track_pack(cues, duration, kit):
+    """Real recordings: assets/sfx/packs/<kit>/<cue>/*.wav|ogg, variants rotate per cue, ±0.5 dB.
+    A cue the pack doesn't have (e.g. whoosh) falls back to the classic synth set."""
+    out = np.zeros(int(SR * (duration + 3.0)))
+    count = {}
+    for name, t, gain in sorted(cues, key=lambda c: c[1]):
+        i = count.get(name, 0)
+        count[name] = i + 1
+        files = _pack_files(kit, name)
+        s = _decode(files[(i * 3) % len(files)]) if files else sample(name)
+        s = s * gain * PACK_GAIN * 10 ** (((i * 7919) % 21 - 10) / 200)
         a = int(t * SR)
         if a < 0 or a >= len(out):
             continue

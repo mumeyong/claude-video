@@ -44,7 +44,7 @@ def build(project):
     T = project.timing
     v = Video(duration=T["L10"].end + TAIL, bpm=88, beat_offset=0.0)
     v.music = dict(style="lofi", key="C", mood="warm")          # REPLACE: rotate style/key/mood vs `recent`
-    v.sfx_kit = "soft"                                         # REPLACE: rotate vs `recent`
+    v.sfx_kit = "soft"                                         # REPLACE: rotate vs `recent` · kenney = real recordings
     v.cover = lambda c: cover(c, "Judul\n*REPLACE*?", kicker="REPLACE", color=COL, badge="REPLACE",
                               tags=["REPLACE", "REPLACE"], hero=_cover_hero)
     b = [0.0] + [T.chapter_span(n)[0] - LEAD for n in CH[1:]] + [v.duration]

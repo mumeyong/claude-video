@@ -15,7 +15,7 @@ def build(project):
     v = Video(duration=T[FOLLOW].end + TAIL, bpm=128)        # REPLACE bpm (inside the style's range): the film's
     v.hud = False                                              # FILM.beats grid = the score's beat
     v.music = dict(style="garage", key="D", mood="bright")    # REPLACE: lofi · marimba · ambient · garage · cinematic
-    v.sfx_kit = "glass"                                        # REPLACE: glass · wood · soft · mech · water (or None)
+    v.sfx_kit = "kenney"                                       # default: real CC0 recordings (assets/sfx/packs) · or glass · wood · soft · mech · water (or None)
     s_out = T[FOLLOW].start - 0.3
     film(v, project, end=s_out)                               # + every cue() the page registered
     standard_outro(v, T, s_out, v.duration, FOLLOW, ACCENT,

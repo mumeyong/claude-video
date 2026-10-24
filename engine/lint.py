@@ -205,6 +205,8 @@ def audio_dry(slug):
         if not np.isfinite(fx).all():
             problems.append("sfx: NaN/inf")
         desc += f" · sfx {kit or 'classic'} {len(video.all_cues())} cues peak {np.abs(fx).max():.2f}"
+        if not kit:
+            problems.append(f"hint: no v.sfx_kit set (classic synth) — pick one: {', '.join(sfx.kit_names())}")
     except Exception as e:  # noqa: BLE001 — report, don't crash the check
         tb = traceback.extract_tb(e.__traceback__)[-1]
         problems.append(f"✗ ERROR {type(e).__name__}: {e}  ({tb.filename.split('/')[-1]}:{tb.lineno})")
