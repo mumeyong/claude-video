@@ -355,9 +355,14 @@ class Canvas:
             cx.restore()
 
 
+def frame_size(scale=1.0):
+    """Pixel size of a frame at design size x scale, rounded to even numbers (x264 / yuv420p needs even sizes)."""
+    return 2 * round(tk.W * scale / 2), 2 * round(tk.H * scale / 2)
+
+
 def new_frame(scale=1.0):
     """Fresh ARGB surface + Canvas at design size x scale."""
-    w, h = int(round(tk.W * scale)), int(round(tk.H * scale))
+    w, h = frame_size(scale)
     surf = cairo.ImageSurface(cairo.FORMAT_ARGB32, w, h)
     cx = cairo.Context(surf)
     cx.scale(scale, scale)

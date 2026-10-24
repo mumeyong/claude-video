@@ -3,7 +3,7 @@
 Vertical 1080×1920 / 60 fps animated explainers in **Bahasa Indonesia**. Every frame is code: `frame = f(t)`.
 New videos are **HTML films** by default (`film.html`, the grak/cheese look — skill `WEB.md`) inside the Python engine,
 which keeps the identity (voice, logos, mix). grak and cheese are merged here — one tool.
-Workflow: skill `mumeyong-video` (`SKILL.md`). **Fixed: the voice + opening logo + ending logo (`IDENTITY.md`). Everything else is Claude's call.** User guide: `START.md`
+Workflow: skill `mumeyong-video` (`SKILL.md`). **Fixed: the voice + ending logo (`IDENTITY.md`); no opening logo, the hook is frame 0. Everything else is Claude's call.** User guide: `START.md`
 (keep it in sync when commands change).
 
 ## Rules
@@ -21,7 +21,7 @@ Workflow: skill `mumeyong-video` (`SKILL.md`). **Fixed: the voice + opening logo
 7. **Values have names:** use `engine/tokens.py`, or a video's own palette/sizes as named constants at the top of
    scenes.py — no magic numbers buried in draw code.
 8. **Engine vs video:** reusable → `engine/components/` (add a parameter, don't fork); one-off → `videos/<slug>/scenes.py`.
-9. **IDENTITY.md is law** (voice, opening logo, ending logo, no invented facts) — flag a conflict before doing it.
+9. **IDENTITY.md is law** (voice, ending logo only — never an opening logo, no invented facts) — flag a conflict before doing it.
 10. **Ideas** live in `ideas/` (strategy: `ideas/STRATEGY.md`). "Simpan ide" → `NN-slug.md` from `_TEMPLATE.md` + a row
     in `ideas/README.md`. Production → status 🎬 + link.
 11. **Every video ships** a cover (`v.cover`) and `hasil/<slug>/POST.md` (`POST_TEMPLATE.md`). After posting: numbers into
@@ -29,9 +29,9 @@ Workflow: skill `mumeyong-video` (`SKILL.md`). **Fixed: the voice + opening logo
 12. **Free craft:** look, colors, fonts, metaphor, structure, layout, motion are Claude's call. Don't repeat the last video (`recent <slug>`,
     info only); the critique loop judges quality — add a rule only when the same mistake happens twice.
 13. **Tech terms stay English** (`GLOSSARY.md`).
-14. **HyperFrames skills are a library, not the workflow.** `mumeyong-video` owns every video here — never route
-    through `hyperframes` / `faceless-explainer` / `general-video` etc., never `hyperframes init/render/preview/snapshot/tts`.
-    Use `hyperframes-animation`, `-keyframes`, `-creative`, `-registry` for motion craft inside film.html (WEB.md § HyperFrames).
+14. **HyperFrames = motion reference only.** `mumeyong-video` owns every video here. Only `hyperframes-animation`,
+    `-keyframes`, `-creative`, `-registry` are installed (`skills-lock.json`), for motion craft inside film.html
+    (WEB.md § HyperFrames) — never `hyperframes init/render/preview/snapshot/tts`, never reinstall their workflow skills.
 
 ## Layout
 ```
@@ -48,7 +48,7 @@ _archive/rules-v*/   older rule sets (history only — don't read)
 ## Commands (the user runs these)
 ```bash
 souffle <slug>              # naskah → voice (align voice.wav, else TTS) → check → final → hasil/<slug>/
-souffle <slug> preview      # optional 540p round
+souffle <slug> preview      # optional 480p 30fps round
 souffle "Judul video"       # autopilot: Claude headless writes everything, then renders
 souffle "promo X" --url https://x.com --dur 20   # + facts + real screenshots from a page, ~20 s
 souffle "Judul" --ref clip.mp4 | --py           # study a reference look · draw in Python instead of HTML

@@ -3,9 +3,11 @@
 Names used by cues: key, click, pop, send, whoosh, whoosh_dark, chime, tick, rec, thud.
 To use a real sample instead, drop assets/sfx/<name>.wav — it overrides the synth.
 
-Kits (opt-in, `v.sfx_kit = "wood"`): glass · wood · soft · mech. A kit swaps the material of every UI sound
+Kits (opt-in, `v.sfx_kit = "wood"`): glass · wood · soft · mech · water. A kit swaps the material of every UI sound
 (modal synthesis) and makes them musical: pitched to the score's key, quick runs of pop/tick climb the scale,
 chime = the key's triad, thud = the tonic, whooshes rotate 4 variants, ±1 dB per cue. No kit = the classic set.
+water = bubbles (2026-10-23, motion-design UI ref): every note is a "bloop" whose pitch rises as it decays (a real
+bubble), pops get a small higher droplet after them, whooshes carry a seeded fizz of tiny bubbles.
 """
 import pathlib
 import subprocess
@@ -113,7 +115,10 @@ KITS = {   # modes: (ratio, amp, decay s) · strike: noise click · base: octave
     "wood":  dict(modes=((1, 1, .09), (3.93, .40, .035), (9.24, .12, .012)), strike=.30, base=67),
     "soft":  dict(modes=((1, 1, .07), (2.0, .15, .04)), strike=0.0, base=64, drop=True),
     "mech":  dict(modes=((1, .6, .02), (2.7, .5, .012), (5.1, .3, .006)), strike=.60, base=72),
+    "water": dict(modes=((1, 1, .045), (2.0, .05, .015)), strike=0.0, base=67, rise=.6),
 }
+DROPLET = (0.045, 4, 0.35)      # water pop: a second, smaller bubble — (delay s, scale steps up, gain)
+FIZZ = 7                         # water whoosh: tiny bubbles riding the swell
 
 
 def _hz(m):
@@ -138,6 +143,8 @@ def modal(kit, m, length=1.0, seed=0):
     d = max(md for _, _, md in k["modes"]) * 5 * length
     t = _t(d)
     f = _hz(m) * ((1 + 0.5 * np.exp(-t * 40)) if k.get("drop") else 1)     # 'soft' = bubble: pitch falls in
+    if k.get("rise"):                                    # 'water' = real bubble: pitch rises while it rings out
+        f = f * (1 + k["rise"] * (1 - np.exp(-t / (k["modes"][0][2] * length))))
     y = np.zeros_like(t)
     for ratio, amp, dec in k["modes"]:
         if _hz(m) * ratio > SR * 0.45:
@@ -145,7 +152,7 @@ def modal(kit, m, length=1.0, seed=0):
         y += amp * np.sin(2 * np.pi * np.cumsum(f * ratio) / SR) * np.exp(-t / (dec * length))
     if k["strike"]:
         y += k["strike"] * _fft_filt(_noise(len(t), 40 + seed), lo=2500) * np.exp(-t / 0.002)
-    return 0.4 * y * np.minimum(1, t / 0.0008)
+    return 0.4 * y * np.minimum(1, t / (0.003 if k.get("rise") else 0.0008))
 
 
 @lru_cache(maxsize=None)
@@ -177,7 +184,15 @@ def kit_sample(kit, name, i, deg, tonic, minor):
         return root + 12 * (o + octave) + scale[j]
 
     if name == "pop":
-        return modal(kit, note(deg), 1.0, i % 3)
+        a = modal(kit, note(deg), 1.0, i % 3)
+        if not KITS[kit].get("rise"):
+            return a
+        delay, up, gain = DROPLET
+        b = gain * modal(kit, note(deg + up), 0.6, 0)
+        out = np.zeros(int(SR * delay) + len(b))
+        out[:len(a)] += a[:len(out)]
+        out[int(SR * delay):] += b
+        return out
     if name == "tick":
         return 0.6 * modal(kit, note(deg, 1), 0.35, i % 3)
     if name == "click":
@@ -205,7 +220,17 @@ def kit_sample(kit, name, i, deg, tonic, minor):
         body[:len(knock)] += 0.5 * knock[:len(body)]
         return body
     if name in ("whoosh", "whoosh_dark"):
-        return whoosh_v(i, name == "whoosh_dark", tonic)
+        w = whoosh_v(i, name == "whoosh_dark", tonic)
+        if not KITS[kit].get("rise"):
+            return w
+        w = 0.6 * w
+        rng = np.random.default_rng(90 + i)
+        for at, d in zip(np.sort(rng.uniform(0.15, 0.85, FIZZ)), rng.integers(4, 12, FIZZ)):
+            b = 0.35 * modal(kit, note(int(d)), 0.4, 0)
+            a = int(at * len(w))
+            n = min(len(b), len(w) - a)
+            w[a:a + n] += b[:n]
+        return w
     return SYNTH[name]()
 
 

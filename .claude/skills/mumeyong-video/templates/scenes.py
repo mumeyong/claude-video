@@ -8,12 +8,11 @@ tags and small followers over it · every time from the voice (T) · camera = do
 from engine import Video, tokens as tk
 from engine.ease import clamp, prog
 from engine.video import draw_background
-from engine.components import (Headline, kicker, fade, pop_tag, brand_intro, standard_outro, cover, Rig, arrive,
+from engine.components import (Headline, kicker, fade, pop_tag, standard_outro, cover, Rig, arrive,
                                follow, rise, dolly, cut, heads, draw_heads, material as mat)
 
 L, M, C, F = tk.L, tk.M, tk.C, tk.F
 X, CW, MID = L["col_x"], L["col_w"], tk.W / 2
-PRE_ROLL = 2.05                     # long brand sting (version 2): the voice starts under its wipe
 LEAD = 0.5                          # chapter visuals start this long before the chapter's first line
 OUT = M["quiet_out"]
 TAIL = 3.0
@@ -44,7 +43,6 @@ class Cue:
 def build(project):
     T = project.timing
     v = Video(duration=T["L10"].end + TAIL, bpm=88, beat_offset=0.0)
-    brand_intro(v, version=2)
     v.music = dict(style="lofi", key="C", mood="warm")          # REPLACE: rotate style/key/mood vs `recent`
     v.sfx_kit = "soft"                                         # REPLACE: rotate vs `recent`
     v.cover = lambda c: cover(c, "Judul\n*REPLACE*?", kicker="REPLACE", color=COL, badge="REPLACE",

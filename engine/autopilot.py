@@ -36,7 +36,7 @@ def _short(tool, inp):
 
 MODE = {
     "web": "**HTML film** (default): gambarnya `videos/{{SLUG}}/film.html` — look grak/cheese, baca `WEB.md`. "
-           "`scenes.py` cuma bungkus identitas (logo pembuka + film + logo penutup) dari `templates/scenes_web.py`.",
+           "`scenes.py` cuma bungkus identitas (film dari detik 0 + logo penutup, TANPA logo pembuka) dari `templates/scenes_web.py`.",
     "py": "**Python**: semua digambar di `scenes.py` (`api core` + `api index`, contoh `templates/scenes.py`).",
 }
 

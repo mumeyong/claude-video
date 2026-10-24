@@ -1,10 +1,9 @@
 """HTML films (the grak / cheese look, refs.pdf) inside a MUMEYONG video.
 
-videos/<slug>/film.html is painted by headless Chrome (web/run.mjs) and laid UNDER the identity: the voice mix, the
-opening logo (brand_intro) and the ending logo (standard_outro) stay this engine's. scenes.py stays tiny:
+videos/<slug>/film.html is painted by headless Chrome (web/run.mjs) and laid UNDER the identity: the voice mix and the
+ending logo (standard_outro) stay this engine's (no opening logo since 2026-10-23). scenes.py stays tiny:
 
     v = Video(duration=T["L12"].end + TAIL, bpm=118); v.hud = False
-    brand_intro(v, version=2)
     film(v, project, end=s_outro)                    # frame t of film.html, from 0 until the outro
     standard_outro(v, T, s_outro, v.duration, "L12", COLOR)
 
@@ -21,6 +20,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 
 from . import tokens as tk
 from .ease import prog
@@ -138,7 +138,14 @@ class Film:
         d = self.dir / name
         mark = d / "STAMP"
         if d.exists() and not keep and (not mark.exists() or mark.read_text() != self.stamp):
-            shutil.rmtree(d)
+            try:
+                shutil.rmtree(d)
+            except OSError as e:     # NTFS (videos/ is on the Windows drive) can refuse to unlink a damaged entry
+                trash = self.dir / ".trash" / f"{name}-{time.strftime('%Y%m%d-%H%M%S')}"
+                trash.parent.mkdir(exist_ok=True)
+                d.rename(trash)
+                print(f"  ! web: couldn't delete old {name}/ ({e.strerror}) → moved to {trash.relative_to(self.dir)}; "
+                      "clean .trash/ after a disk check (Windows: chkdsk /f)")
         d.mkdir(parents=True, exist_ok=True)
         mark.write_text(self.stamp)
         self._dirs = None

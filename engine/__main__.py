@@ -2,7 +2,7 @@
 
   go       <slug> [preview]       ONE command: naskah → voice (align voice.wav, else TTS) → check → final render
                                   → hasil/<slug>/.  'preview' = review round instead: cover → sheet → stills
-                                  (REVIEW) → 540p preview+music
+                                  (REVIEW) → 480p preview+music
   auto     "Judul video" | NN | <slug> [--url U] [--dur S] [--ref FILE] [--py]
                                   autopilot: scaffold (if new) → Claude headless writes idea, SCRIPT, NASKAH, PLAN,
                                   the film (film.html — the grak/cheese look; --py = draw it in Python instead),
@@ -23,7 +23,7 @@
   sheet    <slug>                 contact sheet, one thumbnail per script line          (user runs)
   critique <slug>                 review PNGs → out/critique/: sheet (per line) · hook (first 2 s) · moves (each
                                   chapter entrance, 6 frames) — 1/4 scale, no encode, no audio  (Claude may run)
-  preview  <slug> [--from s --to s]  540x960 30fps quick render with audio           (user runs)
+  preview  <slug> [--from s --to s]  480x854 30fps quick render with audio           (user runs)
   render   <slug> [--from s --to s]  1080x1920 60fps final                           (user runs)
            go / render  --fix A,B     HTML film: re-render only its seconds A–B, reuse every other cached frame
   export   <slug> [tiktok shorts reels]  hasil/<slug>/upload/<slug>.<platform>.mp4 — platform-safe encodes (user runs)
@@ -314,7 +314,7 @@ def auto(a):
                         "tata bahasanya (palet, tipe, panjang shot, transisi), bukan isinya.")
         if a.dur:
             words = int(a.dur * 2.7)
-            note.append(f"- Durasi target ± {a.dur:g} s (di luar logo pembuka/penutup) → naskah ± {words} kata. "
+            note.append(f"- Durasi target ± {a.dur:g} s (di luar logo penutup) → naskah ± {words} kata. "
                         "Pendek → lebih sedikit bab, hook langsung, tanpa recap kalau nggak muat.")
         if autopilot(slug, title, "\n".join(note), mode="py" if a.py else "web"):
             return 1
@@ -361,7 +361,7 @@ def _newer(a, b):
 
 def go(p, a):
     """One command: naskah → voice (recording → align · none → TTS) → check → final render → hasil/<slug>/.
-    'preview' in the args = review round instead: cover → sheet → stills → 540p preview with music.
+    'preview' in the args = review round instead: cover → sheet → stills → 480p preview with music.
 
     Only redoes what is out of date. Stills: line ids / seconds listed in videos/<slug>/REVIEW (one per line
     or space-separated; '#' comments) — Claude keeps that file updated with what to look at this round.
@@ -435,7 +435,7 @@ def go(p, a):
                 render.render_stills(p.slug, times, a.scale)
                 done.append(f"stills      {p.out / 'stills'}/")
 
-    step("render final 1080×1920 60fps" if final else "preview 540×960 30fps")
+    step("render final 1080×1920 60fps" if final else "preview 480×854 30fps")
     out = render.render_video(p.slug, "final" if final else "preview", a.workers, a.t_from, a.t_to,
                               audio=not a.no_audio, fix=a.fix)
     done.append(f"{'final' if final else 'preview':11s} {out}")
@@ -453,7 +453,7 @@ def go(p, a):
             print("\n⚠ CEK SEBELUM UPLOAD — pertanyaan terbuka dari autopilot (salah? bilang ke Claude, lalu ulang):")
             print(txt[txt.index("ertanyaan terbuka") - 1:].split("\n", 1)[-1].rstrip())
     else:
-        print(f"\n  ⚠ preview = 540p, JANGAN di-upload. Buat upload: souffle {p.slug}")
+        print(f"\n  ⚠ preview = 480p, JANGAN di-upload. Buat upload: souffle {p.slug}")
     return 0
 
 

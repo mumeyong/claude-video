@@ -2,7 +2,7 @@
 
 **Claude** nulis naskah, rencana, dan kode animasinya. **Kamu** yang render, rekam suara (opsional), dan upload.
 Aturan lengkap: `CLAUDE.md` · yang dikunci: `.claude/skills/mumeyong-video/IDENTITY.md` · ide gaya (opsional): `STYLE.md`.
-Yang tetap cuma **suaramu, logo pembuka, logo penutup** — look, warna, font, animasi, struktur bebas dipilih Claude.
+Yang tetap cuma **suaramu dan logo penutup** (logo pembuka dihapus sejak 23-10-2026 — hook langsung di detik 0) — look, warna, font, animasi, struktur bebas dipilih Claude.
 
 ## Alurnya: satu command
 
@@ -15,7 +15,7 @@ Yang tetap cuma **suaramu, logo pembuka, logo penutup** — look, warna, font, a
 ```
 
 Ada yang mau diubah? Buka `claude` → "video 24: L14 kegedean" → jalanin `souffle 24` lagi.
-Mau lihat dulu versi cepat 540p? `souffle 24 preview` (opsional).
+Mau lihat dulu versi cepat 480p? `souffle 24 preview` (opsional).
 
 Setelah upload: kirim link (+ views) ke Claude → dicatat, foldernya dipindah ke `_tayang/` / `_arsip/`.
 Mau simpan ke git? Bilang "commit" — Claude nggak pernah commit sendiri.
@@ -81,13 +81,14 @@ sampai semua skor ≥ 8. Bandingin gerakan lama vs baru: `souffle spring-lab`.
 ## Animasi HTML (look grak / cheese) — default sejak 2026-10-15
 
 Video baru sekarang digambar sebagai **film HTML** (`videos/<slug>/film.html`, browser) — gaya grak/cheese yang kamu
-suka — tapi tetap **suaramu, logo pembuka, logo penutup** dari engine Python. Mau cara lama (gambar di Python)?
+suka — tapi tetap **suaramu dan logo penutup** dari engine Python. Mau cara lama (gambar di Python)?
 Tambah `--py`: `souffle "Judul" --py`.
 
-Animasinya bisa pakai **HyperFrames** (skill `hyperframes-*` dari heygen-com/hyperframes, GSAP): Claude ambil
-motion rules, blueprint scene, dan block registry-nya (chart, terminal, map, glitch…) untuk `film.html` — tetap
-suaramu, logomu, dan render-nya tetap `souffle <slug>`. Mau minta? Tulis aja "pakai HyperFrames" di judul/brief.
-Update skill-nya: `npx skills update -p`.
+Animasinya bisa pakai **HyperFrames** (GSAP): cuma 4 skill referensi yang dipasang — `hyperframes-animation`,
+`-keyframes`, `-creative`, `-registry` — Claude ambil motion rules, blueprint scene, dan block registry-nya (chart,
+terminal, map, glitch…) untuk `film.html`. Tetap suaramu, logomu, dan render-nya tetap `souffle <slug>`. Mau minta?
+Tulis aja "pakai HyperFrames" di judul/brief. Update skill-nya: `npx skills update -p` (jangan `npx skills add
+heygen-com/hyperframes` — itu masang lagi semua skill workflow-nya).
 
 | Kapan | Command |
 |---|---|
@@ -105,7 +106,7 @@ gambar tiap frame); frame disimpan di `out/.web/`, jadi render ulang tanpa perub
 | Kapan | Command |
 |---|---|
 | Daftar video + tahapnya | `souffle` |
-| Preview 540p (opsional) | `souffle <slug> preview` · sebagian: `… preview --from 20 --to 45` |
+| Preview 480p 30fps (opsional) | `souffle <slug> preview` · sebagian: `… preview --from 20 --to 45` |
 | Cuma bikin folder (tanpa Claude) | `souffle new "Judul"` |
 | Buka folder video | `souffle open <slug>` |
 | Review PNG (Claude juga boleh) | `python -m engine critique <slug>` → `out/critique/` |

@@ -10,13 +10,13 @@ import sys
 import time
 
 from . import tokens as tk
-from .draw import new_frame
+from .draw import frame_size, new_frame
 from .project import Project
 from .web import prepare
 
 PRESETS = {
     #           scale  fps  x264 preset  crf
-    "preview": (0.5, 30, "veryfast", 24),
+    "preview": (4 / 9, 30, "veryfast", 24),   # 480×854
     "final": (1.0, 60, "slow", 14),
 }
 # Motion blur (2026-10-13, refs.pdf §04: "60 fps, 4 subframes per frame, blended"): the final render averages
@@ -93,7 +93,7 @@ def blurred_bytes(video, t, fps, scale, n, shutter):
 def _render_chunk(args):
     slug, f0, f1, fps, scale, preset, crf, threads, out, mode = args
     _, video = _video(slug)
-    w, h = int(round(tk.W * scale)), int(round(tk.H * scale))
+    w, h = frame_size(scale)
     n = getattr(video, "subframes", None) or SUBFRAMES[mode]
     shutter = getattr(video, "shutter", None) or SHUTTER
     proc = subprocess.Popen(_ffmpeg_cmd(out, w, h, fps, preset, crf, threads), stdin=subprocess.PIPE)

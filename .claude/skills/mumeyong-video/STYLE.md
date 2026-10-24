@@ -1,6 +1,6 @@
 # MUMEYONG — STYLE.md (craft ideas — all optional)
 
-Only `IDENTITY.md` is fixed (voice, opening logo, ending logo). This file is a toolbox of things that have looked
+Only `IDENTITY.md` is fixed (voice, no opening logo, ending logo). This file is a toolbox of things that have looked
 good before — use, bend or ignore any of it. The critique loop (§6) is the judge. Older rule sets: `_archive/`.
 
 ## 0. The bar — you are the motion designer
@@ -9,7 +9,8 @@ Every new video gets its own art direction, decided by Claude like a studio moti
 Apple-keynote / industry standard: texture (grain, halftone, paper, glass-free depth, light), material, palette, type
 pairing, camera language, handoff style. Write the choice and *why it fits this topic* in PLAN.md (the Frame).
 What that standard looks like on screen:
-- **One designed world**, full-bleed, under one camera — never objects floating on blank paper.
+- **One designed world**, full-bleed, under one camera — never objects floating on blank paper (a plain gradient
+  with small cards on it counts as blank paper).
 - **Restraint:** one accent colour, one type pairing at fixed sizes, one protagonist, generous negative space *by design*.
 - **Physical, believable material:** soft light, real shadows, subtle texture; nothing clip-art, nothing glowing.
 - **Precision:** aligned to a grid, optical spacing, nothing touching an edge or another object by accident.
@@ -19,6 +20,29 @@ What that standard looks like on screen:
   same craft: a full-bleed *designed* light world (warm off-white / pastel / daylight, never empty white paper),
   grain or paper texture, big heroes with real shadows, the fixed type slot in near-black ink, one saturated accent
   that holds contrast on light (≥ 4.5:1 for type). Cover ground follows the film's ground.
+
+### 0b. The UI-motion layer (2026-10-23 — the user: "that quality … I want it too")
+Reference: a motion-designer promo (kreatively.ke TikTok, studied with `ref` → `videos/_lab/refs/ref/`). It is a
+**motion + sound layer on top of §0, never a replacement look.** Take its movement, never its look or content.
+Lesson (2026-10-24, `_lab/huruf-ketiga-v2`): copying its look — iOS-blue gradient, mid-size Inter, small white cards,
+grey skeleton placeholders, no texture — read as a generic UI template, a downgrade from suara-ini-bukan-suaraku /
+postmortem-production-mati. The world, material, heavy type and big hero of §0 stay; only the decorated *pattern*
+grounds go ("background art is no need" = no guilloche/microprint/scenery wallpaper, not no world).
+- **Ground:** the film's own designed world (paper, dark material, ink…) with texture/grain — just no wallpaper
+  pattern behind the hero. Depth from blur: far things soft, the hero sharp.
+- **Type stays house:** heavy compact sans at fixed poster sizes + the serif-italic turn in the accent, one fixed
+  slot. The reference's crisp mid-size UI type is too weak for us.
+- **Type motion:** words arrive *blur → sharp* with a short slide and motion blur; words swap in place (a word
+  squeezes between two others, one word replaces another); letters stretch/smear on fast moves.
+- **Heroes can be real UI, made physical — in this video's material:** a search bar, a card, a button, a checklist
+  as a crafted object (tape, print, stamp, bevel, real shadow) at hero size (≥ 70% of the frame width), with real
+  content written on it — never empty skeleton bars. A cursor that clicks.
+- **Morph, don't cut:** a search bar becomes a pill, the pill twists into a 3D ribbon, a button grows into a page.
+  One shot ≈ 3 s, with a micro-beat every 0.25–0.5 s inside it. Camera pushes through things; a whip blur carries
+  the handoff. Dark act → light act is allowed as the turn of the story.
+- **Sound on every motion:** ~2–3 SFX per second (pop on arrive, tick per letter run, whoosh on morph, click on the
+  cursor). `v.sfx_kit = "water"` = the bubble/water feel; the score stays quiet under it.
+- Motion blur is on in finals (`SUB["final"] = 4` subframes) — use it: fast moves *should* smear.
 
 ## 1. Ideas worth reaching for
 - **A metaphor from Indonesian daily life** often carries a whole video (rusun water pipe, guest book at the
@@ -84,7 +108,7 @@ Keep one idea per frame and something on screen across chapter changes.
 
 ## 5. Sound
 - Voice on top, music ducked. `v.music = dict(style=, key=, mood=)` with `Video(bpm=)`: `lofi` 76–94 · `marimba`
-  100–116 · `ambient` 70–90 · `garage` 126–136 · `cinematic` 88–110. `v.sfx_kit = "glass"|"wood"|"soft"|"mech"`.
+  100–116 · `ambient` 70–90 · `garage` 126–136 · `cinematic` 88–110. `v.sfx_kit = "glass"|"wood"|"soft"|"mech"|"water"` (water = bubbles).
 - A sound on every visible event's frame: `key` `pop` `click` `send` `whoosh` `whoosh_dark` `chime` `tick` `rec` `thud`.
 
 ## 6. Look at your frames (the one required step)

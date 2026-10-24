@@ -1,6 +1,6 @@
 # Coba lihat huruf ketiga
 
-- **Status:** 💡 ide · cadangan cepat (paling murah dari 5 konsep 2026-10-13)
+- **Status:** 🎬 produksi — [`videos/coba-lihat-huruf-ketiga/`](../videos/coba-lihat-huruf-ketiga/)
 - **Pilar:** B · broad · **Format:** QUICK
 - **Slug:** coba-lihat-huruf-ketiga
 - **Seri:** —

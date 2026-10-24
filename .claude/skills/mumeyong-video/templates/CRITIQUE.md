@@ -15,5 +15,5 @@ Stop when every score is ≥ 8, or after 3 rounds (list what's still < 8 in the 
 - **Motion:** in moves.png each entrance starts at rest and flows into the next; no frozen frames (check DEAD), no
   stop-and-go (`track()`), one shape morphing rather than fade-out/fade-in.
 - **Variety:** something new every 2–4 s; chapters don't repeat the same move.
-- **Brand:** opening logo + ending logo + voice intact (IDENTITY.md); does it look like a deliberate choice, not a default?
+- **Brand:** ending logo + voice intact, and NO opening logo — hook is frame 0 (IDENTITY.md); does it look like a deliberate choice, not a default?
 - **Sound sync:** every visible arrival has a `v.sfx` on the arrival (not the start); gaps snap to `video.beat`.
